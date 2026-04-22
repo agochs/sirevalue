@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Stallion Value Score — Commercial Appeal</title>
+<style>
+:root {
+  --ink: #0d1b2a;
+  --ink-soft: #415a77;
+  --cream: #fdfbf4;
+  --card: #ffffff;
+  --gold: #b8860b;
+  --gold-soft: #d4a147;
+  --rule: #e0d9c6;
+  --good: #2f855a;
+  --ok: #a57c1f;
+  --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 820px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 22px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .tier {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.controls {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+}
+.controls input[type="search"] {
+  flex: 1; min-width: 180px;
+  border: 1px solid var(--rule); border-radius: 6px;
+  padding: 8px 10px; font-size: 14px; background: var(--cream);
+  color: var(--ink);
+}
+.controls select {
+  border: 1px solid var(--rule); border-radius: 6px;
+  padding: 8px 10px; font-size: 14px; background: var(--cream);
+  color: var(--ink); min-width: 220px;
+}
+.controls button {
+  border: 1px solid var(--rule); background: var(--cream); color: var(--ink);
+  padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 14px;
+}
+.controls button:hover { background: #f5efe0; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 6px 20px rgba(13, 27, 42, 0.06);
+}
+.card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.farm-badge {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--ink-soft); margin-bottom: 8px;
+}
+.stallion-name {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 34px; font-weight: 700; margin: 0 0 6px;
+  letter-spacing: 0.3px; line-height: 1.1;
+}
+.pedigree {
+  font-style: italic; color: var(--ink-soft);
+  font-size: 15px; margin: 0 0 16px;
+}
+.grade-badge {
+  flex: 0 0 auto;
+  width: 110px; height: 110px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(184, 134, 11, 0.35);
+}
+.grade-badge.weak { background: linear-gradient(135deg, #a85050, #c76a6a); box-shadow: 0 4px 14px rgba(155, 44, 44, 0.28); }
+.grade-badge.ok { background: linear-gradient(135deg, #8a6a1e, #a68336); box-shadow: 0 4px 14px rgba(165, 124, 31, 0.28); }
+.grade-letter { font-size: 38px; font-weight: 800; line-height: 1; }
+.grade-score { font-size: 15px; margin-top: 4px; opacity: 0.9; }
+.key-stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px; margin: 18px 0 22px;
+  padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.stat { font-size: 13px; }
+.stat-label { color: var(--ink-soft); letter-spacing: 0.5px; text-transform: uppercase; font-size: 11px; }
+.stat-val { font-size: 17px; font-weight: 600; color: var(--ink); margin-top: 2px; }
+.section-title {
+  font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--ink-soft); margin: 20px 0 10px; font-weight: 600;
+}
+.components { display: flex; flex-direction: column; gap: 12px; }
+.component-head { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 4px; }
+.component-name { font-weight: 600; }
+.component-contrib { color: var(--ink-soft); font-size: 13px; }
+.bar { height: 8px; background: #f0eadb; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--gold); transition: width 0.3s ease; border-radius: 4px; }
+.component-detail { font-size: 12px; color: var(--ink-soft); margin-top: 4px; }
+.peer-group {
+  background: #f7f2e4; border-radius: 8px; padding: 12px 14px;
+  font-size: 13px; color: var(--ink); margin: 18px 0 14px;
+}
+.peer-group strong { color: var(--ink); }
+.notes {
+  font-size: 12px; color: var(--weak); margin-top: 8px;
+}
+details {
+  margin-top: 12px;
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+}
+details summary {
+  cursor: pointer; font-size: 12px; color: var(--ink-soft);
+  letter-spacing: 1px; text-transform: uppercase; font-weight: 600;
+}
+details[open] summary { margin-bottom: 8px; }
+.sources a { color: var(--ink); word-break: break-all; font-size: 13px; }
+.footer {
+  margin-top: 24px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+.tier0-note {
+  margin-top: 12px; padding: 10px 12px; font-size: 12px;
+  background: #fbf6e4; border-left: 3px solid var(--gold); color: var(--ink-soft);
+}
+.shift-badge {
+  display: inline-block; margin-top: 8px; padding: 6px 10px; font-size: 12px;
+  border-radius: 4px; font-weight: 600;
+}
+.shift-up {
+  background: #e6f4ea; color: #1e6b2f; border-left: 3px solid #2f855a;
+}
+.shift-down {
+  background: #fdecea; color: #8b2a1a; border-left: 3px solid #9b2c2c;
+}
+@media (max-width: 560px) {
+  .card-head { flex-direction: column-reverse; align-items: flex-start; }
+  .grade-badge { width: 90px; height: 90px; }
+  .grade-letter { font-size: 32px; }
+  .stallion-name { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="masthead">
+    <div class="brand">Stallion Value Score</div>
+    <div class="tier">Commercial Appeal &middot; Tier 0</div>
+  </div>
+
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search stallion…" autocomplete="off"/>
+    <select id="selector"></select>
+    <button id="prev" title="Previous">&larr;</button>
+    <button id="next" title="Next">&rarr;</button>
+  </div>
+
+  <div id="card" class="card"></div>
+
+  <div class="footer">
+    <span>Methodology: value-score-model.md</span>
+    <span id="model-version"></span>
+  </div>
+
+</div>
+
+<script id="data" type="application/json" data-src="/data/scores.json"></script>
+<script>
+async function bootSireValue() {
+  var dataEl = document.getElementById('data');
+  var src = dataEl.getAttribute('data-src');
+  var resp = await fetch(src);
+  if (!resp.ok) throw new Error('failed to load scores: ' + resp.status);
+  var data = await resp.json();
+  var stallions = data.stallions;
+  document.getElementById('model-version').textContent = 'Model ' + data.model_version;
+
+  function money(n) { return n == null ? null : '$' + n.toLocaleString(); }
+  function gradeClass(grade) {
+    if (grade === 'A+' || grade === 'A') return '';
+    if (grade === 'B' || grade === 'C')  return 'ok';
+    return 'weak';
+  }
+  function humanize(key) {
+    return key.replace(/_/g, ' ').replace(/\b\w/g, function(l) { return l.toUpperCase(); });
+  }
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function renderCard(s) {
+    var sc = s.score;
+    var c = sc.components;
+    var stats = [
+      ['Farm',        s.farm],
+      ['Fee',         s.fee_qualifier ? s.fee_qualifier :
+                       (s.fee_usd ? money(s.fee_usd) + (s.fee_terms ? ' ' + s.fee_terms : '') : '—')],
+      ['Foaled',      s.year_of_birth ? String(s.year_of_birth) : '—'],
+      ['Entered Stud', s.entered_stud_year ? String(s.entered_stud_year) : '—']
+    ];
+
+    var pg = sc.peer_group;
+    var peerDesc;
+    if (pg.peer_n > 0) {
+      peerDesc = 'Peer group: <strong>' + escapeHtml(pg.fee_band) + '</strong> fee band, '
+               + '<strong>' + escapeHtml(pg.maturity_stage) + '</strong> stage ('
+               + pg.peer_n + ' peers)';
+    } else {
+      peerDesc = 'Peer group: <strong>' + escapeHtml(pg.fee_band || 'unbucketed') + '</strong>, '
+               + '<strong>' + escapeHtml(pg.maturity_stage) + '</strong> stage — '
+               + '<em>insufficient peer data (' + pg.peer_n + ' peers)</em>';
+    }
+
+    var compHtml = Object.keys(c).map(function(key) {
+      var comp = c[key];
+      var pct = comp.percentile || 0;
+      var detailParts = [];
+      Object.keys(comp.inputs).forEach(function(k) {
+        var v = comp.inputs[k];
+        // Skip the temporal_shift object; rendered separately below.
+        if (k === 'temporal_shift') return;
+        if (v != null && v !== '') detailParts.push(escapeHtml(k) + ': ' + escapeHtml(v));
+      });
+      // Render a "market moved" badge if the 2YO component carries a shift.
+      var shift = comp.inputs && comp.inputs.temporal_shift;
+      var shiftHtml = '';
+      if (shift) {
+        var arrow = shift.direction === 'up' ? '\u2191' : '\u2193';
+        shiftHtml = '<div class="shift-badge shift-' + escapeHtml(shift.direction) + '">'
+          + arrow + ' ' + escapeHtml(shift.message) + '</div>';
+      }
+      return ''
+        + '<div class="component">'
+        +   '<div class="component-head">'
+        +     '<span class="component-name">' + escapeHtml(humanize(key)) + '</span>'
+        +     '<span class="component-contrib">'
+        +       pct.toFixed(0) + '<sup>th</sup> pct &middot; '
+        +       '+' + comp.points.toFixed(1) + ' pts (w=' + comp.weight + ')'
+        +     '</span>'
+        +   '</div>'
+        +   '<div class="bar"><div class="bar-fill" style="width:' + Math.min(100, pct) + '%"></div></div>'
+        +   '<div class="component-detail">' + (detailParts.join(' &middot; ') || '&nbsp;') + '</div>'
+        +   shiftHtml
+        + '</div>';
+    }).join('');
+
+    var notesHtml = (sc.notes && sc.notes.length)
+      ? '<div class="notes">Notes: ' + escapeHtml(sc.notes.join('; ')) + '</div>'
+      : '';
+
+    var statsHtml = stats.filter(function(kv){ return kv[1]; }).map(function(kv){
+      return '<div class="stat">'
+           +   '<div class="stat-label">' + escapeHtml(kv[0]) + '</div>'
+           +   '<div class="stat-val">' + escapeHtml(kv[1]) + '</div>'
+           + '</div>';
+    }).join('');
+
+    document.getElementById('card').innerHTML = ''
+      + '<div class="card-head">'
+      +   '<div style="flex:1;">'
+      +     '<div class="farm-badge">' + escapeHtml(s.farm) + '</div>'
+      +     '<h1 class="stallion-name">' + escapeHtml(s.name) + '</h1>'
+      +     '<div class="pedigree">' + (s.pedigree ? escapeHtml(s.pedigree) : '&nbsp;') + '</div>'
+      +   '</div>'
+      +   '<div class="grade-badge ' + gradeClass(sc.grade) + '">'
+      +     '<div class="grade-letter">' + escapeHtml(sc.grade) + '</div>'
+      +     '<div class="grade-score">' + sc.value.toFixed(1) + ' / 100</div>'
+      +   '</div>'
+      + '</div>'
+      + '<div class="key-stats">' + statsHtml + '</div>'
+      + '<div class="section-title">Score Breakdown</div>'
+      + '<div class="components">' + compHtml + '</div>'
+      + '<div class="peer-group">' + peerDesc + '</div>'
+      + notesHtml
+      + '<div class="tier0-note">'
+      +   'Tier 0 signal only: based on fee, pedigree prestige, and maturity stage. '
+      +   'Does <em>not</em> yet incorporate progeny performance, yearling sale averages, '
+      +   'or race data. Full Value Score lands when those facts are ingested.'
+      + '</div>'
+      + '<details class="sources">'
+      +   '<summary>Source &amp; Confidence</summary>'
+      +   '<div style="font-size:13px; margin-top:8px;">'
+      +     '<div>Primary source: <a href="' + escapeHtml(s.source_url) + '" target="_blank" rel="noopener">'
+      +       escapeHtml(s.source_url) + '</a></div>'
+      +     '<div style="margin-top:4px;">Confidence: <strong>' + escapeHtml(sc.confidence) + '</strong>'
+      +       ' &middot; Tier: ' + escapeHtml(sc.tier)
+      +       ' &middot; ' + escapeHtml(sc.model_version) + '</div>'
+      +   '</div>'
+      + '</details>';
+  }
+
+  // ---------- Navigation / search ----------
+  var selector = document.getElementById('selector');
+  var search = document.getElementById('search');
+  var currentIndex = 0;
+
+  function rebuildOptions(filter) {
+    var f = (filter || '').toLowerCase();
+    selector.innerHTML = '';
+    stallions.forEach(function(s, i) {
+      if (!f || s.name.toLowerCase().indexOf(f) >= 0 || (s.farm && s.farm.toLowerCase().indexOf(f) >= 0)) {
+        var opt = document.createElement('option');
+        opt.value = String(i);
+        var label = s.score.grade + '  ' + s.score.value.toFixed(1) + '  —  '
+                  + s.name + '  (' + s.farm + ')';
+        opt.textContent = label;
+        selector.appendChild(opt);
+      }
+    });
+    if (selector.options.length) selector.value = String(Math.min(currentIndex, stallions.length - 1));
+  }
+
+  function show(i) {
+    currentIndex = Math.max(0, Math.min(stallions.length - 1, i));
+    selector.value = String(currentIndex);
+    renderCard(stallions[currentIndex]);
+  }
+
+  selector.addEventListener('change', function() { show(parseInt(selector.value, 10)); });
+  document.getElementById('prev').addEventListener('click', function() { show(currentIndex - 1); });
+  document.getElementById('next').addEventListener('click', function() { show(currentIndex + 1); });
+  search.addEventListener('input', function(e) {
+    rebuildOptions(e.target.value);
+    if (selector.options.length) show(parseInt(selector.value, 10));
+  });
+
+  // Initialize
+  rebuildOptions('');
+  show(0);
+}
+bootSireValue().catch(function(e){
+  document.body.innerHTML += '<div style="padding:20px;color:#9b2c2c;font-family:sans-serif">Error loading data: ' + e.message + '</div>';
+});
+</script>
+</body>
+</html>

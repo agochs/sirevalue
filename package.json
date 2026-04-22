@@ -1,0 +1,14 @@
+{
+  "name": "sirevalue",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Stallion Value Score — UI + data for thoroughbred commercial stallion valuations",
+  "scripts": {
+    "build": "echo 'no build step; Vercel serves /public directly'",
+    "local": "npx serve public"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}

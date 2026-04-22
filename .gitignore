@@ -1,0 +1,22 @@
+# Vercel
+.vercel/
+.next/
+
+# Node / npm
+node_modules/
+npm-debug.log*
+
+# Python (worker)
+worker/__pycache__/
+worker/*.pyc
+worker/scores_snapshots/
+worker/.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local secrets (never commit)
+.env
+.env.*
+!.env.example

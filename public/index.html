@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Stallion Value Score</title>
+<meta property="og:title" content="SireValue — Stallion Value Score"/>
+<meta property="og:description" content="Transparent, market-based valuations for North American commercial thoroughbred stallions."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 920px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 30px; margin: 0 0 12px; font-weight: 700;
+}
+.hero p { margin: 0 0 10px; font-size: 15px; color: var(--ink-soft); max-width: 62ch; }
+.cta-row { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 10px 18px; border-radius: 6px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  background: var(--ink); color: var(--cream); border: 1px solid var(--ink);
+}
+.btn.secondary { background: var(--cream); color: var(--ink); }
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 24px 0 12px; font-weight: 600;
+}
+.leaderboard {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden;
+}
+.leaderboard table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.leaderboard th {
+  text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  background: #faf5e6;
+}
+.leaderboard td { padding: 10px 14px; border-bottom: 1px solid var(--rule); }
+.leaderboard tr:last-child td { border-bottom: none; }
+.leaderboard tr:hover { background: #faf5e6; cursor: pointer; }
+.leaderboard .grade {
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+  font-weight: 700; font-size: 12px;
+}
+.grade-a { background: var(--gold); color: #fff; }
+.grade-b { background: #a68336; color: #fff; }
+.grade-c { background: #f0eadb; color: var(--ink); }
+.grade-d { background: #d4a5a5; color: var(--ink); }
+.grade-f { background: #a85050; color: #fff; }
+.stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px; margin: 18px 0;
+}
+.stat {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 14px; text-align: center;
+}
+.stat .num { font-size: 26px; font-weight: 700; font-family: "Iowan Old Style", Georgia, serif; }
+.stat .label { font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+@media (max-width: 560px) {
+  .hero h1 { font-size: 24px; }
+  .leaderboard td, .leaderboard th { padding: 8px 10px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand">SireValue</div>
+    <div class="tagline">Stallion Value Score · <span id="model-version"></span></div>
+  </div>
+
+  <div class="hero">
+    <h1>Market-based valuations for commercial thoroughbred stallions.</h1>
+    <p>Transparent scoring. Every number backed by a sale event you can click through to. Covers <span id="stallion-count">—</span> stallions across <span id="farm-count">—</span> North American farms, using <span id="yearling-sires">—</span> sires of recent yearling-sale data and <span id="twoyo-sires">—</span> sires of 2YO-in-training data.</p>
+    <div class="cta-row">
+      <a class="btn" href="/stallion-card.html">Browse stallions</a>
+      <a class="btn secondary" href="/mare-matcher.html">Match a mare</a>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="num" id="stat-tier1full">—</div><div class="label">Full Tier 1</div></div>
+    <div class="stat"><div class="num" id="stat-tier1">—</div><div class="label">Any Tier 1</div></div>
+    <div class="stat"><div class="num" id="stat-total">—</div><div class="label">Stallions</div></div>
+    <div class="stat"><div class="num" id="stat-farms">—</div><div class="label">Farms</div></div>
+  </div>
+
+  <div class="section-title">Top 20 — Value Score leaderboard</div>
+  <div class="leaderboard">
+    <table>
+      <thead>
+        <tr><th>Rank</th><th>Stallion</th><th>Farm</th><th>Fee</th><th>Tier</th><th>Score</th><th>Grade</th></tr>
+      </thead>
+      <tbody id="leaderboard-body"><tr><td colspan="7" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS, BloodHorse. Methodology in repo.</span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  try {
+    const resp = await fetch('/data/scores.json');
+    if (!resp.ok) throw new Error(resp.status);
+    const data = await resp.json();
+
+    document.getElementById('model-version').textContent = data.model_version;
+    document.getElementById('stallion-count').textContent = data.stallion_count;
+    document.getElementById('farm-count').textContent = data.farms.length;
+    document.getElementById('stat-total').textContent = data.stallion_count;
+    document.getElementById('stat-farms').textContent = data.farms.length;
+
+    const tiers = {};
+    data.stallions.forEach(s => {
+      const t = s.score.tier;
+      tiers[t] = (tiers[t] || 0) + 1;
+    });
+    const fullT1 = tiers.tier1_full || 0;
+    const anyT1 = fullT1 + (tiers.tier1_obs_only || 0) + (tiers.tier1_keeneland_only || 0);
+    document.getElementById('stat-tier1full').textContent = fullT1;
+    document.getElementById('stat-tier1').textContent = anyT1;
+
+    const yearlingSires = new Set();
+    const twoyoSires = new Set();
+    data.stallions.forEach(s => {
+      const comps = s.score.components || {};
+      if (comps.market_efficiency && comps.market_efficiency.inputs.yearlings_sold_n > 0) yearlingSires.add(s.name);
+      if (comps.twoyo_market_efficiency && comps.twoyo_market_efficiency.inputs.twoyos_sold_n > 0) twoyoSires.add(s.name);
+    });
+    document.getElementById('yearling-sires').textContent = yearlingSires.size;
+    document.getElementById('twoyo-sires').textContent = twoyoSires.size;
+
+    function gradeClass(g) {
+      if (g === 'A+' || g === 'A') return 'grade-a';
+      if (g === 'B') return 'grade-b';
+      if (g === 'C') return 'grade-c';
+      if (g === 'D') return 'grade-d';
+      return 'grade-f';
+    }
+
+    const rows = data.stallions.slice(0, 20).map((s, i) => {
+      const fee = s.fee_usd ? ('$' + s.fee_usd.toLocaleString()) : (s.fee_qualifier || '—');
+      return '<tr onclick="location.href=\'/stallion-card.html?s=' + encodeURIComponent(s.name) + '\'">'
+        + '<td>' + (i+1) + '</td>'
+        + '<td><strong>' + s.name + '</strong></td>'
+        + '<td>' + s.farm.replace(' Farm','').replace(' Farms','').replace(' Stud','').replace(' (Coolmore America)','') + '</td>'
+        + '<td>' + fee + '</td>'
+        + '<td>' + s.score.tier.replace(/_/g,' ').replace('tier1 full','Tier 1 (full)').replace('tier1 obs only','Tier 1 (OBS)').replace('commercial appeal','Tier 0') + '</td>'
+        + '<td>' + s.score.value.toFixed(1) + '</td>'
+        + '<td><span class="grade ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span></td>'
+        + '</tr>';
+    }).join('');
+    document.getElementById('leaderboard-body').innerHTML = rows;
+  } catch (e) {
+    document.getElementById('leaderboard-body').innerHTML =
+      '<tr><td colspan="7" style="padding:20px;text-align:center;color:#9b2c2c">Failed to load: ' + e.message + '</td></tr>';
+  }
+})();
+</script>
+</body>
+</html>
