@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import logging
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -29,13 +30,23 @@ from pathlib import Path
 log = logging.getLogger("sync")
 
 
+def _redact(s: str) -> str:
+    """Strip GitHub tokens from any string before logging.
+    Covers the `https://x-access-token:TOKEN@github.com/...` pattern we use,
+    plus bare `github_pat_*` / `ghp_*` / `ghs_*` / `gho_*` tokens.
+    """
+    s = re.sub(r"(https://[^:@/\s]+:)([^@/\s]+)(@)", r"\1<redacted>\3", s)
+    s = re.sub(r"\b(github_pat_|ghp_|ghs_|gho_)[A-Za-z0-9_]+", r"\1<redacted>", s)
+    return s
+
+
 def run(cmd: list[str], cwd: str | None = None, env: dict | None = None) -> str:
     """Run a subprocess, raising on failure. Returns stdout."""
-    log.info(f"+ {' '.join(cmd)}")
+    log.info(_redact(f"+ {' '.join(cmd)}"))
     r = subprocess.run(cmd, cwd=cwd, env=env, capture_output=True, text=True)
     if r.returncode != 0:
-        log.error(r.stdout + r.stderr)
-        raise RuntimeError(f"command failed: {' '.join(cmd)}")
+        log.error(_redact(r.stdout + r.stderr))
+        raise RuntimeError(f"command failed: {_redact(' '.join(cmd))}")
     return r.stdout
 
 
