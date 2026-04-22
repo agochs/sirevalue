@@ -1,10 +1,14 @@
 {
-  "generated_at": "2026-04-22T20:40:43Z",
-  "prior_snapshot": null,
-  "counts": { "entered": 0, "left": 0, "moved": 0, "tier_transitions": 0 },
+  "generated_at": "2026-04-22T22:36:20Z",
+  "prior_snapshot": "scores-20260422-223619.json",
+  "counts": {
+    "entered": 0,
+    "left": 0,
+    "moved": 0,
+    "tier_transitions": 0
+  },
   "entered": [],
   "left": [],
   "moved": [],
-  "tier_transitions": [],
-  "_note": "Seed file. Worker overwrites with the real diff on the next cycle."
+  "tier_transitions": []
 }
