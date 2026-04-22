@@ -69,6 +69,18 @@ def main() -> int:
         log.error(f"scores.json not found at {scores_path}")
         return 3
 
+    # Files to sync to the repo. `scores.json` is required; the others are
+    # best-effort (absent files just aren't copied).
+    #   (source_path_in_OUTPUT_DIR, target_path_in_repo, required)
+    data_files = [
+        ("scores.json",                     "public/data/scores.json",              True),
+        ("movers.json",                     "public/data/movers.json",              False),
+        ("bloodhorse-leading-sires-2025.json",
+                                            "public/data/progeny-sires-2025.json",  False),
+        ("bloodhorse-bms-earnings-2026.json",
+                                            "public/data/progeny-bms-2026.json",    False),
+    ]
+
     # Construct the authenticated URL (tokens are URL-safe; no escaping needed
     # for the typical ghp_* token format).
     # Example: https://x-access-token:ghp_XXX@github.com/user/repo.git
@@ -82,20 +94,31 @@ def main() -> int:
         run(["git", "config", "user.name", author_name], cwd=str(tmp))
         run(["git", "config", "user.email", author_email], cwd=str(tmp))
 
-        # Copy scores.json into the target path in the repo
-        target = tmp / "public" / "data" / "scores.json"
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(scores_path, target)
+        # Copy each data file into the target path in the repo
+        copied_targets: list[str] = []
+        for src_name, tgt_rel, required in data_files:
+            src = output_dir / src_name
+            if not src.exists():
+                if required:
+                    log.error(f"required file missing: {src}")
+                    return 4
+                log.info(f"optional file missing, skipping: {src_name}")
+                continue
+            target = tmp / tgt_rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, target)
+            copied_targets.append(tgt_rel)
 
         # Check if there's anything to commit
         status = run(["git", "status", "--porcelain"], cwd=str(tmp))
         if not status.strip():
-            log.info("scores.json unchanged; skipping push")
+            log.info("data files unchanged; skipping push")
             return 0
 
         # Commit + push
-        run(["git", "add", "public/data/scores.json"], cwd=str(tmp))
-        msg = f"Refresh scores.json ({subprocess.check_output(['date','-Iseconds'], text=True).strip()})"
+        for tgt_rel in copied_targets:
+            run(["git", "add", tgt_rel], cwd=str(tmp))
+        msg = f"Refresh data ({subprocess.check_output(['date','-Iseconds'], text=True).strip()})"
         run(["git", "commit", "-m", msg], cwd=str(tmp))
         run(["git", "push", "origin", branch], cwd=str(tmp))
         log.info(f"Pushed: {msg}")

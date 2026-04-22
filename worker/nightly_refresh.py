@@ -203,26 +203,68 @@ def rebuild() -> None:
 
 
 def diff_scores(old_path: Path, new_path: Path) -> dict:
-    """Compute a diff report between two scores.json snapshots."""
+    """Compute a diff report between two scores.json snapshots.
+
+    Returns a structure suitable both for logging and for serving to the UI
+    (movers.json). Entries carry enough context (farm, fee, current score,
+    tier) to render a panel without a second lookup.
+    """
     old = {s["name"]: s for s in json.loads(old_path.read_text())["stallions"]} if old_path.exists() else {}
     new = {s["name"]: s for s in json.loads(new_path.read_text())["stallions"]}
 
-    entered = [n for n in new if n not in old]
-    left    = [n for n in old if n not in new]
-    moved   = []
-    tier_tx = []
+    def _entry(s: dict, extras: dict | None = None) -> dict:
+        base = {
+            "name":  s.get("name"),
+            "farm":  s.get("farm"),
+            "fee_usd": s.get("fee_usd"),
+            "score": s.get("score", {}).get("value"),
+            "tier":  s.get("score", {}).get("tier"),
+            "grade": s.get("score", {}).get("grade"),
+        }
+        if extras:
+            base.update(extras)
+        return base
+
+    entered = [_entry(new[n]) for n in sorted(new) if n not in old]
+    left    = [_entry(old[n]) for n in sorted(old) if n not in new]
+    moved, tier_tx = [], []
     for name in set(old) & set(new):
         o, n = old[name], new[name]
         delta = n["score"]["value"] - o["score"]["value"]
         if abs(delta) >= 5:
-            moved.append({"name": name, "delta": round(delta, 1),
-                          "from": o["score"]["value"], "to": n["score"]["value"]})
+            moved.append(_entry(n, {
+                "delta": round(delta, 1),
+                "from": o["score"]["value"],
+                "to":   n["score"]["value"],
+            }))
         if o["score"]["tier"] != n["score"]["tier"]:
-            tier_tx.append({"name": name,
-                            "from": o["score"]["tier"], "to": n["score"]["tier"]})
+            tier_tx.append(_entry(n, {
+                "tier_from": o["score"]["tier"],
+                "tier_to":   n["score"]["tier"],
+            }))
     moved.sort(key=lambda x: abs(x["delta"]), reverse=True)
     return {"entered": entered, "left": left,
             "moved": moved, "tier_transitions": tier_tx}
+
+
+def write_movers(diff: dict, prior_snap: Path | None) -> Path:
+    """Persist the cycle's diff as movers.json alongside scores.json so the
+    sync step pushes it with the rest of the data. Includes timestamps so
+    the UI can render \"as of …\" and fade stale data."""
+    movers_path = HERE / "movers.json"
+    payload = {
+        "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+        "prior_snapshot": prior_snap.name if prior_snap else None,
+        "counts": {
+            "entered": len(diff.get("entered", [])),
+            "left":    len(diff.get("left", [])),
+            "moved":   len(diff.get("moved", [])),
+            "tier_transitions": len(diff.get("tier_transitions", [])),
+        },
+        **diff,
+    }
+    movers_path.write_text(json.dumps(payload, indent=2))
+    return movers_path
 
 
 def snapshot_scores() -> Path:
@@ -274,6 +316,11 @@ def main():
         log.info(f"Score diff since prior run:\n{json.dumps(diff, indent=2)}")
     else:
         log.info("No prior snapshot to diff against")
+        diff = {"entered": [], "left": [], "moved": [], "tier_transitions": []}
+
+    # 6. Persist the diff as movers.json so the UI can surface "recent movers"
+    movers_path = write_movers(diff, prior_snap)
+    log.info(f"Wrote movers report: {movers_path}")
 
     log.info("Nightly refresh complete.")
 

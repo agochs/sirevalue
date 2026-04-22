@@ -89,6 +89,40 @@ body {
   padding-top: 14px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; flex-wrap: wrap;
 }
 .footer a { color: var(--ink); }
+/* ---------- Movers panel ---------- */
+.movers {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 22px;
+}
+.movers-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 12px; flex-wrap: wrap; gap: 8px;
+}
+.movers-head h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; margin: 0; font-weight: 700;
+}
+.movers-head .movers-as-of {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft);
+}
+.movers-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;
+}
+.movers-col h3 {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--ink-soft); margin: 0 0 8px; font-weight: 700;
+}
+.mover-item {
+  padding: 8px 0; border-bottom: 1px dashed var(--rule);
+  font-size: 13px; display: flex; justify-content: space-between; gap: 8px;
+}
+.mover-item:last-child { border-bottom: none; }
+.mover-item a { color: var(--ink); text-decoration: none; font-weight: 600; }
+.mover-item a:hover { text-decoration: underline; }
+.mover-delta.up   { color: var(--good); font-weight: 700; }
+.mover-delta.down { color: var(--weak); font-weight: 700; }
+.mover-tier { color: var(--ink-soft); font-size: 11px; letter-spacing: 0.5px; }
+.mover-empty { color: var(--ink-soft); font-size: 12px; font-style: italic; padding: 6px 0; }
 @media (max-width: 560px) {
   .hero h1 { font-size: 24px; }
   .leaderboard td, .leaderboard th { padding: 8px 10px; font-size: 13px; }
@@ -116,6 +150,27 @@ body {
     <div class="stat"><div class="num" id="stat-tier1">—</div><div class="label">Any Tier 1</div></div>
     <div class="stat"><div class="num" id="stat-total">—</div><div class="label">Stallions</div></div>
     <div class="stat"><div class="num" id="stat-farms">—</div><div class="label">Farms</div></div>
+  </div>
+
+  <div id="movers" class="movers" hidden>
+    <div class="movers-head">
+      <h2>Movers since last refresh</h2>
+      <div class="movers-as-of" id="movers-as-of">—</div>
+    </div>
+    <div class="movers-grid">
+      <div class="movers-col">
+        <h3>Biggest Score Moves</h3>
+        <div id="movers-moved"></div>
+      </div>
+      <div class="movers-col">
+        <h3>Tier Transitions</h3>
+        <div id="movers-tiers"></div>
+      </div>
+      <div class="movers-col">
+        <h3>Entered / Left Roster</h3>
+        <div id="movers-roster"></div>
+      </div>
+    </div>
   </div>
 
   <div class="section-title">Top 20 — Value Score leaderboard</div>
@@ -188,6 +243,61 @@ body {
         + '</tr>';
     }).join('');
     document.getElementById('leaderboard-body').innerHTML = rows;
+
+    // ---------- Movers panel ----------
+    // movers.json is a separate file the worker writes on each cycle. If it
+    // doesn't exist or is empty, we hide the panel gracefully.
+    try {
+      const mResp = await fetch('/data/movers.json?v=' + Date.now());
+      if (mResp.ok) {
+        const m = await mResp.json();
+        const total = (m.counts.moved | 0) + (m.counts.tier_transitions | 0) + (m.counts.entered | 0) + (m.counts.left | 0);
+        if (total > 0) {
+          document.getElementById('movers').hidden = false;
+          try {
+            const asOf = new Date(m.generated_at);
+            document.getElementById('movers-as-of').textContent =
+              'Updated ' + asOf.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+          } catch (_e) { /* leave default */ }
+
+          const stallionHref = n => '/stallion-card.html?s=' + encodeURIComponent(n);
+
+          // Biggest score moves
+          const moved = (m.moved || []).slice(0, 6).map(x => {
+            const cls = x.delta > 0 ? 'up' : 'down';
+            const sign = x.delta > 0 ? '+' : '';
+            return '<div class="mover-item">'
+              + '<span><a href="' + stallionHref(x.name) + '">' + x.name + '</a><div class="mover-tier">' + (x.farm || '') + '</div></span>'
+              + '<span class="mover-delta ' + cls + '">' + sign + x.delta.toFixed(1) + '</span>'
+              + '</div>';
+          }).join('');
+          document.getElementById('movers-moved').innerHTML =
+            moved || '<div class="mover-empty">No score moves ≥5 pts this cycle.</div>';
+
+          // Tier transitions
+          const tiers = (m.tier_transitions || []).slice(0, 6).map(x => {
+            const from = (x.tier_from || '').replace(/_/g, ' ');
+            const to   = (x.tier_to   || '').replace(/_/g, ' ');
+            return '<div class="mover-item">'
+              + '<span><a href="' + stallionHref(x.name) + '">' + x.name + '</a><div class="mover-tier">' + from + ' → ' + to + '</div></span>'
+              + '<span class="mover-delta ' + (to.includes('tier1') && !from.includes('tier1') ? 'up' : 'down') + '">' + (to.includes('tier1') ? '↑' : '↓') + '</span>'
+              + '</div>';
+          }).join('');
+          document.getElementById('movers-tiers').innerHTML =
+            tiers || '<div class="mover-empty">No tier changes.</div>';
+
+          // Entered / Left
+          const roster = [
+            ...(m.entered || []).slice(0, 3).map(x =>
+              '<div class="mover-item"><span><a href="' + stallionHref(x.name) + '">' + x.name + '</a><div class="mover-tier">entered at ' + (x.score != null ? x.score.toFixed(1) : '—') + '</div></span><span class="mover-delta up">NEW</span></div>'),
+            ...(m.left || []).slice(0, 3).map(x =>
+              '<div class="mover-item"><span>' + x.name + '<div class="mover-tier">' + (x.farm || '') + '</div></span><span class="mover-delta down">OFF</span></div>'),
+          ].join('');
+          document.getElementById('movers-roster').innerHTML =
+            roster || '<div class="mover-empty">Roster unchanged.</div>';
+        }
+      }
+    } catch (_e) { /* movers panel is optional; don't block page */ }
   } catch (e) {
     document.getElementById('leaderboard-body').innerHTML =
       '<tr><td colspan="7" style="padding:20px;text-align:center;color:#9b2c2c">Failed to load: ' + e.message + '</td></tr>';

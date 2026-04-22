@@ -155,6 +155,71 @@ details[open] summary { margin-bottom: 8px; }
 .shift-down {
   background: #fdecea; color: #8b2a1a; border-left: 3px solid #9b2c2c;
 }
+/* ---------- ROI lens ---------- */
+.roi-block {
+  background: linear-gradient(135deg, #fff8e4, #fbf6e4);
+  border: 1px solid var(--rule); border-radius: 10px;
+  padding: 16px 18px; margin: 6px 0 20px;
+}
+.roi-head {
+  display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px;
+  margin-bottom: 10px;
+}
+.roi-head .label {
+  font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink-soft); font-weight: 600;
+}
+.roi-verdict {
+  font-size: 11px; letter-spacing: 0.5px; padding: 3px 9px; border-radius: 10px; font-weight: 700;
+}
+.roi-verdict.strong { background: #e6f4ea; color: #1e6b2f; }
+.roi-verdict.avg    { background: #f7f2e4; color: #6b5016; }
+.roi-verdict.weak   { background: #fdecea; color: #8b2a1a; }
+.roi-row {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 14px;
+  align-items: center; padding: 6px 0;
+}
+.roi-row + .roi-row { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 6px; }
+.roi-big {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 28px; font-weight: 800; color: var(--ink); line-height: 1;
+}
+.roi-big .x { font-size: 18px; color: var(--ink-soft); font-weight: 600; margin-left: 2px; }
+.roi-bar {
+  position: relative; height: 10px; background: #f0eadb; border-radius: 5px; overflow: visible;
+}
+.roi-bar-fill {
+  height: 100%; background: linear-gradient(90deg, var(--gold-soft), var(--gold));
+  border-radius: 5px;
+}
+.roi-bar-peer {
+  position: absolute; top: -3px; height: 16px; width: 2px; background: var(--ink-soft);
+}
+.roi-bar-peer::after {
+  content: "peer"; position: absolute; top: 18px; left: -14px;
+  font-size: 9px; letter-spacing: 0.5px; color: var(--ink-soft); text-transform: uppercase;
+}
+.roi-caption { font-size: 12px; color: var(--ink-soft); margin-top: 4px; }
+.roi-meta { font-size: 13px; color: var(--ink-soft); text-align: right; min-width: 110px; }
+.roi-meta b { color: var(--ink); }
+/* ---------- Progeny racing stats ---------- */
+.progeny-block {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 16px; margin: 6px 0 20px;
+}
+.progeny-row {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  padding: 6px 0; font-size: 13px;
+}
+.progeny-row + .progeny-row { border-top: 1px dashed var(--rule); }
+.progeny-row .pr-name { font-weight: 600; color: var(--ink); }
+.progeny-row .pr-rank {
+  font-family: "Iowan Old Style", Georgia, serif; font-size: 17px; font-weight: 700; color: var(--ink);
+  min-width: 42px; text-align: right;
+}
+.progeny-row .pr-earn { color: var(--ink-soft); font-size: 12px; }
+.progeny-tier-leading { color: #1e6b2f; font-weight: 700; }
+.progeny-tier-proven  { color: #6b5016; font-weight: 700; }
+.progeny-empty { font-size: 12px; color: var(--ink-soft); font-style: italic; padding: 4px 0; }
 @media (max-width: 560px) {
   .card-head { flex-direction: column-reverse; align-items: flex-start; }
   .grade-badge { width: 90px; height: 90px; }
@@ -198,6 +263,25 @@ async function bootSireValue() {
   var stallions = data.stallions;
   document.getElementById('model-version').textContent = 'Model ' + data.model_version;
 
+  // Progeny data (leading sires + BMS) — loaded best-effort. Used by renderProgeny().
+  // Keyed by normalized name so lookups survive minor casing/suffix differences.
+  var sireIndex = {}, bmsIndex = {};
+  function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
+  try {
+    var [sResp, bResp] = await Promise.all([
+      fetch('/data/progeny-sires-2025.json'),
+      fetch('/data/progeny-bms-2026.json'),
+    ]);
+    if (sResp.ok) {
+      var sJson = await sResp.json();
+      (sJson.sires || []).forEach(function(r) { sireIndex[normName(r.sire)] = r; });
+    }
+    if (bResp.ok) {
+      var bJson = await bResp.json();
+      (bJson.bms || []).forEach(function(r) { bmsIndex[normName(r.sire)] = r; });
+    }
+  } catch (_e) { /* progeny is optional */ }
+
   function money(n) { return n == null ? null : '$' + n.toLocaleString(); }
   function gradeClass(grade) {
     if (grade === 'A+' || grade === 'A') return '';
@@ -215,6 +299,90 @@ async function bootSireValue() {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
+  }
+
+  function renderRoi(s) {
+    // Pull ROI numbers out of the score components. If neither yearling nor
+    // 2YO data is present, skip the block entirely.
+    var c = (s.score || {}).components || {};
+    var me = c.market_efficiency && c.market_efficiency.inputs || null;
+    var te = c.twoyo_market_efficiency && c.twoyo_market_efficiency.inputs || null;
+    var haveYearling = me && me.yearlings_sold_n > 0 && me.stud_fee_usd && me.ratio;
+    var have2yo      = te && te.twoyos_sold_n > 0 && te.stud_fee_usd && te.ratio;
+    if (!haveYearling && !have2yo) return '';
+
+    function rowHtml(kind, inputs) {
+      var ratio = inputs.ratio;
+      var peer  = inputs.peer_median_ratio;
+      var avg   = kind === 'yearling' ? inputs.yearling_avg_usd : inputs.twoyo_avg_usd;
+      var n     = kind === 'yearling' ? inputs.yearlings_sold_n  : inputs.twoyos_sold_n;
+      var label = kind === 'yearling' ? 'Yearling avg / fee' : '2YO avg / fee';
+      // Scale bar so peer median lands around 40% of width — same reference line
+      // for every stallion, independent of absolute scale.
+      var maxX = Math.max(ratio, peer) * 1.4 || 1;
+      var fillPct = Math.min(100, (ratio / maxX) * 100);
+      var peerPct = Math.min(100, (peer  / maxX) * 100);
+      return ''
+        + '<div class="roi-row">'
+        +   '<div class="roi-big">' + ratio.toFixed(1) + '<span class="x">×</span></div>'
+        +   '<div>'
+        +     '<div class="roi-bar">'
+        +       '<div class="roi-bar-fill" style="width:' + fillPct + '%"></div>'
+        +       '<div class="roi-bar-peer" style="left:' + peerPct + '%"></div>'
+        +     '</div>'
+        +     '<div class="roi-caption">' + label + ' &middot; peer median <b>' + peer.toFixed(1) + '×</b></div>'
+        +   '</div>'
+        +   '<div class="roi-meta">' + money(avg) + ' avg<br/><b>' + n + '</b> sold</div>'
+        + '</div>';
+    }
+
+    // Verdict based on best (highest) available ratio-to-peer
+    var primaryRatio = haveYearling ? me.ratio : te.ratio;
+    var primaryPeer  = haveYearling ? me.peer_median_ratio : te.peer_median_ratio;
+    var rel = primaryPeer > 0 ? primaryRatio / primaryPeer : 1;
+    var verdict;
+    if (rel >= 1.5)      verdict = ['strong', 'Strong value'];
+    else if (rel >= 0.8) verdict = ['avg',    'At peer average'];
+    else                 verdict = ['weak',   'Premium priced'];
+
+    return ''
+      + '<div class="roi-block">'
+      +   '<div class="roi-head">'
+      +     '<div class="label">Sales ROI &middot; $ returned per $ of stud fee</div>'
+      +     '<div class="roi-verdict ' + verdict[0] + '">' + verdict[1] + '</div>'
+      +   '</div>'
+      +   (haveYearling ? rowHtml('yearling', me) : '')
+      +   (have2yo      ? rowHtml('twoyo',    te) : '')
+      + '</div>';
+  }
+
+  function renderProgeny(s) {
+    var sireRow = sireIndex[normName(s.sire)];
+    var bmsRow  = bmsIndex[normName(s.damsire)];
+    // Nothing to show if neither ancestor is ranked.
+    if (!sireRow && !bmsRow) return '';
+    function row(kind, name, rec) {
+      if (!rec) {
+        return '<div class="progeny-row">'
+          + '<div><div class="pr-name">' + kind + ': ' + escapeHtml(name || '—') + '</div>'
+          + '<div class="pr-earn">Not in top 50 by progeny earnings</div></div>'
+          + '<div class="pr-rank">—</div>'
+          + '</div>';
+      }
+      var earn = rec.earnings_2025 != null ? rec.earnings_2025 : rec.earnings_2026;
+      var tierCls = rec.tier === 'leading' ? 'progeny-tier-leading' : 'progeny-tier-proven';
+      return '<div class="progeny-row">'
+        + '<div><div class="pr-name">' + kind + ': ' + escapeHtml(name) + '</div>'
+        + '<div class="pr-earn"><span class="' + tierCls + '">' + rec.tier.toUpperCase() + '</span> &middot; ' + money(earn) + ' in progeny earnings</div></div>'
+        + '<div class="pr-rank">#' + rec.rank + '</div>'
+        + '</div>';
+    }
+    return ''
+      + '<div class="progeny-block">'
+      +   '<div class="section-title" style="margin:0 0 8px;">Progeny racing performance (his ancestors)</div>'
+      +   row('Sire',  s.sire,    sireRow)
+      +   row('Damsire', s.damsire, bmsRow)
+      + '</div>';
   }
 
   function renderCard(s) {
@@ -297,6 +465,8 @@ async function bootSireValue() {
       +   '</div>'
       + '</div>'
       + '<div class="key-stats">' + statsHtml + '</div>'
+      + renderRoi(s)
+      + renderProgeny(s)
       + '<div class="section-title">Score Breakdown</div>'
       + '<div class="components">' + compHtml + '</div>'
       + '<div class="peer-group">' + peerDesc + '</div>'
@@ -353,9 +523,20 @@ async function bootSireValue() {
     if (selector.options.length) show(parseInt(selector.value, 10));
   });
 
+  // Deep-link: ?s=Name or ?stallion=Name selects that stallion
+  var params = new URLSearchParams(location.search);
+  var deepLink = params.get('s') || params.get('stallion');
+  var startIdx = 0;
+  if (deepLink) {
+    var target = deepLink.toLowerCase();
+    for (var di = 0; di < stallions.length; di++) {
+      if (stallions[di].name.toLowerCase() === target) { startIdx = di; break; }
+    }
+  }
+
   // Initialize
   rebuildOptions('');
-  show(0);
+  show(startIdx);
 }
 bootSireValue().catch(function(e){
   document.body.innerHTML += '<div style="padding:20px;color:#9b2c2c;font-family:sans-serif">Error loading data: ' + e.message + '</div>';

@@ -1,33 +1,24 @@
-# Fly.io deployment config for the SireValue scraper worker.
-# Deploy: `fly launch` then `fly deploy` from this directory.
+# fly.toml app configuration file generated for sirevalue-worker on 2026-04-22T09:30:23-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "sirevalue-worker"
-primary_region = "ord"       # Chicago — reasonable for scraping US farm sites
+app = 'sirevalue-worker'
+primary_region = 'ord'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  OUTPUT_DIR = "/app/data"
-  GIT_REPO_URL = "https://github.com/YOUR_USER/sirevalue.git"
-  GIT_BRANCH = "main"
-  # Secrets (fly secrets set GITHUB_TOKEN=ghp_...):
-  #   GITHUB_TOKEN        — personal access token or GitHub App token with repo write
-  #   GIT_AUTHOR_EMAIL    — defaults from Dockerfile
+  GIT_BRANCH = 'main'
+  GIT_REPO_URL = 'https://github.com/YOUR_USER/sirevalue.git'
+  OUTPUT_DIR = '/app/data'
 
-# This app doesn't serve HTTP. It's a scheduled scraper.
-# Fly.io doesn't support cron natively on free tier; use one of:
-#   (a) Fly Machines scheduled invocation — set up via `fly machines run` on a schedule
-#   (b) GitHub Actions cron that POSTs to this app's Fly endpoint
-#   (c) Run continuously with an internal scheduler (simplest; see entrypoint.sh)
-#
-# For Hobby (free-tier) deployment, option (c) is the path of least resistance.
+[[mounts]]
+  source = 'sirevalue_data'
+  destination = '/app/data'
 
 [[vm]]
-  cpu_kind = "shared"
+  cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 512      # Playwright needs ~300MB headroom
-
-[mounts]
-  source = "sirevalue_data"
-  destination = "/app/data"
+  memory_mb = 512

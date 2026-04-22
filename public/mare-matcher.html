@@ -88,6 +88,38 @@ body {
   margin-top: 24px; font-size: 11px; color: var(--ink-soft);
   padding-top: 14px; border-top: 1px solid var(--rule);
 }
+/* ---------- v2 additions ---------- */
+.toolbar {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  flex-wrap: wrap; margin-bottom: 10px;
+}
+.toolbar .controls-group { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.toolbar label { font-size: 11px; letter-spacing: 1px; color: var(--ink-soft); text-transform: uppercase; }
+.toolbar select, .toolbar input[type="checkbox"] {
+  border: 1px solid var(--rule); border-radius: 6px;
+  padding: 5px 8px; font-size: 13px; background: var(--cream);
+  color: var(--ink);
+}
+.toolbar .checkbox-wrap {
+  display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--ink);
+}
+.toolbar .btn-print {
+  border: 1px solid var(--rule); background: var(--cream); color: var(--ink);
+  padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px;
+  font-weight: 600;
+}
+.toolbar .btn-print:hover { background: #f5efe0; }
+.badge-roi      { background: #fff8e4; color: #6b5016; border: 1px solid #e0d9c6; }
+.badge-roi.strong { background: #e6f4ea; color: #1e6b2f; border-color: #b8dcc2; }
+.badge-roi.weak   { background: #fdecea; color: #8b2a1a; border-color: #e0c0bc; }
+.badge-progeny  { background: #f7f2e4; color: #6b5016; }
+.badge-fresh    { background: #e3f0f8; color: #1e4b6b; }
+@media print {
+  body { background: #fff; color: #000; }
+  .controls, .form, .toolbar, .footer, .btn-print, .intro { display: none !important; }
+  .result-row { box-shadow: none; break-inside: avoid; }
+  .masthead { border-bottom: 2px solid #000; }
+}
 </style>
 </head>
 <body>
@@ -141,6 +173,27 @@ body {
     </div>
   </div>
 
+  <div class="toolbar">
+    <div class="controls-group">
+      <label for="sort-mode">Sort by:</label>
+      <select id="sort-mode">
+        <option value="match">Match score (pedigree-adjusted)</option>
+        <option value="value">Value Score (unadjusted)</option>
+        <option value="roi">Sales ROI (yearling avg ÷ fee)</option>
+        <option value="best_value">Best value (low fee × high match)</option>
+      </select>
+      <label class="checkbox-wrap" title="Show only stallions whose yearling avg / fee ratio beats the peer median">
+        <input id="only-strong-roi" type="checkbox"/>
+        Strong ROI only
+      </label>
+      <label class="checkbox-wrap" title="Show only stallions whose sire or damsire ranks in the BloodHorse Top 50 by progeny earnings">
+        <input id="only-proven-ped" type="checkbox"/>
+        Proven pedigree only
+      </label>
+    </div>
+    <button id="btn-print" class="btn-print" title="Print this match list">Print / Save PDF</button>
+  </div>
+
   <div id="result-count" class="result-count"></div>
   <div id="results"></div>
 
@@ -160,6 +213,34 @@ async function bootSireValue() {
   var stallions = data.stallions;
   document.getElementById('model-version').textContent = 'Model ' + data.model_version;
   document.getElementById('stallion-count').textContent = stallions.length;
+
+  // Progeny lookup tables (best-effort).
+  var sireIdx = {}, bmsIdx = {};
+  function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
+  try {
+    var [sResp, bResp] = await Promise.all([
+      fetch('/data/progeny-sires-2025.json'),
+      fetch('/data/progeny-bms-2026.json'),
+    ]);
+    if (sResp.ok) { var sJson = await sResp.json(); (sJson.sires || []).forEach(function(r) { sireIdx[normName(r.sire)] = r; }); }
+    if (bResp.ok) { var bJson = await bResp.json(); (bJson.bms   || []).forEach(function(r) { bmsIdx [normName(r.sire)] = r; }); }
+  } catch (_e) { /* optional */ }
+
+  // Pre-compute ROI data on each stallion so filtering/sort is cheap.
+  stallions.forEach(function(s) {
+    var c = (s.score || {}).components || {};
+    var me = c.market_efficiency && c.market_efficiency.inputs;
+    var te = c.twoyo_market_efficiency && c.twoyo_market_efficiency.inputs;
+    var roi = null, roiRel = null, roiSource = null;
+    if (me && me.ratio && me.yearlings_sold_n > 0) { roi = me.ratio; roiRel = me.peer_median_ratio ? me.ratio / me.peer_median_ratio : null; roiSource = 'yearling'; }
+    else if (te && te.ratio && te.twoyos_sold_n > 0) { roi = te.ratio; roiRel = te.peer_median_ratio ? te.ratio / te.peer_median_ratio : null; roiSource = '2yo'; }
+    s._roi = roi;
+    s._roiRel = roiRel;
+    s._roiSource = roiSource;
+    s._sireRow = sireIdx[normName(s.sire)] || null;
+    s._bmsRow  = bmsIdx[normName(s.damsire)] || null;
+    s._hasProvenPed = !!(s._sireRow || s._bmsRow);
+  });
 
   // Populate datalists with the distinct sires + damsires already in our data
   var sires = new Set(), bms = new Set();
@@ -231,17 +312,26 @@ async function bootSireValue() {
   }
 
   // URL-sync helpers: let users share their mare profile via the URL
+  var URL_KEYS = ['m-sire', 'm-damsire', 'm-2ndds', 'm-sire-sire', 'm-min', 'm-max',
+                  'sort-mode', 'only-strong-roi', 'only-proven-ped'];
   function readFromUrl() {
     var params = new URLSearchParams(location.search);
-    ['m-sire', 'm-damsire', 'm-2ndds', 'm-sire-sire', 'm-min', 'm-max'].forEach(function(id) {
+    URL_KEYS.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
       var v = params.get(id);
-      if (v != null) document.getElementById(id).value = v;
+      if (v == null) return;
+      if (el.type === 'checkbox') el.checked = (v === '1' || v === 'true');
+      else el.value = v;
     });
   }
   function writeToUrl() {
     var params = new URLSearchParams();
-    ['m-sire', 'm-damsire', 'm-2ndds', 'm-sire-sire', 'm-min', 'm-max'].forEach(function(id) {
-      var v = document.getElementById(id).value.trim();
+    URL_KEYS.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (el.type === 'checkbox') { if (el.checked) params.set(id, '1'); return; }
+      var v = (el.value || '').trim();
       if (v) params.set(id, v);
     });
     var qs = params.toString();
@@ -258,6 +348,9 @@ async function bootSireValue() {
     var mMin = parseInt(document.getElementById('m-min').value, 10) || 0;
     var mMaxRaw = document.getElementById('m-max').value.trim();
     var mMax = mMaxRaw ? parseInt(mMaxRaw, 10) : null;
+    var sortMode   = document.getElementById('sort-mode').value;
+    var strongRoi  = document.getElementById('only-strong-roi').checked;
+    var provenPed  = document.getElementById('only-proven-ped').checked;
 
     var list = stallions
       .filter(function(s) {
@@ -266,15 +359,40 @@ async function bootSireValue() {
         if (mMax && s.fee_usd > mMax) return false;
         return true;
       })
+      .filter(function(s) {
+        if (strongRoi && !(s._roiRel && s._roiRel >= 1.2)) return false;
+        if (provenPed && !s._hasProvenPed) return false;
+        return true;
+      })
       .map(function(s) {
         var m = computeMatch(s, mSire, mBMS, m2ndDS, mSireSire);
         return { s: s, m: m };
       });
 
-    list.sort(function(a, b) { return b.m.match - a.m.match; });
+    function sortKey(row) {
+      var s = row.s, m = row.m;
+      switch (sortMode) {
+        case 'value':      return s.score.value;
+        case 'roi':        return s._roi || -1;
+        case 'best_value':
+          // high match score but at low fee — effectively "bang for buck"
+          // using an adjusted score penalty for stallions without a fee number.
+          var fee = s.fee_usd || 100000; // treat "private" as expensive
+          return m.match / Math.log10(Math.max(500, fee));
+        case 'match':
+        default:           return m.match;
+      }
+    }
+    list.sort(function(a, b) { return sortKey(b) - sortKey(a); });
 
+    var sortLabel = {
+      match: 'pedigree-adjusted match',
+      value: 'Value Score',
+      roi:   'Sales ROI',
+      best_value: 'best value (match ÷ fee)'
+    }[sortMode];
     document.getElementById('result-count').textContent =
-      'Showing ' + list.length + ' matching stallions.';
+      'Showing ' + list.length + ' matching stallions, sorted by ' + sortLabel + '.';
 
     var html = list.slice(0, 40).map(function(row, i) {
       var s = row.s, m = row.m;
@@ -287,30 +405,61 @@ async function bootSireValue() {
         var cls = a.kind === 'inbreed' ? 'badge-inbreed' :
                   (a.kind === 'reinforce' ? 'badge-reinforce' : 'badge-pedigree-match');
         return '<span class="badge ' + cls + '">' + a.label + '</span>';
-      }).join(' ');
+      });
+
+      // ROI badge
+      if (s._roi != null) {
+        var roiCls = 'badge-roi' + (s._roiRel >= 1.5 ? ' strong' : (s._roiRel < 0.8 ? ' weak' : ''));
+        badges.push('<span class="badge ' + roiCls + '" title="Yearling/2YO avg ÷ stud fee">ROI ' + s._roi.toFixed(1) + '×</span>');
+      }
+      // Proven pedigree badge
+      if (s._sireRow) {
+        badges.push('<span class="badge badge-progeny" title="Sire in BloodHorse Top 50 by 2025 progeny earnings">Sire #' + s._sireRow.rank + '</span>');
+      }
+      if (s._bmsRow) {
+        badges.push('<span class="badge badge-progeny" title="Damsire in BloodHorse Top 50 BMS">BMS #' + s._bmsRow.rank + '</span>');
+      }
+
+      var badgesHtml = badges.join(' ');
       var feeDisp = s.fee_usd ? '$' + s.fee_usd.toLocaleString() : (s.fee_qualifier || '\u2014');
+
+      // Primary displayed number depends on sort mode — users should see what they're optimizing for.
+      var primaryNum, primaryLabel;
+      if (sortMode === 'roi')        { primaryNum = (s._roi != null ? s._roi.toFixed(1) + '×' : '—'); primaryLabel = 'ROI ratio'; }
+      else if (sortMode === 'value') { primaryNum = s.score.value.toFixed(1); primaryLabel = 'Value score'; }
+      else                            { primaryNum = m.match.toFixed(1);     primaryLabel = 'match score'; }
+
       return ''
         + '<div class="result-row">'
         +   '<div class="rank">' + (i + 1) + '</div>'
         +   '<div class="middle">'
-        +     '<h3>' + s.name + ' <span class="badge badge-tier">' + s.score.grade + ' ' + s.score.value.toFixed(1) + '</span></h3>'
+        +     '<h3><a href="/stallion-card.html?s=' + encodeURIComponent(s.name) + '" style="color:inherit;text-decoration:none;">' + s.name + '</a>'
+        +       ' <span class="badge badge-tier">' + s.score.grade + ' ' + s.score.value.toFixed(1) + '</span></h3>'
         +     '<div class="ped">' + (s.pedigree || '&nbsp;') + '</div>'
         +     '<div class="farm">' + s.farm + ' &middot; ' + feeDisp + '</div>'
-        +     (badges ? '<div style="margin-top:6px;">' + badges + '</div>' : '')
+        +     (badgesHtml ? '<div style="margin-top:6px;">' + badgesHtml + '</div>' : '')
         +   '</div>'
         +   '<div class="score-block">'
-        +     '<div class="match">' + m.match.toFixed(1) + '</div>'
-        +     '<div>match score</div>'
+        +     '<div class="match">' + primaryNum + '</div>'
+        +     '<div>' + primaryLabel + '</div>'
         +     deltaHtml
         +   '</div>'
         + '</div>';
     }).join('');
-    document.getElementById('results').innerHTML = html;
+    document.getElementById('results').innerHTML = html || '<div style="padding:40px;text-align:center;color:var(--ink-soft);">No matches. Try loosening your filters.</div>';
   }
 
-  // Bind inputs
+  // Bind inputs — text + number fields fire on 'input', select + checkbox on 'change'
   ['m-sire','m-damsire','m-2ndds','m-sire-sire','m-min','m-max'].forEach(function(id) {
     document.getElementById(id).addEventListener('input', render);
+  });
+  ['sort-mode','only-strong-roi','only-proven-ped'].forEach(function(id) {
+    document.getElementById(id).addEventListener('change', render);
+  });
+
+  // Print button
+  document.getElementById('btn-print').addEventListener('click', function() {
+    window.print();
   });
 
   // Load from URL query params (shared-profile mechanism) then render
