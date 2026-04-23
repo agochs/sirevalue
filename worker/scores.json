@@ -10532,6 +10532,69 @@
       }
     },
     {
+      "name": "Mineshaft",
+      "farm": "Lane's End",
+      "pedigree": "A.P. Indy \u2013 Prospectors Delite, by Mr. Prospector",
+      "sire": "A.P. Indy",
+      "dam": "Prospectors Delite",
+      "damsire": "Mr. Prospector",
+      "fee_usd": null,
+      "fee_terms": null,
+      "fee_qualifier": null,
+      "year_of_birth": 1999,
+      "color": "Dark Bay/Brown",
+      "height_hands": null,
+      "entered_stud_year": 2004,
+      "source_url": "https://lanesend.com/mineshaft",
+      "bloodhorse_url": "https://www.bloodhorse.com/stallion-register/stallions/126547/mineshaft",
+      "score": {
+        "value": 33.5,
+        "grade": "D",
+        "tier": "commercial_appeal",
+        "confidence": "low",
+        "model_version": "vs-1.3-nybred-nightly",
+        "peer_group": {
+          "fee_band": null,
+          "maturity_stage": "senior",
+          "peer_n": 2
+        },
+        "components": {
+          "pedigree_prestige": {
+            "percentile": 15,
+            "weight": 50,
+            "points": 7.5,
+            "inputs": {
+              "sire_name": "A.P. Indy",
+              "sire_points": 0,
+              "damsire_name": "Mr. Prospector",
+              "bms_points": 0,
+              "raw_total": 0
+            }
+          },
+          "fee_band_position": {
+            "percentile": 50.0,
+            "weight": 30,
+            "points": 15.0,
+            "inputs": {
+              "reason": "no_fee_available"
+            }
+          },
+          "maturity_context": {
+            "percentile": 55,
+            "weight": 20,
+            "points": 11.0,
+            "inputs": {
+              "stage": "senior",
+              "years_at_stud": 22
+            }
+          }
+        },
+        "notes": [
+          "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
+        ]
+      }
+    },
+    {
       "name": "Temple City",
       "farm": "Spendthrift Farm",
       "pedigree": "Dynaformer \u2013 Curriculum, by Danzig",
@@ -10556,7 +10619,7 @@
         "peer_group": {
           "fee_band": null,
           "maturity_stage": "senior",
-          "peer_n": 1
+          "peer_n": 2
         },
         "components": {
           "pedigree_prestige": {
@@ -10590,7 +10653,7 @@
           }
         },
         "notes": [
-          "insufficient_peer_data (only 1 peers; score shown with wider tolerance)"
+          "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
       }
     },
@@ -10619,7 +10682,7 @@
         "peer_group": {
           "fee_band": null,
           "maturity_stage": "senior",
-          "peer_n": 1
+          "peer_n": 2
         },
         "components": {
           "pedigree_prestige": {
@@ -10653,7 +10716,7 @@
           }
         },
         "notes": [
-          "insufficient_peer_data (only 1 peers; score shown with wider tolerance)"
+          "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
       }
     },
@@ -11043,69 +11106,6 @@
           }
         },
         "notes": []
-      }
-    },
-    {
-      "name": "Mineshaft",
-      "farm": "Lane's End",
-      "pedigree": "A.P. Indy \u2013 Prospectors Delite, by Mr. Prospector",
-      "sire": "A.P. Indy",
-      "dam": "Prospectors Delite",
-      "damsire": "Mr. Prospector",
-      "fee_usd": null,
-      "fee_terms": null,
-      "fee_qualifier": null,
-      "year_of_birth": null,
-      "color": null,
-      "height_hands": null,
-      "entered_stud_year": null,
-      "source_url": "https://lanesend.com/mineshaft",
-      "bloodhorse_url": null,
-      "score": {
-        "value": 32.5,
-        "grade": "D",
-        "tier": "commercial_appeal",
-        "confidence": "low",
-        "model_version": "vs-1.3-nybred-nightly",
-        "peer_group": {
-          "fee_band": null,
-          "maturity_stage": "unknown",
-          "peer_n": 0
-        },
-        "components": {
-          "pedigree_prestige": {
-            "percentile": 15,
-            "weight": 50,
-            "points": 7.5,
-            "inputs": {
-              "sire_name": "A.P. Indy",
-              "sire_points": 0,
-              "damsire_name": "Mr. Prospector",
-              "bms_points": 0,
-              "raw_total": 0
-            }
-          },
-          "fee_band_position": {
-            "percentile": 50.0,
-            "weight": 30,
-            "points": 15.0,
-            "inputs": {
-              "reason": "no_fee_available"
-            }
-          },
-          "maturity_context": {
-            "percentile": 50,
-            "weight": 20,
-            "points": 10.0,
-            "inputs": {
-              "stage": "unknown",
-              "years_at_stud": null
-            }
-          }
-        },
-        "notes": [
-          "insufficient_peer_data (only 0 peers; score shown with wider tolerance)"
-        ]
       }
     },
     {

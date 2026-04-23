@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-23T18:34:11Z",
+  "updated_at": "2026-04-23T18:44:47Z",
   "source": "https://www.bloodhorse.com/stallion-register/",
   "resolved": {
     "Angel of Empire": {
@@ -1511,13 +1511,20 @@
       "bh_url_id": 170987,
       "bh_slug": "yoshida-jpn",
       "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170987/yoshida-jpn"
+    },
+    "Mineshaft": {
+      "year_of_birth": 1999,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2004,
+      "_raw_data_line": "1999, dkb/br, entered stud 2004",
+      "bh_url_id": 126547,
+      "bh_slug": "mineshaft",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/126547/mineshaft",
+      "_manual_entry": "Search missed (pensioned stallion); added manually from BH register page"
     }
   },
   "unresolved": [
-    {
-      "name": "Mineshaft",
-      "reason": "no exact-name match (ambiguous or no results)"
-    },
     {
       "name": "Producer (Gb)",
       "reason": "no exact-name match (ambiguous or no results)"
@@ -1525,7 +1532,7 @@
   ],
   "summary": {
     "total": 153,
-    "resolved": 151,
-    "unresolved": 2
+    "resolved": 152,
+    "unresolved": 1
   }
 }
