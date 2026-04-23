@@ -479,8 +479,12 @@ async function bootSireValue() {
       + '<details class="sources">'
       +   '<summary>Source &amp; Confidence</summary>'
       +   '<div style="font-size:13px; margin-top:8px;">'
-      +     '<div>Primary source: <a href="' + escapeHtml(s.source_url) + '" target="_blank" rel="noopener">'
+      +     '<div>Farm page: <a href="' + escapeHtml(s.source_url) + '" target="_blank" rel="noopener">'
       +       escapeHtml(s.source_url) + '</a></div>'
+      +     (s.bloodhorse_url
+        ? '<div style="margin-top:4px;">BloodHorse bio: <a href="' + escapeHtml(s.bloodhorse_url) + '" target="_blank" rel="noopener">'
+          + escapeHtml(s.bloodhorse_url) + '</a></div>'
+        : '')
       +     '<div style="margin-top:4px;">Confidence: <strong>' + escapeHtml(sc.confidence) + '</strong>'
       +       ' &middot; Tier: ' + escapeHtml(sc.tier)
       +       ' &middot; ' + escapeHtml(sc.model_version) + '</div>'

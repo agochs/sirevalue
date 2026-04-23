@@ -29,6 +29,10 @@ AIRDRIE_CSV = HERE / "airdrie-dryrun.csv"
 CALUMET_CSV = HERE / "calumet-dryrun.csv"
 COMBINED_CSV = HERE / "rosters-combined.csv"
 SCORES_JSON = HERE / "scores.json"
+# BloodHorse Stallion Register enrichment — canonical bio data per stallion.
+# Produced by enrich_from_bloodhorse.py. When present, BH values take
+# precedence over CSV values for year_of_birth / color / height / entered-stud.
+BH_BIOS_JSON = HERE / "bloodhorse-register-bios.json"
 
 COMMON_COLS = [
     "farm", "name", "year_of_birth", "color", "height_hands",
@@ -36,7 +40,34 @@ COMMON_COLS = [
     "fee_usd", "fee_terms", "fee_qualifier",
     "entered_stud_year", "nominations",
     "source_url",
+    "bloodhorse_url",
 ]
+
+# BloodHorse / Jockey Club registered color codes -> reader-friendly names.
+# These are the authoritative registered color categories; we don't invent new
+# ones or guess. If BH returns a code not in this map, we preserve it verbatim.
+BH_COLOR_CODES = {
+    "b":      "Bay",
+    "ch":     "Chestnut",
+    "gr":     "Gray",
+    "ro":     "Roan",
+    "gr/ro":  "Gray/Roan",
+    "blk":    "Black",
+    "br":     "Brown",
+    "dkb/br": "Dark Bay/Brown",
+    "wh":     "White",
+    "pal":    "Palomino",
+}
+
+
+def expand_bh_color(code):
+    """Translate a BH color code ('b', 'dkb/br') to its registered name
+    ('Bay', 'Dark Bay/Brown'). Returns the input unchanged for anything
+    not in the known-codes map — better to show the raw value than to
+    invent one."""
+    if not code:
+        return code
+    return BH_COLOR_CODES.get(code.lower(), code)
 
 
 def load_spendthrift() -> list[dict]:
@@ -254,6 +285,60 @@ def to_snapshot(row: dict) -> StallionSnapshot:
     )
 
 
+def load_bh_bios() -> dict:
+    """Returns the `resolved` dict from bloodhorse-register-bios.json, or {} if
+    the enrichment file isn't present. Keys are stallion names."""
+    if not BH_BIOS_JSON.exists():
+        return {}
+    try:
+        data = json.loads(BH_BIOS_JSON.read_text())
+    except Exception as e:
+        print(f"WARNING: failed to read {BH_BIOS_JSON.name}: {e}")
+        return {}
+    return data.get("resolved", {}) or {}
+
+
+def merge_bh_bios(rows: list[dict], bios: dict) -> dict:
+    """Overlay BH Stallion Register facts onto roster rows IN-PLACE. BH is
+    authoritative for year_of_birth / color / height_hands / entered_stud_year
+    and we carry the bh_url through for citation on the stallion card.
+
+    Returns a summary dict: {merged, conflicts_resolved, missing}.
+    Disagreements are logged (BH wins, but audit trail matters).
+    """
+    stats = {"merged": 0, "conflicts_resolved": [], "missing": []}
+    for row in rows:
+        bio = bios.get(row["name"])
+        if not bio:
+            stats["missing"].append(row["name"])
+            continue
+
+        def _overlay(field: str, bh_val):
+            """Set row[field] to BH's value, recording any disagreement."""
+            if bh_val is None or bh_val == "":
+                return
+            # Preserve as string for consistency with CSV storage
+            new_val = str(bh_val) if not isinstance(bh_val, str) else bh_val
+            existing = (row.get(field) or "").strip()
+            if existing and existing != new_val:
+                stats["conflicts_resolved"].append({
+                    "name": row["name"],
+                    "field": field,
+                    "csv": existing,
+                    "bh": new_val,
+                })
+            row[field] = new_val
+
+        _overlay("year_of_birth",     bio.get("year_of_birth"))
+        _overlay("color",             expand_bh_color(bio.get("color")))
+        _overlay("height_hands",      bio.get("height_hands"))
+        _overlay("entered_stud_year", bio.get("entered_stud_year"))
+        # Carry BH's canonical URL for citation on the stallion card
+        row["bloodhorse_url"] = bio.get("bh_url")
+        stats["merged"] += 1
+    return stats
+
+
 def main():
     all_rows = (
         load_spendthrift() + load_winstar() + load_lanesend()
@@ -263,7 +348,25 @@ def main():
     )
     all_rows.sort(key=lambda r: r["name"])
 
-    # Write unified CSV
+    # Overlay BH Stallion Register facts (year_of_birth, color, height,
+    # entered_stud_year). Authoritative source; conflicts logged for audit.
+    bh_bios = load_bh_bios()
+    if bh_bios:
+        bh_stats = merge_bh_bios(all_rows, bh_bios)
+        print(f"BH overlay: {bh_stats['merged']} merged, "
+              f"{len(bh_stats['missing'])} missing, "
+              f"{len(bh_stats['conflicts_resolved'])} conflict(s) (BH won)")
+        for conflict in bh_stats["conflicts_resolved"]:
+            print(f"  CONFLICT: {conflict['name']}.{conflict['field']}: "
+                  f"CSV={conflict['csv']!r} -> BH={conflict['bh']!r}")
+        if bh_stats["missing"]:
+            preview = ", ".join(bh_stats["missing"][:5])
+            suffix = "" if len(bh_stats["missing"]) <= 5 else f" (+{len(bh_stats['missing'])-5} more)"
+            print(f"  No BH record for: {preview}{suffix}")
+    else:
+        print(f"BH overlay skipped: {BH_BIOS_JSON.name} not found")
+
+    # Write unified CSV (reflects BH overlay)
     with COMBINED_CSV.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=COMMON_COLS)
         w.writeheader()
@@ -298,6 +401,7 @@ def main():
             "height_hands": row["height_hands"] or None,
             "entered_stud_year": snap.entered_stud_year,
             "source_url": row["source_url"],
+            "bloodhorse_url": row.get("bloodhorse_url"),
             "score": {
                 "value": result.score,
                 "grade": result.grade,

@@ -1,0 +1,1531 @@
+{
+  "updated_at": "2026-04-23T18:34:11Z",
+  "source": "https://www.bloodhorse.com/stallion-register/",
+  "resolved": {
+    "Angel of Empire": {
+      "year_of_birth": 2020,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, b, entered stud 2025",
+      "bh_url_id": 172967,
+      "bh_slug": "angel-of-empire",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172967/angel-of-empire"
+    },
+    "Annapolis": {
+      "year_of_birth": 2019,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2019, b, entered stud 2024",
+      "bh_url_id": 172786,
+      "bh_slug": "annapolis",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172786/annapolis"
+    },
+    "Arabian Knight": {
+      "year_of_birth": 2020,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, b, entered stud 2025",
+      "bh_url_id": 172918,
+      "bh_slug": "arabian-knight",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172918/arabian-knight"
+    },
+    "Arabian Lion": {
+      "year_of_birth": 2020,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2020, ch, entered stud 2024",
+      "bh_url_id": 172536,
+      "bh_slug": "arabian-lion",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172536/arabian-lion"
+    },
+    "Arcangelo": {
+      "year_of_birth": 2020,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2020, gr/ro, entered stud 2024",
+      "bh_url_id": 172555,
+      "bh_slug": "arcangelo",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172555/arcangelo"
+    },
+    "Army Mule": {
+      "year_of_birth": 2014,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2014, b, entered stud 2019",
+      "bh_url_id": 170575,
+      "bh_slug": "army-mule",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170575/army-mule"
+    },
+    "Arthur's Ride": {
+      "year_of_birth": 2020,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2020, gr/ro, entered stud 2026",
+      "bh_url_id": 173287,
+      "bh_slug": "arthurs-ride",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173287/arthurs-ride"
+    },
+    "Authentic": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2017, b, entered stud 2021",
+      "bh_url_id": 171601,
+      "bh_slug": "authentic",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171601/authentic"
+    },
+    "Barnes": {
+      "year_of_birth": 2022,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2022, b, entered stud 2026",
+      "bh_url_id": 173400,
+      "bh_slug": "barnes",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173400/barnes"
+    },
+    "Basin": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2017, b, entered stud 2022",
+      "bh_url_id": 171996,
+      "bh_slug": "basin",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171996/basin"
+    },
+    "Blame": {
+      "year_of_birth": 2006,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2011,
+      "_raw_data_line": "2006, b, entered stud 2011",
+      "bh_url_id": 125939,
+      "bh_slug": "blame",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/125939/blame"
+    },
+    "Bolt D’oro": {
+      "year_of_birth": 2015,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2015, b, entered stud 2019",
+      "bh_url_id": 170565,
+      "bh_slug": "bolt-doro",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170565/bolt-doro"
+    },
+    "Bright Future": {
+      "year_of_birth": 2019,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2019, ch, entered stud 2025",
+      "bh_url_id": 172956,
+      "bh_slug": "bright-future",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172956/bright-future"
+    },
+    "By My Standards": {
+      "year_of_birth": 2016,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2016, b, entered stud 2022",
+      "bh_url_id": 171658,
+      "bh_slug": "by-my-standards",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171658/by-my-standards"
+    },
+    "Candy Ride (Arg)": {
+      "year_of_birth": 1999,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2005,
+      "_raw_data_line": "1999, b, entered stud 2005",
+      "bh_url_id": 119326,
+      "bh_slug": "candy-ride-arg",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/119326/candy-ride-arg"
+    },
+    "Carl Spackler (Ire)": {
+      "year_of_birth": 2020,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2020, ch, entered stud 2026",
+      "bh_url_id": 173344,
+      "bh_slug": "carl-spackler-ire",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173344/carl-spackler-ire"
+    },
+    "Chancer Mcpatrick": {
+      "year_of_birth": 2022,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2022, b, entered stud 2026",
+      "bh_url_id": 173276,
+      "bh_slug": "chancer-mcpatrick",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173276/chancer-mcpatrick"
+    },
+    "Charge It": {
+      "year_of_birth": 2019,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2019, gr/ro, entered stud 2025",
+      "bh_url_id": 172938,
+      "bh_slug": "charge-it",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172938/charge-it"
+    },
+    "Charlatan": {
+      "year_of_birth": 2017,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2017, ch, entered stud 2022",
+      "bh_url_id": 171986,
+      "bh_slug": "charlatan",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171986/charlatan"
+    },
+    "Citizen Bull": {
+      "year_of_birth": 2022,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2022, b, entered stud 2026",
+      "bh_url_id": 173298,
+      "bh_slug": "citizen-bull",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173298/citizen-bull"
+    },
+    "City Of Light": {
+      "year_of_birth": 2014,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2014, b, entered stud 2019",
+      "bh_url_id": 170513,
+      "bh_slug": "city-of-light",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170513/city-of-light"
+    },
+    "Cody's Wish": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2018, b, entered stud 2024",
+      "bh_url_id": 172550,
+      "bh_slug": "codys-wish",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172550/codys-wish"
+    },
+    "Cogburn": {
+      "year_of_birth": 2019,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2019, b, entered stud 2025",
+      "bh_url_id": 172962,
+      "bh_slug": "cogburn",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172962/cogburn"
+    },
+    "Complexity": {
+      "year_of_birth": 2016,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2016, b, entered stud 2021",
+      "bh_url_id": 171621,
+      "bh_slug": "complexity",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171621/complexity"
+    },
+    "Connect": {
+      "year_of_birth": 2013,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2018,
+      "_raw_data_line": "2013, dkb/br, entered stud 2018",
+      "bh_url_id": 169973,
+      "bh_slug": "connect",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169973/connect"
+    },
+    "Constitution": {
+      "year_of_birth": 2011,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2016,
+      "_raw_data_line": "2011, b, entered stud 2016",
+      "bh_url_id": 169027,
+      "bh_slug": "constitution",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169027/constitution"
+    },
+    "Corniche": {
+      "year_of_birth": 2019,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2019, b, entered stud 2023",
+      "bh_url_id": 172295,
+      "bh_slug": "corniche",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172295/corniche"
+    },
+    "Country Grammer": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2017, b, entered stud 2024",
+      "bh_url_id": 172527,
+      "bh_slug": "country-grammer",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172527/country-grammer"
+    },
+    "Cyberknife": {
+      "year_of_birth": 2019,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2019, ch, entered stud 2023",
+      "bh_url_id": 172285,
+      "bh_slug": "cyberknife",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172285/cyberknife"
+    },
+    "Domestic Product": {
+      "year_of_birth": 2021,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2021, dkb/br, entered stud 2025",
+      "bh_url_id": 172959,
+      "bh_slug": "domestic-product",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172959/domestic-product"
+    },
+    "Dornoch": {
+      "year_of_birth": 2021,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2021, b, entered stud 2025",
+      "bh_url_id": 172930,
+      "bh_slug": "dornoch",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172930/dornoch"
+    },
+    "Dr. Schivel": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2018, b, entered stud 2024",
+      "bh_url_id": 172573,
+      "bh_slug": "dr-schivel",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172573/dr-schivel"
+    },
+    "Drain The Clock": {
+      "year_of_birth": 2018,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, ch, entered stud 2023",
+      "bh_url_id": 172360,
+      "bh_slug": "drain-the-clock",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172360/drain-the-clock"
+    },
+    "Early Voting": {
+      "year_of_birth": 2019,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2019, dkb/br, entered stud 2023",
+      "bh_url_id": 172325,
+      "bh_slug": "early-voting",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172325/early-voting"
+    },
+    "Epicenter": {
+      "year_of_birth": 2019,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2019, b, entered stud 2023",
+      "bh_url_id": 172407,
+      "bh_slug": "epicenter",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172407/epicenter"
+    },
+    "Essential Quality": {
+      "year_of_birth": 2018,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2018, gr/ro, entered stud 2022",
+      "bh_url_id": 172053,
+      "bh_slug": "essential-quality",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172053/essential-quality"
+    },
+    "Fierceness": {
+      "year_of_birth": 2021,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2021, b, entered stud 2026",
+      "bh_url_id": 173317,
+      "bh_slug": "fierceness",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173317/fierceness"
+    },
+    "First Mission": {
+      "year_of_birth": 2020,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2020, dkb/br, entered stud 2026",
+      "bh_url_id": 173307,
+      "bh_slug": "first-mission",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173307/first-mission"
+    },
+    "Flightline": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, entered stud 2023",
+      "bh_url_id": 172371,
+      "bh_slug": "flightline",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172371/flightline"
+    },
+    "Forte": {
+      "year_of_birth": 2020,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2020, dkb/br, entered stud 2024",
+      "bh_url_id": 172561,
+      "bh_slug": "forte",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172561/forte"
+    },
+    "Funtastic": {
+      "year_of_birth": 2014,
+      "color": "gr/ro",
+      "height_hands": 16.1,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2014, gr/ro, 16.1 hands, entered stud 2019",
+      "bh_url_id": 170600,
+      "bh_slug": "funtastic",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170600/funtastic"
+    },
+    "Girvin": {
+      "year_of_birth": 2014,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2014, dkb/br, entered stud 2019",
+      "bh_url_id": 170535,
+      "bh_slug": "girvin",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170535/girvin"
+    },
+    "Goal Oriented": {
+      "year_of_birth": 2022,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2022, dkb/br, entered stud 2026",
+      "bh_url_id": 173403,
+      "bh_slug": "goal-oriented",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173403/goal-oriented"
+    },
+    "Golden Pal": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, entered stud 2023",
+      "bh_url_id": 172365,
+      "bh_slug": "golden-pal",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172365/golden-pal"
+    },
+    "Goldencents": {
+      "year_of_birth": 2010,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2015,
+      "_raw_data_line": "2010, b, entered stud 2015",
+      "bh_url_id": 168423,
+      "bh_slug": "goldencents",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/168423/goldencents"
+    },
+    "Good Magic": {
+      "year_of_birth": 2015,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2015, ch, entered stud 2019",
+      "bh_url_id": 170552,
+      "bh_slug": "good-magic",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170552/good-magic"
+    },
+    "Greatest Honour": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, entered stud 2023",
+      "bh_url_id": 172334,
+      "bh_slug": "greatest-honour",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172334/greatest-honour"
+    },
+    "Gun Pilot": {
+      "year_of_birth": 2020,
+      "color": "b",
+      "height_hands": 16.2,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, b, 16.2 hands, entered stud 2025",
+      "bh_url_id": 172969,
+      "bh_slug": "gun-pilot",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172969/gun-pilot"
+    },
+    "Gun Runner": {
+      "year_of_birth": 2013,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2018,
+      "_raw_data_line": "2013, ch, entered stud 2018",
+      "bh_url_id": 170088,
+      "bh_slug": "gun-runner",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170088/gun-runner"
+    },
+    "Gunite": {
+      "year_of_birth": 2019,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2019, dkb/br, entered stud 2024",
+      "bh_url_id": 172583,
+      "bh_slug": "gunite",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172583/gunite"
+    },
+    "Happy Saver": {
+      "year_of_birth": 2017,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2017, ch, entered stud 2023",
+      "bh_url_id": 172354,
+      "bh_slug": "happy-saver",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172354/happy-saver"
+    },
+    "Hard Spun": {
+      "year_of_birth": 2004,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2008,
+      "_raw_data_line": "2004, b, entered stud 2008",
+      "bh_url_id": 130025,
+      "bh_slug": "hard-spun",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/130025/hard-spun"
+    },
+    "Heartland": {
+      "year_of_birth": 2021,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2021, ch, entered stud 2025",
+      "bh_url_id": 172929,
+      "bh_slug": "heartland",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172929/heartland"
+    },
+    "Highland Falls": {
+      "year_of_birth": 2020,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2020, ch, entered stud 2026",
+      "bh_url_id": 173304,
+      "bh_slug": "highland-falls",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173304/highland-falls"
+    },
+    "Highly Motivated": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": 16.2,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, 16.2 hands, entered stud 2023",
+      "bh_url_id": 172387,
+      "bh_slug": "highly-motivated",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172387/highly-motivated"
+    },
+    "Hightail": {
+      "year_of_birth": 2010,
+      "color": "dkb/br",
+      "height_hands": 16.0,
+      "entered_stud_year": 2013,
+      "_raw_data_line": "2010, dkb/br, 16 hands, entered stud 2013",
+      "bh_url_id": 166893,
+      "bh_slug": "hightail",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/166893/hightail"
+    },
+    "Honor A. P.": {
+      "year_of_birth": 2017,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2017, dkb/br, entered stud 2021",
+      "bh_url_id": 171589,
+      "bh_slug": "honor-a-p",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171589/honor-a-p"
+    },
+    "Idol": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2017, b, entered stud 2023",
+      "bh_url_id": 172343,
+      "bh_slug": "idol",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172343/idol"
+    },
+    "Independence Hall": {
+      "year_of_birth": 2017,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2017, dkb/br, entered stud 2022",
+      "bh_url_id": 172067,
+      "bh_slug": "independence-hall",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172067/independence-hall"
+    },
+    "Instagrand": {
+      "year_of_birth": 2016,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2016, b, entered stud 2021",
+      "bh_url_id": 171604,
+      "bh_slug": "instagrand",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171604/instagrand"
+    },
+    "Instilled Regard": {
+      "year_of_birth": 2015,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2015, dkb/br, entered stud 2021",
+      "bh_url_id": 171787,
+      "bh_slug": "instilled-regard",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171787/instilled-regard"
+    },
+    "Into Mischief": {
+      "year_of_birth": 2005,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2009,
+      "_raw_data_line": "2005, b, entered stud 2009",
+      "bh_url_id": 130614,
+      "bh_slug": "into-mischief",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/130614/into-mischief"
+    },
+    "Jack Christopher": {
+      "year_of_birth": 2019,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2019, ch, entered stud 2023",
+      "bh_url_id": 172389,
+      "bh_slug": "jack-christopher",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172389/jack-christopher"
+    },
+    "Jackie’s Warrior": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, entered stud 2023",
+      "bh_url_id": 172304,
+      "bh_slug": "jackies-warrior",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172304/jackies-warrior"
+    },
+    "Jimmy Creed": {
+      "year_of_birth": 2009,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2014,
+      "_raw_data_line": "2009, ch, entered stud 2014",
+      "bh_url_id": 166806,
+      "bh_slug": "jimmy-creed",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/166806/jimmy-creed"
+    },
+    "Johannes": {
+      "year_of_birth": 2020,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2020, dkb/br, entered stud 2026",
+      "bh_url_id": 173333,
+      "bh_slug": "johannes",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173333/johannes"
+    },
+    "Jonathan's Way": {
+      "year_of_birth": 2022,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2022, dkb/br, entered stud 2026",
+      "bh_url_id": 173266,
+      "bh_slug": "jonathans-way",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173266/jonathans-way"
+    },
+    "Justify": {
+      "year_of_birth": 2015,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2015, ch, entered stud 2019",
+      "bh_url_id": 170550,
+      "bh_slug": "justify",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170550/justify"
+    },
+    "Kantharos": {
+      "year_of_birth": 2008,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2011,
+      "_raw_data_line": "2008, ch, entered stud 2011",
+      "bh_url_id": 130954,
+      "bh_slug": "kantharos",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/130954/kantharos"
+    },
+    "Karakontie": {
+      "year_of_birth": 2011,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2016,
+      "_raw_data_line": "2011, b, entered stud 2016",
+      "bh_url_id": 169086,
+      "bh_slug": "karakontie-jpn",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169086/karakontie-jpn"
+    },
+    "Keen Ice": {
+      "year_of_birth": 2012,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2018,
+      "_raw_data_line": "2012, b, entered stud 2018",
+      "bh_url_id": 169987,
+      "bh_slug": "keen-ice",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169987/keen-ice"
+    },
+    "Kingsbarns": {
+      "year_of_birth": 2020,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, b, entered stud 2025",
+      "bh_url_id": 172928,
+      "bh_slug": "kingsbarns",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172928/kingsbarns"
+    },
+    "Known Agenda": {
+      "year_of_birth": 2018,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2018, ch, entered stud 2022",
+      "bh_url_id": 171991,
+      "bh_slug": "known-agenda",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171991/known-agenda"
+    },
+    "Lexitonian": {
+      "year_of_birth": 2016,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2016, ch, entered stud 2022",
+      "bh_url_id": 172097,
+      "bh_slug": "lexitonian",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172097/lexitonian"
+    },
+    "Liam's Map": {
+      "year_of_birth": 2011,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2016,
+      "_raw_data_line": "2011, gr/ro, entered stud 2016",
+      "bh_url_id": 169094,
+      "bh_slug": "liams-map",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169094/liams-map"
+    },
+    "Life Is Good": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, entered stud 2023",
+      "bh_url_id": 172331,
+      "bh_slug": "life-is-good",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172331/life-is-good"
+    },
+    "Locked": {
+      "year_of_birth": 2021,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2021, ch, entered stud 2026",
+      "bh_url_id": 173326,
+      "bh_slug": "locked",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173326/locked"
+    },
+    "Loggins": {
+      "year_of_birth": 2020,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2020, b, entered stud 2024",
+      "bh_url_id": 172558,
+      "bh_slug": "loggins",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172558/loggins"
+    },
+    "Maclean's Music": {
+      "year_of_birth": 2008,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2013,
+      "_raw_data_line": "2008, b, entered stud 2013",
+      "bh_url_id": 165815,
+      "bh_slug": "macleans-music",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/165815/macleans-music"
+    },
+    "Mage": {
+      "year_of_birth": 2020,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2020, ch, entered stud 2024",
+      "bh_url_id": 172585,
+      "bh_slug": "mage",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172585/mage"
+    },
+    "Maxfield": {
+      "year_of_birth": 2017,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2017, dkb/br, entered stud 2022",
+      "bh_url_id": 172055,
+      "bh_slug": "maxfield",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172055/maxfield"
+    },
+    "Maximus Mischief": {
+      "year_of_birth": 2016,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2016, b, entered stud 2020",
+      "bh_url_id": 170928,
+      "bh_slug": "maximus-mischief",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170928/maximus-mischief"
+    },
+    "Mckinzie": {
+      "year_of_birth": 2015,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2015, b, entered stud 2021",
+      "bh_url_id": 171613,
+      "bh_slug": "mckinzie",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171613/mckinzie"
+    },
+    "Midshipman": {
+      "year_of_birth": 2006,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2011,
+      "_raw_data_line": "2006, ch, entered stud 2011",
+      "bh_url_id": 132090,
+      "bh_slug": "midshipman",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/132090/midshipman"
+    },
+    "Mindframe": {
+      "year_of_birth": 2021,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2021, dkb/br, entered stud 2026",
+      "bh_url_id": 173323,
+      "bh_slug": "mindframe",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173323/mindframe"
+    },
+    "Mitole": {
+      "year_of_birth": 2015,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2015, b, entered stud 2020",
+      "bh_url_id": 170944,
+      "bh_slug": "mitole",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170944/mitole"
+    },
+    "Mo Donegal": {
+      "year_of_birth": 2019,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2019, b, entered stud 2023",
+      "bh_url_id": 172301,
+      "bh_slug": "mo-donegal",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172301/mo-donegal"
+    },
+    "Mo Town": {
+      "year_of_birth": 2014,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2014, b, entered stud 2019",
+      "bh_url_id": 170547,
+      "bh_slug": "mo-town",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170547/mo-town"
+    },
+    "More Than Looks": {
+      "year_of_birth": 2020,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, dkb/br, entered stud 2025",
+      "bh_url_id": 173039,
+      "bh_slug": "more-than-looks",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173039/more-than-looks"
+    },
+    "Mullikin": {
+      "year_of_birth": 2020,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2020, dkb/br, entered stud 2026",
+      "bh_url_id": 173313,
+      "bh_slug": "mullikin",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173313/mullikin"
+    },
+    "Munnings": {
+      "year_of_birth": 2006,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2011,
+      "_raw_data_line": "2006, ch, entered stud 2011",
+      "bh_url_id": 132513,
+      "bh_slug": "munnings",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/132513/munnings"
+    },
+    "Muth": {
+      "year_of_birth": 2021,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2021, b, entered stud 2025",
+      "bh_url_id": 172990,
+      "bh_slug": "muth",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172990/muth"
+    },
+    "Mystic Guide": {
+      "year_of_birth": 2017,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2017, ch, entered stud 2023",
+      "bh_url_id": 172317,
+      "bh_slug": "mystic-guide",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172317/mystic-guide"
+    },
+    "Mystik Dan": {
+      "year_of_birth": 2021,
+      "color": "b",
+      "height_hands": 16.0,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2021, b, 16 hands, entered stud 2026",
+      "bh_url_id": 173279,
+      "bh_slug": "mystik-dan",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173279/mystik-dan"
+    },
+    "Nashville": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2017, b, entered stud 2023",
+      "bh_url_id": 172258,
+      "bh_slug": "nashville",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172258/nashville"
+    },
+    "National Treasure": {
+      "year_of_birth": 2020,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, b, entered stud 2025",
+      "bh_url_id": 172932,
+      "bh_slug": "national-treasure",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172932/national-treasure"
+    },
+    "Newgate": {
+      "year_of_birth": 2020,
+      "color": "b",
+      "height_hands": 16.3,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, b, 16.3 hands, entered stud 2025",
+      "bh_url_id": 172977,
+      "bh_slug": "newgate",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172977/newgate"
+    },
+    "Not This Time": {
+      "year_of_birth": 2014,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2017,
+      "_raw_data_line": "2014, dkb/br, entered stud 2017",
+      "bh_url_id": 169586,
+      "bh_slug": "not-this-time",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169586/not-this-time"
+    },
+    "Nyquist": {
+      "year_of_birth": 2013,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2017,
+      "_raw_data_line": "2013, b, entered stud 2017",
+      "bh_url_id": 169543,
+      "bh_slug": "nyquist",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169543/nyquist"
+    },
+    "Olympiad": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, entered stud 2023",
+      "bh_url_id": 172362,
+      "bh_slug": "olympiad",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172362/olympiad"
+    },
+    "Omaha Beach": {
+      "year_of_birth": 2016,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2016, dkb/br, entered stud 2020",
+      "bh_url_id": 170946,
+      "bh_slug": "omaha-beach",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170946/omaha-beach"
+    },
+    "Oxbow": {
+      "year_of_birth": 2010,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2014,
+      "_raw_data_line": "2010, b, entered stud 2014",
+      "bh_url_id": 166890,
+      "bh_slug": "oxbow",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/166890/oxbow"
+    },
+    "Patch Adams": {
+      "year_of_birth": 2022,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2022, b, entered stud 2026",
+      "bh_url_id": 173284,
+      "bh_slug": "patch-adams",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173284/patch-adams"
+    },
+    "Practical Joke": {
+      "year_of_birth": 2014,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2018,
+      "_raw_data_line": "2014, b, entered stud 2018",
+      "bh_url_id": 169990,
+      "bh_slug": "practical-joke",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169990/practical-joke"
+    },
+    "Prince of Monaco": {
+      "year_of_birth": 2021,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2021, dkb/br, entered stud 2025",
+      "bh_url_id": 172971,
+      "bh_slug": "prince-of-monaco",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172971/prince-of-monaco"
+    },
+    "Promises Fulfilled": {
+      "year_of_birth": 2015,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2015, ch, entered stud 2021",
+      "bh_url_id": 171627,
+      "bh_slug": "promises-fulfilled",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171627/promises-fulfilled"
+    },
+    "Proxy": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2018, b, entered stud 2024",
+      "bh_url_id": 172553,
+      "bh_slug": "proxy",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172553/proxy"
+    },
+    "Quality Road": {
+      "year_of_birth": 2006,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2011,
+      "_raw_data_line": "2006, b, entered stud 2011",
+      "bh_url_id": 133834,
+      "bh_slug": "quality-road",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/133834/quality-road"
+    },
+    "Raging Bull (Fr)": {
+      "year_of_birth": 2015,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2015, b, entered stud 2022",
+      "bh_url_id": 172049,
+      "bh_slug": "raging-bull-fr",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172049/raging-bull-fr"
+    },
+    "Raging Torrent": {
+      "year_of_birth": 2021,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2021, b, entered stud 2026",
+      "bh_url_id": 173263,
+      "bh_slug": "raging-torrent",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173263/raging-torrent"
+    },
+    "Rock Your World": {
+      "year_of_birth": 2018,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2018, dkb/br, entered stud 2022",
+      "bh_url_id": 172119,
+      "bh_slug": "rock-your-world",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172119/rock-your-world"
+    },
+    "Seize The Grey": {
+      "year_of_birth": 2021,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2021, gr/ro, entered stud 2025",
+      "bh_url_id": 173000,
+      "bh_slug": "seize-the-grey",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173000/seize-the-grey"
+    },
+    "Senor Buscador": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2018, b, entered stud 2025",
+      "bh_url_id": 173088,
+      "bh_slug": "senor-buscador",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173088/senor-buscador"
+    },
+    "Sierra Leone": {
+      "year_of_birth": 2021,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2021, dkb/br, entered stud 2026",
+      "bh_url_id": 173300,
+      "bh_slug": "sierra-leone",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173300/sierra-leone"
+    },
+    "Silver State": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2017, b, entered stud 2022",
+      "bh_url_id": 172005,
+      "bh_slug": "silver-state",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172005/silver-state"
+    },
+    "Speaker's Corner": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, entered stud 2023",
+      "bh_url_id": 172338,
+      "bh_slug": "speakers-corner",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172338/speakers-corner"
+    },
+    "Straight No Chaser": {
+      "year_of_birth": 2019,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2019, dkb/br, entered stud 2026",
+      "bh_url_id": 173282,
+      "bh_slug": "straight-no-chaser",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173282/straight-no-chaser"
+    },
+    "Street Sense": {
+      "year_of_birth": 2004,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2008,
+      "_raw_data_line": "2004, dkb/br, entered stud 2008",
+      "bh_url_id": 135716,
+      "bh_slug": "street-sense",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/135716/street-sense"
+    },
+    "Tacitus": {
+      "year_of_birth": 2016,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2016, gr/ro, entered stud 2022",
+      "bh_url_id": 172066,
+      "bh_slug": "tacitus",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172066/tacitus"
+    },
+    "Taiba": {
+      "year_of_birth": 2019,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2019, ch, entered stud 2024",
+      "bh_url_id": 172537,
+      "bh_slug": "taiba",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172537/taiba"
+    },
+    "Take Charge Indy": {
+      "year_of_birth": 2009,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2014,
+      "_raw_data_line": "2009, dkb/br, entered stud 2014",
+      "bh_url_id": 165698,
+      "bh_slug": "take-charge-indy",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/165698/take-charge-indy"
+    },
+    "Tapit Trice": {
+      "year_of_birth": 2020,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, gr/ro, entered stud 2025",
+      "bh_url_id": 173003,
+      "bh_slug": "tapit-trice",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173003/tapit-trice"
+    },
+    "The Factor": {
+      "year_of_birth": 2008,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2013,
+      "_raw_data_line": "2008, gr/ro, entered stud 2013",
+      "bh_url_id": 165725,
+      "bh_slug": "the-factor",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/165725/the-factor"
+    },
+    "Thousand Words": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2017, b, entered stud 2021",
+      "bh_url_id": 171806,
+      "bh_slug": "thousand-words",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171806/thousand-words"
+    },
+    "Timberlake": {
+      "year_of_birth": 2021,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2021, b, entered stud 2025",
+      "bh_url_id": 172948,
+      "bh_slug": "timberlake",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172948/timberlake"
+    },
+    "Tiz The Law": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2017, b, entered stud 2021",
+      "bh_url_id": 171660,
+      "bh_slug": "tiz-the-law",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171660/tiz-the-law"
+    },
+    "Tonalist": {
+      "year_of_birth": 2011,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2016,
+      "_raw_data_line": "2011, b, entered stud 2016",
+      "bh_url_id": 169215,
+      "bh_slug": "tonalist",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169215/tonalist"
+    },
+    "Twirling Candy": {
+      "year_of_birth": 2007,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2012,
+      "_raw_data_line": "2007, dkb/br, entered stud 2012",
+      "bh_url_id": 119328,
+      "bh_slug": "twirling-candy",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/119328/twirling-candy"
+    },
+    "Two Phil's": {
+      "year_of_birth": 2020,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2020, ch, entered stud 2024",
+      "bh_url_id": 172517,
+      "bh_slug": "two-phils",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172517/two-phils"
+    },
+    "Union Rags": {
+      "year_of_birth": 2009,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2013,
+      "_raw_data_line": "2009, b, entered stud 2013",
+      "bh_url_id": 165509,
+      "bh_slug": "union-rags",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/165509/union-rags"
+    },
+    "Up To The Mark": {
+      "year_of_birth": 2019,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2019, b, entered stud 2024",
+      "bh_url_id": 172549,
+      "bh_slug": "up-to-the-mark",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172549/up-to-the-mark"
+    },
+    "Upstart": {
+      "year_of_birth": 2012,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2017,
+      "_raw_data_line": "2012, dkb/br, entered stud 2017",
+      "bh_url_id": 169546,
+      "bh_slug": "upstart",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169546/upstart"
+    },
+    "Vekoma": {
+      "year_of_birth": 2016,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2016, ch, entered stud 2021",
+      "bh_url_id": 171624,
+      "bh_slug": "vekoma",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171624/vekoma"
+    },
+    "Vino Rosso": {
+      "year_of_birth": 2015,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2015, ch, entered stud 2020",
+      "bh_url_id": 170962,
+      "bh_slug": "vino-rosso",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170962/vino-rosso"
+    },
+    "Violence": {
+      "year_of_birth": 2010,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2014,
+      "_raw_data_line": "2010, dkb/br, entered stud 2014",
+      "bh_url_id": 166534,
+      "bh_slug": "violence",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/166534/violence"
+    },
+    "Volatile": {
+      "year_of_birth": 2016,
+      "color": "gr/ro",
+      "height_hands": 16.2,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2016, gr/ro, 16.2 hands, entered stud 2021",
+      "bh_url_id": 171592,
+      "bh_slug": "volatile",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171592/volatile"
+    },
+    "War Front": {
+      "year_of_birth": 2002,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2007,
+      "_raw_data_line": "2002, b, entered stud 2007",
+      "bh_url_id": 136975,
+      "bh_slug": "war-front",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/136975/war-front"
+    },
+    "Yaupon": {
+      "year_of_birth": 2017,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2017, dkb/br, entered stud 2022",
+      "bh_url_id": 171995,
+      "bh_slug": "yaupon",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171995/yaupon"
+    },
+    "Zandon": {
+      "year_of_birth": 2019,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2019, dkb/br, entered stud 2024",
+      "bh_url_id": 172533,
+      "bh_slug": "zandon",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172533/zandon"
+    },
+    "Audible": {
+      "year_of_birth": 2015,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2015, b, entered stud 2020.",
+      "bh_url_id": 170941,
+      "bh_slug": "audible",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170941/audible"
+    },
+    "Beau Liam": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": "16.1 1/2",
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2018, b, 16.1 1/2 hands, entered stud 2022",
+      "bh_url_id": 172151,
+      "bh_slug": "beau-liam",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172151/beau-liam"
+    },
+    "Bravazo": {
+      "year_of_birth": 2015,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2015, dkb/br, entered stud 2021.",
+      "bh_url_id": 171687,
+      "bh_slug": "bravazo",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171687/bravazo"
+    },
+    "Cairo Prince": {
+      "year_of_birth": 2011,
+      "color": "gr/ro",
+      "height_hands": "16.1 1/2",
+      "entered_stud_year": 2015,
+      "_raw_data_line": "2011, gr/ro, 16.1 1/2 hands, entered stud 2015",
+      "bh_url_id": 167653,
+      "bh_slug": "cairo-prince",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/167653/cairo-prince"
+    },
+    "Channel Cat": {
+      "year_of_birth": 2015,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2015, ch, entered stud 2023.",
+      "bh_url_id": 172105,
+      "bh_slug": "channel-cat",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172105/channel-cat"
+    },
+    "Curlin": {
+      "year_of_birth": 2004,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2009,
+      "_raw_data_line": "2004, ch, entered stud 2009",
+      "bh_url_id": 127542,
+      "bh_slug": "curlin",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/127542/curlin"
+    },
+    "Divisidero": {
+      "year_of_birth": 2012,
+      "color": "b",
+      "height_hands": "15.3 1/2",
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2012, b, 15.3 1/2 hands, entered stud 2020",
+      "bh_url_id": 170998,
+      "bh_slug": "divisidero",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170998/divisidero"
+    },
+    "Ransom the Moon": {
+      "year_of_birth": 2012,
+      "color": "b",
+      "height_hands": "16.2",
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2012, b, 16.2 hands, entered stud 2019.",
+      "bh_url_id": 170530,
+      "bh_slug": "ransom-the-moon",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170530/ransom-the-moon"
+    },
+    "Real Solution": {
+      "year_of_birth": 2009,
+      "color": "b",
+      "height_hands": "16",
+      "entered_stud_year": 2015,
+      "_raw_data_line": "2009, b, 16 hands, entered stud 2015.",
+      "bh_url_id": 168420,
+      "bh_slug": "real-solution",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/168420/real-solution"
+    },
+    "Tapit": {
+      "year_of_birth": 2001,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2005,
+      "_raw_data_line": "2001, gr/ro, entered stud 2005",
+      "bh_url_id": 127186,
+      "bh_slug": "tapit",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/127186/tapit"
+    },
+    "Temple City": {
+      "year_of_birth": 2005,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2011,
+      "_raw_data_line": "2005, dkb/br, entered stud 2011.",
+      "bh_url_id": 136098,
+      "bh_slug": "temple-city",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/136098/temple-city"
+    },
+    "Yoshida": {
+      "year_of_birth": 2014,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2014, b, entered stud 2020.",
+      "bh_url_id": 170987,
+      "bh_slug": "yoshida-jpn",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170987/yoshida-jpn"
+    }
+  },
+  "unresolved": [
+    {
+      "name": "Mineshaft",
+      "reason": "no exact-name match (ambiguous or no results)"
+    },
+    {
+      "name": "Producer (Gb)",
+      "reason": "no exact-name match (ambiguous or no results)"
+    }
+  ],
+  "summary": {
+    "total": 153,
+    "resolved": 151,
+    "unresolved": 2
+  }
+}
