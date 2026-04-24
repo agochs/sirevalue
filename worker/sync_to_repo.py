@@ -79,6 +79,8 @@ def main() -> int:
                                             "public/data/progeny-sires-2025.json",  False),
         ("bloodhorse-bms-earnings-2026.json",
                                             "public/data/progeny-bms-2026.json",    False),
+        ("upcoming-sales.json",             "public/data/upcoming-sales.json",      False),
+        ("recent-sale-results.json",        "public/data/recent-sale-results.json", False),
     ]
 
     # Construct the authenticated URL (tokens are URL-safe; no escaping needed

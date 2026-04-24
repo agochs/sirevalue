@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-04-23T19:30:00Z",
+  "source": "BloodHorse sale catalog pages",
+  "by_sire": {},
+  "summary": {
+    "stallions_with_entries": 0,
+    "total_hips": 0,
+    "sales_covered": []
+  },
+  "_note": "Seed file. Populated by worker/fetch_sales.py once SALES is configured with live catalog URLs."
+}
