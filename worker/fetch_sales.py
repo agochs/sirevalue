@@ -57,7 +57,18 @@ except ImportError:
 HERE = Path(__file__).parent
 ROSTER_CSV = HERE / "rosters-combined.csv"
 UPCOMING_JSON = HERE / "upcoming-sales.json"
-RESULTS_JSON = HERE / "recent-sale-results.json"
+# Per-year results files: recent-sale-results-2024.json, etc. Keeps each
+# payload small enough to fetch on demand and lets the UI pull only the
+# years it cares about.
+RESULTS_INDEX_JSON = HERE / "recent-sale-results-index.json"
+
+# Regex to extract year from a sale URL (used when splitting output)
+_SALE_YEAR_RE = re.compile(r"/results/(\d{4})/", re.I)
+
+
+def _year_from_url(url: str) -> int | None:
+    m = _SALE_YEAR_RE.search(url or "")
+    return int(m.group(1)) if m else None
 
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) "
@@ -79,17 +90,50 @@ log = logging.getLogger("sales")
 
 SALES_CONFIG_JSON = HERE / "sales-config.json"
 
-def _load_sales_from_config() -> list[dict]:
+# Patterns identifying low-signal sales we skip by default. These are the
+# tiny digital monthly auctions, single-farm dispersals, and online flash
+# sales that contribute almost nothing to ranking or pinhook analysis. Keep
+# them in sales-config.json for completeness, but skip at scrape time.
+SKIP_PATTERNS = [
+    re.compile(r"\bdigital[ -]?(?:flash|express)", re.I),
+    re.compile(r"\bdispersal\b", re.I),
+    # Generic monthly online "Digital Sale" (FT runs ~one a month). Distinct
+    # from named premium sales like "March Digital Selected" or "Saratoga
+    # Digital" which we keep when explicitly opted-in.
+    re.compile(r"^.*\bdigital sale\b", re.I),
+    re.compile(r"\bdigital selected sale\b", re.I),
+    re.compile(r"\bonline sale\b", re.I),
+    re.compile(r"\bflash sale\b", re.I),
+]
+
+
+def _is_minor_sale(name: str) -> bool:
+    return any(p.search(name) for p in SKIP_PATTERNS)
+
+
+def _load_sales_from_config(skip_minor: bool = True) -> list[dict]:
     """Read sales-config.json next to this file. Falls back to an empty list
-    if absent, so the script still parses cleanly when freshly cloned."""
+    if absent. When skip_minor=True (default), filter out low-signal sales."""
     if not SALES_CONFIG_JSON.exists():
         return []
     try:
         cfg = json.loads(SALES_CONFIG_JSON.read_text())
-        return [s for s in cfg.get("sales", []) if s.get("url")]
+        all_sales = [s for s in cfg.get("sales", []) if s.get("url")]
     except Exception as e:
         log.warning(f"failed to read {SALES_CONFIG_JSON.name}: {e}")
         return []
+    if not skip_minor:
+        return all_sales
+    kept, skipped = [], []
+    for s in all_sales:
+        if _is_minor_sale(s.get("name", "")):
+            skipped.append(s["name"])
+        else:
+            kept.append(s)
+    if skipped:
+        log.info(f"skipping {len(skipped)} low-signal sale(s) (digital flash / dispersal / online); "
+                 f"use --include-minor to keep them")
+    return kept
 
 SALES: list[dict] = _load_sales_from_config()
 
@@ -416,7 +460,13 @@ def main() -> int:
     ap.add_argument("--verbose", action="store_true")
     ap.add_argument("--dump-sample", action="store_true",
                     help="Print first 5 rows' cell contents per sale — for diagnosing parser mismatches")
+    ap.add_argument("--include-minor", action="store_true",
+                    help="Include low-signal sales (digital flash, dispersals, monthly online) — skipped by default")
     args = ap.parse_args()
+
+    # Reload SALES with the chosen filter
+    global SALES
+    SALES = _load_sales_from_config(skip_minor=not args.include_minor)
 
     logging.basicConfig(
         level=logging.DEBUG if args.verbose else logging.INFO,
@@ -471,23 +521,51 @@ def main() -> int:
         "summary": summary(upcoming_by_sire),
     }, indent=2, ensure_ascii=False))
 
-    RESULTS_JSON.write_text(json.dumps({
-        "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-        "source": "BloodHorse sale results pages",
-        "by_sire": results_by_sire,
-        "summary": summary(results_by_sire),
-    }, indent=2, ensure_ascii=False))
-
     log.info(
         f"wrote {UPCOMING_JSON.name}: "
         f"{summary(upcoming_by_sire)['stallions_with_entries']} stallions, "
         f"{summary(upcoming_by_sire)['total_hips']} upcoming hips"
     )
-    log.info(
-        f"wrote {RESULTS_JSON.name}: "
-        f"{summary(results_by_sire)['stallions_with_entries']} stallions, "
-        f"{summary(results_by_sire)['total_hips']} sold hips"
-    )
+
+    # Split results by year. Each entry's sale URL contains the year — we
+    # bucket per stallion per year so each output file stays bite-sized.
+    results_by_year: dict[int, list[dict]] = {}
+    for e in results_entries:
+        y = _year_from_url(e["sale_url"])
+        if y is None:
+            continue
+        results_by_year.setdefault(y, []).append(e)
+
+    years_written = []
+    for year, year_entries in sorted(results_by_year.items()):
+        ybs = group_by_sire(year_entries)
+        out_path = HERE / f"recent-sale-results-{year}.json"
+        out_path.write_text(json.dumps({
+            "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+            "year": year,
+            "source": "BloodHorse sale results pages",
+            "by_sire": ybs,
+            "summary": summary(ybs),
+        }, indent=2, ensure_ascii=False))
+        s = summary(ybs)
+        log.info(f"wrote {out_path.name}: "
+                 f"{s['stallions_with_entries']} stallions, "
+                 f"{s['total_hips']} sold hips")
+        years_written.append({
+            "year": year,
+            "file": out_path.name,
+            "stallions_with_entries": s["stallions_with_entries"],
+            "total_hips": s["total_hips"],
+            "sales_covered": s["sales_covered"],
+        })
+
+    # Write an index file the UI loads first to know which year-files exist.
+    RESULTS_INDEX_JSON.write_text(json.dumps({
+        "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+        "years": years_written,
+    }, indent=2, ensure_ascii=False))
+    log.info(f"wrote {RESULTS_INDEX_JSON.name}: {len(years_written)} year(s) indexed")
+
     return 0
 
 

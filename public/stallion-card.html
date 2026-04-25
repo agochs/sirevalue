@@ -387,13 +387,14 @@ async function bootSireValue() {
   var scoreHistory = {};
   function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
   try {
-    var [sResp, bResp, uResp, rResp, simResp, histResp] = await Promise.all([
+    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp] = await Promise.all([
       fetch('/data/progeny-sires-2025.json'),
       fetch('/data/progeny-bms-2026.json'),
       fetch('/data/upcoming-sales.json'),
-      fetch('/data/recent-sale-results.json'),
+      fetch('/data/recent-sale-results.json'),  // legacy single-file fallback
       fetch('/data/similar-stallions.json'),
       fetch('/data/score-history.json'),
+      fetch('/data/recent-sale-results-index.json'),
     ]);
     if (sResp.ok) {
       var sJson = await sResp.json();
@@ -410,6 +411,31 @@ async function bootSireValue() {
     if (rResp.ok) {
       var rJson = await rResp.json();
       recentSales = rJson.by_sire || {};
+    }
+    // Per-year results files (2022-2026 etc.) — merge into recentSales by stallion
+    if (idxResp && idxResp.ok) {
+      var idxJson = await idxResp.json();
+      var yrs = (idxJson.years || []).map(function(y) { return y.year; });
+      var yrResps = await Promise.all(yrs.map(function(y) {
+        return fetch('/data/recent-sale-results-' + y + '.json').catch(function() { return null; });
+      }));
+      for (var i = 0; i < yrResps.length; i++) {
+        var yr = yrResps[i];
+        if (!yr || !yr.ok) continue;
+        var yrJson = await yr.json();
+        var yrBySire = yrJson.by_sire || {};
+        Object.keys(yrBySire).forEach(function(name) {
+          if (!recentSales[name]) recentSales[name] = [];
+          recentSales[name] = recentSales[name].concat(yrBySire[name]);
+        });
+      }
+      // Sort each stallion's hips chronologically (newest first)
+      Object.keys(recentSales).forEach(function(name) {
+        recentSales[name].sort(function(a, b) {
+          // sort by sale_name desc — sale names contain year so this works
+          return (b.sale_name || '').localeCompare(a.sale_name || '');
+        });
+      });
     }
     if (simResp.ok) {
       var simJson = await simResp.json();

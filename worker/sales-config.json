@@ -8,12 +8,778 @@
     "To add a sale:",
     "1. Browse https://www.bloodhorse.com/horse-racing/thoroughbred-sales/ to find the sale's results page",
     "2. Copy the URL (everything before the /{session} number)",
-    "3. Add an entry below and run: python3 fetch_sales.py --verbose"
+    "3. Add an entry below and run: python3 fetch_sales.py --verbose",
+    "Auto-discovered 153 sale(s) at 2026-04-25T05:13:36Z"
   ],
   "sales": [
     {
       "name": "OBS Spring Sale of 2YOs in Training 2026",
-      "url":  "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10399/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2026/",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10399/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Ready Made Racing Flash Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/10053/fasig-tipton-digital-ready-made-racing-flash-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Magnolia Racing Syndicate Flash Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/10054/fasig-tipton-digital-magnolia-racing-syndicate-flash-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland January Horses Of All Ages Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9640/keeneland-january-horses-of-all-ages-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Winter Mixed Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9642/ocala-breeders-sales-co-winter-mixed-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Winter Mixed Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9649/fasig-tipton-kentucky-winter-mixed-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9662/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Florida Gulfstream Selected 2yos In Training Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9665/fasig-tipton-florida-gulfstream-selected-2yos-in-training-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9684/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton March Digital Selected Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9685/fasig-tipton-march-digital-selected-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton April Digital Selected Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9691/fasig-tipton-april-digital-selected-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland April Horses Of Racing Age Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9692/keeneland-april-horses-of-racing-age-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic 2yos In Training Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9694/fasig-tipton-midlantic-2yos-in-training-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Glen Todd Dispersal Digital Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9701/fasig-tipton-glen-todd-dispersal-digital-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9705/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton May Digital Selected Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9706/fasig-tipton-may-digital-selected-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton June Digital Selected Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9725/fasig-tipton-june-digital-selected-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9729/fasig-tipton-kentucky-select-july-yearling-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton July Selected Horses Of All Ages Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9741/fasig-tipton-july-selected-horses-of-all-ages-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9749/fasig-tipton-saratoga-select-yearling-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9754/fasig-tipton-saratoga-new-york-bred-yearling-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland September Yearling Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9789/keeneland-september-yearling-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton California Fall Yearling Horses Of All Ages Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9792/fasig-tipton-california-fall-yearling-horses-of-all-ages-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton August Digital Selected Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9794/fasig-tipton-august-digital-selected-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic Eastern Fall Yearling Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9798/fasig-tipton-midlantic-eastern-fall-yearling-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9799/ocala-breeders-sales-co-october-yearling-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton New York Fall Mixed Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9801/fasig-tipton-new-york-fall-mixed-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9807/fasig-tipton-kentucky-october-yearling-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Glen Todd Dispersal Final Digital Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9809/fasig-tipton-glen-todd-dispersal-final-digital-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky November Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9810/fasig-tipton-kentucky-november-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland November Breeding Stock Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9812/keeneland-november-breeding-stock-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton October Digital Selected Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9817/fasig-tipton-october-digital-selected-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland November Horses Of Racing Age Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9820/keeneland-november-horses-of-racing-age-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kates Kingdom Digital Flash Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9834/fasig-tipton-kates-kingdom-digital-flash-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic December Mixed Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9838/fasig-tipton-midlantic-december-mixed-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton December Digital Selected Sale 2022",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9844/fasig-tipton-december-digital-selected-sale-2022/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland November Horses Of Racing Age Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/10001/keeneland-november-horses-of-racing-age-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic December Mixed Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/10032/fasig-tipton-midlantic-december-mixed-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton December Digital Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/10037/fasig-tipton-december-digital-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland January Horses Of All Ages Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9843/keeneland-january-horses-of-all-ages-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Winter Mixed Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9846/ocala-breeders-sales-co-winter-mixed-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Winter Mixed Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9851/fasig-tipton-kentucky-winter-mixed-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9865/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton March Digital Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9871/fasig-tipton-march-digital-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9883/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton April Digital Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9885/fasig-tipton-april-digital-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic 2yos In Training Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9892/fasig-tipton-midlantic-2yos-in-training-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland April Horses Of Racing Age Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9893/keeneland-april-horses-of-racing-age-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9903/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton May Digital Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9906/fasig-tipton-may-digital-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Select July Yearling Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9919/fasig-tipton-kentucky-select-july-yearling-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic June 2yos In Training Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9920/fasig-tipton-midlantic-june-2yos-in-training-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton July Horses Of Racing Age Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9931/fasig-tipton-july-horses-of-racing-age-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Saratoga Select Yearling Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9937/fasig-tipton-saratoga-select-yearling-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9942/fasig-tipton-saratoga-new-york-bred-yearling-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland September Yearling Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9962/keeneland-september-yearling-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton California Fall Yearling Horses Of Racing Age Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9963/fasig-tipton-california-fall-yearling-horses-of-racing-age-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic Fall Yearling Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9971/fasig-tipton-midlantic-fall-yearling-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton August Digital Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9972/fasig-tipton-august-digital-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co October Yearling Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9976/ocala-breeders-sales-co-october-yearling-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton New York Fall Mixed Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9977/fasig-tipton-new-york-fall-mixed-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky October Yearling Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9982/fasig-tipton-kentucky-october-yearling-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland November Breeding Stock Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9986/keeneland-november-breeding-stock-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky November Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9987/fasig-tipton-kentucky-november-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton October Digital Sale 2023",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9988/fasig-tipton-october-digital-sale-2023/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland January Horses Of All Ages Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10036/keeneland-january-horses-of-all-ages-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Winter Mixed Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10038/ocala-breeders-sales-co-winter-mixed-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Winter Mixed Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10042/fasig-tipton-kentucky-winter-mixed-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10051/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Lothenbach Dispersal Of Horses Of Racing Age 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10052/fasig-tipton-lothenbach-dispersal-of-horses-of-racing-age-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton February Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10059/fasig-tipton-february-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton March Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10069/fasig-tipton-march-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10073/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton April Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10079/fasig-tipton-april-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland April Horses Of Racing Age Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10082/keeneland-april-horses-of-racing-age-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic 2yos In Training Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10083/fasig-tipton-midlantic-2yos-in-training-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Mensa Flash Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10085/fasig-tipton-digital-mensa-flash-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10094/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton May Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10101/fasig-tipton-may-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Select July Yearling Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10112/fasig-tipton-kentucky-select-july-yearling-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton June Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10114/fasig-tipton-june-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic June 2yos In Training Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10116/fasig-tipton-midlantic-june-2yos-in-training-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Cloudy Dancer Flash Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10134/fasig-tipton-digital-cloudy-dancer-flash-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton July Horses Of Racing Age Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10138/fasig-tipton-july-horses-of-racing-age-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Saratoga Select Yearling Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10143/fasig-tipton-saratoga-select-yearling-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10145/fasig-tipton-saratoga-new-york-bred-yearling-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton July Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10153/fasig-tipton-july-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Midsummer Flash Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10161/fasig-tipton-digital-midsummer-flash-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland September Yearling Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton California Fall Yearling Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10173/fasig-tipton-california-fall-yearling-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton August Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10176/fasig-tipton-august-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland Black Forza Collection August Flash Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10178/keeneland-black-forza-collection-august-flash-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic Fall Yearling Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10181/fasig-tipton-midlantic-fall-yearling-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co October Yearling Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10185/ocala-breeders-sales-co-october-yearling-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton New York Fall Mixed Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10187/fasig-tipton-new-york-fall-mixed-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky October Yearling Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10197/fasig-tipton-kentucky-october-yearling-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky November Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10198/fasig-tipton-kentucky-november-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland November Breeding Stock Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10199/keeneland-november-breeding-stock-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland November Horses Of Racing Age Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10201/keeneland-november-horses-of-racing-age-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton October Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10202/fasig-tipton-october-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland Championship Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10211/keeneland-championship-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton E J Won The Cup Digital Flash Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10214/fasig-tipton-e-j-won-the-cup-digital-flash-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton December Digital Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10224/fasig-tipton-december-digital-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co December Online Sale 2024",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10225/ocala-breeders-sales-co-december-online-sale-2024/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland January Horses Of All Ages Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10223/keeneland-january-horses-of-all-ages-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Winter Mixed Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10228/ocala-breeders-sales-co-winter-mixed-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Winter Mixed Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10235/fasig-tipton-kentucky-winter-mixed-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton January Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10236/fasig-tipton-january-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co January Online Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10237/ocala-breeders-sales-co-january-online-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Gigante Flash Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10241/fasig-tipton-digital-gigante-flash-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10243/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton February Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10256/fasig-tipton-february-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Soul Of An Angel Flash Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10258/fasig-tipton-digital-soul-of-an-angel-flash-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10262/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton March Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10263/fasig-tipton-march-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton April Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10268/fasig-tipton-april-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland April Horses Of Racing Age Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10269/keeneland-april-horses-of-racing-age-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10270/fasig-tipton-midlantic-2yos-in-training-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10272/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton May Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10273/fasig-tipton-may-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton June Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10289/fasig-tipton-june-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Select July Yearling Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10290/fasig-tipton-kentucky-select-july-yearling-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton July Horses Of Racing Age Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10298/fasig-tipton-july-horses-of-racing-age-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Saratoga Select Yearling Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10301/fasig-tipton-saratoga-select-yearling-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10302/fasig-tipton-saratoga-new-york-bred-yearling-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton July Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10307/fasig-tipton-july-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland September Yearling Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton California Fall Yearling Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10327/fasig-tipton-california-fall-yearling-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Major Reduction Of Harris Farms 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10328/fasig-tipton-digital-major-reduction-of-harris-farms-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton August Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10329/fasig-tipton-august-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Midlantic Fall Yearling Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10334/fasig-tipton-midlantic-fall-yearling-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co October Yearling Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10335/ocala-breeders-sales-co-october-yearling-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton New York Fall Mixed Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10340/fasig-tipton-new-york-fall-mixed-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky October Yearling Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10342/fasig-tipton-kentucky-october-yearling-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland November Breeding Stock Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky November Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10346/fasig-tipton-kentucky-november-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton October Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10349/fasig-tipton-october-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland November Horses Of Racing Age Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10351/keeneland-november-horses-of-racing-age-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Fall Flash Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10361/fasig-tipton-digital-fall-flash-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland Championship Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10368/keeneland-championship-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton December Digital Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10378/fasig-tipton-december-digital-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Silver Prince Flash Sale 2025",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10381/fasig-tipton-digital-silver-prince-flash-sale-2025/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland January Horses Of All Ages Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10376/keeneland-january-horses-of-all-ages-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co Winter Mixed Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10380/ocala-breeders-sales-co-winter-mixed-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Digital Express Kid Flash Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10382/fasig-tipton-digital-express-kid-flash-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton Kentucky Winter Mixed Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10383/fasig-tipton-kentucky-winter-mixed-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton January Digital Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10386/fasig-tipton-january-digital-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co January Online Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10388/ocala-breeders-sales-co-january-online-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10392/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton February Digital Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10395/fasig-tipton-february-digital-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton March Digital Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10401/fasig-tipton-march-digital-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Ocala Breeders Sale Co March Second Chance Online Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10405/ocala-breeders-sale-co-march-second-chance-online-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Keeneland April Horses Of Racing Age Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10409/keeneland-april-horses-of-racing-age-sale-2026/",
+      "kind": "auto"
+    },
+    {
+      "name": "Fasig Tipton April Digital Sale 2026",
+      "url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10411/fasig-tipton-april-digital-sale-2026/",
       "kind": "auto"
     }
   ],

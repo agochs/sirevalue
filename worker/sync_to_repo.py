@@ -80,10 +80,19 @@ def main() -> int:
         ("bloodhorse-bms-earnings-2026.json",
                                             "public/data/progeny-bms-2026.json",    False),
         ("upcoming-sales.json",             "public/data/upcoming-sales.json",      False),
+        # Legacy single-file results (kept for backwards-compat if it exists)
         ("recent-sale-results.json",        "public/data/recent-sale-results.json", False),
+        # New per-year results split + index
+        ("recent-sale-results-index.json",  "public/data/recent-sale-results-index.json", False),
         ("similar-stallions.json",          "public/data/similar-stallions.json",   False),
         ("score-history.json",              "public/data/score-history.json",       False),
     ]
+    # Also push every recent-sale-results-{year}.json file present in the
+    # output dir — these are produced by fetch_sales.py per-year split.
+    for p in sorted(output_dir.glob("recent-sale-results-*.json")):
+        if p.name == "recent-sale-results-index.json":
+            continue   # already in the static list above
+        data_files.append((p.name, f"public/data/{p.name}", False))
 
     # Construct the authenticated URL (tokens are URL-safe; no escaping needed
     # for the typical ghp_* token format).
