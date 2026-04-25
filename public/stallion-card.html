@@ -233,6 +233,36 @@ details[open] summary { margin-bottom: 8px; }
   margin-top: 10px; font-size: 12px; color: var(--ink-soft);
 }
 .sales-cta a { color: var(--ink); }
+/* ---------- Pedigree-similar stallions ---------- */
+.similar-block {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 16px; margin: 6px 0 20px;
+}
+.similar-row {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 12px;
+  align-items: center; padding: 8px 0; font-size: 13px;
+}
+.similar-row + .similar-row { border-top: 1px dashed var(--rule); }
+.similar-row .name { font-weight: 600; }
+.similar-row .name a { color: var(--ink); text-decoration: none; }
+.similar-row .name a:hover { text-decoration: underline; }
+.similar-row .reason {
+  display: block; color: var(--ink-soft); font-size: 12px; font-weight: 400;
+  margin-top: 2px;
+}
+.similar-row .grade-pill {
+  display: inline-block; padding: 2px 7px; border-radius: 3px;
+  font-size: 11px; font-weight: 700; color: #fff; background: var(--gold);
+}
+.similar-row .grade-pill.b { background: #a68336; }
+.similar-row .grade-pill.c { background: #f0eadb; color: var(--ink); }
+.similar-row .grade-pill.d { background: #d4a5a5; color: var(--ink); }
+.similar-row .grade-pill.f { background: #a85050; }
+.similar-row .score-num {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 16px; font-weight: 700; color: var(--ink);
+  min-width: 30px; text-align: right;
+}
 /* ---------- Progeny racing stats ---------- */
 .progeny-block {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -299,13 +329,15 @@ async function bootSireValue() {
   // Keyed by normalized name so lookups survive minor casing/suffix differences.
   var sireIndex = {}, bmsIndex = {};
   var upcomingSales = {}, recentSales = {};
+  var similarStallions = {};
   function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
   try {
-    var [sResp, bResp, uResp, rResp] = await Promise.all([
+    var [sResp, bResp, uResp, rResp, simResp] = await Promise.all([
       fetch('/data/progeny-sires-2025.json'),
       fetch('/data/progeny-bms-2026.json'),
       fetch('/data/upcoming-sales.json'),
       fetch('/data/recent-sale-results.json'),
+      fetch('/data/similar-stallions.json'),
     ]);
     if (sResp.ok) {
       var sJson = await sResp.json();
@@ -322,6 +354,10 @@ async function bootSireValue() {
     if (rResp.ok) {
       var rJson = await rResp.json();
       recentSales = rJson.by_sire || {};
+    }
+    if (simResp.ok) {
+      var simJson = await simResp.json();
+      similarStallions = simJson.by_stallion || {};
     }
   } catch (_e) { /* all of these are optional enrichments */ }
 
@@ -460,6 +496,39 @@ async function bootSireValue() {
     return html;
   }
 
+  function renderSimilar(s) {
+    var matches = similarStallions[s.name] || [];
+    if (matches.length === 0) return '';
+    function gradeCls(g) {
+      if (g === 'A+' || g === 'A') return '';
+      if (g === 'B') return 'b';
+      if (g === 'C') return 'c';
+      if (g === 'D') return 'd';
+      return 'f';
+    }
+    var rows = matches.map(function(m) {
+      // Use the first reason as the primary displayed signal — if more than
+      // one reason fired (e.g., shared sire AND shared damsire), join them
+      // with " · " for full transparency.
+      var reasonText = (m.reasons || []).join(' · ');
+      var grade = m.value_grade || '';
+      var gradeHtml = grade ? '<span class="grade-pill ' + gradeCls(grade) + '">' + escapeHtml(grade) + '</span>' : '';
+      return '<div class="similar-row">'
+        + '<div>'
+        +   '<div class="name"><a href="?s=' + encodeURIComponent(m.name) + '">' + escapeHtml(m.name) + '</a></div>'
+        +   '<div class="reason">' + escapeHtml(reasonText) + '</div>'
+        + '</div>'
+        + gradeHtml
+        + '<span class="score-num">' + m.score + '</span>'
+        + '</div>';
+    }).join('');
+    return ''
+      + '<div class="similar-block">'
+      +   '<div class="section-title" style="margin:0 0 8px;">Pedigree-Similar Stallions</div>'
+      +   rows
+      + '</div>';
+  }
+
   function renderProgeny(s) {
     var sireRow = sireIndex[normName(s.sire)];
     var bmsRow  = bmsIndex[normName(s.damsire)];
@@ -572,6 +641,7 @@ async function bootSireValue() {
       + renderRoi(s)
       + renderSales(s)
       + renderProgeny(s)
+      + renderSimilar(s)
       + '<div class="section-title">Score Breakdown</div>'
       + '<div class="components">' + compHtml + '</div>'
       + '<div class="peer-group">' + peerDesc + '</div>'

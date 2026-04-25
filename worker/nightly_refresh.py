@@ -195,8 +195,17 @@ def run_tests() -> bool:
 
 
 def rebuild() -> None:
-    """Re-run combine_rosters + build_ui + build_mare_matcher."""
-    for script in ("combine_rosters.py", "build_ui.py", "build_mare_matcher.py"):
+    """Re-run combine_rosters + build_ui + build_mare_matcher + similar."""
+    for script in (
+        "combine_rosters.py",
+        "build_ui.py",
+        "build_mare_matcher.py",
+        "compute_similar_stallions.py",
+    ):
+        script_path = HERE / script
+        if not script_path.exists():
+            log.warning(f"{script} not present in worker bundle; skipping")
+            continue
         proc = subprocess.run(["python3", script], cwd=str(HERE), capture_output=True, text=True)
         if proc.returncode != 0:
             raise RuntimeError(f"{script} failed:\n{proc.stderr}")
