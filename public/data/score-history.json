@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-04-25T00:00:00Z",
+  "by_stallion": {},
+  "summary": {
+    "snapshots_processed": 0,
+    "stallions_with_history": 0,
+    "max_points_per_stallion": 120
+  },
+  "_note": "Seed. Worker overwrites with real time series on next nightly cycle (snapshots accumulate one per night)."
+}

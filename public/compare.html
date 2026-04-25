@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Compare Stallions — SireValue</title>
+<meta property="og:title" content="Compare Stallions — SireValue"/>
+<meta property="og:description" content="Side-by-side comparison of commercial thoroughbred stallions: scores, fees, ROI, pedigree."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink); line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 24px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 20px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 22px; font-weight: 700;
+}
+.masthead a { color: var(--ink); text-decoration: none; }
+.masthead a:hover { text-decoration: underline; }
+.intro {
+  font-size: 13px; color: var(--ink-soft); margin-bottom: 14px;
+}
+.picker-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin-bottom: 18px;
+}
+.picker-row select {
+  padding: 9px 10px; border: 1px solid var(--rule); border-radius: 6px;
+  background: var(--cream); color: var(--ink); font-size: 14px; width: 100%;
+}
+.compare-table {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden;
+}
+.compare-table table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.compare-table th, .compare-table td {
+  padding: 10px 14px; border-bottom: 1px solid var(--rule);
+  text-align: left; vertical-align: top;
+}
+.compare-table thead th {
+  background: #faf5e6; font-size: 11px; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+.compare-table .rowlabel {
+  font-size: 11px; letter-spacing: 0.8px; text-transform: uppercase;
+  color: var(--ink-soft); width: 160px; background: #fbf6e4;
+}
+.compare-table .stallion-cell h3 {
+  margin: 0 0 4px; font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 18px; font-weight: 700;
+}
+.compare-table .stallion-cell .ped {
+  font-style: italic; color: var(--ink-soft); font-size: 12px;
+}
+.compare-table .grade {
+  display: inline-block; padding: 1px 7px; border-radius: 3px;
+  font-size: 11px; font-weight: 700; color: #fff;
+  background: var(--gold);
+}
+.compare-table .grade.b { background: #a68336; }
+.compare-table .grade.c { background: #f0eadb; color: var(--ink); }
+.compare-table .grade.d { background: #d4a5a5; color: var(--ink); }
+.compare-table .grade.f { background: #a85050; }
+.compare-table .num { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 18px; }
+.compare-table .num.best { color: var(--good); }
+.compare-table .num.worst { color: var(--weak); }
+.compare-table .small { font-size: 11px; color: var(--ink-soft); }
+.compare-table a { color: var(--ink); }
+.empty {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 30px; text-align: center; color: var(--ink-soft);
+}
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+@media (max-width: 720px) {
+  .picker-row { grid-template-columns: 1fr; }
+  .compare-table .rowlabel { width: 110px; font-size: 10px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div><a href="/stallion-card.html">Browse</a> &middot; <a href="/mare-matcher.html">Mare Matcher</a></div>
+  </div>
+
+  <div class="intro">Pick 2 or 3 stallions to compare side-by-side. Best and worst values per row are highlighted.</div>
+
+  <div class="picker-row">
+    <select id="pick-a"></select>
+    <select id="pick-b"></select>
+    <select id="pick-c"></select>
+  </div>
+
+  <div id="compare-out"></div>
+
+  <div class="footer">
+    <span id="model-version"></span>
+    <span>SireValue · Compare</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  const resp = await fetch('/data/scores.json');
+  if (!resp.ok) {
+    document.getElementById('compare-out').innerHTML = '<div class="empty">Failed to load data.</div>';
+    return;
+  }
+  const data = await resp.json();
+  const stallions = data.stallions;
+  document.getElementById('model-version').textContent = 'Model ' + data.model_version;
+
+  function populate(sel, defaultName) {
+    sel.innerHTML = '<option value="">— pick a stallion —</option>'
+      + stallions.map(function(s) {
+          return '<option value="' + s.name.replace(/"/g,'&quot;') + '"'
+               + (defaultName === s.name ? ' selected' : '') + '>'
+               + s.name + ' (' + s.score.grade + ' ' + s.score.value.toFixed(1) + ')'
+               + '</option>';
+        }).join('');
+  }
+
+  const params = new URLSearchParams(location.search);
+  populate(document.getElementById('pick-a'), params.get('a'));
+  populate(document.getElementById('pick-b'), params.get('b'));
+  populate(document.getElementById('pick-c'), params.get('c'));
+
+  function gradeCls(g) {
+    if (g === 'A+' || g === 'A') return '';
+    if (g === 'B') return 'b';
+    if (g === 'C') return 'c';
+    if (g === 'D') return 'd';
+    return 'f';
+  }
+  function money(n) { return n == null ? null : '$' + n.toLocaleString(); }
+
+  // Rows: each is {label, accessor(s), highlight: 'high'|'low'|null}
+  // accessor returns a tuple [display_string, numeric_for_comparison_or_null]
+  const rows = [
+    {label: 'Farm',           get: s => [s.farm, null]},
+    {label: 'Pedigree',       get: s => [s.pedigree || '—', null]},
+    {label: 'Fee',            get: s => [
+                                  s.fee_qualifier || (s.fee_usd ? money(s.fee_usd) + (s.fee_terms ? ' ' + s.fee_terms : '') : '—'),
+                                  s.fee_usd
+                                ], highlight: 'low'},
+    {label: 'Foaled',         get: s => [s.year_of_birth || '—', null]},
+    {label: 'Entered Stud',   get: s => [s.entered_stud_year || '—', null]},
+    {label: 'Color',          get: s => [s.color || '—', null]},
+    {label: 'Value Score',    get: s => [s.score.value.toFixed(1), s.score.value], highlight: 'high'},
+    {label: 'Grade',          get: s => ['<span class="grade ' + gradeCls(s.score.grade) + '">' + s.score.grade + '</span>', null]},
+    {label: 'Tier',           get: s => [s.score.tier.replace(/_/g,' '), null]},
+    {label: 'Confidence',     get: s => [s.score.confidence || '—', null]},
+    {label: 'Yearling ROI',   get: s => {
+        const me = (s.score.components.market_efficiency || {}).inputs || {};
+        return me.ratio ? [me.ratio.toFixed(1) + '× <span class="small">(' + (me.yearlings_sold_n||0) + ' sold)</span>', me.ratio] : ['—', null];
+      }, highlight: 'high'},
+    {label: '2YO ROI',        get: s => {
+        const te = (s.score.components.twoyo_market_efficiency || {}).inputs || {};
+        return te.ratio ? [te.ratio.toFixed(1) + '× <span class="small">(' + (te.twoyos_sold_n||0) + ' sold)</span>', te.ratio] : ['—', null];
+      }, highlight: 'high'},
+    {label: 'Pedigree pts',   get: s => {
+        const p = (s.score.components.pedigree_prestige || {}).inputs || {};
+        return [(p.raw_total != null ? p.raw_total : '—'), p.raw_total];
+      }, highlight: 'high'},
+    {label: 'Maturity stage', get: s => {
+        const m = (s.score.components.maturity_context || {}).inputs || {};
+        return [m.stage || '—', null];
+      }},
+    {label: 'BH bio',         get: s => [
+        s.bloodhorse_url ? '<a href="' + s.bloodhorse_url + '" target="_blank" rel="noopener">view</a>' : '—',
+        null
+      ]},
+  ];
+
+  function render() {
+    const a = document.getElementById('pick-a').value;
+    const b = document.getElementById('pick-b').value;
+    const c = document.getElementById('pick-c').value;
+    // Persist selection in URL
+    const qs = new URLSearchParams();
+    if (a) qs.set('a', a); if (b) qs.set('b', b); if (c) qs.set('c', c);
+    history.replaceState(null, '', location.pathname + (qs.toString() ? '?' + qs : ''));
+
+    const picked = [a, b, c].filter(Boolean).map(function(n) {
+      return stallions.find(function(s) { return s.name === n; });
+    }).filter(Boolean);
+
+    if (picked.length < 2) {
+      document.getElementById('compare-out').innerHTML =
+        '<div class="empty">Pick at least 2 stallions above to compare.</div>';
+      return;
+    }
+
+    const headerHtml = '<thead><tr><th></th>'
+      + picked.map(function(s) { return '<th><div class="stallion-cell"><h3><a href="/stallion-card.html?s=' + encodeURIComponent(s.name) + '">' + s.name + '</a></h3><div class="ped">' + (s.pedigree || '') + '</div></div></th>'; }).join('')
+      + '</tr></thead>';
+
+    const bodyHtml = rows.map(function(row) {
+      const cells = picked.map(function(s) { return row.get(s); });
+      // Highlight best/worst if requested
+      let highlight = null;
+      if (row.highlight) {
+        const numVals = cells.map(function(c) { return c[1]; }).filter(function(v) { return v != null; });
+        if (numVals.length >= 2) {
+          highlight = row.highlight === 'high'
+            ? {best: Math.max.apply(null, numVals), worst: Math.min.apply(null, numVals)}
+            : {best: Math.min.apply(null, numVals), worst: Math.max.apply(null, numVals)};
+        }
+      }
+      return '<tr><td class="rowlabel">' + row.label + '</td>'
+        + cells.map(function(c) {
+            let cls = 'num';
+            if (highlight && c[1] != null) {
+              if (c[1] === highlight.best && highlight.best !== highlight.worst) cls += ' best';
+              else if (c[1] === highlight.worst && highlight.best !== highlight.worst) cls += ' worst';
+            }
+            return '<td><span class="' + (row.highlight ? cls : '') + '">' + c[0] + '</span></td>';
+          }).join('')
+        + '</tr>';
+    }).join('');
+
+    document.getElementById('compare-out').innerHTML =
+      '<div class="compare-table"><table>' + headerHtml + '<tbody>' + bodyHtml + '</tbody></table></div>';
+  }
+
+  ['pick-a', 'pick-b', 'pick-c'].forEach(function(id) {
+    document.getElementById(id).addEventListener('change', render);
+  });
+  render();
+})();
+</script>
+</body>
+</html>

@@ -233,6 +233,29 @@ details[open] summary { margin-bottom: 8px; }
   margin-top: 10px; font-size: 12px; color: var(--ink-soft);
 }
 .sales-cta a { color: var(--ink); }
+/* ---------- Score history sparkline ---------- */
+.spark-block {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 12px 16px; margin: 6px 0 20px;
+}
+.spark-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 6px;
+}
+.spark-head .label {
+  font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--ink-soft); font-weight: 600;
+}
+.spark-head .delta { font-size: 13px; font-weight: 700; }
+.spark-head .delta.up   { color: var(--good); }
+.spark-head .delta.down { color: var(--weak); }
+.spark-head .delta.flat { color: var(--ink-soft); }
+.spark-svg { display: block; width: 100%; height: 70px; }
+.spark-meta {
+  font-size: 11px; color: var(--ink-soft); display: flex;
+  justify-content: space-between; margin-top: 4px;
+}
+.spark-empty { font-size: 12px; color: var(--ink-soft); font-style: italic; }
 /* ---------- Pedigree-similar stallions ---------- */
 .similar-block {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -330,14 +353,16 @@ async function bootSireValue() {
   var sireIndex = {}, bmsIndex = {};
   var upcomingSales = {}, recentSales = {};
   var similarStallions = {};
+  var scoreHistory = {};
   function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
   try {
-    var [sResp, bResp, uResp, rResp, simResp] = await Promise.all([
+    var [sResp, bResp, uResp, rResp, simResp, histResp] = await Promise.all([
       fetch('/data/progeny-sires-2025.json'),
       fetch('/data/progeny-bms-2026.json'),
       fetch('/data/upcoming-sales.json'),
       fetch('/data/recent-sale-results.json'),
       fetch('/data/similar-stallions.json'),
+      fetch('/data/score-history.json'),
     ]);
     if (sResp.ok) {
       var sJson = await sResp.json();
@@ -358,6 +383,10 @@ async function bootSireValue() {
     if (simResp.ok) {
       var simJson = await simResp.json();
       similarStallions = simJson.by_stallion || {};
+    }
+    if (histResp.ok) {
+      var hJson = await histResp.json();
+      scoreHistory = hJson.by_stallion || {};
     }
   } catch (_e) { /* all of these are optional enrichments */ }
 
@@ -494,6 +523,62 @@ async function bootSireValue() {
         + '</div>';
     }
     return html;
+  }
+
+  function renderHistory(s) {
+    var pts = scoreHistory[s.name] || [];
+    if (pts.length < 2) return '';   // sparkline needs at least 2 points
+
+    var first = pts[0], last = pts[pts.length - 1];
+    var delta = last.score - first.score;
+    var deltaCls = Math.abs(delta) < 0.5 ? 'flat' : (delta > 0 ? 'up' : 'down');
+    var deltaStr = (delta > 0 ? '+' : '') + delta.toFixed(1) + ' over ' + pts.length + ' days';
+
+    // SVG sparkline: scale x by point count, y by score range. Use the full
+    // range across this stallion's history (not 0-100) so movement is visible.
+    var W = 600, H = 70, PAD_X = 4, PAD_Y = 8;
+    var values = pts.map(function(p) { return p.score; });
+    var minV = Math.min.apply(null, values);
+    var maxV = Math.max.apply(null, values);
+    var range = Math.max(1, maxV - minV);
+
+    var coords = pts.map(function(p, i) {
+      var x = PAD_X + (i / Math.max(1, pts.length - 1)) * (W - 2 * PAD_X);
+      var y = H - PAD_Y - ((p.score - minV) / range) * (H - 2 * PAD_Y);
+      return [x, y, p];
+    });
+    var path = coords.map(function(c, i) {
+      return (i === 0 ? 'M' : 'L') + c[0].toFixed(1) + ',' + c[1].toFixed(1);
+    }).join(' ');
+    // Filled area below the line for visual weight
+    var area = 'M' + coords[0][0].toFixed(1) + ',' + (H - PAD_Y).toFixed(1) + ' '
+             + coords.map(function(c) { return 'L' + c[0].toFixed(1) + ',' + c[1].toFixed(1); }).join(' ')
+             + ' L' + coords[coords.length-1][0].toFixed(1) + ',' + (H - PAD_Y).toFixed(1) + ' Z';
+    var lastX = coords[coords.length - 1][0], lastY = coords[coords.length - 1][1];
+
+    var color = deltaCls === 'up' ? '#2f855a' : (deltaCls === 'down' ? '#9b2c2c' : '#a57c1f');
+    var fill  = deltaCls === 'up' ? '#e6f4ea' : (deltaCls === 'down' ? '#fdecea' : '#f7f2e4');
+
+    var svg = ''
+      + '<svg class="spark-svg" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none">'
+      +   '<path d="' + area + '" fill="' + fill + '" />'
+      +   '<path d="' + path + '" fill="none" stroke="' + color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />'
+      +   '<circle cx="' + lastX.toFixed(1) + '" cy="' + lastY.toFixed(1) + '" r="3.5" fill="' + color + '" />'
+      + '</svg>';
+
+    return ''
+      + '<div class="spark-block">'
+      +   '<div class="spark-head">'
+      +     '<div class="label">Score history · ' + first.date + ' → ' + last.date + '</div>'
+      +     '<div class="delta ' + deltaCls + '">' + deltaStr + '</div>'
+      +   '</div>'
+      +   svg
+      +   '<div class="spark-meta">'
+      +     '<span>min ' + minV.toFixed(1) + '</span>'
+      +     '<span>now ' + last.score.toFixed(1) + '</span>'
+      +     '<span>max ' + maxV.toFixed(1) + '</span>'
+      +   '</div>'
+      + '</div>';
   }
 
   function renderSimilar(s) {
@@ -639,6 +724,7 @@ async function bootSireValue() {
       + '</div>'
       + '<div class="key-stats">' + statsHtml + '</div>'
       + renderRoi(s)
+      + renderHistory(s)
       + renderSales(s)
       + renderProgeny(s)
       + renderSimilar(s)

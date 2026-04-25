@@ -82,6 +82,7 @@ def main() -> int:
         ("upcoming-sales.json",             "public/data/upcoming-sales.json",      False),
         ("recent-sale-results.json",        "public/data/recent-sale-results.json", False),
         ("similar-stallions.json",          "public/data/similar-stallions.json",   False),
+        ("score-history.json",              "public/data/score-history.json",       False),
     ]
 
     # Construct the authenticated URL (tokens are URL-safe; no escaping needed

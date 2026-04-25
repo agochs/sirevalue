@@ -5,8 +5,9 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/stallion/:name", "destination": "/stallion-card.html?stallion=:name" },
-    { "source": "/mare",          "destination": "/mare-matcher.html" }
+    { "source": "/stallion/:name", "destination": "/api/stallion-share?name=:name" },
+    { "source": "/mare",          "destination": "/mare-matcher.html" },
+    { "source": "/compare",       "destination": "/compare.html" }
   ],
   "headers": [
     {
