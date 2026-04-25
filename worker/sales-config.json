@@ -1,0 +1,39 @@
+{
+  "_doc": [
+    "URLs of BloodHorse sale results/catalog pages. fetch_sales.py reads this on each run.",
+    "URL must end with a trailing slash; the scraper appends /{session} to walk all sessions.",
+    "kind: 'auto' is fine for everything — classify_entries() will route entries with prices",
+    "to recent-sale-results.json and entries without prices to upcoming-sales.json.",
+    "",
+    "To add a sale:",
+    "1. Browse https://www.bloodhorse.com/horse-racing/thoroughbred-sales/ to find the sale's results page",
+    "2. Copy the URL (everything before the /{session} number)",
+    "3. Add an entry below and run: python3 fetch_sales.py --verbose"
+  ],
+  "sales": [
+    {
+      "name": "OBS Spring Sale of 2YOs in Training 2026",
+      "url":  "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10399/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2026/",
+      "kind": "auto"
+    }
+  ],
+  "_examples_to_add_when_urls_are_known": [
+    {
+      "_comment": "These need URL discovery from BH. Once you find a 2024 sale URL, paste it as 'url' and move from this list to 'sales' above.",
+      "name_template": "Keeneland September Yearling Sale 2024",
+      "needs_url": true
+    },
+    {
+      "name_template": "Fasig-Tipton Saratoga Select Yearling Sale 2024",
+      "needs_url": true
+    },
+    {
+      "name_template": "Keeneland September Yearling Sale 2026 (catalog when published)",
+      "needs_url": true
+    },
+    {
+      "name_template": "Fasig-Tipton Saratoga 2026 (catalog when published)",
+      "needs_url": true
+    }
+  ]
+}

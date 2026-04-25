@@ -77,17 +77,21 @@ log = logging.getLogger("sales")
 #   "auto"     — infer from whether price column has content
 # ---------------------------------------------------------------------------
 
-SALES: list[dict] = [
-    {
-        "name": "OBS Spring Sale of 2YOs in Training 2026",
-        # Note: trailing slash before session number — scraper appends /{session}
-        "url":  "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10399/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2026/",
-        "kind": "auto",   # classify_entries picks upcoming vs results based on
-                          #   whether any hip in the sale has a price
-    },
-    # Add more sales here once we confirm this one works. Format:
-    # {"name": "…", "url": "…/", "kind": "auto"},
-]
+SALES_CONFIG_JSON = HERE / "sales-config.json"
+
+def _load_sales_from_config() -> list[dict]:
+    """Read sales-config.json next to this file. Falls back to an empty list
+    if absent, so the script still parses cleanly when freshly cloned."""
+    if not SALES_CONFIG_JSON.exists():
+        return []
+    try:
+        cfg = json.loads(SALES_CONFIG_JSON.read_text())
+        return [s for s in cfg.get("sales", []) if s.get("url")]
+    except Exception as e:
+        log.warning(f"failed to read {SALES_CONFIG_JSON.name}: {e}")
+        return []
+
+SALES: list[dict] = _load_sales_from_config()
 
 
 # ---------------------------------------------------------------------------

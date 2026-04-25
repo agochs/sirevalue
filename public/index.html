@@ -123,6 +123,38 @@ body {
 .mover-delta.down { color: var(--weak); font-weight: 700; }
 .mover-tier { color: var(--ink-soft); font-size: 11px; letter-spacing: 0.5px; }
 .mover-empty { color: var(--ink-soft); font-size: 12px; font-style: italic; padding: 6px 0; }
+/* ---------- Smart filter ---------- */
+.smart-filter {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 16px; margin-bottom: 18px;
+}
+.smart-filter input {
+  width: 100%; box-sizing: border-box;
+  border: 1px solid var(--rule); border-radius: 6px;
+  padding: 10px 12px; font-size: 14px; background: var(--cream);
+  color: var(--ink);
+  font-family: inherit;
+}
+.smart-filter .examples {
+  margin-top: 8px; font-size: 11px; color: var(--ink-soft);
+}
+.smart-filter .examples b { color: var(--ink); cursor: pointer; }
+.smart-filter .examples b:hover { text-decoration: underline; }
+.smart-filter .parsed-summary {
+  margin-top: 8px; font-size: 12px; color: var(--ink-soft);
+  display: none;
+}
+.smart-filter.active .parsed-summary { display: block; }
+.smart-filter .pill {
+  display: inline-block; padding: 2px 8px; border-radius: 10px;
+  font-size: 11px; font-weight: 600; margin-right: 4px;
+  background: #f7f2e4; color: #6b5016;
+}
+.smart-filter .clear-btn {
+  display: none; margin-left: 8px; font-size: 12px;
+  color: var(--weak); cursor: pointer; text-decoration: underline;
+}
+.smart-filter.active .clear-btn { display: inline; }
 @media (max-width: 560px) {
   .hero h1 { font-size: 24px; }
   .leaderboard td, .leaderboard th { padding: 8px 10px; font-size: 13px; }
@@ -173,7 +205,22 @@ body {
     </div>
   </div>
 
-  <div class="section-title">Top 20 — Value Score leaderboard</div>
+  <div class="section-title">Smart filter</div>
+  <div id="smart-filter" class="smart-filter">
+    <input id="smart-q" type="search" autocomplete="off"
+      placeholder="Try: ‘first crop sires under $20k by tapit’"/>
+    <div class="examples">
+      Examples (click to try):
+      <b data-q="under $20k tier 1">under $20k tier 1</b> ·
+      <b data-q="first crop">first crop</b> ·
+      <b data-q="sons of into mischief">sons of into mischief</b> ·
+      <b data-q="established A grade">established A grade</b> ·
+      <b data-q="spendthrift">spendthrift</b>
+    </div>
+    <div class="parsed-summary"><span id="smart-pills"></span><span class="clear-btn" id="smart-clear">clear</span></div>
+  </div>
+
+  <div class="section-title" id="leaderboard-title">Top 20 — Value Score leaderboard</div>
   <div class="leaderboard">
     <table>
       <thead>
@@ -230,7 +277,7 @@ body {
       return 'grade-f';
     }
 
-    const rows = data.stallions.slice(0, 20).map((s, i) => {
+    function rowHtml(s, i) {
       const fee = s.fee_usd ? ('$' + s.fee_usd.toLocaleString()) : (s.fee_qualifier || '—');
       return '<tr onclick="location.href=\'/stallion-card.html?s=' + encodeURIComponent(s.name) + '\'">'
         + '<td>' + (i+1) + '</td>'
@@ -241,8 +288,166 @@ body {
         + '<td>' + s.score.value.toFixed(1) + '</td>'
         + '<td><span class="grade ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span></td>'
         + '</tr>';
-    }).join('');
-    document.getElementById('leaderboard-body').innerHTML = rows;
+    }
+
+    function parseQuery(q) {
+      // Returns a {filters, pills} object. Filters is a list of predicates;
+      // pills is a list of human-readable summaries for display.
+      const text = (q || '').toLowerCase().trim();
+      const filters = [];
+      const pills = [];
+      if (!text) return {filters, pills};
+
+      // Money: "$20k", "20000", "20k", "$1.5m"
+      const moneyRe = /\$?(\d+(?:\.\d+)?)\s*([km])?/g;
+      function parseMoney(s) {
+        const m = /\$?(\d+(?:\.\d+)?)\s*([km])?/.exec(s);
+        if (!m) return null;
+        let n = parseFloat(m[1]);
+        if (m[2] === 'k') n *= 1000;
+        else if (m[2] === 'm') n *= 1000000;
+        return Math.round(n);
+      }
+
+      // Fee bounds
+      const underM = /(?:under|below|less than|max|≤|<=)\s*\$?(\d+(?:\.\d+)?\s*[km]?)/.exec(text);
+      if (underM) {
+        const n = parseMoney(underM[1]);
+        if (n) {
+          filters.push(s => s.fee_usd != null && s.fee_usd <= n);
+          pills.push('fee ≤ $' + n.toLocaleString());
+        }
+      }
+      const overM = /(?:over|above|more than|greater than|min|≥|>=)\s*\$?(\d+(?:\.\d+)?\s*[km]?)/.exec(text);
+      if (overM) {
+        const n = parseMoney(overM[1]);
+        if (n) {
+          filters.push(s => s.fee_usd != null && s.fee_usd >= n);
+          pills.push('fee ≥ $' + n.toLocaleString());
+        }
+      }
+
+      // Maturity stage
+      const stageMap = [
+        ['first crop',     'first_crop'],
+        ['second crop',    'second_crop'],
+        ['early proven',   'early_proven'],
+        ['established',    'established'],
+        ['senior',         'senior'],
+        ['freshman',       'first_crop'],   // synonym
+        ['freshmen',       'first_crop'],
+      ];
+      stageMap.forEach(function(pair) {
+        if (text.indexOf(pair[0]) >= 0) {
+          filters.push(s => (s.score.components.maturity_context || {}).inputs?.stage === pair[1]);
+          pills.push(pair[0]);
+        }
+      });
+
+      // Tiers
+      if (/\btier\s*1\b/.test(text)) {
+        filters.push(s => s.score.tier && s.score.tier.indexOf('tier1') === 0);
+        pills.push('Tier 1');
+      }
+      if (/\btier\s*0\b/.test(text) || /commercial appeal/.test(text)) {
+        filters.push(s => s.score.tier === 'commercial_appeal');
+        pills.push('Tier 0');
+      }
+
+      // Letter grades — match "A+", "A", "B", "C", "D", "F" as standalone words
+      const gradeM = /\b(a\+?|b|c|d|f)\s+grade\b/.exec(text) || /\bgrade\s+(a\+?|b|c|d|f)\b/.exec(text);
+      if (gradeM) {
+        const g = gradeM[1].toUpperCase();
+        filters.push(s => s.score.grade === g || (g === 'A' && s.score.grade === 'A+'));
+        pills.push('grade ' + g);
+      }
+
+      // Sons of / by [sire]
+      const sonsM = /(?:sons\s+of|by)\s+([a-z][a-z .'\-]*?)(?:\s+(?:under|over|with|tier|first|second|early|established|senior|sons|by|fee|grade)|$)/.exec(text);
+      if (sonsM) {
+        const sireQ = sonsM[1].trim();
+        if (sireQ.length >= 3) {
+          filters.push(s => (s.sire || '').toLowerCase().indexOf(sireQ) >= 0);
+          pills.push('by ' + sireQ);
+        }
+      }
+
+      // Farm filter — any of the known farm names appearing as substring
+      const farmAliases = [
+        ['spendthrift', 'Spendthrift'],
+        ['winstar',     'WinStar'],
+        ["lane's end",  "Lane's End"],
+        ['lanes end',   "Lane's End"],
+        ['ashford',     'Ashford'],
+        ['coolmore',    'Coolmore America'],
+        ['three chimneys', 'Three Chimneys'],
+        ['gainesway',   'Gainesway'],
+        ['hill n dale', "Hill 'n' Dale"],
+        ["hill 'n' dale", "Hill 'n' Dale"],
+        ['claiborne',   'Claiborne'],
+        ['darley',      'Darley'],
+        ['godolphin',   'Darley'],
+        ['taylor made', 'Taylor Made'],
+        ['airdrie',     'Airdrie'],
+        ['calumet',     'Calumet'],
+      ];
+      farmAliases.forEach(function(pair) {
+        if (text.indexOf(pair[0]) >= 0) {
+          filters.push(s => (s.farm || '').toLowerCase().indexOf(pair[1].toLowerCase()) >= 0);
+          pills.push(pair[1]);
+        }
+      });
+
+      return {filters, pills};
+    }
+
+    function applyFilter(stallions, q) {
+      const {filters, pills} = parseQuery(q);
+      const sf = document.getElementById('smart-filter');
+      if (filters.length === 0) {
+        sf.classList.remove('active');
+        return {results: stallions.slice(0, 20), pills};
+      }
+      sf.classList.add('active');
+      const results = stallions.filter(s => filters.every(f => {
+        try { return f(s); } catch (_e) { return false; }
+      }));
+      return {results, pills};
+    }
+
+    function render(q) {
+      const {results, pills} = applyFilter(data.stallions, q);
+      const title = document.getElementById('leaderboard-title');
+      const sf = document.getElementById('smart-filter');
+      if (sf.classList.contains('active')) {
+        title.textContent = 'Filtered — ' + results.length + ' stallion' + (results.length === 1 ? '' : 's');
+      } else {
+        title.textContent = 'Top 20 — Value Score leaderboard';
+      }
+      const slice = sf.classList.contains('active') ? results.slice(0, 60) : results;
+      const rows = slice.map(rowHtml).join('');
+      document.getElementById('leaderboard-body').innerHTML = rows ||
+        '<tr><td colspan="7" style="padding:30px;text-align:center;color:var(--ink-soft)">No matches. Try a different query.</td></tr>';
+      document.getElementById('smart-pills').innerHTML =
+        pills.map(p => '<span class="pill">' + p + '</span>').join('');
+    }
+
+    render('');
+
+    // Wire up search interactions
+    const qInput = document.getElementById('smart-q');
+    qInput.addEventListener('input', e => render(e.target.value));
+    document.querySelectorAll('.smart-filter .examples b').forEach(el => {
+      el.addEventListener('click', () => {
+        qInput.value = el.dataset.q;
+        render(qInput.value);
+        qInput.focus();
+      });
+    });
+    document.getElementById('smart-clear').addEventListener('click', () => {
+      qInput.value = '';
+      render('');
+    });
 
     // ---------- Movers panel ----------
     // movers.json is a separate file the worker writes on each cycle. If it
