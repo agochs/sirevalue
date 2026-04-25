@@ -86,6 +86,7 @@ def main() -> int:
         ("recent-sale-results-index.json",  "public/data/recent-sale-results-index.json", False),
         ("similar-stallions.json",          "public/data/similar-stallions.json",   False),
         ("score-history.json",              "public/data/score-history.json",       False),
+        ("hip-pinhooks.json",               "public/data/hip-pinhooks.json",        False),
     ]
     # Also push every recent-sale-results-{year}.json file present in the
     # output dir — these are produced by fetch_sales.py per-year split.

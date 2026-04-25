@@ -233,6 +233,37 @@ details[open] summary { margin-bottom: 8px; }
   margin-top: 10px; font-size: 12px; color: var(--ink-soft);
 }
 .sales-cta a { color: var(--ink); }
+/* ---------- Realized hip-level pinhooks ---------- */
+.realized-block {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 16px; margin: 6px 0 20px;
+}
+.realized-summary {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); margin-bottom: 10px;
+}
+.realized-stat { font-size: 12px; color: var(--ink-soft); text-align: center; }
+.realized-stat b {
+  display: block; font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 20px; font-weight: 700; color: var(--ink); line-height: 1.2;
+}
+.realized-stat b.up   { color: var(--good); }
+.realized-stat b.down { color: var(--weak); }
+.pair-row {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 10px;
+  align-items: center; padding: 7px 0; font-size: 12px;
+}
+.pair-row + .pair-row { border-top: 1px dashed var(--rule); }
+.pair-row .horse { font-weight: 600; color: var(--ink); font-size: 13px; }
+.pair-row .horse-meta { color: var(--ink-soft); font-size: 11px; margin-top: 2px; }
+.pair-row .prices { color: var(--ink-soft); font-size: 12px; white-space: nowrap; }
+.pair-row .ret {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 14px;
+  white-space: nowrap;
+}
+.pair-row .ret.up   { color: var(--good); }
+.pair-row .ret.down { color: var(--weak); }
+.realized-empty { font-size: 12px; color: var(--ink-soft); padding: 6px 0; font-style: italic; }
 /* ---------- Pinhook lift ---------- */
 .pinhook-block {
   background: linear-gradient(135deg, #fff8e4, #fbf6e4);
@@ -385,9 +416,10 @@ async function bootSireValue() {
   var upcomingSales = {}, recentSales = {};
   var similarStallions = {};
   var scoreHistory = {};
+  var hipPinhooks = {};
   function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
   try {
-    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp] = await Promise.all([
+    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp, hpResp] = await Promise.all([
       fetch('/data/progeny-sires-2025.json'),
       fetch('/data/progeny-bms-2026.json'),
       fetch('/data/upcoming-sales.json'),
@@ -395,6 +427,7 @@ async function bootSireValue() {
       fetch('/data/similar-stallions.json'),
       fetch('/data/score-history.json'),
       fetch('/data/recent-sale-results-index.json'),
+      fetch('/data/hip-pinhooks.json'),
     ]);
     if (sResp.ok) {
       var sJson = await sResp.json();
@@ -444,6 +477,10 @@ async function bootSireValue() {
     if (histResp.ok) {
       var hJson = await histResp.json();
       scoreHistory = hJson.by_stallion || {};
+    }
+    if (hpResp && hpResp.ok) {
+      var hpJson = await hpResp.json();
+      hipPinhooks = hpJson.by_stallion || {};
     }
   } catch (_e) { /* all of these are optional enrichments */ }
 
@@ -613,6 +650,93 @@ async function bootSireValue() {
       +     '<span class="pinhook-cat ' + p.category + '">' + escapeHtml(catLabel) + '</span>'
       +   '</div>'
       +   caveat
+      + '</div>';
+  }
+
+  function renderRealizedPinhooks(s) {
+    // Hip-level realized pinhook pairs — same horse matched across yearling
+    // and 2YO sales via (sire, dam, foal_year) cohort fingerprint.
+    var blob = hipPinhooks[s.name];
+    if (!blob || !blob.matches || !blob.matches.length) return '';
+    var summary = blob.summary || {};
+    var matches = blob.matches;
+    var TOP_N = 6;
+    var top = matches.slice(0, TOP_N);
+
+    function fmtPct(p) {
+      if (p == null) return '—';
+      return (p > 0 ? '+' : '') + p.toFixed(1) + '%';
+    }
+    function pctCls(p) {
+      if (p == null) return '';
+      if (p > 0.5) return 'up';
+      if (p < -0.5) return 'down';
+      return '';
+    }
+    function shortSale(name) {
+      return (name || '').replace(/\s*\b20\d{2}\b\s*$/, '').trim();
+    }
+
+    var medCls = pctCls(summary.median_return_pct);
+    var posCls = (summary.positive_return_pct || 0) >= 50 ? 'up' : 'down';
+
+    var summaryHtml = ''
+      + '<div class="realized-summary">'
+      +   '<div class="realized-stat">'
+      +     '<b>' + (summary.matched_pairs || 0) + '</b>matched pairs'
+      +   '</div>'
+      +   '<div class="realized-stat">'
+      +     '<b class="' + medCls + '">' + fmtPct(summary.median_return_pct) + '</b>median return'
+      +   '</div>'
+      +   '<div class="realized-stat">'
+      +     '<b>' + fmtPct(summary.mean_return_pct) + '</b>mean return'
+      +   '</div>'
+      +   '<div class="realized-stat">'
+      +     '<b class="' + posCls + '">' + (summary.positive_return_pct || 0).toFixed(0) + '%</b>profitable'
+      +   '</div>'
+      +   '<div class="realized-stat">'
+      +     '<b>$' + (summary.median_yearling_price || 0).toLocaleString() + '</b>median yrl price'
+      +   '</div>'
+      +   '<div class="realized-stat">'
+      +     '<b>$' + (summary.median_twoyo_price || 0).toLocaleString() + '</b>median 2yo price'
+      +   '</div>'
+      + '</div>';
+
+    var pairsHtml = top.map(function(m) {
+      var rCls = pctCls(m.return_pct);
+      var horseLine = '<div class="horse">'
+        + escapeHtml(m.horse_name || '(unnamed)')
+        + '</div>'
+        + '<div class="horse-meta">'
+        +   'out of ' + escapeHtml(m.dam || '—')
+        +   ' &middot; ' + escapeHtml(m.cohort || '')
+        + '</div>'
+        + '<div class="horse-meta">'
+        +   escapeHtml(shortSale(m.yearling_sale))
+        +   (m.yearling_hip ? ' Hip ' + escapeHtml(String(m.yearling_hip)) : '')
+        +   ' → '
+        +   escapeHtml(shortSale(m.twoyo_sale))
+        +   (m.twoyo_hip ? ' Hip ' + escapeHtml(String(m.twoyo_hip)) : '')
+        + '</div>';
+      var pricesHtml = '<div class="prices">'
+        +   '$' + m.yearling_price.toLocaleString()
+        +   ' → '
+        +   '$' + m.twoyo_price.toLocaleString()
+        + '</div>';
+      var retHtml = '<div class="ret ' + rCls + '">' + fmtPct(m.return_pct) + '</div>';
+      return '<div class="pair-row"><div>' + horseLine + '</div>' + pricesHtml + retHtml + '</div>';
+    }).join('');
+
+    var moreNote = matches.length > TOP_N
+      ? '<div class="realized-empty">+ ' + (matches.length - TOP_N) + ' more matched pairs</div>'
+      : '';
+
+    return ''
+      + '<div class="realized-block">'
+      +   '<div class="section-title" style="margin:0 0 8px;">Realized Pinhook Pairs · same horse, yearling → 2YO</div>'
+      +   summaryHtml
+      +   pairsHtml
+      +   moreNote
       + '</div>';
   }
 
@@ -816,6 +940,7 @@ async function bootSireValue() {
       + '<div class="key-stats">' + statsHtml + '</div>'
       + renderRoi(s)
       + renderPinhook(s)
+      + renderRealizedPinhooks(s)
       + renderHistory(s)
       + renderSales(s)
       + renderProgeny(s)

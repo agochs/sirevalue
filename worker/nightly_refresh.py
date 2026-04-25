@@ -202,6 +202,7 @@ def rebuild() -> None:
         "build_mare_matcher.py",
         "compute_similar_stallions.py",
         "compute_score_history.py",
+        "compute_hip_pinhooks.py",
     ):
         script_path = HERE / script
         if not script_path.exists():
