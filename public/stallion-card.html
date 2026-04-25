@@ -233,6 +233,37 @@ details[open] summary { margin-bottom: 8px; }
   margin-top: 10px; font-size: 12px; color: var(--ink-soft);
 }
 .sales-cta a { color: var(--ink); }
+/* ---------- Pinhook lift ---------- */
+.pinhook-block {
+  background: linear-gradient(135deg, #fff8e4, #fbf6e4);
+  border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin: 6px 0 20px;
+}
+.pinhook-row {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 14px;
+  align-items: center;
+}
+.pinhook-big {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 30px; font-weight: 800; color: var(--ink); line-height: 1;
+}
+.pinhook-big .x { font-size: 18px; color: var(--ink-soft); font-weight: 600; margin-left: 2px; }
+.pinhook-stack { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--ink-soft); }
+.pinhook-stack b { color: var(--ink); }
+.pinhook-cat {
+  font-size: 11px; letter-spacing: 0.5px; padding: 4px 10px; border-radius: 12px;
+  font-weight: 700;
+}
+.pinhook-cat.premium    { background: #e6f4ea; color: #1e6b2f; }
+.pinhook-cat.solid      { background: #fff8e4; color: #6b5016; border: 1px solid #d4a147; }
+.pinhook-cat.neutral    { background: #f7f2e4; color: #6b5016; }
+.pinhook-cat.limited    { background: #fff0e1; color: #8a4a16; }
+.pinhook-cat.depressing { background: #fdecea; color: #8b2a1a; }
+.pinhook-caveat {
+  margin-top: 10px; padding: 8px 10px; font-size: 11px;
+  background: #f7f2e4; color: var(--ink-soft); border-radius: 6px;
+  border-left: 3px solid var(--gold);
+}
 /* ---------- Score history sparkline ---------- */
 .spark-block {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -525,6 +556,40 @@ async function bootSireValue() {
     return html;
   }
 
+  function renderPinhook(s) {
+    var p = s.pinhook;
+    if (!p) return '';
+    var catLabel = {
+      premium:    'Premium pinhook',
+      solid:      'Solid pinhook',
+      neutral:    'Neutral',
+      limited:    'Limited lift',
+      depressing: 'Pinhook trap',
+    }[p.category] || '—';
+    var caveat = '';
+    if (p.sample_strength === 'low') {
+      caveat = '<div class="pinhook-caveat">Low sample size (yearling n=' + p.yearling_n + ', 2YO n=' + p.twoyo_n + '). Treat as directional only.</div>';
+    } else if (p.sample_strength === 'medium') {
+      caveat = '<div class="pinhook-caveat">Medium sample (yearling n=' + p.yearling_n + ', 2YO n=' + p.twoyo_n + ').</div>';
+    }
+    var deltaPct = p.lift_ratio >= 1 ? '+' + ((p.lift_ratio - 1) * 100).toFixed(0) + '%'
+                                     : ((p.lift_ratio - 1) * 100).toFixed(0) + '%';
+    return ''
+      + '<div class="pinhook-block">'
+      +   '<div class="section-title" style="margin:0 0 8px;">Pinhook Lift · yearling → 2YO</div>'
+      +   '<div class="pinhook-row">'
+      +     '<div class="pinhook-big">' + p.lift_ratio.toFixed(2) + '<span class="x">×</span></div>'
+      +     '<div class="pinhook-stack">'
+      +       '<div>Yearling avg <b>$' + p.yearling_avg_usd.toLocaleString() + '</b> <span style="opacity:.7;">(' + p.yearling_n + ' sold)</span></div>'
+      +       '<div>2YO avg <b>$' + p.twoyo_avg_usd.toLocaleString() + '</b> <span style="opacity:.7;">(' + p.twoyo_n + ' sold)</span></div>'
+      +       '<div>Same cohort, ~18 months apart · ' + deltaPct + ' average price change</div>'
+      +     '</div>'
+      +     '<span class="pinhook-cat ' + p.category + '">' + escapeHtml(catLabel) + '</span>'
+      +   '</div>'
+      +   caveat
+      + '</div>';
+  }
+
   function renderHistory(s) {
     var pts = scoreHistory[s.name] || [];
     if (pts.length < 2) return '';   // sparkline needs at least 2 points
@@ -724,6 +789,7 @@ async function bootSireValue() {
       + '</div>'
       + '<div class="key-stats">' + statsHtml + '</div>'
       + renderRoi(s)
+      + renderPinhook(s)
       + renderHistory(s)
       + renderSales(s)
       + renderProgeny(s)

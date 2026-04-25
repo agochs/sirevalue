@@ -60,6 +60,60 @@ BH_COLOR_CODES = {
 }
 
 
+def compute_pinhook(components: dict) -> dict | None:
+    """Per-sire yearling→2YO appreciation. Same cohort sold at two stages:
+    Keeneland Sept (yearling) + OBS Spring (2YO ≈ 18 months later, same foals).
+
+    Returns None when sample sizes are too thin to be meaningful.
+    Otherwise: {
+        lift_ratio: float,           # 2yo_avg / yearling_avg
+        yearling_avg_usd, yearling_n,
+        twoyo_avg_usd, twoyo_n,
+        category: 'premium'|'solid'|'neutral'|'limited'|'depressing',
+        sample_strength: 'high'|'medium'|'low'
+    }
+    """
+    me = (components.get("market_efficiency") or {}).get("inputs") or {}
+    te = (components.get("twoyo_market_efficiency") or {}).get("inputs") or {}
+    yearling_avg = me.get("yearling_avg_usd")
+    yearling_n   = me.get("yearlings_sold_n") or 0
+    twoyo_avg    = te.get("twoyo_avg_usd")
+    twoyo_n      = te.get("twoyos_sold_n") or 0
+
+    # Need real data on both sides
+    if not yearling_avg or not twoyo_avg or yearling_avg <= 0:
+        return None
+    if yearling_n < 2 or twoyo_n < 2:
+        return None  # too few sales for the average to be trustworthy
+
+    lift = twoyo_avg / yearling_avg
+
+    # Categorize. Thresholds tuned from observed pinhook returns: ~2x is the
+    # rough breakeven for buyers (covers training + carrying costs); higher
+    # is genuine pinhook winner territory.
+    if   lift >= 3.0:  category = "premium"
+    elif lift >= 2.0:  category = "solid"
+    elif lift >= 1.5:  category = "neutral"
+    elif lift >= 1.0:  category = "limited"
+    else:              category = "depressing"
+
+    # Sample strength based on the smaller of the two cohort sizes
+    smaller = min(yearling_n, twoyo_n)
+    if   smaller >= 5: strength = "high"
+    elif smaller >= 3: strength = "medium"
+    else:              strength = "low"
+
+    return {
+        "lift_ratio":        round(lift, 2),
+        "yearling_avg_usd":  yearling_avg,
+        "yearling_n":        yearling_n,
+        "twoyo_avg_usd":     twoyo_avg,
+        "twoyo_n":           twoyo_n,
+        "category":          category,
+        "sample_strength":   strength,
+    }
+
+
 def expand_bh_color(code):
     """Translate a BH color code ('b', 'dkb/br') to its registered name
     ('Bay', 'Dark Bay/Brown'). Returns the input unchanged for anything
@@ -412,6 +466,7 @@ def main():
                 "components": result.components,
                 "notes": result.notes,
             },
+            "pinhook": compute_pinhook(result.components),
         })
 
     # Sort by score descending for convenient default ranking

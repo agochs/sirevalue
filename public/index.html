@@ -123,6 +123,50 @@ body {
 .mover-delta.down { color: var(--weak); font-weight: 700; }
 .mover-tier { color: var(--ink-soft); font-size: 11px; letter-spacing: 0.5px; }
 .mover-empty { color: var(--ink-soft); font-size: 12px; font-style: italic; padding: 6px 0; }
+/* ---------- Pinhook Watch ---------- */
+.pinhook-watch {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 22px;
+}
+.pinhook-watch-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
+}
+.pinhook-watch-head h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; margin: 0; font-weight: 700;
+}
+.pinhook-watch-head .sub {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft);
+}
+.pinhook-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+}
+.pinhook-col h3 {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--ink-soft); margin: 0 0 8px; font-weight: 700;
+}
+.pinhook-col h3.up   { color: var(--good); }
+.pinhook-col h3.down { color: var(--weak); }
+.pinhook-item {
+  padding: 7px 0; border-bottom: 1px dashed var(--rule);
+  display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center;
+}
+.pinhook-item:last-child { border-bottom: none; }
+.pinhook-item a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14px; }
+.pinhook-item a:hover { text-decoration: underline; }
+.pinhook-item .meta {
+  font-size: 11px; color: var(--ink-soft);
+}
+.pinhook-item .lift {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-weight: 700; font-size: 17px;
+}
+.pinhook-item .lift.up   { color: var(--good); }
+.pinhook-item .lift.down { color: var(--weak); }
+@media (max-width: 560px) {
+  .pinhook-grid { grid-template-columns: 1fr; gap: 12px; }
+}
 /* ---------- Smart filter ---------- */
 .smart-filter {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -206,6 +250,26 @@ body {
     </div>
   </div>
 
+  <div id="pinhook-watch" class="pinhook-watch" hidden>
+    <div class="pinhook-watch-head">
+      <h2>Pinhook Watch</h2>
+      <div class="sub">Yearling → 2YO lift · same cohort, ~18 months apart</div>
+    </div>
+    <div class="pinhook-grid">
+      <div class="pinhook-col">
+        <h3 class="up">Top pinhook targets</h3>
+        <div id="pinhook-top"></div>
+      </div>
+      <div class="pinhook-col">
+        <h3 class="down">Pinhook traps (avoid)</h3>
+        <div id="pinhook-bottom"></div>
+      </div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--ink-soft);">
+      Sample-size filter: yearling n ≥ 5 and 2YO n ≥ 3. <a href="/stallion-card.html" style="color:var(--ink-soft);">Browse all stallions →</a>
+    </div>
+  </div>
+
   <div class="section-title">Smart filter</div>
   <div id="smart-filter" class="smart-filter">
     <input id="smart-q" type="search" autocomplete="off"
@@ -277,6 +341,34 @@ body {
       if (g === 'D') return 'grade-d';
       return 'grade-f';
     }
+
+    // ---------- Pinhook Watch panel ----------
+    (function renderPinhookWatch() {
+      const eligible = data.stallions.filter(function(s) {
+        const p = s.pinhook;
+        return p && p.yearling_n >= 5 && p.twoyo_n >= 3;
+      });
+      if (eligible.length === 0) return;
+      const sortedDesc = eligible.slice().sort(function(a, b) { return b.pinhook.lift_ratio - a.pinhook.lift_ratio; });
+      const sortedAsc  = eligible.slice().sort(function(a, b) { return a.pinhook.lift_ratio - b.pinhook.lift_ratio; });
+      function row(s, dir) {
+        const p = s.pinhook;
+        const cls = p.lift_ratio >= 1 ? 'up' : 'down';
+        const sign = p.lift_ratio >= 1 ? '+' : '';
+        const pct = sign + ((p.lift_ratio - 1) * 100).toFixed(0) + '%';
+        return '<div class="pinhook-item">'
+          + '<div>'
+          +   '<div><a href="/stallion-card.html?s=' + encodeURIComponent(s.name) + '">' + s.name + '</a></div>'
+          +   '<div class="meta">$' + (p.yearling_avg_usd/1000).toFixed(0) + 'K → $'
+          +     (p.twoyo_avg_usd/1000).toFixed(0) + 'K · n=' + p.yearling_n + '/' + p.twoyo_n + '</div>'
+          + '</div>'
+          + '<span class="lift ' + cls + '">' + p.lift_ratio.toFixed(2) + '× <span style="font-size:11px;color:var(--ink-soft);">' + pct + '</span></span>'
+          + '</div>';
+      }
+      document.getElementById('pinhook-top').innerHTML    = sortedDesc.slice(0, 7).map(function(s) { return row(s, 'top'); }).join('');
+      document.getElementById('pinhook-bottom').innerHTML = sortedAsc.slice(0, 7).map(function(s) { return row(s, 'bottom'); }).join('');
+      document.getElementById('pinhook-watch').hidden = false;
+    })();
 
     function rowHtml(s, i) {
       const fee = s.fee_usd ? ('$' + s.fee_usd.toLocaleString()) : (s.fee_qualifier || '—');

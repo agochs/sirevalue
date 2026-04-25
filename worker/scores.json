@@ -108,6 +108,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 3.16,
+        "yearling_avg_usd": 173253,
+        "yearling_n": 67,
+        "twoyo_avg_usd": 548000,
+        "twoyo_n": 5,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -173,7 +182,8 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "National Treasure",
@@ -236,7 +246,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Early Voting",
@@ -332,6 +343,15 @@
         "notes": [
           "obs_small_sample (n=4 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 1.35,
+        "yearling_avg_usd": 136158,
+        "yearling_n": 60,
+        "twoyo_avg_usd": 183750,
+        "twoyo_n": 4,
+        "category": "limited",
+        "sample_strength": "medium"
       }
     },
     {
@@ -426,6 +446,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.58,
+        "yearling_avg_usd": 97281,
+        "yearling_n": 87,
+        "twoyo_avg_usd": 154167,
+        "twoyo_n": 6,
+        "category": "neutral",
+        "sample_strength": "high"
       }
     },
     {
@@ -520,6 +549,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.02,
+        "yearling_avg_usd": 110899,
+        "yearling_n": 118,
+        "twoyo_avg_usd": 113409,
+        "twoyo_n": 22,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -614,6 +652,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.44,
+        "yearling_avg_usd": 173357,
+        "yearling_n": 7,
+        "twoyo_avg_usd": 76386,
+        "twoyo_n": 22,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -708,6 +755,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.25,
+        "yearling_avg_usd": 37811,
+        "yearling_n": 29,
+        "twoyo_avg_usd": 47093,
+        "twoyo_n": 38,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -771,7 +827,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Tiz The Law",
@@ -865,6 +922,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.26,
+        "yearling_avg_usd": 138067,
+        "yearling_n": 30,
+        "twoyo_avg_usd": 311740,
+        "twoyo_n": 27,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -928,7 +994,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Newgate",
@@ -991,7 +1058,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Highly Motivated",
@@ -1085,6 +1153,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.08,
+        "yearling_avg_usd": 34920,
+        "yearling_n": 44,
+        "twoyo_avg_usd": 72636,
+        "twoyo_n": 11,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -1181,6 +1258,15 @@
         "notes": [
           "obs_small_sample (n=2 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 5.44,
+        "yearling_avg_usd": 50574,
+        "yearling_n": 27,
+        "twoyo_avg_usd": 275000,
+        "twoyo_n": 2,
+        "category": "premium",
+        "sample_strength": "low"
       }
     },
     {
@@ -1246,7 +1332,8 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Cyberknife",
@@ -1340,6 +1427,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.94,
+        "yearling_avg_usd": 86011,
+        "yearling_n": 97,
+        "twoyo_avg_usd": 80563,
+        "twoyo_n": 16,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -1403,7 +1499,8 @@
         "notes": [
           "insufficient_peer_data (only 0 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Locked",
@@ -1466,7 +1563,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Audible",
@@ -1560,6 +1658,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.74,
+        "yearling_avg_usd": 48072,
+        "yearling_n": 21,
+        "twoyo_avg_usd": 35385,
+        "twoyo_n": 13,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -1623,7 +1730,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Life Is Good",
@@ -1719,6 +1827,15 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.81,
+        "yearling_avg_usd": 317810,
+        "yearling_n": 79,
+        "twoyo_avg_usd": 258571,
+        "twoyo_n": 7,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -1813,6 +1930,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.22,
+        "yearling_avg_usd": 24024,
+        "yearling_n": 41,
+        "twoyo_avg_usd": 53291,
+        "twoyo_n": 12,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -1907,6 +2033,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.29,
+        "yearling_avg_usd": 219337,
+        "yearling_n": 77,
+        "twoyo_avg_usd": 283750,
+        "twoyo_n": 12,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -1970,7 +2105,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Timberlake",
@@ -2033,7 +2169,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Epicenter",
@@ -2127,6 +2264,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.21,
+        "yearling_avg_usd": 128812,
+        "yearling_n": 132,
+        "twoyo_avg_usd": 156036,
+        "twoyo_n": 14,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -2224,6 +2370,15 @@
           "keeneland_small_sample (n=2 yearlings)",
           "obs_small_sample (n=3 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.83,
+        "yearling_avg_usd": 110000,
+        "yearling_n": 2,
+        "twoyo_avg_usd": 91667,
+        "twoyo_n": 3,
+        "category": "depressing",
+        "sample_strength": "low"
       }
     },
     {
@@ -2318,6 +2473,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.98,
+        "yearling_avg_usd": 135625,
+        "yearling_n": 40,
+        "twoyo_avg_usd": 133455,
+        "twoyo_n": 11,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -2412,6 +2576,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.63,
+        "yearling_avg_usd": 65597,
+        "yearling_n": 47,
+        "twoyo_avg_usd": 41333,
+        "twoyo_n": 6,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -2508,6 +2681,15 @@
         "notes": [
           "obs_small_sample (n=3 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 1.32,
+        "yearling_avg_usd": 29539,
+        "yearling_n": 38,
+        "twoyo_avg_usd": 39000,
+        "twoyo_n": 3,
+        "category": "limited",
+        "sample_strength": "medium"
       }
     },
     {
@@ -2602,6 +2784,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.83,
+        "yearling_avg_usd": 61838,
+        "yearling_n": 74,
+        "twoyo_avg_usd": 174978,
+        "twoyo_n": 23,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -2696,6 +2887,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 7.62,
+        "yearling_avg_usd": 18034,
+        "yearling_n": 15,
+        "twoyo_avg_usd": 137375,
+        "twoyo_n": 16,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -2790,6 +2990,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 3.96,
+        "yearling_avg_usd": 20647,
+        "yearling_n": 58,
+        "twoyo_avg_usd": 81708,
+        "twoyo_n": 12,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -2853,7 +3062,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Drain The Clock",
@@ -2947,6 +3157,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 3.7,
+        "yearling_avg_usd": 69358,
+        "yearling_n": 88,
+        "twoyo_avg_usd": 256429,
+        "twoyo_n": 21,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -3041,6 +3260,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.06,
+        "yearling_avg_usd": 41404,
+        "yearling_n": 57,
+        "twoyo_avg_usd": 85125,
+        "twoyo_n": 16,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -3135,6 +3363,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.48,
+        "yearling_avg_usd": 921321,
+        "yearling_n": 53,
+        "twoyo_avg_usd": 445500,
+        "twoyo_n": 10,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -3238,6 +3475,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.0,
+        "yearling_avg_usd": 20475,
+        "yearling_n": 20,
+        "twoyo_avg_usd": 41000,
+        "twoyo_n": 12,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -3332,6 +3578,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.7,
+        "yearling_avg_usd": 48591,
+        "yearling_n": 66,
+        "twoyo_avg_usd": 82607,
+        "twoyo_n": 28,
+        "category": "neutral",
+        "sample_strength": "high"
       }
     },
     {
@@ -3395,7 +3650,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Patch Adams",
@@ -3458,7 +3714,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Flightline",
@@ -3553,6 +3810,15 @@
           "insufficient_peer_data (only 0 peers; score shown with wider tolerance)",
           "obs_small_sample (n=2 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.74,
+        "yearling_avg_usd": 712500,
+        "yearling_n": 54,
+        "twoyo_avg_usd": 525000,
+        "twoyo_n": 2,
+        "category": "depressing",
+        "sample_strength": "low"
       }
     },
     {
@@ -3616,7 +3882,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Speaker's Corner",
@@ -3712,6 +3979,15 @@
         "notes": [
           "obs_small_sample (n=4 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 1.82,
+        "yearling_avg_usd": 65118,
+        "yearling_n": 55,
+        "twoyo_avg_usd": 118750,
+        "twoyo_n": 4,
+        "category": "neutral",
+        "sample_strength": "medium"
       }
     },
     {
@@ -3775,7 +4051,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Golden Pal",
@@ -3869,6 +4146,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.04,
+        "yearling_avg_usd": 130592,
+        "yearling_n": 109,
+        "twoyo_avg_usd": 135714,
+        "twoyo_n": 14,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -3934,7 +4220,8 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Independence Hall",
@@ -4037,6 +4324,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 3.34,
+        "yearling_avg_usd": 32653,
+        "yearling_n": 36,
+        "twoyo_avg_usd": 108898,
+        "twoyo_n": 39,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -4100,7 +4396,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Girvin",
@@ -4203,6 +4500,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.7,
+        "yearling_avg_usd": 121158,
+        "yearling_n": 79,
+        "twoyo_avg_usd": 85166,
+        "twoyo_n": 24,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -4266,7 +4572,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Gunite",
@@ -4329,7 +4636,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Mage",
@@ -4394,7 +4702,8 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Taiba",
@@ -4457,7 +4766,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Up To The Mark",
@@ -4520,7 +4830,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Maximus Mischief",
@@ -4614,6 +4925,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 3.32,
+        "yearling_avg_usd": 26717,
+        "yearling_n": 30,
+        "twoyo_avg_usd": 88769,
+        "twoyo_n": 26,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -4717,6 +5037,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.69,
+        "yearling_avg_usd": 163265,
+        "yearling_n": 51,
+        "twoyo_avg_usd": 112844,
+        "twoyo_n": 32,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -4820,6 +5149,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.82,
+        "yearling_avg_usd": 90512,
+        "yearling_n": 85,
+        "twoyo_avg_usd": 165066,
+        "twoyo_n": 30,
+        "category": "neutral",
+        "sample_strength": "high"
       }
     },
     {
@@ -4923,6 +5261,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 3.02,
+        "yearling_avg_usd": 22047,
+        "yearling_n": 21,
+        "twoyo_avg_usd": 66592,
+        "twoyo_n": 27,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -4986,7 +5333,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Prince of Monaco",
@@ -5049,7 +5397,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Charge It",
@@ -5112,7 +5461,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Twirling Candy",
@@ -5208,6 +5558,15 @@
         "notes": [
           "insufficient_peer_data (only 1 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.86,
+        "yearling_avg_usd": 181245,
+        "yearling_n": 47,
+        "twoyo_avg_usd": 155889,
+        "twoyo_n": 27,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -5288,7 +5647,8 @@
         "notes": [
           "keeneland_small_sample (n=2 yearlings)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Mindframe",
@@ -5353,7 +5713,8 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Volatile",
@@ -5447,6 +5808,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.6,
+        "yearling_avg_usd": 31228,
+        "yearling_n": 44,
+        "twoyo_avg_usd": 81307,
+        "twoyo_n": 13,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -5541,6 +5911,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 4.46,
+        "yearling_avg_usd": 16833,
+        "yearling_n": 9,
+        "twoyo_avg_usd": 75000,
+        "twoyo_n": 7,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -5635,6 +6014,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.79,
+        "yearling_avg_usd": 44356,
+        "yearling_n": 38,
+        "twoyo_avg_usd": 123857,
+        "twoyo_n": 7,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -5698,7 +6086,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Highland Falls",
@@ -5761,7 +6150,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Mullikin",
@@ -5824,7 +6214,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Complexity",
@@ -5918,6 +6309,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.54,
+        "yearling_avg_usd": 43733,
+        "yearling_n": 15,
+        "twoyo_avg_usd": 111000,
+        "twoyo_n": 13,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -6012,6 +6412,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 3.78,
+        "yearling_avg_usd": 23889,
+        "yearling_n": 9,
+        "twoyo_avg_usd": 90281,
+        "twoyo_n": 16,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -6075,7 +6484,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Essential Quality",
@@ -6169,6 +6579,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.38,
+        "yearling_avg_usd": 89817,
+        "yearling_n": 52,
+        "twoyo_avg_usd": 123750,
+        "twoyo_n": 16,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -6232,7 +6651,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Raging Torrent",
@@ -6295,7 +6715,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Bright Future",
@@ -6360,7 +6781,8 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Violence",
@@ -6454,6 +6876,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.56,
+        "yearling_avg_usd": 169000,
+        "yearling_n": 21,
+        "twoyo_avg_usd": 94889,
+        "twoyo_n": 9,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -6557,6 +6988,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.74,
+        "yearling_avg_usd": 91164,
+        "yearling_n": 58,
+        "twoyo_avg_usd": 158957,
+        "twoyo_n": 23,
+        "category": "neutral",
+        "sample_strength": "high"
       }
     },
     {
@@ -6651,6 +7091,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.76,
+        "yearling_avg_usd": 62727,
+        "yearling_n": 22,
+        "twoyo_avg_usd": 47924,
+        "twoyo_n": 13,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -6714,7 +7163,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Cogburn",
@@ -6777,7 +7227,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Known Agenda",
@@ -6871,6 +7322,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.01,
+        "yearling_avg_usd": 14691,
+        "yearling_n": 21,
+        "twoyo_avg_usd": 29539,
+        "twoyo_n": 13,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -6965,6 +7425,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 4.08,
+        "yearling_avg_usd": 15667,
+        "yearling_n": 6,
+        "twoyo_avg_usd": 63944,
+        "twoyo_n": 9,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -7028,7 +7497,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Yaupon",
@@ -7133,6 +7603,15 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 1.44,
+        "yearling_avg_usd": 166522,
+        "yearling_n": 92,
+        "twoyo_avg_usd": 239146,
+        "twoyo_n": 41,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -7238,6 +7717,15 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 1.19,
+        "yearling_avg_usd": 154178,
+        "yearling_n": 73,
+        "twoyo_avg_usd": 183375,
+        "twoyo_n": 32,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -7332,6 +7820,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.68,
+        "yearling_avg_usd": 29553,
+        "yearling_n": 38,
+        "twoyo_avg_usd": 79167,
+        "twoyo_n": 18,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -7435,6 +7932,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.05,
+        "yearling_avg_usd": 37363,
+        "yearling_n": 11,
+        "twoyo_avg_usd": 76727,
+        "twoyo_n": 11,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -7529,6 +8035,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 4.96,
+        "yearling_avg_usd": 9750,
+        "yearling_n": 6,
+        "twoyo_avg_usd": 48333,
+        "twoyo_n": 12,
+        "category": "premium",
+        "sample_strength": "high"
       }
     },
     {
@@ -7592,7 +8107,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Thousand Words",
@@ -7686,6 +8202,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.41,
+        "yearling_avg_usd": 23600,
+        "yearling_n": 10,
+        "twoyo_avg_usd": 33167,
+        "twoyo_n": 12,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -7766,7 +8291,8 @@
         "notes": [
           "keeneland_small_sample (n=2 yearlings)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Arabian Knight",
@@ -7829,7 +8355,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Dornoch",
@@ -7892,7 +8419,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "More Than Looks",
@@ -7955,7 +8483,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Arthur's Ride",
@@ -8018,7 +8547,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Upstart",
@@ -8121,6 +8651,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.24,
+        "yearling_avg_usd": 105864,
+        "yearling_n": 62,
+        "twoyo_avg_usd": 131643,
+        "twoyo_n": 14,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -8215,6 +8754,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.45,
+        "yearling_avg_usd": 158203,
+        "yearling_n": 37,
+        "twoyo_avg_usd": 71231,
+        "twoyo_n": 13,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -8278,7 +8826,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Karakontie",
@@ -8341,7 +8890,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Tacitus",
@@ -8435,6 +8985,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 2.04,
+        "yearling_avg_usd": 30485,
+        "yearling_n": 32,
+        "twoyo_avg_usd": 62150,
+        "twoyo_n": 20,
+        "category": "solid",
+        "sample_strength": "high"
       }
     },
     {
@@ -8531,6 +9090,15 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.77,
+        "yearling_avg_usd": 158512,
+        "yearling_n": 43,
+        "twoyo_avg_usd": 121882,
+        "twoyo_n": 17,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -8625,6 +9193,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.65,
+        "yearling_avg_usd": 22953,
+        "yearling_n": 21,
+        "twoyo_avg_usd": 37833,
+        "twoyo_n": 6,
+        "category": "neutral",
+        "sample_strength": "high"
       }
     },
     {
@@ -8721,6 +9298,15 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.64,
+        "yearling_avg_usd": 748860,
+        "yearling_n": 57,
+        "twoyo_avg_usd": 477500,
+        "twoyo_n": 10,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -8815,6 +9401,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.07,
+        "yearling_avg_usd": 51275,
+        "yearling_n": 49,
+        "twoyo_avg_usd": 54909,
+        "twoyo_n": 11,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -8918,6 +9513,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.71,
+        "yearling_avg_usd": 86148,
+        "yearling_n": 61,
+        "twoyo_avg_usd": 147692,
+        "twoyo_n": 13,
+        "category": "neutral",
+        "sample_strength": "high"
       }
     },
     {
@@ -9014,6 +9618,15 @@
         "notes": [
           "obs_small_sample (n=2 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 10.76,
+        "yearling_avg_usd": 7900,
+        "yearling_n": 5,
+        "twoyo_avg_usd": 85000,
+        "twoyo_n": 2,
+        "category": "premium",
+        "sample_strength": "low"
       }
     },
     {
@@ -9108,6 +9721,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.48,
+        "yearling_avg_usd": 299760,
+        "yearling_n": 77,
+        "twoyo_avg_usd": 144727,
+        "twoyo_n": 11,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -9204,6 +9826,15 @@
         "notes": [
           "obs_small_sample (n=2 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.37,
+        "yearling_avg_usd": 29389,
+        "yearling_n": 9,
+        "twoyo_avg_usd": 11000,
+        "twoyo_n": 2,
+        "category": "depressing",
+        "sample_strength": "low"
       }
     },
     {
@@ -9285,7 +9916,8 @@
         "notes": [
           "obs_small_sample (n=2 2YOs)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Dr. Schivel",
@@ -9348,7 +9980,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Yoshida",
@@ -9411,7 +10044,8 @@
         "notes": [
           "insufficient_peer_data (only 0 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Maclean's Music",
@@ -9505,6 +10139,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.28,
+        "yearling_avg_usd": 99448,
+        "yearling_n": 67,
+        "twoyo_avg_usd": 127679,
+        "twoyo_n": 28,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -9568,7 +10211,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Oxbow",
@@ -9631,7 +10275,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Real Solution",
@@ -9694,7 +10339,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Constitution",
@@ -9788,6 +10434,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.82,
+        "yearling_avg_usd": 298228,
+        "yearling_n": 70,
+        "twoyo_avg_usd": 245583,
+        "twoyo_n": 12,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -9851,7 +10506,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Not This Time",
@@ -9945,6 +10601,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.21,
+        "yearling_avg_usd": 673137,
+        "yearling_n": 73,
+        "twoyo_avg_usd": 139385,
+        "twoyo_n": 13,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -10010,7 +10675,8 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Mckinzie",
@@ -10106,6 +10772,15 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.43,
+        "yearling_avg_usd": 176492,
+        "yearling_n": 66,
+        "twoyo_avg_usd": 76611,
+        "twoyo_n": 18,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -10171,7 +10846,8 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Senor Buscador",
@@ -10236,7 +10912,8 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Justify",
@@ -10330,6 +11007,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.85,
+        "yearling_avg_usd": 348900,
+        "yearling_n": 60,
+        "twoyo_avg_usd": 295714,
+        "twoyo_n": 7,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -10433,6 +11119,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 0.82,
+        "yearling_avg_usd": 19786,
+        "yearling_n": 7,
+        "twoyo_avg_usd": 16273,
+        "twoyo_n": 11,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -10529,6 +11224,15 @@
         "notes": [
           "obs_small_sample (n=3 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.27,
+        "yearling_avg_usd": 32947,
+        "yearling_n": 19,
+        "twoyo_avg_usd": 8833,
+        "twoyo_n": 3,
+        "category": "depressing",
+        "sample_strength": "medium"
       }
     },
     {
@@ -10592,7 +11296,8 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Temple City",
@@ -10655,7 +11360,8 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "War Front",
@@ -10718,7 +11424,8 @@
         "notes": [
           "insufficient_peer_data (only 2 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Quality Road",
@@ -10814,6 +11521,15 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.92,
+        "yearling_avg_usd": 409092,
+        "yearling_n": 33,
+        "twoyo_avg_usd": 378333,
+        "twoyo_n": 6,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -10877,7 +11593,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Straight No Chaser",
@@ -10940,7 +11657,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Tapit Trice",
@@ -11003,7 +11721,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Nyquist",
@@ -11106,6 +11825,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.0,
+        "yearling_avg_usd": 345820,
+        "yearling_n": 61,
+        "twoyo_avg_usd": 344857,
+        "twoyo_n": 21,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -11169,7 +11897,8 @@
         "notes": [
           "insufficient_peer_data (only 0 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Liam's Map",
@@ -11274,6 +12003,15 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.92,
+        "yearling_avg_usd": 180434,
+        "yearling_n": 61,
+        "twoyo_avg_usd": 166773,
+        "twoyo_n": 22,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -11337,7 +12075,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Curlin",
@@ -11434,6 +12173,15 @@
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)",
           "obs_small_sample (n=2 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 1.01,
+        "yearling_avg_usd": 537632,
+        "yearling_n": 38,
+        "twoyo_avg_usd": 545000,
+        "twoyo_n": 2,
+        "category": "limited",
+        "sample_strength": "low"
       }
     },
     {
@@ -11497,7 +12245,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Vekoma",
@@ -11600,6 +12349,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.18,
+        "yearling_avg_usd": 166940,
+        "yearling_n": 83,
+        "twoyo_avg_usd": 197778,
+        "twoyo_n": 27,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -11696,6 +12454,15 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.89,
+        "yearling_avg_usd": 132395,
+        "yearling_n": 57,
+        "twoyo_avg_usd": 117704,
+        "twoyo_n": 27,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -11759,7 +12526,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Tapit",
@@ -11856,6 +12624,15 @@
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)",
           "obs_small_sample (n=4 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 1.14,
+        "yearling_avg_usd": 483800,
+        "yearling_n": 25,
+        "twoyo_avg_usd": 551250,
+        "twoyo_n": 4,
+        "category": "limited",
+        "sample_strength": "medium"
       }
     },
     {
@@ -11937,7 +12714,8 @@
         "notes": [
           "obs_small_sample (n=3 2YOs)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Candy Ride (Arg)",
@@ -12033,6 +12811,15 @@
         "notes": [
           "insufficient_peer_data (only 1 peers; score shown with wider tolerance)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 0.37,
+        "yearling_avg_usd": 237893,
+        "yearling_n": 28,
+        "twoyo_avg_usd": 87400,
+        "twoyo_n": 10,
+        "category": "depressing",
+        "sample_strength": "high"
       }
     },
     {
@@ -12127,6 +12914,15 @@
           }
         },
         "notes": []
+      },
+      "pinhook": {
+        "lift_ratio": 1.16,
+        "yearling_avg_usd": 76348,
+        "yearling_n": 33,
+        "twoyo_avg_usd": 88900,
+        "twoyo_n": 10,
+        "category": "limited",
+        "sample_strength": "high"
       }
     },
     {
@@ -12190,7 +12986,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Promises Fulfilled",
@@ -12253,7 +13050,8 @@
           }
         },
         "notes": []
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Annapolis",
@@ -12318,7 +13116,8 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     },
     {
       "name": "Union Rags",
@@ -12415,6 +13214,15 @@
           "keeneland_small_sample (n=2 yearlings)",
           "obs_small_sample (n=4 2YOs)"
         ]
+      },
+      "pinhook": {
+        "lift_ratio": 1.44,
+        "yearling_avg_usd": 16000,
+        "yearling_n": 2,
+        "twoyo_avg_usd": 23000,
+        "twoyo_n": 4,
+        "category": "limited",
+        "sample_strength": "low"
       }
     },
     {
@@ -12480,7 +13288,8 @@
         "notes": [
           "insufficient_peer_data (only 3 peers; score shown with wider tolerance)"
         ]
-      }
+      },
+      "pinhook": null
     }
   ]
 }
