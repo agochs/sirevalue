@@ -29,6 +29,29 @@ AIRDRIE_CSV = HERE / "airdrie-dryrun.csv"
 CALUMET_CSV = HERE / "calumet-dryrun.csv"
 COMBINED_CSV = HERE / "rosters-combined.csv"
 SCORES_JSON = HERE / "scores.json"
+# ---------------------------------------------------------------------------
+# Farms beyond the original 12 (Spendthrift, WinStar, Lane's End, Ashford,
+# Three Chimneys, Gainesway, Hill 'n' Dale, Claiborne, Darley, Taylor Made,
+# Airdrie, Calumet) are added via this JSON config. Drop a {farm}-roster.csv
+# file in worker/, add a one-line entry to farms-extra.json, re-run.
+#
+# Format of farms-extra.json:
+#   {
+#     "farms": [
+#       {
+#         "csv": "millridge-roster.csv",
+#         "name": "Mill Ridge Farm",
+#         "url_template": "https://www.millridge.com/stallions/{slug}/",
+#         "enabled": true
+#       },
+#       ...
+#     ]
+#   }
+#
+# CSV columns must match the original dryrun format:
+#   name,sire,dam,damsire,fee_usd,fee_terms,fee_qualifier
+# Optional extras: year_of_birth,color,height_hands,entered_stud_year,nominations
+EXTRA_FARMS_JSON = HERE / "farms-extra.json"
 # BloodHorse Stallion Register enrichment — canonical bio data per stallion.
 # Produced by enrich_from_bloodhorse.py. When present, BH values take
 # precedence over CSV values for year_of_birth / color / height / entered-stud.
@@ -393,12 +416,45 @@ def merge_bh_bios(rows: list[dict], bios: dict) -> dict:
     return stats
 
 
+def load_extra_farms() -> list[dict]:
+    """Load any additional farms registered in farms-extra.json. Each entry
+    points to a CSV file in worker/ with the standard roster columns and
+    provides the farm name + source-URL template. Lets us add new farms
+    without touching this file."""
+    if not EXTRA_FARMS_JSON.exists():
+        return []
+    try:
+        config = json.loads(EXTRA_FARMS_JSON.read_text())
+    except Exception as e:
+        print(f"WARN: farms-extra.json failed to parse: {e}")
+        return []
+
+    rows: list[dict] = []
+    for farm in (config.get("farms") or []):
+        if not farm.get("enabled", True):
+            continue
+        csv_name = farm.get("csv")
+        farm_name = farm.get("name")
+        url_tpl   = farm.get("url_template", "")
+        if not csv_name or not farm_name:
+            continue
+        csv_path = HERE / csv_name
+        if not csv_path.exists():
+            print(f"  extra farm '{farm_name}': CSV {csv_name} missing — skipping")
+            continue
+        farm_rows = _load_generic_farm(csv_path, farm_name, url_tpl)
+        rows.extend(farm_rows)
+        print(f"  extra farm '{farm_name}': loaded {len(farm_rows)} stallions")
+    return rows
+
+
 def main():
     all_rows = (
         load_spendthrift() + load_winstar() + load_lanesend()
         + load_ashford() + load_threechimneys() + load_gainesway()
         + load_hillndale() + load_claiborne() + load_darley()
         + load_taylormade() + load_airdrie() + load_calumet()
+        + load_extra_farms()
     )
     all_rows.sort(key=lambda r: r["name"])
 

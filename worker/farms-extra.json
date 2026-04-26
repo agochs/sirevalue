@@ -1,0 +1,61 @@
+{
+  "_doc": "Additional farms beyond the 12 hand-coded loaders. Drop a CSV with these columns: name,sire,dam,damsire,fee_usd,fee_terms,fee_qualifier (and optionally year_of_birth,color,height_hands,entered_stud_year,nominations). Set enabled=false to suppress a farm without removing its config.",
+  "farms": [
+    {
+      "csv":          "millridge-roster.csv",
+      "name":         "Mill Ridge Farm",
+      "url_template": "https://www.millridge.com/stallions/{slug}/",
+      "enabled":      false,
+      "_notes":       "Lexington, KY. Roster includes Oxbow, Mineshaft (pensioned)."
+    },
+    {
+      "csv":          "pinoak-roster.csv",
+      "name":         "Pin Oak Stud",
+      "url_template": "https://www.pinoakstud.com/stallions/{slug}",
+      "enabled":      false,
+      "_notes":       "Versailles, KY. Notable: Alternation, Broken Vow."
+    },
+    {
+      "csv":          "crestwood-roster.csv",
+      "name":         "Crestwood Farm",
+      "url_template": "https://www.crestwoodfarm.com/stallions/{slug}/",
+      "enabled":      false,
+      "_notes":       "Lexington, KY. Notable: Bourbon Courage, Tu Brutus."
+    },
+    {
+      "csv":          "sequel-roster.csv",
+      "name":         "Sequel Stallions New York",
+      "url_template": "https://www.sequelstallions.com/{slug}",
+      "enabled":      false,
+      "_notes":       "NY-bred sires. Empire State Stallion Stakes / NYSS-eligible market."
+    },
+    {
+      "csv":          "harris-roster.csv",
+      "name":         "Harris Farms",
+      "url_template": "https://www.harrisfarms.com/horse-division/stallions/{slug}/",
+      "enabled":      false,
+      "_notes":       "Coalinga, CA. Cal-bred market. Notable: Smiling Tiger lineage."
+    },
+    {
+      "csv":          "journeyman-roster.csv",
+      "name":         "Journeyman Stud",
+      "url_template": "https://www.journeymanstud.com/stallions/{slug}/",
+      "enabled":      false,
+      "_notes":       "Ocala, FL. Notable: Khozan, Brethren."
+    },
+    {
+      "csv":          "bridlewood-roster.csv",
+      "name":         "Bridlewood Farm",
+      "url_template": "https://bridlewoodfarm.com/stallions/{slug}/",
+      "enabled":      false,
+      "_notes":       "Ocala, FL. Notable: First Samurai, J Boys Echo."
+    },
+    {
+      "csv":          "northview-roster.csv",
+      "name":         "Northview Stallion Station",
+      "url_template": "https://www.northviewstallions.com/stallion/{slug}",
+      "enabled":      false,
+      "_notes":       "Chesapeake City, MD / Peach Bottom, PA. Mid-Atlantic regional."
+    }
+  ]
+}
