@@ -104,6 +104,54 @@ def slice_by_signal(hips: list[dict]) -> dict:
     return by_signal
 
 
+def signal_lift(by_signal: dict) -> dict:
+    """How much did the signal predict outcomes on this sale?
+
+    Returns a dict with:
+      price_lift_pct   — strong-tier median sold vs weak-tier median sold
+                          (positive = signal worked; negative = signal inverted)
+      return_lift_pts  — strong-tier realized return median vs weak-tier
+                          (only meaningful for 2YO sales with cost-basis hits)
+
+    None when either tier doesn't have enough hips (need >=3 each side).
+    """
+    s = by_signal.get("strong") or {}
+    w = by_signal.get("weak")   or {}
+    out = {
+        "strong_n": s.get("sold_n", 0),
+        "weak_n":   w.get("sold_n", 0),
+        "strong_median_sold":     (s.get("price") or {}).get("median"),
+        "weak_median_sold":       (w.get("price") or {}).get("median"),
+        "strong_realized_median": (s.get("realized") or {}).get("median_pct"),
+        "weak_realized_median":   (w.get("realized") or {}).get("median_pct"),
+    }
+
+    # Price lift requires ≥3 priced hips on each side
+    if (out["strong_n"] >= 3 and out["weak_n"] >= 3
+        and out["strong_median_sold"] and out["weak_median_sold"]):
+        out["price_lift_pct"] = round(
+            100 * (out["strong_median_sold"] - out["weak_median_sold"]) / out["weak_median_sold"],
+            1,
+        )
+    else:
+        out["price_lift_pct"] = None
+
+    # Return lift requires ≥3 hips with cost-basis on each side
+    s_real_n = (s.get("realized") or {}).get("n") or 0
+    w_real_n = (w.get("realized") or {}).get("n") or 0
+    if (s_real_n >= 3 and w_real_n >= 3
+        and out["strong_realized_median"] is not None
+        and out["weak_realized_median"]   is not None):
+        out["return_lift_pts"] = round(
+            out["strong_realized_median"] - out["weak_realized_median"],
+            1,
+        )
+    else:
+        out["return_lift_pts"] = None
+
+    return out
+
+
 def main():
     if not INDEX_JSON.exists():
         print(f"Missing {INDEX_JSON.name} — run score_catalog.py first.")
@@ -131,12 +179,14 @@ def main():
             continue
 
         kind_label = "2yo" if is_twoyo(sale_name) else ("yearling" if is_yearling(sale_name) else "other")
+        by_signal = slice_by_signal(hips)
         by_sale[sale_name] = {
             "slug":            slug,
             "kind":            kind_label,
             "total_hips":      len(hips),
             "priced_hips":     len(priced),
-            "by_signal":       slice_by_signal(hips),
+            "by_signal":       by_signal,
+            "lift":            signal_lift(by_signal),
         }
         if kind_label == "2yo":
             twoyo_pool.extend(hips)
@@ -148,6 +198,38 @@ def main():
         "all_yearling_sales":{"hip_count": len(yearling_pool), "by_signal": slice_by_signal(yearling_pool)},
     }
 
+    # Per-sale rankings: where did the signal predict best, where did it miss?
+    # Build a flat list of sales with their lift metrics for easy ranking.
+    rankable = []
+    for name, blob in by_sale.items():
+        lift = blob.get("lift") or {}
+        rankable.append({
+            "sale_name":      name,
+            "slug":           blob["slug"],
+            "kind":           blob["kind"],
+            "priced_hips":    blob["priced_hips"],
+            "strong_n":       lift.get("strong_n"),
+            "weak_n":         lift.get("weak_n"),
+            "price_lift_pct": lift.get("price_lift_pct"),
+            "return_lift_pts": lift.get("return_lift_pts"),
+            "strong_median_sold":     lift.get("strong_median_sold"),
+            "weak_median_sold":       lift.get("weak_median_sold"),
+            "strong_realized_median": lift.get("strong_realized_median"),
+            "weak_realized_median":   lift.get("weak_realized_median"),
+        })
+
+    by_price_lift   = [r for r in rankable if r["price_lift_pct"] is not None]
+    by_return_lift  = [r for r in rankable if r["return_lift_pts"] is not None]
+    by_price_lift.sort(key=lambda r: r["price_lift_pct"], reverse=True)
+    by_return_lift.sort(key=lambda r: r["return_lift_pts"], reverse=True)
+
+    rankings = {
+        "best_price_lift":   by_price_lift[:10],
+        "worst_price_lift":  list(reversed(by_price_lift[-10:])) if len(by_price_lift) >= 10 else list(reversed(by_price_lift)),
+        "best_return_lift":  by_return_lift[:10],
+        "worst_return_lift": list(reversed(by_return_lift[-10:])) if len(by_return_lift) >= 10 else list(reversed(by_return_lift)),
+    }
+
     out = {
         "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
         "method":       "slice-priced-hips-by-predicted-signal-tier",
@@ -155,8 +237,10 @@ def main():
             "sales_scored":      len(by_sale),
             "twoyo_hips_pooled": len(twoyo_pool),
             "yrl_hips_pooled":   len(yearling_pool),
+            "lift_eligible":     len(by_price_lift),
         },
         "aggregate": aggregate,
+        "rankings":  rankings,
         "by_sale":   by_sale,
     }
     OUTPUT_JSON.write_text(json.dumps(out, indent=2, ensure_ascii=False))

@@ -111,6 +111,56 @@ body {
 .bar-cell .up   { background: var(--good); }
 .bar-cell .down { background: var(--weak); }
 
+/* Best/worst predicted sales */
+.rank-toggle-row {
+  display: flex; gap: 12px; align-items: center; margin-bottom: 12px; flex-wrap: wrap;
+}
+.rank-toggle {
+  display: inline-flex; gap: 0; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
+}
+.rank-toggle button {
+  background: var(--cream); border: none; padding: 6px 12px; font-family: inherit;
+  font-size: 12px; cursor: pointer; color: var(--ink-soft); border-right: 1px solid var(--rule);
+}
+.rank-toggle button:last-child { border-right: none; }
+.rank-toggle button.active { background: var(--ink); color: var(--cream); }
+.rank-toggle button:hover:not(.active) { background: #faf5e6; color: var(--ink); }
+.rank-meta { font-size: 12px; color: var(--ink-soft); }
+.rank-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px;
+}
+@media (max-width: 720px) {
+  .rank-grid { grid-template-columns: 1fr; }
+}
+.rank-panel {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px;
+}
+.rank-head {
+  font-family: "Iowan Old Style", Georgia, serif;
+  margin: 0 0 10px; font-size: 15px; font-weight: 700;
+}
+.rank-head.up   { color: var(--good); }
+.rank-head.down { color: var(--weak); }
+.rank-row {
+  display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: center;
+  padding: 8px 0; border-bottom: 1px dashed var(--rule); font-size: 12px;
+}
+.rank-row:last-child { border-bottom: none; }
+.rank-row .rank-num {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 14px;
+  color: var(--ink-soft); text-align: right;
+}
+.rank-row .sale-name {
+  font-weight: 600; color: var(--ink); cursor: pointer;
+}
+.rank-row .sale-name:hover { text-decoration: underline; }
+.rank-row .sale-meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.rank-row .lift-val {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 14px;
+  white-space: nowrap;
+}
+.rank-row .lift-val.up   { color: var(--good); }
+.rank-row .lift-val.down { color: var(--weak); }
 .method-note {
   background: var(--card); border-left: 3px solid var(--gold);
   padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
@@ -144,6 +194,26 @@ body {
     <div class="verdict" id="verdict"></div>
   </div>
 
+  <div class="section-title" style="margin-top:0;">Where the signal predicted best vs worst</div>
+  <div class="rank-toggle-row">
+    <span class="rank-toggle" id="rank-toggle">
+      <button data-metric="price"  class="active">By sale-price gap</button>
+      <button data-metric="return">By realized-return gap (2YO only)</button>
+    </span>
+    <span class="rank-meta" id="rank-meta"></span>
+  </div>
+  <div class="rank-grid">
+    <div class="rank-panel">
+      <h3 class="rank-head up">Best-predicted sales</h3>
+      <div id="rank-best"></div>
+    </div>
+    <div class="rank-panel">
+      <h3 class="rank-head down">Worst-predicted sales</h3>
+      <div id="rank-worst"></div>
+    </div>
+  </div>
+
+  <div class="section-title">Per-tier outcome breakdown</div>
   <div class="controls">
     <div>
       <label>Sale view
@@ -201,6 +271,74 @@ body {
       '<div class="empty" style="color:var(--weak);">Failed to load validation data: ' + escapeHtml(e.message) + '</div>';
     return;
   }
+
+  // ---- Best/worst-predicted sales rankings -------------------------------
+  const rankings = data.rankings || {};
+  let rankMetric = 'price';   // 'price' | 'return'
+
+  function rankRowHtml(rec, idx, metric) {
+    const liftVal = metric === 'price' ? rec.price_lift_pct : rec.return_lift_pts;
+    if (liftVal == null) return '';
+    const cls = liftVal > 0.5 ? 'up' : (liftVal < -0.5 ? 'down' : '');
+    const display = metric === 'price'
+      ? (liftVal > 0 ? '+' : '') + liftVal.toFixed(0) + '%'
+      : (liftVal > 0 ? '+' : '') + liftVal.toFixed(0) + ' pts';
+    const meta = metric === 'price'
+      ? 'strong $' + (rec.strong_median_sold || 0).toLocaleString() + ' (n=' + rec.strong_n + ')  vs  weak $' + (rec.weak_median_sold || 0).toLocaleString() + ' (n=' + rec.weak_n + ')'
+      : 'strong ' + (rec.strong_realized_median != null ? (rec.strong_realized_median > 0 ? '+' : '') + rec.strong_realized_median.toFixed(1) + '%' : '—')
+        + '  vs  weak ' + (rec.weak_realized_median != null ? (rec.weak_realized_median > 0 ? '+' : '') + rec.weak_realized_median.toFixed(1) + '%' : '—');
+    const url = '/catalogs.html#sale=' + encodeURIComponent(rec.slug || '');
+    const tag = rec.kind === '2yo' ? ' · 2YO' : (rec.kind === 'yearling' ? ' · Yrl' : '');
+    return '<div class="rank-row">'
+      + '<div class="rank-num">' + (idx + 1) + '.</div>'
+      + '<div>'
+      +   '<div class="sale-name" data-sale="' + escapeHtml(rec.sale_name) + '">' + escapeHtml(rec.sale_name) + '</div>'
+      +   '<div class="sale-meta">' + meta + tag + '</div>'
+      + '</div>'
+      + '<div class="lift-val ' + cls + '">' + display + '</div>'
+      + '</div>';
+  }
+
+  function renderRankings() {
+    const best  = rankMetric === 'price' ? (rankings.best_price_lift   || []) : (rankings.best_return_lift   || []);
+    const worst = rankMetric === 'price' ? (rankings.worst_price_lift  || []) : (rankings.worst_return_lift  || []);
+    const eligibleN = rankMetric === 'price'
+      ? (rankings.best_price_lift  || []).length + (rankings.worst_price_lift  || []).length
+      : (rankings.best_return_lift || []).length + (rankings.worst_return_lift || []).length;
+
+    document.getElementById('rank-best').innerHTML  = best.slice(0, 5).map(function(r, i)  { return rankRowHtml(r, i, rankMetric); }).join('') || '<div style="font-size:12px;color:var(--ink-soft);font-style:italic;">No eligible sales</div>';
+    document.getElementById('rank-worst').innerHTML = worst.slice(0, 5).map(function(r, i) { return rankRowHtml(r, i, rankMetric); }).join('') || '<div style="font-size:12px;color:var(--ink-soft);font-style:italic;">No eligible sales</div>';
+    document.getElementById('rank-meta').textContent = rankMetric === 'price'
+      ? 'Strong-tier median sold price vs weak-tier — both tiers need ≥3 priced hips'
+      : '2YO sales only · strong-tier realized return vs weak-tier — both tiers need ≥3 cost-basis hits';
+
+    // Wire the sale-name click → jump down to dropdown
+    Array.prototype.forEach.call(document.querySelectorAll('.sale-name[data-sale]'), function(el) {
+      el.addEventListener('click', function() {
+        const name = el.getAttribute('data-sale');
+        const select = document.getElementById('sale-select');
+        // Try to find that sale in the dropdown options
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === name) {
+            select.selectedIndex = i;
+            select.dispatchEvent(new Event('change'));
+            select.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+          }
+        }
+      });
+    });
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('#rank-toggle button'), function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#rank-toggle button').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      rankMetric = btn.getAttribute('data-metric');
+      renderRankings();
+    });
+  });
+  renderRankings();
 
   // Populate sale dropdown — keep aggregates first, then individual sales newest-first
   const sel = document.getElementById('sale-select');
