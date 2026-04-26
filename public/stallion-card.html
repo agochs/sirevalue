@@ -233,6 +233,29 @@ details[open] summary { margin-bottom: 8px; }
   margin-top: 10px; font-size: 12px; color: var(--ink-soft);
 }
 .sales-cta a { color: var(--ink); }
+.sales-toolbar {
+  display: flex; gap: 10px; margin: 0 0 12px; flex-wrap: wrap; align-items: center;
+}
+.sales-toolbar select {
+  font-family: inherit; font-size: 13px; padding: 6px 10px;
+  border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--cream); color: var(--ink);
+}
+.sales-toolbar .sales-select { flex: 1; min-width: 200px; }
+.sales-toolbar .sales-sort   { min-width: 130px; }
+.sales-stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(78px, 1fr));
+  gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--rule); margin-bottom: 12px;
+}
+.sales-stat { text-align: center; }
+.sales-stat b {
+  display: block; font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.2;
+}
+.sales-stat span {
+  display: block; font-size: 10px; color: var(--ink-soft);
+  text-transform: uppercase; letter-spacing: 1px; margin-top: 3px;
+}
 /* ---------- Realized hip-level pinhooks ---------- */
 .realized-block {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -558,63 +581,171 @@ async function bootSireValue() {
       + '</div>';
   }
 
+  // Per-card cache of sales-panel data so the dropdown change handlers can
+  // re-render the visible hips without rebuilding the whole card.
+  var salesPanels = {};
+
+  function _byGroup(hips) {
+    var g = {};
+    hips.forEach(function(h) { (g[h.sale_name] = g[h.sale_name] || []).push(h); });
+    return g;
+  }
+  function _fmtPrice(h) {
+    if (h.sold_price_usd != null) {
+      return '<span class="price">$' + h.sold_price_usd.toLocaleString() + '</span>';
+    }
+    if (h.status && h.status.toLowerCase() === 'rna') {
+      return '<span class="price rna">RNA</span>';
+    }
+    return '<span class="price upcoming">(not yet sold)</span>';
+  }
+  function _hipRow(h) {
+    return '<div class="hip-row">'
+      +   '<span class="hip-num">#' + (h.hip != null ? escapeHtml(String(h.hip)) : '—') + '</span>'
+      +   '<span class="horse-info">' + escapeHtml(h.horse_name || '—')
+      +     (h.dam ? '<div class="dam">out of ' + escapeHtml(h.dam)
+                   + (h.damsire ? ', by ' + escapeHtml(h.damsire) : '') + '</div>' : '')
+      +   '</span>'
+      +   _fmtPrice(h)
+      + '</div>';
+  }
+  function _sortHips(hips, mode) {
+    var arr = hips.slice();
+    if (mode === 'price-desc') {
+      arr.sort(function(a, b) { return (b.sold_price_usd || 0) - (a.sold_price_usd || 0); });
+    } else if (mode === 'price-asc') {
+      arr.sort(function(a, b) {
+        var av = a.sold_price_usd == null ? Infinity : a.sold_price_usd;
+        var bv = b.sold_price_usd == null ? Infinity : b.sold_price_usd;
+        return av - bv;
+      });
+    } else {
+      // 'hip' default — hip number ascending
+      arr.sort(function(a, b) {
+        var av = parseInt(a.hip, 10); if (isNaN(av)) av = 99999;
+        var bv = parseInt(b.hip, 10); if (isNaN(bv)) bv = 99999;
+        return av - bv;
+      });
+    }
+    return arr;
+  }
+  function _groupsHtml(byGroup, sortMode) {
+    // Sales sorted reverse-chronologically (year is at the end of the name)
+    return Object.keys(byGroup).sort(function(a, b) { return b.localeCompare(a); }).map(function(sale) {
+      var hips = _sortHips(byGroup[sale], sortMode);
+      var saleUrl = byGroup[sale][0].sale_url;
+      return '<div class="sales-group-head">'
+        +    (saleUrl
+              ? '<a href="' + escapeHtml(saleUrl) + '" target="_blank" rel="noopener">' + escapeHtml(sale) + '</a>'
+              : escapeHtml(sale))
+        +    '<span class="count">' + hips.length + ' hip' + (hips.length === 1 ? '' : 's') + '</span>'
+        +  '</div>'
+        +  hips.map(_hipRow).join('');
+    }).join('');
+  }
+  function _statBox(label, value) {
+    return '<div class="sales-stat"><b>' + value + '</b><span>' + label + '</span></div>';
+  }
+  function _statsHtml(hips) {
+    if (!hips.length) return '';
+    var sold = hips.filter(function(h) { return h.sold_price_usd != null; });
+    var rnas = hips.filter(function(h) { return (h.status || '').toLowerCase() === 'rna'; });
+    var html = _statBox('Hips', hips.length);
+    if (sold.length) {
+      var prices = sold.map(function(h) { return h.sold_price_usd; }).sort(function(a, b) { return a - b; });
+      var total  = prices.reduce(function(s, v) { return s + v; }, 0);
+      var med    = prices[Math.floor(prices.length / 2)];
+      var avg    = total / prices.length;
+      var top    = prices[prices.length - 1];
+      html += _statBox('Sold',   sold.length)
+           +  _statBox('Median', '$' + Math.round(med).toLocaleString())
+           +  _statBox('Avg',    '$' + Math.round(avg).toLocaleString())
+           +  _statBox('Top',    '$' + top.toLocaleString())
+           +  _statBox('Gross',  '$' + total.toLocaleString());
+    }
+    if (rnas.length) html += _statBox('RNA', rnas.length);
+    return html;
+  }
+
+  function renderSalePanel(kind, title, hips) {
+    var panelId = 'sales-panel-' + kind;
+    var byGroup = _byGroup(hips);
+    salesPanels[panelId] = { hips: hips, byGroup: byGroup };
+
+    // Dropdown options: "All sales" first, then each individual sale (newer first)
+    var saleNames = Object.keys(byGroup).sort(function(a, b) { return b.localeCompare(a); });
+    var opts = '<option value="__all__">All sales (' + hips.length + ' hip' + (hips.length === 1 ? '' : 's') + ')</option>';
+    saleNames.forEach(function(sn) {
+      opts += '<option value="' + escapeHtml(sn) + '">' + escapeHtml(sn)
+            + ' (' + byGroup[sn].length + ')</option>';
+    });
+
+    // Sort dropdown only meaningful for completed (priced) sales
+    var hasPrices = hips.some(function(h) { return h.sold_price_usd != null; });
+    var toolbarHtml = ''
+      + '<div class="sales-toolbar">'
+      +   '<select class="sales-select" data-panel="' + panelId + '">' + opts + '</select>'
+      + (hasPrices
+          ? '<select class="sales-sort" data-panel="' + panelId + '">'
+            +   '<option value="hip">Sort: Hip #</option>'
+            +   '<option value="price-desc">Sort: Price ▼</option>'
+            +   '<option value="price-asc">Sort: Price ▲</option>'
+            + '</select>'
+          : '')
+      + '</div>';
+
+    return '<div class="sales-block" id="' + panelId + '">'
+      +    '<div class="section-title" style="margin:0 0 10px;">' + title + '</div>'
+      +    (saleNames.length > 0 ? toolbarHtml : '')
+      +    '<div class="sales-stats" id="' + panelId + '-stats">' + _statsHtml(hips) + '</div>'
+      +    '<div class="sales-list" id="' + panelId + '-list">' + _groupsHtml(byGroup, 'hip') + '</div>'
+      +  '</div>';
+  }
+
+  function rerenderSalesPanel(panelId) {
+    var data = salesPanels[panelId];
+    if (!data) return;
+    var panel = document.getElementById(panelId);
+    if (!panel) return;
+    var saleSel = panel.querySelector('.sales-select');
+    var sortSel = panel.querySelector('.sales-sort');
+    var selectedSale = saleSel ? saleSel.value : '__all__';
+    var sortMode     = sortSel ? sortSel.value : 'hip';
+
+    var subset, byGroup;
+    if (selectedSale === '__all__') {
+      subset  = data.hips;
+      byGroup = data.byGroup;
+    } else {
+      subset = data.byGroup[selectedSale] || [];
+      byGroup = {};
+      byGroup[selectedSale] = subset;
+    }
+    document.getElementById(panelId + '-stats').innerHTML = _statsHtml(subset);
+    document.getElementById(panelId + '-list').innerHTML  = _groupsHtml(byGroup, sortMode);
+  }
+
+  function wireSalesPanels() {
+    Array.prototype.forEach.call(document.querySelectorAll('.sales-select, .sales-sort'), function(sel) {
+      sel.addEventListener('change', function() {
+        rerenderSalesPanel(sel.getAttribute('data-panel'));
+      });
+    });
+  }
+
   function renderSales(s) {
-    // Show two mini-panels when data exists:
-    //   1. Progeny at Upcoming Sales — catalog entries (no price yet)
-    //   2. Recent Sale Results — completed sales (with hammer price)
-    // Each is keyed by stallion name, grouped by sale_name, one hip per row.
+    // Reset the per-card cache when re-rendering
+    salesPanels = {};
     var upcoming = upcomingSales[s.name] || [];
     var recent   = recentSales[s.name]   || [];
     if (upcoming.length === 0 && recent.length === 0) return '';
 
-    function byGroup(hips) {
-      var g = {};
-      hips.forEach(function(h) { (g[h.sale_name] = g[h.sale_name] || []).push(h); });
-      return g;
-    }
-    function fmtPrice(h) {
-      if (h.sold_price_usd != null) {
-        return '<span class="price">$' + h.sold_price_usd.toLocaleString() + '</span>';
-      }
-      if (h.status && h.status.toLowerCase() === 'rna') {
-        return '<span class="price rna">RNA</span>';
-      }
-      return '<span class="price upcoming">(not yet sold)</span>';
-    }
-    function hipRow(h) {
-      return '<div class="hip-row">'
-        +   '<span class="hip-num">#' + h.hip + '</span>'
-        +   '<span class="horse-info">' + escapeHtml(h.horse_name || '—')
-        +     (h.dam ? '<div class="dam">out of ' + escapeHtml(h.dam)
-                     + (h.damsire ? ', by ' + escapeHtml(h.damsire) : '') + '</div>' : '')
-        +   '</span>'
-        +   fmtPrice(h)
-        + '</div>';
-    }
-    function groupsHtml(g) {
-      return Object.keys(g).sort().map(function(sale) {
-        var hips = g[sale];
-        var saleUrl = hips[0].sale_url;
-        return '<div class="sales-group-head">'
-          +   '<a href="' + escapeHtml(saleUrl) + '" target="_blank" rel="noopener">' + escapeHtml(sale) + '</a>'
-          +   '<span class="count">' + hips.length + ' hip' + (hips.length === 1 ? '' : 's') + '</span>'
-          + '</div>'
-          + hips.map(hipRow).join('');
-      }).join('');
-    }
-
     var html = '';
     if (upcoming.length) {
-      html += '<div class="sales-block">'
-        + '<div class="section-title" style="margin:0 0 8px;">Progeny at Upcoming Sales</div>'
-        + groupsHtml(byGroup(upcoming))
-        + '</div>';
+      html += renderSalePanel('upcoming', 'Progeny at Upcoming Sales', upcoming);
     }
     if (recent.length) {
-      html += '<div class="sales-block">'
-        + '<div class="section-title" style="margin:0 0 8px;">Recent Sale Results</div>'
-        + groupsHtml(byGroup(recent))
-        + '</div>';
+      html += renderSalePanel('recent',   'Recent Sale Results',       recent);
     }
     return html;
   }
@@ -968,6 +1099,9 @@ async function bootSireValue() {
       +       ' &middot; ' + escapeHtml(sc.model_version) + '</div>'
       +   '</div>'
       + '</details>';
+
+    // Wire interactive controls inside the freshly rendered card
+    wireSalesPanels();
   }
 
   // ---------- Navigation / search ----------
