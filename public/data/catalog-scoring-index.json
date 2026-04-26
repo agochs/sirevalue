@@ -1,0 +1,1286 @@
+{
+  "generated_at": "2026-04-25T18:48:09Z",
+  "method": "join-sale-hips-with-sire-pinhook-track-record",
+  "summary": {
+    "sales_scored": 98,
+    "hips_scored": 31596,
+    "pinhook_match_rate": 98.1,
+    "sires_with_signal": 95
+  },
+  "sales": [
+    {
+      "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2026",
+      "slug": "fasig-tipton-kentucky-winter-mixed-sale-2026",
+      "kind": "results",
+      "hip_count": 185,
+      "signal_counts": {
+        "strong": 89,
+        "positive": 49,
+        "neutral": 12,
+        "weak": 3,
+        "none": 32
+      }
+    },
+    {
+      "sale_name": "Keeneland April Horses Of Racing Age Sale 2026",
+      "slug": "keeneland-april-horses-of-racing-age-sale-2026",
+      "kind": "results",
+      "hip_count": 8,
+      "signal_counts": {
+        "strong": 4,
+        "positive": 3,
+        "neutral": 1,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland January Horses Of All Ages Sale 2026",
+      "slug": "keeneland-january-horses-of-all-ages-sale-2026",
+      "kind": "results",
+      "hip_count": 527,
+      "signal_counts": {
+        "strong": 225,
+        "positive": 138,
+        "neutral": 45,
+        "weak": 7,
+        "none": 112
+      }
+    },
+    {
+      "sale_name": "OBS Spring Sale of 2YOs in Training 2026",
+      "slug": "obs-spring-sale-of-2yos-in-training-2026",
+      "kind": "results",
+      "hip_count": 609,
+      "signal_counts": {
+        "strong": 363,
+        "positive": 200,
+        "neutral": 35,
+        "weak": 9,
+        "none": 2
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+      "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026",
+      "kind": "results",
+      "hip_count": 420,
+      "signal_counts": {
+        "strong": 267,
+        "positive": 125,
+        "neutral": 20,
+        "weak": 6,
+        "none": 2
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2026",
+      "slug": "ocala-breeders-sales-co-winter-mixed-sale-2026",
+      "kind": "results",
+      "hip_count": 77,
+      "signal_counts": {
+        "strong": 30,
+        "positive": 30,
+        "neutral": 3,
+        "weak": 0,
+        "none": 14
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton California Fall Yearling Sale 2025",
+      "slug": "fasig-tipton-california-fall-yearling-sale-2025",
+      "kind": "results",
+      "hip_count": 52,
+      "signal_counts": {
+        "strong": 27,
+        "positive": 15,
+        "neutral": 9,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Digital Major Reduction Of Harris Farms 2025",
+      "slug": "fasig-tipton-digital-major-reduction-of-harris-farms-2025",
+      "kind": "results",
+      "hip_count": 11,
+      "signal_counts": {
+        "strong": 3,
+        "positive": 6,
+        "neutral": 2,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton July Horses Of Racing Age Sale 2025",
+      "slug": "fasig-tipton-july-horses-of-racing-age-sale-2025",
+      "kind": "results",
+      "hip_count": 37,
+      "signal_counts": {
+        "strong": 18,
+        "positive": 12,
+        "neutral": 7,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky November Sale 2025",
+      "slug": "fasig-tipton-kentucky-november-sale-2025",
+      "kind": "results",
+      "hip_count": 117,
+      "signal_counts": {
+        "strong": 40,
+        "positive": 36,
+        "neutral": 10,
+        "weak": 1,
+        "none": 30
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2025",
+      "slug": "fasig-tipton-kentucky-october-yearling-sale-2025",
+      "kind": "results",
+      "hip_count": 1011,
+      "signal_counts": {
+        "strong": 540,
+        "positive": 371,
+        "neutral": 74,
+        "weak": 24,
+        "none": 2
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2025",
+      "slug": "fasig-tipton-kentucky-select-july-yearling-sale-2025",
+      "kind": "results",
+      "hip_count": 186,
+      "signal_counts": {
+        "strong": 117,
+        "positive": 58,
+        "neutral": 10,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2025",
+      "slug": "fasig-tipton-kentucky-winter-mixed-sale-2025",
+      "kind": "results",
+      "hip_count": 180,
+      "signal_counts": {
+        "strong": 95,
+        "positive": 68,
+        "neutral": 16,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+      "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2025",
+      "kind": "results",
+      "hip_count": 289,
+      "signal_counts": {
+        "strong": 172,
+        "positive": 82,
+        "neutral": 29,
+        "weak": 6,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic Fall Yearling Sale 2025",
+      "slug": "fasig-tipton-midlantic-fall-yearling-sale-2025",
+      "kind": "results",
+      "hip_count": 89,
+      "signal_counts": {
+        "strong": 44,
+        "positive": 34,
+        "neutral": 6,
+        "weak": 5,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton New York Fall Mixed Sale 2025",
+      "slug": "fasig-tipton-new-york-fall-mixed-sale-2025",
+      "kind": "results",
+      "hip_count": 91,
+      "signal_counts": {
+        "strong": 33,
+        "positive": 18,
+        "neutral": 3,
+        "weak": 3,
+        "none": 34
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2025",
+      "slug": "fasig-tipton-saratoga-new-york-bred-yearling-sale-2025",
+      "kind": "results",
+      "hip_count": 189,
+      "signal_counts": {
+        "strong": 109,
+        "positive": 64,
+        "neutral": 12,
+        "weak": 4,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Saratoga Select Yearling Sale 2025",
+      "slug": "fasig-tipton-saratoga-select-yearling-sale-2025",
+      "kind": "results",
+      "hip_count": 163,
+      "signal_counts": {
+        "strong": 78,
+        "positive": 51,
+        "neutral": 25,
+        "weak": 0,
+        "none": 9
+      }
+    },
+    {
+      "sale_name": "Keeneland April Horses Of Racing Age Sale 2025",
+      "slug": "keeneland-april-horses-of-racing-age-sale-2025",
+      "kind": "results",
+      "hip_count": 31,
+      "signal_counts": {
+        "strong": 17,
+        "positive": 11,
+        "neutral": 3,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland Championship Sale 2025",
+      "slug": "keeneland-championship-sale-2025",
+      "kind": "results",
+      "hip_count": 5,
+      "signal_counts": {
+        "strong": 3,
+        "positive": 2,
+        "neutral": 0,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland January Horses Of All Ages Sale 2025",
+      "slug": "keeneland-january-horses-of-all-ages-sale-2025",
+      "kind": "results",
+      "hip_count": 525,
+      "signal_counts": {
+        "strong": 274,
+        "positive": 183,
+        "neutral": 59,
+        "weak": 9,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland November Breeding Stock Sale 2025",
+      "slug": "keeneland-november-breeding-stock-sale-2025",
+      "kind": "results",
+      "hip_count": 1400,
+      "signal_counts": {
+        "strong": 621,
+        "positive": 367,
+        "neutral": 140,
+        "weak": 8,
+        "none": 264
+      }
+    },
+    {
+      "sale_name": "Keeneland November Horses Of Racing Age Sale 2025",
+      "slug": "keeneland-november-horses-of-racing-age-sale-2025",
+      "kind": "results",
+      "hip_count": 80,
+      "signal_counts": {
+        "strong": 40,
+        "positive": 28,
+        "neutral": 12,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland September Yearling Sale 2025",
+      "slug": "keeneland-september-yearling-sale-2025",
+      "kind": "results",
+      "hip_count": 3091,
+      "signal_counts": {
+        "strong": 1597,
+        "positive": 1114,
+        "neutral": 297,
+        "weak": 31,
+        "none": 52
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025",
+      "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025",
+      "kind": "results",
+      "hip_count": 295,
+      "signal_counts": {
+        "strong": 163,
+        "positive": 72,
+        "neutral": 48,
+        "weak": 12,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+      "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2025",
+      "kind": "results",
+      "hip_count": 351,
+      "signal_counts": {
+        "strong": 213,
+        "positive": 80,
+        "neutral": 42,
+        "weak": 16,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2025",
+      "slug": "ocala-breeders-sales-co-october-yearling-sale-2025",
+      "kind": "results",
+      "hip_count": 148,
+      "signal_counts": {
+        "strong": 88,
+        "positive": 48,
+        "neutral": 9,
+        "weak": 3,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+      "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025",
+      "kind": "results",
+      "hip_count": 529,
+      "signal_counts": {
+        "strong": 306,
+        "positive": 140,
+        "neutral": 68,
+        "weak": 15,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2025",
+      "slug": "ocala-breeders-sales-co-winter-mixed-sale-2025",
+      "kind": "results",
+      "hip_count": 74,
+      "signal_counts": {
+        "strong": 42,
+        "positive": 23,
+        "neutral": 8,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton California Fall Yearling Sale 2024",
+      "slug": "fasig-tipton-california-fall-yearling-sale-2024",
+      "kind": "results",
+      "hip_count": 49,
+      "signal_counts": {
+        "strong": 25,
+        "positive": 11,
+        "neutral": 8,
+        "weak": 5,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton July Horses Of Racing Age Sale 2024",
+      "slug": "fasig-tipton-july-horses-of-racing-age-sale-2024",
+      "kind": "results",
+      "hip_count": 43,
+      "signal_counts": {
+        "strong": 21,
+        "positive": 14,
+        "neutral": 7,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky November Sale 2024",
+      "slug": "fasig-tipton-kentucky-november-sale-2024",
+      "kind": "results",
+      "hip_count": 145,
+      "signal_counts": {
+        "strong": 76,
+        "positive": 51,
+        "neutral": 15,
+        "weak": 2,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2024",
+      "slug": "fasig-tipton-kentucky-october-yearling-sale-2024",
+      "kind": "results",
+      "hip_count": 861,
+      "signal_counts": {
+        "strong": 445,
+        "positive": 274,
+        "neutral": 112,
+        "weak": 29,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2024",
+      "slug": "fasig-tipton-kentucky-select-july-yearling-sale-2024",
+      "kind": "results",
+      "hip_count": 175,
+      "signal_counts": {
+        "strong": 98,
+        "positive": 39,
+        "neutral": 27,
+        "weak": 11,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2024",
+      "slug": "fasig-tipton-kentucky-winter-mixed-sale-2024",
+      "kind": "results",
+      "hip_count": 189,
+      "signal_counts": {
+        "strong": 99,
+        "positive": 53,
+        "neutral": 30,
+        "weak": 6,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2024",
+      "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2024",
+      "kind": "results",
+      "hip_count": 222,
+      "signal_counts": {
+        "strong": 112,
+        "positive": 80,
+        "neutral": 23,
+        "weak": 6,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic Fall Yearling Sale 2024",
+      "slug": "fasig-tipton-midlantic-fall-yearling-sale-2024",
+      "kind": "results",
+      "hip_count": 77,
+      "signal_counts": {
+        "strong": 44,
+        "positive": 24,
+        "neutral": 4,
+        "weak": 5,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic June 2yos In Training Sale 2024",
+      "slug": "fasig-tipton-midlantic-june-2yos-in-training-sale-2024",
+      "kind": "results",
+      "hip_count": 18,
+      "signal_counts": {
+        "strong": 8,
+        "positive": 5,
+        "neutral": 4,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton New York Fall Mixed Sale 2024",
+      "slug": "fasig-tipton-new-york-fall-mixed-sale-2024",
+      "kind": "results",
+      "hip_count": 99,
+      "signal_counts": {
+        "strong": 45,
+        "positive": 43,
+        "neutral": 7,
+        "weak": 4,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2024",
+      "slug": "fasig-tipton-saratoga-new-york-bred-yearling-sale-2024",
+      "kind": "results",
+      "hip_count": 163,
+      "signal_counts": {
+        "strong": 89,
+        "positive": 41,
+        "neutral": 25,
+        "weak": 8,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Saratoga Select Yearling Sale 2024",
+      "slug": "fasig-tipton-saratoga-select-yearling-sale-2024",
+      "kind": "results",
+      "hip_count": 163,
+      "signal_counts": {
+        "strong": 81,
+        "positive": 50,
+        "neutral": 31,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland April Horses Of Racing Age Sale 2024",
+      "slug": "keeneland-april-horses-of-racing-age-sale-2024",
+      "kind": "results",
+      "hip_count": 32,
+      "signal_counts": {
+        "strong": 15,
+        "positive": 12,
+        "neutral": 5,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland Championship Sale 2024",
+      "slug": "keeneland-championship-sale-2024",
+      "kind": "results",
+      "hip_count": 7,
+      "signal_counts": {
+        "strong": 3,
+        "positive": 2,
+        "neutral": 2,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland January Horses Of All Ages Sale 2024",
+      "slug": "keeneland-january-horses-of-all-ages-sale-2024",
+      "kind": "results",
+      "hip_count": 511,
+      "signal_counts": {
+        "strong": 279,
+        "positive": 121,
+        "neutral": 89,
+        "weak": 22,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland November Breeding Stock Sale 2024",
+      "slug": "keeneland-november-breeding-stock-sale-2024",
+      "kind": "results",
+      "hip_count": 1381,
+      "signal_counts": {
+        "strong": 742,
+        "positive": 461,
+        "neutral": 156,
+        "weak": 14,
+        "none": 8
+      }
+    },
+    {
+      "sale_name": "Keeneland November Horses Of Racing Age Sale 2024",
+      "slug": "keeneland-november-horses-of-racing-age-sale-2024",
+      "kind": "results",
+      "hip_count": 47,
+      "signal_counts": {
+        "strong": 20,
+        "positive": 15,
+        "neutral": 11,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland September Yearling Sale 2024",
+      "slug": "keeneland-september-yearling-sale-2024",
+      "kind": "results",
+      "hip_count": 2660,
+      "signal_counts": {
+        "strong": 1412,
+        "positive": 784,
+        "neutral": 399,
+        "weak": 65,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2024",
+      "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2024",
+      "kind": "results",
+      "hip_count": 260,
+      "signal_counts": {
+        "strong": 124,
+        "positive": 98,
+        "neutral": 29,
+        "weak": 9,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2024",
+      "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2024",
+      "kind": "results",
+      "hip_count": 286,
+      "signal_counts": {
+        "strong": 150,
+        "positive": 88,
+        "neutral": 42,
+        "weak": 6,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2024",
+      "slug": "ocala-breeders-sales-co-october-yearling-sale-2024",
+      "kind": "results",
+      "hip_count": 145,
+      "signal_counts": {
+        "strong": 86,
+        "positive": 36,
+        "neutral": 16,
+        "weak": 7,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+      "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024",
+      "kind": "results",
+      "hip_count": 439,
+      "signal_counts": {
+        "strong": 217,
+        "positive": 160,
+        "neutral": 52,
+        "weak": 9,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2024",
+      "slug": "ocala-breeders-sales-co-winter-mixed-sale-2024",
+      "kind": "results",
+      "hip_count": 94,
+      "signal_counts": {
+        "strong": 57,
+        "positive": 21,
+        "neutral": 12,
+        "weak": 3,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton California Fall Yearling Horses Of Racing Age Sale 2023",
+      "slug": "fasig-tipton-california-fall-yearling-horses-of-racing-age-sale-2023",
+      "kind": "results",
+      "hip_count": 39,
+      "signal_counts": {
+        "strong": 25,
+        "positive": 9,
+        "neutral": 4,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton July Horses Of Racing Age Sale 2023",
+      "slug": "fasig-tipton-july-horses-of-racing-age-sale-2023",
+      "kind": "results",
+      "hip_count": 77,
+      "signal_counts": {
+        "strong": 30,
+        "positive": 34,
+        "neutral": 13,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky November Sale 2023",
+      "slug": "fasig-tipton-kentucky-november-sale-2023",
+      "kind": "results",
+      "hip_count": 116,
+      "signal_counts": {
+        "strong": 61,
+        "positive": 31,
+        "neutral": 22,
+        "weak": 2,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2023",
+      "slug": "fasig-tipton-kentucky-october-yearling-sale-2023",
+      "kind": "results",
+      "hip_count": 663,
+      "signal_counts": {
+        "strong": 335,
+        "positive": 238,
+        "neutral": 71,
+        "weak": 17,
+        "none": 2
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2023",
+      "slug": "fasig-tipton-kentucky-select-july-yearling-sale-2023",
+      "kind": "results",
+      "hip_count": 179,
+      "signal_counts": {
+        "strong": 98,
+        "positive": 60,
+        "neutral": 17,
+        "weak": 1,
+        "none": 3
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2023",
+      "slug": "fasig-tipton-kentucky-winter-mixed-sale-2023",
+      "kind": "results",
+      "hip_count": 161,
+      "signal_counts": {
+        "strong": 72,
+        "positive": 48,
+        "neutral": 35,
+        "weak": 3,
+        "none": 3
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2023",
+      "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2023",
+      "kind": "results",
+      "hip_count": 214,
+      "signal_counts": {
+        "strong": 120,
+        "positive": 60,
+        "neutral": 25,
+        "weak": 9,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic December Mixed Sale 2023",
+      "slug": "fasig-tipton-midlantic-december-mixed-sale-2023",
+      "kind": "results",
+      "hip_count": 39,
+      "signal_counts": {
+        "strong": 24,
+        "positive": 11,
+        "neutral": 2,
+        "weak": 2,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic Fall Yearling Sale 2023",
+      "slug": "fasig-tipton-midlantic-fall-yearling-sale-2023",
+      "kind": "results",
+      "hip_count": 104,
+      "signal_counts": {
+        "strong": 66,
+        "positive": 29,
+        "neutral": 6,
+        "weak": 3,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic June 2yos In Training Sale 2023",
+      "slug": "fasig-tipton-midlantic-june-2yos-in-training-sale-2023",
+      "kind": "results",
+      "hip_count": 22,
+      "signal_counts": {
+        "strong": 12,
+        "positive": 4,
+        "neutral": 4,
+        "weak": 2,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton New York Fall Mixed Sale 2023",
+      "slug": "fasig-tipton-new-york-fall-mixed-sale-2023",
+      "kind": "results",
+      "hip_count": 85,
+      "signal_counts": {
+        "strong": 43,
+        "positive": 30,
+        "neutral": 8,
+        "weak": 4,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2023",
+      "slug": "fasig-tipton-saratoga-new-york-bred-yearling-sale-2023",
+      "kind": "results",
+      "hip_count": 172,
+      "signal_counts": {
+        "strong": 95,
+        "positive": 58,
+        "neutral": 16,
+        "weak": 3,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Saratoga Select Yearling Sale 2023",
+      "slug": "fasig-tipton-saratoga-select-yearling-sale-2023",
+      "kind": "results",
+      "hip_count": 159,
+      "signal_counts": {
+        "strong": 63,
+        "positive": 58,
+        "neutral": 36,
+        "weak": 2,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland April Horses Of Racing Age Sale 2023",
+      "slug": "keeneland-april-horses-of-racing-age-sale-2023",
+      "kind": "results",
+      "hip_count": 43,
+      "signal_counts": {
+        "strong": 21,
+        "positive": 15,
+        "neutral": 7,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland January Horses Of All Ages Sale 2023",
+      "slug": "keeneland-january-horses-of-all-ages-sale-2023",
+      "kind": "results",
+      "hip_count": 419,
+      "signal_counts": {
+        "strong": 216,
+        "positive": 136,
+        "neutral": 58,
+        "weak": 7,
+        "none": 2
+      }
+    },
+    {
+      "sale_name": "Keeneland November Breeding Stock Sale 2023",
+      "slug": "keeneland-november-breeding-stock-sale-2023",
+      "kind": "results",
+      "hip_count": 1252,
+      "signal_counts": {
+        "strong": 617,
+        "positive": 394,
+        "neutral": 205,
+        "weak": 33,
+        "none": 3
+      }
+    },
+    {
+      "sale_name": "Keeneland November Horses Of Racing Age Sale 2023",
+      "slug": "keeneland-november-horses-of-racing-age-sale-2023",
+      "kind": "results",
+      "hip_count": 90,
+      "signal_counts": {
+        "strong": 51,
+        "positive": 25,
+        "neutral": 13,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland September Yearling Sale 2023",
+      "slug": "keeneland-september-yearling-sale-2023",
+      "kind": "results",
+      "hip_count": 2096,
+      "signal_counts": {
+        "strong": 1015,
+        "positive": 725,
+        "neutral": 313,
+        "weak": 42,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2023",
+      "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2023",
+      "kind": "results",
+      "hip_count": 214,
+      "signal_counts": {
+        "strong": 103,
+        "positive": 67,
+        "neutral": 31,
+        "weak": 13,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2023",
+      "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2023",
+      "kind": "results",
+      "hip_count": 254,
+      "signal_counts": {
+        "strong": 148,
+        "positive": 64,
+        "neutral": 31,
+        "weak": 11,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2023",
+      "slug": "ocala-breeders-sales-co-october-yearling-sale-2023",
+      "kind": "results",
+      "hip_count": 132,
+      "signal_counts": {
+        "strong": 64,
+        "positive": 51,
+        "neutral": 14,
+        "weak": 2,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2023",
+      "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2023",
+      "kind": "results",
+      "hip_count": 389,
+      "signal_counts": {
+        "strong": 207,
+        "positive": 122,
+        "neutral": 32,
+        "weak": 28,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2023",
+      "slug": "ocala-breeders-sales-co-winter-mixed-sale-2023",
+      "kind": "results",
+      "hip_count": 93,
+      "signal_counts": {
+        "strong": 49,
+        "positive": 30,
+        "neutral": 12,
+        "weak": 2,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton California Fall Yearling Horses Of All Ages Sale 2022",
+      "slug": "fasig-tipton-california-fall-yearling-horses-of-all-ages-sale-2022",
+      "kind": "results",
+      "hip_count": 33,
+      "signal_counts": {
+        "strong": 19,
+        "positive": 6,
+        "neutral": 8,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Florida Gulfstream Selected 2yos In Training Sale 2022",
+      "slug": "fasig-tipton-florida-gulfstream-selected-2yos-in-training-sale-2022",
+      "kind": "results",
+      "hip_count": 32,
+      "signal_counts": {
+        "strong": 16,
+        "positive": 11,
+        "neutral": 5,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton July Selected Horses Of All Ages Sale 2022",
+      "slug": "fasig-tipton-july-selected-horses-of-all-ages-sale-2022",
+      "kind": "results",
+      "hip_count": 54,
+      "signal_counts": {
+        "strong": 28,
+        "positive": 14,
+        "neutral": 12,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky November Sale 2022",
+      "slug": "fasig-tipton-kentucky-november-sale-2022",
+      "kind": "results",
+      "hip_count": 128,
+      "signal_counts": {
+        "strong": 56,
+        "positive": 44,
+        "neutral": 25,
+        "weak": 3,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "slug": "fasig-tipton-kentucky-october-yearling-sale-2022",
+      "kind": "results",
+      "hip_count": 500,
+      "signal_counts": {
+        "strong": 246,
+        "positive": 167,
+        "neutral": 63,
+        "weak": 24,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "slug": "fasig-tipton-kentucky-select-july-yearling-sale-2022",
+      "kind": "results",
+      "hip_count": 125,
+      "signal_counts": {
+        "strong": 63,
+        "positive": 39,
+        "neutral": 13,
+        "weak": 10,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2022",
+      "slug": "fasig-tipton-kentucky-winter-mixed-sale-2022",
+      "kind": "results",
+      "hip_count": 128,
+      "signal_counts": {
+        "strong": 71,
+        "positive": 34,
+        "neutral": 19,
+        "weak": 3,
+        "none": 1
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2022",
+      "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2022",
+      "kind": "results",
+      "hip_count": 177,
+      "signal_counts": {
+        "strong": 109,
+        "positive": 54,
+        "neutral": 14,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic December Mixed Sale 2022",
+      "slug": "fasig-tipton-midlantic-december-mixed-sale-2022",
+      "kind": "results",
+      "hip_count": 38,
+      "signal_counts": {
+        "strong": 20,
+        "positive": 14,
+        "neutral": 4,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Midlantic Eastern Fall Yearling Sale 2022",
+      "slug": "fasig-tipton-midlantic-eastern-fall-yearling-sale-2022",
+      "kind": "results",
+      "hip_count": 70,
+      "signal_counts": {
+        "strong": 35,
+        "positive": 19,
+        "neutral": 14,
+        "weak": 2,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton New York Fall Mixed Sale 2022",
+      "slug": "fasig-tipton-new-york-fall-mixed-sale-2022",
+      "kind": "results",
+      "hip_count": 44,
+      "signal_counts": {
+        "strong": 24,
+        "positive": 15,
+        "neutral": 4,
+        "weak": 1,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "slug": "fasig-tipton-saratoga-new-york-bred-yearling-sale-2022",
+      "kind": "results",
+      "hip_count": 103,
+      "signal_counts": {
+        "strong": 49,
+        "positive": 31,
+        "neutral": 14,
+        "weak": 9,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "slug": "fasig-tipton-saratoga-select-yearling-sale-2022",
+      "kind": "results",
+      "hip_count": 124,
+      "signal_counts": {
+        "strong": 51,
+        "positive": 43,
+        "neutral": 23,
+        "weak": 7,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland April Horses Of Racing Age Sale 2022",
+      "slug": "keeneland-april-horses-of-racing-age-sale-2022",
+      "kind": "results",
+      "hip_count": 35,
+      "signal_counts": {
+        "strong": 15,
+        "positive": 15,
+        "neutral": 5,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland January Horses Of All Ages Sale 2022",
+      "slug": "keeneland-january-horses-of-all-ages-sale-2022",
+      "kind": "results",
+      "hip_count": 373,
+      "signal_counts": {
+        "strong": 169,
+        "positive": 129,
+        "neutral": 66,
+        "weak": 9,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland November Breeding Stock Sale 2022",
+      "slug": "keeneland-november-breeding-stock-sale-2022",
+      "kind": "results",
+      "hip_count": 1045,
+      "signal_counts": {
+        "strong": 487,
+        "positive": 345,
+        "neutral": 190,
+        "weak": 18,
+        "none": 5
+      }
+    },
+    {
+      "sale_name": "Keeneland November Horses Of Racing Age Sale 2022",
+      "slug": "keeneland-november-horses-of-racing-age-sale-2022",
+      "kind": "results",
+      "hip_count": 87,
+      "signal_counts": {
+        "strong": 50,
+        "positive": 26,
+        "neutral": 11,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Keeneland September Yearling Sale 2022",
+      "slug": "keeneland-september-yearling-sale-2022",
+      "kind": "results",
+      "hip_count": 1837,
+      "signal_counts": {
+        "strong": 912,
+        "positive": 605,
+        "neutral": 245,
+        "weak": 71,
+        "none": 4
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2022",
+      "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2022",
+      "kind": "results",
+      "hip_count": 198,
+      "signal_counts": {
+        "strong": 113,
+        "positive": 50,
+        "neutral": 35,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2022",
+      "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2022",
+      "kind": "results",
+      "hip_count": 154,
+      "signal_counts": {
+        "strong": 96,
+        "positive": 45,
+        "neutral": 13,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "slug": "ocala-breeders-sales-co-october-yearling-sale-2022",
+      "kind": "results",
+      "hip_count": 91,
+      "signal_counts": {
+        "strong": 49,
+        "positive": 28,
+        "neutral": 14,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2022",
+      "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2022",
+      "kind": "results",
+      "hip_count": 303,
+      "signal_counts": {
+        "strong": 181,
+        "positive": 85,
+        "neutral": 37,
+        "weak": 0,
+        "none": 0
+      }
+    },
+    {
+      "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2022",
+      "slug": "ocala-breeders-sales-co-winter-mixed-sale-2022",
+      "kind": "results",
+      "hip_count": 69,
+      "signal_counts": {
+        "strong": 29,
+        "positive": 23,
+        "neutral": 13,
+        "weak": 2,
+        "none": 2
+      }
+    }
+  ]
+}

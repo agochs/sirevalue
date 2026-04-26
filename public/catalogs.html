@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Catalog Pinhook Scoring</title>
+<meta property="og:title" content="SireValue — Catalog Pinhook Scoring"/>
+<meta property="og:description" content="Every hip in every sale, scored by sire pinhook track record. Filter to high-signal hips before you bid."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; margin: 0 0 10px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 72ch; }
+
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 18px 0 10px; font-weight: 600;
+}
+
+/* Sale picker */
+.sale-picker {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 14px;
+  display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+}
+.sale-picker label { font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.sale-picker select {
+  font-size: 14px; padding: 6px 10px; border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--cream); color: var(--ink); margin-left: 6px; font-family: inherit;
+  min-width: 280px;
+}
+.sale-meta { font-size: 12px; color: var(--ink-soft); margin-left: auto; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.sale-meta .kind {
+  display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1px; font-weight: 700;
+}
+.sale-meta .kind.upcoming { background: #fef3c7; color: #78350f; }
+.sale-meta .kind.results  { background: #e0e7ef; color: var(--ink); }
+.sale-meta .signal-bar {
+  display: inline-flex; gap: 2px; align-items: stretch; height: 18px;
+  border: 1px solid var(--rule); border-radius: 3px; overflow: hidden;
+  min-width: 200px;
+}
+.sale-meta .signal-bar > span { display: block; height: 100%; }
+.sale-meta .signal-bar .strong   { background: var(--good); }
+.sale-meta .signal-bar .positive { background: #71b07f; }
+.sale-meta .signal-bar .neutral  { background: #d6c98c; }
+.sale-meta .signal-bar .weak     { background: var(--weak); }
+.sale-meta .signal-bar .none     { background: #e5e2d6; }
+
+/* Filter controls */
+.controls {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 14px;
+  display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+}
+.controls label { font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.controls select, .controls input[type=search] {
+  font-size: 13px; padding: 5px 8px; border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--cream); color: var(--ink); margin-left: 6px; font-family: inherit;
+}
+.controls input[type=search] { min-width: 180px; }
+.controls .result-count { margin-left: auto; font-size: 12px; color: var(--ink-soft); }
+
+.signal-toggle {
+  display: inline-flex; gap: 0; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
+  margin-left: 6px;
+}
+.signal-toggle button {
+  background: var(--cream); border: none; padding: 5px 10px; font-family: inherit;
+  font-size: 12px; cursor: pointer; color: var(--ink-soft); border-right: 1px solid var(--rule);
+}
+.signal-toggle button:last-child { border-right: none; }
+.signal-toggle button.active { background: var(--ink); color: var(--cream); }
+.signal-toggle button:hover:not(.active) { background: #faf5e6; color: var(--ink); }
+
+/* Hip table */
+.hip-table {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden;
+}
+.hip-table table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.hip-table th {
+  text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  background: #faf5e6; white-space: nowrap; position: sticky; top: 0; z-index: 1;
+}
+.hip-table th.num-col { text-align: right; }
+.hip-table th.sortable { cursor: pointer; user-select: none; }
+.hip-table th.sortable:hover { color: var(--ink); }
+.hip-table th.sortable.active { color: var(--ink); }
+.hip-table th .arrow { font-size: 9px; margin-left: 3px; opacity: 0.6; }
+.hip-table td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.hip-table td.num-col { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.hip-table tr:last-child td { border-bottom: none; }
+.hip-table .horse { font-weight: 600; }
+.hip-table .horse .meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; font-weight: 400; }
+.hip-table .sire a { color: var(--ink); text-decoration: none; }
+.hip-table .sire a:hover { text-decoration: underline; }
+.signal-pill {
+  display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+}
+.signal-pill.strong   { background: var(--good); color: #fff; }
+.signal-pill.positive { background: #d6ecdb; color: #275731; }
+.signal-pill.neutral  { background: #f0eadb; color: #6b5915; }
+.signal-pill.weak     { background: var(--weak); color: #fff; }
+.signal-pill.none     { background: #ede9da; color: var(--ink-soft); }
+.ret { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.ret.up   { color: var(--good); }
+.ret.down { color: var(--weak); }
+.empty {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 28px; text-align: center; color: var(--ink-soft); font-size: 14px;
+}
+
+.method-note {
+  background: var(--card); border-left: 3px solid var(--gold);
+  padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+.method-note b { color: var(--ink); }
+.method-note .legend { margin-top: 6px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+@media (max-width: 720px) {
+  .hero h1 { font-size: 22px; }
+  .hip-table td, .hip-table th { padding: 7px 6px; font-size: 12px; }
+  .sale-meta { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Catalog Pinhook Scoring</div>
+  </div>
+
+  <div class="hero">
+    <h1>Score the catalog before you bid.</h1>
+    <p>Every hip in every recent and upcoming sale, joined against the sire's <a href="/pinhooks.html" style="color:var(--ink);">realized pinhook track record</a>. The signal pill tells you whether this stallion's progeny historically pinhook profitably — using only matched same-horse yearling-to-2YO pairs from 2022–2026.</p>
+    <p>Pre-screen the catalog, sort by signal, search by sire or consignor. New catalogs auto-populate as they post.</p>
+  </div>
+
+  <div class="sale-picker">
+    <label>Sale
+      <select id="sale-select"><option>Loading…</option></select>
+    </label>
+    <div class="sale-meta" id="sale-meta"></div>
+  </div>
+
+  <div class="controls">
+    <div>
+      <label>Signal
+        <span class="signal-toggle" id="signal-toggle">
+          <button data-sig="all"      class="active">All</button>
+          <button data-sig="strong">Strong</button>
+          <button data-sig="positive">Positive</button>
+          <button data-sig="neutral">Neutral</button>
+          <button data-sig="weak">Weak</button>
+        </span>
+      </label>
+    </div>
+    <div>
+      <label>Search
+        <input id="search" type="search" placeholder="sire, dam, consignor…" autocomplete="off"/>
+      </label>
+    </div>
+    <div>
+      <label>Min sire pairs
+        <select id="filter-pairs">
+          <option value="0" selected>any</option>
+          <option value="3">3+</option>
+          <option value="5">5+</option>
+          <option value="10">10+</option>
+          <option value="20">20+</option>
+        </select>
+      </label>
+    </div>
+    <div class="result-count" id="result-count">—</div>
+  </div>
+
+  <div id="hip-area">
+    <div class="empty">Loading…</div>
+  </div>
+
+  <div class="method-note">
+    <b>Signal tiers.</b>
+    <span class="legend">
+      <span><span class="signal-pill strong">strong</span> n≥10 · median ≥+50% · ≥70% profitable</span>
+      <span><span class="signal-pill positive">positive</span> n≥5 · median ≥+25% · ≥60% profitable</span>
+      <span><span class="signal-pill neutral">neutral</span> in between</span>
+      <span><span class="signal-pill weak">weak</span> negative median, &lt;50% profitable</span>
+      <span><span class="signal-pill none">none</span> no track record</span>
+    </span>
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/consignors.html">consignors</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function fmtPct(p) {
+    if (p == null) return '—';
+    return (p > 0 ? '+' : '') + Number(p).toFixed(1) + '%';
+  }
+  function pctCls(p) {
+    if (p == null) return '';
+    if (p > 0.5)  return 'up';
+    if (p < -0.5) return 'down';
+    return '';
+  }
+  function fmtMoney(n) {
+    if (n == null) return '—';
+    return '$' + Number(n).toLocaleString();
+  }
+
+  let index;
+  try {
+    const resp = await fetch('/data/catalog-scoring-index.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    index = await resp.json();
+  } catch (e) {
+    document.getElementById('hip-area').innerHTML =
+      '<div class="empty" style="color:var(--weak);">Failed to load catalog index: ' + escapeHtml(e.message) + '</div>';
+    return;
+  }
+
+  const sales = index.sales || [];
+  if (!sales.length) {
+    document.getElementById('hip-area').innerHTML =
+      '<div class="empty">No catalogs scored yet. The next sale catalog will populate here automatically.</div>';
+    return;
+  }
+
+  // Populate sale dropdown — upcoming first, then results in date order
+  const select = document.getElementById('sale-select');
+  select.innerHTML = sales.map(function(s) {
+    const tag = s.kind === 'upcoming' ? '⚡ ' : '';
+    return '<option value="' + escapeHtml(s.slug) + '">' + tag + escapeHtml(s.sale_name)
+      + ' (' + s.hip_count + ' hips)</option>';
+  }).join('');
+
+  // Default selection: prefer upcoming > recent results
+  const defaultIdx = 0;
+  select.value = sales[defaultIdx].slug;
+
+  // Active state
+  let activeSale = sales[defaultIdx];
+  let hips = [];                  // current sale's hips
+  let signalFilter = 'all';
+  let sortKey  = 'default';       // 'default' = pre-sorted by signal, 'price' = sold price desc, 'pairs' = sample size desc, 'med' = median return desc
+  let sortDir  = 'desc';
+
+  function renderSaleMeta() {
+    const counts = activeSale.signal_counts || {};
+    const total = activeSale.hip_count || 1;
+    function pct(n) { return Math.max(2, Math.round(100 * n / total)); }
+    const seg = function(cls, n) {
+      if (!n) return '';
+      return '<span class="' + cls + '" style="width:' + pct(n) + '%;" title="' + cls + ': ' + n + '"></span>';
+    };
+    document.getElementById('sale-meta').innerHTML = ''
+      + '<span class="kind ' + activeSale.kind + '">' + activeSale.kind + '</span>'
+      + '<span>' + activeSale.hip_count.toLocaleString() + ' hips</span>'
+      + '<span class="signal-bar">'
+      +   seg('strong',  counts.strong || 0)
+      +   seg('positive', counts.positive || 0)
+      +   seg('neutral', counts.neutral || 0)
+      +   seg('weak',    counts.weak || 0)
+      +   seg('none',    counts.none || 0)
+      + '</span>';
+  }
+
+  async function loadSale(slug) {
+    document.getElementById('hip-area').innerHTML = '<div class="empty">Loading hips…</div>';
+    try {
+      const resp = await fetch('/data/catalogs/catalog-scoring-sale-' + encodeURIComponent(slug) + '.json');
+      if (!resp.ok) throw new Error('status ' + resp.status);
+      const data = await resp.json();
+      hips = data.hips || [];
+      render();
+    } catch (e) {
+      document.getElementById('hip-area').innerHTML =
+        '<div class="empty" style="color:var(--weak);">Failed to load sale: ' + escapeHtml(e.message) + '</div>';
+    }
+  }
+
+  function render() {
+    const search = (document.getElementById('search').value || '').trim().toLowerCase();
+    const minPairs = parseInt(document.getElementById('filter-pairs').value, 10);
+
+    let rows = hips.slice();
+
+    // Signal filter
+    if (signalFilter !== 'all') {
+      rows = rows.filter(function(h) { return (h.sire_pinhook_signal || 'none') === signalFilter; });
+    }
+    // Min sire pairs
+    if (minPairs > 0) {
+      rows = rows.filter(function(h) { return (h.sire_pinhook_pairs || 0) >= minPairs; });
+    }
+    // Search across sire / dam / consignor / horse_name
+    if (search) {
+      rows = rows.filter(function(h) {
+        return (h.sire || '').toLowerCase().indexOf(search) !== -1
+            || (h.dam || '').toLowerCase().indexOf(search) !== -1
+            || (h.consignor || '').toLowerCase().indexOf(search) !== -1
+            || (h.horse_name || '').toLowerCase().indexOf(search) !== -1;
+      });
+    }
+
+    // Apply sort
+    const dirMul = sortDir === 'asc' ? 1 : -1;
+    if (sortKey === 'med') {
+      rows.sort(function(a,b) {
+        const av = a.sire_pinhook_median_pct == null ? -Infinity : a.sire_pinhook_median_pct;
+        const bv = b.sire_pinhook_median_pct == null ? -Infinity : b.sire_pinhook_median_pct;
+        return (bv - av) * (dirMul === 1 ? -1 : 1);
+      });
+    } else if (sortKey === 'pairs') {
+      rows.sort(function(a,b) { return ((b.sire_pinhook_pairs || 0) - (a.sire_pinhook_pairs || 0)) * (dirMul === 1 ? -1 : 1); });
+    } else if (sortKey === 'price') {
+      rows.sort(function(a,b) { return ((b.sold_price_usd || 0) - (a.sold_price_usd || 0)) * (dirMul === 1 ? -1 : 1); });
+    } else if (sortKey === 'hip') {
+      rows.sort(function(a,b) {
+        const av = parseInt(a.hip, 10) || 99999;
+        const bv = parseInt(b.hip, 10) || 99999;
+        return (av - bv) * dirMul;
+      });
+    }
+    // 'default' = leave pre-sorted by signal/sample size
+
+    document.getElementById('result-count').textContent =
+      rows.length.toLocaleString() + ' hip' + (rows.length === 1 ? '' : 's');
+
+    const showSold = activeSale.kind === 'results';
+
+    if (rows.length === 0) {
+      document.getElementById('hip-area').innerHTML =
+        '<div class="empty">No hips match these filters.</div>';
+      return;
+    }
+
+    // Cap rendered rows for huge catalogs (Keeneland Sept = ~4000 hips)
+    const RENDER_CAP = 800;
+    const displayRows = rows.slice(0, RENDER_CAP);
+
+    let html = '<div class="hip-table"><table><thead><tr>'
+      + '<th class="num-col sortable' + (sortKey==='hip' ? ' active' : '') + '" data-sort="hip">Hip<span class="arrow">' + (sortKey==='hip' ? (sortDir==='asc'?'▲':'▼') : '↕') + '</span></th>'
+      + '<th>Horse / Dam</th>'
+      + '<th>Sire</th>'
+      + '<th>Signal</th>'
+      + '<th class="num-col sortable' + (sortKey==='pairs' ? ' active' : '') + '" data-sort="pairs">N<span class="arrow">' + (sortKey==='pairs' ? '▼' : '↕') + '</span></th>'
+      + '<th class="num-col sortable' + (sortKey==='med' ? ' active' : '') + '" data-sort="med">Median return<span class="arrow">' + (sortKey==='med' ? '▼' : '↕') + '</span></th>'
+      + '<th class="num-col">Profitable</th>'
+      + '<th>Consignor</th>'
+      + (showSold ? '<th class="num-col sortable' + (sortKey==='price' ? ' active' : '') + '" data-sort="price">Sold<span class="arrow">' + (sortKey==='price' ? '▼' : '↕') + '</span></th>' : '')
+      + '</tr></thead><tbody>';
+
+    html += displayRows.map(function(h) {
+      const sig = h.sire_pinhook_signal || 'none';
+      const medCls = pctCls(h.sire_pinhook_median_pct);
+      const sireUrl = '/stallion-card.html?s=' + encodeURIComponent(h.sire || '');
+      return '<tr>'
+        + '<td class="num-col">' + escapeHtml(String(h.hip || '—')) + '</td>'
+        + '<td class="horse">' + escapeHtml(h.horse_name || '—')
+        +   '<div class="meta">out of ' + escapeHtml(h.dam || '—') + '</div>'
+        + '</td>'
+        + '<td class="sire"><a href="' + sireUrl + '">' + escapeHtml(h.sire || '—') + '</a></td>'
+        + '<td><span class="signal-pill ' + sig + '">' + sig + '</span></td>'
+        + '<td class="num-col">' + (h.sire_pinhook_pairs != null ? h.sire_pinhook_pairs : '—') + '</td>'
+        + '<td class="num-col ret ' + medCls + '">' + fmtPct(h.sire_pinhook_median_pct) + '</td>'
+        + '<td class="num-col">' + (h.sire_pinhook_positive_pct != null ? h.sire_pinhook_positive_pct.toFixed(0) + '%' : '—') + '</td>'
+        + '<td>' + escapeHtml(h.consignor || '—') + '</td>'
+        + (showSold ? '<td class="num-col">' + (h.sold_price_usd != null ? fmtMoney(h.sold_price_usd) : '—') + '</td>' : '')
+        + '</tr>';
+    }).join('');
+
+    html += '</tbody></table></div>';
+    if (rows.length > RENDER_CAP) {
+      html += '<div style="margin-top:10px;font-size:12px;color:var(--ink-soft);text-align:center;">'
+        + 'Showing first ' + RENDER_CAP.toLocaleString() + ' of ' + rows.length.toLocaleString() + ' hips. Narrow the filters to see more.</div>';
+    }
+
+    document.getElementById('hip-area').innerHTML = html;
+
+    // Wire sortable headers
+    Array.prototype.forEach.call(document.querySelectorAll('.hip-table th.sortable'), function(th) {
+      th.addEventListener('click', function() {
+        const key = th.getAttribute('data-sort');
+        if (sortKey === key) {
+          sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          sortKey = key;
+          sortDir = 'desc';
+        }
+        render();
+      });
+    });
+  }
+
+  // Wire controls
+  select.addEventListener('change', function() {
+    activeSale = sales.find(function(s) { return s.slug === select.value; });
+    if (!activeSale) return;
+    renderSaleMeta();
+    loadSale(activeSale.slug);
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('#signal-toggle button'), function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#signal-toggle button').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      signalFilter = btn.getAttribute('data-sig');
+      render();
+    });
+  });
+
+  let searchTimer = null;
+  document.getElementById('search').addEventListener('input', function() {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(render, 120);
+  });
+  document.getElementById('filter-pairs').addEventListener('change', render);
+
+  // Kick off
+  renderSaleMeta();
+  loadSale(activeSale.slug);
+})();
+</script>
+</body>
+</html>

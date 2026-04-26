@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Pinhook Leaderboard</title>
+<meta property="og:title" content="SireValue — Realized Pinhook Leaderboard"/>
+<meta property="og:description" content="Which stallions actually deliver profitable yearling-to-2YO pinhook pairs? Ranked by realized returns from matched hips across 2022-2026 sales."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; margin: 0 0 10px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 70ch; }
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 24px 0 12px; font-weight: 600;
+}
+
+/* Stat bar */
+.stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px; margin: 0 0 22px;
+}
+.stat {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 14px; text-align: center;
+}
+.stat .num { font-size: 24px; font-weight: 700; font-family: "Iowan Old Style", Georgia, serif; line-height: 1.1; }
+.stat .num.up { color: var(--good); }
+.stat .label { font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+/* Top 10 cross-stallion pairs panel */
+.top-pairs {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 22px;
+}
+.top-pairs h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; margin: 0 0 4px; font-weight: 700;
+}
+.top-pairs .sub { font-size: 12px; color: var(--ink-soft); margin-bottom: 10px; }
+.pair-row {
+  display: grid; grid-template-columns: auto 1fr auto auto; gap: 14px;
+  align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--rule);
+  font-size: 13px;
+}
+.pair-row:last-child { border-bottom: none; }
+.pair-row .rank {
+  font-family: "Iowan Old Style", Georgia, serif; font-size: 16px;
+  color: var(--ink-soft); font-weight: 700; width: 28px; text-align: right;
+}
+.pair-row .horse-block .horse {
+  font-weight: 600; color: var(--ink);
+}
+.pair-row .horse-block .meta {
+  color: var(--ink-soft); font-size: 11px; margin-top: 2px;
+}
+.pair-row .horse-block a { color: var(--ink); text-decoration: none; }
+.pair-row .horse-block a:hover { text-decoration: underline; }
+.pair-row .prices { color: var(--ink-soft); font-size: 12px; white-space: nowrap; }
+.pair-row .ret {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 16px;
+  white-space: nowrap;
+}
+.pair-row .ret.up   { color: var(--good); }
+.pair-row .ret.down { color: var(--weak); }
+
+/* Filter / sort controls */
+.controls {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 14px;
+  display: flex; gap: 18px; flex-wrap: wrap; align-items: center;
+}
+.controls label { font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.controls select {
+  font-size: 13px; padding: 5px 8px; border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--cream); color: var(--ink); margin-left: 6px;
+  font-family: inherit;
+}
+.controls .result-count { margin-left: auto; font-size: 12px; color: var(--ink-soft); }
+
+/* Leaderboard */
+.leaderboard {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden;
+}
+.leaderboard table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.leaderboard th {
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  background: #faf5e6; white-space: nowrap;
+}
+.leaderboard th.num-col { text-align: right; }
+.leaderboard td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.leaderboard td.num-col { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.leaderboard tr:last-child td { border-bottom: none; }
+.leaderboard tr.body-row:hover { background: #faf5e6; cursor: pointer; }
+.leaderboard .stallion { font-weight: 600; }
+.leaderboard .stallion a { color: var(--ink); text-decoration: none; }
+.leaderboard .ret { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.leaderboard .ret.up   { color: var(--good); }
+.leaderboard .ret.down { color: var(--weak); }
+.leaderboard .pct.up   { color: var(--good); font-weight: 600; }
+.leaderboard .pct.down { color: var(--weak); font-weight: 600; }
+
+.empty {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px; text-align: center; color: var(--ink-soft); font-size: 14px;
+}
+
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+.method-note {
+  background: var(--card); border-left: 3px solid var(--gold);
+  padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+.method-note b { color: var(--ink); }
+@media (max-width: 640px) {
+  .hero h1 { font-size: 22px; }
+  .leaderboard td, .leaderboard th { padding: 8px 8px; font-size: 12px; }
+  .pair-row { grid-template-columns: 1fr auto; gap: 8px; }
+  .pair-row .rank, .pair-row .prices { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Realized Pinhook Leaderboard</div>
+  </div>
+
+  <div class="hero">
+    <h1>Which stallions actually deliver pinhook profits?</h1>
+    <p>This page ranks stallions by <b>realized</b> hip-level pinhook performance — same individual horse, matched across yearling and 2YO sales by sire, dam, and foal year. No averaging across cohorts: every dollar of yearling cost and every dollar of 2YO sale is from the same horse.</p>
+    <p>Indexed across <span id="hdr-yrl-n">—</span> yearling hips and <span id="hdr-two-n">—</span> 2YO hips from major U.S. sales 2022–2026.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="num" id="stat-stallions">—</div><div class="label">Stallions w/ pairs</div></div>
+    <div class="stat"><div class="num" id="stat-pairs">—</div><div class="label">Matched pairs</div></div>
+    <div class="stat"><div class="num up" id="stat-median">—</div><div class="label">Median return</div></div>
+    <div class="stat"><div class="num up" id="stat-positive">—</div><div class="label">Profitable pairs</div></div>
+  </div>
+
+  <div class="top-pairs">
+    <h2>Top 10 individual pinhook returns</h2>
+    <div class="sub">Cross-stallion · yearling price ≥ $25,000 · sorted by % return on the same horse</div>
+    <div id="top-pairs-list"></div>
+  </div>
+
+  <div class="section-title">Stallion leaderboard</div>
+  <div class="controls">
+    <div>
+      <label>Min sample
+        <select id="filter-n">
+          <option value="3">3 pairs</option>
+          <option value="5" selected>5 pairs</option>
+          <option value="10">10 pairs</option>
+          <option value="20">20 pairs</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label>Min median yrl price
+        <select id="filter-price">
+          <option value="0" selected>any</option>
+          <option value="25000">$25K</option>
+          <option value="50000">$50K</option>
+          <option value="100000">$100K</option>
+          <option value="250000">$250K</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label>Sort by
+        <select id="sort">
+          <option value="median_return_pct" selected>Median return</option>
+          <option value="mean_return_pct">Mean return</option>
+          <option value="positive_return_pct">Profitable %</option>
+          <option value="matched_pairs">Sample size</option>
+          <option value="median_yearling_price">Median yrl price</option>
+        </select>
+      </label>
+    </div>
+    <div class="result-count" id="result-count">—</div>
+  </div>
+
+  <div class="leaderboard">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Stallion</th>
+          <th class="num-col">Pairs</th>
+          <th class="num-col">Median return</th>
+          <th class="num-col">Mean</th>
+          <th class="num-col">Profitable</th>
+          <th class="num-col">Median yrl</th>
+          <th class="num-col">Median 2YO</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body">
+        <tr><td colspan="8" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="method-note">
+    <b>How matching works.</b> A horse foaled in year F is sold as a yearling in F+1 and as a 2YO in F+2. We fingerprint each hip by (normalized sire, normalized dam, foal year) — biologically unique within a cohort because mares only produce one foal per year. When the same fingerprint appears in both a yearling sale and a 2YO sale, we have a realized pinhook pair. RNA hips and online dispersals are excluded; canonical (highest-priced) transactions are kept when a horse appears in multiple sales.
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 sale results · <a href="/">home</a> · <a href="/consignors.html">consignors</a> · <a href="/stallion-card.html">browse stallions</a> · <a href="/compare.html">compare</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function fmtPct(p) {
+    if (p == null) return '—';
+    return (p > 0 ? '+' : '') + Number(p).toFixed(1) + '%';
+  }
+  function pctCls(p) {
+    if (p == null) return '';
+    if (p > 0.5)  return 'up';
+    if (p < -0.5) return 'down';
+    return '';
+  }
+  function fmtMoney(n) {
+    if (n == null) return '—';
+    return '$' + Number(n).toLocaleString();
+  }
+  function shortSale(name) {
+    return (name || '').replace(/\s*\b20\d{2}\b\s*$/, '').trim();
+  }
+
+  let data;
+  try {
+    const resp = await fetch('/data/hip-pinhooks.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('leaderboard-body').innerHTML =
+      '<tr><td colspan="8" style="padding:20px;text-align:center;color:var(--weak)">Failed to load pinhook data: ' + escapeHtml(e.message) + '</td></tr>';
+    return;
+  }
+
+  const summary = data.summary || {};
+  const byStallion = data.by_stallion || {};
+  const topOverall = data.top_returns_overall || [];
+
+  // Stat header
+  document.getElementById('hdr-yrl-n').textContent = (summary.yearling_hips_indexed || 0).toLocaleString();
+  document.getElementById('hdr-two-n').textContent = (summary.twoyo_hips_indexed || 0).toLocaleString();
+  document.getElementById('stat-stallions').textContent = summary.stallions_with_pairs || 0;
+  document.getElementById('stat-pairs').textContent = (summary.total_matched_pairs || 0).toLocaleString();
+
+  // Compute global median return + profitable % across every pair (any stallion)
+  const allReturns = [];
+  let positiveCount = 0;
+  Object.keys(byStallion).forEach(function(name) {
+    (byStallion[name].matches || []).forEach(function(m) {
+      allReturns.push(m.return_pct);
+      if (m.return_pct > 0) positiveCount++;
+    });
+  });
+  if (allReturns.length) {
+    const sorted = allReturns.slice().sort(function(a,b){ return a-b; });
+    const median = sorted[Math.floor(sorted.length/2)];
+    document.getElementById('stat-median').textContent = fmtPct(median);
+    document.getElementById('stat-positive').textContent = (100 * positiveCount / allReturns.length).toFixed(0) + '%';
+  }
+
+  // Render top 10 cross-stallion individual returns
+  const topList = document.getElementById('top-pairs-list');
+  topList.innerHTML = topOverall.slice(0, 10).map(function(m, i) {
+    const cls = pctCls(m.return_pct);
+    const stallionLink = '<a href="/stallion-card.html?s=' + encodeURIComponent(m.stallion) + '">' + escapeHtml(m.stallion) + '</a>';
+    return '<div class="pair-row">'
+      + '<div class="rank">' + (i+1) + '.</div>'
+      + '<div class="horse-block">'
+      +   '<div class="horse">' + escapeHtml(m.horse_name || '(unnamed)') + ' <span style="font-weight:400;color:var(--ink-soft);font-size:12px;">— by ' + stallionLink + '</span></div>'
+      +   '<div class="meta">out of ' + escapeHtml(m.dam || '—') + ' · ' + escapeHtml(m.cohort || '') + ' · '
+      +     escapeHtml(shortSale(m.yearling_sale)) + (m.yearling_hip ? ' Hip ' + escapeHtml(String(m.yearling_hip)) : '')
+      +     ' → ' + escapeHtml(shortSale(m.twoyo_sale)) + (m.twoyo_hip ? ' Hip ' + escapeHtml(String(m.twoyo_hip)) : '')
+      +   '</div>'
+      + '</div>'
+      + '<div class="prices">$' + m.yearling_price.toLocaleString() + ' → $' + m.twoyo_price.toLocaleString() + '</div>'
+      + '<div class="ret ' + cls + '">' + fmtPct(m.return_pct) + '</div>'
+      + '</div>';
+  }).join('');
+
+  // Build full stallion list
+  const rows = Object.keys(byStallion).map(function(name) {
+    const blob = byStallion[name];
+    const s = blob.summary || {};
+    return {
+      name: name,
+      matched_pairs:         s.matched_pairs || 0,
+      median_return_pct:     s.median_return_pct,
+      mean_return_pct:       s.mean_return_pct,
+      positive_return_pct:   s.positive_return_pct,
+      median_yearling_price: s.median_yearling_price || 0,
+      median_twoyo_price:    s.median_twoyo_price || 0,
+    };
+  });
+
+  function render() {
+    const minN     = parseInt(document.getElementById('filter-n').value, 10);
+    const minPrice = parseInt(document.getElementById('filter-price').value, 10);
+    const sortBy   = document.getElementById('sort').value;
+
+    const filtered = rows.filter(function(r) {
+      return r.matched_pairs >= minN && r.median_yearling_price >= minPrice;
+    });
+    filtered.sort(function(a, b) {
+      const av = a[sortBy], bv = b[sortBy];
+      if (av == null && bv == null) return 0;
+      if (av == null) return 1;
+      if (bv == null) return -1;
+      return bv - av;
+    });
+
+    document.getElementById('result-count').textContent = filtered.length + ' stallion' + (filtered.length === 1 ? '' : 's');
+
+    const body = document.getElementById('leaderboard-body');
+    if (filtered.length === 0) {
+      body.innerHTML = '<tr><td colspan="8" style="padding:20px;text-align:center;color:var(--ink-soft)">No stallions match these filters.</td></tr>';
+      return;
+    }
+
+    body.innerHTML = filtered.map(function(r, i) {
+      const medCls = pctCls(r.median_return_pct);
+      const meanCls = pctCls(r.mean_return_pct);
+      const posCls = (r.positive_return_pct || 0) >= 50 ? 'up' : 'down';
+      const url = '/stallion-card.html?s=' + encodeURIComponent(r.name);
+      return '<tr class="body-row" data-url="' + url + '">'
+        + '<td class="num-col">' + (i+1) + '</td>'
+        + '<td class="stallion"><a href="' + url + '">' + escapeHtml(r.name) + '</a></td>'
+        + '<td class="num-col">' + r.matched_pairs + '</td>'
+        + '<td class="num-col ret ' + medCls + '">' + fmtPct(r.median_return_pct) + '</td>'
+        + '<td class="num-col ret ' + meanCls + '">' + fmtPct(r.mean_return_pct) + '</td>'
+        + '<td class="num-col pct ' + posCls + '">' + (r.positive_return_pct != null ? r.positive_return_pct.toFixed(0) + '%' : '—') + '</td>'
+        + '<td class="num-col">' + fmtMoney(r.median_yearling_price) + '</td>'
+        + '<td class="num-col">' + fmtMoney(r.median_twoyo_price) + '</td>'
+        + '</tr>';
+    }).join('');
+
+    // Make rows clickable
+    Array.prototype.forEach.call(body.querySelectorAll('tr.body-row'), function(tr) {
+      tr.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') return;   // let direct link clicks pass through
+        location.href = tr.getAttribute('data-url');
+      });
+    });
+  }
+
+  document.getElementById('filter-n').addEventListener('change', render);
+  document.getElementById('filter-price').addEventListener('change', render);
+  document.getElementById('sort').addEventListener('change', render);
+  render();
+})();
+</script>
+</body>
+</html>

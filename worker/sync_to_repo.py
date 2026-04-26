@@ -87,7 +87,13 @@ def main() -> int:
         ("similar-stallions.json",          "public/data/similar-stallions.json",   False),
         ("score-history.json",              "public/data/score-history.json",       False),
         ("hip-pinhooks.json",               "public/data/hip-pinhooks.json",        False),
+        ("consignor-pinhooks.json",         "public/data/consignor-pinhooks.json",  False),
+        ("catalog-scoring-index.json",      "public/data/catalog-scoring-index.json", False),
     ]
+    # Per-sale catalog scoring files (one per sale, lazily fetched by the
+    # catalogs page). Mirror them into public/data/catalogs/.
+    for p in sorted(output_dir.glob("catalog-scoring-sale-*.json")):
+        data_files.append((p.name, f"public/data/catalogs/{p.name}", False))
     # Also push every recent-sale-results-{year}.json file present in the
     # output dir — these are produced by fetch_sales.py per-year split.
     for p in sorted(output_dir.glob("recent-sale-results-*.json")):

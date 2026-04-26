@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Consignor Pinhook Analytics</title>
+<meta property="og:title" content="SireValue — Consignor Pinhook Analytics"/>
+<meta property="og:description" content="Which consignors actually deliver pinhook profits? Yearling-side and 2YO-side leaderboards across 2,400+ matched hips, 2022–2026."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; margin: 0 0 10px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 70ch; }
+
+/* Tabs */
+.tabs {
+  display: flex; gap: 4px; margin: 0 0 14px; border-bottom: 2px solid var(--rule);
+}
+.tab {
+  background: none; border: none; padding: 10px 18px;
+  font-family: inherit; font-size: 14px; font-weight: 600; color: var(--ink-soft);
+  cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
+}
+.tab.active { color: var(--ink); border-bottom-color: var(--gold); }
+.tab:hover:not(.active) { color: var(--ink); }
+.tab .pill {
+  display: inline-block; background: var(--rule); color: var(--ink); margin-left: 6px;
+  font-size: 11px; padding: 1px 7px; border-radius: 10px; font-weight: 700;
+}
+
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 24px 0 10px; font-weight: 600;
+}
+
+.controls {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 14px;
+  display: flex; gap: 18px; flex-wrap: wrap; align-items: center;
+}
+.controls label { font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.controls select {
+  font-size: 13px; padding: 5px 8px; border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--cream); color: var(--ink); margin-left: 6px; font-family: inherit;
+}
+.controls .result-count { margin-left: auto; font-size: 12px; color: var(--ink-soft); }
+
+.leaderboard {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden;
+}
+.leaderboard table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.leaderboard th {
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  background: #faf5e6; white-space: nowrap;
+}
+.leaderboard th.num-col { text-align: right; }
+.leaderboard td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.leaderboard td.num-col { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.leaderboard tr:last-child td { border-bottom: none; }
+.leaderboard tr.body-row { cursor: pointer; }
+.leaderboard tr.body-row:hover { background: #faf5e6; }
+.leaderboard .consignor { font-weight: 600; }
+.leaderboard .ret { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.leaderboard .ret.up   { color: var(--good); }
+.leaderboard .ret.down { color: var(--weak); }
+.leaderboard .pct.up   { color: var(--good); font-weight: 600; }
+.leaderboard .pct.down { color: var(--weak); font-weight: 600; }
+
+/* Detail panel */
+.detail {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 20px 22px; margin: 16px 0 0;
+  display: none;
+}
+.detail.open { display: block; }
+.detail-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.detail h3 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; margin: 0; font-weight: 700;
+}
+.detail .close-btn {
+  background: none; border: 1px solid var(--rule); color: var(--ink-soft);
+  font-family: inherit; font-size: 12px; padding: 4px 10px; border-radius: 4px; cursor: pointer;
+}
+.detail .close-btn:hover { background: var(--cream); color: var(--ink); }
+
+.summary-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); margin: 12px 0;
+}
+.summary-grid .stat { text-align: center; }
+.summary-grid .stat b {
+  display: block; font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 20px; font-weight: 700; line-height: 1.2;
+}
+.summary-grid .stat b.up   { color: var(--good); }
+.summary-grid .stat b.down { color: var(--weak); }
+.summary-grid .stat .lbl { font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+
+.partners { font-size: 13px; color: var(--ink-soft); margin: 6px 0 12px; }
+.partners b { color: var(--ink); }
+.partners .tag {
+  display: inline-block; background: var(--cream); border: 1px solid var(--rule);
+  border-radius: 12px; padding: 2px 8px; margin: 2px 4px 2px 0;
+  font-size: 12px; color: var(--ink);
+}
+
+.match-row {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 14px;
+  padding: 8px 0; border-bottom: 1px dashed var(--rule); font-size: 13px;
+  align-items: center;
+}
+.match-row:last-child { border-bottom: none; }
+.match-row .horse a { color: var(--ink); text-decoration: none; font-weight: 600; }
+.match-row .horse a:hover { text-decoration: underline; }
+.match-row .meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.match-row .prices { color: var(--ink-soft); font-size: 12px; white-space: nowrap; }
+.match-row .ret {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 14px; white-space: nowrap;
+}
+.match-row .ret.up   { color: var(--good); }
+.match-row .ret.down { color: var(--weak); }
+
+.method-note {
+  background: var(--card); border-left: 3px solid var(--gold);
+  padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+.method-note b { color: var(--ink); }
+
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+@media (max-width: 640px) {
+  .hero h1 { font-size: 22px; }
+  .leaderboard td, .leaderboard th { padding: 8px 8px; font-size: 12px; }
+  .match-row { grid-template-columns: 1fr auto; gap: 8px; }
+  .match-row .prices { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Consignor Pinhook Analytics</div>
+  </div>
+
+  <div class="hero">
+    <h1>Who actually pinhooks well?</h1>
+    <p>Two leaderboards from the same matched-pair dataset. The <b>yearling-side</b> view answers "whose yearlings tend to pinhook profitably?" — useful for buyers screening the catalog. The <b>2YO-side</b> view answers "which 2YO consignors reliably add value?" — useful for picking who to consign with or watching who's good at the resale.</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="yearling">Yearling-side <span class="pill" id="pill-yearling">—</span></button>
+    <button class="tab" data-tab="twoyo">2YO-side <span class="pill" id="pill-twoyo">—</span></button>
+  </div>
+
+  <div class="controls">
+    <div>
+      <label>Min sample
+        <select id="filter-n">
+          <option value="3">3 pairs</option>
+          <option value="5">5 pairs</option>
+          <option value="10" selected>10 pairs</option>
+          <option value="20">20 pairs</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label>Sort by
+        <select id="sort">
+          <option value="median_return_pct" selected>Median return</option>
+          <option value="mean_return_pct">Mean return</option>
+          <option value="positive_return_pct">Profitable %</option>
+          <option value="matched_pairs">Sample size</option>
+          <option value="median_yearling_price">Median yrl price</option>
+          <option value="median_twoyo_price">Median 2YO price</option>
+        </select>
+      </label>
+    </div>
+    <div class="result-count" id="result-count">—</div>
+  </div>
+
+  <div class="leaderboard">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th id="th-consignor">Consignor</th>
+          <th class="num-col">Pairs</th>
+          <th class="num-col">Median return</th>
+          <th class="num-col">Mean</th>
+          <th class="num-col">Profitable</th>
+          <th class="num-col">Median yrl</th>
+          <th class="num-col">Median 2YO</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body">
+        <tr><td colspan="8" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="detail" id="detail">
+    <div class="detail-head">
+      <h3 id="detail-name"></h3>
+      <button class="close-btn" id="detail-close">close</button>
+    </div>
+    <div class="summary-grid" id="detail-summary"></div>
+    <div class="partners" id="detail-partners"></div>
+    <div class="section-title" style="margin:14px 0 8px;">Top matched pairs (by % return)</div>
+    <div id="detail-matches"></div>
+  </div>
+
+  <div class="method-note">
+    <b>How this works.</b> Every realized pinhook pair (same horse, yearling sale → 2YO sale) is bucketed under both the yearling consignor and the 2YO consignor. Consignors with fewer than 3 pairs are excluded as too noisy. Names are lightly normalized (", Agent", ", for X" suffixes stripped) so the same firm doesn't appear under multiple variants. Sample sizes vary widely; default filter is 10+ pairs.
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 sale results · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/stallion-card.html">browse stallions</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function fmtPct(p) {
+    if (p == null) return '—';
+    return (p > 0 ? '+' : '') + Number(p).toFixed(1) + '%';
+  }
+  function pctCls(p) {
+    if (p == null) return '';
+    if (p > 0.5)  return 'up';
+    if (p < -0.5) return 'down';
+    return '';
+  }
+  function fmtMoney(n) {
+    if (n == null) return '—';
+    return '$' + Number(n).toLocaleString();
+  }
+  function shortSale(name) {
+    return (name || '').replace(/\s*\b20\d{2}\b\s*$/, '').trim();
+  }
+
+  let data;
+  try {
+    const resp = await fetch('/data/consignor-pinhooks.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('leaderboard-body').innerHTML =
+      '<tr><td colspan="8" style="padding:20px;text-align:center;color:var(--weak)">Failed to load consignor data: ' + escapeHtml(e.message) + '</td></tr>';
+    return;
+  }
+
+  const sources = {
+    yearling: data.yearling_consignors || {},
+    twoyo:    data.twoyo_consignors    || {},
+  };
+  let activeTab = 'yearling';
+
+  document.getElementById('pill-yearling').textContent = Object.keys(sources.yearling).length;
+  document.getElementById('pill-twoyo').textContent    = Object.keys(sources.twoyo).length;
+
+  function build() {
+    const blob = sources[activeTab];
+    return Object.keys(blob).map(function(name) {
+      const s = blob[name].summary || {};
+      return {
+        name: name,
+        matches: blob[name].matches || [],
+        matched_pairs:         s.matched_pairs || 0,
+        median_return_pct:     s.median_return_pct,
+        mean_return_pct:       s.mean_return_pct,
+        positive_return_pct:   s.positive_return_pct,
+        median_yearling_price: s.median_yearling_price || 0,
+        median_twoyo_price:    s.median_twoyo_price    || 0,
+        top_partners:          s.top_partners || [],
+      };
+    });
+  }
+
+  function render() {
+    const rows = build();
+    const minN     = parseInt(document.getElementById('filter-n').value, 10);
+    const sortBy   = document.getElementById('sort').value;
+
+    const filtered = rows.filter(function(r) { return r.matched_pairs >= minN; });
+    filtered.sort(function(a, b) {
+      const av = a[sortBy], bv = b[sortBy];
+      if (av == null && bv == null) return 0;
+      if (av == null) return 1;
+      if (bv == null) return -1;
+      return bv - av;
+    });
+
+    document.getElementById('result-count').textContent =
+      filtered.length + ' consignor' + (filtered.length === 1 ? '' : 's');
+    document.getElementById('th-consignor').textContent =
+      activeTab === 'yearling' ? 'Yearling consignor' : '2YO consignor';
+
+    const body = document.getElementById('leaderboard-body');
+    if (filtered.length === 0) {
+      body.innerHTML = '<tr><td colspan="8" style="padding:20px;text-align:center;color:var(--ink-soft)">No consignors match these filters.</td></tr>';
+      return;
+    }
+
+    body.innerHTML = filtered.map(function(r, i) {
+      const medCls = pctCls(r.median_return_pct);
+      const meanCls = pctCls(r.mean_return_pct);
+      const posCls = (r.positive_return_pct || 0) >= 50 ? 'up' : 'down';
+      return '<tr class="body-row" data-name="' + escapeHtml(r.name) + '">'
+        + '<td class="num-col">' + (i+1) + '</td>'
+        + '<td class="consignor">' + escapeHtml(r.name) + '</td>'
+        + '<td class="num-col">' + r.matched_pairs + '</td>'
+        + '<td class="num-col ret ' + medCls + '">' + fmtPct(r.median_return_pct) + '</td>'
+        + '<td class="num-col ret ' + meanCls + '">' + fmtPct(r.mean_return_pct) + '</td>'
+        + '<td class="num-col pct ' + posCls + '">' + (r.positive_return_pct != null ? r.positive_return_pct.toFixed(0) + '%' : '—') + '</td>'
+        + '<td class="num-col">' + fmtMoney(r.median_yearling_price) + '</td>'
+        + '<td class="num-col">' + fmtMoney(r.median_twoyo_price) + '</td>'
+        + '</tr>';
+    }).join('');
+
+    Array.prototype.forEach.call(body.querySelectorAll('tr.body-row'), function(tr) {
+      tr.addEventListener('click', function() {
+        showDetail(tr.getAttribute('data-name'));
+      });
+    });
+  }
+
+  function showDetail(name) {
+    const blob = sources[activeTab][name];
+    if (!blob) return;
+    const s = blob.summary || {};
+
+    document.getElementById('detail-name').textContent = name;
+
+    const medCls = pctCls(s.median_return_pct);
+    const meanCls = pctCls(s.mean_return_pct);
+    const posCls = (s.positive_return_pct || 0) >= 50 ? 'up' : 'down';
+    document.getElementById('detail-summary').innerHTML = ''
+      + '<div class="stat"><b>' + (s.matched_pairs || 0) + '</b><div class="lbl">Pairs</div></div>'
+      + '<div class="stat"><b class="' + medCls + '">' + fmtPct(s.median_return_pct) + '</b><div class="lbl">Median return</div></div>'
+      + '<div class="stat"><b class="' + meanCls + '">' + fmtPct(s.mean_return_pct) + '</b><div class="lbl">Mean return</div></div>'
+      + '<div class="stat"><b class="' + posCls + '">' + (s.positive_return_pct || 0).toFixed(0) + '%</b><div class="lbl">Profitable</div></div>'
+      + '<div class="stat"><b>' + fmtMoney(s.median_yearling_price) + '</b><div class="lbl">Median yrl</div></div>'
+      + '<div class="stat"><b>' + fmtMoney(s.median_twoyo_price)    + '</b><div class="lbl">Median 2YO</div></div>';
+
+    const partnerLabel = activeTab === 'yearling' ? 'Most common 2YO buyers/consignors' : 'Most common yearling sources';
+    const partners = s.top_partners || [];
+    let partnersHtml = '';
+    if (partners.length) {
+      partnersHtml = '<b>' + partnerLabel + ':</b> '
+        + partners.map(function(p) { return '<span class="tag">' + escapeHtml(p.name) + ' <span style="color:var(--ink-soft);">×' + p.count + '</span></span>'; }).join('');
+    }
+    document.getElementById('detail-partners').innerHTML = partnersHtml;
+
+    const matches = (blob.matches || []).slice(0, 12);
+    document.getElementById('detail-matches').innerHTML = matches.map(function(m) {
+      const cls = pctCls(m.return_pct);
+      const stallionLink = m.stallion
+        ? ' <span style="color:var(--ink-soft);font-weight:400;">— by <a href="/stallion-card.html?s=' + encodeURIComponent(m.stallion) + '" style="color:var(--ink);">' + escapeHtml(m.stallion) + '</a></span>'
+        : '';
+      return '<div class="match-row">'
+        + '<div>'
+        +   '<div class="horse">' + escapeHtml(m.horse_name || '(unnamed)') + stallionLink + '</div>'
+        +   '<div class="meta">out of ' + escapeHtml(m.dam || '—') + ' · ' + escapeHtml(m.cohort || '') + ' · '
+        +     escapeHtml(shortSale(m.yearling_sale)) + (m.yearling_hip ? ' Hip ' + escapeHtml(String(m.yearling_hip)) : '')
+        +     ' → ' + escapeHtml(shortSale(m.twoyo_sale)) + (m.twoyo_hip ? ' Hip ' + escapeHtml(String(m.twoyo_hip)) : '')
+        +   '</div>'
+        + '</div>'
+        + '<div class="prices">$' + m.yearling_price.toLocaleString() + ' → $' + m.twoyo_price.toLocaleString() + '</div>'
+        + '<div class="ret ' + cls + '">' + fmtPct(m.return_pct) + '</div>'
+        + '</div>';
+    }).join('');
+
+    const detail = document.getElementById('detail');
+    detail.classList.add('open');
+    detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.getElementById('detail-close').addEventListener('click', function() {
+    document.getElementById('detail').classList.remove('open');
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.tab'), function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      activeTab = tab.getAttribute('data-tab');
+      document.getElementById('detail').classList.remove('open');
+      render();
+    });
+  });
+
+  document.getElementById('filter-n').addEventListener('change', render);
+  document.getElementById('sort').addEventListener('change', render);
+
+  render();
+})();
+</script>
+</body>
+</html>
