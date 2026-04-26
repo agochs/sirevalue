@@ -1,0 +1,259 @@
+{
+  "_doc": "Per-farm 2026 roster reference. The 'announcement_urls' list points to each farm's published 2026 roster (TDN/BH/farm site). The 'expected_names' array is initially blank — populate it by hand from the announcement, then run audit_rosters.py to diff vs the live CSV. ZERO FABRICATION applies: only fill 'expected_names' from a verified announcement.",
+  "_workflow": [
+    "1. Open each farm's announcement_urls in a browser",
+    "2. Copy the published 2026 stallion list into 'expected_names' (just stallion names)",
+    "3. Run: python3 audit_rosters.py",
+    "4. Report shows: missing-from-CSV (potential gaps) and extra-in-CSV (potential pensionees)",
+    "5. For genuine missing stallions, append to the matching {farm}-dryrun.csv with verified pedigree from BH register",
+    "6. For genuine extras (pensioned/deceased/moved), the existing entry can stay if you want progeny tracking to continue, or remove if no longer relevant"
+  ],
+  "farms": {
+    "ashford": {
+      "name": "Ashford Stud (Coolmore America)",
+      "csv": "ashford-dryrun.csv",
+      "announcement_urls": [
+        "https://coolmore.com/farms/america/stallions",
+        "https://coolmore.com/assets/docs/Coolmore-America-2026-Fees.pdf",
+        "https://www.thoroughbreddailynews.com/flagship-sire-justify-anchors-coolmore-americas-2026-roster-at-200k/",
+        "https://paulickreport.com/news/bloodstock/triple-crown-winner-justify-leads-ashford-studs-2026-roster-at-200000",
+        "https://www.bloodhorse.com/horse-racing/articles/288129/fees-for-new-ashford-stallions-waiting-on-breeders-cup"
+      ],
+      "known_changes_2026": [
+        "Uncle Mo: euthanized Dec 19, 2024",
+        "American Pharoah: shuttled to Japan for 2026 season (we added with shuttle qualifier)",
+        "Speightstown: euthanized Dec 8, 2023",
+        "Citizen Bull / Fierceness / Journalism / Sierra Leone: NEW 2026, fees TBD pending Breeders' Cup"
+      ],
+      "expected_names": [
+        "Citizen Bull",
+        "Corniche",
+        "Domestic Product",
+        "Echo Town",
+        "Epicenter",
+        "Fierceness",
+        "Golden Pal",
+        "Gunite",
+        "Jack Christopher",
+        "Journalism",
+        "Justify",
+        "Mo Town",
+        "Munnings",
+        "Practical Joke",
+        "Sierra Leone",
+        "Tiz the Law"
+      ]
+    },
+    "darley": {
+      "name": "Darley America (Godolphin)",
+      "csv": "darley-dryrun.csv",
+      "announcement_urls": [
+        "https://www.darleyamerica.com/news/darley-america-announces-fees-2026",
+        "https://www.bloodhorse.com/horse-racing/articles/287987/nyquist-2026-fee-to-come-will-top-darley-roster",
+        "https://www.bloodhorse.com/horse-racing/articles/288484/nyquists-fee-to-remain-at-175-000-for-2026",
+        "https://paulickreport.com/news/bloodstock/veteran-nyquist-leads-darleys-2026-stallion-roster-medaglia-doro-pensioned"
+      ],
+      "known_changes_2026": [
+        "Nyquist: $175,000, top of roster",
+        "Medaglia d'Oro: pensioned for 2026 (correctly excluded)",
+        "Highland Falls: NEW 2026 addition ($10K)",
+        "First Mission: NEW 2026 addition ($10K)"
+      ],
+      "expected_names": [
+        "Nyquist",
+        "Cody's Wish",
+        "Maxfield",
+        "Street Sense",
+        "Essential Quality",
+        "Hard Spun",
+        "Midshipman",
+        "Frosted",
+        "Proxy",
+        "First Mission",
+        "Highland Falls",
+        "Speaker's Corner",
+        "Mystic Guide"
+      ]
+    },
+    "spendthrift": {
+      "name": "Spendthrift Farm",
+      "csv": "spendthrift-dryrun.csv",
+      "announcement_urls": [
+        "https://www.spendthriftfarm.com/news/spendthrift-announces-2026-stallions-fees-again-led-by-6-time-champion-sire-into-mischief/",
+        "https://paulickreport.com/news/bloodstock/spendthrift-farm-announces-2026-stallions-and-fees-led-by-six-time-champion-sire-into-mischief",
+        "https://www.bloodhorse.com/horse-racing/articles/287787/into-mischief-vekoma-lead-2026-spendthrift-stud-roster",
+        "https://www.thoroughbreddailynews.com/into-mischief-to-stand-for-250k-in-2026-vekoma-up-to-100k-big-increases-for-omaha-beach-yaupon/"
+      ],
+      "known_changes_2026": [
+        "Yaupon: fee raised to $60,000 (from $25,000)",
+        "Chancer McPatrick: NEW 2026 freshman (per TDN announcement)",
+        "Goal Oriented: NEW 2026 freshman at $30K (per Spendthrift / BloodHorse / TDN; was missing from one search snippet but confirmed via multiple sources)"
+      ],
+      "expected_names": [
+        "Into Mischief",
+        "Vekoma",
+        "Omaha Beach",
+        "Yaupon",
+        "Forte",
+        "National Treasure",
+        "Dornoch",
+        "Bolt d'Oro",
+        "Jackie's Warrior",
+        "Taiba",
+        "Maximus Mischief",
+        "Kingsbarns",
+        "Arabian Lion",
+        "Authentic",
+        "Cyberknife",
+        "Goldencents",
+        "Mitole",
+        "Greatest Honour",
+        "Jimmy Creed",
+        "Rock Your World",
+        "Thousand Words",
+        "Vino Rosso",
+        "Zandon",
+        "Basin",
+        "By My Standards",
+        "Known Agenda",
+        "Mo Donegal",
+        "Temple City",
+        "Chancer McPatrick",
+        "Goal Oriented"
+      ]
+    },
+    "winstar": {
+      "name": "WinStar Farm",
+      "csv": "winstar-dryrun.csv",
+      "announcement_urls": [
+        "https://www.winstarfarm.com/winstar-farm-announces-2026-stallion-roster-and-fees/",
+        "https://www.bloodhorse.com/horse-racing/articles/287908/constitution-headlines-winstars-2026-stallion-roster",
+        "https://paulickreport.com/news/bloodstock/constitution-life-is-good-anchor-winstar-farms-2026-stallion-roster",
+        "https://www.thoroughbreddailynews.com/at-110k-constitution-tops-winstar-2026-stallion-roster/"
+      ],
+      "known_changes_2026": [
+        "Constitution: top of roster at $110K",
+        "Life Is Good: $60K",
+        "Straight No Chaser: NEW 2026 freshman ($10K)",
+        "Tom's d'Etat: appears DROPPED from 2026 roster (was at $5K in 2025)"
+      ],
+      "expected_names": [
+        "Constitution",
+        "Life Is Good",
+        "Patch Adams",
+        "Cogburn",
+        "Timberlake",
+        "Nashville",
+        "Straight No Chaser",
+        "Heartland",
+        "Independence Hall",
+        "Audible",
+        "Take Charge Indy",
+        "Two Phil's",
+        "Country Grammer",
+        "Promises Fulfilled"
+      ]
+    },
+    "lanesend": {
+      "name": "Lane's End",
+      "csv": "lanesend-dryrun.csv",
+      "announcement_urls": [
+        "https://www.bloodhorse.com/horse-racing/articles/287962/flightline-stays-atop-lanes-end-roster-at-125-000",
+        "https://paulickreport.com/news/bloodstock/flightline-quality-road-lead-lanes-end-stallion-roster-in-2026",
+        "https://www.thoroughbreddailynews.com/flightline-leads-lanes-end-2026-stallion-roster-at-125000/",
+        "https://lanesend.com/stallions.html"
+      ],
+      "known_changes_2026": [
+        "Flightline: $125K, top of roster",
+        "Quality Road: $100K (down from $200K in 2023)",
+        "Raging Torrent: NEW 2026 freshman ($15K) — by Maximus Mischief, won G1 Metropolitan",
+        "Honor Code: sold to Japan in 2023 (correctly excluded)"
+      ],
+      "expected_names": [
+        "Arcangelo",
+        "Candy Ride",
+        "City of Light",
+        "Connect",
+        "Flightline",
+        "Game Winner",
+        "Honor A.P.",
+        "Liam's Map",
+        "More Than Looks",
+        "Quality Road",
+        "Raging Torrent",
+        "Senor Buscador",
+        "The Factor",
+        "Tonalist",
+        "Twirling Candy",
+        "Union Rags",
+        "Up to the Mark"
+      ]
+    },
+    "threechimneys": {
+      "name": "Three Chimneys Farm",
+      "csv": "threechimneys-dryrun.csv",
+      "announcement_urls": [],
+      "known_changes_2026": [],
+      "expected_names": []
+    },
+    "gainesway": {
+      "name": "Gainesway Farm",
+      "csv": "gainesway-dryrun.csv",
+      "announcement_urls": [],
+      "known_changes_2026": [],
+      "expected_names": []
+    },
+    "hillndale": {
+      "name": "Hill 'n' Dale Farms at Xalapa",
+      "csv": "hillndale-dryrun.csv",
+      "announcement_urls": [],
+      "known_changes_2026": [],
+      "expected_names": []
+    },
+    "claiborne": {
+      "name": "Claiborne Farm",
+      "csv": "claiborne-dryrun.csv",
+      "announcement_urls": [],
+      "known_changes_2026": [],
+      "expected_names": []
+    },
+    "taylormade": {
+      "name": "Taylor Made Stallions",
+      "csv": "taylormade-dryrun.csv",
+      "announcement_urls": [
+        "https://www.taylormadestallions.com/taylor-made-stallions-announces-2026-stallion-roster-and-fees/",
+        "https://www.bloodhorse.com/horse-racing/articles/287971/not-this-time-tops-taylor-made-roster-with-250-000-fee",
+        "https://paulickreport.com/news/bloodstock/not-this-time-leads-taylor-made-stallions-2026-roster-at-250000"
+      ],
+      "known_changes_2026": [
+        "Not This Time: top of roster at $250,000",
+        "Knicks Go: fee TBD"
+      ],
+      "expected_names": [
+        "Angel of Empire",
+        "Dr. Schivel",
+        "Early Voting",
+        "Idol",
+        "Instagrand",
+        "Instilled Regard",
+        "Knicks Go",
+        "Not This Time",
+        "Tacitus"
+      ]
+    },
+    "airdrie": {
+      "name": "Airdrie Stud",
+      "csv": "airdrie-dryrun.csv",
+      "announcement_urls": [],
+      "known_changes_2026": [],
+      "expected_names": []
+    },
+    "calumet": {
+      "name": "Calumet Farm",
+      "csv": "calumet-dryrun.csv",
+      "announcement_urls": [],
+      "known_changes_2026": [],
+      "expected_names": []
+    }
+  }
+}
