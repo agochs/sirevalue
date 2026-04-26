@@ -165,6 +165,41 @@ body {
   .pair-row .rank, .pair-row .prices { display: none; }
 }
 
+
+/* ---------- Help tooltips ((?) icons next to terms) ---------- */
+.help-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--rule); color: var(--ink-soft);
+  font-size: 10px; font-weight: 700; font-style: normal;
+  cursor: help; margin-left: 4px; vertical-align: middle;
+  font-family: -apple-system, sans-serif;
+  line-height: 14px; text-decoration: none;
+}
+.help-icon:hover { background: var(--ink); color: var(--cream); }
+/* Collapsible 'How this works' explainer */
+.explainer {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 0; margin-bottom: 16px; overflow: hidden;
+}
+.explainer summary {
+  cursor: pointer; padding: 12px 18px; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); font-weight: 600;
+  list-style: none; user-select: none;
+}
+.explainer summary::-webkit-details-marker { display: none; }
+.explainer summary::after {
+  content: '▼'; float: right; font-size: 10px; transition: transform 0.15s;
+}
+.explainer[open] summary::after { transform: rotate(180deg); }
+.explainer summary:hover { color: var(--ink); background: #faf5e6; }
+.explainer .body {
+  padding: 0 18px 16px; font-size: 13px; color: var(--ink); line-height: 1.6;
+}
+.explainer .body p { margin: 8px 0; }
+.explainer .body a { color: var(--ink); }
+.explainer .body b { color: var(--ink); }
+
 /* ---------- Site nav: Home button + back-to-top ---------- */
 .home-btn {
   display: inline-block; font-size: 12px; color: var(--ink); text-decoration: none;
@@ -212,6 +247,16 @@ body {
     <p>This page ranks stallions by <b>realized</b> hip-level pinhook performance — same individual horse, matched across yearling and 2YO sales by sire, dam, and foal year. No averaging across cohorts: every dollar of yearling cost and every dollar of 2YO sale is from the same horse.</p>
     <p>Indexed across <span id="hdr-yrl-n">—</span> yearling hips and <span id="hdr-two-n">—</span> 2YO hips from major U.S. sales 2022–2026.</p>
   </div>
+
+  <details class="explainer">
+    <summary>How this works · click to expand</summary>
+    <div class="body">
+      <p><b>What this page shows.</b> Every stallion with at least one realized pinhook pair (same horse sold as both yearling and 2YO). Ranked by median return % across all of that stallion's matched pairs. The top panel highlights the 10 single biggest pinhook returns ever recorded across the dataset.</p>
+      <p><b>How "matched pairs" work.</b> We fingerprint each hip by (sire, dam, foal year). When the same fingerprint appears in both a yearling sale and a 2YO sale, we have a realized pinhook — same horse, two transactions ~18 months apart. We use the priciest sale on each side as the canonical transaction.</p>
+      <p><b>Trend column.</b> If a stallion has at least 2 cohorts of foals each with n≥3 pairs, we compare the oldest cohort's median return to the newest cohort's. Differences ≥ 30 points get a <b>↗ rising</b> or <b>↘ falling</b> tag; in between is <b>→ stable</b>.</p>
+      <p>Full math + edge cases: <a href="/methodology.html#realized">methodology → realized pinhook pairs</a>.</p>
+        </div>
+  </details>
 
   <div class="stats">
     <div class="stat"><div class="num" id="stat-stallions">—</div><div class="label">Stallions w/ pairs</div></div>
@@ -289,7 +334,7 @@ body {
   </div>
 
   <div class="footer">
-    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 sale results · <a href="/">home</a> · <a href="/consignors.html">consignors</a> · <a href="/stallion-card.html">browse stallions</a> · <a href="/quality-checks.html">quality checks</a></span>
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 sale results · <a href="/">home</a> · <a href="/methodology.html">methodology</a> · <a href="/consignors.html">consignors</a> · <a href="/stallion-card.html">browse stallions</a> · <a href="/quality-checks.html">quality checks</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>

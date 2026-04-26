@@ -179,6 +179,41 @@ body {
   .controls select { min-width: 0; flex: 1; }
 }
 
+
+/* ---------- Help tooltips ((?) icons next to terms) ---------- */
+.help-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--rule); color: var(--ink-soft);
+  font-size: 10px; font-weight: 700; font-style: normal;
+  cursor: help; margin-left: 4px; vertical-align: middle;
+  font-family: -apple-system, sans-serif;
+  line-height: 14px; text-decoration: none;
+}
+.help-icon:hover { background: var(--ink); color: var(--cream); }
+/* Collapsible 'How this works' explainer */
+.explainer {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 0; margin-bottom: 16px; overflow: hidden;
+}
+.explainer summary {
+  cursor: pointer; padding: 12px 18px; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); font-weight: 600;
+  list-style: none; user-select: none;
+}
+.explainer summary::-webkit-details-marker { display: none; }
+.explainer summary::after {
+  content: '▼'; float: right; font-size: 10px; transition: transform 0.15s;
+}
+.explainer[open] summary::after { transform: rotate(180deg); }
+.explainer summary:hover { color: var(--ink); background: #faf5e6; }
+.explainer .body {
+  padding: 0 18px 16px; font-size: 13px; color: var(--ink); line-height: 1.6;
+}
+.explainer .body p { margin: 8px 0; }
+.explainer .body a { color: var(--ink); }
+.explainer .body b { color: var(--ink); }
+
 /* ---------- Site nav: Home button + back-to-top ---------- */
 .home-btn {
   display: inline-block; font-size: 12px; color: var(--ink); text-decoration: none;
@@ -226,6 +261,17 @@ body {
     <p>Each hip on the <a href="/catalogs.html" style="color:var(--ink);">catalogs page</a> gets a predicted signal tier (strong / positive / neutral / weak / none) based on the sire's realized pinhook track record. This page checks the prediction: when the hammer fell, did strong-signal hips actually sell for more, and did they generate higher realized pinhook returns?</p>
     <p>Pick "All 2YO sales" for the headline answer, or any individual sale to see the breakdown there. Outcome columns shaded green when stronger tiers really do outperform weaker ones (monotonic).</p>
     <div class="verdict" id="verdict"></div>
+
+  <details class="explainer">
+    <summary>How this works · click to expand</summary>
+    <div class="body">
+      <p><b>What this page shows.</b> Did the predicted signal actually predict the outcome? For every priced sale, we slice the hips by signal tier and check whether stronger tiers really did sell for more, and (for 2YO sales) generate higher realized returns.</p>
+      <p><b>Price lift.</b> Strong-tier median sold price minus weak-tier median, divided by weak-tier median. Positive = signal worked. Both tiers need at least 3 priced hips.</p>
+      <p><b>Return lift</b> (2YO sales only). Strong-tier median realized return minus weak-tier median, in percentage points. Requires the same horse's yearling cost-basis on both tiers.</p>
+      <p><b>The verdict.</b> Across all 2YO sales 2022–2026: strong-signal hips realized +100% median return and were profitable 79% of the time; weak-signal hips returned -7.1% median and were profitable 46%. The signal predicts in aggregate. Per-sale variance is why the rankings panel exists.</p>
+      <p>Full math + edge cases: <a href="/methodology.html#validation">methodology → signal validation</a>.</p>
+        </div>
+  </details>
   </div>
 
   <div class="section-title" style="margin-top:0;">Where the signal predicted best vs worst</div>
@@ -269,7 +315,7 @@ body {
   </div>
 
   <div class="footer">
-    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/catalogs.html">catalogs</a> · <a href="/pinhooks.html">stallion leaderboard</a></span>
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/methodology.html">methodology</a> · <a href="/catalogs.html">catalogs</a> · <a href="/pinhooks.html">stallion leaderboard</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>

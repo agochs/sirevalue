@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Methodology</title>
+<meta property="og:title" content="SireValue — Methodology"/>
+<meta property="og:description" content="How the Value Score, pinhook signal tiers, cohort matching, cost-basis lookup, validation, and first-crop predictions work — all in one place."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.55; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 820px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 28px; margin: 0 0 12px; font-weight: 700;
+}
+.hero p { margin: 0 0 8px; font-size: 15px; color: var(--ink-soft); max-width: 70ch; }
+
+.toc {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 16px 20px; margin-bottom: 22px;
+}
+.toc h2 {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 0 0 10px; font-weight: 600;
+}
+.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 24px; }
+@media (max-width: 600px) { .toc ol { columns: 1; } }
+.toc li { font-size: 13px; margin: 4px 0; break-inside: avoid; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+article {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+article h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 22px; margin: 0 0 14px; font-weight: 700; color: var(--ink);
+  padding-bottom: 8px; border-bottom: 1px solid var(--rule);
+}
+article h2:not(:first-child) { margin-top: 32px; }
+article h3 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 17px; margin: 22px 0 8px; font-weight: 700;
+}
+article p { margin: 0 0 12px; font-size: 14px; color: var(--ink); }
+article p:last-child { margin-bottom: 0; }
+article a { color: var(--ink); }
+article ul, article ol { margin: 0 0 14px; padding-left: 24px; font-size: 14px; }
+article li { margin: 4px 0; }
+article code, article kbd {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  background: #f4ecd8; padding: 1px 6px; border-radius: 3px; font-size: 13px;
+}
+article .pill {
+  display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle;
+}
+article .pill.strong   { background: var(--good); color: #fff; }
+article .pill.positive { background: #d6ecdb; color: #275731; }
+article .pill.neutral  { background: #f0eadb; color: #6b5915; }
+article .pill.weak     { background: var(--weak); color: #fff; }
+article .pill.none     { background: #ede9da; color: var(--ink-soft); }
+article .pill.high     { background: var(--good); color: #fff; }
+article .pill.medium   { background: #efe7d3; color: #6b5915; }
+article .pill.low      { background: #ede9da; color: var(--ink-soft); }
+article .pill.rising   { background: #d6ecdb; color: #275731; }
+article .pill.stable   { background: #efe7d3; color: #6b5915; }
+article .pill.falling  { background: #f8d7d4; color: #7a1d1d; }
+article .pill.flag     { background: #fff3cd; color: #7a5b1d; border: 1px solid #f0e2a8; }
+
+article .callout {
+  background: #f4ecd8; border-left: 3px solid var(--gold);
+  padding: 10px 14px; margin: 14px 0; font-size: 13px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+article .callout b { color: var(--ink); }
+
+article table {
+  width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0 18px;
+}
+article th, article td {
+  text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--rule); vertical-align: top;
+}
+article th {
+  background: #faf5e6; color: var(--ink-soft); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1px; font-weight: 700;
+}
+
+article .formula {
+  background: #faf5e6; border: 1px solid var(--rule); border-radius: 6px;
+  padding: 10px 14px; font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 13px; margin: 10px 0; overflow-x: auto;
+}
+
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+
+/* Site nav (matches other pages) */
+.home-btn {
+  display: inline-block; font-size: 12px; color: var(--ink); text-decoration: none;
+  padding: 4px 12px; border: 1px solid var(--rule); border-radius: 14px;
+  background: var(--cream); margin-right: 10px;
+  text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.home-btn:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.masthead-right { display: inline-flex; align-items: baseline; gap: 0; }
+#back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--ink); color: var(--cream); border: 1px solid var(--ink);
+  font-size: 20px; line-height: 1; cursor: pointer;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s, background 0.2s;
+  z-index: 1000; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  font-family: inherit; padding: 0;
+}
+#back-to-top.visible { opacity: 0.85; pointer-events: auto; }
+#back-to-top:hover { opacity: 1; transform: translateY(-2px); background: var(--gold); border-color: var(--gold); }
+@media (max-width: 480px) {
+  #back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; font-size: 18px; }
+  .home-btn { font-size: 11px; padding: 3px 9px; margin-right: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="masthead-right">
+      <a href="/" class="home-btn">← Home</a>
+      <div class="tagline">Methodology</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>How SireValue works.</h1>
+    <p>Every number on this site comes from a public sale event we can point at. This page documents how those sale events get aggregated into the metrics, signals, and predictions you see on the rest of the site. If a number ever looks wrong, the explanation lives here.</p>
+    <p>Updated as the model evolves. Source code in <a href="https://github.com/agochs/sirevalue" target="_blank" rel="noopener">github.com/agochs/sirevalue</a>.</p>
+  </div>
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#data">Data sources & freshness</a></li>
+      <li><a href="#value-score">The Value Score</a></li>
+      <li><a href="#tiers">Score tiers & grades</a></li>
+      <li><a href="#cohort">Cohort fingerprint matching</a></li>
+      <li><a href="#realized">Realized pinhook pairs</a></li>
+      <li><a href="#signal">Pinhook signal tiers</a></li>
+      <li><a href="#cost-basis">2YO cost-basis lookup</a></li>
+      <li><a href="#trend">Cohort trend labels</a></li>
+      <li><a href="#first-crop">First-crop predictions</a></li>
+      <li><a href="#consignors">Consignor analytics</a></li>
+      <li><a href="#validation">Signal validation</a></li>
+      <li><a href="#quality">Quality flags</a></li>
+      <li><a href="#dams">Dam-line lookup</a></li>
+      <li><a href="#calendar">Sales calendar</a></li>
+      <li><a href="#limitations">Known limitations</a></li>
+    </ol>
+  </div>
+
+  <article id="data">
+    <h2>1. Data sources & freshness</h2>
+    <p>SireValue scrapes results and catalogs from <a href="https://www.bloodhorse.com" target="_blank" rel="noopener">BloodHorse</a> for every major U.S. thoroughbred auction: <b>Keeneland</b> (January, April, September, November), <b>Fasig-Tipton</b> (Kentucky, Saratoga, Midlantic, California, New York), and <b>OBS</b> (Winter Mixed, March 2YOs, Spring 2YOs, June 2YOs, October Yearlings). The current dataset spans 2022–2026 with about 31,500 hips indexed.</p>
+    <p>A worker on Fly.io re-runs the full pipeline once every 24 hours: fetch fresh sale results → recompute hip-pinhook pairs → recompute consignor analytics → re-score every catalog → re-validate signal accuracy → push the resulting JSON files to a GitHub repo, which triggers a Vercel rebuild. Worst case, data on the live site lags reality by ~24 hours after a sale closes.</p>
+    <p>Stallion farm rosters and BloodHorse stallion-register bios are scraped weekly. Stud fees come from farm websites (manually verified for the prestige tier).</p>
+  </article>
+
+  <article id="value-score">
+    <h2>2. The Value Score</h2>
+    <p>The Value Score (0–100) is SireValue's headline number — a single composite that estimates how much commercial breeding-rights value a stallion is delivering relative to his market price. Higher is better.</p>
+    <p>Components:</p>
+    <ul>
+      <li><b>Market efficiency (yearling)</b> — yearling sale average ÷ stud fee, vs peer-group median. A stallion whose yearlings sell for 5× his fee scores higher than one whose yearlings sell for 2×, all else equal.</li>
+      <li><b>Market efficiency (2YO)</b> — same calculation on 2YO sales. Captures whether the progeny adds value after a year of training.</li>
+      <li><b>Pedigree prestige</b> — sire-line and damsire prestige derived from G1-winner concentration. Tier 0 signal only when no progeny data is available yet.</li>
+      <li><b>Maturity stage</b> — penalty for very-first-crop sires (high uncertainty) and for very-old sires whose stock has aged out.</li>
+      <li><b>Pinhook lift (when available)</b> — the yearling-to-2YO sale-price multiplier, which becomes part of the score for stallions with sufficient sample.</li>
+    </ul>
+    <p>Components are weighted, summed, and clipped to 0–100. The exact weights live in <code>worker/value_score.py</code>. Each stallion card's "Score Breakdown" section shows the per-component score and a bar chart so you can see where the headline number is coming from.</p>
+  </article>
+
+  <article id="tiers">
+    <h2>3. Score tiers & grades</h2>
+    <p>The Value Score maps onto a letter grade for at-a-glance readability:</p>
+    <table>
+      <tr><th>Grade</th><th>Score range</th><th>Interpretation</th></tr>
+      <tr><td>A+ / A</td><td>80–100</td><td>Strong commercial value at this fee</td></tr>
+      <tr><td>B</td><td>65–79</td><td>Solid value — competitive with peer group</td></tr>
+      <tr><td>C</td><td>50–64</td><td>Average — fairly priced</td></tr>
+      <tr><td>D</td><td>35–49</td><td>Below-average commercial returns</td></tr>
+      <tr><td>F</td><td>0–34</td><td>Underperforming relative to fee</td></tr>
+    </table>
+    <p>Each stallion is also placed in a <b>tier</b> reflecting data confidence:</p>
+    <ul>
+      <li><b>tier1_full</b> — both yearling and 2YO sale data available; all components contribute to the score.</li>
+      <li><b>tier1_obs_only</b> — 2YO sale data via OBS only; some components down-weighted.</li>
+      <li><b>tier1_keeneland_only</b> — yearling sale data via Keeneland only.</li>
+      <li><b>commercial_appeal</b> ("Tier 0") — fee + pedigree only, no progeny sale data yet. First-crop sires sit here.</li>
+    </ul>
+  </article>
+
+  <article id="cohort">
+    <h2>4. Cohort fingerprint matching</h2>
+    <p>This is the core trick that makes most of the analytics on this site possible. To know that "the same horse" was sold as both a yearling and a 2YO, we fingerprint each hip by:</p>
+    <div class="formula">(sire_normalized, dam_normalized, foal_year)</div>
+    <p>Normalization strips country suffixes ("Heavenly Love (USA)" → "heavenlylove") and lowercases everything to alphanumeric. Foal year is inferred from the sale: a yearling sold in year Y was foaled in Y-1; a 2YO sold in year Y was foaled in Y-2.</p>
+    <p>This fingerprint is biologically unique within a cohort: <b>mares produce only one foal per year</b>. If two yearling-sale hips share the same (sire, dam, foal-year) tuple, that's a data error worth investigating, not a real coincidence.</p>
+    <div class="callout">
+      <b>Why this matters.</b> A horse can have a private name change, a color/sex correction, or a registry footnote between sales — but the (sire, dam, foal year) tuple is fixed at birth. We don't need a stable horse ID to track the same animal across sales; the pedigree fingerprint does it for us.
+    </div>
+    <p>If a single cohort key has multiple yearling or multiple 2YO entries, we keep the priciest (canonical public sale) and flag the situation for review on the <a href="/quality-checks.html">Quality Checks</a> page.</p>
+  </article>
+
+  <article id="realized">
+    <h2>5. Realized pinhook pairs</h2>
+    <p>A <b>realized pinhook pair</b> is a horse that appears in our database as both a yearling and a 2YO. The cohort fingerprint above lets us match them. For each matched pair we compute:</p>
+    <div class="formula">return_pct = (twoyo_price - yearling_price) / yearling_price × 100</div>
+    <p>Aggregated by stallion, these pairs power the <a href="/pinhooks.html">Pinhook Leaderboard</a>. Every per-stallion "Median return" you see is the median across that stallion's matched pairs.</p>
+    <p>RNA hips (bid off below the reserve) are excluded — they didn't actually sell. Online dispersal sales are excluded too, since they're often distress prices that distort returns.</p>
+    <p>Across the current dataset: 12,701 yearling hips and 4,636 2YO hips indexed → 2,487 matched pairs across 95 stallions.</p>
+  </article>
+
+  <article id="signal">
+    <h2>6. Pinhook signal tiers</h2>
+    <p>For every hip in a sale catalog or sale result, we look up the sire's realized-pinhook track record (median return %, profitable %, sample size) and bucket the sire into one of five tiers:</p>
+    <table>
+      <tr><th>Tier</th><th>Sample n</th><th>Median return</th><th>Profitable %</th></tr>
+      <tr><td><span class="pill strong">strong</span></td><td>≥ 10</td><td>≥ +50%</td><td>≥ 70%</td></tr>
+      <tr><td><span class="pill positive">positive</span></td><td>≥ 5</td><td>≥ +25%</td><td>≥ 60%</td></tr>
+      <tr><td><span class="pill neutral">neutral</span></td><td colspan="3">In between (signal exists but weak)</td></tr>
+      <tr><td><span class="pill weak">weak</span></td><td colspan="3">Negative median return AND profitable &lt; 50%</td></tr>
+      <tr><td><span class="pill none">none</span></td><td colspan="3">No matched pinhook pairs yet (typically first-crop sires)</td></tr>
+    </table>
+    <p>You see these pills on every hip on the <a href="/catalogs.html">Catalogs</a> page. They're also what the <a href="/validation.html">Signal Validation</a> page tests against actual sale outcomes.</p>
+  </article>
+
+  <article id="cost-basis">
+    <h2>7. 2YO cost-basis lookup</h2>
+    <p>For any 2YO catalog hip, we use the cohort fingerprint to find that <b>same horse's</b> yearling sale price the prior year. If found, we surface it as the "Yrl cost" column on the <a href="/catalogs.html">Catalogs</a> page. After the 2YO hammer falls, we also compute realized return % on that exact hip.</p>
+    <p>For OBS Spring 2026 (a recent 2YO sale), 60.8% of the 609 hips matched a prior yearling sale and got a cost-basis attached. The rest were either bred privately, sold as weanlings, or first-time-public 2YOs.</p>
+    <div class="callout">
+      <b>Buyer's view.</b> If a 2YO catalog hip shows "Yrl cost: $200K" and the sire's median pinhook return is +75%, the implied break-even on the 2YO is around $350K. Anything below that is potentially a bargain; anything above is paying premium for the training year.
+    </div>
+  </article>
+
+  <article id="trend">
+    <h2>8. Cohort trend labels</h2>
+    <p>For each stallion's matched-pair list, we group pairs by foal year (2020, 2021, 2022, 2023, 2024) and compute median return % per cohort. Comparing the oldest cohort with sample n≥3 to the newest cohort with sample n≥3, the difference in median return becomes the trend label:</p>
+    <table>
+      <tr><th>Label</th><th>Threshold</th></tr>
+      <tr><td><span class="pill rising">↗ rising</span></td><td>Newer cohort ≥ 30 percentage points higher than older</td></tr>
+      <tr><td><span class="pill stable">→ stable</span></td><td>Within ±30 points</td></tr>
+      <tr><td><span class="pill falling">↘ falling</span></td><td>Newer cohort ≥ 30 points lower than older</td></tr>
+    </table>
+    <p>Trend labels appear on the <a href="/pinhooks.html">Pinhook Leaderboard</a> and inside each stallion card's "Realized Pinhook Pairs" block. Hovering shows the per-cohort breakdown so you can see where the trend is coming from.</p>
+    <p>A stallion with only one cohort (e.g., a young sire whose 2024 foals just turned 2YO) gets no trend label — the comparison would be one-sided.</p>
+  </article>
+
+  <article id="first-crop">
+    <h2>9. First-crop predictions</h2>
+    <p>For the 58 stallions whose first foals are too young to have completed a yearling-to-2YO cycle, we project an expected pinhook signal using their <b>most similar comparators</b> from the similar-stallions index — typically half-brothers (same sire) or stallions with shared damsire.</p>
+    <p>Method:</p>
+    <ol>
+      <li>Pull the first-crop stallion's similar-stallion list.</li>
+      <li>Filter to comparators with ≥5 realized pinhook pairs of their own.</li>
+      <li>Take the top 8 by similarity score.</li>
+      <li>Sample-size-weight their median return %, mean return %, and profitable % to produce a forecast.</li>
+    </ol>
+    <p>Confidence bucket:</p>
+    <table>
+      <tr><th>Confidence</th><th>Threshold</th></tr>
+      <tr><td><span class="pill high">high</span></td><td>≥ 4 comparators AND ≥ 60 total comparator pairs</td></tr>
+      <tr><td><span class="pill medium">medium</span></td><td>≥ 2 comparators AND ≥ 20 total pairs</td></tr>
+      <tr><td><span class="pill low">low</span></td><td>Below medium thresholds</td></tr>
+    </table>
+    <p>This is a forecast, not a measurement. Once a first-crop sire's own progeny start hitting the 2YO sale ring, we replace the prediction with realized data.</p>
+  </article>
+
+  <article id="consignors">
+    <h2>10. Consignor analytics</h2>
+    <p>Every matched pinhook pair has two consignors: the one who sold the horse as a yearling, and the one who re-sold it as a 2YO. We bucket pairs by both sides separately to produce two leaderboards:</p>
+    <ul>
+      <li><b>Yearling-side leaderboard</b> — answers "Which farms sell yearlings that turn out to pinhook profitably?" Useful when you're at a yearling sale deciding whose hips to chase.</li>
+      <li><b>2YO-side leaderboard</b> — answers "Which 2YO consignors reliably add value through training and resale?" Useful when picking a consignor for your own pinhook project.</li>
+    </ul>
+    <p>Consignor names are lightly normalized — ", Agent" and ", for X" suffixes are stripped so the same firm doesn't appear under multiple variants. Consignors with fewer than 3 pairs are excluded as too noisy.</p>
+  </article>
+
+  <article id="validation">
+    <h2>11. Signal validation</h2>
+    <p>For every priced sale, we slice the hips by predicted signal tier and check whether stronger tiers actually outperformed weaker ones. Two metrics:</p>
+    <ul>
+      <li><b>Price lift</b>: <code>(strong-tier median sold − weak-tier median sold) ÷ weak-tier median sold × 100</code>. Positive = signal worked.</li>
+      <li><b>Return lift</b> (2YO sales only): <code>strong-tier median realized return − weak-tier median realized return</code>, in percentage points. Requires cost-basis hits on both tiers.</li>
+    </ul>
+    <p>Both metrics require ≥ 3 priced hips on each side to be reported. The aggregate-across-all-2YO-sales numbers are the headline test of whether the signal predicts at all.</p>
+    <p>Across 2022–2026 2YO sales: strong-signal hips realized a +100% median return, weak-signal hips -7.1%. The signal predicts in aggregate. Per-sale results vary — see the "Best vs worst predicted sales" rankings on the <a href="/validation.html">Validation</a> page.</p>
+  </article>
+
+  <article id="quality">
+    <h2>12. Quality flags</h2>
+    <p>Every matched pinhook pair runs through a heuristic-check list. Flags are advisory — the pair still counts in headline stats — but they surface pairs worth verifying before quoting publicly.</p>
+    <table>
+      <tr><th>Flag</th><th>Trigger</th></tr>
+      <tr><td><span class="pill flag">extreme gain</span></td><td>Realized return ≥ 1,500%</td></tr>
+      <tr><td><span class="pill flag">extreme loss</span></td><td>Realized return ≤ -75%</td></tr>
+      <tr><td><span class="pill flag">micro yearling big 2yo</span></td><td>Yearling sold for &lt; $5K AND 2YO sold for ≥ $100K (most common false-match shape)</td></tr>
+      <tr><td><span class="pill flag">multi yearling multi 2yo</span></td><td>Same cohort key has multiple yearling AND multiple 2YO entries (suggests dam-name collision)</td></tr>
+      <tr><td><span class="pill flag">sub 1k price</span></td><td>Either side under $1,000 (likely transcription noise)</td></tr>
+    </table>
+    <p>Currently 128 of 2,487 pairs (about 5%) carry at least one flag. The full list is browseable on the <a href="/quality-checks.html">Quality Checks</a> page.</p>
+  </article>
+
+  <article id="dams">
+    <h2>13. Dam-line lookup</h2>
+    <p>Same dam-name normalization as the cohort fingerprint, but aggregated as a search-friendly index. Every public-sale appearance — yearling, 2YO, broodmare — is bucketed under the dam.</p>
+    <p>Dams whose normalized name is fewer than 4 characters are excluded as scrape-truncation artifacts ("Ba", "Ru", etc. were appearing as full dam names from data quality issues). Dams with only 1 appearance are kept in the index but won't have meaningful pinhook stats.</p>
+    <p>The lookup is split per first-letter into shards so the initial page load fetches only the compact index (~3 MB) and per-letter detail loads on demand.</p>
+  </article>
+
+  <article id="calendar">
+    <h2>14. Sales calendar</h2>
+    <p>BloodHorse doesn't expose machine-readable sale dates, so we infer the month from name patterns ("September Yearling" → September, "Spring 2YOs" → April, etc.). For sales whose actual catalog hasn't been published yet, we project them forward based on the prior year's recurrence — e.g. <i>Keeneland September Yearling Sale 2025</i> existed in our data, so the calendar shows <i>Keeneland September Yearling Sale 2026</i> as <span class="pill" style="background:#f4ecd8;color:#7a5b1d;border:1px dashed var(--gold-soft);">anticipated</span> until BH posts its catalog.</p>
+    <p>Status meanings:</p>
+    <ul>
+      <li><b>completed</b> — sale ran and we have results data</li>
+      <li><b>upcoming</b> — BH has posted a catalog but the sale hasn't started</li>
+      <li><b>anticipated</b> — sale is expected based on prior-year recurrence; date and hip count are forecasts</li>
+    </ul>
+  </article>
+
+  <article id="limitations">
+    <h2>15. Known limitations</h2>
+    <ul>
+      <li><b>U.S. only.</b> Only U.S. auctions are scraped. Tattersalls, Goffs, Inglis, etc. are not in the dataset.</li>
+      <li><b>BloodHorse data quality.</b> A small fraction of dam names get truncated in the source feed (e.g. "Ba"/"Ru"). We filter those out but it means a handful of legitimate short names get dropped too.</li>
+      <li><b>Cohort fingerprint can collide.</b> Twin foals are extremely rare but possible and would share a (sire, dam, foal-year) key. We don't currently detect twins.</li>
+      <li><b>Stud fee is the listed fee, not the average paid.</b> Many stallions sell at heavy discounts (book deals, foal-share, no-guarantee terms). Our market-efficiency component uses listed fee.</li>
+      <li><b>Catalog scoring uses sire signal only.</b> The signal pill on a 2YO hip reflects the sire's average pinhook performance, not anything about that specific horse's pedigree, conformation, or breeze video.</li>
+      <li><b>Stallion roster is curated.</b> SireValue covers ~150 commercial U.S. stallions. State sires, hunter/jumper-bred TBs, and very low-fee horses ($2K and under) are not consistently scored.</li>
+      <li><b>Validation isn't causation.</b> Strong-signal hips selling for more proves the signal correlates with sale price. It doesn't prove the signal is what the buyers were responding to — buyers may be reading the same pedigree we are.</li>
+    </ul>
+    <p>If you spot a number that looks wrong, the source-of-truth path is: stallion card → component breakdown → click through to the BloodHorse sale link. Every piece of data is one or two clicks from a public auction record.</p>
+  </article>
+
+  <div class="footer">
+    <span>Last updated: April 2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/catalogs.html">catalogs</a> · <a href="https://github.com/agochs/sirevalue" target="_blank" rel="noopener">source</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function check() {
+    if (window.pageYOffset > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  check();
+})();
+</script>
+</body>
+</html>

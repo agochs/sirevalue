@@ -174,6 +174,41 @@ body {
   .match-row .prices { display: none; }
 }
 
+
+/* ---------- Help tooltips ((?) icons next to terms) ---------- */
+.help-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--rule); color: var(--ink-soft);
+  font-size: 10px; font-weight: 700; font-style: normal;
+  cursor: help; margin-left: 4px; vertical-align: middle;
+  font-family: -apple-system, sans-serif;
+  line-height: 14px; text-decoration: none;
+}
+.help-icon:hover { background: var(--ink); color: var(--cream); }
+/* Collapsible 'How this works' explainer */
+.explainer {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 0; margin-bottom: 16px; overflow: hidden;
+}
+.explainer summary {
+  cursor: pointer; padding: 12px 18px; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); font-weight: 600;
+  list-style: none; user-select: none;
+}
+.explainer summary::-webkit-details-marker { display: none; }
+.explainer summary::after {
+  content: '▼'; float: right; font-size: 10px; transition: transform 0.15s;
+}
+.explainer[open] summary::after { transform: rotate(180deg); }
+.explainer summary:hover { color: var(--ink); background: #faf5e6; }
+.explainer .body {
+  padding: 0 18px 16px; font-size: 13px; color: var(--ink); line-height: 1.6;
+}
+.explainer .body p { margin: 8px 0; }
+.explainer .body a { color: var(--ink); }
+.explainer .body b { color: var(--ink); }
+
 /* ---------- Site nav: Home button + back-to-top ---------- */
 .home-btn {
   display: inline-block; font-size: 12px; color: var(--ink); text-decoration: none;
@@ -220,6 +255,17 @@ body {
     <h1>Who actually pinhooks well?</h1>
     <p>Two leaderboards from the same matched-pair dataset. The <b>yearling-side</b> view answers "whose yearlings tend to pinhook profitably?" — useful for buyers screening the catalog. The <b>2YO-side</b> view answers "which 2YO consignors reliably add value?" — useful for picking who to consign with or watching who's good at the resale.</p>
   </div>
+
+  <details class="explainer">
+    <summary>How this works · click to expand</summary>
+    <div class="body">
+      <p><b>What this page shows.</b> Two leaderboards on the same matched-pair dataset, sliced by the consignor on each side of the trade.</p>
+      <p><b>Yearling-side.</b> "Whose yearlings tend to pinhook profitably?" Useful when you're at a yearling sale deciding whose hips to chase — Taylor Made, Lane's End, Gainesway, etc.</p>
+      <p><b>2YO-side.</b> "Which 2YO consignors reliably add value through training and resale?" Useful when picking who to consign with, or when watching who reliably profits at OBS.</p>
+      <p>Names are lightly normalized (", Agent" / ", for X" suffixes stripped) so the same firm doesn't appear under multiple variants. Consignors with fewer than 3 matched pairs are excluded as too noisy.</p>
+      <p>Full math + edge cases: <a href="/methodology.html#consignors">methodology → consignor analytics</a>.</p>
+        </div>
+  </details>
 
   <div class="tabs">
     <button class="tab active" data-tab="yearling">Yearling-side <span class="pill" id="pill-yearling">—</span></button>
@@ -288,7 +334,7 @@ body {
   </div>
 
   <div class="footer">
-    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 sale results · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/stallion-card.html">browse stallions</a></span>
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 sale results · <a href="/">home</a> · <a href="/methodology.html">methodology</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/stallion-card.html">browse stallions</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>

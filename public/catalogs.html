@@ -167,6 +167,41 @@ body {
   .sale-meta { display: none; }
 }
 
+
+/* ---------- Help tooltips ((?) icons next to terms) ---------- */
+.help-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--rule); color: var(--ink-soft);
+  font-size: 10px; font-weight: 700; font-style: normal;
+  cursor: help; margin-left: 4px; vertical-align: middle;
+  font-family: -apple-system, sans-serif;
+  line-height: 14px; text-decoration: none;
+}
+.help-icon:hover { background: var(--ink); color: var(--cream); }
+/* Collapsible 'How this works' explainer */
+.explainer {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 0; margin-bottom: 16px; overflow: hidden;
+}
+.explainer summary {
+  cursor: pointer; padding: 12px 18px; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); font-weight: 600;
+  list-style: none; user-select: none;
+}
+.explainer summary::-webkit-details-marker { display: none; }
+.explainer summary::after {
+  content: '▼'; float: right; font-size: 10px; transition: transform 0.15s;
+}
+.explainer[open] summary::after { transform: rotate(180deg); }
+.explainer summary:hover { color: var(--ink); background: #faf5e6; }
+.explainer .body {
+  padding: 0 18px 16px; font-size: 13px; color: var(--ink); line-height: 1.6;
+}
+.explainer .body p { margin: 8px 0; }
+.explainer .body a { color: var(--ink); }
+.explainer .body b { color: var(--ink); }
+
 /* ---------- Site nav: Home button + back-to-top ---------- */
 .home-btn {
   display: inline-block; font-size: 12px; color: var(--ink); text-decoration: none;
@@ -214,6 +249,16 @@ body {
     <p>Every hip in every recent and upcoming sale, joined against the sire's <a href="/pinhooks.html" style="color:var(--ink);">realized pinhook track record</a>. The signal pill tells you whether this stallion's progeny historically pinhook profitably — using only matched same-horse yearling-to-2YO pairs from 2022–2026.</p>
     <p>For 2YO sales, every hip with a known yearling-sale history shows the <b>Yrl cost</b> (the same horse's prior yearling sale price). After the 2YO hammer falls, you also see the realized return — handy for spotting actual pinhook outcomes hip-by-hip.</p>
   </div>
+
+  <details class="explainer">
+    <summary>How this works · click to expand</summary>
+    <div class="body">
+      <p><b>What this page shows.</b> Every hip in every recent and upcoming sale, scored by the sire's realized pinhook track record. Use the signal-tier filter to find high-conviction hips before bidding.</p>
+      <p><b>Signal tiers.</b> <b>Strong</b> means the sire has ≥10 matched pinhook pairs with ≥+50% median return AND ≥70% profitable rate. <b>Positive</b> is a softer version (n≥5, +25% median, ≥60% profitable). <b>Neutral</b>, <b>weak</b>, and <b>none</b> fill out the spectrum down to "no track record yet."</p>
+      <p><b>2YO cost-basis.</b> When viewing a 2YO sale, the "Yrl cost" column shows the same horse's yearling sale price (matched via cohort fingerprint). After the 2YO hammer falls, we also compute realized return — that exact horse's profit/loss.</p>
+      <p>Full math + edge cases: <a href="/methodology.html#signal">methodology → pinhook signal tiers</a>.</p>
+        </div>
+  </details>
 
   <div class="sale-picker">
     <label>Sale
@@ -269,7 +314,7 @@ body {
   </div>
 
   <div class="footer">
-    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/consignors.html">consignors</a></span>
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/methodology.html">methodology</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/consignors.html">consignors</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>

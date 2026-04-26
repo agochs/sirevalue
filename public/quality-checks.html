@@ -124,6 +124,41 @@ body {
   .flag-table td, .flag-table th { padding: 7px 6px; font-size: 12px; }
 }
 
+
+/* ---------- Help tooltips ((?) icons next to terms) ---------- */
+.help-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--rule); color: var(--ink-soft);
+  font-size: 10px; font-weight: 700; font-style: normal;
+  cursor: help; margin-left: 4px; vertical-align: middle;
+  font-family: -apple-system, sans-serif;
+  line-height: 14px; text-decoration: none;
+}
+.help-icon:hover { background: var(--ink); color: var(--cream); }
+/* Collapsible 'How this works' explainer */
+.explainer {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 0; margin-bottom: 16px; overflow: hidden;
+}
+.explainer summary {
+  cursor: pointer; padding: 12px 18px; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); font-weight: 600;
+  list-style: none; user-select: none;
+}
+.explainer summary::-webkit-details-marker { display: none; }
+.explainer summary::after {
+  content: '▼'; float: right; font-size: 10px; transition: transform 0.15s;
+}
+.explainer[open] summary::after { transform: rotate(180deg); }
+.explainer summary:hover { color: var(--ink); background: #faf5e6; }
+.explainer .body {
+  padding: 0 18px 16px; font-size: 13px; color: var(--ink); line-height: 1.6;
+}
+.explainer .body p { margin: 8px 0; }
+.explainer .body a { color: var(--ink); }
+.explainer .body b { color: var(--ink); }
+
 /* ---------- Site nav: Home button + back-to-top ---------- */
 .home-btn {
   display: inline-block; font-size: 12px; color: var(--ink); text-decoration: none;
@@ -172,6 +207,16 @@ body {
     <p>Every flagged pair is still counted in the headline pinhook stats — these are flags, not exclusions. If you spot a confirmed bad match, drop it from the source data and rerun.</p>
   </div>
 
+  <details class="explainer">
+    <summary>How this works · click to expand</summary>
+    <div class="body">
+      <p><b>What this page shows.</b> The 5% of matched pinhook pairs that tripped at least one heuristic check — extreme returns, micro-priced yearlings, suspected dam-name collisions. These pairs are flagged for verification but still counted in headline stats; they're not exclusions.</p>
+      <p><b>Why flags exist.</b> Cohort fingerprinting is biologically robust — mares only foal once a year — but upstream data can have dam-name typos, transposed prices, or genuinely extreme outliers. If we want to quote eye-popping numbers like "+11,150% return on a Not This Time pinhook," we want to be sure the dam wasn't typoed somewhere first.</p>
+      <p>Filter by flag type to investigate specific patterns. Search by sire/dam/horse to spot-check a particular pair. Click into any sire to see the realized-pinhook block on the stallion card with the same flags surfaced inline.</p>
+      <p>Full flag definitions: <a href="/methodology.html#quality">methodology → quality flags</a>.</p>
+        </div>
+  </details>
+
   <div class="stat-row" id="stat-row"></div>
 
   <div class="controls">
@@ -216,7 +261,7 @@ body {
   </div>
 
   <div class="footer">
-    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/catalogs.html">catalogs</a></span>
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/methodology.html">methodology</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/catalogs.html">catalogs</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>
