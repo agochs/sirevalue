@@ -205,6 +205,7 @@ def rebuild() -> None:
         "compute_hip_pinhooks.py",
         "compute_consignor_pinhooks.py",
         "score_catalog.py",
+        "compute_validation.py",
     ):
         script_path = HERE / script
         if not script_path.exists():

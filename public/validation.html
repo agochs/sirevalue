@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Signal Validation</title>
+<meta property="og:title" content="SireValue — Signal Validation"/>
+<meta property="og:description" content="Did the predicted pinhook signal actually predict the outcome? Strong vs weak tier results across thousands of priced 2YO hips, 2022–2026."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; margin: 0 0 10px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 72ch; }
+.hero .verdict {
+  margin-top: 14px; padding: 12px 16px; border-radius: 6px;
+  background: #f3eddf; border-left: 4px solid var(--gold);
+  font-size: 14px; color: var(--ink);
+}
+.hero .verdict b { color: var(--good); font-weight: 700; }
+
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 24px 0 12px; font-weight: 600;
+}
+
+.controls {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 14px;
+  display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+}
+.controls label { font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.controls select {
+  font-size: 14px; padding: 6px 10px; border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--cream); color: var(--ink); margin-left: 6px; font-family: inherit;
+  min-width: 280px;
+}
+.controls .meta { margin-left: auto; font-size: 12px; color: var(--ink-soft); }
+
+.validation-table {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden; margin-bottom: 14px;
+}
+.validation-table table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.validation-table th {
+  text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--rule);
+  color: var(--ink-soft); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  background: #faf5e6; white-space: nowrap;
+}
+.validation-table th.num-col { text-align: right; }
+.validation-table th.group {
+  background: #efe7d3; color: var(--ink); font-weight: 700;
+  border-left: 1px solid var(--rule);
+}
+.validation-table td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.validation-table td.num-col { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.validation-table tr:last-child td { border-bottom: none; }
+
+.signal-pill {
+  display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+}
+.signal-pill.strong   { background: var(--good); color: #fff; }
+.signal-pill.positive { background: #d6ecdb; color: #275731; }
+.signal-pill.neutral  { background: #f0eadb; color: #6b5915; }
+.signal-pill.weak     { background: var(--weak); color: #fff; }
+.signal-pill.none     { background: #ede9da; color: var(--ink-soft); }
+
+.ret { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.ret.up   { color: var(--good); }
+.ret.down { color: var(--weak); }
+
+.empty {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 28px; text-align: center; color: var(--ink-soft); font-size: 14px;
+}
+
+.bar-cell { display: inline-block; width: 80px; height: 8px; border-radius: 4px;
+  background: #e8e3d2; overflow: hidden; vertical-align: middle; margin-right: 6px; }
+.bar-cell > span { display: block; height: 100%; }
+.bar-cell .up   { background: var(--good); }
+.bar-cell .down { background: var(--weak); }
+
+.method-note {
+  background: var(--card); border-left: 3px solid var(--gold);
+  padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+.method-note b { color: var(--ink); }
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+@media (max-width: 720px) {
+  .hero h1 { font-size: 22px; }
+  .validation-table td, .validation-table th { padding: 7px 6px; font-size: 12px; }
+  .controls select { min-width: 0; flex: 1; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Signal Validation</div>
+  </div>
+
+  <div class="hero">
+    <h1>Did the signal actually predict?</h1>
+    <p>Each hip on the <a href="/catalogs.html" style="color:var(--ink);">catalogs page</a> gets a predicted signal tier (strong / positive / neutral / weak / none) based on the sire's realized pinhook track record. This page checks the prediction: when the hammer fell, did strong-signal hips actually sell for more, and did they generate higher realized pinhook returns?</p>
+    <p>Pick "All 2YO sales" for the headline answer, or any individual sale to see the breakdown there. Outcome columns shaded green when stronger tiers really do outperform weaker ones (monotonic).</p>
+    <div class="verdict" id="verdict"></div>
+  </div>
+
+  <div class="controls">
+    <div>
+      <label>Sale view
+        <select id="sale-select">
+          <option value="__all_2yo__" selected>All 2YO sales (aggregate)</option>
+          <option value="__all_yearling__">All yearling sales (aggregate)</option>
+        </select>
+      </label>
+    </div>
+    <div class="meta" id="sale-meta"></div>
+  </div>
+
+  <div id="render-area">
+    <div class="empty">Loading…</div>
+  </div>
+
+  <div class="method-note">
+    <b>How to read this.</b> Each row is one signal tier. <b>Median sold</b> and <b>Mean sold</b> are the actual hammer prices for hips of that tier. <b>Realized return</b> only fills in when the same horse's yearling sale price is on file (matched by sire+dam+foal year) — that's a true pinhook outcome. A monotonic decrease from strong → weak (green up-arrow) indicates the signal is doing real work; a flat or inverted column means that metric isn't sensitive to pinhook history at this slice.
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/catalogs.html">catalogs</a> · <a href="/pinhooks.html">stallion leaderboard</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function fmtMoney(n) {
+    if (n == null) return '—';
+    return '$' + Number(n).toLocaleString();
+  }
+  function fmtPct(p) {
+    if (p == null) return '—';
+    return (p > 0 ? '+' : '') + Number(p).toFixed(1) + '%';
+  }
+  function pctCls(p) {
+    if (p == null) return '';
+    if (p > 0.5)  return 'up';
+    if (p < -0.5) return 'down';
+    return '';
+  }
+
+  let data;
+  try {
+    const resp = await fetch('/data/validation.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('render-area').innerHTML =
+      '<div class="empty" style="color:var(--weak);">Failed to load validation data: ' + escapeHtml(e.message) + '</div>';
+    return;
+  }
+
+  // Populate sale dropdown — keep aggregates first, then individual sales newest-first
+  const sel = document.getElementById('sale-select');
+  const saleNames = Object.keys(data.by_sale || {}).sort(function(a, b) { return b.localeCompare(a); });
+  saleNames.forEach(function(name) {
+    const blob = data.by_sale[name];
+    const opt = document.createElement('option');
+    opt.value = name;
+    const tag = blob.kind === '2yo' ? '· 2YO' : (blob.kind === 'yearling' ? '· Yrl' : '');
+    opt.textContent = name + ' (' + blob.priced_hips + ' priced) ' + tag;
+    sel.appendChild(opt);
+  });
+
+  const SIGNALS = ['strong', 'positive', 'neutral', 'weak', 'none'];
+
+  function checkMonotonic(values) {
+    // Returns 'down' if values strictly decrease from strong to weak (signal works for high-is-better metrics),
+    // 'flat' if all roughly equal, 'mixed' otherwise. Skip nulls.
+    const cleaned = values.filter(function(v) { return v != null; });
+    if (cleaned.length < 2) return 'unknown';
+    let ok = true;
+    for (let i = 1; i < cleaned.length; i++) {
+      if (cleaned[i] > cleaned[i-1]) { ok = false; break; }
+    }
+    return ok ? 'down' : 'mixed';
+  }
+
+  function rowsFor(blob) {
+    return SIGNALS.map(function(sig) { return [sig, blob.by_signal[sig]]; });
+  }
+
+  function render() {
+    const choice = sel.value;
+    let blob, label;
+    if (choice === '__all_2yo__') {
+      blob  = data.aggregate.all_2yo_sales;
+      label = 'All 2YO sales (' + (blob.hip_count || 0).toLocaleString() + ' hips pooled across ' + Object.keys(data.by_sale).filter(function(n) { return data.by_sale[n].kind === '2yo'; }).length + ' sales)';
+    } else if (choice === '__all_yearling__') {
+      blob  = data.aggregate.all_yearling_sales;
+      label = 'All yearling sales (' + (blob.hip_count || 0).toLocaleString() + ' hips pooled)';
+    } else {
+      blob  = data.by_sale[choice];
+      label = choice;
+    }
+    if (!blob) {
+      document.getElementById('render-area').innerHTML =
+        '<div class="empty">No data for this selection.</div>';
+      return;
+    }
+
+    document.getElementById('sale-meta').textContent = label;
+
+    // Monotonic checks for the headline columns
+    const rows = rowsFor(blob);
+    const medSoldVals = rows.map(function(r) { return r[1].price && r[1].price.median; });
+    const realMedVals = rows.map(function(r) { return r[1].realized && r[1].realized.median_pct; });
+    const realPosVals = rows.map(function(r) { return r[1].realized && r[1].realized.positive_pct; });
+    const monoMedSold = checkMonotonic(medSoldVals);
+    const monoRealMed = checkMonotonic(realMedVals);
+    const monoRealPos = checkMonotonic(realPosVals);
+
+    function bar(value, max, cls) {
+      if (value == null || !max) return '';
+      const w = Math.min(100, 100 * Math.abs(value) / max);
+      return '<span class="bar-cell"><span class="' + cls + '" style="width:' + w + '%;"></span></span>';
+    }
+    const maxMedSold = Math.max.apply(null, medSoldVals.filter(function(v) { return v; }).concat(0));
+    const maxRealMed = Math.max.apply(null, realMedVals.filter(function(v) { return v != null; }).map(Math.abs).concat(0));
+
+    let html = '<div class="validation-table"><table>'
+      + '<thead><tr>'
+      +   '<th>Predicted signal</th>'
+      +   '<th class="num-col">Hips</th>'
+      +   '<th class="num-col">Sold</th>'
+      +   '<th class="num-col">RNA</th>'
+      +   '<th class="num-col group">Median sold' + (monoMedSold === 'down' ? ' ✓' : '') + '</th>'
+      +   '<th class="num-col group">Mean sold</th>'
+      +   '<th class="num-col group">Realized n</th>'
+      +   '<th class="num-col group">Median return' + (monoRealMed === 'down' ? ' ✓' : '') + '</th>'
+      +   '<th class="num-col group">Mean return</th>'
+      +   '<th class="num-col group">Profitable' + (monoRealPos === 'down' ? ' ✓' : '') + '</th>'
+      + '</tr></thead><tbody>';
+
+    rows.forEach(function(rec) {
+      const sig = rec[0], b = rec[1];
+      const p = b.price || {}, r = b.realized || {};
+      html += '<tr>'
+        + '<td><span class="signal-pill ' + sig + '">' + sig + '</span></td>'
+        + '<td class="num-col">' + (b.total_hips || 0).toLocaleString() + '</td>'
+        + '<td class="num-col">' + (b.sold_n || 0).toLocaleString() + '</td>'
+        + '<td class="num-col">' + (b.rna_n || 0).toLocaleString() + '</td>'
+        + '<td class="num-col">' + bar(p.median, maxMedSold, 'up') + (p.median != null ? fmtMoney(p.median) : '—') + '</td>'
+        + '<td class="num-col">' + (p.mean != null ? fmtMoney(p.mean) : '—') + '</td>'
+        + '<td class="num-col">' + (r.n || 0).toLocaleString() + '</td>'
+        + '<td class="num-col ret ' + pctCls(r.median_pct) + '">' + bar(r.median_pct, maxRealMed, r.median_pct >= 0 ? 'up' : 'down') + fmtPct(r.median_pct) + '</td>'
+        + '<td class="num-col ret ' + pctCls(r.mean_pct) + '">' + fmtPct(r.mean_pct) + '</td>'
+        + '<td class="num-col">' + (r.positive_pct != null ? r.positive_pct.toFixed(0) + '%' : '—') + '</td>'
+        + '</tr>';
+    });
+    html += '</tbody></table></div>';
+
+    document.getElementById('render-area').innerHTML = html;
+  }
+
+  // Set the verdict using the all-2YO aggregate (the headline answer)
+  (function setVerdict() {
+    const a = data.aggregate.all_2yo_sales.by_signal;
+    const sMed = a.strong  && a.strong.realized   && a.strong.realized.median_pct;
+    const wMed = a.weak    && a.weak.realized     && a.weak.realized.median_pct;
+    const sPos = a.strong  && a.strong.realized   && a.strong.realized.positive_pct;
+    const wPos = a.weak    && a.weak.realized     && a.weak.realized.positive_pct;
+    if (sMed != null && wMed != null) {
+      document.getElementById('verdict').innerHTML =
+        'Across all 2YO sales 2022–2026: strong-signal hips realize a <b>' + fmtPct(sMed)
+        + '</b> median return and are profitable <b>' + (sPos != null ? sPos.toFixed(0) + '%' : '—')
+        + '</b> of the time. Weak-signal hips: <b>' + fmtPct(wMed)
+        + '</b> median return, <b>' + (wPos != null ? wPos.toFixed(0) + '%' : '—') + '</b> profitable. The signal is real.';
+    }
+  })();
+
+  sel.addEventListener('change', render);
+  render();
+})();
+</script>
+</body>
+</html>
