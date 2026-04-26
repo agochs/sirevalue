@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T03:37:25Z",
+  "generated_at": "2026-04-26T13:08:29Z",
   "method": "weighted-comparator-from-similar-stallions-with-pinhook-data",
   "thresholds": {
     "min_pairs_per_comparator": 5,
