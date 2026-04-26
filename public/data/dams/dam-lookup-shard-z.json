@@ -1,0 +1,2503 @@
+{
+  "shard": "z",
+  "by_dam": {
+    "Zelda Can Dance": {
+      "canonical_name": "Zelda Can Dance",
+      "damsire": "Pleasantly Perfect",
+      "total_appearances": 3,
+      "distinct_foals": 2,
+      "sold_count": 2,
+      "top_price": 30000,
+      "total_gross": 47000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Mystic Guide",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10392/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026/",
+          "hip": 520,
+          "price": 30000,
+          "status": "Sold",
+          "consignor": "SGV Thoroughbreds",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2024,
+          "sire": "Mystic Guide",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 3985,
+          "price": 17000,
+          "status": "Sold",
+          "consignor": "Susan Y. Foreman",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2020,
+          "sire": "Practical Joke",
+          "horse_name": "Exotic Dancer F 2020",
+          "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9694/fasig-tipton-midlantic-2yos-in-training-sale-2022/",
+          "hip": 171,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Cary Frommer",
+          "kind": "twoyo"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Mystic Guide",
+          "horse_name": "UNNAMED F 2024",
+          "cohort": "2024 foals",
+          "yearling_price": 17000,
+          "twoyo_price": 30000,
+          "return_pct": 76.5,
+          "yearling_sale": "Keeneland September Yearling Sale 2025",
+          "twoyo_sale": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+          "yearling_hip": 3985,
+          "twoyo_hip": 520,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zamquick": {
+      "canonical_name": "Zamquick",
+      "damsire": "Pomeroy",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 0,
+      "top_price": 0,
+      "total_gross": 0,
+      "progeny": [
+        {
+          "foal_year": 2020,
+          "sire": "Midshipman",
+          "horse_name": "Kern River C 2020",
+          "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9694/fasig-tipton-midlantic-2yos-in-training-sale-2022/",
+          "hip": 168,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Top Line Sales",
+          "kind": "twoyo"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zosia": {
+      "canonical_name": "Zosia",
+      "damsire": "Macho Uno",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 26000,
+      "total_gross": 26000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Midshipman",
+          "horse_name": "Zosias Ship F 2021",
+          "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9642/ocala-breeders-sales-co-winter-mixed-sale-2022/",
+          "hip": 11,
+          "price": 26000,
+          "status": "Sold",
+          "consignor": "Kaizen Sales",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zindi": {
+      "canonical_name": "Zindi",
+      "damsire": "Vindication",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 13000,
+      "total_gross": 13000,
+      "progeny": [
+        {
+          "foal_year": 2021,
+          "sire": "Maximus Mischief",
+          "horse_name": "Starting Gun C 2021",
+          "sale_name": "Keeneland September Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9789/keeneland-september-yearling-sale-2022/",
+          "hip": 2936,
+          "price": 13000,
+          "status": "Sold",
+          "consignor": "Machmer Hall Sales",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zifena": {
+      "canonical_name": "Zifena",
+      "damsire": "Zamindar",
+      "total_appearances": 3,
+      "distinct_foals": 2,
+      "sold_count": 3,
+      "top_price": 32000,
+      "total_gross": 87000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Volatile",
+          "horse_name": "Brockcasso F 2023",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10262/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025/",
+          "hip": 670,
+          "price": 32000,
+          "status": "Sold",
+          "consignor": "Cortez Racing & Sales",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Volatile",
+          "horse_name": "Brockcasso F 2023",
+          "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10145/fasig-tipton-saratoga-new-york-bred-yearling-sale-2024/",
+          "hip": 381,
+          "price": 25000,
+          "status": "Sold",
+          "consignor": "McMahon of Saratoga Thoroughbreds",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2021,
+          "sire": "Not This Time",
+          "horse_name": "Rabdaan C 2021",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9807/fasig-tipton-kentucky-october-yearling-sale-2022/",
+          "hip": 412,
+          "price": 30000,
+          "status": "Sold",
+          "consignor": "Brookdale Sales",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Volatile",
+          "horse_name": "Brockcasso F 2023",
+          "cohort": "2023 foals",
+          "yearling_price": 25000,
+          "twoyo_price": 32000,
+          "return_pct": 28.0,
+          "yearling_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2024",
+          "twoyo_sale": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+          "yearling_hip": 381,
+          "twoyo_hip": 670,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zindra": {
+      "canonical_name": "Zindra",
+      "damsire": "Macho Uno",
+      "total_appearances": 3,
+      "distinct_foals": 1,
+      "sold_count": 2,
+      "top_price": 400000,
+      "total_gross": 575000,
+      "progeny": [
+        {
+          "foal_year": 2021,
+          "sire": "Not This Time",
+          "horse_name": "Cara's Time F 2021",
+          "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9754/fasig-tipton-saratoga-new-york-bred-yearling-sale-2022/",
+          "hip": 473,
+          "price": 175000,
+          "status": "Sold",
+          "consignor": "Royal Bloodstock Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Not This Time",
+          "horse_name": "Cara's Time F 2021",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 53,
+          "price": 400000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "Not This Time",
+          "horse_name": "Cara's Time F 2021",
+          "sale_name": "Fasig Tipton Kentucky November Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10198/fasig-tipton-kentucky-november-sale-2024/",
+          "hip": 316,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zucchini Flower": {
+      "canonical_name": "Zucchini Flower",
+      "damsire": "Flower Alley",
+      "total_appearances": 2,
+      "distinct_foals": 0,
+      "sold_count": 2,
+      "top_price": 180000,
+      "total_gross": 330000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Twirling Candy",
+          "horse_name": "Candy Flower F 2017",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9640/keeneland-january-horses-of-all-ages-sale-2022/",
+          "hip": 63,
+          "price": 180000,
+          "status": "Sold",
+          "consignor": "Bluewater Sales",
+          "kind": "other"
+        },
+        {
+          "foal_year": null,
+          "sire": "Twirling Candy",
+          "horse_name": "Candy Flower M 2017",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10036/keeneland-january-horses-of-all-ages-sale-2024/",
+          "hip": 658,
+          "price": 150000,
+          "status": "Sold",
+          "consignor": "Mill Ridge Sales",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zapperkat": {
+      "canonical_name": "Zapperkat",
+      "damsire": "Ghostzapper",
+      "total_appearances": 4,
+      "distinct_foals": 3,
+      "sold_count": 4,
+      "top_price": 725000,
+      "total_gross": 1420000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Life Is Good",
+          "horse_name": "Tocca Ferro C 2024",
+          "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10392/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026/",
+          "hip": 518,
+          "price": 400000,
+          "status": "Sold",
+          "consignor": "CM Thoroughbreds",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2024,
+          "sire": "Life Is Good",
+          "horse_name": "Tocca Ferro C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 1399,
+          "price": 125000,
+          "status": "Sold",
+          "consignor": "Legacy Bloodstock, for WinStar Farm Bred & Raised",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Constitution",
+          "horse_name": "Filly Freedom F 2022",
+          "sale_name": "Keeneland September Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9962/keeneland-september-yearling-sale-2023/",
+          "hip": 1569,
+          "price": 170000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency, for WinStar Farm Bred & Raised",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2021,
+          "sire": "Constitution",
+          "horse_name": "Born Noble C 2021",
+          "sale_name": "Keeneland September Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9789/keeneland-september-yearling-sale-2022/",
+          "hip": 121,
+          "price": 725000,
+          "status": "Sold",
+          "consignor": "Denali Stud, for WinStar Farm Bred & Raised",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Life Is Good",
+          "horse_name": "Tocca Ferro C 2024",
+          "cohort": "2024 foals",
+          "yearling_price": 125000,
+          "twoyo_price": 400000,
+          "return_pct": 220.0,
+          "yearling_sale": "Keeneland September Yearling Sale 2025",
+          "twoyo_sale": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+          "yearling_hip": 1399,
+          "twoyo_hip": 518,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zia Zia Zia": {
+      "canonical_name": "Zia Zia Zia",
+      "damsire": "Dehere",
+      "total_appearances": 5,
+      "distinct_foals": 3,
+      "sold_count": 4,
+      "top_price": 160000,
+      "total_gross": 420000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Mckinzie",
+          "horse_name": "My Little Love F 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 2728,
+          "price": 160000,
+          "status": "Sold",
+          "consignor": "St George Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Mckinzie",
+          "horse_name": "McKinzie River F 2022",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10073/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024/",
+          "hip": 884,
+          "price": 75000,
+          "status": "Sold",
+          "consignor": "Julie Davies",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Mckinzie",
+          "horse_name": "McKinzie River F 2022",
+          "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10094/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2024/",
+          "hip": 372,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Envision Equine",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2021,
+          "sire": "Constitution",
+          "horse_name": "Dr. Ray D. F 2021",
+          "sale_name": "Keeneland September Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9789/keeneland-september-yearling-sale-2022/",
+          "hip": 1281,
+          "price": 130000,
+          "status": "Sold",
+          "consignor": "Gainesway",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Mckinzie",
+          "horse_name": "My Little Love F 2023",
+          "sale_name": "Keeneland November Breeding Stock Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9986/keeneland-november-breeding-stock-sale-2023/",
+          "hip": 973,
+          "price": 55000,
+          "status": "Sold",
+          "consignor": "Warrendale Sales",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zarmant": {
+      "canonical_name": "Zarmant",
+      "damsire": "Tapizar",
+      "total_appearances": 7,
+      "distinct_foals": 3,
+      "sold_count": 7,
+      "top_price": 650000,
+      "total_gross": 1102000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Corniche",
+          "horse_name": "Pro Am C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 991,
+          "price": 650000,
+          "status": "Sold",
+          "consignor": "Four Star Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Mckinzie",
+          "horse_name": "Z Z's F 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 2727,
+          "price": 185000,
+          "status": "Sold",
+          "consignor": "Bluegrass Thoroughbred Services, for Willow Oaks Stable",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2021,
+          "sire": "Cairo Prince",
+          "horse_name": "Starship Obsession F 2021",
+          "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9799/ocala-breeders-sales-co-october-yearling-sale-2022/",
+          "hip": 417,
+          "price": 25000,
+          "status": "Sold",
+          "consignor": "Sue Vacek",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Corniche",
+          "horse_name": "Pro Am C 2024",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10223/keeneland-january-horses-of-all-ages-sale-2025/",
+          "hip": 507,
+          "price": 185000,
+          "status": "Sold",
+          "consignor": "Bluegrass Thoroughbred Services, for Willow Oaks Stable",
+          "kind": "other"
+        },
+        {
+          "foal_year": null,
+          "sire": "Cairo Prince",
+          "horse_name": "Starship Obsession F 2021",
+          "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9649/fasig-tipton-kentucky-winter-mixed-sale-2022/",
+          "hip": 120,
+          "price": 35000,
+          "status": "Sold",
+          "consignor": "Vinery Sales",
+          "kind": "other"
+        },
+        {
+          "foal_year": null,
+          "sire": "Cyberknife",
+          "horse_name": "UNNAMED F 2025",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10376/keeneland-january-horses-of-all-ages-sale-2026/",
+          "hip": 1066,
+          "price": 12000,
+          "status": "Sold",
+          "consignor": "Bluegrass Thoroughbred Services",
+          "kind": "other"
+        },
+        {
+          "foal_year": null,
+          "sire": "Street Sense",
+          "horse_name": "Lazy Days F 2022",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10376/keeneland-january-horses-of-all-ages-sale-2026/",
+          "hip": 780,
+          "price": 10000,
+          "status": "Sold",
+          "consignor": "Bluegrass Thoroughbred Services",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zetta Z": {
+      "canonical_name": "Zetta Z",
+      "damsire": "Bernardini",
+      "total_appearances": 8,
+      "distinct_foals": 3,
+      "sold_count": 7,
+      "top_price": 550000,
+      "total_gross": 1930000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Cyberknife",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "OBS Spring Sale of 2YOs in Training 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10399/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2026/",
+          "hip": 410,
+          "price": 240000,
+          "status": "Sold",
+          "consignor": "Top Line Sales",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2024,
+          "sire": "Cyberknife",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10342/fasig-tipton-kentucky-october-yearling-sale-2025/",
+          "hip": 920,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Street Sense",
+          "horse_name": "Bernetta F 2022",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9982/fasig-tipton-kentucky-october-yearling-sale-2023/",
+          "hip": 10,
+          "price": 170000,
+          "status": "Sold",
+          "consignor": "Denali Stud",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2021,
+          "sire": "Nyquist",
+          "horse_name": "Nysos C 2021",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9883/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2023/",
+          "hip": 1219,
+          "price": 550000,
+          "status": "Sold",
+          "consignor": "Best A Luck Farm",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2021,
+          "sire": "Nyquist",
+          "horse_name": "Nysos C 2021",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9807/fasig-tipton-kentucky-october-yearling-sale-2022/",
+          "hip": 411,
+          "price": 150000,
+          "status": "Sold",
+          "consignor": "Bluewater Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Yaupon",
+          "horse_name": "Warnock C 2023",
+          "sale_name": "Keeneland November Breeding Stock Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9986/keeneland-november-breeding-stock-sale-2023/",
+          "hip": 551,
+          "price": 450000,
+          "status": "Sold",
+          "consignor": "Vinery Sales",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "Street Sense",
+          "horse_name": "Bernetta M 2022",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 44,
+          "price": 300000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "Street Sense",
+          "horse_name": "Bernetta F 2022",
+          "sale_name": "Keeneland November Breeding Stock Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9812/keeneland-november-breeding-stock-sale-2022/",
+          "hip": 240,
+          "price": 70000,
+          "status": "Sold",
+          "consignor": "Vinery Sales",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Nyquist",
+          "horse_name": "Nysos C 2021",
+          "cohort": "2021 foals",
+          "yearling_price": 150000,
+          "twoyo_price": 550000,
+          "return_pct": 266.7,
+          "yearling_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+          "twoyo_sale": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2023",
+          "yearling_hip": 411,
+          "twoyo_hip": 1219,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zinzay": {
+      "canonical_name": "Zinzay",
+      "damsire": "Smart Strike",
+      "total_appearances": 4,
+      "distinct_foals": 1,
+      "sold_count": 4,
+      "top_price": 1200000,
+      "total_gross": 1519000,
+      "progeny": [
+        {
+          "foal_year": 2021,
+          "sire": "Justify",
+          "horse_name": "Tennessee C 2021",
+          "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9865/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2023/",
+          "hip": 215,
+          "price": 1200000,
+          "status": "Sold",
+          "consignor": "Hartley/DeRenzo Thoroughbreds",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2021,
+          "sire": "Justify",
+          "horse_name": "Tennessee C 2021",
+          "sale_name": "Keeneland September Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9789/keeneland-september-yearling-sale-2022/",
+          "hip": 521,
+          "price": 250000,
+          "status": "Sold",
+          "consignor": "Lane's End",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Hard Spun",
+          "horse_name": "Spin Wheel G 2019",
+          "sale_name": "Fasig Tipton July Horses Of Racing Age Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9931/fasig-tipton-july-horses-of-racing-age-sale-2023/",
+          "hip": 502,
+          "price": 37000,
+          "status": "Sold",
+          "consignor": "Highgate Sales, for BBN Racing",
+          "kind": "other"
+        },
+        {
+          "foal_year": null,
+          "sire": "Justify",
+          "horse_name": "Tennessee C 2021",
+          "sale_name": "Keeneland April Horses Of Racing Age Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10082/keeneland-april-horses-of-racing-age-sale-2024/",
+          "hip": 121,
+          "price": 32000,
+          "status": "Sold",
+          "consignor": "ELiTE",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Justify",
+          "horse_name": "Tennessee C 2021",
+          "cohort": "2021 foals",
+          "yearling_price": 250000,
+          "twoyo_price": 1200000,
+          "return_pct": 380.0,
+          "yearling_sale": "Keeneland September Yearling Sale 2022",
+          "twoyo_sale": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2023",
+          "yearling_hip": 521,
+          "twoyo_hip": 215,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zayanna": {
+      "canonical_name": "Zayanna",
+      "damsire": "Bernardini Cover Sire: Curlin",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 2900000,
+      "total_gross": 2900000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Liam's Map",
+          "horse_name": "Wicked Whisper M 2017",
+          "sale_name": "Fasig Tipton Kentucky November Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9810/fasig-tipton-kentucky-november-sale-2022/",
+          "hip": 253,
+          "price": 2900000,
+          "status": "Sold",
+          "consignor": "Denali Stud",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zooey": {
+      "canonical_name": "Zooey",
+      "damsire": "Exchange Rate",
+      "total_appearances": 5,
+      "distinct_foals": 3,
+      "sold_count": 5,
+      "top_price": 350000,
+      "total_gross": 703000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Mitole",
+          "horse_name": "Lucky Talent F 2023",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10197/fasig-tipton-kentucky-october-yearling-sale-2024/",
+          "hip": 1187,
+          "price": 35000,
+          "status": "Sold",
+          "consignor": "Mulholland Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Mitole",
+          "horse_name": "Lucky Talent F 2023",
+          "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10270/fasig-tipton-midlantic-2yos-in-training-sale-2025/",
+          "hip": 517,
+          "price": 23000,
+          "status": "Sold",
+          "consignor": "Julie Davies",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Army Mule",
+          "horse_name": "Cutting Corners C 2022",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10073/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024/",
+          "hip": 886,
+          "price": 350000,
+          "status": "Sold",
+          "consignor": "Grassroots Training and Sales",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Army Mule",
+          "horse_name": "Cutting Corners C 2022",
+          "sale_name": "Keeneland September Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9962/keeneland-september-yearling-sale-2023/",
+          "hip": 2803,
+          "price": 190000,
+          "status": "Sold",
+          "consignor": "Mulholland Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2020,
+          "sire": "Liam's Map",
+          "horse_name": "Sir Liam C 2020",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9684/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2022/",
+          "hip": 90,
+          "price": 105000,
+          "status": "Sold",
+          "consignor": "Omar Ramirez Bloodstock",
+          "kind": "twoyo"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Army Mule",
+          "horse_name": "Cutting Corners C 2022",
+          "cohort": "2022 foals",
+          "yearling_price": 190000,
+          "twoyo_price": 350000,
+          "return_pct": 84.2,
+          "yearling_sale": "Keeneland September Yearling Sale 2023",
+          "twoyo_sale": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+          "yearling_hip": 2803,
+          "twoyo_hip": 886,
+          "quality_flags": []
+        },
+        {
+          "stallion": "Mitole",
+          "horse_name": "Lucky Talent F 2023",
+          "cohort": "2023 foals",
+          "yearling_price": 35000,
+          "twoyo_price": 23000,
+          "return_pct": -34.3,
+          "yearling_sale": "Fasig Tipton Kentucky October Yearling Sale 2024",
+          "twoyo_sale": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+          "yearling_hip": 1187,
+          "twoyo_hip": 517,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zultanite": {
+      "canonical_name": "Zultanite",
+      "damsire": "El Corredor",
+      "total_appearances": 3,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 210000,
+      "total_gross": 210000,
+      "progeny": [
+        {
+          "foal_year": 2022,
+          "sire": "City Of Light",
+          "horse_name": "Flashlight F 2022",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9982/fasig-tipton-kentucky-october-yearling-sale-2023/",
+          "hip": 16,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Blame",
+          "horse_name": "Don't Blame Judy M 2015",
+          "sale_name": "Keeneland November Breeding Stock Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9812/keeneland-november-breeding-stock-sale-2022/",
+          "hip": 333,
+          "price": 210000,
+          "status": "Sold",
+          "consignor": "Grovendale Sales",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "City Of Light",
+          "horse_name": "Flashlight F 2022",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9843/keeneland-january-horses-of-all-ages-sale-2023/",
+          "hip": 1084,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zapara": {
+      "canonical_name": "Zapara",
+      "damsire": "Not For Love",
+      "total_appearances": 3,
+      "distinct_foals": 2,
+      "sold_count": 3,
+      "top_price": 1100000,
+      "total_gross": 1159000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Liam's Map",
+          "horse_name": "Rockdust C 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 2726,
+          "price": 45000,
+          "status": "Sold",
+          "consignor": "St George Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2020,
+          "sire": "Into Mischief",
+          "horse_name": "Meta Max C 2020",
+          "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9662/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2022/",
+          "hip": 257,
+          "price": 1100000,
+          "status": "Sold",
+          "consignor": "Eddie Woods",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": null,
+          "sire": "Twirling Candy",
+          "horse_name": "Truly Louise M 2017",
+          "sale_name": "Keeneland November Breeding Stock Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10199/keeneland-november-breeding-stock-sale-2024/",
+          "hip": 2887,
+          "price": 14000,
+          "status": "Sold",
+          "consignor": "Lane's End",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zapper Belle": {
+      "canonical_name": "Zapper Belle",
+      "damsire": "Ghostzapper Cover Sire: Knicks Go",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 0,
+      "top_price": 0,
+      "total_gross": 0,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Curlin",
+          "horse_name": "Zurlin M 2016",
+          "sale_name": "Keeneland November Breeding Stock Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9812/keeneland-november-breeding-stock-sale-2022/",
+          "hip": 1002,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Pope McLean",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zadina": {
+      "canonical_name": "Zadina",
+      "damsire": "Malibu Moon",
+      "total_appearances": 6,
+      "distinct_foals": 2,
+      "sold_count": 4,
+      "top_price": 190000,
+      "total_gross": 472000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Golden Pal",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 1815,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Four Star Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2024,
+          "sire": "Golden Pal",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10335/ocala-breeders-sales-co-october-yearling-sale-2025/",
+          "hip": 545,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Vinery Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "City Of Light",
+          "horse_name": "Shakhrisabz C 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 1471,
+          "price": 190000,
+          "status": "Sold",
+          "consignor": "Woods Edge Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "City Of Light",
+          "horse_name": "Shakhrisabz C 2023",
+          "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10243/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2025/",
+          "hip": 705,
+          "price": 27000,
+          "status": "Sold",
+          "consignor": "Eddie Woods",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": null,
+          "sire": "City Of Light",
+          "horse_name": "Shakhrisabz C 2023",
+          "sale_name": "Keeneland November Breeding Stock Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9986/keeneland-november-breeding-stock-sale-2023/",
+          "hip": 549,
+          "price": 175000,
+          "status": "Sold",
+          "consignor": "Four Star Sales",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "Mo Town",
+          "horse_name": "Go Town F 2022",
+          "sale_name": "Keeneland November Breeding Stock Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9812/keeneland-november-breeding-stock-sale-2022/",
+          "hip": 999,
+          "price": 80000,
+          "status": "Sold",
+          "consignor": "Bluewater Sales",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "City Of Light",
+          "horse_name": "Shakhrisabz C 2023",
+          "cohort": "2023 foals",
+          "yearling_price": 190000,
+          "twoyo_price": 27000,
+          "return_pct": -85.8,
+          "yearling_sale": "Keeneland September Yearling Sale 2024",
+          "twoyo_sale": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+          "yearling_hip": 1471,
+          "twoyo_hip": 705,
+          "quality_flags": [
+            "extreme_loss"
+          ]
+        }
+      ]
+    },
+    "Zaza": {
+      "canonical_name": "Zaza",
+      "damsire": "Midnight Lute",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 10000,
+      "total_gross": 10000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Jimmy Creed",
+          "horse_name": "Scare Tactics F 2019",
+          "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9642/ocala-breeders-sales-co-winter-mixed-sale-2022/",
+          "hip": 258,
+          "price": 10000,
+          "status": "Sold",
+          "consignor": "Coastal Equine",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zo Bow": {
+      "canonical_name": "Zo Bow",
+      "damsire": "Oxbow",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 0,
+      "top_price": 0,
+      "total_gross": 0,
+      "progeny": [
+        {
+          "foal_year": 2020,
+          "sire": "Keen Ice",
+          "horse_name": "Galaxy Music C 2020",
+          "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9705/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2022/",
+          "hip": 588,
+          "price": null,
+          "status": "Rna",
+          "consignor": "GOP Racing Stable",
+          "kind": "twoyo"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zeyna": {
+      "canonical_name": "Zeyna",
+      "damsire": "Uncle Mo",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 47000,
+      "total_gross": 47000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Vekoma",
+          "horse_name": "Island Duchess F 2022",
+          "sale_name": "Keeneland November Breeding Stock Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9812/keeneland-november-breeding-stock-sale-2022/",
+          "hip": 1000,
+          "price": 47000,
+          "status": "Sold",
+          "consignor": "Four Star Sales",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zardana": {
+      "canonical_name": "Zardana",
+      "damsire": "Crimson Tide (IRE)",
+      "total_appearances": 2,
+      "distinct_foals": 1,
+      "sold_count": 2,
+      "top_price": 160000,
+      "total_gross": 190000,
+      "progeny": [
+        {
+          "foal_year": 2022,
+          "sire": "Munnings",
+          "horse_name": "Crimson Cat F 2022",
+          "sale_name": "Keeneland September Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9962/keeneland-september-yearling-sale-2023/",
+          "hip": 1141,
+          "price": 160000,
+          "status": "Sold",
+          "consignor": "Nursery Place",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Munnings",
+          "horse_name": "Crimson Cat M 2022",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 1558,
+          "price": 30000,
+          "status": "Sold",
+          "consignor": "Hartwell Farm",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zensational Beauty": {
+      "canonical_name": "Zensational Beauty",
+      "damsire": "Zensational",
+      "total_appearances": 3,
+      "distinct_foals": 2,
+      "sold_count": 3,
+      "top_price": 40000,
+      "total_gross": 97000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Greatest Honour",
+          "horse_name": "Hoops C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 3099,
+          "price": 40000,
+          "status": "Sold",
+          "consignor": "Susan Y. Foreman",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "The Factor",
+          "horse_name": "Multiplication F 2022",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9982/fasig-tipton-kentucky-october-yearling-sale-2023/",
+          "hip": 8,
+          "price": 30000,
+          "status": "Sold",
+          "consignor": "Vinery Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Upstart",
+          "horse_name": "Undeniable Jill F 2023",
+          "sale_name": "Keeneland November Breeding Stock Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9986/keeneland-november-breeding-stock-sale-2023/",
+          "hip": 2181,
+          "price": 27000,
+          "status": "Sold",
+          "consignor": "Susan Foreman",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zusha": {
+      "canonical_name": "Zusha",
+      "damsire": "Congrats",
+      "total_appearances": 4,
+      "distinct_foals": 2,
+      "sold_count": 4,
+      "top_price": 190000,
+      "total_gross": 415000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Nyquist",
+          "horse_name": "Philadelphia Roll F 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 1886,
+          "price": 190000,
+          "status": "Sold",
+          "consignor": "Mill Ridge Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Nyquist",
+          "horse_name": "Philadelphia Roll F 2023",
+          "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10272/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025/",
+          "hip": 96,
+          "price": 50000,
+          "status": "Sold",
+          "consignor": "Tom McCrocklin",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Candy Ride (Arg)",
+          "horse_name": "Smooth N Silky C 2022",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10073/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024/",
+          "hip": 887,
+          "price": 125000,
+          "status": "Sold",
+          "consignor": "Eddie Woods",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Candy Ride (Arg)",
+          "horse_name": "Smooth N Silky C 2022",
+          "sale_name": "Keeneland September Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9962/keeneland-september-yearling-sale-2023/",
+          "hip": 1570,
+          "price": 50000,
+          "status": "Sold",
+          "consignor": "Mill Ridge Sales",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Candy Ride (Arg)",
+          "horse_name": "Smooth N Silky C 2022",
+          "cohort": "2022 foals",
+          "yearling_price": 50000,
+          "twoyo_price": 125000,
+          "return_pct": 150.0,
+          "yearling_sale": "Keeneland September Yearling Sale 2023",
+          "twoyo_sale": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+          "yearling_hip": 1570,
+          "twoyo_hip": 887,
+          "quality_flags": []
+        },
+        {
+          "stallion": "Nyquist",
+          "horse_name": "Philadelphia Roll F 2023",
+          "cohort": "2023 foals",
+          "yearling_price": 190000,
+          "twoyo_price": 50000,
+          "return_pct": -73.7,
+          "yearling_sale": "Keeneland September Yearling Sale 2024",
+          "twoyo_sale": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025",
+          "yearling_hip": 1886,
+          "twoyo_hip": 96,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zermatt": {
+      "canonical_name": "Zermatt",
+      "damsire": "Tiznow",
+      "total_appearances": 3,
+      "distinct_foals": 1,
+      "sold_count": 3,
+      "top_price": 70000,
+      "total_gross": 105000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Violence",
+          "horse_name": "Al Rateel F 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 2313,
+          "price": 20000,
+          "status": "Sold",
+          "consignor": "Woods Edge Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Violence",
+          "horse_name": "Al Rateel F 2023",
+          "sale_name": "Keeneland November Breeding Stock Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9986/keeneland-november-breeding-stock-sale-2023/",
+          "hip": 1370,
+          "price": 70000,
+          "status": "Sold",
+          "consignor": "Lane's End",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "Good Magic",
+          "horse_name": "Swiss Franc F 2020",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10036/keeneland-january-horses-of-all-ages-sale-2024/",
+          "hip": 160,
+          "price": 15000,
+          "status": "Sold",
+          "consignor": "Buckland Sales",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zippy Speed": {
+      "canonical_name": "Zippy Speed",
+      "damsire": "City Zip",
+      "total_appearances": 2,
+      "distinct_foals": 2,
+      "sold_count": 2,
+      "top_price": 55000,
+      "total_gross": 70000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Essential Quality",
+          "horse_name": "Commissionergordon C 2024",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10342/fasig-tipton-kentucky-october-yearling-sale-2025/",
+          "hip": 921,
+          "price": 15000,
+          "status": "Sold",
+          "consignor": "Warrendale Sales, for Silesia Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Mo Town",
+          "horse_name": "Autodrive C 2022",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9982/fasig-tipton-kentucky-october-yearling-sale-2023/",
+          "hip": 13,
+          "price": 55000,
+          "status": "Sold",
+          "consignor": "Warrendale Sales, for Silesia Farm",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zeenut": {
+      "canonical_name": "Zeenut",
+      "damsire": "Mingun",
+      "total_appearances": 3,
+      "distinct_foals": 2,
+      "sold_count": 2,
+      "top_price": 90000,
+      "total_gross": 92000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Known Agenda",
+          "horse_name": "Concarneau C 2023",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10197/fasig-tipton-kentucky-october-yearling-sale-2024/",
+          "hip": 1183,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Mikelle Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Vino Rosso",
+          "horse_name": "List F 2022",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9982/fasig-tipton-kentucky-october-yearling-sale-2023/",
+          "hip": 7,
+          "price": 90000,
+          "status": "Sold",
+          "consignor": "Mikelle Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Vino Rosso",
+          "horse_name": "List F 2022",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 2868,
+          "price": 2000,
+          "status": "Sold",
+          "consignor": "Highgate Sales",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zippninthecity": {
+      "canonical_name": "Zippninthecity",
+      "damsire": "City Zip",
+      "total_appearances": 2,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 40000,
+      "total_gross": 40000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Complexity",
+          "horse_name": "Wickedthiswaycomes F 2023",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10262/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025/",
+          "hip": 672,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Best A Luck Farm",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": null,
+          "sire": "Complexity",
+          "horse_name": "Wickedthiswaycomes F 2023",
+          "sale_name": "Keeneland November Breeding Stock Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9986/keeneland-november-breeding-stock-sale-2023/",
+          "hip": 2182,
+          "price": 40000,
+          "status": "Sold",
+          "consignor": "Vinery Sales",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zuzanna": {
+      "canonical_name": "Zuzanna",
+      "damsire": "Wilburn",
+      "total_appearances": 3,
+      "distinct_foals": 2,
+      "sold_count": 2,
+      "top_price": 50000,
+      "total_gross": 57000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Thousand Words",
+          "horse_name": "Underappreciated C 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 3558,
+          "price": 7000,
+          "status": "Sold",
+          "consignor": "Four Star Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Thousand Words",
+          "horse_name": "Artella F 2022",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10073/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024/",
+          "hip": 888,
+          "price": 50000,
+          "status": "Sold",
+          "consignor": "RiceHorse Stable",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Thousand Words",
+          "horse_name": "Artella F 2022",
+          "sale_name": "Keeneland September Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9962/keeneland-september-yearling-sale-2023/",
+          "hip": 3225,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Four Star Sales",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zale": {
+      "canonical_name": "Zale",
+      "damsire": "Pulpit",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 35000,
+      "total_gross": 35000,
+      "progeny": [
+        {
+          "foal_year": 2022,
+          "sire": "Instilled Regard",
+          "horse_name": "Yachtr C 2022",
+          "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9976/ocala-breeders-sales-co-october-yearling-sale-2023/",
+          "hip": 77,
+          "price": 35000,
+          "status": "Sold",
+          "consignor": "Journeyman Bloodstock Services",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zofelle": {
+      "canonical_name": "Zofelle",
+      "damsire": "Zoffany (IRE)",
+      "total_appearances": 2,
+      "distinct_foals": 1,
+      "sold_count": 0,
+      "top_price": 0,
+      "total_gross": 0,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Not This Time",
+          "horse_name": "Ayrton C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 230,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Mill Ridge Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Not This Time",
+          "horse_name": "Ayrton C 2024",
+          "sale_name": "Keeneland November Breeding Stock Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10199/keeneland-november-breeding-stock-sale-2024/",
+          "hip": 107,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Mill Ridge Sales",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zoology": {
+      "canonical_name": "Zoology",
+      "damsire": "Animal Kingdom",
+      "total_appearances": 2,
+      "distinct_foals": 1,
+      "sold_count": 2,
+      "top_price": 125000,
+      "total_gross": 170000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Omaha Beach",
+          "horse_name": "Zoomaha F 2023",
+          "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10270/fasig-tipton-midlantic-2yos-in-training-sale-2025/",
+          "hip": 518,
+          "price": 125000,
+          "status": "Sold",
+          "consignor": "Crane Thoroughbred Services",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Omaha Beach",
+          "horse_name": "Zoomaha F 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 3133,
+          "price": 45000,
+          "status": "Sold",
+          "consignor": "Gainesway",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Omaha Beach",
+          "horse_name": "Zoomaha F 2023",
+          "cohort": "2023 foals",
+          "yearling_price": 45000,
+          "twoyo_price": 125000,
+          "return_pct": 177.8,
+          "yearling_sale": "Keeneland September Yearling Sale 2024",
+          "twoyo_sale": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+          "yearling_hip": 3133,
+          "twoyo_hip": 518,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zee Drop": {
+      "canonical_name": "Zee Drop",
+      "damsire": "Lemon Drop Kid",
+      "total_appearances": 3,
+      "distinct_foals": 1,
+      "sold_count": 3,
+      "top_price": 400000,
+      "total_gross": 762000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Quality Road",
+          "horse_name": "Kokomotion F 2023",
+          "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10262/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025/",
+          "hip": 667,
+          "price": 340000,
+          "status": "Sold",
+          "consignor": "De Meric Sales",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Quality Road",
+          "horse_name": "Kokomotion F 2023",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10197/fasig-tipton-kentucky-october-yearling-sale-2024/",
+          "hip": 1182,
+          "price": 22000,
+          "status": "Sold",
+          "consignor": "Lane's End",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Up To The Mark",
+          "horse_name": "UNNAMED C 2025",
+          "sale_name": "Fasig Tipton Kentucky November Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10346/fasig-tipton-kentucky-november-sale-2025/",
+          "hip": 67,
+          "price": 400000,
+          "status": "Sold",
+          "consignor": "Lane's End",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Quality Road",
+          "horse_name": "Kokomotion F 2023",
+          "cohort": "2023 foals",
+          "yearling_price": 22000,
+          "twoyo_price": 340000,
+          "return_pct": 1445.5,
+          "yearling_sale": "Fasig Tipton Kentucky October Yearling Sale 2024",
+          "twoyo_sale": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+          "yearling_hip": 1182,
+          "twoyo_hip": 667,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zestina": {
+      "canonical_name": "Zestina",
+      "damsire": "Silent Name (JPN)",
+      "total_appearances": 2,
+      "distinct_foals": 1,
+      "sold_count": 2,
+      "top_price": 22000,
+      "total_gross": 42000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Upstart",
+          "horse_name": "Fidela F 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 2315,
+          "price": 22000,
+          "status": "Sold",
+          "consignor": "Frankfort Park Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Corniche",
+          "horse_name": "UNNAMED C 2025",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 1077,
+          "price": 20000,
+          "status": "Sold",
+          "consignor": "Vinery Sales, for Milestone Farm",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zero to Sixty": {
+      "canonical_name": "Zero to Sixty",
+      "damsire": "American Pharoah",
+      "total_appearances": 2,
+      "distinct_foals": 2,
+      "sold_count": 2,
+      "top_price": 200000,
+      "total_gross": 275000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Liam's Map",
+          "horse_name": "Compass Sixty F 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 595,
+          "price": 200000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Twirling Candy",
+          "horse_name": "Darlin' Duchess F 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 2314,
+          "price": 75000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zanadu": {
+      "canonical_name": "Zanadu",
+      "damsire": "Mineshaft",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 11000,
+      "total_gross": 11000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Kantharos",
+          "horse_name": "Elegant Champ C 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 3960,
+          "price": 11000,
+          "status": "Sold",
+          "consignor": "Legacy Bloodstock",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zorally": {
+      "canonical_name": "Zorally",
+      "damsire": "Wiseman's Ferry",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 50000,
+      "total_gross": 50000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Tiz The Law",
+          "horse_name": "Ruler of Law C 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 3962,
+          "price": 50000,
+          "status": "Sold",
+          "consignor": "Legacy Bloodstock, for Forever Spring Farm",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zarleeza": {
+      "canonical_name": "Zarleeza",
+      "damsire": "Harlan's Holiday",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 100000,
+      "total_gross": 100000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Rock Your World",
+          "horse_name": "Jess Ez Girl F 2023",
+          "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10145/fasig-tipton-saratoga-new-york-bred-yearling-sale-2024/",
+          "hip": 380,
+          "price": 100000,
+          "status": "Sold",
+          "consignor": "Vinery Sales",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zloty": {
+      "canonical_name": "Zloty",
+      "damsire": "Exchange Rate",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 26000,
+      "total_gross": 26000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Basin",
+          "horse_name": "Chief Resident C 2023",
+          "sale_name": "Fasig Tipton California Fall Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10173/fasig-tipton-california-fall-yearling-sale-2024/",
+          "hip": 203,
+          "price": 26000,
+          "status": "Sold",
+          "consignor": "Barton Thoroughbreds",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zalia": {
+      "canonical_name": "Zalia",
+      "damsire": "Scat Daddy",
+      "total_appearances": 2,
+      "distinct_foals": 2,
+      "sold_count": 2,
+      "top_price": 475000,
+      "total_gross": 487000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Early Voting",
+          "horse_name": "UNNAMED C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 1398,
+          "price": 475000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Connect",
+          "horse_name": "Ocelli C 2023",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10197/fasig-tipton-kentucky-october-yearling-sale-2024/",
+          "hip": 1180,
+          "price": 12000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zia's Song": {
+      "canonical_name": "Zia's Song",
+      "damsire": "Kitten's Joy",
+      "total_appearances": 3,
+      "distinct_foals": 2,
+      "sold_count": 3,
+      "top_price": 350000,
+      "total_gross": 885000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Not This Time",
+          "horse_name": "Good Not Given C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 228,
+          "price": 350000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Gun Runner",
+          "horse_name": "Steel Golden C 2023",
+          "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10270/fasig-tipton-midlantic-2yos-in-training-sale-2025/",
+          "hip": 516,
+          "price": 310000,
+          "status": "Sold",
+          "consignor": "Hartley/DeRenzo Thoroughbreds",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Gun Runner",
+          "horse_name": "Steel Golden C 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 686,
+          "price": 225000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Gun Runner",
+          "horse_name": "Steel Golden C 2023",
+          "cohort": "2023 foals",
+          "yearling_price": 225000,
+          "twoyo_price": 310000,
+          "return_pct": 37.8,
+          "yearling_sale": "Keeneland September Yearling Sale 2024",
+          "twoyo_sale": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+          "yearling_hip": 686,
+          "twoyo_hip": 516,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Zarella": {
+      "canonical_name": "Zarella",
+      "damsire": "Ghostzapper",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 0,
+      "top_price": 0,
+      "total_gross": 0,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Speaker's Corner",
+          "horse_name": "Soapbox F 2024",
+          "sale_name": "Keeneland November Breeding Stock Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10199/keeneland-november-breeding-stock-sale-2024/",
+          "hip": 1282,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Mill Ridge Sales",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zebra Cake": {
+      "canonical_name": "Zebra Cake",
+      "damsire": "Runhappy",
+      "total_appearances": 3,
+      "distinct_foals": 1,
+      "sold_count": 2,
+      "top_price": 40000,
+      "total_gross": 57000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Nashville",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10392/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026/",
+          "hip": 519,
+          "price": 40000,
+          "status": "Sold",
+          "consignor": "Blue Sapphire Stables",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2024,
+          "sire": "Nashville",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10335/ocala-breeders-sales-co-october-yearling-sale-2025/",
+          "hip": 414,
+          "price": null,
+          "status": "Rna",
+          "consignor": "AVP Training and Sales",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Nashville",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10228/ocala-breeders-sales-co-winter-mixed-sale-2025/",
+          "hip": 178,
+          "price": 17000,
+          "status": "Sold",
+          "consignor": "Kaizen Sales",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zazzy Zazzy Dazzle": {
+      "canonical_name": "Zazzy Zazzy Dazzle",
+      "damsire": "Union Rags",
+      "total_appearances": 2,
+      "distinct_foals": 0,
+      "sold_count": 2,
+      "top_price": 200000,
+      "total_gross": 235000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Bolt D’oro",
+          "horse_name": "UNNAMED F 2025",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 1076,
+          "price": 200000,
+          "status": "Sold",
+          "consignor": "St George Sales",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "Golden Pal",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10223/keeneland-january-horses-of-all-ages-sale-2025/",
+          "hip": 45,
+          "price": 35000,
+          "status": "Sold",
+          "consignor": "St George Sales",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zydeco Mama": {
+      "canonical_name": "Zydeco Mama",
+      "damsire": "Hard Spun",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 55000,
+      "total_gross": 55000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Munnings",
+          "horse_name": "Morning Jazz C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 2238,
+          "price": 55000,
+          "status": "Sold",
+          "consignor": "Lane's End",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zee Ro Drop": {
+      "canonical_name": "Zee Ro Drop",
+      "damsire": "Lemon Drop Kid",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 225000,
+      "total_gross": 225000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Authentic",
+          "horse_name": "Steel of Fortune C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 2236,
+          "price": 225000,
+          "status": "Sold",
+          "consignor": "Hill 'n' Dale at Xalapa",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zebecca": {
+      "canonical_name": "Zebecca",
+      "damsire": "Midnight Lute",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 7000,
+      "total_gross": 7000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Bolt D’oro",
+          "horse_name": "Ze'leonardbolt C 2023",
+          "sale_name": "Keeneland November Horses Of Racing Age Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10351/keeneland-november-horses-of-racing-age-sale-2025/",
+          "hip": 4002,
+          "price": 7000,
+          "status": "Sold",
+          "consignor": "Green Hills at Elmendorf",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zurlin": {
+      "canonical_name": "Zurlin",
+      "damsire": "Curlin",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 0,
+      "top_price": 0,
+      "total_gross": 0,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Corniche",
+          "horse_name": "UNNAMED C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 2237,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Pope McLean",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zelda Rose": {
+      "canonical_name": "Zelda Rose",
+      "damsire": "Niagara Causeway",
+      "total_appearances": 2,
+      "distinct_foals": 1,
+      "sold_count": 2,
+      "top_price": 60000,
+      "total_gross": 90000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Midshipman",
+          "horse_name": "UNNAMED C 2024",
+          "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10290/fasig-tipton-kentucky-select-july-yearling-sale-2025/",
+          "hip": 165,
+          "price": 30000,
+          "status": "Sold",
+          "consignor": "Buck Pond Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Maxfield",
+          "horse_name": "UNNAMED F 2025",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 665,
+          "price": 60000,
+          "status": "Sold",
+          "consignor": "Buck Pond Farm",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zarmella": {
+      "canonical_name": "Zarmella",
+      "damsire": "Lawman (FR)",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 100000,
+      "total_gross": 100000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Maxfield",
+          "horse_name": "UNNAMED C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 3098,
+          "price": 100000,
+          "status": "Sold",
+          "consignor": "Runnymede Farm",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zena Crown": {
+      "canonical_name": "Zena Crown",
+      "damsire": "Medaglia d'Oro",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 5000,
+      "total_gross": 5000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Constitution",
+          "horse_name": "Queen Zena F 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 1816,
+          "price": 5000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency, for Stonestreet",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zambak": {
+      "canonical_name": "Zambak",
+      "damsire": "Kitten's Joy",
+      "total_appearances": 4,
+      "distinct_foals": 1,
+      "sold_count": 2,
+      "top_price": 35000,
+      "total_gross": 39000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Upstart",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 4471,
+          "price": 4000,
+          "status": "Sold",
+          "consignor": "Stoneriggs Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2024,
+          "sire": "Upstart",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10392/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026/",
+          "hip": 517,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Great Destiny",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": null,
+          "sire": "Arabian Lion",
+          "horse_name": "UNNAMED F 2025",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 1492,
+          "price": 35000,
+          "status": "Sold",
+          "consignor": "Stoneriggs Farm",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "Upstart",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10223/keeneland-january-horses-of-all-ages-sale-2025/",
+          "hip": 506,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Stoneriggs Farm",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Z Bonita": {
+      "canonical_name": "Z Bonita",
+      "damsire": "Old Forester",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 2500,
+      "total_gross": 2500,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Army Mule",
+          "horse_name": "Giorgia San F 2024",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10342/fasig-tipton-kentucky-october-yearling-sale-2025/",
+          "hip": 916,
+          "price": 2500,
+          "status": "Sold",
+          "consignor": "Hidden Brook",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zella Rose": {
+      "canonical_name": "Zella Rose",
+      "damsire": "Native Ruler",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 2500,
+      "total_gross": 2500,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Army Mule",
+          "horse_name": "Rising Army C 2024",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10342/fasig-tipton-kentucky-october-yearling-sale-2025/",
+          "hip": 918,
+          "price": 2500,
+          "status": "Sold",
+          "consignor": "Keith Lancaster",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zeezee Zoomzoom": {
+      "canonical_name": "Zeezee Zoomzoom",
+      "damsire": "Congrats",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 1400000,
+      "total_gross": 1400000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Justify",
+          "horse_name": "UNNAMED C 2024",
+          "sale_name": "Fasig Tipton Saratoga Select Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10301/fasig-tipton-saratoga-select-yearling-sale-2025/",
+          "hip": 29,
+          "price": 1400000,
+          "status": "Sold",
+          "consignor": "Hunter Valley Farm",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zellda": {
+      "canonical_name": "Zellda",
+      "damsire": "Medaglia d'Oro",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 775000,
+      "total_gross": 775000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Justify",
+          "horse_name": "Just Sayin C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 225,
+          "price": 775000,
+          "status": "Sold",
+          "consignor": "Lane's End",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zaffing": {
+      "canonical_name": "Zaffing",
+      "damsire": "Ghostzapper",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 60000,
+      "total_gross": 60000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Dr. Schivel",
+          "horse_name": "UNNAMED C 2025",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 1897,
+          "price": 60000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zippy Jo": {
+      "canonical_name": "Zippy Jo",
+      "damsire": "City Zip",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 10000,
+      "total_gross": 10000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Mitole",
+          "horse_name": "UNNAMED C 2025",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10376/keeneland-january-horses-of-all-ages-sale-2026/",
+          "hip": 520,
+          "price": 10000,
+          "status": "Sold",
+          "consignor": "St George Sales",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zia Josie": {
+      "canonical_name": "Zia Josie",
+      "damsire": "Tiznow",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 1000,
+      "total_gross": 1000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Goldencents",
+          "horse_name": "UNNAMED C 2025",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10376/keeneland-january-horses-of-all-ages-sale-2026/",
+          "hip": 1067,
+          "price": 1000,
+          "status": "Sold",
+          "consignor": "Paramount Sales",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Zeta Zody": {
+      "canonical_name": "Zeta Zody",
+      "damsire": "Omega Code",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 2500,
+      "total_gross": 2500,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Zandon",
+          "horse_name": "My Sushi Dream C 2025",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2026",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10376/keeneland-january-horses-of-all-ages-sale-2026/",
+          "hip": 519,
+          "price": 2500,
+          "status": "Sold",
+          "consignor": "Legacy Bloodstock, for Sycamore Bark Thoroughbreds",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    }
+  }
+}

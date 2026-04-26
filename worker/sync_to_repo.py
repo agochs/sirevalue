@@ -91,7 +91,12 @@ def main() -> int:
         ("catalog-scoring-index.json",      "public/data/catalog-scoring-index.json", False),
         ("validation.json",                 "public/data/validation.json",          False),
         ("first-crop-predictions.json",     "public/data/first-crop-predictions.json", False),
+        ("sales-calendar.json",             "public/data/sales-calendar.json",      False),
+        ("dam-lookup-index.json",           "public/data/dam-lookup-index.json",    False),
     ]
+    # Per-letter dam-lookup shards (one per first-letter, lazy-fetched by /dams page)
+    for p in sorted(output_dir.glob("dam-lookup-shard-*.json")):
+        data_files.append((p.name, f"public/data/dams/{p.name}", False))
     # Per-sale catalog scoring files (one per sale, lazily fetched by the
     # catalogs page). Mirror them into public/data/catalogs/.
     for p in sorted(output_dir.glob("catalog-scoring-sale-*.json")):

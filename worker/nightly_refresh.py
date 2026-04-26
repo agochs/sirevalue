@@ -207,6 +207,8 @@ def rebuild() -> None:
         "score_catalog.py",
         "compute_validation.py",
         "compute_first_crop_predictions.py",
+        "compute_sales_calendar.py",
+        "compute_dam_lookup.py",
     ):
         script_path = HERE / script
         if not script_path.exists():

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Dam Lookup</title>
+<meta property="og:title" content="SireValue — Dam Lookup"/>
+<meta property="og:description" content="Search any thoroughbred broodmare to see her progeny across U.S. sales 2022–2026, plus realized pinhook pairs."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; margin: 0 0 10px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 72ch; }
+
+.search-card {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 16px 20px; margin-bottom: 14px;
+}
+.search-card label {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px;
+  display: block; margin-bottom: 6px;
+}
+.search-card input {
+  width: 100%; padding: 10px 12px; font-size: 16px; font-family: inherit;
+  border: 1px solid var(--rule); border-radius: 6px; background: var(--cream); color: var(--ink);
+}
+.search-card .meta { font-size: 12px; color: var(--ink-soft); margin-top: 6px; }
+
+.suggestions, .top-list {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  margin-bottom: 14px; overflow: hidden;
+}
+.suggestion-row, .top-row {
+  display: grid; grid-template-columns: 1fr auto auto auto; gap: 12px; align-items: center;
+  padding: 10px 16px; font-size: 13px; cursor: pointer;
+}
+.suggestion-row + .suggestion-row,
+.top-row + .top-row { border-top: 1px solid var(--rule); }
+.suggestion-row:hover, .top-row:hover { background: #faf5e6; }
+.suggestion-row .name, .top-row .name { font-weight: 600; color: var(--ink); }
+.suggestion-row .meta, .top-row .meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.suggestion-row .gross, .top-row .gross {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; color: var(--ink);
+  white-space: nowrap; font-size: 13px;
+}
+.suggestion-row .pairs, .top-row .pairs {
+  font-size: 11px; color: var(--good); font-weight: 600; white-space: nowrap;
+}
+.suggestion-row .foals, .top-row .foals {
+  font-size: 11px; color: var(--ink-soft); white-space: nowrap;
+}
+
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 18px 0 10px; font-weight: 600;
+}
+
+.dam-profile {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 22px 24px; margin-bottom: 14px;
+}
+.dam-profile h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 24px; margin: 0; font-weight: 700;
+}
+.dam-profile .by-line { font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+.dam-profile .summary-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); margin: 14px 0;
+}
+.dam-profile .stat-cell { text-align: center; font-size: 12px; color: var(--ink-soft); }
+.dam-profile .stat-cell b {
+  display: block; font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.2;
+}
+
+.progeny-row, .pair-row {
+  display: grid; grid-template-columns: auto 1fr auto auto; gap: 12px;
+  padding: 8px 0; border-bottom: 1px dashed var(--rule); font-size: 13px; align-items: center;
+}
+.progeny-row:last-child, .pair-row:last-child { border-bottom: none; }
+.progeny-row .foal-year, .pair-row .cohort {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; color: var(--ink-soft);
+  font-size: 12px; min-width: 36px;
+}
+.progeny-row .horse-block .name { font-weight: 600; color: var(--ink); }
+.progeny-row .horse-block .meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.progeny-row .horse-block a { color: var(--ink); text-decoration: none; }
+.progeny-row .horse-block a:hover { text-decoration: underline; }
+.progeny-row .price, .pair-row .prices {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 14px;
+  white-space: nowrap;
+}
+.progeny-row .price.rna { color: var(--weak); font-size: 12px; }
+.progeny-row .kind-pill, .pair-row .ret-pill {
+  display: inline-block; padding: 1px 7px; border-radius: 8px; font-size: 10px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+  background: #f0eadb; color: var(--ink-soft);
+}
+.kind-pill.yearling   { background: #d6ecdb; color: #275731; }
+.kind-pill.twoyo      { background: #fef3c7; color: #78350f; }
+.kind-pill.broodmare  { background: #f4e2e8; color: #80345a; }
+.pair-row .ret {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 14px;
+}
+.pair-row .ret.up   { color: var(--good); }
+.pair-row .ret.down { color: var(--weak); }
+
+.empty {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 28px; text-align: center; color: var(--ink-soft); font-size: 14px;
+}
+.method-note {
+  background: var(--card); border-left: 3px solid var(--gold);
+  padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+.method-note b { color: var(--ink); }
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+@media (max-width: 720px) {
+  .hero h1 { font-size: 22px; }
+  .progeny-row, .pair-row { grid-template-columns: 1fr auto; gap: 6px; }
+  .progeny-row .foal-year, .pair-row .cohort { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Dam Lookup</div>
+  </div>
+
+  <div class="hero">
+    <h1>Look up any broodmare.</h1>
+    <p>Search 13,000+ thoroughbred dams across major U.S. sales 2022–2026. For each mare, see her progeny by foal year (every yearling, 2YO, broodmare appearance), plus any realized pinhook pairs (the same horse sold as both yearling and 2YO). Useful for evaluating female families, scouting nicks, and validating dam-line claims.</p>
+  </div>
+
+  <div class="search-card">
+    <label>Search by dam name</label>
+    <input id="search" type="search" placeholder="e.g. Rachel Alexandra, Songbird, Heavenly Love…" autocomplete="off" autofocus/>
+    <div class="meta" id="search-meta">Indexed 13,000+ dams. Type to filter — top matches by total gross are shown.</div>
+  </div>
+
+  <div id="render-area">
+    <div class="empty">Loading dam index…</div>
+  </div>
+
+  <div class="method-note">
+    <b>How it works.</b> We aggregate every public sale appearance by dam name, normalized for casing and country suffixes (so "Heavenly Love" and "Heavenly Love (USA)" fold together). Dams whose names normalize to fewer than 4 characters are excluded as scrape-truncation artifacts. Progeny are bucketed by foal year (yearling sale year minus 1, 2YO sale year minus 2). Matched pinhook pairs come from <a href="/pinhooks.html" style="color:var(--ink);">the realized pinhook dataset</a>. Source: Keeneland, Fasig-Tipton, OBS.
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/calendar.html">sales calendar</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function fmtMoney(n) { return n == null ? '—' : '$' + Number(n).toLocaleString(); }
+  function fmtPct(p)   { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).toFixed(1) + '%'; }
+  function pctCls(p)   { return p == null ? '' : (p > 0.5 ? 'up' : (p < -0.5 ? 'down' : '')); }
+
+  let index;
+  try {
+    const resp = await fetch('/data/dam-lookup-index.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    index = await resp.json();
+  } catch (e) {
+    document.getElementById('render-area').innerHTML =
+      '<div class="empty" style="color:var(--weak);">Failed to load dam index: ' + escapeHtml(e.message) + '</div>';
+    return;
+  }
+
+  const allDams = index.dams || [];
+  document.getElementById('search-meta').textContent =
+    'Indexed ' + (index.summary?.total_dams || 0).toLocaleString() + ' dams · '
+    + (index.summary?.dams_with_pairs || 0).toLocaleString() + ' have realized pinhook pairs · '
+    + (index.summary?.total_appearances || 0).toLocaleString() + ' total sale appearances';
+
+  // In-memory cache of loaded shards
+  const shardCache = {};
+  async function loadShard(shard) {
+    if (shardCache[shard]) return shardCache[shard];
+    try {
+      const r = await fetch('/data/dams/dam-lookup-shard-' + shard + '.json');
+      if (!r.ok) throw new Error('shard fetch ' + r.status);
+      const data = await r.json();
+      shardCache[shard] = data.by_dam || {};
+      return shardCache[shard];
+    } catch (e) {
+      shardCache[shard] = {};
+      return {};
+    }
+  }
+
+  function rowHtml(d, ctx) {
+    const cls = ctx === 'top' ? 'top-row' : 'suggestion-row';
+    return '<div class="' + cls + '" data-name="' + escapeHtml(d.name) + '" data-shard="' + d.shard + '">'
+      + '<div>'
+      +   '<div class="name">' + escapeHtml(d.name) + '</div>'
+      +   '<div class="meta">' + (d.damsire ? 'by ' + escapeHtml(d.damsire) : '—') + '</div>'
+      + '</div>'
+      + '<div class="foals">' + d.distinct_foals + ' foal' + (d.distinct_foals === 1 ? '' : 's') + ' · ' + d.sold_count + ' sold</div>'
+      + '<div class="pairs">' + (d.matched_pairs_n ? d.matched_pairs_n + ' pinhook' + (d.matched_pairs_n === 1 ? '' : 's') : '') + '</div>'
+      + '<div class="gross">' + fmtMoney(d.total_gross) + '</div>'
+      + '</div>';
+  }
+
+  function renderTopList() {
+    // Show top 25 by total gross by default
+    const top = allDams.slice(0, 25);
+    const html = ''
+      + '<div class="section-title">Most-represented dams (by total progeny gross)</div>'
+      + '<div class="top-list">' + top.map(function(d) { return rowHtml(d, 'top'); }).join('') + '</div>';
+    document.getElementById('render-area').innerHTML = html;
+    wireRows();
+  }
+
+  function renderSuggestions(q) {
+    if (q.length < 2) { renderTopList(); return; }
+    // Filter — case-insensitive substring match on canonical name
+    const ql = q.toLowerCase();
+    const matches = allDams.filter(function(d) {
+      return d.name.toLowerCase().indexOf(ql) !== -1;
+    }).slice(0, 30);
+    if (matches.length === 0) {
+      document.getElementById('render-area').innerHTML =
+        '<div class="empty">No dams match "' + escapeHtml(q) + '". Try a partial match — e.g. "song" instead of "Songbird".</div>';
+      return;
+    }
+    const html = ''
+      + '<div class="section-title">' + matches.length + ' match' + (matches.length === 1 ? '' : 'es') + ' for "' + escapeHtml(q) + '"</div>'
+      + '<div class="suggestions">' + matches.map(function(d) { return rowHtml(d, 'sugg'); }).join('') + '</div>';
+    document.getElementById('render-area').innerHTML = html;
+    wireRows();
+  }
+
+  function wireRows() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-name][data-shard]'), function(el) {
+      el.addEventListener('click', function() {
+        renderProfile(el.getAttribute('data-name'), el.getAttribute('data-shard'));
+      });
+    });
+  }
+
+  async function renderProfile(name, shard) {
+    document.getElementById('render-area').innerHTML = '<div class="empty">Loading ' + escapeHtml(name) + '…</div>';
+    const shardData = await loadShard(shard);
+    const blob = shardData[name];
+    if (!blob) {
+      document.getElementById('render-area').innerHTML =
+        '<div class="empty">Couldn\'t load profile for ' + escapeHtml(name) + '.</div>';
+      return;
+    }
+
+    const summaryHtml = ''
+      + '<div class="summary-grid">'
+      +   '<div class="stat-cell"><b>' + blob.distinct_foals + '</b>foals seen</div>'
+      +   '<div class="stat-cell"><b>' + blob.total_appearances + '</b>sale appearances</div>'
+      +   '<div class="stat-cell"><b>' + blob.sold_count + '</b>sold</div>'
+      +   '<div class="stat-cell"><b>' + fmtMoney(blob.top_price) + '</b>top hammer</div>'
+      +   '<div class="stat-cell"><b>' + fmtMoney(blob.total_gross) + '</b>total gross</div>'
+      +   '<div class="stat-cell"><b>' + (blob.matched_pairs?.length || 0) + '</b>pinhook pairs</div>'
+      + '</div>';
+
+    const progenyHtml = (blob.progeny || []).map(function(p) {
+      const sireUrl = '/stallion-card.html?s=' + encodeURIComponent(p.sire || '');
+      const sale = p.sale_url
+        ? '<a href="' + escapeHtml(p.sale_url) + '" target="_blank" rel="noopener">' + escapeHtml(p.sale_name) + '</a>'
+        : escapeHtml(p.sale_name || '');
+      let priceHtml;
+      if (p.price != null) {
+        priceHtml = '<div class="price">' + fmtMoney(p.price) + '</div>';
+      } else if ((p.status || '').toLowerCase() === 'rna') {
+        priceHtml = '<div class="price rna">RNA</div>';
+      } else {
+        priceHtml = '<div class="price" style="color:var(--ink-soft);font-style:italic;font-size:12px;font-weight:400;">—</div>';
+      }
+      return '<div class="progeny-row">'
+        + '<div class="foal-year">' + (p.foal_year || '—') + '</div>'
+        + '<div class="horse-block">'
+        +   '<div class="name">' + escapeHtml(p.horse_name || '(unnamed)') + ' <span style="color:var(--ink-soft);font-weight:400;font-size:12px;">— by <a href="' + sireUrl + '">' + escapeHtml(p.sire || '—') + '</a></span></div>'
+        +   '<div class="meta">' + sale + (p.hip ? ' · Hip ' + escapeHtml(String(p.hip)) : '') + (p.consignor ? ' · ' + escapeHtml(p.consignor) : '') + '</div>'
+        + '</div>'
+        + '<div class="kind-pill ' + p.kind + '">' + p.kind + '</div>'
+        + priceHtml
+        + '</div>';
+    }).join('');
+
+    let pairsHtml = '';
+    if ((blob.matched_pairs || []).length) {
+      pairsHtml = ''
+        + '<div class="section-title">Realized pinhook pairs · same horse sold yearling → 2YO</div>'
+        + '<div style="background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;">'
+        + blob.matched_pairs.map(function(m) {
+            const cls = pctCls(m.return_pct);
+            const sireUrl = '/stallion-card.html?s=' + encodeURIComponent(m.stallion || '');
+            return '<div class="pair-row">'
+              + '<div class="cohort">' + (m.cohort || '') + '</div>'
+              + '<div>'
+              +   '<div style="font-weight:600;">' + escapeHtml(m.horse_name || '(unnamed)') + ' <span style="color:var(--ink-soft);font-weight:400;font-size:12px;">— by <a href="' + sireUrl + '" style="color:var(--ink);">' + escapeHtml(m.stallion || '') + '</a></span></div>'
+              + '</div>'
+              + '<div class="prices" style="color:var(--ink-soft);font-size:12px;font-weight:400;">' + fmtMoney(m.yearling_price) + ' → ' + fmtMoney(m.twoyo_price) + '</div>'
+              + '<div class="ret ' + cls + '">' + fmtPct(m.return_pct) + '</div>'
+              + '</div>';
+          }).join('')
+        + '</div>';
+    }
+
+    document.getElementById('render-area').innerHTML = ''
+      + '<div class="dam-profile">'
+      +   '<h2>' + escapeHtml(blob.canonical_name || name) + '</h2>'
+      +   '<div class="by-line">' + (blob.damsire ? 'by ' + escapeHtml(blob.damsire) : '— damsire unknown —') + '</div>'
+      +   summaryHtml
+      +   '<div class="section-title" style="margin-top:0;">Progeny seen at sales</div>'
+      +   progenyHtml
+      + '</div>'
+      + pairsHtml;
+  }
+
+  // Search box wiring
+  let searchTimer = null;
+  document.getElementById('search').addEventListener('input', function(e) {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(function() {
+      renderSuggestions(e.target.value || '');
+    }, 80);
+  });
+
+  // Default view
+  renderTopList();
+})();
+</script>
+</body>
+</html>

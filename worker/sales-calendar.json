@@ -1,0 +1,775 @@
+{
+  "generated_at": "2026-04-26T04:44:42Z",
+  "current_year": 2026,
+  "current_month": 4,
+  "summary": {
+    "completed": 29,
+    "upcoming": 16,
+    "anticipated": 16
+  },
+  "by_year": {
+    "2026": [
+      {
+        "sale_name": "Keeneland January Horses Of All Ages Sale 2026",
+        "slug": "keeneland-january-horses-of-all-ages-sale-2026",
+        "kind": "other",
+        "status": "completed",
+        "month": 1,
+        "month_label": "January",
+        "approx_window": "Early-mid Jan",
+        "hip_count": 527,
+        "sold_count": 434,
+        "gross_usd": 33722700,
+        "signal_counts": {
+          "strong": 225,
+          "positive": 138,
+          "neutral": 45,
+          "weak": 7,
+          "none": 112
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2026",
+        "slug": "fasig-tipton-kentucky-winter-mixed-sale-2026",
+        "kind": "mixed",
+        "status": "completed",
+        "month": 2,
+        "month_label": "February",
+        "approx_window": "Late Jan-Feb",
+        "hip_count": 185,
+        "sold_count": 154,
+        "gross_usd": 9962000,
+        "signal_counts": {
+          "strong": 89,
+          "positive": 49,
+          "neutral": 12,
+          "weak": 3,
+          "none": 32
+        }
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2026",
+        "slug": "ocala-breeders-sales-co-winter-mixed-sale-2026",
+        "kind": "mixed",
+        "status": "completed",
+        "month": 2,
+        "month_label": "February",
+        "approx_window": "Late Jan-Feb",
+        "hip_count": 77,
+        "sold_count": 54,
+        "gross_usd": 1557250,
+        "signal_counts": {
+          "strong": 30,
+          "positive": 30,
+          "neutral": 3,
+          "weak": 0,
+          "none": 14
+        }
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026",
+        "kind": "twoyo",
+        "status": "completed",
+        "month": 3,
+        "month_label": "March",
+        "approx_window": "Mid March",
+        "hip_count": 420,
+        "sold_count": 327,
+        "gross_usd": 62734000,
+        "signal_counts": {
+          "strong": 267,
+          "positive": 125,
+          "neutral": 20,
+          "weak": 6,
+          "none": 2
+        }
+      },
+      {
+        "sale_name": "Keeneland April Horses Of Racing Age Sale 2026",
+        "slug": "keeneland-april-horses-of-racing-age-sale-2026",
+        "kind": "hora",
+        "status": "completed",
+        "month": 4,
+        "month_label": "April",
+        "approx_window": "Mid April",
+        "hip_count": 8,
+        "sold_count": 7,
+        "gross_usd": 1067000,
+        "signal_counts": {
+          "strong": 4,
+          "positive": 3,
+          "neutral": 1,
+          "weak": 0,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "OBS Spring Sale of 2YOs in Training 2026",
+        "slug": "obs-spring-sale-of-2yos-in-training-2026",
+        "kind": "twoyo",
+        "status": "completed",
+        "month": 4,
+        "month_label": "April",
+        "approx_window": "Mid-late April",
+        "hip_count": 609,
+        "sold_count": 504,
+        "gross_usd": 99370000,
+        "signal_counts": {
+          "strong": 363,
+          "positive": 200,
+          "neutral": 35,
+          "weak": 9,
+          "none": 2
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2026",
+        "slug": null,
+        "kind": "twoyo",
+        "status": "anticipated",
+        "month": 5,
+        "month_label": "May",
+        "approx_window": "May (Fasig Midlantic 2YO)",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2026",
+        "slug": null,
+        "kind": "twoyo",
+        "status": "anticipated",
+        "month": 6,
+        "month_label": "June",
+        "approx_window": "Mid June",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton July Horses Of Racing Age Sale 2026",
+        "slug": null,
+        "kind": "hora",
+        "status": "anticipated",
+        "month": 7,
+        "month_label": "July",
+        "approx_window": "Mid July",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2026",
+        "slug": null,
+        "kind": "yearling",
+        "status": "anticipated",
+        "month": 7,
+        "month_label": "July",
+        "approx_window": "Mid July",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2026",
+        "slug": null,
+        "kind": "yearling",
+        "status": "anticipated",
+        "month": 8,
+        "month_label": "August",
+        "approx_window": "Early August",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton Saratoga Select Yearling Sale 2026",
+        "slug": null,
+        "kind": "yearling",
+        "status": "anticipated",
+        "month": 8,
+        "month_label": "August",
+        "approx_window": "Aug 11-12 (Selected)",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Keeneland September Yearling Sale 2026",
+        "slug": null,
+        "kind": "yearling",
+        "status": "anticipated",
+        "month": 9,
+        "month_label": "September",
+        "approx_window": "Sep 8-19 (Keeneland)",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton California Fall Yearling Sale 2026",
+        "slug": null,
+        "kind": "yearling",
+        "status": "anticipated",
+        "month": 10,
+        "month_label": "October",
+        "approx_window": "October (Fasig California)",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2026",
+        "slug": null,
+        "kind": "yearling",
+        "status": "anticipated",
+        "month": 10,
+        "month_label": "October",
+        "approx_window": "Mid October",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic Fall Yearling Sale 2026",
+        "slug": null,
+        "kind": "yearling",
+        "status": "anticipated",
+        "month": 10,
+        "month_label": "October",
+        "approx_window": "October (Fasig Midlantic)",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2026",
+        "slug": null,
+        "kind": "yearling",
+        "status": "anticipated",
+        "month": 10,
+        "month_label": "October",
+        "approx_window": "Mid October",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky November Sale 2026",
+        "slug": null,
+        "kind": "other",
+        "status": "anticipated",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "Early-mid November",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Fasig Tipton New York Fall Mixed Sale 2026",
+        "slug": null,
+        "kind": "mixed",
+        "status": "anticipated",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "November (Fasig NY Fall)",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Keeneland Championship Sale 2026",
+        "slug": null,
+        "kind": "other",
+        "status": "anticipated",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "November",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Keeneland November Breeding Stock Sale 2026",
+        "slug": null,
+        "kind": "broodmare",
+        "status": "anticipated",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "Nov 4-15 (Keeneland)",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      },
+      {
+        "sale_name": "Keeneland November Horses Of Racing Age Sale 2026",
+        "slug": null,
+        "kind": "hora",
+        "status": "anticipated",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "Early-mid November",
+        "hip_count": 0,
+        "sold_count": 0,
+        "gross_usd": 0,
+        "signal_counts": {}
+      }
+    ],
+    "2025": [
+      {
+        "sale_name": "Keeneland January Horses Of All Ages Sale 2025",
+        "slug": "keeneland-january-horses-of-all-ages-sale-2025",
+        "kind": "other",
+        "status": "completed",
+        "month": 1,
+        "month_label": "January",
+        "approx_window": "Early-mid Jan",
+        "hip_count": 525,
+        "sold_count": 409,
+        "gross_usd": 20846000,
+        "signal_counts": {
+          "strong": 274,
+          "positive": 183,
+          "neutral": 59,
+          "weak": 9,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2025",
+        "slug": "fasig-tipton-kentucky-winter-mixed-sale-2025",
+        "kind": "mixed",
+        "status": "completed",
+        "month": 2,
+        "month_label": "February",
+        "approx_window": "Late Jan-Feb",
+        "hip_count": 180,
+        "sold_count": 149,
+        "gross_usd": 7324000,
+        "signal_counts": {
+          "strong": 95,
+          "positive": 68,
+          "neutral": 16,
+          "weak": 1,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co Winter Mixed Sale 2025",
+        "slug": "ocala-breeders-sales-co-winter-mixed-sale-2025",
+        "kind": "mixed",
+        "status": "completed",
+        "month": 2,
+        "month_label": "February",
+        "approx_window": "Late Jan-Feb",
+        "hip_count": 74,
+        "sold_count": 54,
+        "gross_usd": 1602500,
+        "signal_counts": {
+          "strong": 42,
+          "positive": 23,
+          "neutral": 8,
+          "weak": 1,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2025",
+        "kind": "twoyo",
+        "status": "completed",
+        "month": 3,
+        "month_label": "March",
+        "approx_window": "Mid March",
+        "hip_count": 351,
+        "sold_count": 289,
+        "gross_usd": 54481000,
+        "signal_counts": {
+          "strong": 213,
+          "positive": 80,
+          "neutral": 42,
+          "weak": 16,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Keeneland April Horses Of Racing Age Sale 2025",
+        "slug": "keeneland-april-horses-of-racing-age-sale-2025",
+        "kind": "hora",
+        "status": "completed",
+        "month": 4,
+        "month_label": "April",
+        "approx_window": "Mid April",
+        "hip_count": 31,
+        "sold_count": 31,
+        "gross_usd": 2920000,
+        "signal_counts": {
+          "strong": 17,
+          "positive": 11,
+          "neutral": 3,
+          "weak": 0,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+        "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025",
+        "kind": "twoyo",
+        "status": "completed",
+        "month": 4,
+        "month_label": "April",
+        "approx_window": "Mid-late April",
+        "hip_count": 529,
+        "sold_count": 440,
+        "gross_usd": 71024500,
+        "signal_counts": {
+          "strong": 306,
+          "positive": 140,
+          "neutral": 68,
+          "weak": 15,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+        "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2025",
+        "kind": "twoyo",
+        "status": "completed",
+        "month": 5,
+        "month_label": "May",
+        "approx_window": "May (Fasig Midlantic 2YO)",
+        "hip_count": 289,
+        "sold_count": 221,
+        "gross_usd": 33860500,
+        "signal_counts": {
+          "strong": 172,
+          "positive": 82,
+          "neutral": 29,
+          "weak": 6,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025",
+        "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025",
+        "kind": "twoyo",
+        "status": "completed",
+        "month": 6,
+        "month_label": "June",
+        "approx_window": "Mid June",
+        "hip_count": 295,
+        "sold_count": 250,
+        "gross_usd": 17203000,
+        "signal_counts": {
+          "strong": 163,
+          "positive": 72,
+          "neutral": 48,
+          "weak": 12,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton July Horses Of Racing Age Sale 2025",
+        "slug": "fasig-tipton-july-horses-of-racing-age-sale-2025",
+        "kind": "hora",
+        "status": "completed",
+        "month": 7,
+        "month_label": "July",
+        "approx_window": "Mid July",
+        "hip_count": 37,
+        "sold_count": 35,
+        "gross_usd": 6080000,
+        "signal_counts": {
+          "strong": 18,
+          "positive": 12,
+          "neutral": 7,
+          "weak": 0,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2025",
+        "slug": "fasig-tipton-kentucky-select-july-yearling-sale-2025",
+        "kind": "yearling",
+        "status": "completed",
+        "month": 7,
+        "month_label": "July",
+        "approx_window": "Mid July",
+        "hip_count": 186,
+        "sold_count": 138,
+        "gross_usd": 15705000,
+        "signal_counts": {
+          "strong": 117,
+          "positive": 58,
+          "neutral": 10,
+          "weak": 1,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2025",
+        "slug": "fasig-tipton-saratoga-new-york-bred-yearling-sale-2025",
+        "kind": "yearling",
+        "status": "completed",
+        "month": 8,
+        "month_label": "August",
+        "approx_window": "Early August",
+        "hip_count": 189,
+        "sold_count": 151,
+        "gross_usd": 20310000,
+        "signal_counts": {
+          "strong": 109,
+          "positive": 64,
+          "neutral": 12,
+          "weak": 4,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Saratoga Select Yearling Sale 2025",
+        "slug": "fasig-tipton-saratoga-select-yearling-sale-2025",
+        "kind": "yearling",
+        "status": "completed",
+        "month": 8,
+        "month_label": "August",
+        "approx_window": "Aug 11-12 (Selected)",
+        "hip_count": 163,
+        "sold_count": 147,
+        "gross_usd": 92385000,
+        "signal_counts": {
+          "strong": 78,
+          "positive": 51,
+          "neutral": 25,
+          "weak": 0,
+          "none": 9
+        }
+      },
+      {
+        "sale_name": "Keeneland September Yearling Sale 2025",
+        "slug": "keeneland-september-yearling-sale-2025",
+        "kind": "yearling",
+        "status": "completed",
+        "month": 9,
+        "month_label": "September",
+        "approx_window": "Sep 8-19 (Keeneland)",
+        "hip_count": 3091,
+        "sold_count": 2547,
+        "gross_usd": 479251500,
+        "signal_counts": {
+          "strong": 1597,
+          "positive": 1114,
+          "neutral": 297,
+          "weak": 31,
+          "none": 52
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton California Fall Yearling Sale 2025",
+        "slug": "fasig-tipton-california-fall-yearling-sale-2025",
+        "kind": "yearling",
+        "status": "completed",
+        "month": 10,
+        "month_label": "October",
+        "approx_window": "October (Fasig California)",
+        "hip_count": 52,
+        "sold_count": 23,
+        "gross_usd": 1866500,
+        "signal_counts": {
+          "strong": 27,
+          "positive": 15,
+          "neutral": 9,
+          "weak": 1,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2025",
+        "slug": "fasig-tipton-kentucky-october-yearling-sale-2025",
+        "kind": "yearling",
+        "status": "completed",
+        "month": 10,
+        "month_label": "October",
+        "approx_window": "Mid October",
+        "hip_count": 1011,
+        "sold_count": 859,
+        "gross_usd": 63553000,
+        "signal_counts": {
+          "strong": 540,
+          "positive": 371,
+          "neutral": 74,
+          "weak": 24,
+          "none": 2
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic Fall Yearling Sale 2025",
+        "slug": "fasig-tipton-midlantic-fall-yearling-sale-2025",
+        "kind": "yearling",
+        "status": "completed",
+        "month": 10,
+        "month_label": "October",
+        "approx_window": "October (Fasig Midlantic)",
+        "hip_count": 89,
+        "sold_count": 72,
+        "gross_usd": 3250200,
+        "signal_counts": {
+          "strong": 44,
+          "positive": 34,
+          "neutral": 6,
+          "weak": 5,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2025",
+        "slug": "ocala-breeders-sales-co-october-yearling-sale-2025",
+        "kind": "yearling",
+        "status": "completed",
+        "month": 10,
+        "month_label": "October",
+        "approx_window": "Mid October",
+        "hip_count": 148,
+        "sold_count": 106,
+        "gross_usd": 3869000,
+        "signal_counts": {
+          "strong": 88,
+          "positive": 48,
+          "neutral": 9,
+          "weak": 3,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky November Sale 2025",
+        "slug": "fasig-tipton-kentucky-november-sale-2025",
+        "kind": "other",
+        "status": "completed",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "Early-mid November",
+        "hip_count": 117,
+        "sold_count": 99,
+        "gross_usd": 56885000,
+        "signal_counts": {
+          "strong": 40,
+          "positive": 36,
+          "neutral": 10,
+          "weak": 1,
+          "none": 30
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton New York Fall Mixed Sale 2025",
+        "slug": "fasig-tipton-new-york-fall-mixed-sale-2025",
+        "kind": "mixed",
+        "status": "completed",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "November (Fasig NY Fall)",
+        "hip_count": 91,
+        "sold_count": 67,
+        "gross_usd": 4392000,
+        "signal_counts": {
+          "strong": 33,
+          "positive": 18,
+          "neutral": 3,
+          "weak": 3,
+          "none": 34
+        }
+      },
+      {
+        "sale_name": "Keeneland Championship Sale 2025",
+        "slug": "keeneland-championship-sale-2025",
+        "kind": "other",
+        "status": "completed",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "November",
+        "hip_count": 5,
+        "sold_count": 4,
+        "gross_usd": 2675000,
+        "signal_counts": {
+          "strong": 3,
+          "positive": 2,
+          "neutral": 0,
+          "weak": 0,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Keeneland November Breeding Stock Sale 2025",
+        "slug": "keeneland-november-breeding-stock-sale-2025",
+        "kind": "broodmare",
+        "status": "completed",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "Nov 4-15 (Keeneland)",
+        "hip_count": 1400,
+        "sold_count": 1187,
+        "gross_usd": 160546100,
+        "signal_counts": {
+          "strong": 621,
+          "positive": 367,
+          "neutral": 140,
+          "weak": 8,
+          "none": 264
+        }
+      },
+      {
+        "sale_name": "Keeneland November Horses Of Racing Age Sale 2025",
+        "slug": "keeneland-november-horses-of-racing-age-sale-2025",
+        "kind": "hora",
+        "status": "completed",
+        "month": 11,
+        "month_label": "November",
+        "approx_window": "Early-mid November",
+        "hip_count": 80,
+        "sold_count": 74,
+        "gross_usd": 7352500,
+        "signal_counts": {
+          "strong": 40,
+          "positive": 28,
+          "neutral": 12,
+          "weak": 0,
+          "none": 0
+        }
+      },
+      {
+        "sale_name": "Fasig Tipton Digital Major Reduction Of Harris Farms 2025",
+        "slug": "fasig-tipton-digital-major-reduction-of-harris-farms-2025",
+        "kind": "other",
+        "status": "completed",
+        "month": 0,
+        "month_label": "Unknown",
+        "approx_window": null,
+        "hip_count": 11,
+        "sold_count": 11,
+        "gross_usd": 203500,
+        "signal_counts": {
+          "strong": 3,
+          "positive": 6,
+          "neutral": 2,
+          "weak": 0,
+          "none": 0
+        }
+      }
+    ]
+  }
+}

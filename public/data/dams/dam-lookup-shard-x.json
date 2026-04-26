@@ -1,0 +1,223 @@
+{
+  "shard": "x",
+  "by_dam": {
+    "Xs Belle": {
+      "canonical_name": "Xs Belle",
+      "damsire": "Dynaformer",
+      "total_appearances": 1,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 45000,
+      "total_gross": 45000,
+      "progeny": [
+        {
+          "foal_year": 2021,
+          "sire": "Mitole",
+          "horse_name": "Mitolemybelle F 2021",
+          "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2022",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2022/9807/fasig-tipton-kentucky-october-yearling-sale-2022/",
+          "hip": 400,
+          "price": 45000,
+          "status": "Sold",
+          "consignor": "Taylor Made Sales Agency, for Town & Country Horse Farms, LLC",
+          "kind": "yearling"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Xtrapleasure": {
+      "canonical_name": "Xtrapleasure",
+      "damsire": "Mr. Greeley",
+      "total_appearances": 2,
+      "distinct_foals": 1,
+      "sold_count": 1,
+      "top_price": 12000,
+      "total_gross": 12000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Mineshaft",
+          "horse_name": "Fogg Cove F 2023",
+          "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10112/fasig-tipton-kentucky-select-july-yearling-sale-2024/",
+          "hip": 89,
+          "price": 12000,
+          "status": "Sold",
+          "consignor": "Legacy Bloodstock",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Mineshaft",
+          "horse_name": "Fogg Cove F 2023",
+          "sale_name": "Keeneland November Breeding Stock Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9986/keeneland-november-breeding-stock-sale-2023/",
+          "hip": 3018,
+          "price": null,
+          "status": "Rna",
+          "consignor": "Sycamore Bark Thoroughbreds",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Xtra Spice": {
+      "canonical_name": "Xtra Spice",
+      "damsire": "Quality Road",
+      "total_appearances": 3,
+      "distinct_foals": 1,
+      "sold_count": 2,
+      "top_price": 300000,
+      "total_gross": 380000,
+      "progeny": [
+        {
+          "foal_year": 2024,
+          "sire": "Golden Pal",
+          "horse_name": "Gradient Booster C 2024",
+          "sale_name": "Keeneland September Yearling Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10320/keeneland-september-yearling-sale-2025/",
+          "hip": 1394,
+          "price": 300000,
+          "status": "Sold",
+          "consignor": "Legacy Bloodstock",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Golden Pal",
+          "horse_name": "Gradient Booster C 2024",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10223/keeneland-january-horses-of-all-ages-sale-2025/",
+          "hip": 503,
+          "price": 80000,
+          "status": "Sold",
+          "consignor": "Warrendale Sales",
+          "kind": "other"
+        },
+        {
+          "foal_year": null,
+          "sire": "Nyquist",
+          "horse_name": "Ranger Fox H 2018",
+          "sale_name": "Keeneland April Horses Of Racing Age Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9893/keeneland-april-horses-of-racing-age-sale-2023/",
+          "hip": 57,
+          "price": null,
+          "status": "Rna",
+          "consignor": "ELiTE",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    },
+    "Xoxo": {
+      "canonical_name": "Xoxo",
+      "damsire": "Majestic Warrior",
+      "total_appearances": 5,
+      "distinct_foals": 2,
+      "sold_count": 5,
+      "top_price": 150000,
+      "total_gross": 245000,
+      "progeny": [
+        {
+          "foal_year": 2023,
+          "sire": "Known Agenda",
+          "horse_name": "Spotted F 2023",
+          "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10243/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2025/",
+          "hip": 700,
+          "price": 55000,
+          "status": "Sold",
+          "consignor": "Omega Farm",
+          "kind": "twoyo"
+        },
+        {
+          "foal_year": 2023,
+          "sire": "Known Agenda",
+          "horse_name": "Spotted F 2023",
+          "sale_name": "Keeneland September Yearling Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10163/keeneland-september-yearling-sale-2024/",
+          "hip": 3959,
+          "price": 7000,
+          "status": "Sold",
+          "consignor": "Legacy Bloodstock, for Spendthrift Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": 2022,
+          "sire": "Vino Rosso",
+          "horse_name": "Dr Ruben M C 2022",
+          "sale_name": "Keeneland September Yearling Sale 2023",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9962/keeneland-september-yearling-sale-2023/",
+          "hip": 1564,
+          "price": 150000,
+          "status": "Sold",
+          "consignor": "Four Star Sales, for Spendthrift Farm",
+          "kind": "yearling"
+        },
+        {
+          "foal_year": null,
+          "sire": "Known Agenda",
+          "horse_name": "UNNAMED F 2024",
+          "sale_name": "Keeneland November Breeding Stock Sale 2024",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10199/keeneland-november-breeding-stock-sale-2024/",
+          "hip": 3243,
+          "price": 30000,
+          "status": "Sold",
+          "consignor": "Denali Stud, for Spendthrift Farm",
+          "kind": "broodmare"
+        },
+        {
+          "foal_year": null,
+          "sire": "Vino Rosso",
+          "horse_name": "Determined Dan C 2025",
+          "sale_name": "Keeneland November Breeding Stock Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10344/keeneland-november-breeding-stock-sale-2025/",
+          "hip": 2717,
+          "price": 3000,
+          "status": "Sold",
+          "consignor": "Scott Mallory, for Spendthrift Farm",
+          "kind": "broodmare"
+        }
+      ],
+      "matched_pairs": [
+        {
+          "stallion": "Known Agenda",
+          "horse_name": "Spotted F 2023",
+          "cohort": "2023 foals",
+          "yearling_price": 7000,
+          "twoyo_price": 55000,
+          "return_pct": 685.7,
+          "yearling_sale": "Keeneland September Yearling Sale 2024",
+          "twoyo_sale": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+          "yearling_hip": 3959,
+          "twoyo_hip": 700,
+          "quality_flags": []
+        }
+      ]
+    },
+    "Xtra Heat": {
+      "canonical_name": "Xtra Heat",
+      "damsire": "Dixieland Heat",
+      "total_appearances": 1,
+      "distinct_foals": 0,
+      "sold_count": 1,
+      "top_price": 9000,
+      "total_gross": 9000,
+      "progeny": [
+        {
+          "foal_year": null,
+          "sire": "Quality Road",
+          "horse_name": "Xtra Spice M 2012",
+          "sale_name": "Keeneland January Horses Of All Ages Sale 2025",
+          "sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10223/keeneland-january-horses-of-all-ages-sale-2025/",
+          "hip": 502,
+          "price": 9000,
+          "status": "Sold",
+          "consignor": "Warrendale Sales",
+          "kind": "other"
+        }
+      ],
+      "matched_pairs": []
+    }
+  }
+}

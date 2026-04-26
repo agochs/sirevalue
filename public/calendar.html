@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Sales Calendar</title>
+<meta property="og:title" content="SireValue — Sales Calendar"/>
+<meta property="og:description" content="Every major U.S. thoroughbred sale, by month — completed and upcoming. Plan around Keeneland September, Saratoga, OBS, Fasig-Tipton."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; margin: 0 0 10px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 72ch; }
+
+.year-tabs {
+  display: flex; gap: 4px; border-bottom: 2px solid var(--rule); margin-bottom: 16px;
+}
+.year-tab {
+  background: none; border: none; padding: 10px 18px;
+  font-family: inherit; font-size: 14px; font-weight: 600; color: var(--ink-soft);
+  cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
+}
+.year-tab.active { color: var(--ink); border-bottom-color: var(--gold); }
+.year-tab:hover:not(.active) { color: var(--ink); }
+
+.month-section {
+  margin-bottom: 24px;
+}
+.month-head {
+  display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px;
+  padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+}
+.month-head h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; font-weight: 700; margin: 0; color: var(--ink);
+}
+.month-head .month-num {
+  background: var(--ink); color: var(--cream); padding: 2px 10px; border-radius: 4px;
+  font-size: 12px; font-weight: 700; letter-spacing: 1px;
+}
+.month-head .month-meta { font-size: 12px; color: var(--ink-soft); margin-left: auto; }
+.month-head.is-current h2 { color: var(--gold); }
+.month-head.is-current .month-num { background: var(--gold); }
+
+.sale-card {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 16px; margin-bottom: 10px;
+  display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center;
+}
+.sale-card.upcoming     { border-left: 4px solid var(--gold); }
+.sale-card.anticipated  { border-left: 4px dashed var(--gold-soft); }
+.sale-card.completed    { border-left: 4px solid var(--ink-soft); opacity: 0.92; }
+.sale-card.unknown      { border-left: 4px solid var(--rule); }
+
+.sale-status {
+  display: inline-block; padding: 3px 10px; border-radius: 12px;
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+}
+.sale-status.upcoming    { background: #fef3c7; color: #78350f; }
+.sale-status.anticipated { background: #f4ecd8; color: #7a5b1d; border: 1px dashed var(--gold-soft); }
+.sale-status.completed   { background: #e0e7ef; color: var(--ink); }
+.sale-status.unknown     { background: var(--rule); color: var(--ink-soft); }
+
+.sale-info h3 {
+  margin: 0; font-size: 15px; font-weight: 600;
+}
+.sale-info h3 a { color: var(--ink); text-decoration: none; }
+.sale-info h3 a:hover { text-decoration: underline; }
+.sale-info .meta {
+  font-size: 12px; color: var(--ink-soft); margin-top: 3px;
+}
+.sale-info .meta b { color: var(--ink); font-weight: 600; }
+
+.sale-stats {
+  text-align: right; font-size: 12px; color: var(--ink-soft); white-space: nowrap;
+}
+.sale-stats .gross {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; color: var(--ink);
+  font-size: 14px;
+}
+.sale-stats .signal-bar {
+  display: inline-flex; gap: 1px; align-items: stretch; height: 8px; margin-top: 4px;
+  border-radius: 2px; overflow: hidden; min-width: 100px;
+}
+.sale-stats .signal-bar > span { display: block; height: 100%; }
+.sale-stats .signal-bar .strong   { background: var(--good); }
+.sale-stats .signal-bar .positive { background: #71b07f; }
+.sale-stats .signal-bar .neutral  { background: #d6c98c; }
+.sale-stats .signal-bar .weak     { background: var(--weak); }
+.sale-stats .signal-bar .none     { background: #e5e2d6; }
+
+.kind-pill {
+  display: inline-block; padding: 1px 7px; border-radius: 8px; font-size: 10px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 6px;
+  background: #f0eadb; color: var(--ink-soft);
+}
+.kind-pill.yearling   { background: #d6ecdb; color: #275731; }
+.kind-pill.twoyo      { background: #fef3c7; color: #78350f; }
+.kind-pill.broodmare  { background: #f4e2e8; color: #80345a; }
+.kind-pill.hora       { background: #e0e7ef; color: #324a66; }
+.kind-pill.mixed      { background: #f0eadb; color: #6b5915; }
+
+.method-note {
+  background: var(--card); border-left: 3px solid var(--gold);
+  padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+.method-note b { color: var(--ink); }
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+@media (max-width: 720px) {
+  .hero h1 { font-size: 22px; }
+  .sale-card { grid-template-columns: 1fr; }
+  .sale-stats { text-align: left; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Sales Calendar</div>
+  </div>
+
+  <div class="hero">
+    <h1>What's coming up.</h1>
+    <p>Every major U.S. thoroughbred sale grouped by month — completed sales (with hammer-price totals + sire signal breakdown) and upcoming sales we know about either because BloodHorse has posted the catalog or because the same sale ran in prior years and is expected again.</p>
+    <p>Click any sale to drill into its catalog scoring on <a href="/catalogs.html" style="color:var(--ink);">/catalogs</a>.</p>
+  </div>
+
+  <div class="year-tabs" id="year-tabs"></div>
+
+  <div id="render-area">
+    <div style="background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;text-align:center;color:var(--ink-soft);">Loading…</div>
+  </div>
+
+  <div class="method-note">
+    <b>Status meanings.</b> <span class="sale-status completed">completed</span> the sale has run and we have results data. <span class="sale-status upcoming">upcoming</span> BloodHorse has posted a catalog but the sale hasn't started. <span class="sale-status anticipated">anticipated</span> the sale recurred annually in prior years; we expect it but BloodHorse hasn't published a catalog yet — dates and hip counts are forecasts based on prior-year timing.
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2025–2026 · <a href="/">home</a> · <a href="/catalogs.html">catalogs</a> · <a href="/pinhooks.html">stallion leaderboard</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function fmtMoney(n) { return n == null ? '—' : '$' + Number(n).toLocaleString(); }
+
+  let data;
+  try {
+    const resp = await fetch('/data/sales-calendar.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('render-area').innerHTML =
+      '<div style="background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;text-align:center;color:var(--weak);">Failed to load calendar: ' + escapeHtml(e.message) + '</div>';
+    return;
+  }
+
+  const byYear = data.by_year || {};
+  const currentYear = data.current_year;
+  const currentMonth = data.current_month;
+
+  const years = Object.keys(byYear).map(Number).sort((a,b) => a - b);
+  let activeYear = currentYear;
+  if (!byYear[String(currentYear)] && years.length) activeYear = years[years.length - 1];
+
+  // Year tabs
+  const tabs = document.getElementById('year-tabs');
+  years.forEach(function(y) {
+    const btn = document.createElement('button');
+    btn.className = 'year-tab' + (y === activeYear ? ' active' : '');
+    btn.textContent = y;
+    btn.addEventListener('click', function() {
+      activeYear = y;
+      Array.prototype.forEach.call(tabs.querySelectorAll('.year-tab'), function(t) { t.classList.remove('active'); });
+      btn.classList.add('active');
+      render();
+    });
+    tabs.appendChild(btn);
+  });
+
+  function render() {
+    const sales = byYear[String(activeYear)] || [];
+    if (!sales.length) {
+      document.getElementById('render-area').innerHTML =
+        '<div style="background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;text-align:center;color:var(--ink-soft);">No sales for ' + activeYear + '.</div>';
+      return;
+    }
+
+    // Group by month
+    const byMonth = {};
+    sales.forEach(function(s) {
+      const k = s.month || 99;
+      (byMonth[k] = byMonth[k] || []).push(s);
+    });
+    const months = Object.keys(byMonth).map(Number).sort((a,b) => a - b);
+
+    let html = '';
+    months.forEach(function(m) {
+      const list = byMonth[m];
+      const isCurrent = (activeYear === currentYear && m === currentMonth);
+      const monthLabel = list[0].month_label || 'Unknown';
+      const completedN = list.filter(function(s) { return s.status === 'completed'; }).length;
+      const upcomingN  = list.filter(function(s) { return s.status === 'upcoming' || s.status === 'anticipated'; }).length;
+      html += '<div class="month-section">'
+        + '<div class="month-head' + (isCurrent ? ' is-current' : '') + '">'
+        +   '<span class="month-num">' + (m === 99 ? '?' : ('0' + m).slice(-2)) + '</span>'
+        +   '<h2>' + escapeHtml(monthLabel) + ' ' + activeYear + (isCurrent ? '  ·  this month' : '') + '</h2>'
+        +   '<span class="month-meta">' + list.length + ' sale' + (list.length === 1 ? '' : 's')
+        +     (completedN ? ' · ' + completedN + ' completed' : '')
+        +     (upcomingN ? ' · ' + upcomingN + ' upcoming' : '')
+        +   '</span>'
+        + '</div>';
+      list.forEach(function(s) {
+        const cardCls = 'sale-card ' + s.status;
+        const sigCounts = s.signal_counts || {};
+        const sigTotal = Object.values(sigCounts).reduce(function(a,b){ return a + (b||0); }, 0);
+        let sigBar = '';
+        if (sigTotal > 0) {
+          ['strong','positive','neutral','weak','none'].forEach(function(k) {
+            const v = sigCounts[k] || 0;
+            if (v) sigBar += '<span class="' + k + '" style="width:' + Math.max(2, Math.round(100*v/sigTotal)) + '%;" title="' + k + ': ' + v + '"></span>';
+          });
+        }
+        const titleHtml = s.slug
+          ? '<a href="/catalogs.html#sale=' + encodeURIComponent(s.slug) + '">' + escapeHtml(s.sale_name) + '</a>'
+          : escapeHtml(s.sale_name);
+        const statusLabel = {
+          completed:   'completed',
+          upcoming:    'upcoming',
+          anticipated: 'anticipated',
+          unknown:     '—',
+        }[s.status] || s.status;
+        html += '<div class="' + cardCls + '">'
+          + '<span class="sale-status ' + s.status + '">' + statusLabel + '</span>'
+          + '<div class="sale-info">'
+          +   '<h3>'
+          +     '<span class="kind-pill ' + s.kind + '">' + s.kind + '</span>'
+          +     titleHtml
+          +   '</h3>'
+          +   '<div class="meta">'
+          +     (s.approx_window ? '<b>' + escapeHtml(s.approx_window) + '</b>' : '')
+          +     (s.hip_count ? ' · ' + s.hip_count.toLocaleString() + ' hips catalogued' : '')
+          +     (s.sold_count ? ' · ' + s.sold_count.toLocaleString() + ' sold' : '')
+          +   '</div>'
+          + '</div>'
+          + '<div class="sale-stats">'
+          + (s.gross_usd ? '<div class="gross">' + fmtMoney(s.gross_usd) + ' gross</div>' : '')
+          + (sigBar ? '<div class="signal-bar">' + sigBar + '</div>' : '')
+          + '</div>'
+          + '</div>';
+      });
+      html += '</div>';
+    });
+
+    document.getElementById('render-area').innerHTML = html;
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
