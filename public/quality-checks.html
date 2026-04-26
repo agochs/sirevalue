@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Quality Checks</title>
+<meta property="og:title" content="SireValue — Quality Checks"/>
+<meta property="og:description" content="Outlier matched pinhook pairs flagged for manual verification — extreme returns, micro-priced yearlings, suspected dam-name collisions."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; margin: 0 0 10px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 72ch; }
+
+.stat-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px; margin: 0 0 18px;
+}
+.stat-box {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 14px; text-align: center;
+}
+.stat-box b {
+  display: block; font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 22px; font-weight: 700; line-height: 1.1;
+}
+.stat-box .lbl {
+  font-size: 11px; color: var(--ink-soft); text-transform: uppercase;
+  letter-spacing: 1px; margin-top: 4px;
+}
+
+.controls {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 14px;
+  display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+}
+.controls label { font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.controls select, .controls input[type=search] {
+  font-size: 13px; padding: 5px 8px; border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--cream); color: var(--ink); margin-left: 6px; font-family: inherit;
+}
+.controls input[type=search] { min-width: 180px; }
+.controls .meta { margin-left: auto; font-size: 12px; color: var(--ink-soft); }
+
+.flag-table {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden;
+}
+.flag-table table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.flag-table th {
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  background: #faf5e6; white-space: nowrap;
+}
+.flag-table th.num-col { text-align: right; }
+.flag-table td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.flag-table td.num-col { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.flag-table tr:last-child td { border-bottom: none; }
+.flag-table tr:hover { background: #faf5e6; }
+.flag-table .horse { font-weight: 600; }
+.flag-table .meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.flag-table .sire a, .flag-table .horse a { color: var(--ink); text-decoration: none; }
+.flag-table .sire a:hover, .flag-table .horse a:hover { text-decoration: underline; }
+.flag-table .ret { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.flag-table .ret.up   { color: var(--good); }
+.flag-table .ret.down { color: var(--weak); }
+
+.flag-pill {
+  display: inline-block; padding: 1px 7px; border-radius: 8px;
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  background: #fff3cd; color: #7a5b1d; border: 1px solid #f0e2a8;
+  margin-right: 4px;
+}
+
+.method-note {
+  background: var(--card); border-left: 3px solid var(--gold);
+  padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+.method-note b { color: var(--ink); }
+.method-note dl { margin: 6px 0 0; }
+.method-note dt { font-weight: 700; color: var(--ink); margin-top: 6px; font-size: 12px; }
+.method-note dd { margin: 2px 0 0 0; font-size: 12px; }
+
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+@media (max-width: 720px) {
+  .hero h1 { font-size: 22px; }
+  .flag-table td, .flag-table th { padding: 7px 6px; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Quality Checks</div>
+  </div>
+
+  <div class="hero">
+    <h1>Pairs flagged for verification.</h1>
+    <p>Cohort fingerprinting is biologically robust — mares only foal once a year, so a (sire, dam, foal year) tuple should be unique. But upstream data can have dam-name typos, transposed prices, or genuinely extreme outliers. This page surfaces every matched pair that tripped a heuristic check, so we can verify (or correct) before quoting them publicly.</p>
+    <p>Every flagged pair is still counted in the headline pinhook stats — these are flags, not exclusions. If you spot a confirmed bad match, drop it from the source data and rerun.</p>
+  </div>
+
+  <div class="stat-row" id="stat-row"></div>
+
+  <div class="controls">
+    <div>
+      <label>Flag
+        <select id="filter-flag">
+          <option value="all" selected>All flagged pairs</option>
+          <option value="extreme_gain">Extreme gain (≥+1,500%)</option>
+          <option value="extreme_loss">Extreme loss (≤-75%)</option>
+          <option value="micro_yearling_big_2yo">Micro yearling → big 2YO</option>
+          <option value="multi_yearling_multi_2yo">Multi-yearling/multi-2YO</option>
+          <option value="sub_1k_price">Sub-$1K price</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label>Search
+        <input id="search" type="search" placeholder="sire, dam, horse…" autocomplete="off"/>
+      </label>
+    </div>
+    <div class="meta" id="result-count">—</div>
+  </div>
+
+  <div id="render-area">
+    <div style="background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;text-align:center;color:var(--ink-soft);font-size:14px;">Loading…</div>
+  </div>
+
+  <div class="method-note">
+    <b>Flag definitions.</b>
+    <dl>
+      <dt>extreme gain</dt>
+      <dd>Realized return ≥ 1,500%. Genuine but rare; verify the dam's name in both sale catalogs matches.</dd>
+      <dt>extreme loss</dt>
+      <dd>Realized return ≤ −75%. Often legitimate (injury, soundness issue), but verify the 2YO sold for what we think.</dd>
+      <dt>micro yearling → big 2YO</dt>
+      <dd>Yearling sold for under $5K but 2YO fetched ≥ $100K. Most common false-match shape if a dam-name typo elsewhere created a phantom cohort.</dd>
+      <dt>multi-yearling/multi-2YO</dt>
+      <dd>Multiple yearling and 2YO entries share the same cohort fingerprint. Biologically impossible without a dam-name collision.</dd>
+      <dt>sub-$1K price</dt>
+      <dd>Either yearling or 2YO sold for under $1K. Likely transcription noise or unusual private terms.</dd>
+    </dl>
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/catalogs.html">catalogs</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function fmtMoney(n) { return n == null ? '—' : '$' + Number(n).toLocaleString(); }
+  function fmtPct(p)   { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).toFixed(1) + '%'; }
+  function pctCls(p)   { return p == null ? '' : (p > 0.5 ? 'up' : (p < -0.5 ? 'down' : '')); }
+  function shortSale(name) { return (name || '').replace(/\s*\b20\d{2}\b\s*$/, '').trim(); }
+
+  let data;
+  try {
+    const resp = await fetch('/data/hip-pinhooks.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('render-area').innerHTML =
+      '<div style="background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;text-align:center;color:var(--weak);">Failed to load pinhook data: ' + escapeHtml(e.message) + '</div>';
+    return;
+  }
+
+  // Flatten every flagged pair across stallions
+  const flagged = [];
+  Object.keys(data.by_stallion || {}).forEach(function(name) {
+    (data.by_stallion[name].matches || []).forEach(function(m) {
+      const flags = m.quality_flags || [];
+      if (flags.length > 0) {
+        flagged.push(Object.assign({}, m, { stallion: name }));
+      }
+    });
+  });
+
+  // Stat row — total flagged + counts per flag type
+  const flagCounts = {};
+  flagged.forEach(function(p) {
+    (p.quality_flags || []).forEach(function(f) {
+      flagCounts[f] = (flagCounts[f] || 0) + 1;
+    });
+  });
+  const totalPairs = (data.summary && data.summary.total_matched_pairs) || 0;
+  const flaggedPct = totalPairs ? (100 * flagged.length / totalPairs) : 0;
+  const statRow = document.getElementById('stat-row');
+  statRow.innerHTML = ''
+    + '<div class="stat-box"><b>' + flagged.length.toLocaleString() + '</b><div class="lbl">Flagged pairs</div></div>'
+    + '<div class="stat-box"><b>' + flaggedPct.toFixed(1) + '%</b><div class="lbl">Of matched pairs</div></div>'
+    + '<div class="stat-box"><b>' + (flagCounts.extreme_gain || 0).toLocaleString() + '</b><div class="lbl">Extreme gain</div></div>'
+    + '<div class="stat-box"><b>' + (flagCounts.extreme_loss || 0).toLocaleString() + '</b><div class="lbl">Extreme loss</div></div>'
+    + '<div class="stat-box"><b>' + (flagCounts.micro_yearling_big_2yo || 0).toLocaleString() + '</b><div class="lbl">Micro yrl → big 2YO</div></div>'
+    + '<div class="stat-box"><b>' + ((flagCounts.multi_yearling_multi_2yo || 0) + (flagCounts.sub_1k_price || 0)).toLocaleString() + '</b><div class="lbl">Other anomalies</div></div>';
+
+  function render() {
+    const flagSel = document.getElementById('filter-flag').value;
+    const search  = (document.getElementById('search').value || '').trim().toLowerCase();
+
+    let rows = flagged;
+    if (flagSel !== 'all') {
+      rows = rows.filter(function(p) { return (p.quality_flags || []).indexOf(flagSel) !== -1; });
+    }
+    if (search) {
+      rows = rows.filter(function(p) {
+        return (p.stallion || '').toLowerCase().indexOf(search) !== -1
+            || (p.dam || '').toLowerCase().indexOf(search) !== -1
+            || (p.horse_name || '').toLowerCase().indexOf(search) !== -1;
+      });
+    }
+    // Sort by absolute return desc — most extreme first
+    rows.sort(function(a, b) { return Math.abs(b.return_pct) - Math.abs(a.return_pct); });
+
+    document.getElementById('result-count').textContent =
+      rows.length.toLocaleString() + ' pair' + (rows.length === 1 ? '' : 's');
+
+    if (rows.length === 0) {
+      document.getElementById('render-area').innerHTML =
+        '<div style="background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:28px;text-align:center;color:var(--ink-soft);">No flagged pairs match.</div>';
+      return;
+    }
+
+    let html = '<div class="flag-table"><table><thead><tr>'
+      + '<th>Flags</th>'
+      + '<th>Horse / Dam / Cohort</th>'
+      + '<th>Sire</th>'
+      + '<th>Yearling sale</th>'
+      + '<th>2YO sale</th>'
+      + '<th class="num-col">Yrl $ → 2YO $</th>'
+      + '<th class="num-col">Return</th>'
+      + '</tr></thead><tbody>';
+
+    html += rows.map(function(p) {
+      const cls = pctCls(p.return_pct);
+      const sireUrl = '/stallion-card.html?s=' + encodeURIComponent(p.stallion || '');
+      const flagsHtml = (p.quality_flags || []).map(function(f) {
+        return '<span class="flag-pill" title="' + escapeHtml(f) + '">' + escapeHtml(f.replace(/_/g, ' ')) + '</span>';
+      }).join('');
+      return '<tr>'
+        + '<td>' + flagsHtml + '</td>'
+        + '<td class="horse">' + escapeHtml(p.horse_name || '(unnamed)')
+        +   '<div class="meta">out of ' + escapeHtml(p.dam || '—')
+        +     ' · ' + escapeHtml(p.cohort || '') + '</div>'
+        + '</td>'
+        + '<td class="sire"><a href="' + sireUrl + '">' + escapeHtml(p.stallion || '—') + '</a></td>'
+        + '<td>' + escapeHtml(shortSale(p.yearling_sale))
+        +   (p.yearling_hip ? ' #' + escapeHtml(String(p.yearling_hip)) : '') + '</td>'
+        + '<td>' + escapeHtml(shortSale(p.twoyo_sale))
+        +   (p.twoyo_hip ? ' #' + escapeHtml(String(p.twoyo_hip)) : '') + '</td>'
+        + '<td class="num-col">' + fmtMoney(p.yearling_price) + ' → ' + fmtMoney(p.twoyo_price) + '</td>'
+        + '<td class="num-col ret ' + cls + '">' + fmtPct(p.return_pct) + '</td>'
+        + '</tr>';
+    }).join('');
+
+    html += '</tbody></table></div>';
+    document.getElementById('render-area').innerHTML = html;
+  }
+
+  let searchTimer = null;
+  document.getElementById('filter-flag').addEventListener('change', render);
+  document.getElementById('search').addEventListener('input', function() {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(render, 120);
+  });
+  render();
+})();
+</script>
+</body>
+</html>

@@ -178,6 +178,28 @@ def main():
         two = twos_sorted[0]
         return_pct = (two["price"] - yrl["price"]) / yrl["price"] * 100
         gross = two["price"] - yrl["price"]
+
+        # Quality flags — heuristics that surface pairs worth a manual look.
+        # Each flag is a short code; the UI maps it to a human explanation.
+        flags = []
+        # Extreme returns (likely correct but worth a manual look — the kind of
+        # pair we'd quote in an example, so we want zero false matches in that set).
+        if return_pct >= 1500:
+            flags.append("extreme_gain")
+        if return_pct <= -75:
+            flags.append("extreme_loss")
+        # Very cheap yearling — a $1-3K yearling pinhooked to $300K+ is the most
+        # common false-match shape (dam name typo elsewhere in the database).
+        if yrl["price"] < 5_000 and two["price"] >= 100_000:
+            flags.append("micro_yearling_big_2yo")
+        # Multiple yearling/2YO entries for the same cohort key — biologically
+        # impossible. If both sides have >1 entry that's a strong dam-collision signal.
+        if len(yrls) > 1 and len(twos) > 1:
+            flags.append("multi_yearling_multi_2yo")
+        # Sanity bounds
+        if yrl["price"] < 1_000 or two["price"] < 1_000:
+            flags.append("sub_1k_price")
+
         match = {
             "horse_name":     two["horse_name"] or yrl["horse_name"],
             "dam":            two["dam"] or yrl["dam"],
@@ -192,6 +214,7 @@ def main():
             "twoyo_consignor": two.get("consignor"),
             "return_pct":     round(return_pct, 1),
             "gross_return_usd": gross,
+            "quality_flags":  flags,
         }
         # Stallion is shared between yrl and two (same sire); use the
         # canonical roster name (whichever has more punctuation preserved).
@@ -209,6 +232,46 @@ def main():
         positive = [r for r in returns if r > 0]
         # Sort matches by return_pct desc for display
         matches.sort(key=lambda m: -m["return_pct"])
+
+        # Per-foal-year breakdown — does this stallion's pinhook performance
+        # rise or fall over time? Group matches by foal year. We extract foal
+        # year from m["cohort"] which is "{year} foals".
+        by_foal_year: dict[int, list] = {}
+        for m in matches:
+            cohort = m.get("cohort") or ""
+            try:
+                fy = int(cohort.split()[0])
+            except (ValueError, IndexError):
+                continue
+            by_foal_year.setdefault(fy, []).append(m)
+        cohort_breakdown = []
+        for fy in sorted(by_foal_year.keys()):
+            cm = by_foal_year[fy]
+            crets = [x["return_pct"] for x in cm]
+            cyrls = [x["yearling_price"] for x in cm]
+            cpos  = [r for r in crets if r > 0]
+            cohort_breakdown.append({
+                "foal_year":             fy,
+                "matched_pairs":         len(cm),
+                "median_return_pct":     round(median(crets), 1),
+                "mean_return_pct":       round(mean(crets), 1),
+                "positive_return_pct":   round(100 * len(cpos) / len(cm), 1),
+                "median_yearling_price": int(median(cyrls)),
+            })
+
+        # Trend label: compare oldest cohort vs newest cohort with n>=3.
+        # Only meaningful if we have at least 2 cohorts of decent sample.
+        usable = [c for c in cohort_breakdown if c["matched_pairs"] >= 3]
+        trend = None
+        trend_delta_pct = None
+        if len(usable) >= 2:
+            old = usable[0]["median_return_pct"]
+            new = usable[-1]["median_return_pct"]
+            trend_delta_pct = round(new - old, 1)
+            if   trend_delta_pct >= 30:  trend = "rising"
+            elif trend_delta_pct <= -30: trend = "falling"
+            else:                        trend = "stable"
+
         out_by_stallion[stallion] = {
             "matches": matches,
             "summary": {
@@ -218,7 +281,10 @@ def main():
                 "positive_return_pct":   round(100 * len(positive) / len(matches), 1),
                 "median_yearling_price": int(median(yrl_prices)),
                 "median_twoyo_price":    int(median(two_prices)),
+                "trend":                 trend,
+                "trend_delta_pct":       trend_delta_pct,
             },
+            "cohort_breakdown": cohort_breakdown,
         }
 
     # Top matches across the whole dataset (by return_pct, with min yearling price)

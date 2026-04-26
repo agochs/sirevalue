@@ -133,6 +133,13 @@ body {
 .leaderboard .ret.down { color: var(--weak); }
 .leaderboard .pct.up   { color: var(--good); font-weight: 600; }
 .leaderboard .pct.down { color: var(--weak); font-weight: 600; }
+.trend-cell {
+  display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+}
+.trend-rising  { background: #d6ecdb; color: #275731; }
+.trend-stable  { background: #efe7d3; color: #6b5915; }
+.trend-falling { background: #f8d7d4; color: #7a1d1d; }
 
 .empty {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -234,10 +241,11 @@ body {
           <th class="num-col">Profitable</th>
           <th class="num-col">Median yrl</th>
           <th class="num-col">Median 2YO</th>
+          <th title="Trend across foal years 2020-2024 (oldest cohort vs newest, both with n>=3)">Trend</th>
         </tr>
       </thead>
       <tbody id="leaderboard-body">
-        <tr><td colspan="8" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr>
+        <tr><td colspan="9" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr>
       </tbody>
     </table>
   </div>
@@ -247,7 +255,7 @@ body {
   </div>
 
   <div class="footer">
-    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 sale results · <a href="/">home</a> · <a href="/consignors.html">consignors</a> · <a href="/stallion-card.html">browse stallions</a> · <a href="/compare.html">compare</a></span>
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 sale results · <a href="/">home</a> · <a href="/consignors.html">consignors</a> · <a href="/stallion-card.html">browse stallions</a> · <a href="/quality-checks.html">quality checks</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>
@@ -344,8 +352,24 @@ body {
       positive_return_pct:   s.positive_return_pct,
       median_yearling_price: s.median_yearling_price || 0,
       median_twoyo_price:    s.median_twoyo_price || 0,
+      trend:                 s.trend,
+      trend_delta_pct:       s.trend_delta_pct,
+      cohort_breakdown:      blob.cohort_breakdown || [],
     };
   });
+
+  function trendCellHtml(r) {
+    if (!r.trend) return '<span style="color:var(--ink-soft);">—</span>';
+    const arrow = r.trend === 'rising' ? '↗' : (r.trend === 'falling' ? '↘' : '→');
+    const cls   = r.trend;
+    const tip   = r.cohort_breakdown.map(function(c) {
+      return c.foal_year + ': ' + (c.median_return_pct >= 0 ? '+' : '') + c.median_return_pct.toFixed(0) + '% (n=' + c.matched_pairs + ')';
+    }).join(' · ');
+    const delta = r.trend_delta_pct != null
+      ? ' ' + (r.trend_delta_pct >= 0 ? '+' : '') + r.trend_delta_pct.toFixed(0) + 'pt'
+      : '';
+    return '<span class="trend-cell trend-' + cls + '" title="' + escapeHtml(tip) + '">' + arrow + ' ' + r.trend + delta + '</span>';
+  }
 
   function render() {
     const minN     = parseInt(document.getElementById('filter-n').value, 10);
@@ -367,7 +391,7 @@ body {
 
     const body = document.getElementById('leaderboard-body');
     if (filtered.length === 0) {
-      body.innerHTML = '<tr><td colspan="8" style="padding:20px;text-align:center;color:var(--ink-soft)">No stallions match these filters.</td></tr>';
+      body.innerHTML = '<tr><td colspan="9" style="padding:20px;text-align:center;color:var(--ink-soft)">No stallions match these filters.</td></tr>';
       return;
     }
 
@@ -385,6 +409,7 @@ body {
         + '<td class="num-col pct ' + posCls + '">' + (r.positive_return_pct != null ? r.positive_return_pct.toFixed(0) + '%' : '—') + '</td>'
         + '<td class="num-col">' + fmtMoney(r.median_yearling_price) + '</td>'
         + '<td class="num-col">' + fmtMoney(r.median_twoyo_price) + '</td>'
+        + '<td>' + trendCellHtml(r) + '</td>'
         + '</tr>';
     }).join('');
 
