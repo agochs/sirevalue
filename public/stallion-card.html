@@ -287,6 +287,21 @@ details[open] summary { margin-bottom: 8px; }
 .pair-row .ret.up   { color: var(--good); }
 .pair-row .ret.down { color: var(--weak); }
 .realized-empty { font-size: 12px; color: var(--ink-soft); padding: 6px 0; font-style: italic; }
+/* Collapsed-by-default extra pair rows; flip via .expanded toggle below */
+.realized-block:not(.expanded) .pair-row.collapsed { display: none; }
+.realized-toggle {
+  display: block; margin-top: 10px; padding: 8px 10px;
+  background: transparent; border: 1px dashed var(--rule); border-radius: 6px;
+  font-size: 12px; color: var(--ink-soft); cursor: pointer;
+  text-align: center; font-family: inherit; width: 100%;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.realized-toggle:hover {
+  background: #faf5e6; color: var(--ink); border-color: var(--gold-soft);
+}
+.realized-toggle .less-text { display: none; }
+.realized-block.expanded .realized-toggle .more-text { display: none; }
+.realized-block.expanded .realized-toggle .less-text { display: inline; }
 /* ---------- Pinhook lift ---------- */
 .pinhook-block {
   background: linear-gradient(135deg, #fff8e4, #fbf6e4);
@@ -792,7 +807,6 @@ async function bootSireValue() {
     var summary = blob.summary || {};
     var matches = blob.matches;
     var TOP_N = 6;
-    var top = matches.slice(0, TOP_N);
 
     function fmtPct(p) {
       if (p == null) return '—';
@@ -833,8 +847,13 @@ async function bootSireValue() {
       +   '</div>'
       + '</div>';
 
-    var pairsHtml = top.map(function(m) {
+    // Render every match — but mark the rows beyond TOP_N as `collapsed` so
+    // CSS hides them until the user clicks "show more". This lets the user
+    // see the headline pairs first, while keeping the full list one click
+    // away (no extra fetch — the data is already in `matches`).
+    var pairsHtml = matches.map(function(m, i) {
       var rCls = pctCls(m.return_pct);
+      var rowCls = 'pair-row' + (i >= TOP_N ? ' collapsed' : '');
       var horseLine = '<div class="horse">'
         + escapeHtml(m.horse_name || '(unnamed)')
         + '</div>'
@@ -855,12 +874,19 @@ async function bootSireValue() {
         +   '$' + m.twoyo_price.toLocaleString()
         + '</div>';
       var retHtml = '<div class="ret ' + rCls + '">' + fmtPct(m.return_pct) + '</div>';
-      return '<div class="pair-row"><div>' + horseLine + '</div>' + pricesHtml + retHtml + '</div>';
+      return '<div class="' + rowCls + '"><div>' + horseLine + '</div>' + pricesHtml + retHtml + '</div>';
     }).join('');
 
-    var moreNote = matches.length > TOP_N
-      ? '<div class="realized-empty">+ ' + (matches.length - TOP_N) + ' more matched pairs</div>'
-      : '';
+    var moreNote = '';
+    if (matches.length > TOP_N) {
+      var hiddenCount = matches.length - TOP_N;
+      moreNote = '<button type="button" class="realized-toggle" '
+        + 'onclick="this.closest(\'.realized-block\').classList.toggle(\'expanded\')">'
+        +   '<span class="more-text">+ ' + hiddenCount
+        +     ' more matched pair' + (hiddenCount === 1 ? '' : 's') + ' &nbsp;▼</span>'
+        +   '<span class="less-text">Show fewer &nbsp;▲</span>'
+        + '</button>';
+    }
 
     return ''
       + '<div class="realized-block">'
