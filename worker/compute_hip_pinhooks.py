@@ -39,7 +39,8 @@ from pathlib import Path
 from statistics import median, mean
 
 HERE = Path(__file__).parent
-OUTPUT_JSON = HERE / "hip-pinhooks.json"
+OUTPUT_JSON     = HERE / "hip-pinhooks.json"
+COST_BASIS_JSON = HERE / "yearling-cost-basis.json"
 
 
 def normalize_dam(dam: str) -> str:
@@ -247,6 +248,38 @@ def main():
         f"{output['summary']['stallions_with_pairs']} stallions, "
         f"{output['summary']['total_matched_pairs']} matched pinhook pairs"
     )
+
+    # ---- Yearling cost-basis index ------------------------------------------
+    # For every yearling hip we know about, expose the priciest entry for its
+    # (sire_norm, dam_norm, foal_year) cohort key. score_catalog.py uses this
+    # to look up the yearling sale price for any 2YO catalog hip — even ones
+    # that haven't been matched into a pinhook pair yet (e.g. hips on a 2YO
+    # sale that hasn't run, or RNA 2YOs with no return %).
+    cost_basis: dict[str, dict] = {}
+    for key, yrls in yearlings_by_key.items():
+        sire_norm, dam_norm, foal_year = key
+        # Pick the priciest yearling transaction as canonical (matches the
+        # selection logic used for matched-pair construction above).
+        canon = max(yrls, key=lambda x: x["price"])
+        cost_basis[f"{sire_norm}|{dam_norm}|{foal_year}"] = {
+            "sire_norm":  sire_norm,
+            "dam_norm":   dam_norm,
+            "foal_year":  foal_year,
+            "horse_name": canon.get("horse_name"),
+            "yearling_price":     canon["price"],
+            "yearling_sale":      canon.get("sale_name"),
+            "yearling_hip":       canon.get("hip"),
+            "yearling_consignor": canon.get("consignor"),
+            "yearling_sale_year": canon.get("sale_year"),
+        }
+    cb_output = {
+        "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+        "method":       "priciest-yearling-per-cohort-key",
+        "summary":      {"cohorts_indexed": len(cost_basis)},
+        "by_key":       cost_basis,
+    }
+    COST_BASIS_JSON.write_text(json.dumps(cb_output, indent=2, ensure_ascii=False))
+    print(f"Wrote {COST_BASIS_JSON.name}: {len(cost_basis):,} cohort keys indexed")
     print()
     print("Top 10 realized pinhook returns:")
     for m in top_overall[:10]:

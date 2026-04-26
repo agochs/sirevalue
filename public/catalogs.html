@@ -126,6 +126,8 @@ body {
 .hip-table tr:last-child td { border-bottom: none; }
 .hip-table .horse { font-weight: 600; }
 .hip-table .horse .meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; font-weight: 400; }
+.hip-table .cost-cell { font-weight: 600; }
+.hip-table .cost-cell .meta { font-size: 10px; color: var(--ink-soft); font-weight: 400; margin-top: 2px; white-space: normal; max-width: 130px; }
 .hip-table .sire a { color: var(--ink); text-decoration: none; }
 .hip-table .sire a:hover { text-decoration: underline; }
 .signal-pill {
@@ -176,7 +178,7 @@ body {
   <div class="hero">
     <h1>Score the catalog before you bid.</h1>
     <p>Every hip in every recent and upcoming sale, joined against the sire's <a href="/pinhooks.html" style="color:var(--ink);">realized pinhook track record</a>. The signal pill tells you whether this stallion's progeny historically pinhook profitably — using only matched same-horse yearling-to-2YO pairs from 2022–2026.</p>
-    <p>Pre-screen the catalog, sort by signal, search by sire or consignor. New catalogs auto-populate as they post.</p>
+    <p>For 2YO sales, every hip with a known yearling-sale history shows the <b>Yrl cost</b> (the same horse's prior yearling sale price). After the 2YO hammer falls, you also see the realized return — handy for spotting actual pinhook outcomes hip-by-hip.</p>
   </div>
 
   <div class="sale-picker">
@@ -257,6 +259,12 @@ body {
   function fmtMoney(n) {
     if (n == null) return '—';
     return '$' + Number(n).toLocaleString();
+  }
+  function isTwoYoSale(name) {
+    var s = (name || '').toLowerCase();
+    return s.indexOf('2yo') !== -1
+        || s.indexOf('two-year-old') !== -1
+        || s.indexOf('in training') !== -1;
   }
 
   let index;
@@ -356,16 +364,25 @@ body {
 
     // Apply sort
     const dirMul = sortDir === 'asc' ? 1 : -1;
-    if (sortKey === 'med') {
-      rows.sort(function(a,b) {
-        const av = a.sire_pinhook_median_pct == null ? -Infinity : a.sire_pinhook_median_pct;
-        const bv = b.sire_pinhook_median_pct == null ? -Infinity : b.sire_pinhook_median_pct;
+    function nullSort(getter) {
+      return function(a, b) {
+        const av = getter(a), bv = getter(b);
+        if (av == null && bv == null) return 0;
+        if (av == null) return 1;   // nulls always last
+        if (bv == null) return -1;
         return (bv - av) * (dirMul === 1 ? -1 : 1);
-      });
+      };
+    }
+    if (sortKey === 'med') {
+      rows.sort(nullSort(function(h) { return h.sire_pinhook_median_pct; }));
     } else if (sortKey === 'pairs') {
       rows.sort(function(a,b) { return ((b.sire_pinhook_pairs || 0) - (a.sire_pinhook_pairs || 0)) * (dirMul === 1 ? -1 : 1); });
     } else if (sortKey === 'price') {
       rows.sort(function(a,b) { return ((b.sold_price_usd || 0) - (a.sold_price_usd || 0)) * (dirMul === 1 ? -1 : 1); });
+    } else if (sortKey === 'cost') {
+      rows.sort(nullSort(function(h) { return h.yearling_cost_usd; }));
+    } else if (sortKey === 'realized') {
+      rows.sort(nullSort(function(h) { return h.realized_return_pct; }));
     } else if (sortKey === 'hip') {
       rows.sort(function(a,b) {
         const av = parseInt(a.hip, 10) || 99999;
@@ -379,6 +396,8 @@ body {
       rows.length.toLocaleString() + ' hip' + (rows.length === 1 ? '' : 's');
 
     const showSold = activeSale.kind === 'results';
+    const showCostBasis = isTwoYoSale(activeSale.sale_name);
+    const showRealized  = showCostBasis && showSold;
 
     if (rows.length === 0) {
       document.getElementById('hip-area').innerHTML =
@@ -399,13 +418,28 @@ body {
       + '<th class="num-col sortable' + (sortKey==='med' ? ' active' : '') + '" data-sort="med">Median return<span class="arrow">' + (sortKey==='med' ? '▼' : '↕') + '</span></th>'
       + '<th class="num-col">Profitable</th>'
       + '<th>Consignor</th>'
+      + (showCostBasis ? '<th class="num-col sortable' + (sortKey==='cost' ? ' active' : '') + '" data-sort="cost" title="Same horse\'s yearling sale price (matched by sire+dam+foal year)">Yrl cost<span class="arrow">' + (sortKey==='cost' ? '▼' : '↕') + '</span></th>' : '')
       + (showSold ? '<th class="num-col sortable' + (sortKey==='price' ? ' active' : '') + '" data-sort="price">Sold<span class="arrow">' + (sortKey==='price' ? '▼' : '↕') + '</span></th>' : '')
+      + (showRealized ? '<th class="num-col sortable' + (sortKey==='realized' ? ' active' : '') + '" data-sort="realized" title="Realized return: 2YO sale price vs the same horse\'s yearling sale price">Return<span class="arrow">' + (sortKey==='realized' ? '▼' : '↕') + '</span></th>' : '')
       + '</tr></thead><tbody>';
 
     html += displayRows.map(function(h) {
       const sig = h.sire_pinhook_signal || 'none';
       const medCls = pctCls(h.sire_pinhook_median_pct);
       const sireUrl = '/stallion-card.html?s=' + encodeURIComponent(h.sire || '');
+      const retCls = pctCls(h.realized_return_pct);
+      // Yearling cost cell — show price + tiny meta line of which sale it came from
+      let costCell = '—';
+      if (h.yearling_cost_usd != null) {
+        costCell = fmtMoney(h.yearling_cost_usd);
+        if (h.yearling_cost_sale) {
+          // Truncate sale year for compactness
+          const shortSale = (h.yearling_cost_sale || '').replace(/\s*\b20(\d{2})\b\s*$/, " '$1");
+          costCell += '<div class="meta">' + escapeHtml(shortSale)
+                   + (h.yearling_cost_hip ? ' #' + escapeHtml(String(h.yearling_cost_hip)) : '')
+                   + '</div>';
+        }
+      }
       return '<tr>'
         + '<td class="num-col">' + escapeHtml(String(h.hip || '—')) + '</td>'
         + '<td class="horse">' + escapeHtml(h.horse_name || '—')
@@ -417,7 +451,9 @@ body {
         + '<td class="num-col ret ' + medCls + '">' + fmtPct(h.sire_pinhook_median_pct) + '</td>'
         + '<td class="num-col">' + (h.sire_pinhook_positive_pct != null ? h.sire_pinhook_positive_pct.toFixed(0) + '%' : '—') + '</td>'
         + '<td>' + escapeHtml(h.consignor || '—') + '</td>'
+        + (showCostBasis ? '<td class="num-col cost-cell">' + costCell + '</td>' : '')
         + (showSold ? '<td class="num-col">' + (h.sold_price_usd != null ? fmtMoney(h.sold_price_usd) : '—') + '</td>' : '')
+        + (showRealized ? '<td class="num-col ret ' + retCls + '">' + fmtPct(h.realized_return_pct) + '</td>' : '')
         + '</tr>';
     }).join('');
 

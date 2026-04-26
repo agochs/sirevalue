@@ -40,10 +40,11 @@ from datetime import datetime
 from pathlib import Path
 
 HERE = Path(__file__).parent
-HIP_PINHOOKS_JSON = HERE / "hip-pinhooks.json"
-UPCOMING_JSON     = HERE / "upcoming-sales.json"
-SCORES_JSON       = HERE / "scores.json"
-INDEX_JSON        = HERE / "catalog-scoring-index.json"
+HIP_PINHOOKS_JSON  = HERE / "hip-pinhooks.json"
+COST_BASIS_JSON    = HERE / "yearling-cost-basis.json"
+UPCOMING_JSON      = HERE / "upcoming-sales.json"
+SCORES_JSON        = HERE / "scores.json"
+INDEX_JSON         = HERE / "catalog-scoring-index.json"
 
 # Limit catalog hip output payload — we keep at most this many hips per sale
 # in the JSON pushed to the static site (sorted by sire's pinhook signal).
@@ -58,6 +59,33 @@ def normalize_sire(name: str) -> str:
     s = re.sub(r"\s*\([^)]+\)\s*$", "", s)   # strip trailing "(IRE)" etc.
     s = re.sub(r"[^a-z0-9]+", "", s)
     return s
+
+
+def normalize_dam(name: str) -> str:
+    """Same scheme as compute_hip_pinhooks.normalize_dam — must stay aligned."""
+    if not name:
+        return ""
+    s = name.lower().strip()
+    s = re.sub(r"\s*\([^)]+\)\s*$", "", s)
+    s = re.sub(r"[^a-z0-9]+", "", s)
+    return s
+
+
+def classify_kind(sale_name: str) -> str:
+    """Returns 'yearling' / 'twoyo' / 'other' from a BH sale name. Mirrors
+    compute_hip_pinhooks.classify_sale so the cost-basis lookup uses the
+    exact same cohort keys."""
+    s = (sale_name or "").lower()
+    if "2yo" in s or "two-year-old" in s or "in training" in s:
+        return "twoyo"
+    if "yearling" in s:
+        return "yearling"
+    return "other"
+
+
+def sale_year(sale_name: str) -> int | None:
+    m = re.search(r"\b(20\d{2})\b\s*$", (sale_name or "").strip())
+    return int(m.group(1)) if m else None
 
 
 def classify_signal(s: dict | None) -> str:
@@ -99,6 +127,14 @@ def load_sire_signals() -> dict:
     return out
 
 
+def load_cost_basis() -> dict:
+    """Map (sire_norm, dam_norm, foal_year) -> yearling cost record."""
+    if not COST_BASIS_JSON.exists():
+        return {}
+    data = json.loads(COST_BASIS_JSON.read_text())
+    return data.get("by_key") or {}
+
+
 def load_score_index() -> dict:
     """Map normalized sire name → { value, grade, fee_usd } from scores.json."""
     if not SCORES_JSON.exists():
@@ -118,8 +154,10 @@ def load_score_index() -> dict:
     return out
 
 
-def annotate_hip(hip: dict, sire_signals: dict, scores_idx: dict) -> dict:
-    """Return a copy of `hip` with sire pinhook signal + score attached."""
+def annotate_hip(hip: dict, sale_name: str, sire_signals: dict,
+                 scores_idx: dict, cost_basis: dict) -> dict:
+    """Return a copy of `hip` with sire pinhook signal + score + (for 2YOs)
+    yearling cost-basis attached."""
     sire = hip.get("sire") or hip.get("stallion_name") or ""
     norm = normalize_sire(sire)
     sig  = sire_signals.get(norm)
@@ -147,6 +185,29 @@ def annotate_hip(hip: dict, sire_signals: dict, scores_idx: dict) -> dict:
         out["sire_value_score"] = sc.get("value")
         out["sire_grade"]       = sc.get("grade")
         out["sire_fee_usd"]     = sc.get("fee_usd")
+
+    # Cost-basis lookup: only for 2YO sales. The cohort key is
+    # (sire_norm, dam_norm, foal_year). For a 2YO sold/cataloged in year Y,
+    # the foal year is Y-2. The yearling sale would have happened in Y-1.
+    kind = classify_kind(sale_name)
+    if kind == "twoyo":
+        sy = sale_year(sale_name)
+        dam_norm = normalize_dam(hip.get("dam") or "")
+        if sy and dam_norm and norm:
+            foal_year = sy - 2
+            key = f"{norm}|{dam_norm}|{foal_year}"
+            cb = cost_basis.get(key)
+            if cb and cb.get("yearling_price"):
+                out["yearling_cost_usd"]      = cb["yearling_price"]
+                out["yearling_cost_sale"]     = cb.get("yearling_sale")
+                out["yearling_cost_hip"]      = cb.get("yearling_hip")
+                out["yearling_cost_consignor"] = cb.get("yearling_consignor")
+                # If we ALSO have this 2YO's sold price, compute realized return.
+                if hip.get("sold_price_usd") is not None:
+                    p = cb["yearling_price"]
+                    out["realized_return_pct"] = round(
+                        (hip["sold_price_usd"] - p) / p * 100, 1
+                    )
     return out
 
 
@@ -185,8 +246,10 @@ def main():
 
     sire_signals = load_sire_signals()
     scores_idx   = load_score_index()
+    cost_basis   = load_cost_basis()
     print(f"Loaded {len(sire_signals)} sires with pinhook track record, "
-          f"{len(scores_idx)} sires with value score")
+          f"{len(scores_idx)} sires with value score, "
+          f"{len(cost_basis):,} cohort keys for cost-basis lookup")
 
     # Sources: upcoming-sales.json (catalog-only hips) + every recent-sale-
     # results-{year}.json. Upcoming first so it 'wins' if a sale appears in
@@ -215,7 +278,7 @@ def main():
     matched_with_signal = 0
     for sale_name in sorted(sales_map.keys()):
         blob = sales_map[sale_name]
-        annotated = [annotate_hip(h, sire_signals, scores_idx) for h in blob["hips"]]
+        annotated = [annotate_hip(h, sale_name, sire_signals, scores_idx, cost_basis) for h in blob["hips"]]
         # Sort: hips with stronger signal first; within same tier, larger
         # sample size first; then by hip number ascending for stable order.
         signal_rank = {"strong": 0, "positive": 1, "neutral": 2, "weak": 3, "none": 4}
@@ -258,9 +321,14 @@ def main():
         s = re.sub(r"[^a-zA-Z0-9]+", "-", name.lower()).strip("-")
         return s[:80]
 
-    # Wipe stale per-sale files from previous runs so we don't accumulate
+    # Wipe stale per-sale files from previous runs so we don't accumulate.
+    # Tolerate permission errors — if we can't delete a stale file, the new
+    # write below will simply overwrite it (slugs are deterministic).
     for old in HERE.glob("catalog-scoring-sale-*.json"):
-        old.unlink()
+        try:
+            old.unlink()
+        except (PermissionError, OSError):
+            pass
 
     # Write one file per sale with the full hip list
     index_sales = []

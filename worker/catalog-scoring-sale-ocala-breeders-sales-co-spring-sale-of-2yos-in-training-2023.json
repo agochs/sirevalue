@@ -16,7 +16,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 92000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 481,
+      "yearling_cost_consignor": "Hunter Valley Farm",
+      "realized_return_pct": 117.4
     },
     {
       "hip": 41,
@@ -48,7 +53,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 46.9,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 506,
+      "yearling_cost_consignor": "Fort Christopher's Thoroughbreds",
+      "realized_return_pct": 228.6
     },
     {
       "hip": 163,
@@ -80,7 +90,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Fasig Tipton Midlantic Eastern Fall Yearling Sale 2022",
+      "yearling_cost_hip": 226,
+      "yearling_cost_consignor": "KP Sales",
+      "realized_return_pct": 100.0
     },
     {
       "hip": 216,
@@ -96,7 +111,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 46.9,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 90000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2183,
+      "yearling_cost_consignor": "Hunter Valley Farm",
+      "realized_return_pct": 188.9
     },
     {
       "hip": 243,
@@ -112,7 +132,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3417,
+      "yearling_cost_consignor": "Warrendale Sales, for Sandra Sexton and Silver Fern Farm",
+      "realized_return_pct": 7.1
     },
     {
       "hip": 291,
@@ -144,7 +169,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 46.9,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3032,
+      "yearling_cost_consignor": "Hill 'n' Dale Sales Agency",
+      "realized_return_pct": 400.0
     },
     {
       "hip": 360,
@@ -175,7 +205,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 85,
+      "yearling_cost_consignor": "Brandywine Farm",
+      "realized_return_pct": 300.0
     },
     {
       "hip": 366,
@@ -191,7 +226,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 145000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1810,
+      "yearling_cost_consignor": "Vinery Sales",
+      "realized_return_pct": 106.9
     },
     {
       "hip": 385,
@@ -207,7 +247,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 46.9,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 30000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2636,
+      "yearling_cost_consignor": "Brandywine Farm",
+      "realized_return_pct": 66.7
     },
     {
       "hip": 399,
@@ -223,7 +268,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 80000,
+      "yearling_cost_sale": "Fasig Tipton Midlantic Eastern Fall Yearling Sale 2022",
+      "yearling_cost_hip": 302,
+      "yearling_cost_consignor": "Gracie Bloodstock",
+      "realized_return_pct": 400.0
     },
     {
       "hip": 515,
@@ -239,7 +289,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 32000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1032,
+      "yearling_cost_consignor": "Indian Creek",
+      "realized_return_pct": 171.9
     },
     {
       "hip": 557,
@@ -255,7 +310,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 115000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 313,
+      "yearling_cost_consignor": "Sequel New York",
+      "realized_return_pct": -52.2
     },
     {
       "hip": 583,
@@ -271,7 +331,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 110000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 316,
+      "yearling_cost_consignor": "Marshall W. Silverman",
+      "realized_return_pct": 31.8
     },
     {
       "hip": 593,
@@ -302,7 +367,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2710,
+      "yearling_cost_consignor": "Indian Creek"
     },
     {
       "hip": 630,
@@ -317,7 +386,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 22000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1172,
+      "yearling_cost_consignor": "Four Star Sales"
     },
     {
       "hip": 657,
@@ -332,7 +405,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 170000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2722,
+      "yearling_cost_consignor": "Stoneriggs Farm"
     },
     {
       "hip": 817,
@@ -347,7 +424,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1486,
+      "yearling_cost_consignor": "Taylor Made Sales Agency"
     },
     {
       "hip": 841,
@@ -363,7 +444,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 46.9,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 45000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1518,
+      "yearling_cost_consignor": "Gainesway",
+      "realized_return_pct": -51.1
     },
     {
       "hip": 853,
@@ -379,7 +465,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 37000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2814,
+      "yearling_cost_consignor": "Knockgriffin Farm",
+      "realized_return_pct": 40.5
     },
     {
       "hip": 956,
@@ -426,7 +517,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 46.9,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 288,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": 220.0
     },
     {
       "hip": 1146,
@@ -442,7 +538,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 453,
+      "yearling_cost_consignor": "Four Star Sales",
+      "realized_return_pct": -75.0
     },
     {
       "hip": 1189,
@@ -458,7 +559,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 45.2,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3317,
+      "yearling_cost_consignor": "Indian Creek",
+      "realized_return_pct": -14.3
     },
     {
       "hip": 1205,
@@ -490,7 +596,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 160000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2536,
+      "yearling_cost_consignor": "Stoneriggs Farm",
+      "realized_return_pct": 134.4
     },
     {
       "hip": 221,
@@ -522,7 +633,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 80000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 824,
+      "yearling_cost_consignor": "Hunter Valley Farm",
+      "realized_return_pct": -43.8
     },
     {
       "hip": 359,
@@ -585,7 +701,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3478,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": 160.0
     },
     {
       "hip": 466,
@@ -601,7 +722,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 195000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 98,
+      "yearling_cost_consignor": "Taylor Made Sales Agency, for Town & Country Horse Farms, LLC",
+      "realized_return_pct": 233.3
     },
     {
       "hip": 485,
@@ -617,7 +743,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 150000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1448,
+      "yearling_cost_consignor": "Eaton Sales, for Spendthrift Farm",
+      "realized_return_pct": -66.7
     },
     {
       "hip": 500,
@@ -633,7 +764,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1847,
+      "yearling_cost_consignor": "Beau Lane Bloodstock",
+      "realized_return_pct": 75.0
     },
     {
       "hip": 528,
@@ -665,7 +801,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 200000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1856,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": 250.0
     },
     {
       "hip": 579,
@@ -681,7 +822,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 32000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2685,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 118.8
     },
     {
       "hip": 617,
@@ -697,7 +843,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 185000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 117,
+      "yearling_cost_consignor": "Warrendale Sales, for Silesia Farm",
+      "realized_return_pct": 197.3
     },
     {
       "hip": 667,
@@ -713,7 +864,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 200000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2727,
+      "yearling_cost_consignor": "Warrendale Sales, for Silesia Farm",
+      "realized_return_pct": 0.0
     },
     {
       "hip": 691,
@@ -728,7 +884,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 30000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3157,
+      "yearling_cost_consignor": "Taylor Made Sales Agency"
     },
     {
       "hip": 837,
@@ -792,7 +952,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 28.4,
       "sire_grade": "D",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 160000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 43,
+      "yearling_cost_consignor": "Eaton Sales",
+      "realized_return_pct": 118.8
     },
     {
       "hip": 94,
@@ -808,7 +973,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 37000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3367,
+      "yearling_cost_consignor": "Ledgelands",
+      "realized_return_pct": 264.9
     },
     {
       "hip": 142,
@@ -840,7 +1010,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 76,
+      "yearling_cost_consignor": "Small Batch Sales",
+      "realized_return_pct": -25.0
     },
     {
       "hip": 244,
@@ -920,7 +1095,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 19000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 800,
+      "yearling_cost_consignor": "Grovendale Sales",
+      "realized_return_pct": 347.4
     },
     {
       "hip": 296,
@@ -935,7 +1115,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 32000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3432,
+      "yearling_cost_consignor": "Mulholland Springs"
     },
     {
       "hip": 329,
@@ -951,7 +1135,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3038,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 0.0
     },
     {
       "hip": 340,
@@ -967,7 +1156,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 165000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 555,
+      "yearling_cost_consignor": "Sequel New York",
+      "realized_return_pct": -51.5
     },
     {
       "hip": 341,
@@ -982,7 +1176,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 29000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 556,
+      "yearling_cost_consignor": "Summerfield, for Go-To-Toga Racing"
     },
     {
       "hip": 379,
@@ -1013,7 +1211,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3077,
+      "yearling_cost_consignor": "Gainesway"
     },
     {
       "hip": 611,
@@ -1029,7 +1231,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 28000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3523,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 78.6
     },
     {
       "hip": 632,
@@ -1060,7 +1267,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 168,
+      "yearling_cost_consignor": "Thoroughstock",
+      "realized_return_pct": -10.0
     },
     {
       "hip": 706,
@@ -1076,7 +1288,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 17,
+      "yearling_cost_consignor": "Vinery Sales",
+      "realized_return_pct": -12.5
     },
     {
       "hip": 728,
@@ -1108,7 +1325,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 22000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1379,
+      "yearling_cost_consignor": "Marcuzzi Thoroughbreds",
+      "realized_return_pct": 36.4
     },
     {
       "hip": 852,
@@ -1124,7 +1346,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2397,
+      "yearling_cost_consignor": "Vinery Sales",
+      "realized_return_pct": 88.0
     },
     {
       "hip": 865,
@@ -1140,7 +1367,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 54.9,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 62000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2401,
+      "yearling_cost_consignor": "Mulholland Springs",
+      "realized_return_pct": -19.4
     },
     {
       "hip": 1107,
@@ -1188,7 +1420,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.7,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 160000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 418,
+      "yearling_cost_consignor": "Summerfield",
+      "realized_return_pct": 87.5
     },
     {
       "hip": 14,
@@ -1204,7 +1441,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.7,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 429,
+      "yearling_cost_consignor": "Peter Sheppell Thoroughbreds",
+      "realized_return_pct": 160.0
     },
     {
       "hip": 16,
@@ -1220,7 +1462,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 120000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1695,
+      "yearling_cost_consignor": "Buckland Sales",
+      "realized_return_pct": 58.3
     },
     {
       "hip": 151,
@@ -1235,7 +1482,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2154,
+      "yearling_cost_consignor": "Elm Tree Farm, for Stonestreet Bred & Raised"
     },
     {
       "hip": 192,
@@ -1266,7 +1517,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 92000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 708,
+      "yearling_cost_consignor": "Bluewater Sales"
     },
     {
       "hip": 215,
@@ -1282,7 +1537,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.7,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 350000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "yearling_cost_hip": 162,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 142.9
     },
     {
       "hip": 249,
@@ -1298,7 +1558,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.7,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 85000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1778,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 341.2
     },
     {
       "hip": 320,
@@ -1314,7 +1579,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.7,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 210000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 231,
+      "yearling_cost_consignor": "Four Star Sales",
+      "realized_return_pct": 233.3
     },
     {
       "hip": 328,
@@ -1330,7 +1600,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1410,
+      "yearling_cost_consignor": "Valkyre Stud",
+      "realized_return_pct": 850.0
     },
     {
       "hip": 334,
@@ -1346,7 +1621,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 30000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3441,
+      "yearling_cost_consignor": "Nicky Drion Thoroughbreds",
+      "realized_return_pct": 216.7
     },
     {
       "hip": 402,
@@ -1361,7 +1641,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 165000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1435,
+      "yearling_cost_consignor": "Woods Edge Farm"
     },
     {
       "hip": 516,
@@ -1376,7 +1660,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.7,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 92000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 153,
+      "yearling_cost_consignor": "K P Sales"
     },
     {
       "hip": 520,
@@ -1392,7 +1680,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 170000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2265,
+      "yearling_cost_consignor": "Nursery Place",
+      "realized_return_pct": 120.6
     },
     {
       "hip": 785,
@@ -1408,7 +1701,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.7,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1965,
+      "yearling_cost_consignor": "Eaton Sales",
+      "realized_return_pct": 90.0
     },
     {
       "hip": 870,
@@ -1440,7 +1738,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 140000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 801,
+      "yearling_cost_consignor": "Brookdale Sales",
+      "realized_return_pct": 28.6
     },
     {
       "hip": 921,
@@ -1456,7 +1759,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 80000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1590,
+      "yearling_cost_consignor": "Royal Oak Farm",
+      "realized_return_pct": -75.0
     },
     {
       "hip": 1067,
@@ -1472,7 +1780,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 105000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1230,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": -66.7
     },
     {
       "hip": 1071,
@@ -1488,7 +1801,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 65000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1233,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": 284.6
     },
     {
       "hip": 1096,
@@ -1504,7 +1822,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.7,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 75000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1243,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": -60.0
     },
     {
       "hip": 1179,
@@ -1520,7 +1843,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 52.5,
       "sire_grade": "C",
-      "sire_fee_usd": 75000
+      "sire_fee_usd": 75000,
+      "yearling_cost_usd": 85000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 361,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": -29.4
     },
     {
       "hip": 1180,
@@ -1552,7 +1880,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 468,
+      "yearling_cost_consignor": "Mulholland Farm",
+      "realized_return_pct": 35.0
     },
     {
       "hip": 60,
@@ -1568,7 +1901,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 150000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 144,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": 20.0
     },
     {
       "hip": 152,
@@ -1584,7 +1922,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 160000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2155,
+      "yearling_cost_consignor": "Dixiana Farms",
+      "realized_return_pct": -70.6
     },
     {
       "hip": 188,
@@ -1616,7 +1959,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 45000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 713,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": -11.1
     },
     {
       "hip": 484,
@@ -1632,7 +1980,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1843,
+      "yearling_cost_consignor": "Warrendale Sales",
+      "realized_return_pct": 75.0
     },
     {
       "hip": 543,
@@ -1648,7 +2001,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 80000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1858,
+      "yearling_cost_consignor": "Warrendale Sales",
+      "realized_return_pct": 200.0
     },
     {
       "hip": 713,
@@ -1711,7 +2069,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 60000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 40,
+      "yearling_cost_consignor": "Moreau Bloodstock International",
+      "realized_return_pct": 25.0
     },
     {
       "hip": 1024,
@@ -1727,7 +2090,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 170000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1209,
+      "yearling_cost_consignor": "Hartwell Farm",
+      "realized_return_pct": 429.4
     },
     {
       "hip": 1099,
@@ -1743,7 +2111,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 105000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 485,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 138.1
     },
     {
       "hip": 1219,
@@ -1759,7 +2132,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 32.6,
       "sire_grade": "D",
-      "sire_fee_usd": 175000
+      "sire_fee_usd": 175000,
+      "yearling_cost_usd": 150000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 411,
+      "yearling_cost_consignor": "Bluewater Sales",
+      "realized_return_pct": 266.7
     },
     {
       "hip": 304,
@@ -1775,7 +2153,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 31.3,
       "sire_grade": "D",
-      "sire_fee_usd": 50000
+      "sire_fee_usd": 50000,
+      "yearling_cost_usd": 57000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 811,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 5.3
     },
     {
       "hip": 518,
@@ -1807,7 +2190,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 31.3,
       "sire_grade": "D",
-      "sire_fee_usd": 50000
+      "sire_fee_usd": 50000,
+      "yearling_cost_usd": 120000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2312,
+      "yearling_cost_consignor": "Dixiana Farms",
+      "realized_return_pct": 212.5
     },
     {
       "hip": 662,
@@ -1823,7 +2211,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 31.3,
       "sire_grade": "D",
-      "sire_fee_usd": 50000
+      "sire_fee_usd": 50000,
+      "yearling_cost_usd": 130000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1910,
+      "yearling_cost_consignor": "Buck Pond Farm",
+      "realized_return_pct": 238.5
     },
     {
       "hip": 688,
@@ -1870,7 +2263,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 37.0,
       "sire_grade": "D",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 145000,
+      "yearling_cost_sale": "Fasig Tipton California Fall Yearling Horses Of All Ages Sale 2022",
+      "yearling_cost_hip": 264,
+      "yearling_cost_consignor": "Havens Bloodstock Agency, for Liberty Road Stables",
+      "realized_return_pct": 65.5
     },
     {
       "hip": 983,
@@ -1918,7 +2316,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 36.4,
       "sire_grade": "D",
-      "sire_fee_usd": 110000
+      "sire_fee_usd": 110000,
+      "yearling_cost_usd": 250000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1287,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": 100.0
     },
     {
       "hip": 31,
@@ -1966,7 +2369,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 36.4,
       "sire_grade": "D",
-      "sire_fee_usd": 110000
+      "sire_fee_usd": 110000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2211,
+      "yearling_cost_consignor": "Hunter Valley Farm",
+      "realized_return_pct": 37.5
     },
     {
       "hip": 675,
@@ -1982,7 +2390,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 36.4,
       "sire_grade": "D",
-      "sire_fee_usd": 110000
+      "sire_fee_usd": 110000,
+      "yearling_cost_usd": 32000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3552,
+      "yearling_cost_consignor": "Woodford Thoroughbreds",
+      "realized_return_pct": 400.0
     },
     {
       "hip": 989,
@@ -1998,7 +2411,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 36.4,
       "sire_grade": "D",
-      "sire_fee_usd": 110000
+      "sire_fee_usd": 110000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2439,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": 90.0
     },
     {
       "hip": 990,
@@ -2029,7 +2447,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 36.4,
       "sire_grade": "D",
-      "sire_fee_usd": 110000
+      "sire_fee_usd": 110000,
+      "yearling_cost_usd": 200000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1628,
+      "yearling_cost_consignor": "St George Sales",
+      "realized_return_pct": -90.0
     },
     {
       "hip": 1185,
@@ -2045,7 +2468,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 36.4,
       "sire_grade": "D",
-      "sire_fee_usd": 110000
+      "sire_fee_usd": 110000,
+      "yearling_cost_usd": 90000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1683,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 66.7
     },
     {
       "hip": 6,
@@ -2077,7 +2505,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.4,
       "sire_grade": "C",
-      "sire_fee_usd": 15000
+      "sire_fee_usd": 15000,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 507,
+      "yearling_cost_consignor": "Parkway Farm",
+      "realized_return_pct": 275.0
     },
     {
       "hip": 78,
@@ -2093,7 +2526,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.4,
       "sire_grade": "C",
-      "sire_fee_usd": 15000
+      "sire_fee_usd": 15000,
+      "yearling_cost_usd": 150000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2131,
+      "yearling_cost_consignor": "Pope McLean",
+      "realized_return_pct": 36.7
     },
     {
       "hip": 102,
@@ -2109,7 +2547,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.4,
       "sire_grade": "C",
-      "sire_fee_usd": 15000
+      "sire_fee_usd": 15000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3374,
+      "yearling_cost_consignor": "Buckland Sales",
+      "realized_return_pct": -26.0
     },
     {
       "hip": 125,
@@ -2125,7 +2568,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.4,
       "sire_grade": "C",
-      "sire_fee_usd": 15000
+      "sire_fee_usd": 15000,
+      "yearling_cost_usd": 67000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 608,
+      "yearling_cost_consignor": "Nicky Drion Thoroughbreds",
+      "realized_return_pct": 198.5
     },
     {
       "hip": 127,
@@ -2205,7 +2653,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.4,
       "sire_grade": "C",
-      "sire_fee_usd": 15000
+      "sire_fee_usd": 15000,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2630,
+      "yearling_cost_consignor": "Vinery Sales",
+      "realized_return_pct": 57.1
     },
     {
       "hip": 414,
@@ -2221,7 +2674,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.4,
       "sire_grade": "C",
-      "sire_fee_usd": 15000
+      "sire_fee_usd": 15000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Fasig Tipton Midlantic Eastern Fall Yearling Sale 2022",
+      "yearling_cost_hip": 310,
+      "yearling_cost_consignor": "Marshall W Silverman, for Thornmar",
+      "realized_return_pct": -60.0
     },
     {
       "hip": 541,
@@ -2237,7 +2695,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 48.4,
       "sire_grade": "C",
-      "sire_fee_usd": 15000
+      "sire_fee_usd": 15000,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3096,
+      "yearling_cost_consignor": "Machmer Hall Sales",
+      "realized_return_pct": 60.0
     },
     {
       "hip": 607,
@@ -2284,7 +2747,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 56.4,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 24000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 640,
+      "yearling_cost_consignor": "Whitman Sales"
     },
     {
       "hip": 815,
@@ -2299,7 +2766,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 56.4,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 60000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1483,
+      "yearling_cost_consignor": "Machmer Hall Sales"
     },
     {
       "hip": 965,
@@ -2331,7 +2802,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 56.4,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 57000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 370,
+      "yearling_cost_consignor": "Double Tap Sales",
+      "realized_return_pct": -47.4
     },
     {
       "hip": 1081,
@@ -2363,7 +2839,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 44.3,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2099,
+      "yearling_cost_consignor": "Dixiana Farms",
+      "realized_return_pct": 275.0
     },
     {
       "hip": 132,
@@ -2394,7 +2875,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 44.3,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 22000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3091,
+      "yearling_cost_consignor": "Eaton Sales, for WinStar Farm Bred & Raised",
+      "realized_return_pct": 263.6
     },
     {
       "hip": 533,
@@ -2410,7 +2896,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 44.3,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 80000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 205,
+      "yearling_cost_consignor": "Kaizen Sales",
+      "realized_return_pct": 212.5
     },
     {
       "hip": 619,
@@ -2425,7 +2916,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 44.3,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 125000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2297,
+      "yearling_cost_consignor": "Stonehaven Steadings"
     },
     {
       "hip": 725,
@@ -2440,7 +2935,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 44.3,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 45000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2354,
+      "yearling_cost_consignor": "Legacy Bloodstock"
     },
     {
       "hip": 747,
@@ -2504,7 +3003,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 44.3,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 187,
+      "yearling_cost_consignor": "Summerfield",
+      "realized_return_pct": 40.0
     },
     {
       "hip": 900,
@@ -2520,7 +3024,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 44.3,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 55000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1997,
+      "yearling_cost_consignor": "Nursery Place",
+      "realized_return_pct": 36.4
     },
     {
       "hip": 1073,
@@ -2535,7 +3044,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 44.3,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 30000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2891,
+      "yearling_cost_consignor": "Hill 'n' Dale Sales Agency"
     },
     {
       "hip": 26,
@@ -2551,7 +3064,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 25.3,
       "sire_grade": "D",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 37000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 453,
+      "yearling_cost_consignor": "Hermitage Farm",
+      "realized_return_pct": 116.2
     },
     {
       "hip": 363,
@@ -2582,7 +3100,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 25.3,
       "sire_grade": "D",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 6,
+      "yearling_cost_consignor": "Kim Harrison",
+      "realized_return_pct": 900.0
     },
     {
       "hip": 883,
@@ -2614,7 +3137,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 49.0,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 180000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2137,
+      "yearling_cost_consignor": "Woods Edge Farm",
+      "realized_return_pct": 122.2
     },
     {
       "hip": 123,
@@ -2645,7 +3173,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 40.4,
       "sire_grade": "C",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 290000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "yearling_cost_hip": 164,
+      "yearling_cost_consignor": "Mulholland Springs",
+      "realized_return_pct": 6.9
     },
     {
       "hip": 276,
@@ -2661,7 +3194,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 40.5,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 17000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3017,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": 252.9
     },
     {
       "hip": 377,
@@ -2677,7 +3215,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 49.0,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3463,
+      "yearling_cost_consignor": "Vinery Sales",
+      "realized_return_pct": 200.0
     },
     {
       "hip": 384,
@@ -2693,7 +3236,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 49.0,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 95000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1821,
+      "yearling_cost_consignor": "Indian Creek",
+      "realized_return_pct": 163.2
     },
     {
       "hip": 405,
@@ -2709,7 +3257,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 40.5,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 92,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 130.0
     },
     {
       "hip": 417,
@@ -2757,7 +3310,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 49.0,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 45000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1121,
+      "yearling_cost_consignor": "Vinery Sales",
+      "realized_return_pct": 233.3
     },
     {
       "hip": 777,
@@ -2819,7 +3377,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 40.5,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 13000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2832,
+      "yearling_cost_consignor": "Eaton Sales",
+      "realized_return_pct": 400.0
     },
     {
       "hip": 967,
@@ -2835,7 +3398,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 40.4,
       "sire_grade": "C",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 300000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 42,
+      "yearling_cost_consignor": "Eaton Sales, for Spendthrift Farm",
+      "realized_return_pct": 333.3
     },
     {
       "hip": 968,
@@ -2866,7 +3434,11 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 49.0,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 124,
+      "yearling_cost_consignor": "Small Batch Sales"
     },
     {
       "hip": 1029,
@@ -2882,7 +3454,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 49.0,
       "sire_grade": "C",
-      "sire_fee_usd": 30000
+      "sire_fee_usd": 30000,
+      "yearling_cost_usd": 60000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1625,
+      "yearling_cost_consignor": "Four Star Sales, for Walmac Farm",
+      "realized_return_pct": -63.3
     },
     {
       "hip": 1036,
@@ -2946,7 +3523,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 50.8,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 17000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2545,
+      "yearling_cost_consignor": "Brereton C. Jones/Airdrie Stud",
+      "realized_return_pct": 282.4
     },
     {
       "hip": 479,
@@ -2962,7 +3544,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 50.8,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 75000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1842,
+      "yearling_cost_consignor": "Brereton C. Jones/Airdrie Stud",
+      "realized_return_pct": 13.3
     },
     {
       "hip": 914,
@@ -2978,7 +3565,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 50.8,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3225,
+      "yearling_cost_consignor": "Indian Creek",
+      "realized_return_pct": -72.0
     },
     {
       "hip": 937,
@@ -2994,7 +3586,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 50.8,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 172,
+      "yearling_cost_consignor": "Brookdale Sales, for Mineola Farm",
+      "realized_return_pct": 242.9
     },
     {
       "hip": 1060,
@@ -3058,7 +3655,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 63.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1927,
+      "yearling_cost_consignor": "Lantern Hill Farm",
+      "realized_return_pct": 0.0
     },
     {
       "hip": 947,
@@ -3122,7 +3724,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 30.9,
       "sire_grade": "D",
-      "sire_fee_usd": 225000
+      "sire_fee_usd": 225000,
+      "yearling_cost_usd": 175000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2133,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": 77.1
     },
     {
       "hip": 149,
@@ -3201,7 +3808,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 38.4,
       "sire_grade": "D",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 10000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1548,
+      "yearling_cost_consignor": "Maine Chance Farm (University of Kentucky)",
+      "realized_return_pct": 900.0
     },
     {
       "hip": 1030,
@@ -3217,7 +3829,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 30.9,
       "sire_grade": "D",
-      "sire_fee_usd": 225000
+      "sire_fee_usd": 225000,
+      "yearling_cost_usd": 230000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 462,
+      "yearling_cost_consignor": "Claiborne Farm",
+      "realized_return_pct": -13.0
     },
     {
       "hip": 1052,
@@ -3233,7 +3850,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 30.9,
       "sire_grade": "D",
-      "sire_fee_usd": 225000
+      "sire_fee_usd": 225000,
+      "yearling_cost_usd": 150000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 202,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": 100.0
     },
     {
       "hip": 134,
@@ -3249,7 +3871,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 20.3,
       "sire_grade": "F",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2148,
+      "yearling_cost_consignor": "Eaton Sales",
+      "realized_return_pct": 80.0
     },
     {
       "hip": 534,
@@ -3265,7 +3892,12 @@
       "sire_pinhook_signal": "strong",
       "sire_value_score": 20.3,
       "sire_grade": "F",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 15000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3503,
+      "yearling_cost_consignor": "Royal Oak Farm",
+      "realized_return_pct": 126.7
     },
     {
       "hip": 972,
@@ -3297,7 +3929,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3988,
+      "yearling_cost_consignor": "Warrendale Sales",
+      "realized_return_pct": 100.0
     },
     {
       "hip": 71,
@@ -3329,7 +3966,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 22000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1725,
+      "yearling_cost_consignor": "Glennwood Farm",
+      "realized_return_pct": 113.6
     },
     {
       "hip": 117,
@@ -3361,7 +4003,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 62000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 675,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": 61.3
     },
     {
       "hip": 236,
@@ -3376,7 +4023,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 90000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 79,
+      "yearling_cost_consignor": "Stuart Morris, for Highclere"
     },
     {
       "hip": 269,
@@ -3392,7 +4043,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 150000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "yearling_cost_hip": 172,
+      "yearling_cost_consignor": "Machmer Hall Sales, for Machmer Hall and D & J Racing",
+      "realized_return_pct": -90.0
     },
     {
       "hip": 282,
@@ -3407,7 +4063,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 45000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3023,
+      "yearling_cost_consignor": "Taylor Made Sales Agency"
     },
     {
       "hip": 331,
@@ -3423,7 +4083,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2618,
+      "yearling_cost_consignor": "Four Star Sales",
+      "realized_return_pct": -46.0
     },
     {
       "hip": 374,
@@ -3454,7 +4119,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3480,
+      "yearling_cost_consignor": "Taylor Made Sales Agency"
     },
     {
       "hip": 472,
@@ -3485,7 +4154,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 30000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3098,
+      "yearling_cost_consignor": "Machmer Hall Sales, for St. Simon Place",
+      "realized_return_pct": 766.7
     },
     {
       "hip": 601,
@@ -3531,7 +4205,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 175000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "yearling_cost_hip": 28,
+      "yearling_cost_consignor": "Mill Ridge Sales"
     },
     {
       "hip": 712,
@@ -3563,7 +4241,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2358,
+      "yearling_cost_consignor": "Garrencasey Sales",
+      "realized_return_pct": 578.6
     },
     {
       "hip": 780,
@@ -3579,7 +4262,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 42000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1551,
+      "yearling_cost_consignor": "Four Star Sales",
+      "realized_return_pct": 42.9
     },
     {
       "hip": 802,
@@ -3611,7 +4299,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 45000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 190,
+      "yearling_cost_consignor": "Silver Oaks Farm",
+      "realized_return_pct": -33.3
     },
     {
       "hip": 1001,
@@ -3643,7 +4336,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 120000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 424,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": -75.0
     },
     {
       "hip": 1009,
@@ -3675,7 +4373,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 22000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3284,
+      "yearling_cost_consignor": "Grovendale Sales",
+      "realized_return_pct": 0.0
     },
     {
       "hip": 1113,
@@ -3691,7 +4394,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 285,
+      "yearling_cost_consignor": "Highgate Sales",
+      "realized_return_pct": 185.7
     },
     {
       "hip": 1117,
@@ -3723,7 +4431,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 68.2,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2486,
+      "yearling_cost_consignor": "Mulholland Springs",
+      "realized_return_pct": -31.4
     },
     {
       "hip": 80,
@@ -3739,7 +4452,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 504,
+      "yearling_cost_consignor": "McMahon of Saratoga Thoroughbreds",
+      "realized_return_pct": 87.5
     },
     {
       "hip": 178,
@@ -3755,7 +4473,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 681,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 250.0
     },
     {
       "hip": 180,
@@ -3787,7 +4510,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 160000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 201,
+      "yearling_cost_consignor": "Bobby Jones Equine",
+      "realized_return_pct": 181.2
     },
     {
       "hip": 420,
@@ -3818,7 +4546,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 32000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2271,
+      "yearling_cost_consignor": "Hill 'n' Dale Sales Agency",
+      "realized_return_pct": 118.8
     },
     {
       "hip": 550,
@@ -3834,7 +4567,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 80000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1063,
+      "yearling_cost_consignor": "Warrendale Sales",
+      "realized_return_pct": -25.0
     },
     {
       "hip": 964,
@@ -3850,7 +4588,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 290000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 817,
+      "yearling_cost_consignor": "Indian Creek",
+      "realized_return_pct": -58.6
     },
     {
       "hip": 1005,
@@ -3866,7 +4609,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 62000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2874,
+      "yearling_cost_consignor": "Hill 'n' Dale Sales Agency",
+      "realized_return_pct": 141.9
     },
     {
       "hip": 1082,
@@ -3882,7 +4630,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 115000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2046,
+      "yearling_cost_consignor": "Highgate Sales",
+      "realized_return_pct": 169.6
     },
     {
       "hip": 1112,
@@ -3898,7 +4651,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 190000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 283,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 110.5
     },
     {
       "hip": 1135,
@@ -3914,7 +4672,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 38.2,
       "sire_grade": "D",
-      "sire_fee_usd": 125000
+      "sire_fee_usd": 125000,
+      "yearling_cost_usd": 87000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 317,
+      "yearling_cost_consignor": "Burleson Farms",
+      "realized_return_pct": 14.9
     },
     {
       "hip": 358,
@@ -3930,7 +4693,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 50.1,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 85000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 559,
+      "yearling_cost_consignor": "Fort Christopher's Thoroughbreds",
+      "realized_return_pct": -76.5
     },
     {
       "hip": 426,
@@ -3946,7 +4714,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 50.1,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 948,
+      "yearling_cost_consignor": "Warrendale Sales",
+      "realized_return_pct": 42.9
     },
     {
       "hip": 677,
@@ -3994,7 +4767,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 50.1,
       "sire_grade": "C",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 47000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 275,
+      "yearling_cost_consignor": "Vinery Sales, for HREH Raised At Springhill Equine",
+      "realized_return_pct": -36.2
     },
     {
       "hip": 1114,
@@ -4026,7 +4804,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 65.1,
       "sire_grade": "B",
-      "sire_fee_usd": 35000
+      "sire_fee_usd": 35000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1296,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": -26.0
     },
     {
       "hip": 231,
@@ -4057,7 +4840,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 65.1,
       "sire_grade": "B",
-      "sire_fee_usd": 35000
+      "sire_fee_usd": 35000,
+      "yearling_cost_usd": 245000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 772,
+      "yearling_cost_consignor": "Stonehaven Steadings",
+      "realized_return_pct": -87.8
     },
     {
       "hip": 467,
@@ -4073,7 +4861,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 65.1,
       "sire_grade": "B",
-      "sire_fee_usd": 35000
+      "sire_fee_usd": 35000,
+      "yearling_cost_usd": 90000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1446,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": 94.4
     },
     {
       "hip": 683,
@@ -4089,7 +4882,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 65.1,
       "sire_grade": "B",
-      "sire_fee_usd": 35000
+      "sire_fee_usd": 35000,
+      "yearling_cost_usd": 150000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1918,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": -50.0
     },
     {
       "hip": 851,
@@ -4136,7 +4934,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 65.1,
       "sire_grade": "B",
-      "sire_fee_usd": 35000
+      "sire_fee_usd": 35000,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1650,
+      "yearling_cost_consignor": "Woodford Thoroughbreds",
+      "realized_return_pct": 400.0
     },
     {
       "hip": 1191,
@@ -4167,7 +4970,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 40.0,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 120000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1389,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 12.5
     },
     {
       "hip": 316,
@@ -4183,7 +4991,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 40.0,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 550,
+      "yearling_cost_consignor": "Four Star Sales",
+      "realized_return_pct": 90.0
     },
     {
       "hip": 386,
@@ -4199,7 +5012,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 40.0,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "yearling_cost_hip": 192,
+      "yearling_cost_consignor": "Bedouin Bloodstock",
+      "realized_return_pct": -35.0
     },
     {
       "hip": 727,
@@ -4215,7 +5033,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 40.0,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1534,
+      "yearling_cost_consignor": "Machmer Hall Sales, for St. Simon Place and Scott Stephens",
+      "realized_return_pct": 110.0
     },
     {
       "hip": 814,
@@ -4231,7 +5054,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 40.0,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 105000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "yearling_cost_hip": 50,
+      "yearling_cost_consignor": "Brookdale Sales",
+      "realized_return_pct": 38.1
     },
     {
       "hip": 963,
@@ -4247,7 +5075,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 40.0,
       "sire_grade": "C",
-      "sire_fee_usd": 20000
+      "sire_fee_usd": 20000,
+      "yearling_cost_usd": 30000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 416,
+      "yearling_cost_consignor": "Summerfield, for Sunnyfield Farm",
+      "realized_return_pct": 233.3
     },
     {
       "hip": 70,
@@ -4262,7 +5095,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.8,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 75000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 498,
+      "yearling_cost_consignor": "Bluewater Sales"
     },
     {
       "hip": 415,
@@ -4293,7 +5130,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.8,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1829,
+      "yearling_cost_consignor": "Brereton C. Jones/Airdrie Stud"
     },
     {
       "hip": 459,
@@ -4309,7 +5150,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.8,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 551,
+      "yearling_cost_consignor": "Silver Oaks Farm",
+      "realized_return_pct": 120.0
     },
     {
       "hip": 478,
@@ -4356,7 +5202,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 39.5,
       "sire_grade": "D",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3108,
+      "yearling_cost_consignor": "Hill 'n' Dale Sales Agency",
+      "realized_return_pct": 75.0
     },
     {
       "hip": 586,
@@ -4372,7 +5223,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.8,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 20000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3512,
+      "yearling_cost_consignor": "Brereton C. Jones/Airdrie Stud",
+      "realized_return_pct": 75.0
     },
     {
       "hip": 596,
@@ -4388,7 +5244,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.8,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 65000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3518,
+      "yearling_cost_consignor": "Brereton C. Jones/Airdrie Stud",
+      "realized_return_pct": -23.1
     },
     {
       "hip": 789,
@@ -4404,7 +5265,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.8,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1440,
+      "yearling_cost_consignor": "Mulholland Springs",
+      "realized_return_pct": -42.9
     },
     {
       "hip": 823,
@@ -4420,7 +5286,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.8,
       "sire_grade": "C",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 130000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1563,
+      "yearling_cost_consignor": "Brereton C. Jones/Airdrie Stud",
+      "realized_return_pct": -7.7
     },
     {
       "hip": 845,
@@ -4436,7 +5307,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 39.5,
       "sire_grade": "D",
-      "sire_fee_usd": 25000
+      "sire_fee_usd": 25000,
+      "yearling_cost_usd": 110000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2394,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": 163.6
     },
     {
       "hip": 1022,
@@ -4483,7 +5359,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 34.1,
       "sire_grade": "D",
-      "sire_fee_usd": 200000
+      "sire_fee_usd": 200000,
+      "yearling_cost_usd": 28000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 751,
+      "yearling_cost_consignor": "Taylor Made Sales Agency"
     },
     {
       "hip": 287,
@@ -4498,7 +5378,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 34.1,
       "sire_grade": "D",
-      "sire_fee_usd": 200000
+      "sire_fee_usd": 200000,
+      "yearling_cost_usd": 30000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 622,
+      "yearling_cost_consignor": "Denali Stud"
     },
     {
       "hip": 299,
@@ -4514,7 +5398,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 34.1,
       "sire_grade": "D",
-      "sire_fee_usd": 200000
+      "sire_fee_usd": 200000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1401,
+      "yearling_cost_consignor": "Summerfield, for Stonestreet Bred & Raised",
+      "realized_return_pct": 700.0
     },
     {
       "hip": 510,
@@ -4562,7 +5451,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 34.1,
       "sire_grade": "D",
-      "sire_fee_usd": 200000
+      "sire_fee_usd": 200000,
+      "yearling_cost_usd": 165000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1160,
+      "yearling_cost_consignor": "Claiborne Farm",
+      "realized_return_pct": -72.7
     },
     {
       "hip": 1124,
@@ -4578,7 +5472,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 34.1,
       "sire_grade": "D",
-      "sire_fee_usd": 200000
+      "sire_fee_usd": 200000,
+      "yearling_cost_usd": 125000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 298,
+      "yearling_cost_consignor": "Brookdale Sales",
+      "realized_return_pct": 140.0
     },
     {
       "hip": 75,
@@ -4610,7 +5509,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 61.5,
       "sire_grade": "B",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 200000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 372,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": 40.0
     },
     {
       "hip": 416,
@@ -4625,7 +5529,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 61.5,
       "sire_grade": "B",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 450000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1828,
+      "yearling_cost_consignor": "Stuart Morris, for Highclere, Rabanal and Wickes"
     },
     {
       "hip": 782,
@@ -4641,7 +5549,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 61.5,
       "sire_grade": "B",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 430000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 153,
+      "yearling_cost_consignor": "Gainesway",
+      "realized_return_pct": 411.6
     },
     {
       "hip": 1068,
@@ -4673,7 +5586,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 61.5,
       "sire_grade": "B",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3303,
+      "yearling_cost_consignor": "Four Star Sales, for Westbury Stables",
+      "realized_return_pct": -80.0
     },
     {
       "hip": 62,
@@ -4689,7 +5607,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.1,
       "sire_grade": "C",
-      "sire_fee_usd": 40000
+      "sire_fee_usd": 40000,
+      "yearling_cost_usd": 125000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 545,
+      "yearling_cost_consignor": "Gainesway",
+      "realized_return_pct": 100.0
     },
     {
       "hip": 130,
@@ -4705,7 +5628,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.1,
       "sire_grade": "C",
-      "sire_fee_usd": 40000
+      "sire_fee_usd": 40000,
+      "yearling_cost_usd": 145000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 937,
+      "yearling_cost_consignor": "Grovendale Sales, for WinStar Farm Bred & Raised",
+      "realized_return_pct": 62.1
     },
     {
       "hip": 195,
@@ -4720,7 +5648,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.1,
       "sire_grade": "C",
-      "sire_fee_usd": 40000
+      "sire_fee_usd": 40000,
+      "yearling_cost_usd": 45000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2992,
+      "yearling_cost_consignor": "Denali Stud"
     },
     {
       "hip": 489,
@@ -4736,7 +5668,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.1,
       "sire_grade": "C",
-      "sire_fee_usd": 40000
+      "sire_fee_usd": 40000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 204,
+      "yearling_cost_consignor": "Kaizen Sales",
+      "realized_return_pct": 30.0
     },
     {
       "hip": 494,
@@ -4752,7 +5689,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.1,
       "sire_grade": "C",
-      "sire_fee_usd": 40000
+      "sire_fee_usd": 40000,
+      "yearling_cost_usd": 160000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 101,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": 81.2
     },
     {
       "hip": 951,
@@ -4767,7 +5709,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 42.1,
       "sire_grade": "C",
-      "sire_fee_usd": 40000
+      "sire_fee_usd": 40000,
+      "yearling_cost_usd": 47000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 71,
+      "yearling_cost_consignor": "Eaton Sales"
     },
     {
       "hip": 1084,
@@ -4894,7 +5840,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 26.5,
       "sire_grade": "D",
-      "sire_fee_usd": 60000
+      "sire_fee_usd": 60000,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2928,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": -60.0
     },
     {
       "hip": 624,
@@ -4910,7 +5861,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 27.5,
       "sire_grade": "D",
-      "sire_fee_usd": 185000
+      "sire_fee_usd": 185000,
+      "yearling_cost_usd": 250000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1484,
+      "yearling_cost_consignor": "Denali Stud, for Bridlewood Farm",
+      "realized_return_pct": 24.0
     },
     {
       "hip": 1121,
@@ -4926,7 +5882,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 27.5,
       "sire_grade": "D",
-      "sire_fee_usd": 185000
+      "sire_fee_usd": 185000,
+      "yearling_cost_usd": 170000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 90,
+      "yearling_cost_consignor": "Gainesway",
+      "realized_return_pct": 76.5
     },
     {
       "hip": 148,
@@ -4942,7 +5903,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 27.4,
       "sire_grade": "D",
-      "sire_fee_usd": 5000
+      "sire_fee_usd": 5000,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1751,
+      "yearling_cost_consignor": "Four Star Sales",
+      "realized_return_pct": -20.0
     },
     {
       "hip": 201,
@@ -4989,7 +5955,11 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 27.4,
       "sire_grade": "D",
-      "sire_fee_usd": 5000
+      "sire_fee_usd": 5000,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2260,
+      "yearling_cost_consignor": "Eaton Sales"
     },
     {
       "hip": 519,
@@ -5021,7 +5991,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 27.4,
       "sire_grade": "D",
-      "sire_fee_usd": 5000
+      "sire_fee_usd": 5000,
+      "yearling_cost_usd": 11000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1241,
+      "yearling_cost_consignor": "Ballysax Bloodstock, for The Estate of Glen Todd",
+      "realized_return_pct": 445.5
     },
     {
       "hip": 941,
@@ -5037,7 +6012,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 27.4,
       "sire_grade": "D",
-      "sire_fee_usd": 5000
+      "sire_fee_usd": 5000,
+      "yearling_cost_usd": 17000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3629,
+      "yearling_cost_consignor": "Lane's End",
+      "realized_return_pct": -11.8
     },
     {
       "hip": 1039,
@@ -5084,7 +6064,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 37.5,
       "sire_grade": "D",
-      "sire_fee_usd": null
+      "sire_fee_usd": null,
+      "yearling_cost_usd": 95000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2574,
+      "yearling_cost_consignor": "Shawhan Place, for Glendalough",
+      "realized_return_pct": -52.6
     },
     {
       "hip": 294,
@@ -5116,7 +6101,12 @@
       "sire_pinhook_signal": "positive",
       "sire_value_score": 37.5,
       "sire_grade": "D",
-      "sire_fee_usd": null
+      "sire_fee_usd": null,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3467,
+      "yearling_cost_consignor": "Grovendale Sales, for WinStar Farm Bred & Raised",
+      "realized_return_pct": 0.0
     },
     {
       "hip": 504,
@@ -5244,7 +6234,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 54.5,
       "sire_grade": "C",
-      "sire_fee_usd": 45000
+      "sire_fee_usd": 45000,
+      "yearling_cost_usd": 225000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 540,
+      "yearling_cost_consignor": "Woods Edge Farm",
+      "realized_return_pct": 33.3
     },
     {
       "hip": 293,
@@ -5260,7 +6255,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 54.5,
       "sire_grade": "C",
-      "sire_fee_usd": 45000
+      "sire_fee_usd": 45000,
+      "yearling_cost_usd": 120000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 801,
+      "yearling_cost_consignor": "Cara Bloodstock",
+      "realized_return_pct": -80.0
     },
     {
       "hip": 297,
@@ -5308,7 +6308,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 54.5,
       "sire_grade": "C",
-      "sire_fee_usd": 45000
+      "sire_fee_usd": 45000,
+      "yearling_cost_usd": 150000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1445,
+      "yearling_cost_consignor": "Stonehaven Steadings",
+      "realized_return_pct": 50.0
     },
     {
       "hip": 470,
@@ -5355,7 +6360,11 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 54.5,
       "sire_grade": "C",
-      "sire_fee_usd": 45000
+      "sire_fee_usd": 45000,
+      "yearling_cost_usd": 97000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1223,
+      "yearling_cost_consignor": "Buckland Sales"
     },
     {
       "hip": 874,
@@ -5402,7 +6411,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 54.5,
       "sire_grade": "C",
-      "sire_fee_usd": 45000
+      "sire_fee_usd": 45000,
+      "yearling_cost_usd": 135000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 380,
+      "yearling_cost_consignor": "Machmer Hall Sales",
+      "realized_return_pct": -70.4
     },
     {
       "hip": 430,
@@ -5449,7 +6463,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 36.2,
       "sire_grade": "D",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1174,
+      "yearling_cost_consignor": "Buckland Sales",
+      "realized_return_pct": -20.0
     },
     {
       "hip": 718,
@@ -5465,7 +6484,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 36.2,
       "sire_grade": "D",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 155000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1306,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 35.5
     },
     {
       "hip": 720,
@@ -5481,7 +6505,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 36.2,
       "sire_grade": "D",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 75000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1316,
+      "yearling_cost_consignor": "Taylor Made Sales Agency, for The Dispersal of Emerald Edge Stud",
+      "realized_return_pct": 100.0
     },
     {
       "hip": 799,
@@ -5497,7 +6526,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 36.2,
       "sire_grade": "D",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 383,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": -25.0
     },
     {
       "hip": 826,
@@ -5513,7 +6547,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 36.2,
       "sire_grade": "D",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 160000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2805,
+      "yearling_cost_consignor": "Sally Thomas",
+      "realized_return_pct": -12.5
     },
     {
       "hip": 896,
@@ -5545,7 +6584,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 36.2,
       "sire_grade": "D",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Ocala Breeders Sales Co October Yearling Sale 2022",
+      "yearling_cost_hip": 25,
+      "yearling_cost_consignor": "Kaizen Sales",
+      "realized_return_pct": -5.7
     },
     {
       "hip": 1206,
@@ -5561,7 +6605,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 36.2,
       "sire_grade": "D",
-      "sire_fee_usd": 250000
+      "sire_fee_usd": 250000,
+      "yearling_cost_usd": 75000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2084,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": 26.7
     },
     {
       "hip": 411,
@@ -5577,7 +6626,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 38.1,
       "sire_grade": "D",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 22000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3472,
+      "yearling_cost_consignor": "Vinery Sales, for Haymarket Farm",
+      "realized_return_pct": 68.2
     },
     {
       "hip": 455,
@@ -5593,7 +6647,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 38.1,
       "sire_grade": "D",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 27000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 980,
+      "yearling_cost_consignor": "Greenfield Farms",
+      "realized_return_pct": 103.7
     },
     {
       "hip": 1157,
@@ -5625,7 +6684,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 38.1,
       "sire_grade": "D",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 80000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 224,
+      "yearling_cost_consignor": "Taylor Made Sales Agency",
+      "realized_return_pct": -68.8
     },
     {
       "hip": 1155,
@@ -5641,7 +6705,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 36.2,
       "sire_grade": "D",
-      "sire_fee_usd": 2500
+      "sire_fee_usd": 2500,
+      "yearling_cost_usd": 17000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3671,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": -11.8
     },
     {
       "hip": 267,
@@ -5657,7 +6726,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 33.5,
       "sire_grade": "D",
-      "sire_fee_usd": null
+      "sire_fee_usd": null,
+      "yearling_cost_usd": 50000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 213,
+      "yearling_cost_consignor": "Claiborne Farm",
+      "realized_return_pct": 30.0
     },
     {
       "hip": 248,
@@ -5673,7 +6747,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 33.8,
       "sire_grade": "D",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 25000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 753,
+      "yearling_cost_consignor": "Blackburn Farm",
+      "realized_return_pct": 220.0
     },
     {
       "hip": 642,
@@ -5689,7 +6768,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 33.8,
       "sire_grade": "D",
-      "sire_fee_usd": 10000
+      "sire_fee_usd": 10000,
+      "yearling_cost_usd": 57000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 334,
+      "yearling_cost_consignor": "Hunter Valley Farm",
+      "realized_return_pct": -64.9
     },
     {
       "hip": 436,
@@ -5721,7 +6805,12 @@
       "sire_pinhook_signal": "neutral",
       "sire_value_score": 33.5,
       "sire_grade": "D",
-      "sire_fee_usd": null
+      "sire_fee_usd": null,
+      "yearling_cost_usd": 27000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3250,
+      "yearling_cost_consignor": "Patricia Clark",
+      "realized_return_pct": 92.6
     },
     {
       "hip": 4,
@@ -5737,7 +6826,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 120000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1692,
+      "yearling_cost_consignor": "Warrendale Sales",
+      "realized_return_pct": 191.7
     },
     {
       "hip": 76,
@@ -5753,7 +6847,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 210000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1321,
+      "yearling_cost_consignor": "Taylor Made Sales Agency, for WinStar Farm Bred & Raised",
+      "realized_return_pct": -78.6
     },
     {
       "hip": 88,
@@ -5768,7 +6867,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 65000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 556,
+      "yearling_cost_consignor": "Warrendale Sales"
     },
     {
       "hip": 104,
@@ -5799,7 +6902,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 40000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 644,
+      "yearling_cost_consignor": "Burleson Farms",
+      "realized_return_pct": 25.0
     },
     {
       "hip": 310,
@@ -5814,7 +6922,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 190000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2610,
+      "yearling_cost_consignor": "Nardelli Sales"
     },
     {
       "hip": 372,
@@ -5830,7 +6942,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 30000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3459,
+      "yearling_cost_consignor": "Paramount Sales",
+      "realized_return_pct": -16.7
     },
     {
       "hip": 383,
@@ -5845,7 +6962,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 75000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2226,
+      "yearling_cost_consignor": "Legacy Bloodstock, for WinStar Farm Bred & Raised"
     },
     {
       "hip": 502,
@@ -5861,7 +6982,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 65000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1025,
+      "yearling_cost_consignor": "Vinery Sales",
+      "realized_return_pct": -61.5
     },
     {
       "hip": 554,
@@ -5876,7 +7002,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 35000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1861,
+      "yearling_cost_consignor": "St George Sales"
     },
     {
       "hip": 587,
@@ -5891,7 +7021,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 115000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 1096,
+      "yearling_cost_consignor": "Denali Stud"
     },
     {
       "hip": 625,
@@ -5922,7 +7056,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 77000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2309,
+      "yearling_cost_consignor": "Legacy Bloodstock, for WinStar Farm Bred & Raised",
+      "realized_return_pct": -15.6
     },
     {
       "hip": 639,
@@ -5938,7 +7077,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 115000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2310,
+      "yearling_cost_consignor": "Hunter Valley Farm",
+      "realized_return_pct": -34.8
     },
     {
       "hip": 649,
@@ -5953,7 +7097,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 210000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga Select Yearling Sale 2022",
+      "yearling_cost_hip": 12,
+      "yearling_cost_consignor": "Four Star Sales"
     },
     {
       "hip": 699,
@@ -5968,7 +7116,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 52000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 3565,
+      "yearling_cost_consignor": "Warrendale Sales, for Sandra Sexton and Silver Fern Farm"
     },
     {
       "hip": 708,
@@ -5984,7 +7136,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 200000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 734,
+      "yearling_cost_consignor": "Denali Stud",
+      "realized_return_pct": -7.5
     },
     {
       "hip": 828,
@@ -6000,7 +7157,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 85000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 386,
+      "yearling_cost_consignor": "Hunter Valley Farm",
+      "realized_return_pct": -64.7
     },
     {
       "hip": 849,
@@ -6031,7 +7193,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 95000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2398,
+      "yearling_cost_consignor": "Four Star Sales"
     },
     {
       "hip": 934,
@@ -6046,7 +7212,11 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 75000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 2418,
+      "yearling_cost_consignor": "Vinery Sales, for WinStar Farm Bred & Raised"
     },
     {
       "hip": 954,
@@ -6062,7 +7232,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 210000,
+      "yearling_cost_sale": "Keeneland September Yearling Sale 2022",
+      "yearling_cost_hip": 1193,
+      "yearling_cost_consignor": "Hunter Valley Farm",
+      "realized_return_pct": 47.6
     },
     {
       "hip": 958,
@@ -6078,7 +7253,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 78,
+      "yearling_cost_consignor": "Scott Mallory",
+      "realized_return_pct": 92.9
     },
     {
       "hip": 1025,
@@ -6094,7 +7274,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 70000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+      "yearling_cost_hip": 47,
+      "yearling_cost_consignor": "Bill Murphy",
+      "realized_return_pct": 28.6
     },
     {
       "hip": 1043,
@@ -6110,7 +7295,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 170000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 182,
+      "yearling_cost_consignor": "Bridie Harrison , for Peter E. Blum Thoroughbreds",
+      "realized_return_pct": 67.6
     },
     {
       "hip": 1085,
@@ -6141,7 +7331,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Fasig Tipton Kentucky October Yearling Sale 2022",
+      "yearling_cost_hip": 255,
+      "yearling_cost_consignor": "Eaton Sales",
+      "realized_return_pct": 435.0
     },
     {
       "hip": 1098,
@@ -6157,7 +7352,12 @@
       "sire_pinhook_signal": "weak",
       "sire_value_score": 70.7,
       "sire_grade": "B",
-      "sire_fee_usd": 7500
+      "sire_fee_usd": 7500,
+      "yearling_cost_usd": 100000,
+      "yearling_cost_sale": "Fasig Tipton Saratoga New York Bred Yearling Sale 2022",
+      "yearling_cost_hip": 438,
+      "yearling_cost_consignor": "Winter Quarter Farm, for Oak Bluff Stable",
+      "realized_return_pct": -55.0
     }
   ]
 }
