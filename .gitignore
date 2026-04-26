@@ -21,3 +21,4 @@ Thumbs.db
 .env.*
 !.env.example
 .vercel
+worker/catalog-scoring.json
