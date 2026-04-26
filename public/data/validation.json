@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-04-26T03:00:50Z",
+  "generated_at": "2026-04-26T03:27:57Z",
   "method": "slice-priced-hips-by-predicted-signal-tier",
   "summary": {
     "sales_scored": 96,
     "twoyo_hips_pooled": 5675,
-    "yrl_hips_pooled": 15649
+    "yrl_hips_pooled": 15649,
+    "lift_eligible": 48
   },
   "aggregate": {
     "all_2yo_sales": {
@@ -188,6 +189,576 @@
       }
     }
   },
+  "rankings": {
+    "best_price_lift": [
+      {
+        "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
+        "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024",
+        "kind": "2yo",
+        "priced_hips": 364,
+        "strong_n": 188,
+        "weak_n": 5,
+        "price_lift_pct": 688.5,
+        "return_lift_pts": null,
+        "strong_median_sold": 102500,
+        "weak_median_sold": 13000,
+        "strong_realized_median": 100.0,
+        "weak_realized_median": -76.0
+      },
+      {
+        "sale_name": "Keeneland September Yearling Sale 2025",
+        "slug": "keeneland-september-yearling-sale-2025",
+        "kind": "yearling",
+        "priced_hips": 2547,
+        "strong_n": 1318,
+        "weak_n": 25,
+        "price_lift_pct": 466.7,
+        "return_lift_pts": null,
+        "strong_median_sold": 85000,
+        "weak_median_sold": 15000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Keeneland January Horses Of All Ages Sale 2026",
+        "slug": "keeneland-january-horses-of-all-ages-sale-2026",
+        "kind": "other",
+        "priced_hips": 434,
+        "strong_n": 186,
+        "weak_n": 4,
+        "price_lift_pct": 429.0,
+        "return_lift_pts": null,
+        "strong_median_sold": 41000,
+        "weak_median_sold": 7750,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Fasig Tipton Saratoga New York Bred Yearling Sale 2025",
+        "slug": "fasig-tipton-saratoga-new-york-bred-yearling-sale-2025",
+        "kind": "yearling",
+        "priced_hips": 151,
+        "strong_n": 86,
+        "weak_n": 3,
+        "price_lift_pct": 380.0,
+        "return_lift_pts": null,
+        "strong_median_sold": 120000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky November Sale 2022",
+        "slug": "fasig-tipton-kentucky-november-sale-2022",
+        "kind": "other",
+        "priced_hips": 93,
+        "strong_n": 40,
+        "weak_n": 3,
+        "price_lift_pct": 223.5,
+        "return_lift_pts": null,
+        "strong_median_sold": 275000,
+        "weak_median_sold": 85000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026",
+        "kind": "2yo",
+        "priced_hips": 327,
+        "strong_n": 209,
+        "weak_n": 4,
+        "price_lift_pct": 221.4,
+        "return_lift_pts": -100.0,
+        "strong_median_sold": 112500,
+        "weak_median_sold": 35000,
+        "strong_realized_median": 150.0,
+        "weak_realized_median": 250.0
+      },
+      {
+        "sale_name": "Keeneland November Breeding Stock Sale 2025",
+        "slug": "keeneland-november-breeding-stock-sale-2025",
+        "kind": "other",
+        "priced_hips": 1187,
+        "strong_n": 530,
+        "weak_n": 5,
+        "price_lift_pct": 220.0,
+        "return_lift_pts": null,
+        "strong_median_sold": 80000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2025",
+        "kind": "2yo",
+        "priced_hips": 289,
+        "strong_n": 168,
+        "weak_n": 14,
+        "price_lift_pct": 206.2,
+        "return_lift_pts": 162.6,
+        "strong_median_sold": 122500,
+        "weak_median_sold": 40000,
+        "strong_realized_median": 162.6,
+        "weak_realized_median": 0.0
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2024",
+        "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2024",
+        "kind": "2yo",
+        "priced_hips": 184,
+        "strong_n": 91,
+        "weak_n": 4,
+        "price_lift_pct": 204.3,
+        "return_lift_pts": null,
+        "strong_median_sold": 70000,
+        "weak_median_sold": 23000,
+        "strong_realized_median": 71.9,
+        "weak_realized_median": 8.4
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2023",
+        "slug": "fasig-tipton-kentucky-october-yearling-sale-2023",
+        "kind": "yearling",
+        "priced_hips": 517,
+        "strong_n": 256,
+        "weak_n": 16,
+        "price_lift_pct": 191.7,
+        "return_lift_pts": null,
+        "strong_median_sold": 35000,
+        "weak_median_sold": 12000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      }
+    ],
+    "worst_price_lift": [
+      {
+        "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2022",
+        "slug": "fasig-tipton-kentucky-winter-mixed-sale-2022",
+        "kind": "other",
+        "priced_hips": 115,
+        "strong_n": 65,
+        "weak_n": 3,
+        "price_lift_pct": -74.7,
+        "return_lift_pts": null,
+        "strong_median_sold": 22000,
+        "weak_median_sold": 87000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Keeneland January Horses Of All Ages Sale 2022",
+        "slug": "keeneland-january-horses-of-all-ages-sale-2022",
+        "kind": "other",
+        "priced_hips": 313,
+        "strong_n": 146,
+        "weak_n": 8,
+        "price_lift_pct": -62.5,
+        "return_lift_pts": null,
+        "strong_median_sold": 30000,
+        "weak_median_sold": 80000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2024",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2024",
+        "kind": "2yo",
+        "priced_hips": 214,
+        "strong_n": 111,
+        "weak_n": 6,
+        "price_lift_pct": -49.2,
+        "return_lift_pts": -93.7,
+        "strong_median_sold": 75000,
+        "weak_median_sold": 147500,
+        "strong_realized_median": 91.0,
+        "weak_realized_median": 184.7
+      },
+      {
+        "sale_name": "Keeneland November Breeding Stock Sale 2022",
+        "slug": "keeneland-november-breeding-stock-sale-2022",
+        "kind": "other",
+        "priced_hips": 832,
+        "strong_n": 383,
+        "weak_n": 15,
+        "price_lift_pct": -44.4,
+        "return_lift_pts": null,
+        "strong_median_sold": 50000,
+        "weak_median_sold": 90000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co October Yearling Sale 2024",
+        "slug": "ocala-breeders-sales-co-october-yearling-sale-2024",
+        "kind": "yearling",
+        "priced_hips": 85,
+        "strong_n": 46,
+        "weak_n": 6,
+        "price_lift_pct": -43.7,
+        "return_lift_pts": null,
+        "strong_median_sold": 20000,
+        "weak_median_sold": 35500,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky Winter Mixed Sale 2023",
+        "slug": "fasig-tipton-kentucky-winter-mixed-sale-2023",
+        "kind": "other",
+        "priced_hips": 140,
+        "strong_n": 60,
+        "weak_n": 3,
+        "price_lift_pct": -41.2,
+        "return_lift_pts": null,
+        "strong_median_sold": 23500,
+        "weak_median_sold": 40000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky October Yearling Sale 2022",
+        "slug": "fasig-tipton-kentucky-october-yearling-sale-2022",
+        "kind": "yearling",
+        "priced_hips": 389,
+        "strong_n": 192,
+        "weak_n": 20,
+        "price_lift_pct": -37.9,
+        "return_lift_pts": null,
+        "strong_median_sold": 45000,
+        "weak_median_sold": 72500,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Keeneland January Horses Of All Ages Sale 2023",
+        "slug": "keeneland-january-horses-of-all-ages-sale-2023",
+        "kind": "other",
+        "priced_hips": 348,
+        "strong_n": 182,
+        "weak_n": 7,
+        "price_lift_pct": -35.1,
+        "return_lift_pts": null,
+        "strong_median_sold": 37000,
+        "weak_median_sold": 57000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Fasig Tipton Kentucky Select July Yearling Sale 2022",
+        "slug": "fasig-tipton-kentucky-select-july-yearling-sale-2022",
+        "kind": "yearling",
+        "priced_hips": 97,
+        "strong_n": 49,
+        "weak_n": 9,
+        "price_lift_pct": -25.9,
+        "return_lift_pts": null,
+        "strong_median_sold": 100000,
+        "weak_median_sold": 135000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      },
+      {
+        "sale_name": "Keeneland September Yearling Sale 2022",
+        "slug": "keeneland-september-yearling-sale-2022",
+        "kind": "yearling",
+        "priced_hips": 1553,
+        "strong_n": 770,
+        "weak_n": 66,
+        "price_lift_pct": -16.7,
+        "return_lift_pts": null,
+        "strong_median_sold": 100000,
+        "weak_median_sold": 120000,
+        "strong_realized_median": null,
+        "weak_realized_median": null
+      }
+    ],
+    "best_return_lift": [
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2025",
+        "kind": "2yo",
+        "priced_hips": 289,
+        "strong_n": 168,
+        "weak_n": 14,
+        "price_lift_pct": 206.2,
+        "return_lift_pts": 162.6,
+        "strong_median_sold": 122500,
+        "weak_median_sold": 40000,
+        "strong_realized_median": 162.6,
+        "weak_realized_median": 0.0
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
+        "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025",
+        "kind": "2yo",
+        "priced_hips": 440,
+        "strong_n": 261,
+        "weak_n": 12,
+        "price_lift_pct": 171.4,
+        "return_lift_pts": 144.9,
+        "strong_median_sold": 95000,
+        "weak_median_sold": 35000,
+        "strong_realized_median": 118.2,
+        "weak_realized_median": -26.7
+      },
+      {
+        "sale_name": "OBS Spring Sale of 2YOs in Training 2026",
+        "slug": "obs-spring-sale-of-2yos-in-training-2026",
+        "kind": "2yo",
+        "priced_hips": 504,
+        "strong_n": 306,
+        "weak_n": 7,
+        "price_lift_pct": 66.7,
+        "return_lift_pts": 141.1,
+        "strong_median_sold": 100000,
+        "weak_median_sold": 60000,
+        "strong_realized_median": 126.8,
+        "weak_realized_median": -14.3
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2023",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2023",
+        "kind": "2yo",
+        "priced_hips": 198,
+        "strong_n": 113,
+        "weak_n": 9,
+        "price_lift_pct": -11.8,
+        "return_lift_pts": 97.6,
+        "strong_median_sold": 150000,
+        "weak_median_sold": 170000,
+        "strong_realized_median": 128.2,
+        "weak_realized_median": 30.6
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2023",
+        "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2023",
+        "kind": "2yo",
+        "priced_hips": 322,
+        "strong_n": 176,
+        "weak_n": 16,
+        "price_lift_pct": 17.9,
+        "return_lift_pts": 97.5,
+        "strong_median_sold": 82500,
+        "weak_median_sold": 70000,
+        "strong_realized_median": 90.0,
+        "weak_realized_median": -7.5
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2023",
+        "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2023",
+        "kind": "2yo",
+        "priced_hips": 183,
+        "strong_n": 91,
+        "weak_n": 9,
+        "price_lift_pct": 28.0,
+        "return_lift_pts": 90.5,
+        "strong_median_sold": 32000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": 19.1,
+        "weak_realized_median": -71.4
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+        "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2025",
+        "kind": "2yo",
+        "priced_hips": 221,
+        "strong_n": 130,
+        "weak_n": 6,
+        "price_lift_pct": 23.1,
+        "return_lift_pts": 73.6,
+        "strong_median_sold": 80000,
+        "weak_median_sold": 65000,
+        "strong_realized_median": 70.0,
+        "weak_realized_median": -3.6
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025",
+        "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025",
+        "kind": "2yo",
+        "priced_hips": 250,
+        "strong_n": 134,
+        "weak_n": 9,
+        "price_lift_pct": 96.0,
+        "return_lift_pts": 73.6,
+        "strong_median_sold": 49000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": 62.5,
+        "weak_realized_median": -11.1
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2023",
+        "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2023",
+        "kind": "2yo",
+        "priced_hips": 186,
+        "strong_n": 102,
+        "weak_n": 8,
+        "price_lift_pct": -3.4,
+        "return_lift_pts": 43.2,
+        "strong_median_sold": 70000,
+        "weak_median_sold": 72500,
+        "strong_realized_median": 4.8,
+        "weak_realized_median": -38.4
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2024",
+        "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2024",
+        "kind": "2yo",
+        "priced_hips": 211,
+        "strong_n": 93,
+        "weak_n": 9,
+        "price_lift_pct": 50.0,
+        "return_lift_pts": -55.8,
+        "strong_median_sold": 30000,
+        "weak_median_sold": 20000,
+        "strong_realized_median": 69.2,
+        "weak_realized_median": 125.0
+      }
+    ],
+    "worst_return_lift": [
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026",
+        "kind": "2yo",
+        "priced_hips": 327,
+        "strong_n": 209,
+        "weak_n": 4,
+        "price_lift_pct": 221.4,
+        "return_lift_pts": -100.0,
+        "strong_median_sold": 112500,
+        "weak_median_sold": 35000,
+        "strong_realized_median": 150.0,
+        "weak_realized_median": 250.0
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2024",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2024",
+        "kind": "2yo",
+        "priced_hips": 214,
+        "strong_n": 111,
+        "weak_n": 6,
+        "price_lift_pct": -49.2,
+        "return_lift_pts": -93.7,
+        "strong_median_sold": 75000,
+        "weak_median_sold": 147500,
+        "strong_realized_median": 91.0,
+        "weak_realized_median": 184.7
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2024",
+        "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2024",
+        "kind": "2yo",
+        "priced_hips": 211,
+        "strong_n": 93,
+        "weak_n": 9,
+        "price_lift_pct": 50.0,
+        "return_lift_pts": -55.8,
+        "strong_median_sold": 30000,
+        "weak_median_sold": 20000,
+        "strong_realized_median": 69.2,
+        "weak_realized_median": 125.0
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2023",
+        "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2023",
+        "kind": "2yo",
+        "priced_hips": 186,
+        "strong_n": 102,
+        "weak_n": 8,
+        "price_lift_pct": -3.4,
+        "return_lift_pts": 43.2,
+        "strong_median_sold": 70000,
+        "weak_median_sold": 72500,
+        "strong_realized_median": 4.8,
+        "weak_realized_median": -38.4
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025",
+        "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025",
+        "kind": "2yo",
+        "priced_hips": 250,
+        "strong_n": 134,
+        "weak_n": 9,
+        "price_lift_pct": 96.0,
+        "return_lift_pts": 73.6,
+        "strong_median_sold": 49000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": 62.5,
+        "weak_realized_median": -11.1
+      },
+      {
+        "sale_name": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
+        "slug": "fasig-tipton-midlantic-2yos-in-training-sale-2025",
+        "kind": "2yo",
+        "priced_hips": 221,
+        "strong_n": 130,
+        "weak_n": 6,
+        "price_lift_pct": 23.1,
+        "return_lift_pts": 73.6,
+        "strong_median_sold": 80000,
+        "weak_median_sold": 65000,
+        "strong_realized_median": 70.0,
+        "weak_realized_median": -3.6
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2023",
+        "slug": "ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2023",
+        "kind": "2yo",
+        "priced_hips": 183,
+        "strong_n": 91,
+        "weak_n": 9,
+        "price_lift_pct": 28.0,
+        "return_lift_pts": 90.5,
+        "strong_median_sold": 32000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": 19.1,
+        "weak_realized_median": -71.4
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2023",
+        "slug": "ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2023",
+        "kind": "2yo",
+        "priced_hips": 322,
+        "strong_n": 176,
+        "weak_n": 16,
+        "price_lift_pct": 17.9,
+        "return_lift_pts": 97.5,
+        "strong_median_sold": 82500,
+        "weak_median_sold": 70000,
+        "strong_realized_median": 90.0,
+        "weak_realized_median": -7.5
+      },
+      {
+        "sale_name": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2023",
+        "slug": "ocala-breeders-sales-co-march-sale-of-2yos-in-training-2023",
+        "kind": "2yo",
+        "priced_hips": 198,
+        "strong_n": 113,
+        "weak_n": 9,
+        "price_lift_pct": -11.8,
+        "return_lift_pts": 97.6,
+        "strong_median_sold": 150000,
+        "weak_median_sold": 170000,
+        "strong_realized_median": 128.2,
+        "weak_realized_median": 30.6
+      },
+      {
+        "sale_name": "OBS Spring Sale of 2YOs in Training 2026",
+        "slug": "obs-spring-sale-of-2yos-in-training-2026",
+        "kind": "2yo",
+        "priced_hips": 504,
+        "strong_n": 306,
+        "weak_n": 7,
+        "price_lift_pct": 66.7,
+        "return_lift_pts": 141.1,
+        "strong_median_sold": 100000,
+        "weak_median_sold": 60000,
+        "strong_realized_median": 126.8,
+        "weak_realized_median": -14.3
+      }
+    ]
+  },
   "by_sale": {
     "Fasig Tipton Kentucky Winter Mixed Sale 2026": {
       "slug": "fasig-tipton-kentucky-winter-mixed-sale-2026",
@@ -280,6 +851,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 78,
+        "weak_n": 3,
+        "strong_median_sold": 36000,
+        "weak_median_sold": 17000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 111.8,
+        "return_lift_pts": null
       }
     },
     "Keeneland April Horses Of Racing Age Sale 2026": {
@@ -373,6 +954,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 4,
+        "weak_n": 0,
+        "strong_median_sold": 126000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland January Horses Of All Ages Sale 2026": {
@@ -466,6 +1057,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 186,
+        "weak_n": 4,
+        "strong_median_sold": 41000,
+        "weak_median_sold": 7750,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 429.0,
+        "return_lift_pts": null
       }
     },
     "OBS Spring Sale of 2YOs in Training 2026": {
@@ -559,6 +1160,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 306,
+        "weak_n": 7,
+        "strong_median_sold": 100000,
+        "weak_median_sold": 60000,
+        "strong_realized_median": 126.8,
+        "weak_realized_median": -14.3,
+        "price_lift_pct": 66.7,
+        "return_lift_pts": 141.1
       }
     },
     "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026": {
@@ -652,6 +1263,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 209,
+        "weak_n": 4,
+        "strong_median_sold": 112500,
+        "weak_median_sold": 35000,
+        "strong_realized_median": 150.0,
+        "weak_realized_median": 250.0,
+        "price_lift_pct": 221.4,
+        "return_lift_pts": -100.0
       }
     },
     "Ocala Breeders Sales Co Winter Mixed Sale 2026": {
@@ -745,6 +1366,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 23,
+        "weak_n": 0,
+        "strong_median_sold": 27000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton California Fall Yearling Sale 2025": {
@@ -838,6 +1469,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 12,
+        "weak_n": 0,
+        "strong_median_sold": 72500,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Digital Major Reduction Of Harris Farms 2025": {
@@ -931,6 +1572,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 3,
+        "weak_n": 0,
+        "strong_median_sold": 22000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton July Horses Of Racing Age Sale 2025": {
@@ -1024,6 +1675,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 18,
+        "weak_n": 0,
+        "strong_median_sold": 85000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky November Sale 2025": {
@@ -1117,6 +1778,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 34,
+        "weak_n": 1,
+        "strong_median_sold": 270000,
+        "weak_median_sold": 1600000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky October Yearling Sale 2025": {
@@ -1210,6 +1881,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 466,
+        "weak_n": 20,
+        "strong_median_sold": 40000,
+        "weak_median_sold": 17000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 135.3,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky Select July Yearling Sale 2025": {
@@ -1303,6 +1984,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 88,
+        "weak_n": 1,
+        "strong_median_sold": 90000,
+        "weak_median_sold": 150000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky Winter Mixed Sale 2025": {
@@ -1396,6 +2087,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 78,
+        "weak_n": 1,
+        "strong_median_sold": 30000,
+        "weak_median_sold": 1000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic 2yos In Training Sale 2025": {
@@ -1489,6 +2190,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 130,
+        "weak_n": 6,
+        "strong_median_sold": 80000,
+        "weak_median_sold": 65000,
+        "strong_realized_median": 70.0,
+        "weak_realized_median": -3.6,
+        "price_lift_pct": 23.1,
+        "return_lift_pts": 73.6
       }
     },
     "Fasig Tipton Midlantic Fall Yearling Sale 2025": {
@@ -1582,6 +2293,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 37,
+        "weak_n": 4,
+        "strong_median_sold": 30000,
+        "weak_median_sold": 25500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 17.6,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton New York Fall Mixed Sale 2025": {
@@ -1675,6 +2396,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 22,
+        "weak_n": 0,
+        "strong_median_sold": 30000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Saratoga New York Bred Yearling Sale 2025": {
@@ -1768,6 +2499,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 86,
+        "weak_n": 3,
+        "strong_median_sold": 120000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 380.0,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Saratoga Select Yearling Sale 2025": {
@@ -1861,6 +2602,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 69,
+        "weak_n": 0,
+        "strong_median_sold": 400000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland April Horses Of Racing Age Sale 2025": {
@@ -1954,6 +2705,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 17,
+        "weak_n": 0,
+        "strong_median_sold": 100000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland January Horses Of All Ages Sale 2025": {
@@ -2047,6 +2808,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 208,
+        "weak_n": 7,
+        "strong_median_sold": 35000,
+        "weak_median_sold": 22000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 59.1,
+        "return_lift_pts": null
       }
     },
     "Keeneland November Breeding Stock Sale 2025": {
@@ -2140,6 +2911,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 530,
+        "weak_n": 5,
+        "strong_median_sold": 80000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 220.0,
+        "return_lift_pts": null
       }
     },
     "Keeneland November Horses Of Racing Age Sale 2025": {
@@ -2233,6 +3014,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 36,
+        "weak_n": 0,
+        "strong_median_sold": 57500,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland September Yearling Sale 2025": {
@@ -2326,6 +3117,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 1318,
+        "weak_n": 25,
+        "strong_median_sold": 85000,
+        "weak_median_sold": 15000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 466.7,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025": {
@@ -2419,6 +3220,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 134,
+        "weak_n": 9,
+        "strong_median_sold": 49000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": 62.5,
+        "weak_realized_median": -11.1,
+        "price_lift_pct": 96.0,
+        "return_lift_pts": 73.6
       }
     },
     "Ocala Breeders Sales Co March Sale Of 2yos In Training 2025": {
@@ -2512,6 +3323,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 168,
+        "weak_n": 14,
+        "strong_median_sold": 122500,
+        "weak_median_sold": 40000,
+        "strong_realized_median": 162.6,
+        "weak_realized_median": 0.0,
+        "price_lift_pct": 206.2,
+        "return_lift_pts": 162.6
       }
     },
     "Ocala Breeders Sales Co October Yearling Sale 2025": {
@@ -2605,6 +3426,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 63,
+        "weak_n": 2,
+        "strong_median_sold": 23000,
+        "weak_median_sold": 4000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025": {
@@ -2698,6 +3529,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 261,
+        "weak_n": 12,
+        "strong_median_sold": 95000,
+        "weak_median_sold": 35000,
+        "strong_realized_median": 118.2,
+        "weak_realized_median": -26.7,
+        "price_lift_pct": 171.4,
+        "return_lift_pts": 144.9
       }
     },
     "Ocala Breeders Sales Co Winter Mixed Sale 2025": {
@@ -2791,6 +3632,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 28,
+        "weak_n": 1,
+        "strong_median_sold": 18000,
+        "weak_median_sold": 7000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton California Fall Yearling Sale 2024": {
@@ -2884,6 +3735,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 13,
+        "weak_n": 3,
+        "strong_median_sold": 37000,
+        "weak_median_sold": 30000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 23.3,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton July Horses Of Racing Age Sale 2024": {
@@ -2977,6 +3838,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 16,
+        "weak_n": 1,
+        "strong_median_sold": 63500,
+        "weak_median_sold": 400000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky November Sale 2024": {
@@ -3070,6 +3941,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 58,
+        "weak_n": 2,
+        "strong_median_sold": 200000,
+        "weak_median_sold": 137500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky October Yearling Sale 2024": {
@@ -3163,6 +4044,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 380,
+        "weak_n": 25,
+        "strong_median_sold": 31500,
+        "weak_median_sold": 26000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 21.2,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky Select July Yearling Sale 2024": {
@@ -3256,6 +4147,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 70,
+        "weak_n": 7,
+        "strong_median_sold": 110000,
+        "weak_median_sold": 107000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 2.8,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky Winter Mixed Sale 2024": {
@@ -3349,6 +4250,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 83,
+        "weak_n": 4,
+        "strong_median_sold": 25000,
+        "weak_median_sold": 16000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 56.2,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic 2yos In Training Sale 2024": {
@@ -3442,6 +4353,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 91,
+        "weak_n": 4,
+        "strong_median_sold": 70000,
+        "weak_median_sold": 23000,
+        "strong_realized_median": 71.9,
+        "weak_realized_median": 8.4,
+        "price_lift_pct": 204.3,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic Fall Yearling Sale 2024": {
@@ -3535,6 +4456,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 33,
+        "weak_n": 5,
+        "strong_median_sold": 35000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 40.0,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic June 2yos In Training Sale 2024": {
@@ -3628,6 +4559,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 6,
+        "weak_n": 1,
+        "strong_median_sold": 27500,
+        "weak_median_sold": 20000,
+        "strong_realized_median": 45.9,
+        "weak_realized_median": 33.3,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton New York Fall Mixed Sale 2024": {
@@ -3721,6 +4662,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 35,
+        "weak_n": 2,
+        "strong_median_sold": 40000,
+        "weak_median_sold": 12500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Saratoga New York Bred Yearling Sale 2024": {
@@ -3814,6 +4765,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 71,
+        "weak_n": 8,
+        "strong_median_sold": 90000,
+        "weak_median_sold": 63500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 41.7,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Saratoga Select Yearling Sale 2024": {
@@ -3907,6 +4868,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 67,
+        "weak_n": 0,
+        "strong_median_sold": 425000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland April Horses Of Racing Age Sale 2024": {
@@ -4000,6 +4971,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 11,
+        "weak_n": 0,
+        "strong_median_sold": 30000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland January Horses Of All Ages Sale 2024": {
@@ -4093,6 +5074,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 228,
+        "weak_n": 15,
+        "strong_median_sold": 27500,
+        "weak_median_sold": 10000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 175.0,
+        "return_lift_pts": null
       }
     },
     "Keeneland November Breeding Stock Sale 2024": {
@@ -4186,6 +5177,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 615,
+        "weak_n": 11,
+        "strong_median_sold": 50000,
+        "weak_median_sold": 30000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 66.7,
+        "return_lift_pts": null
       }
     },
     "Keeneland November Horses Of Racing Age Sale 2024": {
@@ -4279,6 +5280,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 18,
+        "weak_n": 1,
+        "strong_median_sold": 77500,
+        "weak_median_sold": 32000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland September Yearling Sale 2024": {
@@ -4372,6 +5383,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 1162,
+        "weak_n": 54,
+        "strong_median_sold": 95000,
+        "weak_median_sold": 40000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 137.5,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2024": {
@@ -4465,6 +5486,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 93,
+        "weak_n": 9,
+        "strong_median_sold": 30000,
+        "weak_median_sold": 20000,
+        "strong_realized_median": 69.2,
+        "weak_realized_median": 125.0,
+        "price_lift_pct": 50.0,
+        "return_lift_pts": -55.8
       }
     },
     "Ocala Breeders Sales Co March Sale Of 2yos In Training 2024": {
@@ -4558,6 +5589,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 111,
+        "weak_n": 6,
+        "strong_median_sold": 75000,
+        "weak_median_sold": 147500,
+        "strong_realized_median": 91.0,
+        "weak_realized_median": 184.7,
+        "price_lift_pct": -49.2,
+        "return_lift_pts": -93.7
       }
     },
     "Ocala Breeders Sales Co October Yearling Sale 2024": {
@@ -4651,6 +5692,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 46,
+        "weak_n": 6,
+        "strong_median_sold": 20000,
+        "weak_median_sold": 35500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -43.7,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024": {
@@ -4744,6 +5795,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 188,
+        "weak_n": 5,
+        "strong_median_sold": 102500,
+        "weak_median_sold": 13000,
+        "strong_realized_median": 100.0,
+        "weak_realized_median": -76.0,
+        "price_lift_pct": 688.5,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co Winter Mixed Sale 2024": {
@@ -4837,6 +5898,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 47,
+        "weak_n": 2,
+        "strong_median_sold": 23000,
+        "weak_median_sold": 45000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton California Fall Yearling Horses Of Racing Age Sale 2023": {
@@ -4930,6 +6001,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 16,
+        "weak_n": 1,
+        "strong_median_sold": 24500,
+        "weak_median_sold": 80000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton July Horses Of Racing Age Sale 2023": {
@@ -5023,6 +6104,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 26,
+        "weak_n": 0,
+        "strong_median_sold": 53500,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky November Sale 2023": {
@@ -5116,6 +6207,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 45,
+        "weak_n": 2,
+        "strong_median_sold": 175000,
+        "weak_median_sold": 28500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky October Yearling Sale 2023": {
@@ -5209,6 +6310,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 256,
+        "weak_n": 16,
+        "strong_median_sold": 35000,
+        "weak_median_sold": 12000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 191.7,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky Select July Yearling Sale 2023": {
@@ -5302,6 +6413,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 67,
+        "weak_n": 1,
+        "strong_median_sold": 80000,
+        "weak_median_sold": 82000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky Winter Mixed Sale 2023": {
@@ -5395,6 +6516,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 60,
+        "weak_n": 3,
+        "strong_median_sold": 23500,
+        "weak_median_sold": 40000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -41.2,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic 2yos In Training Sale 2023": {
@@ -5488,6 +6619,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 102,
+        "weak_n": 8,
+        "strong_median_sold": 70000,
+        "weak_median_sold": 72500,
+        "strong_realized_median": 4.8,
+        "weak_realized_median": -38.4,
+        "price_lift_pct": -3.4,
+        "return_lift_pts": 43.2
       }
     },
     "Fasig Tipton Midlantic December Mixed Sale 2023": {
@@ -5581,6 +6722,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 21,
+        "weak_n": 2,
+        "strong_median_sold": 8000,
+        "weak_median_sold": 24000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic Fall Yearling Sale 2023": {
@@ -5674,6 +6825,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 49,
+        "weak_n": 3,
+        "strong_median_sold": 22000,
+        "weak_median_sold": 15000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 46.7,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic June 2yos In Training Sale 2023": {
@@ -5767,6 +6928,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 11,
+        "weak_n": 1,
+        "strong_median_sold": 60000,
+        "weak_median_sold": 10000,
+        "strong_realized_median": -29.7,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton New York Fall Mixed Sale 2023": {
@@ -5860,6 +7031,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 38,
+        "weak_n": 4,
+        "strong_median_sold": 30500,
+        "weak_median_sold": 26000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 17.3,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Saratoga New York Bred Yearling Sale 2023": {
@@ -5953,6 +7134,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 71,
+        "weak_n": 0,
+        "strong_median_sold": 70000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Saratoga Select Yearling Sale 2023": {
@@ -6046,6 +7237,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 50,
+        "weak_n": 0,
+        "strong_median_sold": 400000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland April Horses Of Racing Age Sale 2023": {
@@ -6139,6 +7340,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 17,
+        "weak_n": 0,
+        "strong_median_sold": 70000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland January Horses Of All Ages Sale 2023": {
@@ -6232,6 +7443,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 182,
+        "weak_n": 7,
+        "strong_median_sold": 37000,
+        "weak_median_sold": 57000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -35.1,
+        "return_lift_pts": null
       }
     },
     "Keeneland November Breeding Stock Sale 2023": {
@@ -6325,6 +7546,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 489,
+        "weak_n": 29,
+        "strong_median_sold": 50000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 100.0,
+        "return_lift_pts": null
       }
     },
     "Keeneland November Horses Of Racing Age Sale 2023": {
@@ -6418,6 +7649,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 45,
+        "weak_n": 0,
+        "strong_median_sold": 30000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland September Yearling Sale 2023": {
@@ -6511,6 +7752,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 862,
+        "weak_n": 37,
+        "strong_median_sold": 85000,
+        "weak_median_sold": 45000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 88.9,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2023": {
@@ -6604,6 +7855,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 91,
+        "weak_n": 9,
+        "strong_median_sold": 32000,
+        "weak_median_sold": 25000,
+        "strong_realized_median": 19.1,
+        "weak_realized_median": -71.4,
+        "price_lift_pct": 28.0,
+        "return_lift_pts": 90.5
       }
     },
     "Ocala Breeders Sales Co March Sale Of 2yos In Training 2023": {
@@ -6697,6 +7958,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 113,
+        "weak_n": 9,
+        "strong_median_sold": 150000,
+        "weak_median_sold": 170000,
+        "strong_realized_median": 128.2,
+        "weak_realized_median": 30.6,
+        "price_lift_pct": -11.8,
+        "return_lift_pts": 97.6
       }
     },
     "Ocala Breeders Sales Co October Yearling Sale 2023": {
@@ -6790,6 +8061,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 46,
+        "weak_n": 0,
+        "strong_median_sold": 20000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2023": {
@@ -6883,6 +8164,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 176,
+        "weak_n": 16,
+        "strong_median_sold": 82500,
+        "weak_median_sold": 70000,
+        "strong_realized_median": 90.0,
+        "weak_realized_median": -7.5,
+        "price_lift_pct": 17.9,
+        "return_lift_pts": 97.5
       }
     },
     "Ocala Breeders Sales Co Winter Mixed Sale 2023": {
@@ -6976,6 +8267,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 46,
+        "weak_n": 1,
+        "strong_median_sold": 16500,
+        "weak_median_sold": 11000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton California Fall Yearling Horses Of All Ages Sale 2022": {
@@ -7069,6 +8370,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 18,
+        "weak_n": 0,
+        "strong_median_sold": 57000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Florida Gulfstream Selected 2yos In Training Sale 2022": {
@@ -7162,6 +8473,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 12,
+        "weak_n": 0,
+        "strong_median_sold": 385000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton July Selected Horses Of All Ages Sale 2022": {
@@ -7255,6 +8576,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 26,
+        "weak_n": 0,
+        "strong_median_sold": 47500,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky November Sale 2022": {
@@ -7348,6 +8679,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 40,
+        "weak_n": 3,
+        "strong_median_sold": 275000,
+        "weak_median_sold": 85000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 223.5,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky October Yearling Sale 2022": {
@@ -7441,6 +8782,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 192,
+        "weak_n": 20,
+        "strong_median_sold": 45000,
+        "weak_median_sold": 72500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -37.9,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky Select July Yearling Sale 2022": {
@@ -7534,6 +8885,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 49,
+        "weak_n": 9,
+        "strong_median_sold": 100000,
+        "weak_median_sold": 135000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -25.9,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Kentucky Winter Mixed Sale 2022": {
@@ -7627,6 +8988,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 65,
+        "weak_n": 3,
+        "strong_median_sold": 22000,
+        "weak_median_sold": 87000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -74.7,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic 2yos In Training Sale 2022": {
@@ -7720,6 +9091,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 86,
+        "weak_n": 0,
+        "strong_median_sold": 63500,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic December Mixed Sale 2022": {
@@ -7813,6 +9194,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 16,
+        "weak_n": 0,
+        "strong_median_sold": 16000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Midlantic Eastern Fall Yearling Sale 2022": {
@@ -7906,6 +9297,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 32,
+        "weak_n": 2,
+        "strong_median_sold": 49000,
+        "weak_median_sold": 56500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton New York Fall Mixed Sale 2022": {
@@ -7999,6 +9400,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 20,
+        "weak_n": 1,
+        "strong_median_sold": 45000,
+        "weak_median_sold": 33000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Saratoga New York Bred Yearling Sale 2022": {
@@ -8092,6 +9503,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 40,
+        "weak_n": 8,
+        "strong_median_sold": 95000,
+        "weak_median_sold": 100000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -5.0,
+        "return_lift_pts": null
       }
     },
     "Fasig Tipton Saratoga Select Yearling Sale 2022": {
@@ -8185,6 +9606,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 45,
+        "weak_n": 6,
+        "strong_median_sold": 400000,
+        "weak_median_sold": 287500,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": 39.1,
+        "return_lift_pts": null
       }
     },
     "Keeneland April Horses Of Racing Age Sale 2022": {
@@ -8278,6 +9709,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 13,
+        "weak_n": 0,
+        "strong_median_sold": 75000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland January Horses Of All Ages Sale 2022": {
@@ -8371,6 +9812,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 146,
+        "weak_n": 8,
+        "strong_median_sold": 30000,
+        "weak_median_sold": 80000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -62.5,
+        "return_lift_pts": null
       }
     },
     "Keeneland November Breeding Stock Sale 2022": {
@@ -8464,6 +9915,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 383,
+        "weak_n": 15,
+        "strong_median_sold": 50000,
+        "weak_median_sold": 90000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -44.4,
+        "return_lift_pts": null
       }
     },
     "Keeneland November Horses Of Racing Age Sale 2022": {
@@ -8557,6 +10018,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 46,
+        "weak_n": 0,
+        "strong_median_sold": 60000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Keeneland September Yearling Sale 2022": {
@@ -8650,6 +10121,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 770,
+        "weak_n": 66,
+        "strong_median_sold": 100000,
+        "weak_median_sold": 120000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": -16.7,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2022": {
@@ -8743,6 +10224,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 92,
+        "weak_n": 0,
+        "strong_median_sold": 32000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co March Sale Of 2yos In Training 2022": {
@@ -8836,6 +10327,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 88,
+        "weak_n": 0,
+        "strong_median_sold": 100000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co October Yearling Sale 2022": {
@@ -8929,6 +10430,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 42,
+        "weak_n": 0,
+        "strong_median_sold": 32000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2022": {
@@ -9022,6 +10533,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 155,
+        "weak_n": 0,
+        "strong_median_sold": 90000,
+        "weak_median_sold": null,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     },
     "Ocala Breeders Sales Co Winter Mixed Sale 2022": {
@@ -9115,6 +10636,16 @@
             "positive_pct": null
           }
         }
+      },
+      "lift": {
+        "strong_n": 28,
+        "weak_n": 1,
+        "strong_median_sold": 21000,
+        "weak_median_sold": 100000,
+        "strong_realized_median": null,
+        "weak_realized_median": null,
+        "price_lift_pct": null,
+        "return_lift_pts": null
       }
     }
   }
