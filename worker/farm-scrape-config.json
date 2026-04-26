@@ -1,0 +1,98 @@
+{
+  "_doc": "Per-farm scraper config. Each entry maps farm_id → URL + DOM selectors. The 'stallion_card' selector identifies each stallion's containing element on the page; the others are queried RELATIVE to each card. Use --dry-run to validate selectors before writing CSV. To inspect a page's DOM, open it in browser dev tools and find the repeating block (often <article>, <div class='stallion-card'>, etc.) — that's your stallion_card. The selectors below are educated starting points; real-world DOMs vary, so tune them per farm using View Source.",
+  "farms": {
+    "pinoak": {
+      "name":    "Pin Oak Stud",
+      "url":     "https://www.pinoakstud.com/stallions",
+      "enabled": true,
+      "selectors": {
+        "stallion_card":     ".stallion-card, article.stallion, .stallions__item",
+        "name":              "h2, h3, .stallion-name",
+        "pedigree":          ".pedigree, .stallion-pedigree, em",
+        "fee":               ".fee, .stud-fee, .stallions__fee"
+      }
+    },
+    "millridge": {
+      "name":    "Mill Ridge Farm",
+      "url":     "https://www.millridge.com/stallions/",
+      "enabled": true,
+      "selectors": {
+        "stallion_card":     "article, .stallion, .post",
+        "name":              "h2 a, h3, .entry-title",
+        "pedigree":          ".pedigree, em, p:first-of-type",
+        "fee":               ".fee, .price, .stud-fee"
+      }
+    },
+    "crestwood": {
+      "name":    "Crestwood Farm",
+      "url":     "https://www.crestwoodfarm.com/stallions/",
+      "enabled": true,
+      "selectors": {
+        "stallion_card":     ".stallion, article, .stallion-card",
+        "name":              "h2, h3, .stallion-name",
+        "pedigree":          ".pedigree, em",
+        "fee":               ".fee, .stud-fee"
+      }
+    },
+    "sequel": {
+      "name":    "Sequel Stallions New York",
+      "url":     "https://www.sequelstallions.com/",
+      "enabled": false,
+      "_note":   "Selectors not yet tuned. Set enabled=true after inspecting DOM.",
+      "selectors": {
+        "stallion_card":     "",
+        "name":              "",
+        "pedigree":          "",
+        "fee":               ""
+      }
+    },
+    "harris": {
+      "name":    "Harris Farms",
+      "url":     "https://www.harrisfarms.com/horse-division/stallions/",
+      "enabled": false,
+      "_note":   "Selectors not yet tuned.",
+      "selectors": {
+        "stallion_card":     "",
+        "name":              "",
+        "pedigree":          "",
+        "fee":               ""
+      }
+    },
+    "journeyman": {
+      "name":    "Journeyman Stud",
+      "url":     "https://www.journeymanstud.com/stallions/",
+      "enabled": false,
+      "_note":   "Selectors not yet tuned.",
+      "selectors": {
+        "stallion_card":     "",
+        "name":              "",
+        "pedigree":          "",
+        "fee":               ""
+      }
+    },
+    "bridlewood": {
+      "name":    "Bridlewood Farm",
+      "url":     "https://bridlewoodfarm.com/stallions/",
+      "enabled": false,
+      "_note":   "Selectors not yet tuned.",
+      "selectors": {
+        "stallion_card":     "",
+        "name":              "",
+        "pedigree":          "",
+        "fee":               ""
+      }
+    },
+    "northview": {
+      "name":    "Northview Stallion Station",
+      "url":     "https://www.northviewstallions.com/",
+      "enabled": false,
+      "_note":   "Selectors not yet tuned.",
+      "selectors": {
+        "stallion_card":     "",
+        "name":              "",
+        "pedigree":          "",
+        "fee":               ""
+      }
+    }
+  }
+}
