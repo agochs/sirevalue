@@ -123,13 +123,47 @@ body {
   .hero h1 { font-size: 22px; }
   .flag-table td, .flag-table th { padding: 7px 6px; font-size: 12px; }
 }
+
+/* ---------- Site nav: Home button + back-to-top ---------- */
+.home-btn {
+  display: inline-block; font-size: 12px; color: var(--ink); text-decoration: none;
+  padding: 4px 12px; border: 1px solid var(--rule); border-radius: 14px;
+  background: var(--cream); margin-right: 10px;
+  text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.home-btn:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.masthead-right {
+  display: inline-flex; align-items: baseline; gap: 0;
+}
+#back-to-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--ink); color: var(--cream); border: 1px solid var(--ink);
+  font-size: 20px; line-height: 1; cursor: pointer;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s, background 0.2s;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  font-family: inherit; padding: 0;
+}
+#back-to-top.visible { opacity: 0.85; pointer-events: auto; }
+#back-to-top:hover { opacity: 1; transform: translateY(-2px); background: var(--gold); border-color: var(--gold); }
+@media (max-width: 480px) {
+  #back-to-top { bottom: 16px; right: 16px; width: 40px; height: 40px; font-size: 18px; }
+  .home-btn { font-size: 11px; padding: 3px 9px; margin-right: 6px; }
+}
+
 </style>
 </head>
 <body>
 <div class="container">
   <div class="masthead">
     <div class="brand"><a href="/">SireValue</a></div>
-    <div class="tagline">Quality Checks</div>
+    <div class="masthead-right">
+      <a href="/" class="home-btn">← Home</a>
+      <div class="tagline">Quality Checks</div>
+    </div>
   </div>
 
   <div class="hero">
@@ -310,5 +344,23 @@ body {
   render();
 })();
 </script>
+<button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  function check() {
+    if (window.pageYOffset > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  check();
+})();
+</script>
+
 </body>
 </html>
