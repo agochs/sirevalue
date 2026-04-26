@@ -1,0 +1,2597 @@
+{
+  "generated_at": "2026-04-26T03:32:38Z",
+  "method": "weighted-comparator-from-similar-stallions-with-pinhook-data",
+  "thresholds": {
+    "min_pairs_per_comparator": 5,
+    "top_k_comparators": 8,
+    "high_conf_total_pairs": 60,
+    "medium_conf_total_pairs": 20
+  },
+  "summary": {
+    "stallions_total": 58,
+    "predicted": 44,
+    "no_comparators": 14
+  },
+  "stallions": [
+    {
+      "name": "Kingsbarns",
+      "farm": "Spendthrift Farm",
+      "sire": "Uncle Mo",
+      "damsire": "Tapit",
+      "pedigree": "Uncle Mo – Lady Tapit, by Tapit",
+      "fee_usd": 17500,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2020,
+      "value_score": 73.6,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Mo Town",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Uncle Mo"
+          ],
+          "matched_pairs": 23,
+          "median_return_pct": 185.7,
+          "mean_return_pct": 620.6,
+          "positive_return_pct": 87.0,
+          "median_yearling_price": 20000,
+          "median_twoyo_price": 55000
+        },
+        {
+          "name": "Mo Donegal",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Uncle Mo"
+          ],
+          "matched_pairs": 17,
+          "median_return_pct": 250.0,
+          "mean_return_pct": 322.2,
+          "positive_return_pct": 76.5,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 110000
+        },
+        {
+          "name": "Golden Pal",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Uncle Mo"
+          ],
+          "matched_pairs": 14,
+          "median_return_pct": 145.8,
+          "mean_return_pct": 315.9,
+          "positive_return_pct": 92.9,
+          "median_yearling_price": 55000,
+          "median_twoyo_price": 150000
+        },
+        {
+          "name": "Yaupon",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Uncle Mo"
+          ],
+          "matched_pairs": 64,
+          "median_return_pct": 86.2,
+          "mean_return_pct": 111.8,
+          "positive_return_pct": 76.6,
+          "median_yearling_price": 107500,
+          "median_twoyo_price": 200000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 136.3,
+        "mean_return_pct": 265.5,
+        "positive_pct": 80.5,
+        "median_yearling_price": 73050,
+        "median_twoyo_price": 152838,
+        "comparators_n": 4,
+        "comparator_pairs_total": 118,
+        "confidence": "high"
+      }
+    },
+    {
+      "name": "Arabian Knight",
+      "farm": "Hill 'n' Dale Farms at Xalapa",
+      "sire": "Uncle Mo",
+      "damsire": "Astrology",
+      "pedigree": "Uncle Mo – Borealis Night, by Astrology",
+      "fee_usd": 30000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2020,
+      "value_score": 43.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Mo Town",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Uncle Mo"
+          ],
+          "matched_pairs": 23,
+          "median_return_pct": 185.7,
+          "mean_return_pct": 620.6,
+          "positive_return_pct": 87.0,
+          "median_yearling_price": 20000,
+          "median_twoyo_price": 55000
+        },
+        {
+          "name": "Mo Donegal",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Uncle Mo"
+          ],
+          "matched_pairs": 17,
+          "median_return_pct": 250.0,
+          "mean_return_pct": 322.2,
+          "positive_return_pct": 76.5,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 110000
+        },
+        {
+          "name": "Golden Pal",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Uncle Mo"
+          ],
+          "matched_pairs": 14,
+          "median_return_pct": 145.8,
+          "mean_return_pct": 315.9,
+          "positive_return_pct": 92.9,
+          "median_yearling_price": 55000,
+          "median_twoyo_price": 150000
+        },
+        {
+          "name": "Yaupon",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Uncle Mo"
+          ],
+          "matched_pairs": 64,
+          "median_return_pct": 86.2,
+          "mean_return_pct": 111.8,
+          "positive_return_pct": 76.6,
+          "median_yearling_price": 107500,
+          "median_twoyo_price": 200000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 136.3,
+        "mean_return_pct": 265.5,
+        "positive_pct": 80.5,
+        "median_yearling_price": 73050,
+        "median_twoyo_price": 152838,
+        "comparators_n": 4,
+        "comparator_pairs_total": 118,
+        "confidence": "high"
+      }
+    },
+    {
+      "name": "National Treasure",
+      "farm": "Spendthrift Farm",
+      "sire": "Quality Road",
+      "damsire": "Medaglia d'Oro",
+      "pedigree": "Quality Road – Treasure, by Medaglia d'Oro",
+      "fee_usd": 35000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2020,
+      "value_score": 79.2,
+      "value_grade": "A",
+      "comparators": [
+        {
+          "name": "Corniche",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Quality Road"
+          ],
+          "matched_pairs": 14,
+          "median_return_pct": 134.3,
+          "mean_return_pct": 140.1,
+          "positive_return_pct": 85.7,
+          "median_yearling_price": 82500,
+          "median_twoyo_price": 195000
+        },
+        {
+          "name": "City Of Light",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Quality Road"
+          ],
+          "matched_pairs": 35,
+          "median_return_pct": 73.3,
+          "mean_return_pct": 116.6,
+          "positive_return_pct": 68.6,
+          "median_yearling_price": 95000,
+          "median_twoyo_price": 110000
+        },
+        {
+          "name": "Olympiad",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Medaglia d'Oro"
+          ],
+          "matched_pairs": 13,
+          "median_return_pct": 150.0,
+          "mean_return_pct": 311.1,
+          "positive_return_pct": 61.5,
+          "median_yearling_price": 40000,
+          "median_twoyo_price": 65000
+        },
+        {
+          "name": "Violence",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Medaglia d'Oro is their sire"
+          ],
+          "matched_pairs": 25,
+          "median_return_pct": 150.0,
+          "mean_return_pct": 231.3,
+          "positive_return_pct": 84.0,
+          "median_yearling_price": 45000,
+          "median_twoyo_price": 100000
+        },
+        {
+          "name": "Bolt D’oro",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Medaglia d'Oro is their sire"
+          ],
+          "matched_pairs": 63,
+          "median_return_pct": 142.9,
+          "mean_return_pct": 210.2,
+          "positive_return_pct": 82.5,
+          "median_yearling_price": 60000,
+          "median_twoyo_price": 140000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 127.7,
+        "mean_return_pct": 194.1,
+        "positive_pct": 78.0,
+        "median_yearling_price": 66033,
+        "median_twoyo_price": 124966,
+        "comparators_n": 5,
+        "comparator_pairs_total": 150,
+        "confidence": "high"
+      }
+    },
+    {
+      "name": "Prince of Monaco",
+      "farm": "Claiborne Farm",
+      "sire": "Speightstown",
+      "damsire": "War Front",
+      "pedigree": "Speightstown – Surefire, by War Front",
+      "fee_usd": 30000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2021,
+      "value_score": 53.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Olympiad",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 13,
+          "median_return_pct": 150.0,
+          "mean_return_pct": 311.1,
+          "positive_return_pct": 61.5,
+          "median_yearling_price": 40000,
+          "median_twoyo_price": 65000
+        },
+        {
+          "name": "Nashville",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 28,
+          "median_return_pct": 135.0,
+          "mean_return_pct": 299.5,
+          "positive_return_pct": 78.6,
+          "median_yearling_price": 43500,
+          "median_twoyo_price": 92500
+        },
+        {
+          "name": "Munnings",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 63,
+          "median_return_pct": 10.0,
+          "mean_return_pct": 45.7,
+          "positive_return_pct": 55.6,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 100000
+        },
+        {
+          "name": "Charlatan",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 39,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 107.9,
+          "positive_return_pct": 79.5,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 160000
+        },
+        {
+          "name": "Lexitonian",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 12,
+          "median_return_pct": 46.8,
+          "mean_return_pct": 216.2,
+          "positive_return_pct": 66.7,
+          "median_yearling_price": 26000,
+          "median_twoyo_price": 30000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 61.4,
+        "mean_return_pct": 142.7,
+        "positive_pct": 67.1,
+        "median_yearling_price": 85612,
+        "median_twoyo_price": 105387,
+        "comparators_n": 5,
+        "comparator_pairs_total": 155,
+        "confidence": "high"
+      }
+    },
+    {
+      "name": "Mindframe",
+      "farm": "Claiborne Farm",
+      "sire": "Constitution",
+      "damsire": "Any Given Saturday",
+      "pedigree": "Constitution – Enjoy the Moment, by Any Given Saturday",
+      "fee_usd": 50000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2021,
+      "value_score": 52.0,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Tiz The Law",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Constitution"
+          ],
+          "matched_pairs": 46,
+          "median_return_pct": 267.5,
+          "mean_return_pct": 499.2,
+          "positive_return_pct": 95.7,
+          "median_yearling_price": 42500,
+          "median_twoyo_price": 165000
+        },
+        {
+          "name": "Independence Hall",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Constitution"
+          ],
+          "matched_pairs": 31,
+          "median_return_pct": 68.0,
+          "mean_return_pct": 154.4,
+          "positive_return_pct": 71.0,
+          "median_yearling_price": 40000,
+          "median_twoyo_price": 82000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 187.2,
+        "mean_return_pct": 360.4,
+        "positive_pct": 85.8,
+        "median_yearling_price": 41493,
+        "median_twoyo_price": 131584,
+        "comparators_n": 2,
+        "comparator_pairs_total": 77,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Chancer Mcpatrick",
+      "farm": "Spendthrift Farm",
+      "sire": "McKinzie",
+      "damsire": "Bernardini",
+      "pedigree": "McKinzie – Bernadreamy, by Bernardini",
+      "fee_usd": 25000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 48.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Mo Town",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Bernardini"
+          ],
+          "matched_pairs": 23,
+          "median_return_pct": 185.7,
+          "mean_return_pct": 620.6,
+          "positive_return_pct": 87.0,
+          "median_yearling_price": 20000,
+          "median_twoyo_price": 55000
+        },
+        {
+          "name": "Maxfield",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Bernardini"
+          ],
+          "matched_pairs": 18,
+          "median_return_pct": 56.6,
+          "mean_return_pct": 132.2,
+          "positive_return_pct": 83.3,
+          "median_yearling_price": 75000,
+          "median_twoyo_price": 116250
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 129.0,
+        "mean_return_pct": 406.2,
+        "positive_pct": 85.4,
+        "median_yearling_price": 44146,
+        "median_twoyo_price": 81890,
+        "comparators_n": 2,
+        "comparator_pairs_total": 41,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Sierra Leone",
+      "farm": "Ashford Stud (Coolmore America)",
+      "sire": "Gun Runner",
+      "damsire": "Malibu Moon",
+      "pedigree": "Gun Runner – Heavenly Love, by Malibu Moon",
+      "fee_usd": 75000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2021,
+      "value_score": 83.0,
+      "value_grade": "A",
+      "comparators": [
+        {
+          "name": "Early Voting",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 9,
+          "median_return_pct": 179.4,
+          "mean_return_pct": 358.9,
+          "positive_return_pct": 88.9,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 430000
+        },
+        {
+          "name": "Cyberknife",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 81.8,
+          "mean_return_pct": 171.8,
+          "positive_return_pct": 86.7,
+          "median_yearling_price": 50000,
+          "median_twoyo_price": 85000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 118.4,
+        "mean_return_pct": 242.0,
+        "positive_pct": 87.5,
+        "median_yearling_price": 72500,
+        "median_twoyo_price": 214375,
+        "comparators_n": 2,
+        "comparator_pairs_total": 24,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Locked",
+      "farm": "Gainesway Farm",
+      "sire": "Gun Runner",
+      "damsire": "War Front",
+      "pedigree": "Gun Runner – Luna Rosa, by War Front",
+      "fee_usd": 35000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2021,
+      "value_score": 70.8,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Early Voting",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 9,
+          "median_return_pct": 179.4,
+          "mean_return_pct": 358.9,
+          "positive_return_pct": 88.9,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 430000
+        },
+        {
+          "name": "Cyberknife",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 81.8,
+          "mean_return_pct": 171.8,
+          "positive_return_pct": 86.7,
+          "median_yearling_price": 50000,
+          "median_twoyo_price": 85000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 118.4,
+        "mean_return_pct": 242.0,
+        "positive_pct": 87.5,
+        "median_yearling_price": 72500,
+        "median_twoyo_price": 214375,
+        "comparators_n": 2,
+        "comparator_pairs_total": 24,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Gun Pilot",
+      "farm": "Three Chimneys Farm",
+      "sire": "Gun Runner",
+      "damsire": "Smart Strike",
+      "pedigree": "Gun Runner – Bush Pilot, by Smart Strike",
+      "fee_usd": 12500,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2020,
+      "value_score": 60.4,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Early Voting",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 9,
+          "median_return_pct": 179.4,
+          "mean_return_pct": 358.9,
+          "positive_return_pct": 88.9,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 430000
+        },
+        {
+          "name": "Cyberknife",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 81.8,
+          "mean_return_pct": 171.8,
+          "positive_return_pct": 86.7,
+          "median_yearling_price": 50000,
+          "median_twoyo_price": 85000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 118.4,
+        "mean_return_pct": 242.0,
+        "positive_pct": 87.5,
+        "median_yearling_price": 72500,
+        "median_twoyo_price": 214375,
+        "comparators_n": 2,
+        "comparator_pairs_total": 24,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Gunite",
+      "farm": "Ashford Stud (Coolmore America)",
+      "sire": "Gun Runner",
+      "damsire": "Harlan's Holiday",
+      "pedigree": "Gun Runner – Simple Surprise, by Harlan's Holiday",
+      "fee_usd": 25000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2019,
+      "value_score": 55.0,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Early Voting",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 9,
+          "median_return_pct": 179.4,
+          "mean_return_pct": 358.9,
+          "positive_return_pct": 88.9,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 430000
+        },
+        {
+          "name": "Cyberknife",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 81.8,
+          "mean_return_pct": 171.8,
+          "positive_return_pct": 86.7,
+          "median_yearling_price": 50000,
+          "median_twoyo_price": 85000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 118.4,
+        "mean_return_pct": 242.0,
+        "positive_pct": 87.5,
+        "median_yearling_price": 72500,
+        "median_twoyo_price": 214375,
+        "comparators_n": 2,
+        "comparator_pairs_total": 24,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Taiba",
+      "farm": "Spendthrift Farm",
+      "sire": "Gun Runner",
+      "damsire": "Flatter",
+      "pedigree": "Gun Runner – Needmore Flattery, by Flatter",
+      "fee_usd": 25000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2019,
+      "value_score": 55.0,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Early Voting",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 9,
+          "median_return_pct": 179.4,
+          "mean_return_pct": 358.9,
+          "positive_return_pct": 88.9,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 430000
+        },
+        {
+          "name": "Cyberknife",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 81.8,
+          "mean_return_pct": 171.8,
+          "positive_return_pct": 86.7,
+          "median_yearling_price": 50000,
+          "median_twoyo_price": 85000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 118.4,
+        "mean_return_pct": 242.0,
+        "positive_pct": 87.5,
+        "median_yearling_price": 72500,
+        "median_twoyo_price": 214375,
+        "comparators_n": 2,
+        "comparator_pairs_total": 24,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Proxy",
+      "farm": "Darley America (Godolphin)",
+      "sire": "Tapit",
+      "damsire": "Include",
+      "pedigree": "Tapit – Panty Raid, by Include",
+      "fee_usd": 12500,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2018,
+      "value_score": 35.0,
+      "value_grade": "D",
+      "comparators": [
+        {
+          "name": "Greatest Honour",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 8,
+          "median_return_pct": 190.0,
+          "mean_return_pct": 201.0,
+          "positive_return_pct": 87.5,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 56250
+        },
+        {
+          "name": "Essential Quality",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 16,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 199.6,
+          "positive_return_pct": 68.8,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 125000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 113.3,
+        "mean_return_pct": 200.1,
+        "positive_pct": 75.0,
+        "median_yearling_price": 56666,
+        "median_twoyo_price": 102083,
+        "comparators_n": 2,
+        "comparator_pairs_total": 24,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Tapit Trice",
+      "farm": "Gainesway Farm",
+      "sire": "Tapit",
+      "damsire": "Dunkirk",
+      "pedigree": "Tapit – Danzatrice, by Dunkirk",
+      "fee_usd": 10000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2020,
+      "value_score": 33.2,
+      "value_grade": "D",
+      "comparators": [
+        {
+          "name": "Greatest Honour",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 8,
+          "median_return_pct": 190.0,
+          "mean_return_pct": 201.0,
+          "positive_return_pct": 87.5,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 56250
+        },
+        {
+          "name": "Essential Quality",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 16,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 199.6,
+          "positive_return_pct": 68.8,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 125000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 113.3,
+        "mean_return_pct": 200.1,
+        "positive_pct": 75.0,
+        "median_yearling_price": 56666,
+        "median_twoyo_price": 102083,
+        "comparators_n": 2,
+        "comparator_pairs_total": 24,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Country Grammer",
+      "farm": "WinStar Farm",
+      "sire": "Tonalist",
+      "damsire": "Forestry",
+      "pedigree": "Tonalist – Arabian Song, by Forestry",
+      "fee_usd": 5000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2017,
+      "value_score": 25.0,
+      "value_grade": "D",
+      "comparators": [
+        {
+          "name": "Instilled Regard",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Forestry"
+          ],
+          "matched_pairs": 7,
+          "median_return_pct": 50.0,
+          "mean_return_pct": 271.4,
+          "positive_return_pct": 57.1,
+          "median_yearling_price": 25000,
+          "median_twoyo_price": 30000
+        },
+        {
+          "name": "Nyquist",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Forestry"
+          ],
+          "matched_pairs": 58,
+          "median_return_pct": 112.4,
+          "mean_return_pct": 240.1,
+          "positive_return_pct": 82.8,
+          "median_yearling_price": 122500,
+          "median_twoyo_price": 215000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 105.7,
+        "mean_return_pct": 243.5,
+        "positive_pct": 80.0,
+        "median_yearling_price": 112000,
+        "median_twoyo_price": 195076,
+        "comparators_n": 2,
+        "comparator_pairs_total": 65,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Arabian Lion",
+      "farm": "Spendthrift Farm",
+      "sire": "Justify",
+      "damsire": "Distorted Humor",
+      "pedigree": "Justify – Unbound, by Distorted Humor",
+      "fee_usd": 15000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2020,
+      "value_score": 72.5,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Life Is Good",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Distorted Humor"
+          ],
+          "matched_pairs": 7,
+          "median_return_pct": 114.3,
+          "mean_return_pct": 111.7,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 210000,
+          "median_twoyo_price": 400000
+        },
+        {
+          "name": "Practical Joke",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Distorted Humor"
+          ],
+          "matched_pairs": 79,
+          "median_return_pct": 100.0,
+          "mean_return_pct": 152.8,
+          "positive_return_pct": 89.9,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 160000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 101.2,
+        "mean_return_pct": 149.5,
+        "positive_pct": 90.7,
+        "median_yearling_price": 81395,
+        "median_twoyo_price": 179534,
+        "comparators_n": 2,
+        "comparator_pairs_total": 86,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Patch Adams",
+      "farm": "WinStar Farm",
+      "sire": "Into Mischief",
+      "damsire": "Distorted Humor",
+      "pedigree": "Into Mischief – Well Humored, by Distorted Humor",
+      "fee_usd": 30000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 60.8,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Life Is Good",
+          "similarity_score": 80,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief",
+            "Share damsire Distorted Humor"
+          ],
+          "matched_pairs": 7,
+          "median_return_pct": 114.3,
+          "mean_return_pct": 111.7,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 210000,
+          "median_twoyo_price": 400000
+        },
+        {
+          "name": "Practical Joke",
+          "similarity_score": 80,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief",
+            "Share damsire Distorted Humor"
+          ],
+          "matched_pairs": 79,
+          "median_return_pct": 100.0,
+          "mean_return_pct": 152.8,
+          "positive_return_pct": 89.9,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 160000
+        },
+        {
+          "name": "Highly Motivated",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 10,
+          "median_return_pct": 85.1,
+          "mean_return_pct": 138.1,
+          "positive_return_pct": 90.0,
+          "median_yearling_price": 47500,
+          "median_twoyo_price": 117500
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 99.5,
+        "mean_return_pct": 148.3,
+        "positive_pct": 90.6,
+        "median_yearling_price": 77864,
+        "median_twoyo_price": 173072,
+        "comparators_n": 3,
+        "comparator_pairs_total": 96,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Annapolis",
+      "farm": "Claiborne Farm",
+      "sire": "War Front",
+      "damsire": "Lost Soldier",
+      "pedigree": "War Front – Noble Maz, by Lost Soldier",
+      "fee_usd": 12500,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2019,
+      "value_score": 22.5,
+      "value_grade": "F",
+      "comparators": [
+        {
+          "name": "Omaha Beach",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire War Front"
+          ],
+          "matched_pairs": 68,
+          "median_return_pct": 104.2,
+          "mean_return_pct": 151.7,
+          "positive_return_pct": 73.5,
+          "median_yearling_price": 76000,
+          "median_twoyo_price": 135000
+        },
+        {
+          "name": "The Factor",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire War Front"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 52.0,
+          "mean_return_pct": 138.3,
+          "positive_return_pct": 66.7,
+          "median_yearling_price": 16000,
+          "median_twoyo_price": 30000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 94.8,
+        "mean_return_pct": 149.3,
+        "positive_pct": 72.3,
+        "median_yearling_price": 65156,
+        "median_twoyo_price": 116024,
+        "comparators_n": 2,
+        "comparator_pairs_total": 83,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Cody's Wish",
+      "farm": "Darley America (Godolphin)",
+      "sire": "Curlin",
+      "damsire": "Tapit",
+      "pedigree": "Curlin – Dance Card, by Tapit",
+      "fee_usd": 60000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2018,
+      "value_score": 71.0,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Vino Rosso",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 69,
+          "median_return_pct": 80.0,
+          "mean_return_pct": 212.3,
+          "positive_return_pct": 69.6,
+          "median_yearling_price": 42000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Idol",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 5,
+          "median_return_pct": 108.0,
+          "mean_return_pct": 267.2,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 25000,
+          "median_twoyo_price": 45000
+        },
+        {
+          "name": "Connect",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 37,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 136.4,
+          "positive_return_pct": 64.9,
+          "median_yearling_price": 32000,
+          "median_twoyo_price": 45000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 79.6,
+        "mean_return_pct": 189.5,
+        "positive_pct": 69.4,
+        "median_yearling_price": 37900,
+        "median_twoyo_price": 48108,
+        "comparators_n": 3,
+        "comparator_pairs_total": 111,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Highland Falls",
+      "farm": "Darley America (Godolphin)",
+      "sire": "Curlin",
+      "damsire": "Forty Niner",
+      "pedigree": "Curlin – Forty Greeneyes, by Forty Niner",
+      "fee_usd": 10000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 50.7,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Vino Rosso",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 69,
+          "median_return_pct": 80.0,
+          "mean_return_pct": 212.3,
+          "positive_return_pct": 69.6,
+          "median_yearling_price": 42000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Idol",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 5,
+          "median_return_pct": 108.0,
+          "mean_return_pct": 267.2,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 25000,
+          "median_twoyo_price": 45000
+        },
+        {
+          "name": "Connect",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 37,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 136.4,
+          "positive_return_pct": 64.9,
+          "median_yearling_price": 32000,
+          "median_twoyo_price": 45000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 79.6,
+        "mean_return_pct": 189.5,
+        "positive_pct": 69.4,
+        "median_yearling_price": 37900,
+        "median_twoyo_price": 48108,
+        "comparators_n": 3,
+        "comparator_pairs_total": 111,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Bright Future",
+      "farm": "Claiborne Farm",
+      "sire": "Curlin",
+      "damsire": "Storm Cat",
+      "pedigree": "Curlin – First Cat, by Storm Cat",
+      "fee_usd": 5000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2019,
+      "value_score": 49.5,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Vino Rosso",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 69,
+          "median_return_pct": 80.0,
+          "mean_return_pct": 212.3,
+          "positive_return_pct": 69.6,
+          "median_yearling_price": 42000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Idol",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 5,
+          "median_return_pct": 108.0,
+          "mean_return_pct": 267.2,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 25000,
+          "median_twoyo_price": 45000
+        },
+        {
+          "name": "Connect",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 37,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 136.4,
+          "positive_return_pct": 64.9,
+          "median_yearling_price": 32000,
+          "median_twoyo_price": 45000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 79.6,
+        "mean_return_pct": 189.5,
+        "positive_pct": 69.4,
+        "median_yearling_price": 37900,
+        "median_twoyo_price": 48108,
+        "comparators_n": 3,
+        "comparator_pairs_total": 111,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "More Than Looks",
+      "farm": "Lane's End",
+      "sire": "More Than Ready",
+      "damsire": "Harlan's Holiday",
+      "pedigree": "More Than Ready – Ladies' Privilege, by Harlan's Holiday",
+      "fee_usd": 10000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2020,
+      "value_score": 43.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Funtastic",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire More Than Ready"
+          ],
+          "matched_pairs": 6,
+          "median_return_pct": 9.3,
+          "mean_return_pct": 70.9,
+          "positive_return_pct": 66.7,
+          "median_yearling_price": 16000,
+          "median_twoyo_price": 17000
+        },
+        {
+          "name": "Beau Liam",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Harlan's Holiday"
+          ],
+          "matched_pairs": 29,
+          "median_return_pct": 92.3,
+          "mean_return_pct": 216.6,
+          "positive_return_pct": 82.8,
+          "median_yearling_price": 35000,
+          "median_twoyo_price": 70000
+        },
+        {
+          "name": "Into Mischief",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Harlan's Holiday is their sire"
+          ],
+          "matched_pairs": 25,
+          "median_return_pct": 73.1,
+          "mean_return_pct": 171.4,
+          "positive_return_pct": 80.0,
+          "median_yearling_price": 240000,
+          "median_twoyo_price": 400000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 76.0,
+        "mean_return_pct": 183.2,
+        "positive_pct": 80.0,
+        "median_yearling_price": 118516,
+        "median_twoyo_price": 202200,
+        "comparators_n": 3,
+        "comparator_pairs_total": 60,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Up To The Mark",
+      "farm": "Lane's End",
+      "sire": "Not This Time",
+      "damsire": "Ghostzapper",
+      "pedigree": "Not This Time – Belle's Finale, by Ghostzapper",
+      "fee_usd": 25000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2019,
+      "value_score": 55.0,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Epicenter",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Not This Time"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 140.0,
+          "mean_return_pct": 167.9,
+          "positive_return_pct": 80.0,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 75000
+        },
+        {
+          "name": "Justify",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Ghostzapper"
+          ],
+          "matched_pairs": 29,
+          "median_return_pct": 40.0,
+          "mean_return_pct": 109.0,
+          "positive_return_pct": 62.1,
+          "median_yearling_price": 160000,
+          "median_twoyo_price": 300000
+        },
+        {
+          "name": "Mystic Guide",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Ghostzapper is their sire"
+          ],
+          "matched_pairs": 8,
+          "median_return_pct": 64.9,
+          "mean_return_pct": 59.8,
+          "positive_return_pct": 62.5,
+          "median_yearling_price": 22500,
+          "median_twoyo_price": 30000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 72.7,
+        "mean_return_pct": 118.4,
+        "positive_pct": 67.3,
+        "median_yearling_price": 112884,
+        "median_twoyo_price": 193557,
+        "comparators_n": 3,
+        "comparator_pairs_total": 52,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Two Phil's",
+      "farm": "WinStar Farm",
+      "sire": "Hard Spun",
+      "damsire": "General Quarters",
+      "pedigree": "Hard Spun – Mia Torri, by General Quarters",
+      "fee_usd": 7500,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2020,
+      "value_score": 56.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Silver State",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Hard Spun"
+          ],
+          "matched_pairs": 19,
+          "median_return_pct": 0.0,
+          "mean_return_pct": 43.3,
+          "positive_return_pct": 47.4,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 30000
+        },
+        {
+          "name": "Good Magic",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His sire Hard Spun is their damsire"
+          ],
+          "matched_pairs": 41,
+          "median_return_pct": 87.5,
+          "mean_return_pct": 99.3,
+          "positive_return_pct": 63.4,
+          "median_yearling_price": 100000,
+          "median_twoyo_price": 120000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 59.8,
+        "mean_return_pct": 81.6,
+        "positive_pct": 58.3,
+        "median_yearling_price": 77833,
+        "median_twoyo_price": 91500,
+        "comparators_n": 2,
+        "comparator_pairs_total": 60,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Flightline",
+      "farm": "Lane's End",
+      "sire": "Tapit",
+      "damsire": "Indian Charlie",
+      "pedigree": "Tapit – Feathered, by Indian Charlie",
+      "fee_usd": 125000,
+      "entered_stud_year": 2023,
+      "year_of_birth": 2018,
+      "value_score": 60.4,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Greatest Honour",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 8,
+          "median_return_pct": 190.0,
+          "mean_return_pct": 201.0,
+          "positive_return_pct": 87.5,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 56250
+        },
+        {
+          "name": "Essential Quality",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 16,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 199.6,
+          "positive_return_pct": 68.8,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 125000
+        },
+        {
+          "name": "Tacitus",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 21,
+          "median_return_pct": -3.6,
+          "mean_return_pct": 80.3,
+          "positive_return_pct": 38.1,
+          "median_yearling_price": 42000,
+          "median_twoyo_price": 50000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 58.8,
+        "mean_return_pct": 144.2,
+        "positive_pct": 57.8,
+        "median_yearling_price": 49822,
+        "median_twoyo_price": 77777,
+        "comparators_n": 3,
+        "comparator_pairs_total": 45,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Charge It",
+      "farm": "Gainesway Farm",
+      "sire": "Tapit",
+      "damsire": "Indian Charlie",
+      "pedigree": "Tapit – I'll Take Charge, by Indian Charlie",
+      "fee_usd": 12500,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2019,
+      "value_score": 52.9,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Greatest Honour",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 8,
+          "median_return_pct": 190.0,
+          "mean_return_pct": 201.0,
+          "positive_return_pct": 87.5,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 56250
+        },
+        {
+          "name": "Essential Quality",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 16,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 199.6,
+          "positive_return_pct": 68.8,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 125000
+        },
+        {
+          "name": "Tacitus",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 21,
+          "median_return_pct": -3.6,
+          "mean_return_pct": 80.3,
+          "positive_return_pct": 38.1,
+          "median_yearling_price": 42000,
+          "median_twoyo_price": 50000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 58.8,
+        "mean_return_pct": 144.2,
+        "positive_pct": 57.8,
+        "median_yearling_price": 49822,
+        "median_twoyo_price": 77777,
+        "comparators_n": 3,
+        "comparator_pairs_total": 45,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Arthur's Ride",
+      "farm": "Taylor Made Stallions",
+      "sire": "Tapit",
+      "damsire": "Point Given",
+      "pedigree": "Tapit – Points Of Grace, by Point Given",
+      "fee_usd": 12500,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 42.9,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Greatest Honour",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 8,
+          "median_return_pct": 190.0,
+          "mean_return_pct": 201.0,
+          "positive_return_pct": 87.5,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 56250
+        },
+        {
+          "name": "Essential Quality",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 16,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 199.6,
+          "positive_return_pct": 68.8,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 125000
+        },
+        {
+          "name": "Tacitus",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Tapit"
+          ],
+          "matched_pairs": 21,
+          "median_return_pct": -3.6,
+          "mean_return_pct": 80.3,
+          "positive_return_pct": 38.1,
+          "median_yearling_price": 42000,
+          "median_twoyo_price": 50000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 58.8,
+        "mean_return_pct": 144.2,
+        "positive_pct": 57.8,
+        "median_yearling_price": 49822,
+        "median_twoyo_price": 77777,
+        "comparators_n": 3,
+        "comparator_pairs_total": 45,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Johannes",
+      "farm": "Claiborne Farm",
+      "sire": "Malibu Moon",
+      "damsire": "Giant's Causeway",
+      "pedigree": "Malibu Moon – Vision of Heaven, by Giant's Causeway",
+      "fee_usd": 10000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 33.2,
+      "value_grade": "D",
+      "comparators": [
+        {
+          "name": "Gun Runner",
+          "similarity_score": 30,
+          "similarity_reasons": [
+            "Share damsire Giant's Causeway"
+          ],
+          "matched_pairs": 26,
+          "median_return_pct": 48.5,
+          "mean_return_pct": 134.1,
+          "positive_return_pct": 65.4,
+          "median_yearling_price": 177500,
+          "median_twoyo_price": 210000
+        },
+        {
+          "name": "Girvin",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His sire Malibu Moon is their damsire"
+          ],
+          "matched_pairs": 33,
+          "median_return_pct": 92.3,
+          "mean_return_pct": 211.8,
+          "positive_return_pct": 72.7,
+          "median_yearling_price": 50000,
+          "median_twoyo_price": 55000
+        },
+        {
+          "name": "Not This Time",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Giant's Causeway is their sire"
+          ],
+          "matched_pairs": 36,
+          "median_return_pct": 24.4,
+          "mean_return_pct": 358.7,
+          "positive_return_pct": 61.1,
+          "median_yearling_price": 97500,
+          "median_twoyo_price": 137500
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 54.6,
+        "mean_return_pct": 246.2,
+        "positive_pct": 66.3,
+        "median_yearling_price": 102894,
+        "median_twoyo_price": 128684,
+        "comparators_n": 3,
+        "comparator_pairs_total": 95,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Loggins",
+      "farm": "Hill 'n' Dale Farms at Xalapa",
+      "sire": "Ghostzapper",
+      "damsire": "Blame",
+      "pedigree": "Ghostzapper – Beyond Blame, by Blame",
+      "fee_usd": 5000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2020,
+      "value_score": 47.5,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Mystic Guide",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Ghostzapper"
+          ],
+          "matched_pairs": 8,
+          "median_return_pct": 64.9,
+          "mean_return_pct": 59.8,
+          "positive_return_pct": 62.5,
+          "median_yearling_price": 22500,
+          "median_twoyo_price": 30000
+        },
+        {
+          "name": "Justify",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His sire Ghostzapper is their damsire"
+          ],
+          "matched_pairs": 29,
+          "median_return_pct": 40.0,
+          "mean_return_pct": 109.0,
+          "positive_return_pct": 62.1,
+          "median_yearling_price": 160000,
+          "median_twoyo_price": 300000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 45.4,
+        "mean_return_pct": 98.4,
+        "positive_pct": 62.2,
+        "median_yearling_price": 130270,
+        "median_twoyo_price": 241621,
+        "comparators_n": 2,
+        "comparator_pairs_total": 37,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Citizen Bull",
+      "farm": "Ashford Stud (Coolmore America)",
+      "sire": "Into Mischief",
+      "damsire": "Henny Hughes",
+      "pedigree": "Into Mischief – Beholder, by Henny Hughes",
+      "fee_usd": 45000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 74.5,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Highly Motivated",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 10,
+          "median_return_pct": 85.1,
+          "mean_return_pct": 138.1,
+          "positive_return_pct": 90.0,
+          "median_yearling_price": 47500,
+          "median_twoyo_price": 117500
+        },
+        {
+          "name": "Audible",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 56,
+          "median_return_pct": -7.3,
+          "mean_return_pct": 100.2,
+          "positive_return_pct": 48.2,
+          "median_yearling_price": 75000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Life Is Good",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 7,
+          "median_return_pct": 114.3,
+          "mean_return_pct": 111.7,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 210000,
+          "median_twoyo_price": 400000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 17.0,
+        "mean_return_pct": 106.5,
+        "positive_pct": 58.9,
+        "median_yearling_price": 84178,
+        "median_twoyo_price": 92808,
+        "comparators_n": 3,
+        "comparator_pairs_total": 73,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Newgate",
+      "farm": "Three Chimneys Farm",
+      "sire": "Into Mischief",
+      "damsire": "Majestic Warrior",
+      "pedigree": "Into Mischief – Majestic Presence, by Majestic Warrior",
+      "fee_usd": 17500,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2020,
+      "value_score": 73.6,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Highly Motivated",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 10,
+          "median_return_pct": 85.1,
+          "mean_return_pct": 138.1,
+          "positive_return_pct": 90.0,
+          "median_yearling_price": 47500,
+          "median_twoyo_price": 117500
+        },
+        {
+          "name": "Audible",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 56,
+          "median_return_pct": -7.3,
+          "mean_return_pct": 100.2,
+          "positive_return_pct": 48.2,
+          "median_yearling_price": 75000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Life Is Good",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 7,
+          "median_return_pct": 114.3,
+          "mean_return_pct": 111.7,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 210000,
+          "median_twoyo_price": 400000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 17.0,
+        "mean_return_pct": 106.5,
+        "positive_pct": 58.9,
+        "median_yearling_price": 84178,
+        "median_twoyo_price": 92808,
+        "comparators_n": 3,
+        "comparator_pairs_total": 73,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Barnes",
+      "farm": "Hill 'n' Dale Farms at Xalapa",
+      "sire": "Into Mischief",
+      "damsire": "American Pharoah",
+      "pedigree": "Into Mischief – All American Dream, by American Pharoah",
+      "fee_usd": 15000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 67.4,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Highly Motivated",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 10,
+          "median_return_pct": 85.1,
+          "mean_return_pct": 138.1,
+          "positive_return_pct": 90.0,
+          "median_yearling_price": 47500,
+          "median_twoyo_price": 117500
+        },
+        {
+          "name": "Audible",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 56,
+          "median_return_pct": -7.3,
+          "mean_return_pct": 100.2,
+          "positive_return_pct": 48.2,
+          "median_yearling_price": 75000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Life Is Good",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 7,
+          "median_return_pct": 114.3,
+          "mean_return_pct": 111.7,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 210000,
+          "median_twoyo_price": 400000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 17.0,
+        "mean_return_pct": 106.5,
+        "positive_pct": 58.9,
+        "median_yearling_price": 84178,
+        "median_twoyo_price": 92808,
+        "comparators_n": 3,
+        "comparator_pairs_total": 73,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Timberlake",
+      "farm": "WinStar Farm",
+      "sire": "Into Mischief",
+      "damsire": "Lookin At Lucky",
+      "pedigree": "Into Mischief – Pin Up (IRE), by Lookin At Lucky",
+      "fee_usd": 15000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2021,
+      "value_score": 67.4,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Highly Motivated",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 10,
+          "median_return_pct": 85.1,
+          "mean_return_pct": 138.1,
+          "positive_return_pct": 90.0,
+          "median_yearling_price": 47500,
+          "median_twoyo_price": 117500
+        },
+        {
+          "name": "Audible",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 56,
+          "median_return_pct": -7.3,
+          "mean_return_pct": 100.2,
+          "positive_return_pct": 48.2,
+          "median_yearling_price": 75000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Life Is Good",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 7,
+          "median_return_pct": 114.3,
+          "mean_return_pct": 111.7,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 210000,
+          "median_twoyo_price": 400000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 17.0,
+        "mean_return_pct": 106.5,
+        "positive_pct": 58.9,
+        "median_yearling_price": 84178,
+        "median_twoyo_price": 92808,
+        "comparators_n": 3,
+        "comparator_pairs_total": 73,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "First Mission",
+      "farm": "Darley America (Godolphin)",
+      "sire": "Into Mischief",
+      "damsire": "Street Cry (Ire)",
+      "pedigree": "Into Mischief – Tulira Castle, by Street Cry (Ire)",
+      "fee_usd": 10000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 59.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Highly Motivated",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 10,
+          "median_return_pct": 85.1,
+          "mean_return_pct": 138.1,
+          "positive_return_pct": 90.0,
+          "median_yearling_price": 47500,
+          "median_twoyo_price": 117500
+        },
+        {
+          "name": "Audible",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 56,
+          "median_return_pct": -7.3,
+          "mean_return_pct": 100.2,
+          "positive_return_pct": 48.2,
+          "median_yearling_price": 75000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Life Is Good",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Into Mischief"
+          ],
+          "matched_pairs": 7,
+          "median_return_pct": 114.3,
+          "mean_return_pct": 111.7,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 210000,
+          "median_twoyo_price": 400000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 17.0,
+        "mean_return_pct": 106.5,
+        "positive_pct": 58.9,
+        "median_yearling_price": 84178,
+        "median_twoyo_price": 92808,
+        "comparators_n": 3,
+        "comparator_pairs_total": 73,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "Mystik Dan",
+      "farm": "Airdrie Stud",
+      "sire": "Goldencents",
+      "damsire": "Colonel John",
+      "pedigree": "Goldencents – Ma' Am, by Colonel John",
+      "fee_usd": 15000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2021,
+      "value_score": 49.9,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "By My Standards",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Goldencents"
+          ],
+          "matched_pairs": 5,
+          "median_return_pct": 440.0,
+          "mean_return_pct": 444.0,
+          "positive_return_pct": 80.0,
+          "median_yearling_price": 15000,
+          "median_twoyo_price": 30000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 440.0,
+        "mean_return_pct": 444.0,
+        "positive_pct": 80.0,
+        "median_yearling_price": 15000,
+        "median_twoyo_price": 30000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 5,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Arcangelo",
+      "farm": "Lane's End",
+      "sire": "Arrogate",
+      "damsire": "Tapit",
+      "pedigree": "Arrogate – Modeling, by Tapit",
+      "fee_usd": 30000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2020,
+      "value_score": 62.5,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Greatest Honour",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Tapit is their sire"
+          ],
+          "matched_pairs": 8,
+          "median_return_pct": 190.0,
+          "mean_return_pct": 201.0,
+          "positive_return_pct": 87.5,
+          "median_yearling_price": 30000,
+          "median_twoyo_price": 56250
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 190.0,
+        "mean_return_pct": 201.0,
+        "positive_pct": 87.5,
+        "median_yearling_price": 30000,
+        "median_twoyo_price": 56250,
+        "comparators_n": 1,
+        "comparator_pairs_total": 8,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Muth",
+      "farm": "Gainesway Farm",
+      "sire": "Good Magic",
+      "damsire": "Uncle Mo",
+      "pedigree": "Good Magic – Hoppa, by Uncle Mo",
+      "fee_usd": 30000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2021,
+      "value_score": 53.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Mo Town",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Uncle Mo is their sire"
+          ],
+          "matched_pairs": 23,
+          "median_return_pct": 185.7,
+          "mean_return_pct": 620.6,
+          "positive_return_pct": 87.0,
+          "median_yearling_price": 20000,
+          "median_twoyo_price": 55000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 185.7,
+        "mean_return_pct": 620.6,
+        "positive_pct": 87.0,
+        "median_yearling_price": 20000,
+        "median_twoyo_price": 55000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 23,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Goal Oriented",
+      "farm": "Spendthrift Farm",
+      "sire": "Not This Time",
+      "damsire": "Afleet Alex",
+      "pedigree": "Not This Time – Bizzy Caroline, by Afleet Alex",
+      "fee_usd": 30000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 60.8,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Epicenter",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Not This Time"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 140.0,
+          "mean_return_pct": 167.9,
+          "positive_return_pct": 80.0,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 75000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 140.0,
+        "mean_return_pct": 167.9,
+        "positive_pct": 80.0,
+        "median_yearling_price": 70000,
+        "median_twoyo_price": 75000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 15,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Cogburn",
+      "farm": "WinStar Farm",
+      "sire": "Not This Time",
+      "damsire": "Saintly Look",
+      "pedigree": "Not This Time – In A Jif, by Saintly Look",
+      "fee_usd": 25000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2019,
+      "value_score": 48.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Epicenter",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Not This Time"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 140.0,
+          "mean_return_pct": 167.9,
+          "positive_return_pct": 80.0,
+          "median_yearling_price": 70000,
+          "median_twoyo_price": 75000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 140.0,
+        "mean_return_pct": 167.9,
+        "positive_pct": 80.0,
+        "median_yearling_price": 70000,
+        "median_twoyo_price": 75000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 15,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Seize The Grey",
+      "farm": "Gainesway Farm",
+      "sire": "Arrogate",
+      "damsire": "Smart Strike",
+      "pedigree": "Arrogate – Smart Shopping, by Smart Strike",
+      "fee_usd": 25000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2021,
+      "value_score": 30.8,
+      "value_grade": "D",
+      "comparators": [
+        {
+          "name": "Curlin",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Smart Strike is their sire"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 77.1,
+          "mean_return_pct": 145.3,
+          "positive_return_pct": 86.7,
+          "median_yearling_price": 180000,
+          "median_twoyo_price": 325000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 77.1,
+        "mean_return_pct": 145.3,
+        "positive_pct": 86.7,
+        "median_yearling_price": 180000,
+        "median_twoyo_price": 325000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 15,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Forte",
+      "farm": "Spendthrift Farm",
+      "sire": "Violence",
+      "damsire": "Blame",
+      "pedigree": "Violence – Queen Caroline, by Blame",
+      "fee_usd": 35000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2020,
+      "value_score": 70.0,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Volatile",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Violence"
+          ],
+          "matched_pairs": 42,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 126.9,
+          "positive_return_pct": 71.4,
+          "median_yearling_price": 36000,
+          "median_twoyo_price": 65000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 66.7,
+        "mean_return_pct": 126.9,
+        "positive_pct": 71.4,
+        "median_yearling_price": 36000,
+        "median_twoyo_price": 65000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 42,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Mullikin",
+      "farm": "WinStar Farm",
+      "sire": "Violence",
+      "damsire": "Congrats",
+      "pedigree": "Violence – Tulira's Star, by Congrats",
+      "fee_usd": 10000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 50.7,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Volatile",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Violence"
+          ],
+          "matched_pairs": 42,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 126.9,
+          "positive_return_pct": 71.4,
+          "median_yearling_price": 36000,
+          "median_twoyo_price": 65000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 66.7,
+        "mean_return_pct": 126.9,
+        "positive_pct": 71.4,
+        "median_yearling_price": 36000,
+        "median_twoyo_price": 65000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 42,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Raging Torrent",
+      "farm": "Lane's End",
+      "sire": "Maximus Mischief",
+      "damsire": "Violence",
+      "pedigree": "Maximus Mischief – Violent Wave, by Violence",
+      "fee_usd": 15000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2021,
+      "value_score": 49.9,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Volatile",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Violence is their sire"
+          ],
+          "matched_pairs": 42,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 126.9,
+          "positive_return_pct": 71.4,
+          "median_yearling_price": 36000,
+          "median_twoyo_price": 65000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 66.7,
+        "mean_return_pct": 126.9,
+        "positive_pct": 71.4,
+        "median_yearling_price": 36000,
+        "median_twoyo_price": 65000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 42,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Dr. Schivel",
+      "farm": "Taylor Made Stallions",
+      "sire": "Violence",
+      "damsire": "Mining for Money",
+      "pedigree": "Violence – Lil Nugget, by Mining for Money",
+      "fee_usd": 5000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2018,
+      "value_score": 37.5,
+      "value_grade": "D",
+      "comparators": [
+        {
+          "name": "Volatile",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Violence"
+          ],
+          "matched_pairs": 42,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 126.9,
+          "positive_return_pct": 71.4,
+          "median_yearling_price": 36000,
+          "median_twoyo_price": 65000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 66.7,
+        "mean_return_pct": 126.9,
+        "positive_pct": 71.4,
+        "median_yearling_price": 36000,
+        "median_twoyo_price": 65000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 42,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Carl Spackler (Ire)",
+      "farm": "Lane's End",
+      "sire": "Lope De Vega (Ire)",
+      "damsire": "More Than Ready",
+      "pedigree": "Lope De Vega (Ire) – Zindaya, by More Than Ready",
+      "fee_usd": 15000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 49.9,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Funtastic",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire More Than Ready is their sire"
+          ],
+          "matched_pairs": 6,
+          "median_return_pct": 9.3,
+          "mean_return_pct": 70.9,
+          "positive_return_pct": 66.7,
+          "median_yearling_price": 16000,
+          "median_twoyo_price": 17000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 9.3,
+        "mean_return_pct": 70.9,
+        "positive_pct": 66.7,
+        "median_yearling_price": 16000,
+        "median_twoyo_price": 17000,
+        "comparators_n": 1,
+        "comparator_pairs_total": 6,
+        "confidence": "low"
+      }
+    },
+    {
+      "name": "Jonathan's Way",
+      "farm": "Airdrie Stud",
+      "sire": "Good Magic",
+      "damsire": "Air Force Blue",
+      "pedigree": "Good Magic – Nicanor Missile, by Air Force Blue",
+      "fee_usd": 8500,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 57.0,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Domestic Product",
+      "farm": "Ashford Stud (Coolmore America)",
+      "sire": "Practical Joke",
+      "damsire": "Congrats",
+      "pedigree": "Practical Joke – Resistance Free, by Congrats",
+      "fee_usd": 25000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2021,
+      "value_score": 56.8,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Mage",
+      "farm": "Airdrie Stud",
+      "sire": "Good Magic",
+      "damsire": "Big Brown",
+      "pedigree": "Good Magic – Puca, by Big Brown",
+      "fee_usd": 15000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2020,
+      "value_score": 55.0,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Heartland",
+      "farm": "WinStar Farm",
+      "sire": "Justify",
+      "damsire": "Cat Thief",
+      "pedigree": "Justify – Sambuca Classica, by Cat Thief",
+      "fee_usd": 10000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2021,
+      "value_score": 50.7,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Zandon",
+      "farm": "Spendthrift Farm",
+      "sire": "Upstart",
+      "damsire": "Creative Cause",
+      "pedigree": "Upstart – Memories Prevail, by Creative Cause",
+      "fee_usd": 7500,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2019,
+      "value_score": 43.8,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Dornoch",
+      "farm": "Spendthrift Farm",
+      "sire": "Good Magic",
+      "damsire": "Big Brown",
+      "pedigree": "Good Magic – Puca, by Big Brown",
+      "fee_usd": 30000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2021,
+      "value_score": 43.2,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Channel Cat",
+      "farm": "Calumet Farm",
+      "sire": "English Channel",
+      "damsire": "Charismatic",
+      "pedigree": "English Channel – In Return, by Charismatic",
+      "fee_usd": 7500,
+      "entered_stud_year": 2023,
+      "year_of_birth": 2015,
+      "value_score": 41.9,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Oxbow",
+      "farm": "Calumet Farm",
+      "sire": "Awesome Again",
+      "damsire": "Cee's Tizzy",
+      "pedigree": "Awesome Again – Tizamazing, by Cee's Tizzy",
+      "fee_usd": 7500,
+      "entered_stud_year": 2014,
+      "year_of_birth": 2010,
+      "value_score": 36.5,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Fierceness",
+      "farm": "Ashford Stud (Coolmore America)",
+      "sire": "City of Light",
+      "damsire": "Stay Thirsty",
+      "pedigree": "City of Light – Nonna Bella, by Stay Thirsty",
+      "fee_usd": 50000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2021,
+      "value_score": 34.5,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Senor Buscador",
+      "farm": "Lane's End",
+      "sire": "Mineshaft",
+      "damsire": "Desert God",
+      "pedigree": "Mineshaft – Rose's Desert, by Desert God",
+      "fee_usd": 7500,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2018,
+      "value_score": 34.5,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Straight No Chaser",
+      "farm": "WinStar Farm",
+      "sire": "Speightster",
+      "damsire": "Johannesburg",
+      "pedigree": "Speightster – Margarita Friday, by Johannesburg",
+      "fee_usd": 10000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2019,
+      "value_score": 33.2,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Producer (Gb)",
+      "farm": "Calumet Farm",
+      "sire": "Sadler's Wells",
+      "damsire": "Mr. Prospector",
+      "pedigree": "Sadler's Wells – Prospectors Delite, by Mr. Prospector",
+      "fee_usd": 7500,
+      "entered_stud_year": null,
+      "year_of_birth": null,
+      "value_score": 32.5,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Bravazo",
+      "farm": "Calumet Farm",
+      "sire": "Awesome Again",
+      "damsire": "Cee's Tizzy",
+      "pedigree": "Awesome Again – Tiz O'Gold, by Cee's Tizzy",
+      "fee_usd": 5000,
+      "entered_stud_year": 2021,
+      "year_of_birth": 2015,
+      "value_score": 31.2,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Angel of Empire",
+      "farm": "Taylor Made Stallions",
+      "sire": "Classic Empire",
+      "damsire": "To Honor and Serve",
+      "pedigree": "Classic Empire – Armony's Angel, by To Honor and Serve",
+      "fee_usd": 5000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2020,
+      "value_score": 19.5,
+      "value_grade": "F",
+      "comparators": [],
+      "predicted": null
+    }
+  ]
+}

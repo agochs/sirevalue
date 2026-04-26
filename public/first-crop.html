@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — First-Crop Sire Predictions</title>
+<meta property="og:title" content="SireValue — First-Crop Sire Predictions"/>
+<meta property="og:description" content="Predicted pinhook signal for stallions whose first foals are too young to have realized data — leaning on sire-line comparators."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; margin: 0 0 10px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 72ch; }
+
+.stat-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px; margin: 0 0 18px;
+}
+.stat-box {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 14px; text-align: center;
+}
+.stat-box b {
+  display: block; font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 22px; font-weight: 700; line-height: 1.1;
+}
+.stat-box .lbl {
+  font-size: 11px; color: var(--ink-soft); text-transform: uppercase;
+  letter-spacing: 1px; margin-top: 4px;
+}
+
+.controls {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin-bottom: 14px;
+  display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+}
+.controls label { font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; }
+.controls select, .controls input[type=search] {
+  font-size: 13px; padding: 5px 8px; border: 1px solid var(--rule); border-radius: 4px;
+  background: var(--cream); color: var(--ink); margin-left: 6px; font-family: inherit;
+}
+.controls input[type=search] { min-width: 180px; }
+.controls .meta { margin-left: auto; font-size: 12px; color: var(--ink-soft); }
+
+.fc-table {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden;
+}
+.fc-table table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.fc-table th {
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule);
+  color: var(--ink-soft); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  background: #faf5e6; white-space: nowrap;
+}
+.fc-table th.num-col { text-align: right; }
+.fc-table th.sortable { cursor: pointer; user-select: none; }
+.fc-table th.sortable:hover { color: var(--ink); }
+.fc-table th.sortable.active { color: var(--ink); }
+.fc-table th .arrow { font-size: 9px; margin-left: 3px; opacity: 0.6; }
+.fc-table td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.fc-table td.num-col { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.fc-table tr:last-child td { border-bottom: none; }
+.fc-table tr.body-row:hover { background: #faf5e6; cursor: pointer; }
+.fc-table .stallion { font-weight: 600; }
+.fc-table .stallion a { color: var(--ink); text-decoration: none; }
+.fc-table .pedigree { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.fc-table .ret { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.fc-table .ret.up   { color: var(--good); }
+.fc-table .ret.down { color: var(--weak); }
+.fc-table .comparators { font-size: 11px; color: var(--ink-soft); }
+
+.confidence-pill {
+  display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap;
+}
+.confidence-pill.high   { background: var(--good); color: #fff; }
+.confidence-pill.medium { background: #efe7d3; color: #6b5915; }
+.confidence-pill.low    { background: #ede9da; color: var(--ink-soft); }
+.confidence-pill.none   { background: #f0eadb; color: var(--ink-soft); font-style: italic; }
+
+.empty {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 28px; text-align: center; color: var(--ink-soft); font-size: 14px;
+}
+
+.method-note {
+  background: var(--card); border-left: 3px solid var(--gold);
+  padding: 12px 16px; margin: 18px 0 0; font-size: 12px; color: var(--ink-soft);
+  border-radius: 0 6px 6px 0;
+}
+.method-note b { color: var(--ink); }
+
+.footer {
+  margin-top: 28px; font-size: 11px; color: var(--ink-soft);
+  padding-top: 14px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.footer a { color: var(--ink); }
+@media (max-width: 720px) {
+  .hero h1 { font-size: 22px; }
+  .fc-table td, .fc-table th { padding: 7px 6px; font-size: 12px; }
+  .fc-table .comparators { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">First-Crop Sire Predictions</div>
+  </div>
+
+  <div class="hero">
+    <h1>Predicted pinhook signal for stallions without data yet.</h1>
+    <p>These stallions don't appear on the <a href="/pinhooks.html" style="color:var(--ink);">realized pinhook leaderboard</a> because their first foals are too young to have completed a yearling-to-2YO sale cycle. We project their expected pinhook performance by leaning on their closest sire-line comparators (typically half-brothers — same sire, different dams) that DO have realized data.</p>
+    <p>This is a forecast, not a measurement. Confidence is high when there are several comparators with substantial sample sizes and low when we're working with thin pedigree information.</p>
+  </div>
+
+  <div class="stat-row" id="stat-row"></div>
+
+  <div class="controls">
+    <div>
+      <label>Confidence
+        <select id="filter-conf">
+          <option value="any" selected>any</option>
+          <option value="high">high only</option>
+          <option value="high-or-medium">high + medium</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label>Search
+        <input id="search" type="search" placeholder="stallion or sire…" autocomplete="off"/>
+      </label>
+    </div>
+    <div>
+      <label>Sort
+        <select id="sort">
+          <option value="median_desc" selected>Predicted median return ▼</option>
+          <option value="positive_desc">Predicted profitable % ▼</option>
+          <option value="comparators_desc">Comparator sample size ▼</option>
+          <option value="fee_desc">Stud fee ▼</option>
+          <option value="fee_asc">Stud fee ▲</option>
+        </select>
+      </label>
+    </div>
+    <div class="meta" id="result-count">—</div>
+  </div>
+
+  <div id="render-area">
+    <div class="empty">Loading…</div>
+  </div>
+
+  <div class="method-note">
+    <b>How this works.</b> For each first-crop stallion we pull their similar-stallion list (built from shared sire, damsire, sire-line, and price tier). We keep similars that have ≥5 realized pinhook pairs in the database, take the top 8, and sample-size-weight their median return %, mean return %, and profitable %. Half-brothers (same sire, different dam) are the strongest comparator type — Kingsbarns and Arabian Knight share a comparator pool of Uncle Mo sons because they ARE Uncle Mo sons. Confidence: <b>high</b> = ≥4 comparators and ≥60 total pairs; <b>medium</b> = ≥2 comparators and ≥20 pairs; <b>low</b> below that.
+  </div>
+
+  <div class="footer">
+    <span>Data: Keeneland, Fasig-Tipton, OBS · 2022–2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/catalogs.html">catalogs</a></span>
+    <span>© 2026 SireValue</span>
+  </div>
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function fmtMoney(n) { return n == null ? '—' : '$' + Number(n).toLocaleString(); }
+  function fmtPct(p)   { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).toFixed(1) + '%'; }
+  function pctCls(p)   { return p == null ? '' : (p > 0.5 ? 'up' : (p < -0.5 ? 'down' : '')); }
+
+  let data;
+  try {
+    const resp = await fetch('/data/first-crop-predictions.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('render-area').innerHTML =
+      '<div class="empty" style="color:var(--weak);">Failed to load predictions: ' + escapeHtml(e.message) + '</div>';
+    return;
+  }
+
+  const stallions = data.stallions || [];
+  const summary   = data.summary || {};
+
+  // Stat row
+  const highN = stallions.filter(function(s) { return (s.predicted||{}).confidence === 'high'; }).length;
+  const medN  = stallions.filter(function(s) { return (s.predicted||{}).confidence === 'medium'; }).length;
+  const lowN  = stallions.filter(function(s) { return (s.predicted||{}).confidence === 'low'; }).length;
+  document.getElementById('stat-row').innerHTML = ''
+    + '<div class="stat-box"><b>' + (summary.stallions_total || 0) + '</b><div class="lbl">First-crop stallions</div></div>'
+    + '<div class="stat-box"><b>' + (summary.predicted || 0)        + '</b><div class="lbl">With prediction</div></div>'
+    + '<div class="stat-box"><b>' + highN + '</b><div class="lbl">High confidence</div></div>'
+    + '<div class="stat-box"><b>' + medN  + '</b><div class="lbl">Medium confidence</div></div>'
+    + '<div class="stat-box"><b>' + (lowN + (summary.no_comparators || 0)) + '</b><div class="lbl">Low / none</div></div>';
+
+  function render() {
+    const confSel = document.getElementById('filter-conf').value;
+    const search  = (document.getElementById('search').value || '').trim().toLowerCase();
+    const sortBy  = document.getElementById('sort').value;
+
+    let rows = stallions.slice();
+    if (confSel === 'high')           rows = rows.filter(function(r) { return (r.predicted||{}).confidence === 'high'; });
+    else if (confSel === 'high-or-medium') rows = rows.filter(function(r) { var c = (r.predicted||{}).confidence; return c === 'high' || c === 'medium'; });
+
+    if (search) {
+      rows = rows.filter(function(r) {
+        return (r.name || '').toLowerCase().indexOf(search) !== -1
+            || (r.sire || '').toLowerCase().indexOf(search) !== -1
+            || (r.farm || '').toLowerCase().indexOf(search) !== -1;
+      });
+    }
+
+    function getter(field, dir) {
+      return function(r) {
+        const p = r.predicted || {};
+        let v;
+        if      (field === 'median')      v = p.median_return_pct;
+        else if (field === 'positive')    v = p.positive_pct;
+        else if (field === 'comparators') v = p.comparator_pairs_total;
+        else if (field === 'fee')         v = r.fee_usd;
+        return v == null ? (dir === 'asc' ? Infinity : -Infinity) : v;
+      };
+    }
+    if (sortBy === 'median_desc')        rows.sort(function(a,b){ return getter('median','desc')(b) - getter('median','desc')(a); });
+    else if (sortBy === 'positive_desc') rows.sort(function(a,b){ return getter('positive','desc')(b) - getter('positive','desc')(a); });
+    else if (sortBy === 'comparators_desc') rows.sort(function(a,b){ return getter('comparators','desc')(b) - getter('comparators','desc')(a); });
+    else if (sortBy === 'fee_desc')      rows.sort(function(a,b){ return getter('fee','desc')(b) - getter('fee','desc')(a); });
+    else if (sortBy === 'fee_asc')       rows.sort(function(a,b){ return getter('fee','asc')(a) - getter('fee','asc')(b); });
+
+    document.getElementById('result-count').textContent = rows.length + ' stallion' + (rows.length === 1 ? '' : 's');
+
+    if (rows.length === 0) {
+      document.getElementById('render-area').innerHTML = '<div class="empty">No first-crop stallions match these filters.</div>';
+      return;
+    }
+
+    let html = '<div class="fc-table"><table><thead><tr>'
+      + '<th>Stallion</th>'
+      + '<th>Sire</th>'
+      + '<th class="num-col">Fee</th>'
+      + '<th>Confidence</th>'
+      + '<th class="num-col">Pred. median return</th>'
+      + '<th class="num-col">Pred. profitable</th>'
+      + '<th class="num-col">Comparators</th>'
+      + '<th>Top comparators</th>'
+      + '</tr></thead><tbody>';
+
+    html += rows.map(function(r) {
+      const p = r.predicted;
+      const url = '/stallion-card.html?s=' + encodeURIComponent(r.name);
+      if (!p) {
+        return '<tr class="body-row" data-url="' + url + '">'
+          + '<td class="stallion"><a href="' + url + '">' + escapeHtml(r.name) + '</a>'
+          +   '<div class="pedigree">' + escapeHtml(r.pedigree || '') + '</div>'
+          + '</td>'
+          + '<td>' + escapeHtml(r.sire || '—') + '</td>'
+          + '<td class="num-col">' + fmtMoney(r.fee_usd) + '</td>'
+          + '<td><span class="confidence-pill none">no comparators</span></td>'
+          + '<td class="num-col">—</td><td class="num-col">—</td><td class="num-col">—</td><td>—</td>'
+          + '</tr>';
+      }
+      const medCls = pctCls(p.median_return_pct);
+      const posCls = (p.positive_pct || 0) >= 50 ? 'up' : 'down';
+      const tooltip = (r.comparators || []).map(function(c) {
+        return c.name + ' (n=' + c.matched_pairs + ', ' + (c.median_return_pct >= 0 ? '+' : '') + c.median_return_pct.toFixed(0) + '%)';
+      }).join('\n');
+      const compNames = (r.comparators || []).slice(0, 3).map(function(c) { return c.name; }).join(', ');
+      return '<tr class="body-row" data-url="' + url + '">'
+        + '<td class="stallion"><a href="' + url + '">' + escapeHtml(r.name) + '</a>'
+        +   '<div class="pedigree">' + escapeHtml(r.pedigree || '') + '</div>'
+        + '</td>'
+        + '<td>' + escapeHtml(r.sire || '—') + '</td>'
+        + '<td class="num-col">' + fmtMoney(r.fee_usd) + '</td>'
+        + '<td><span class="confidence-pill ' + p.confidence + '">' + p.confidence + '</span></td>'
+        + '<td class="num-col ret ' + medCls + '">' + fmtPct(p.median_return_pct) + '</td>'
+        + '<td class="num-col pct" style="color:' + (posCls === 'up' ? 'var(--good)' : 'var(--weak)') + ';font-weight:600;">' + (p.positive_pct != null ? p.positive_pct.toFixed(0) + '%' : '—') + '</td>'
+        + '<td class="num-col">' + p.comparators_n + '  ·  ' + p.comparator_pairs_total + ' pairs</td>'
+        + '<td class="comparators" title="' + escapeHtml(tooltip) + '">' + escapeHtml(compNames) + (r.comparators.length > 3 ? ', +' + (r.comparators.length - 3) : '') + '</td>'
+        + '</tr>';
+    }).join('');
+
+    html += '</tbody></table></div>';
+    document.getElementById('render-area').innerHTML = html;
+
+    Array.prototype.forEach.call(document.querySelectorAll('tr.body-row'), function(tr) {
+      tr.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') return;
+        location.href = tr.getAttribute('data-url');
+      });
+    });
+  }
+
+  let searchTimer = null;
+  document.getElementById('filter-conf').addEventListener('change', render);
+  document.getElementById('search').addEventListener('input', function() {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(render, 120);
+  });
+  document.getElementById('sort').addEventListener('change', render);
+  render();
+})();
+</script>
+</body>
+</html>

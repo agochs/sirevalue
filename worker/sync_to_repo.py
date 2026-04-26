@@ -90,6 +90,7 @@ def main() -> int:
         ("consignor-pinhooks.json",         "public/data/consignor-pinhooks.json",  False),
         ("catalog-scoring-index.json",      "public/data/catalog-scoring-index.json", False),
         ("validation.json",                 "public/data/validation.json",          False),
+        ("first-crop-predictions.json",     "public/data/first-crop-predictions.json", False),
     ]
     # Per-sale catalog scoring files (one per sale, lazily fetched by the
     # catalogs page). Mirror them into public/data/catalogs/.

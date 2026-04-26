@@ -324,6 +324,50 @@ details[open] summary { margin-bottom: 8px; }
   background: #fff3cd; color: #7a5b1d; border: 1px solid #f0e2a8;
   cursor: help; vertical-align: middle;
 }
+/* First-crop prediction block (when no realized data exists) */
+.predicted-block {
+  background: #f4ecd8; border: 1px dashed var(--gold-soft); border-radius: 10px;
+  padding: 14px 16px; margin: 6px 0 20px;
+}
+.predicted-block .conf-pill {
+  display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle;
+  margin-left: 6px;
+}
+.predicted-block .conf-pill.high   { background: var(--good); color: #fff; }
+.predicted-block .conf-pill.medium { background: #efe7d3; color: #6b5915; }
+.predicted-block .conf-pill.low    { background: #ede9da; color: var(--ink-soft); }
+.predicted-block .pred-summary {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); margin-bottom: 12px;
+}
+.predicted-block .pred-stat { font-size: 12px; color: var(--ink-soft); text-align: center; }
+.predicted-block .pred-stat b {
+  display: block; font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1.2;
+}
+.predicted-block .pred-stat b.up   { color: var(--good); }
+.predicted-block .pred-stat b.down { color: var(--weak); }
+.predicted-block .pred-comparators {
+  font-size: 12px; color: var(--ink-soft); margin-top: 4px;
+}
+.predicted-block .pred-comp-row {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 10px;
+  padding: 6px 0; font-size: 12px; border-bottom: 1px dashed var(--rule);
+  align-items: center;
+}
+.predicted-block .pred-comp-row:last-child { border-bottom: none; }
+.predicted-block .pred-comp-row a { color: var(--ink); text-decoration: none; font-weight: 600; }
+.predicted-block .pred-comp-row a:hover { text-decoration: underline; }
+.predicted-block .pred-comp-row .reasons {
+  color: var(--ink-soft); font-size: 11px; margin-top: 2px;
+}
+.predicted-block .pred-comp-row .pred-stat-num {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 13px;
+  white-space: nowrap;
+}
+.predicted-block .pred-comp-row .pred-stat-num.up   { color: var(--good); }
+.predicted-block .pred-comp-row .pred-stat-num.down { color: var(--weak); }
 /* Collapsed-by-default extra pair rows; flip via .expanded toggle below */
 .realized-block:not(.expanded) .pair-row.collapsed { display: none; }
 .realized-toggle {
@@ -492,9 +536,10 @@ async function bootSireValue() {
   var similarStallions = {};
   var scoreHistory = {};
   var hipPinhooks = {};
+  var firstCropPredictions = {};
   function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
   try {
-    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp, hpResp] = await Promise.all([
+    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp, hpResp, fcResp] = await Promise.all([
       fetch('/data/progeny-sires-2025.json'),
       fetch('/data/progeny-bms-2026.json'),
       fetch('/data/upcoming-sales.json'),
@@ -503,6 +548,7 @@ async function bootSireValue() {
       fetch('/data/score-history.json'),
       fetch('/data/recent-sale-results-index.json'),
       fetch('/data/hip-pinhooks.json'),
+      fetch('/data/first-crop-predictions.json'),
     ]);
     if (sResp.ok) {
       var sJson = await sResp.json();
@@ -556,6 +602,10 @@ async function bootSireValue() {
     if (hpResp && hpResp.ok) {
       var hpJson = await hpResp.json();
       hipPinhooks = hpJson.by_stallion || {};
+    }
+    if (fcResp && fcResp.ok) {
+      var fcJson = await fcResp.json();
+      (fcJson.stallions || []).forEach(function(r) { firstCropPredictions[r.name] = r; });
     }
   } catch (_e) { /* all of these are optional enrichments */ }
 
@@ -983,6 +1033,77 @@ async function bootSireValue() {
       + '</div>';
   }
 
+  function renderPredictedPinhooks(s) {
+    // For first-crop / pre-data stallions: show the prediction synthesized
+    // from sire-line comparators. Only renders when realized data is absent
+    // (otherwise the realized block is the source of truth).
+    if (hipPinhooks[s.name]) return '';
+    var rec = firstCropPredictions[s.name];
+    if (!rec) return '';
+    var p = rec.predicted;
+    var comps = rec.comparators || [];
+
+    function pctCls(v) {
+      if (v == null) return '';
+      if (v > 0.5)  return 'up';
+      if (v < -0.5) return 'down';
+      return '';
+    }
+    function fmtPct(v) { return v == null ? '—' : (v > 0 ? '+' : '') + v.toFixed(1) + '%'; }
+    function fmtMoney(v) { return v == null ? '—' : '$' + v.toLocaleString(); }
+
+    if (!p || !comps.length) {
+      // No usable comparators — explain why and exit (no fake numbers)
+      return ''
+        + '<div class="predicted-block">'
+        +   '<div class="section-title" style="margin:0 0 8px;">Pinhook Prediction · pedigree-based forecast</div>'
+        +   '<div style="font-size:13px;color:var(--ink-soft);">'
+        +     'No realized pinhook pairs yet for ' + escapeHtml(s.name) + ', and no sire-line comparators with sufficient data to forecast. Predictions will populate as the first foal crop matures or as comparator data accumulates.'
+        +   '</div>'
+        + '</div>';
+    }
+
+    var medCls = pctCls(p.median_return_pct);
+    var posCls = (p.positive_pct || 0) >= 50 ? 'up' : 'down';
+    var summary = ''
+      + '<div class="pred-summary">'
+      +   '<div class="pred-stat"><b class="' + medCls + '">' + fmtPct(p.median_return_pct) + '</b>predicted median return</div>'
+      +   '<div class="pred-stat"><b>' + fmtPct(p.mean_return_pct) + '</b>predicted mean return</div>'
+      +   '<div class="pred-stat"><b class="' + posCls + '">' + (p.positive_pct || 0).toFixed(0) + '%</b>predicted profitable</div>'
+      +   '<div class="pred-stat"><b>' + fmtMoney(p.median_yearling_price) + '</b>predicted median yrl</div>'
+      +   '<div class="pred-stat"><b>' + fmtMoney(p.median_twoyo_price) + '</b>predicted median 2yo</div>'
+      +   '<div class="pred-stat"><b>' + p.comparators_n + ' comps · ' + p.comparator_pairs_total + ' pairs</b>basis</div>'
+      + '</div>';
+
+    var compRows = comps.map(function(c) {
+      var rcls = pctCls(c.median_return_pct);
+      var url = '/stallion-card.html?s=' + encodeURIComponent(c.name);
+      var reasons = (c.similarity_reasons || []).join(' · ');
+      return '<div class="pred-comp-row">'
+        + '<div>'
+        +   '<a href="' + url + '">' + escapeHtml(c.name) + '</a>'
+        +   '<div class="reasons">' + escapeHtml(reasons || '') + '</div>'
+        + '</div>'
+        + '<div style="color:var(--ink-soft);font-size:11px;">n=' + c.matched_pairs + '  ·  profitable ' + (c.positive_return_pct || 0).toFixed(0) + '%</div>'
+        + '<div class="pred-stat-num ' + rcls + '">' + fmtPct(c.median_return_pct) + '</div>'
+        + '</div>';
+    }).join('');
+
+    return ''
+      + '<div class="predicted-block">'
+      +   '<div class="section-title" style="margin:0 0 8px;">'
+      +     'Pinhook Prediction · pedigree-based forecast'
+      +     '<span class="conf-pill ' + p.confidence + '">' + p.confidence + ' confidence</span>'
+      +   '</div>'
+      +   '<div style="font-size:12px;color:var(--ink-soft);margin-bottom:8px;">'
+      +     'No realized data yet (first foals too young). Forecast leans on sire-line comparators below — half-brothers and similar pedigrees that DO have a track record.'
+      +   '</div>'
+      +   summary
+      +   '<div style="font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin:6px 0 4px;">Comparator stallions · weighted by sample size</div>'
+      +   compRows
+      + '</div>';
+  }
+
   function renderHistory(s) {
     var pts = scoreHistory[s.name] || [];
     if (pts.length < 2) return '';   // sparkline needs at least 2 points
@@ -1184,6 +1305,7 @@ async function bootSireValue() {
       + renderRoi(s)
       + renderPinhook(s)
       + renderRealizedPinhooks(s)
+      + renderPredictedPinhooks(s)
       + renderHistory(s)
       + renderSales(s)
       + renderProgeny(s)
