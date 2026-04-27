@@ -360,7 +360,9 @@ body {
     return '$' + Number(n).toLocaleString();
   }
   function shortSale(name) {
-    return (name || '').replace(/\s*\b20\d{2}\b\s*$/, '').trim();
+    // Preserve the trailing year so the rendering reads "<Sale Name> <Year> Hip <#>".
+    // (Originally stripped the year; that lost useful context.)
+    return (name || '').trim();
   }
 
   let data;

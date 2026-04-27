@@ -973,7 +973,9 @@ async function bootSireValue() {
       return '';
     }
     function shortSale(name) {
-      return (name || '').replace(/\s*\b20\d{2}\b\s*$/, '').trim();
+      // Preserve the trailing year so the rendering reads "<Sale Name> <Year> Hip <#>".
+      // (Originally stripped the year; that lost useful context.)
+      return (name || '').trim();
     }
 
     var medCls = pctCls(summary.median_return_pct);
