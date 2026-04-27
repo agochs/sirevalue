@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T17:46:57Z",
+  "generated_at": "2026-04-27T18:51:39Z",
   "method": "deterministic-shared-ancestors",
   "weights": {
     "same_sire": 50,
@@ -10,7 +10,7 @@
   "top_k_per_stallion": 5,
   "summary": {
     "stallions_with_matches": 141,
-    "stallions_total": 154
+    "stallions_total": 153
   },
   "by_stallion": {
     "Corniche": [

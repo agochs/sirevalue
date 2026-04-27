@@ -135,7 +135,9 @@
         "Constitution: top of roster at $110K",
         "Life Is Good: $60K",
         "Straight No Chaser: NEW 2026 freshman ($10K)",
-        "Tom's d'Etat: appears DROPPED from 2026 roster (was at $5K in 2025)"
+        "Tom's d'Etat: appears DROPPED from 2026 roster (was at $5K in 2025)",
+        "Mullikin: NEW 2026 freshman ($10K S&N) — was missing from initial expected_names list (TDN/BH announcements). Added.",
+        "Yoshida: relocated to Darley Japan for 2026 — REMOVED from CSV. Same pattern as Game Winner/Knicks Go (sold/moved internationally)."
       ],
       "expected_names": [
         "Constitution",
@@ -151,7 +153,8 @@
         "Take Charge Indy",
         "Two Phil's",
         "Country Grammer",
-        "Promises Fulfilled"
+        "Promises Fulfilled",
+        "Mullikin"
       ]
     },
     "lanesend": {
@@ -168,11 +171,14 @@
         "Quality Road: $100K (down from $200K in 2023)",
         "Raging Torrent: NEW 2026 freshman ($15K) — by Maximus Mischief, won G1 Metropolitan",
         "Honor Code: sold to Japan in 2023 (correctly excluded)",
-        "Game Winner: permanently relocated to Haras Fazenda Mondesir in Brazil (Oct 2025) — REMOVED from Lane's End expected list. (BH: 'Game Winner Relocated to Brazil'; TDN: 'Game Winner To Relocate Permanently To Brazil...'). BH stallion register page now returns 'Stallion Not Found'."
+        "Game Winner: permanently relocated to Haras Fazenda Mondesir in Brazil (Oct 2025) — REMOVED from Lane's End expected list. (BH: 'Game Winner Relocated to Brazil'; TDN: 'Game Winner To Relocate Permanently To Brazil...'). BH stallion register page now returns 'Stallion Not Found'.",
+        "Carl Spackler (Ire): NEW 2026 freshman ($15K LFSN) — by Lope de Vega out of Zindaya; won G1 Coolmore Turf Mile, Fourstardave, Maker's Mark Mile. Was missing from initial expected_names list. Added.",
+        "Mineshaft: pensioned April 2025 at age 26 (BH: 'Mineshaft Pensioned From Stud Duty at 26'). Still in CSV for ongoing foal tracking — 20 crops on the ground including Senor Buscador (G1 Saudi Cup winner, now also at Lane's End). Correctly absent from 2026 active roster."
       ],
       "expected_names": [
         "Arcangelo",
         "Candy Ride",
+        "Carl Spackler (Ire)",
         "City of Light",
         "Connect",
         "Flightline",
@@ -227,10 +233,12 @@
       ],
       "known_changes_2026": [
         "Not This Time: top of roster at $250,000",
-        "Knicks Go: relocated to Korea for 2026 — REMOVED from Taylor Made expected list (TDN: 'MGISW Knicks Go To Stand In Korea For 2026')."
+        "Knicks Go: relocated to Korea for 2026 — REMOVED from Taylor Made expected list (TDN: 'MGISW Knicks Go To Stand In Korea For 2026').",
+        "Arthur's Ride: NEW 2026 freshman ($12,500 S&N) — G1 Whitney winner, gray/roan son of Tapit out of Points of Grace. Was missing from initial expected_names list. Added."
       ],
       "expected_names": [
         "Angel of Empire",
+        "Arthur's Ride",
         "Dr. Schivel",
         "Early Voting",
         "Idol",

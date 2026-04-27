@@ -1,6 +1,6 @@
 {
   "model_version": "vs-1.3-nybred-nightly",
-  "stallion_count": 154,
+  "stallion_count": 153,
   "farms": [
     "Airdrie Stud",
     "Ashford Stud (Coolmore America)",
@@ -10083,70 +10083,6 @@
           }
         },
         "notes": []
-      },
-      "pinhook": null
-    },
-    {
-      "name": "Yoshida",
-      "farm": "WinStar Farm",
-      "pedigree": "Heart's Cry (JPN) \u2013 Hilda's Passion, by Canadian Frontier",
-      "sire": "Heart's Cry (JPN)",
-      "dam": "Hilda's Passion",
-      "damsire": "Canadian Frontier",
-      "fee_usd": null,
-      "fee_terms": null,
-      "fee_qualifier": null,
-      "year_of_birth": 2014,
-      "color": "Bay",
-      "height_hands": null,
-      "entered_stud_year": 2020,
-      "source_url": "https://www.winstarfarm.com/horse/yoshida/",
-      "bloodhorse_url": "https://www.bloodhorse.com/stallion-register/stallions/170987/yoshida-jpn",
-      "score": {
-        "value": 37.5,
-        "grade": "D",
-        "tier": "commercial_appeal",
-        "confidence": "low",
-        "model_version": "vs-1.3-nybred-nightly",
-        "peer_group": {
-          "fee_band": null,
-          "maturity_stage": "established",
-          "peer_n": 0
-        },
-        "components": {
-          "pedigree_prestige": {
-            "percentile": 15,
-            "weight": 50,
-            "points": 7.5,
-            "inputs": {
-              "sire_name": "Heart's Cry (JPN)",
-              "sire_points": 0,
-              "damsire_name": "Canadian Frontier",
-              "bms_points": 0,
-              "raw_total": 0
-            }
-          },
-          "fee_band_position": {
-            "percentile": 50.0,
-            "weight": 30,
-            "points": 15.0,
-            "inputs": {
-              "reason": "no_fee_available"
-            }
-          },
-          "maturity_context": {
-            "percentile": 75,
-            "weight": 20,
-            "points": 15.0,
-            "inputs": {
-              "stage": "established",
-              "years_at_stud": 6
-            }
-          }
-        },
-        "notes": [
-          "insufficient_peer_data (only 0 peers; score shown with wider tolerance)"
-        ]
       },
       "pinhook": null
     },
