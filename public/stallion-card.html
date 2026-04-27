@@ -1423,7 +1423,17 @@ async function bootSireValue() {
         selector.appendChild(opt);
       }
     });
-    if (selector.options.length) selector.value = String(Math.min(currentIndex, stallions.length - 1));
+    if (selector.options.length) {
+      // If the previously-selected stallion isn't in the filtered list, snap
+      // to the first match. (Without this the browser silently falls back on
+      // an invalid value and the card never re-renders to the new match.)
+      var wantIdx = String(Math.min(currentIndex, stallions.length - 1));
+      var hasWant = false;
+      for (var k = 0; k < selector.options.length; k++) {
+        if (selector.options[k].value === wantIdx) { hasWant = true; break; }
+      }
+      selector.value = hasWant ? wantIdx : selector.options[0].value;
+    }
   }
 
   function show(i) {

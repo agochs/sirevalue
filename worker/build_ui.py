@@ -352,7 +352,15 @@ details[open] summary { margin-bottom: 8px; }
         selector.appendChild(opt);
       }
     });
-    if (selector.options.length) selector.value = String(Math.min(currentIndex, stallions.length - 1));
+    if (selector.options.length) {
+      // Snap to first match when the previous selection isn't in the filter.
+      var wantIdx = String(Math.min(currentIndex, stallions.length - 1));
+      var hasWant = false;
+      for (var k = 0; k < selector.options.length; k++) {
+        if (selector.options[k].value === wantIdx) { hasWant = true; break; }
+      }
+      selector.value = hasWant ? wantIdx : selector.options[0].value;
+    }
   }
 
   function show(i) {
