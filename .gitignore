@@ -22,3 +22,4 @@ Thumbs.db
 !.env.example
 .vercel
 worker/catalog-scoring.json
+worker/score-history.json

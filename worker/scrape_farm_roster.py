@@ -65,6 +65,29 @@ def parse_money(text: str) -> tuple[int | None, str | None]:
     return None, cleaned[:40] if cleaned else None
 
 
+CHALLENGE_TITLES = (
+    "checking your browser",
+    "just a moment",
+    "attention required",
+    "please wait",
+)
+
+
+def wait_through_challenge(page, max_wait_ms: int = 12_000):
+    """If the page is on a Cloudflare/Imperva-style 'Checking your browser…'
+    interstitial, wait for it to clear. Returns True if cleared, False if
+    we ran out of patience and the title still looks like a challenge page."""
+    waited = 0
+    step = 1_500
+    while waited < max_wait_ms:
+        title = (page.title() or "").lower()
+        if not any(c in title for c in CHALLENGE_TITLES):
+            return True   # cleared
+        page.wait_for_timeout(step)
+        waited += step
+    return False
+
+
 def scrape_one(page, farm_id: str, farm_cfg: dict) -> list[dict]:
     """Scrape a single farm's roster page into a list of stallion dict rows."""
     url = farm_cfg["url"]
@@ -72,6 +95,14 @@ def scrape_one(page, farm_id: str, farm_cfg: dict) -> list[dict]:
     print(f"  fetching {url}")
     page.goto(url, wait_until="networkidle", timeout=30_000)
     page.wait_for_timeout(1_500)   # give JS a moment to populate
+    # Some sites (Cloudflare-fronted) show a challenge page first. Wait it out.
+    if any(c in (page.title() or "").lower() for c in CHALLENGE_TITLES):
+        print(f"  challenge interstitial detected — waiting for it to clear…")
+        cleared = wait_through_challenge(page)
+        if not cleared:
+            print(f"  challenge did not clear; this site needs manual entry "
+                  f"or a stealth plugin (playwright-stealth)")
+            return []
 
     # The "stallion card" selector identifies each stallion's containing element
     card_sel = selectors.get("stallion_card")
@@ -154,6 +185,9 @@ def main():
     ap.add_argument("--farm", help="Farm id to scrape (e.g. pinoak, millridge)")
     ap.add_argument("--all", action="store_true", help="Scrape every enabled farm in the config")
     ap.add_argument("--dry-run", action="store_true", help="Print rows but don't write CSV")
+    ap.add_argument("--inspect", action="store_true",
+                    help="DOM-diagnostic mode: print page title + most-common repeating tags + sample text. "
+                         "Use this to figure out which selector matches the stallion-card pattern.")
     args = ap.parse_args()
 
     config = load_config()
@@ -193,6 +227,38 @@ def main():
             if i > 0:
                 time.sleep(2)   # rate-limit between farms
             print(f"\n[{farm_id}] {farm_cfg.get('name', '')}")
+            if args.inspect:
+                # Diagnostic: load the page and dump structural hints so the
+                # user can identify the right stallion_card selector.
+                url = farm_cfg["url"]
+                print(f"  fetching {url}")
+                page.goto(url, wait_until="networkidle", timeout=30_000)
+                page.wait_for_timeout(1_500)
+                title = page.title()
+                print(f"  page title: {title}")
+                # Count common repeating tags that often hold stallion cards
+                for sel in ["article", ".stallion", ".stallion-card", ".stallions__item",
+                            ".horse", ".post", ".card", "[class*='stallion']",
+                            "main h2", "main h3", ".elementor-widget-wrap article"]:
+                    try:
+                        n = len(page.query_selector_all(sel))
+                    except Exception:
+                        n = 0
+                    if n > 0:
+                        print(f"    {n:>3d} × {sel}")
+                # Print first H2 / H3 inner text — useful when the site lists
+                # stallions with simple heading-only structure.
+                for sel in ["main h2", "main h3", ".content h2"]:
+                    els = page.query_selector_all(sel)
+                    if els:
+                        print(f"  sample {sel} headings:")
+                        for e in els[:6]:
+                            try:
+                                print(f"    - {e.inner_text().strip()[:80]}")
+                            except Exception:
+                                pass
+                        break
+                continue
             try:
                 rows = scrape_one(page, farm_id, farm_cfg)
             except Exception as e:
