@@ -167,6 +167,47 @@ body {
 @media (max-width: 560px) {
   .pinhook-grid { grid-template-columns: 1fr; gap: 12px; }
 }
+/* ---------- Stallion movements ---------- */
+.movements {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 22px;
+}
+.movements-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
+}
+.movements-head h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; margin: 0; font-weight: 700;
+}
+.movements-head .sub {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft);
+}
+.movement-item {
+  padding: 10px 0; border-bottom: 1px dashed var(--rule);
+  display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start;
+}
+.movement-item:last-child { border-bottom: none; }
+.movement-item .who { font-weight: 600; font-size: 14px; color: var(--ink); }
+.movement-item .who a { color: var(--ink); text-decoration: none; }
+.movement-item .who a:hover { text-decoration: underline; }
+.movement-item .what { font-size: 12px; color: var(--ink-soft); margin-top: 3px; line-height: 1.45; }
+.movement-item .what .badge {
+  display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px;
+  padding: 2px 6px; border-radius: 3px; margin-right: 6px; font-weight: 700;
+}
+.movement-item .what .badge.deceased       { background: #fee2e2; color: #b91c1c; }
+.movement-item .what .badge.relocated_intl { background: #fff7ed; color: #c2410c; }
+.movement-item .what .badge.relocated_us   { background: #fef9c3; color: #854d0e; }
+.movement-item .what .badge.shuttle        { background: #e0e7ff; color: #4338ca; }
+.movement-item .what .badge.pensioned      { background: #f3f4f6; color: #4b5563; }
+.movement-item .what .badge.delayed_retirement { background: #ecfeff; color: #0e7490; }
+.movement-item .right { text-align: right; }
+.movement-item .when { font-size: 11px; color: var(--ink-soft); white-space: nowrap; }
+.movement-item .src  { font-size: 10px; color: var(--ink-soft); margin-top: 3px; }
+.movement-item .src a { color: var(--ink-soft); }
+.movement-item .src a:hover { color: var(--ink); }
+.movement-item .tracked { font-size: 10px; color: var(--good); white-space: nowrap; margin-top: 3px; }
 /* ---------- Smart filter ---------- */
 .smart-filter {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -320,6 +361,17 @@ body {
         <h3>Entered / Left Roster</h3>
         <div id="movers-roster"></div>
       </div>
+    </div>
+  </div>
+
+  <div id="movements" class="movements" hidden>
+    <div class="movements-head">
+      <h2>Recent stallion movements</h2>
+      <div class="sub">Deaths · International moves · Pensions</div>
+    </div>
+    <div id="movements-list"></div>
+    <div style="margin-top:10px;font-size:11px;color:var(--ink-soft);">
+      Each entry cites a primary source. Tracked = still in our database (e.g. pensioned sires whose foals are still on the ground).
     </div>
   </div>
 
@@ -669,6 +721,84 @@ body {
         }
       }
     } catch (_e) { /* movers panel is optional; don't block page */ }
+
+    // ---------- Stallion movements panel ----------
+    // Hand-curated worker/stallion-movements.json built into public/data/.
+    // Each entry has a cited source; we surface the 8 most recent.
+    try {
+      const mvResp = await fetch('/data/stallion-movements.json?v=' + Date.now());
+      if (mvResp.ok) {
+        const mvDoc = await mvResp.json();
+        const movements = (mvDoc.movements || []).slice(0, 8);
+        if (movements.length) {
+          document.getElementById('movements').hidden = false;
+
+          const escapeAttr = s => String(s || '').replace(/"/g, '&quot;');
+          const stallionLink = (name, stillInDb) => stillInDb
+            ? '<a href="/stallion-card.html?s=' + encodeURIComponent(name) + '">' + name + '</a>'
+            : name;
+
+          const labelFor = type => {
+            const labels = {
+              deceased:           'Deceased',
+              relocated_intl:     'International',
+              relocated_us:       'US move',
+              shuttle:            'Shuttle',
+              pensioned:          'Pensioned',
+              delayed_retirement: 'Still racing',
+            };
+            return labels[type] || type;
+          };
+
+          const describe = m => {
+            switch (m.type) {
+              case 'deceased':           return 'Was at ' + (m.from_farm || '—');
+              case 'relocated_intl':     return (m.from_farm || '—') + ' → ' + (m.destination || '—');
+              case 'relocated_us':       return (m.from_farm || '—') + ' → ' + (m.destination || '—');
+              case 'shuttle':            return 'Based at ' + (m.from_farm || '—') + ' · 2026 NH season ' + (m.destination || '—');
+              case 'pensioned':          return 'Pensioned at ' + (m.from_farm || '—');
+              case 'delayed_retirement': return 'Stays in training; future home: ' + (m.destination || '—');
+              default:                   return '';
+            }
+          };
+
+          const formatDate = d => {
+            if (!d) return '';
+            const parts = d.split('-');
+            if (parts.length === 1) return parts[0];
+            const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const mIdx = parseInt(parts[1], 10) - 1;
+            return (monthNames[mIdx] || '') + ' ' + parts[0];
+          };
+
+          const sourceHost = url => {
+            try {
+              return new URL(url).hostname.replace(/^www\./, '');
+            } catch (_e) { return 'source'; }
+          };
+
+          document.getElementById('movements-list').innerHTML = movements.map(m => {
+            return '<div class="movement-item">'
+              +   '<div>'
+              +     '<div class="who">' + stallionLink(m.stallion, m.still_in_db) + '</div>'
+              +     '<div class="what">'
+              +       '<span class="badge ' + m.type + '">' + labelFor(m.type) + '</span>'
+              +       describe(m)
+              +       (m.note ? ' · ' + m.note : '')
+              +     '</div>'
+              +   '</div>'
+              +   '<div class="right">'
+              +     '<div class="when">' + formatDate(m.date) + '</div>'
+              +     (m.source_url
+                  ? '<div class="src"><a href="' + escapeAttr(m.source_url) + '" target="_blank" rel="noopener">' + sourceHost(m.source_url) + ' →</a></div>'
+                  : '')
+              +     (m.still_in_db ? '<div class="tracked">tracked</div>' : '')
+              +   '</div>'
+              + '</div>';
+          }).join('');
+        }
+      }
+    } catch (_e) { /* movements panel is optional; don't block page */ }
   } catch (e) {
     document.getElementById('leaderboard-body').innerHTML =
       '<tr><td colspan="7" style="padding:20px;text-align:center;color:#9b2c2c">Failed to load: ' + e.message + '</td></tr>';

@@ -1,0 +1,156 @@
+{
+  "updated_at": "2026-04-27",
+  "summary": {
+    "total": 14,
+    "by_type": {
+      "deceased": 2,
+      "relocated_intl": 5,
+      "relocated_us": 2,
+      "shuttle": 1,
+      "pensioned": 3,
+      "delayed_retirement": 1
+    }
+  },
+  "movements": [
+    {
+      "stallion": "Frosted",
+      "from_farm": "Darley / Jonabell",
+      "type": "deceased",
+      "destination": null,
+      "date": "2026-04",
+      "note": "Euthanized due to acute laminitis at age 14. Was announced for 2026 at $12,500.",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/291236/record-breaking-met-mile-winner-frosted-dies",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Yoshida",
+      "from_farm": "WinStar Farm",
+      "type": "relocated_intl",
+      "destination": "Darley Japan",
+      "date": "2026",
+      "note": "Dual-surface G1 winner, son of Heart's Cry. Returns 'Sunday Silence blood' to Japan.",
+      "source_url": "https://www.winstarfarm.com/horse/yoshida/",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Sky Mesa",
+      "from_farm": "Three Chimneys Farm",
+      "type": "pensioned",
+      "destination": null,
+      "date": "2026",
+      "note": "Pensioned for 2026 (correctly absent from our database).",
+      "source_url": "https://www.thoroughbreddailynews.com/gun-runner-anchors-three-chimneys-stallions-at-250k-sky-mesa-pensioned/",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Runhappy",
+      "from_farm": "Claiborne Farm",
+      "type": "relocated_intl",
+      "destination": "South Korea",
+      "date": "2026",
+      "note": "Sold to stand in South Korea \u2014 no longer at Claiborne.",
+      "source_url": "https://www.thoroughbreddailynews.com/claiborne-announces-2026-stud-fees/",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Medaglia d'Oro",
+      "from_farm": "Darley America",
+      "type": "pensioned",
+      "destination": null,
+      "date": "2026",
+      "note": "Pensioned for 2026 (correctly absent from our database).",
+      "source_url": "https://paulickreport.com/news/bloodstock/veteran-nyquist-leads-darleys-2026-stallion-roster-medaglia-doro-pensioned",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Knicks Go",
+      "from_farm": "Taylor Made Stallions",
+      "type": "relocated_intl",
+      "destination": "South Korea",
+      "date": "2026",
+      "note": "MGISW (BC Classic 2021) relocated to Korea for 2026.",
+      "source_url": "https://www.thoroughbreddailynews.com/mgisw-knicks-go-to-stand-in-korea-for-2026/",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Journalism",
+      "from_farm": "\u2014",
+      "type": "delayed_retirement",
+      "destination": "Coolmore Ashford (planned 2027)",
+      "date": "2026",
+      "note": "Preakness winner remains in training for 2026; will retire to Ashford for 2027 (not 2026 as originally planned).",
+      "source_url": "https://www.americasbestracing.net/the-sport/2025-preakness-winner-journalism-remain-training-race-2026",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Echo Town",
+      "from_farm": "Ashford Stud",
+      "type": "relocated_us",
+      "destination": "Arkansas",
+      "date": "2026",
+      "note": "G1 winner relocated to Arkansas for 2026 \u2014 no longer at Coolmore.",
+      "source_url": "https://www.thoroughbreddailynews.com/stallion-echo-town-relocated-to-stand-in-arkansas-for-2026/",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Collected",
+      "from_farm": "Airdrie Stud",
+      "type": "relocated_us",
+      "destination": "Rancho San Miguel, California",
+      "date": "2026",
+      "note": "Listed on Airdrie's Oct 8 announcement; relocated subsequently. #1 California sire by 2025 progeny earnings.",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/288508/collected-relocates-to-california-at-rancho-san-miguel",
+      "still_in_db": false
+    },
+    {
+      "stallion": "American Pharoah",
+      "from_farm": "Ashford Stud (Coolmore America)",
+      "type": "shuttle",
+      "destination": "Japan (NH 2026 only; returns to Ashford afterward)",
+      "date": "2026",
+      "note": "Triple Crown winner shuttling to Japan for 2026 NH season. We track US foals only.",
+      "source_url": "https://www.thoroughbreddailynews.com/flagship-sire-justify-anchors-coolmore-americas-2026-roster-at-200k/",
+      "still_in_db": true
+    },
+    {
+      "stallion": "Game Winner",
+      "from_farm": "Lane's End",
+      "type": "relocated_intl",
+      "destination": "Haras Fazenda Mondesir, Brazil",
+      "date": "2025-10",
+      "note": "Permanently relocated after first SH season. BH stallion register page now returns 'Stallion Not Found' for US listing.",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/288345/game-winner-relocated-to-brazil",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Mineshaft",
+      "from_farm": "Lane's End",
+      "type": "pensioned",
+      "destination": null,
+      "date": "2025-04",
+      "note": "Pensioned at age 26 from stud duty. Still at Lane's End in retirement. Kept in DB for ongoing foal tracking \u2014 sire of Senor Buscador (G1 Saudi Cup).",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/283871/mineshaft-pensioned-from-stud-duty-at-26",
+      "still_in_db": true
+    },
+    {
+      "stallion": "Uncle Mo",
+      "from_farm": "Ashford Stud (Coolmore America)",
+      "type": "deceased",
+      "destination": null,
+      "date": "2024-12",
+      "note": "Euthanized December 19, 2024. Sire of Nyquist, Outwork, etc.",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/279100/champion-sire-uncle-mo-dies-at-15",
+      "still_in_db": false
+    },
+    {
+      "stallion": "Honor Code",
+      "from_farm": "Lane's End",
+      "type": "relocated_intl",
+      "destination": "Japan",
+      "date": "2023",
+      "note": "Sold to Japan in 2023. Sire of Honor A.P., still at Lane's End.",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/256412/honor-code-sold-to-japan",
+      "still_in_db": false
+    }
+  ]
+}
