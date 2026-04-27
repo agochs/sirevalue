@@ -198,30 +198,106 @@
     "threechimneys": {
       "name": "Three Chimneys Farm",
       "csv": "threechimneys-dryrun.csv",
-      "announcement_urls": [],
-      "known_changes_2026": [],
-      "expected_names": []
+      "announcement_urls": [
+        "https://www.threechimneys.com/three-chimneys-announces-2026-fees/",
+        "https://www.bloodhorse.com/horse-racing/articles/288011/gun-runner-holds-at-250k-atop-three-chimneys-roster",
+        "https://www.thoroughbreddailynews.com/gun-runner-anchors-three-chimneys-stallions-at-250k-sky-mesa-pensioned/",
+        "https://paulickreport.com/news/bloodstock/three-chimneys-farm-announces-fees-for-gun-pilot-newgate"
+      ],
+      "known_changes_2026": [
+        "Gun Runner: $250K, top of roster (held flat from 2025)",
+        "Sky Mesa: pensioned for 2026 (correctly absent from our DB; no action needed)"
+      ],
+      "expected_names": [
+        "Funtastic",
+        "Gun Pilot",
+        "Gun Runner",
+        "Newgate",
+        "Volatile"
+      ]
     },
     "gainesway": {
       "name": "Gainesway Farm",
       "csv": "gainesway-dryrun.csv",
-      "announcement_urls": [],
-      "known_changes_2026": [],
-      "expected_names": []
+      "announcement_urls": [
+        "https://gainesway.com/gainesway-announces-stud-fees-for-2026-roster/",
+        "https://www.bloodhorse.com/horse-racing/articles/288289/tapit-mckinzie-lead-gainesways-2026-stallion-roster",
+        "https://www.thoroughbreddailynews.com/gainesway-2026-stallion-roster-anchored-by-tapit-mckinzie/"
+      ],
+      "known_changes_2026": [
+        "Tapit: $185K, top of roster (held flat from 2025)",
+        "McKinzie: $75K (pending Breeders' Cup)",
+        "Locked: NEW to Gainesway 2026 ($35K) — coming off strong 2025 covering Gun Runner-sired mares"
+      ],
+      "expected_names": [
+        "Charge It",
+        "Drain The Clock",
+        "Karakontie",
+        "Locked",
+        "McKinzie",
+        "Muth",
+        "Olympiad",
+        "Raging Bull (Fr)",
+        "Seize The Grey",
+        "Tapit",
+        "Tapit Trice"
+      ]
     },
     "hillndale": {
       "name": "Hill 'n' Dale Farms at Xalapa",
       "csv": "hillndale-dryrun.csv",
-      "announcement_urls": [],
-      "known_changes_2026": [],
-      "expected_names": []
+      "announcement_urls": [
+        "https://www.bloodhorse.com/horse-racing/articles/287998/curlin-leads-hill-n-dales-2026-roster",
+        "https://paulickreport.com/news/bloodstock/curlin-leads-hill-n-dales-2026-stallion-roster-at-225000",
+        "https://www.thoroughbreddailynews.com/army-mule-gets-slight-bump-curlin-good-magic-remain-at-six-figures-at-hill-n-dale/",
+        "https://www.thoroughbreddailynews.com/graded-winner-and-3-2-million-saratoga-grad-barnes-retired-to-hill-n-dale/"
+      ],
+      "known_changes_2026": [
+        "Curlin: $225K, top of roster (down from $250K in 2024)",
+        "Good Magic: $125K (held flat)",
+        "Charlatan: 2026 fee TBD",
+        "Barnes: NEW 2026 freshman ($15K S&N) — son of Into Mischief, retired due to tendon injury after $3.2M Saratoga purchase. Syndicate filled within an hour of announcement.",
+        "Army Mule: slight bump to $25K"
+      ],
+      "expected_names": [
+        "Arabian Knight",
+        "Army Mule",
+        "Barnes",
+        "Charlatan",
+        "Curlin",
+        "Good Magic",
+        "Kantharos",
+        "Loggins",
+        "Maclean's Music",
+        "Violence"
+      ]
     },
     "claiborne": {
       "name": "Claiborne Farm",
       "csv": "claiborne-dryrun.csv",
-      "announcement_urls": [],
-      "known_changes_2026": [],
-      "expected_names": []
+      "announcement_urls": [
+        "https://claibornefarm.com/claiborne-farm-announces-fees-for-2026-breeding-season/",
+        "https://www.bloodhorse.com/horse-racing/articles/287972/mindframe-headlines-claibornes-2026-stallion-roster",
+        "https://www.thoroughbreddailynews.com/claiborne-announces-2026-stud-fees/",
+        "https://claibornefarm.com/claiborne-announces-stud-fees-for-mindframe-and-johannes/"
+      ],
+      "known_changes_2026": [
+        "Prince of Monaco: tops fees at $30K (excluding War Front private)",
+        "Mindframe: NEW 2026 freshman, $50K LFSN — multiple G1 winner",
+        "Johannes: NEW 2026 freshman, $10K LFSN — G1 winner by Nyquist",
+        "War Front: PRIVATE fee for 2026",
+        "Runhappy: SOLD to South Korea — REMOVED from Claiborne 2026 roster (correctly absent from our DB)"
+      ],
+      "expected_names": [
+        "Annapolis",
+        "Blame",
+        "Bright Future",
+        "Johannes",
+        "Mindframe",
+        "Prince of Monaco",
+        "Silver State",
+        "War Front"
+      ]
     },
     "taylormade": {
       "name": "Taylor Made Stallions",
@@ -251,15 +327,42 @@
     "airdrie": {
       "name": "Airdrie Stud",
       "csv": "airdrie-dryrun.csv",
-      "announcement_urls": [],
-      "known_changes_2026": [],
-      "expected_names": []
+      "announcement_urls": [
+        "https://www.airdriestud.com/airdrie-announces-2026-stud-fees/",
+        "https://paulickreport.com/news/bloodstock/airdrie-stud-announces-2026-stallions-and-fees-mystik-dan-stands-for-15000",
+        "https://www.thoroughbreddailynews.com/derby-winner-mystik-dan-to-begin-stud-career-at-airdrie-for-15k/",
+        "https://www.bloodhorse.com/horse-racing/articles/287010/jonathans-way-retired-will-stand-at-airdrie-in-2026"
+      ],
+      "known_changes_2026": [
+        "Girvin: $30K, top of roster — first Kentucky-bred crop hits the track in 2026",
+        "Upstart: $25K — best-bred crop hits as 2YOs in 2026",
+        "Mystik Dan: NEW 2026 freshman ($15K) — 2024 Kentucky Derby winner",
+        "Jonathan's Way: NEW 2026 freshman ($8,500) — by Good Magic, retired October 2025",
+        "Collected: relocated to Rancho San Miguel in California for 2026 (BH: 'Collected Relocates to California at Rancho San Miguel'). Was on Airdrie's Oct 8 announcement at $7,500 but subsequently moved. REMOVED from Airdrie expected_names; correctly absent from our CSV."
+      ],
+      "expected_names": [
+        "Beau Liam",
+        "Cairo Prince",
+        "Complexity",
+        "Divisidero",
+        "Girvin",
+        "Happy Saver",
+        "Highly Motivated",
+        "Jonathan's Way",
+        "Mage",
+        "Mystik Dan",
+        "Upstart"
+      ]
     },
     "calumet": {
       "name": "Calumet Farm",
       "csv": "calumet-dryrun.csv",
-      "announcement_urls": [],
-      "known_changes_2026": [],
+      "announcement_urls": [
+        "https://www.calumetfarm.com/stallions/"
+      ],
+      "known_changes_2026": [
+        "No specific 2026 fee announcement found via web search (BH/TDN/Paulick coverage of Calumet 2026 appears not to have been syndicated). Farm's own stallions page (calumetfarm.com/stallions) was egress-blocked from this workspace. Expected_names left empty pending a verified primary source. Audit will skip this farm cleanly."
+      ],
       "expected_names": []
     }
   }
