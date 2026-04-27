@@ -208,6 +208,14 @@ body {
 .movement-item .src a { color: var(--ink-soft); }
 .movement-item .src a:hover { color: var(--ink); }
 .movement-item .tracked { font-size: 10px; color: var(--good); white-space: nowrap; margin-top: 3px; }
+/* ---------- Sortable leaderboard headers ---------- */
+.leaderboard th[data-sort] { cursor: pointer; user-select: none; position: relative; }
+.leaderboard th[data-sort]:hover { color: var(--ink); }
+.leaderboard th[data-sort] .arrow {
+  display: inline-block; margin-left: 4px; font-size: 10px;
+  color: var(--ink-soft); opacity: 0.4;
+}
+.leaderboard th[data-sort].active .arrow { opacity: 1; color: var(--ink); }
 /* ---------- Smart filter ---------- */
 .smart-filter {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -402,10 +410,11 @@ body {
     <div class="examples">
       Examples (click to try):
       <b data-q="under $20k tier 1">under $20k tier 1</b> ·
-      <b data-q="first crop">first crop</b> ·
+      <b data-q="between $20k and $50k">between $20k and $50k</b> ·
+      <b data-q="first crop sort by fee asc">first crop sort by fee asc</b> ·
       <b data-q="sons of into mischief">sons of into mischief</b> ·
       <b data-q="established A grade">established A grade</b> ·
-      <b data-q="spendthrift">spendthrift</b>
+      <b data-q="spendthrift sort by score desc">spendthrift sort by score desc</b>
     </div>
     <div class="parsed-summary"><span id="smart-pills"></span><span class="clear-btn" id="smart-clear">clear</span></div>
   </div>
@@ -414,7 +423,15 @@ body {
   <div class="leaderboard">
     <table>
       <thead>
-        <tr><th>Rank</th><th>Stallion</th><th>Farm</th><th>Fee</th><th>Tier</th><th>Score</th><th>Grade</th></tr>
+        <tr>
+          <th data-sort="rank" class="active"><span class="lbl">Rank</span><span class="arrow">▲</span></th>
+          <th data-sort="name"><span class="lbl">Stallion</span><span class="arrow">▼</span></th>
+          <th data-sort="farm"><span class="lbl">Farm</span><span class="arrow">▼</span></th>
+          <th data-sort="fee"><span class="lbl">Fee</span><span class="arrow">▼</span></th>
+          <th data-sort="tier"><span class="lbl">Tier</span><span class="arrow">▼</span></th>
+          <th data-sort="score"><span class="lbl">Score</span><span class="arrow">▼</span></th>
+          <th data-sort="grade"><span class="lbl">Grade</span><span class="arrow">▼</span></th>
+        </tr>
       </thead>
       <tbody id="leaderboard-body"><tr><td colspan="7" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
     </table>
@@ -432,6 +449,9 @@ body {
     const resp = await fetch('/data/scores.json');
     if (!resp.ok) throw new Error(resp.status);
     const data = await resp.json();
+    // Stamp each stallion with its score-rank so the Rank column stays
+    // meaningful regardless of how the table is sorted later.
+    data.stallions.forEach((s, i) => { s._rank = i + 1; });
 
     document.getElementById('model-version').textContent = data.model_version;
     document.getElementById('stallion-count').textContent = data.stallion_count;
@@ -498,7 +518,7 @@ body {
     function rowHtml(s, i) {
       const fee = s.fee_usd ? ('$' + s.fee_usd.toLocaleString()) : (s.fee_qualifier || '—');
       return '<tr onclick="location.href=\'/stallion-card.html?s=' + encodeURIComponent(s.name) + '\'">'
-        + '<td>' + (i+1) + '</td>'
+        + '<td>' + (s._rank || (i+1)) + '</td>'
         + '<td><strong>' + s.name + '</strong></td>'
         + '<td>' + s.farm.replace(' Farm','').replace(' Farms','').replace(' Stud','').replace(' (Coolmore America)','') + '</td>'
         + '<td>' + fee + '</td>'
@@ -527,22 +547,57 @@ body {
         return Math.round(n);
       }
 
-      // Fee bounds
-      const underM = /(?:under|below|less than|max|≤|<=)\s*\$?(\d+(?:\.\d+)?\s*[km]?)/.exec(text);
-      if (underM) {
-        const n = parseMoney(underM[1]);
-        if (n) {
-          filters.push(s => s.fee_usd != null && s.fee_usd <= n);
-          pills.push('fee ≤ $' + n.toLocaleString());
+      // Fee range: "between $20k and $50k", "20k to 50k", "$20k - $50k"
+      // Try range FIRST so the "between X and Y" form doesn't get partially
+      // matched by the over/under bounds below.
+      const rangeM = /(?:between\s+)?\$?(\d+(?:\.\d+)?\s*[km]?)\s+(?:and|to|-)\s+\$?(\d+(?:\.\d+)?\s*[km]?)/.exec(text);
+      let rangeMatched = false;
+      if (rangeM) {
+        const lo = parseMoney(rangeM[1]);
+        const hi = parseMoney(rangeM[2]);
+        if (lo != null && hi != null && lo < hi) {
+          filters.push(s => s.fee_usd != null && s.fee_usd >= lo && s.fee_usd <= hi);
+          pills.push('fee $' + lo.toLocaleString() + ' – $' + hi.toLocaleString());
+          rangeMatched = true;
         }
       }
-      const overM = /(?:over|above|more than|greater than|min|≥|>=)\s*\$?(\d+(?:\.\d+)?\s*[km]?)/.exec(text);
-      if (overM) {
-        const n = parseMoney(overM[1]);
-        if (n) {
-          filters.push(s => s.fee_usd != null && s.fee_usd >= n);
-          pills.push('fee ≥ $' + n.toLocaleString());
+
+      // Fee bounds (only if a range wasn't matched)
+      if (!rangeMatched) {
+        const underM = /(?:under|below|less than|max|≤|<=)\s*\$?(\d+(?:\.\d+)?\s*[km]?)/.exec(text);
+        if (underM) {
+          const n = parseMoney(underM[1]);
+          if (n) {
+            filters.push(s => s.fee_usd != null && s.fee_usd <= n);
+            pills.push('fee ≤ $' + n.toLocaleString());
+          }
         }
+        const overM = /(?:over|above|more than|greater than|min|≥|>=)\s*\$?(\d+(?:\.\d+)?\s*[km]?)/.exec(text);
+        if (overM) {
+          const n = parseMoney(overM[1]);
+          if (n) {
+            filters.push(s => s.fee_usd != null && s.fee_usd >= n);
+            pills.push('fee ≥ $' + n.toLocaleString());
+          }
+        }
+      }
+
+      // Sort override: "sort by fee desc", "sorted by score asc", "by grade"
+      // (only when paired with the word 'sort'/'sorted' to avoid colliding
+      //  with the existing "by <sire>" parser).
+      let sortOverride = null;
+      const sortM = /(?:sort|sorted|order)\s+by\s+(rank|name|farm|fee|tier|score|grade)(?:\s+(asc|ascending|desc|descending|high|low))?/.exec(text);
+      if (sortM) {
+        const col = sortM[1];
+        let dir = 'desc';
+        if (sortM[2]) {
+          dir = (sortM[2] === 'asc' || sortM[2] === 'ascending' || sortM[2] === 'low') ? 'asc' : 'desc';
+        } else {
+          // Sensible defaults per column
+          dir = (col === 'rank' || col === 'name' || col === 'farm') ? 'asc' : 'desc';
+        }
+        sortOverride = { col: col, dir: dir };
+        pills.push('sorted by ' + col + ' ' + dir);
       }
 
       // Maturity stage
@@ -616,25 +671,83 @@ body {
         }
       });
 
-      return {filters, pills};
+      return {filters, pills, sortOverride};
     }
 
     function applyFilter(stallions, q) {
-      const {filters, pills} = parseQuery(q);
+      const {filters, pills, sortOverride} = parseQuery(q);
       const sf = document.getElementById('smart-filter');
-      if (filters.length === 0) {
+      // A sort-only query (no filters) still counts as "active" so the user
+      // sees the pill + we apply the sort.
+      const hasAnything = filters.length > 0 || sortOverride;
+      if (!hasAnything) {
         sf.classList.remove('active');
-        return {results: stallions.slice(0, 20), pills};
+        return {results: stallions.slice(0, 20), pills, sortOverride: null};
       }
       sf.classList.add('active');
-      const results = stallions.filter(s => filters.every(f => {
-        try { return f(s); } catch (_e) { return false; }
-      }));
-      return {results, pills};
+      const results = filters.length
+        ? stallions.filter(s => filters.every(f => {
+            try { return f(s); } catch (_e) { return false; }
+          }))
+        : stallions;   // sort-only: keep all, sort below
+      return {results, pills, sortOverride};
+    }
+
+    // Sort state for the leaderboard. Default: rank asc (which matches the
+    // pre-sorted score-desc order data.stallions arrives in).
+    let sortState = { col: 'rank', dir: 'asc' };
+
+    // Tier ordering for sort: tier1_full > tier1_obs_only > tier1_keeneland_only
+    // > tier2 > commercial_appeal > everything else.
+    const TIER_RANK = {
+      'tier1_full': 0, 'tier1_obs_only': 1, 'tier1_keeneland_only': 2,
+      'tier2': 3, 'commercial_appeal': 4,
+    };
+    const GRADE_RANK = { 'A+': 0, 'A': 1, 'B': 2, 'C': 3, 'D': 4, 'F': 5 };
+
+    function sortKey(s, col, originalIdx) {
+      switch (col) {
+        case 'rank':  return originalIdx;                       // preserve incoming order
+        case 'name':  return (s.name || '').toLowerCase();
+        case 'farm':  return (s.farm || '').toLowerCase();
+        case 'fee':   return s.fee_usd != null ? s.fee_usd : -1; // unknown fees sort lowest
+        case 'tier':  return TIER_RANK[s.score.tier] != null ? TIER_RANK[s.score.tier] : 99;
+        case 'score': return s.score.value != null ? s.score.value : -1;
+        case 'grade': return GRADE_RANK[s.score.grade] != null ? GRADE_RANK[s.score.grade] : 99;
+        default:      return 0;
+      }
+    }
+
+    function sortStallions(arr) {
+      // Capture incoming order so 'rank' sort is stable across re-renders.
+      const indexed = arr.map((s, i) => ({ s, i }));
+      indexed.sort((a, b) => {
+        const ka = sortKey(a.s, sortState.col, a.i);
+        const kb = sortKey(b.s, sortState.col, b.i);
+        let cmp;
+        if (typeof ka === 'number' && typeof kb === 'number') cmp = ka - kb;
+        else cmp = String(ka).localeCompare(String(kb));
+        return sortState.dir === 'asc' ? cmp : -cmp;
+      });
+      return indexed.map(x => x.s);
+    }
+
+    function updateSortIndicators() {
+      document.querySelectorAll('.leaderboard th[data-sort]').forEach(th => {
+        const col = th.dataset.sort;
+        const isActive = col === sortState.col;
+        th.classList.toggle('active', isActive);
+        const arrow = th.querySelector('.arrow');
+        if (arrow) arrow.textContent = isActive ? (sortState.dir === 'asc' ? '▲' : '▼') : '▼';
+      });
     }
 
     function render(q) {
-      const {results, pills} = applyFilter(data.stallions, q);
+      const {results, pills, sortOverride} = applyFilter(data.stallions, q);
+      // Smart-filter sort override wins for this render only (doesn't stick).
+      if (sortOverride) {
+        sortState = { col: sortOverride.col, dir: sortOverride.dir };
+      }
       const title = document.getElementById('leaderboard-title');
       const sf = document.getElementById('smart-filter');
       if (sf.classList.contains('active')) {
@@ -643,12 +756,29 @@ body {
         title.textContent = 'Top 20 — Value Score leaderboard';
       }
       const slice = sf.classList.contains('active') ? results.slice(0, 60) : results;
-      const rows = slice.map(rowHtml).join('');
+      const sorted = sortStallions(slice);
+      const rows = sorted.map(rowHtml).join('');
       document.getElementById('leaderboard-body').innerHTML = rows ||
         '<tr><td colspan="7" style="padding:30px;text-align:center;color:var(--ink-soft)">No matches. Try a different query.</td></tr>';
       document.getElementById('smart-pills').innerHTML =
         pills.map(p => '<span class="pill">' + p + '</span>').join('');
+      updateSortIndicators();
     }
+
+    // Wire up column-header sorting. Click toggles direction; clicking a new
+    // column starts that column at desc (except 'rank' which defaults asc).
+    document.querySelectorAll('.leaderboard th[data-sort]').forEach(th => {
+      th.addEventListener('click', () => {
+        const col = th.dataset.sort;
+        if (sortState.col === col) {
+          sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+        } else {
+          sortState.col = col;
+          sortState.dir = (col === 'rank' || col === 'name' || col === 'farm') ? 'asc' : 'desc';
+        }
+        render(document.getElementById('smart-q').value || '');
+      });
+    });
 
     render('');
 

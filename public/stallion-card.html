@@ -97,6 +97,30 @@ body {
 .grade-badge.weak { background: linear-gradient(135deg, #a85050, #c76a6a); box-shadow: 0 4px 14px rgba(155, 44, 44, 0.28); }
 .grade-badge.ok { background: linear-gradient(135deg, #8a6a1e, #a68336); box-shadow: 0 4px 14px rgba(165, 124, 31, 0.28); }
 .grade-letter { font-size: 38px; font-weight: 800; line-height: 1; }
+/* ---------- Headline callout ---------- */
+.headline {
+  margin: 18px 0 6px;
+  padding: 12px 14px;
+  background: var(--cream);
+  border-left: 3px solid var(--gold-soft);
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.headline-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 4px;
+}
+.headline .tier-pill {
+  display: inline-block; padding: 2px 9px; border-radius: 10px;
+  background: rgba(184, 134, 11, 0.14); color: var(--ink);
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700;
+}
+.headline .trend-up   { color: #275731; font-weight: 600; }
+.headline .trend-down { color: #7a1d1d; font-weight: 600; }
+.headline .tier-blurb { color: var(--ink-soft); font-size: 12px; }
+.headline .notable-signal { margin-top: 4px; }
+.headline .notable-signal .up   { color: #275731; font-weight: 700; }
+.headline .notable-signal .down { color: #7a1d1d; font-weight: 700; }
 .grade-score { font-size: 15px; margin-top: 4px; opacity: 0.9; }
 .key-stats {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -1291,6 +1315,84 @@ async function bootSireValue() {
       + '</div>';
   }
 
+  function renderHeadline(s) {
+    // 2-3 line summary at the top of the card: tier label, score trend (if
+    // history exists), and the most-notable signal we can surface.
+    var sc = s.score;
+    var c = sc.components || {};
+
+    // Tier label + gloss
+    var tierLabel = (sc.tier || '').replace(/_/g, ' ')
+      .replace('tier1 full', 'Tier 1 (full)')
+      .replace('tier1 obs only', 'Tier 1 (OBS)')
+      .replace('tier1 keeneland only', 'Tier 1 (Keeneland)')
+      .replace('commercial appeal', 'Tier 0');
+    var tierGloss = {
+      'tier1_full':            'Full data signal — yearling, 2YO, race performance, BMS.',
+      'tier1_obs_only':        'OBS-only sample — no Keeneland yearling data yet.',
+      'tier1_keeneland_only':  'Keeneland-only sample — no OBS 2YO data yet.',
+      'tier2':                 'Partial data signal.',
+      'commercial_appeal':     'Tier 0 — fee + pedigree only. No progeny data yet.'
+    }[sc.tier] || '';
+
+    // Score trend (if score-history has 2+ points and movement ≥0.5 pts)
+    var pts = scoreHistory[s.name] || [];
+    var trendHtml = '';
+    if (pts.length >= 2) {
+      var first = pts[0], last = pts[pts.length - 1];
+      var delta = last.score - first.score;
+      if (Math.abs(delta) >= 0.5) {
+        var arrow = delta > 0 ? '\u25B2' : '\u25BC';
+        var cls   = delta > 0 ? 'trend-up' : 'trend-down';
+        var sign  = delta > 0 ? '+' : '';
+        trendHtml = '<span class="' + cls + '">' + arrow + ' ' + sign + delta.toFixed(1)
+                  + ' pts over ' + pts.length + ' snapshots</span>';
+      }
+    }
+
+    // Most-notable signal — picks one of:
+    //   1. Realized pinhook lift if we have a sample
+    //   2. Strongest scoring component (≥70th percentile)
+    //   3. Insufficient peer data warning
+    var notableHtml = '';
+    if (s.pinhook && s.pinhook.yearling_n >= 5 && s.pinhook.twoyo_n >= 3) {
+      var lift = s.pinhook.lift_ratio;
+      var liftPct = ((lift - 1) * 100).toFixed(0);
+      var liftCls = lift >= 1 ? 'up' : 'down';
+      var liftSign = lift >= 1 ? '+' : '';
+      notableHtml = '<strong>Pinhook lift:</strong> '
+                  + '<span class="' + liftCls + '">' + liftSign + liftPct + '%</span> '
+                  + 'realized yearling \u2192 2YO (n=' + s.pinhook.twoyo_n + ').';
+    } else {
+      var strongest = null;
+      Object.keys(c).forEach(function(key) {
+        var comp = c[key];
+        var pct = (comp && comp.percentile) || 0;
+        if (!strongest || pct > strongest.pct) {
+          strongest = { key: key, pct: pct };
+        }
+      });
+      if (strongest && strongest.pct >= 70) {
+        notableHtml = '<strong>Top signal:</strong> '
+                    + escapeHtml(humanize(strongest.key)) + ' at '
+                    + '<strong>' + strongest.pct.toFixed(0) + '<sup>th</sup></strong> percentile.';
+      } else if (sc.peer_group && sc.peer_group.peer_n != null && sc.peer_group.peer_n < 5) {
+        notableHtml = '<strong>Heads-up:</strong> small peer group (' + sc.peer_group.peer_n
+                    + ' peers) \u2014 score has wider tolerance than usual.';
+      }
+    }
+
+    return ''
+      + '<div class="headline">'
+      +   '<div class="headline-row">'
+      +     '<span class="tier-pill">' + escapeHtml(tierLabel) + '</span>'
+      +     (trendHtml || '')
+      +   '</div>'
+      +   (tierGloss   ? '<div class="tier-blurb">' + escapeHtml(tierGloss) + '</div>' : '')
+      +   (notableHtml ? '<div class="notable-signal">' + notableHtml + '</div>'      : '')
+      + '</div>';
+  }
+
   function renderCard(s) {
     var sc = s.score;
     var c = sc.components;
@@ -1371,6 +1473,7 @@ async function bootSireValue() {
       +   '</div>'
       + '</div>'
       + '<div class="key-stats">' + statsHtml + '</div>'
+      + renderHeadline(s)
       + renderRoi(s)
       + renderPinhook(s)
       + renderRealizedPinhooks(s)
