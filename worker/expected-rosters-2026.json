@@ -23,19 +23,19 @@
         "Uncle Mo: euthanized Dec 19, 2024",
         "American Pharoah: shuttled to Japan for 2026 season (we added with shuttle qualifier)",
         "Speightstown: euthanized Dec 8, 2023",
-        "Citizen Bull / Fierceness / Journalism / Sierra Leone: NEW 2026, fees TBD pending Breeders' Cup"
+        "Citizen Bull / Fierceness / Sierra Leone: NEW 2026, fees TBD pending Breeders' Cup",
+        "Echo Town: relocated to Arkansas for 2026 — REMOVED from Ashford expected list (TDN: 'Echo Town Relocated To Stand In Arkansas For 2026'). May reappear in a future Arkansas-farm CSV.",
+        "Journalism: REMAINS IN TRAINING for 2026 — NOT a 2026 freshman; will retire to Ashford for 2027 (ABR: 'Preakness Winner Journalism to Remain in Training to Race in 2026')."
       ],
       "expected_names": [
         "Citizen Bull",
         "Corniche",
         "Domestic Product",
-        "Echo Town",
         "Epicenter",
         "Fierceness",
         "Golden Pal",
         "Gunite",
         "Jack Christopher",
-        "Journalism",
         "Justify",
         "Mo Town",
         "Munnings",
@@ -227,7 +227,7 @@
       ],
       "known_changes_2026": [
         "Not This Time: top of roster at $250,000",
-        "Knicks Go: fee TBD"
+        "Knicks Go: relocated to Korea for 2026 — REMOVED from Taylor Made expected list (TDN: 'MGISW Knicks Go To Stand In Korea For 2026')."
       ],
       "expected_names": [
         "Angel of Empire",
@@ -236,7 +236,6 @@
         "Idol",
         "Instagrand",
         "Instilled Regard",
-        "Knicks Go",
         "Not This Time",
         "Tacitus"
       ]
