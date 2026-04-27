@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-23T18:44:47Z",
+  "updated_at": "2026-04-27T17:46:47Z",
   "source": "https://www.bloodhorse.com/stallion-register/",
   "resolved": {
     "Angel of Empire": {
@@ -1522,17 +1522,22 @@
       "bh_slug": "mineshaft",
       "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/126547/mineshaft",
       "_manual_entry": "Search missed (pensioned stallion); added manually from BH register page"
+    },
+    "American Pharoah": {
+      "year_of_birth": 2012,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2016,
+      "_raw_data_line": "2012, b, entered stud 2016.",
+      "bh_url_id": 168986,
+      "bh_slug": "american-pharoah",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/168986/american-pharoah"
     }
   },
-  "unresolved": [
-    {
-      "name": "Producer (Gb)",
-      "reason": "no exact-name match (ambiguous or no results)"
-    }
-  ],
+  "unresolved": [],
   "summary": {
-    "total": 153,
-    "resolved": 152,
-    "unresolved": 1
+    "total": 1,
+    "resolved": 153,
+    "unresolved": 0
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T03:25:01Z",
+  "generated_at": "2026-04-27T17:46:57Z",
   "method": "weighted-comparator-from-similar-stallions-with-pinhook-data",
   "thresholds": {
     "min_pairs_per_comparator": 5,
@@ -8,8 +8,8 @@
     "medium_conf_total_pairs": 20
   },
   "summary": {
-    "stallions_total": 61,
-    "predicted": 47,
+    "stallions_total": 59,
+    "predicted": 45,
     "no_comparators": 14
   },
   "stallions": [
@@ -217,19 +217,6 @@
           "median_twoyo_price": 65000
         },
         {
-          "name": "Bolt D’oro",
-          "similarity_score": 20,
-          "similarity_reasons": [
-            "His damsire Medaglia d'Oro is their sire"
-          ],
-          "matched_pairs": 63,
-          "median_return_pct": 142.9,
-          "mean_return_pct": 210.2,
-          "positive_return_pct": 82.5,
-          "median_yearling_price": 60000,
-          "median_twoyo_price": 140000
-        },
-        {
           "name": "Violence",
           "similarity_score": 20,
           "similarity_reasons": [
@@ -241,6 +228,19 @@
           "positive_return_pct": 84.0,
           "median_yearling_price": 45000,
           "median_twoyo_price": 100000
+        },
+        {
+          "name": "Bolt D’oro",
+          "similarity_score": 20,
+          "similarity_reasons": [
+            "His damsire Medaglia d'Oro is their sire"
+          ],
+          "matched_pairs": 63,
+          "median_return_pct": 142.9,
+          "mean_return_pct": 210.2,
+          "positive_return_pct": 82.5,
+          "median_yearling_price": 60000,
+          "median_twoyo_price": 140000
         }
       ],
       "predicted": {
@@ -251,95 +251,6 @@
         "median_twoyo_price": 124966,
         "comparators_n": 5,
         "comparator_pairs_total": 150,
-        "confidence": "high"
-      }
-    },
-    {
-      "name": "Game Winner",
-      "farm": "Lane's End",
-      "sire": "Candy Ride (Arg)",
-      "damsire": "A.P. Indy",
-      "pedigree": "Candy Ride (Arg) – Indyan Giving, by A.P. Indy",
-      "fee_usd": 20000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 51.7,
-      "value_grade": "C",
-      "comparators": [
-        {
-          "name": "Rock Your World",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Candy Ride (Arg)"
-          ],
-          "matched_pairs": 24,
-          "median_return_pct": 109.0,
-          "mean_return_pct": 237.9,
-          "positive_return_pct": 70.8,
-          "median_yearling_price": 25000,
-          "median_twoyo_price": 51000
-        },
-        {
-          "name": "Gun Runner",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Candy Ride (Arg)"
-          ],
-          "matched_pairs": 26,
-          "median_return_pct": 48.5,
-          "mean_return_pct": 134.1,
-          "positive_return_pct": 65.4,
-          "median_yearling_price": 177500,
-          "median_twoyo_price": 210000
-        },
-        {
-          "name": "Twirling Candy",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Candy Ride (Arg)"
-          ],
-          "matched_pairs": 63,
-          "median_return_pct": 117.6,
-          "mean_return_pct": 161.1,
-          "positive_return_pct": 79.4,
-          "median_yearling_price": 90000,
-          "median_twoyo_price": 145000
-        },
-        {
-          "name": "Vekoma",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Candy Ride (Arg)"
-          ],
-          "matched_pairs": 71,
-          "median_return_pct": 71.4,
-          "mean_return_pct": 131.3,
-          "positive_return_pct": 64.8,
-          "median_yearling_price": 72000,
-          "median_twoyo_price": 130000
-        },
-        {
-          "name": "Mystic Guide",
-          "similarity_score": 30,
-          "similarity_reasons": [
-            "Share damsire A.P. Indy"
-          ],
-          "matched_pairs": 8,
-          "median_return_pct": 64.9,
-          "mean_return_pct": 59.8,
-          "positive_return_pct": 62.5,
-          "median_yearling_price": 22500,
-          "median_twoyo_price": 30000
-        }
-      ],
-      "predicted": {
-        "median_return_pct": 87.9,
-        "mean_return_pct": 151.8,
-        "positive_pct": 70.3,
-        "median_yearling_price": 84255,
-        "median_twoyo_price": 131713,
-        "comparators_n": 5,
-        "comparator_pairs_total": 192,
         "confidence": "high"
       }
     },
@@ -382,19 +293,6 @@
           "median_twoyo_price": 92500
         },
         {
-          "name": "Charlatan",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Speightstown"
-          ],
-          "matched_pairs": 39,
-          "median_return_pct": 66.7,
-          "mean_return_pct": 107.9,
-          "positive_return_pct": 79.5,
-          "median_yearling_price": 110000,
-          "median_twoyo_price": 160000
-        },
-        {
           "name": "Munnings",
           "similarity_score": 50,
           "similarity_reasons": [
@@ -406,6 +304,19 @@
           "positive_return_pct": 55.6,
           "median_yearling_price": 110000,
           "median_twoyo_price": 100000
+        },
+        {
+          "name": "Charlatan",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 39,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 107.9,
+          "positive_return_pct": 79.5,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 160000
         },
         {
           "name": "Lexitonian",
@@ -539,10 +450,10 @@
       "damsire": "Yankee Gentleman",
       "pedigree": "Pioneerof the Nile – Littleprincessemma, by Yankee Gentleman",
       "fee_usd": 45000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 34.6,
-      "value_grade": "D",
+      "entered_stud_year": 2016,
+      "year_of_birth": 2012,
+      "value_score": 46.7,
+      "value_grade": "C",
       "comparators": [
         {
           "name": "Cairo Prince",
@@ -892,56 +803,6 @@
       "entered_stud_year": 2025,
       "year_of_birth": 2020,
       "value_score": 33.2,
-      "value_grade": "D",
-      "comparators": [
-        {
-          "name": "Greatest Honour",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Tapit"
-          ],
-          "matched_pairs": 8,
-          "median_return_pct": 190.0,
-          "mean_return_pct": 201.0,
-          "positive_return_pct": 87.5,
-          "median_yearling_price": 30000,
-          "median_twoyo_price": 56250
-        },
-        {
-          "name": "Essential Quality",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Tapit"
-          ],
-          "matched_pairs": 16,
-          "median_return_pct": 75.0,
-          "mean_return_pct": 199.6,
-          "positive_return_pct": 68.8,
-          "median_yearling_price": 70000,
-          "median_twoyo_price": 125000
-        }
-      ],
-      "predicted": {
-        "median_return_pct": 113.3,
-        "mean_return_pct": 200.1,
-        "positive_pct": 75.0,
-        "median_yearling_price": 56666,
-        "median_twoyo_price": 102083,
-        "comparators_n": 2,
-        "comparator_pairs_total": 24,
-        "confidence": "medium"
-      }
-    },
-    {
-      "name": "Frosted",
-      "farm": "Darley America (Godolphin)",
-      "sire": "Tapit",
-      "damsire": "Deputy Minister",
-      "pedigree": "Tapit – Fast Cookie, by Deputy Minister",
-      "fee_usd": 12500,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 29.6,
       "value_grade": "D",
       "comparators": [
         {
@@ -1571,7 +1432,7 @@
       "fee_usd": 125000,
       "entered_stud_year": 2023,
       "year_of_birth": 2018,
-      "value_score": 60.8,
+      "value_score": 60.4,
       "value_grade": "B",
       "comparators": [
         {

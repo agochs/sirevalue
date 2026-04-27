@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T03:24:57Z",
+  "generated_at": "2026-04-27T17:46:57Z",
   "method": "deterministic-shared-ancestors",
   "weights": {
     "same_sire": 50,
@@ -9,8 +9,8 @@
   },
   "top_k_per_stallion": 5,
   "summary": {
-    "stallions_with_matches": 143,
-    "stallions_total": 156
+    "stallions_with_matches": 141,
+    "stallions_total": 154
   },
   "by_stallion": {
     "Corniche": [
@@ -30,7 +30,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 35000,
-        "value_score": 65.6,
+        "value_score": 62.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Quality Road"
@@ -43,7 +43,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 78.5,
+        "value_score": 78.4,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -54,7 +54,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 15000,
-        "value_score": 72.9,
+        "value_score": 72.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -111,7 +111,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 35000,
-        "value_score": 65.6,
+        "value_score": 62.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Quality Road"
@@ -122,21 +122,10 @@
         "farm": "Gainesway Farm",
         "score": 30,
         "fee_usd": 20000,
-        "value_score": 78.8,
+        "value_score": 78.5,
         "value_grade": "A",
         "reasons": [
           "Share damsire Medaglia d'Oro"
-        ]
-      },
-      {
-        "name": "Bolt D’oro",
-        "farm": "Spendthrift Farm",
-        "score": 20,
-        "fee_usd": 25000,
-        "value_score": 49.4,
-        "value_grade": "C",
-        "reasons": [
-          "His damsire Medaglia d'Oro is their sire"
         ]
       },
       {
@@ -144,7 +133,18 @@
         "farm": "Hill 'n' Dale Farms at Xalapa",
         "score": 20,
         "fee_usd": 30000,
-        "value_score": 48.9,
+        "value_score": 49.0,
+        "value_grade": "C",
+        "reasons": [
+          "His damsire Medaglia d'Oro is their sire"
+        ]
+      },
+      {
+        "name": "Bolt D’oro",
+        "farm": "Spendthrift Farm",
+        "score": 20,
+        "fee_usd": 25000,
+        "value_score": 48.3,
         "value_grade": "C",
         "reasons": [
           "His damsire Medaglia d'Oro is their sire"
@@ -157,19 +157,8 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 64.3,
+        "value_score": 64.1,
         "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      },
-      {
-        "name": "Charlatan",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 54.7,
-        "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
         ]
@@ -179,7 +168,18 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 45000,
-        "value_score": 54.7,
+        "value_score": 54.5,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      },
+      {
+        "name": "Charlatan",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 54.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -201,7 +201,7 @@
         "farm": "Calumet Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 44.4,
+        "value_score": 44.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -225,7 +225,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 15000,
-        "value_score": 72.9,
+        "value_score": 72.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -271,7 +271,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 48.5,
+        "value_score": 48.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Liam's Map"
@@ -304,7 +304,7 @@
         "farm": "Spendthrift Farm",
         "score": 20,
         "fee_usd": 250000,
-        "value_score": 40.9,
+        "value_score": 40.6,
         "value_grade": "C",
         "reasons": [
           "His damsire Harlan's Holiday is their sire"
@@ -317,7 +317,7 @@
         "farm": "Three Chimneys Farm",
         "score": 50,
         "fee_usd": 250000,
-        "value_score": 61.8,
+        "value_score": 61.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
@@ -328,18 +328,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 75000,
-        "value_score": 52.5,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Game Winner",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 20000,
-        "value_score": 51.7,
+        "value_score": 52.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
@@ -350,7 +339,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 100000,
-        "value_score": 30.8,
+        "value_score": 30.6,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
@@ -361,7 +350,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 20,
         "fee_usd": 25000,
-        "value_score": 67.8,
+        "value_score": 67.5,
         "value_grade": "B",
         "reasons": [
           "His sire Candy Ride (Arg) is their damsire"
@@ -370,22 +359,22 @@
     ],
     "Citizen Bull": [
       {
+        "name": "Newgate",
+        "farm": "Three Chimneys Farm",
+        "score": 50,
+        "fee_usd": 17500,
+        "value_score": 73.6,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
         "name": "Highly Motivated",
         "farm": "Airdrie Stud",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Newgate",
-        "farm": "Three Chimneys Farm",
-        "score": 50,
-        "fee_usd": 17500,
-        "value_score": 73.6,
+        "value_score": 73.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -396,7 +385,7 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 71.2,
+        "value_score": 70.8,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -407,110 +396,7 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 69.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Barnes",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
-        "score": 50,
-        "fee_usd": 15000,
-        "value_score": 67.4,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      }
-    ],
-    "Tiz The Law": [
-      {
-        "name": "Independence Hall",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 57.5,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Constitution"
-        ]
-      },
-      {
-        "name": "Mindframe",
-        "farm": "Claiborne Farm",
-        "score": 50,
-        "fee_usd": 50000,
-        "value_score": 52.0,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Constitution"
-        ]
-      },
-      {
-        "name": "Early Voting",
-        "farm": "Taylor Made Stallions",
-        "score": 30,
-        "fee_usd": 12500,
-        "value_score": 78.5,
-        "value_grade": "A",
-        "reasons": [
-          "Share damsire Tiznow"
-        ]
-      },
-      {
-        "name": "Instagrand",
-        "farm": "Taylor Made Stallions",
-        "score": 30,
-        "fee_usd": 8000,
-        "value_score": 62.0,
-        "value_grade": "B",
-        "reasons": [
-          "Share damsire Tiznow"
-        ]
-      }
-    ],
-    "Highly Motivated": [
-      {
-        "name": "Citizen Bull",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 50,
-        "fee_usd": 45000,
-        "value_score": 74.5,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Newgate",
-        "farm": "Three Chimneys Farm",
-        "score": 50,
-        "fee_usd": 17500,
-        "value_score": 73.6,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Audible",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 71.2,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Life Is Good",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -534,7 +420,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.8,
+        "value_score": 63.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -545,7 +431,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 62.2,
+        "value_score": 62.1,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -556,7 +442,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 57.7,
+        "value_score": 57.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -567,7 +453,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 48.0,
+        "value_score": 47.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -602,7 +488,7 @@
         "farm": "Airdrie Stud",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 73.7,
+        "value_score": 73.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -613,7 +499,7 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 71.2,
+        "value_score": 70.8,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -624,7 +510,7 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -639,6 +525,120 @@
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
+        ]
+      }
+    ],
+    "Highly Motivated": [
+      {
+        "name": "Citizen Bull",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 45000,
+        "value_score": 74.5,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Newgate",
+        "farm": "Three Chimneys Farm",
+        "score": 50,
+        "fee_usd": 17500,
+        "value_score": 73.6,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Audible",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 70.8,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Life Is Good",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 60000,
+        "value_score": 69.3,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Barnes",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 15000,
+        "value_score": 67.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      }
+    ],
+    "Happy Saver": [
+      {
+        "name": "Arabian Lion",
+        "farm": "Spendthrift Farm",
+        "score": 30,
+        "fee_usd": 15000,
+        "value_score": 72.5,
+        "value_grade": "B",
+        "reasons": [
+          "Share damsire Distorted Humor"
+        ]
+      },
+      {
+        "name": "Life Is Good",
+        "farm": "WinStar Farm",
+        "score": 30,
+        "fee_usd": 60000,
+        "value_score": 69.3,
+        "value_grade": "B",
+        "reasons": [
+          "Share damsire Distorted Humor"
+        ]
+      },
+      {
+        "name": "Patch Adams",
+        "farm": "WinStar Farm",
+        "score": 30,
+        "fee_usd": 30000,
+        "value_score": 60.8,
+        "value_grade": "B",
+        "reasons": [
+          "Share damsire Distorted Humor"
+        ]
+      },
+      {
+        "name": "Practical Joke",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 30,
+        "fee_usd": 75000,
+        "value_score": 46.8,
+        "value_grade": "C",
+        "reasons": [
+          "Share damsire Distorted Humor"
+        ]
+      },
+      {
+        "name": "Constitution",
+        "farm": "WinStar Farm",
+        "score": 30,
+        "fee_usd": 110000,
+        "value_score": 36.2,
+        "value_grade": "D",
+        "reasons": [
+          "Share damsire Distorted Humor"
         ]
       }
     ],
@@ -659,7 +659,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 78.5,
+        "value_score": 78.4,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -699,63 +699,6 @@
         ]
       }
     ],
-    "Happy Saver": [
-      {
-        "name": "Arabian Lion",
-        "farm": "Spendthrift Farm",
-        "score": 30,
-        "fee_usd": 15000,
-        "value_score": 72.5,
-        "value_grade": "B",
-        "reasons": [
-          "Share damsire Distorted Humor"
-        ]
-      },
-      {
-        "name": "Life Is Good",
-        "farm": "WinStar Farm",
-        "score": 30,
-        "fee_usd": 60000,
-        "value_score": 69.7,
-        "value_grade": "B",
-        "reasons": [
-          "Share damsire Distorted Humor"
-        ]
-      },
-      {
-        "name": "Patch Adams",
-        "farm": "WinStar Farm",
-        "score": 30,
-        "fee_usd": 30000,
-        "value_score": 60.8,
-        "value_grade": "B",
-        "reasons": [
-          "Share damsire Distorted Humor"
-        ]
-      },
-      {
-        "name": "Practical Joke",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 30,
-        "fee_usd": 75000,
-        "value_score": 46.9,
-        "value_grade": "C",
-        "reasons": [
-          "Share damsire Distorted Humor"
-        ]
-      },
-      {
-        "name": "Constitution",
-        "farm": "WinStar Farm",
-        "score": 30,
-        "fee_usd": 110000,
-        "value_score": 36.3,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Distorted Humor"
-        ]
-      }
-    ],
     "Arabian Lion": [
       {
         "name": "Heartland",
@@ -784,7 +727,7 @@
         "farm": "WinStar Farm",
         "score": 30,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Share damsire Distorted Humor"
@@ -806,67 +749,10 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 30,
         "fee_usd": 75000,
-        "value_score": 46.9,
+        "value_score": 46.8,
         "value_grade": "C",
         "reasons": [
           "Share damsire Distorted Humor"
-        ]
-      }
-    ],
-    "Audible": [
-      {
-        "name": "Citizen Bull",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 50,
-        "fee_usd": 45000,
-        "value_score": 74.5,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Newgate",
-        "farm": "Three Chimneys Farm",
-        "score": 50,
-        "fee_usd": 17500,
-        "value_score": 73.6,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Life Is Good",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 60000,
-        "value_score": 69.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Barnes",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
-        "score": 50,
-        "fee_usd": 15000,
-        "value_score": 67.4,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
         ]
       }
     ],
@@ -876,7 +762,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -887,7 +773,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 64.7,
+        "value_score": 64.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -909,7 +795,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -924,6 +810,63 @@
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
+        ]
+      }
+    ],
+    "Audible": [
+      {
+        "name": "Citizen Bull",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 45000,
+        "value_score": 74.5,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Newgate",
+        "farm": "Three Chimneys Farm",
+        "score": 50,
+        "fee_usd": 17500,
+        "value_score": 73.6,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Life Is Good",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 60000,
+        "value_score": 69.3,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Barnes",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 15000,
+        "value_score": 67.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
         ]
       }
     ],
@@ -944,7 +887,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 78.5,
+        "value_score": 78.4,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -955,7 +898,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 15000,
-        "value_score": 72.9,
+        "value_score": 72.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -984,13 +927,59 @@
         ]
       }
     ],
+    "Tiz The Law": [
+      {
+        "name": "Independence Hall",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 57.1,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Constitution"
+        ]
+      },
+      {
+        "name": "Mindframe",
+        "farm": "Claiborne Farm",
+        "score": 50,
+        "fee_usd": 50000,
+        "value_score": 52.0,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Constitution"
+        ]
+      },
+      {
+        "name": "Early Voting",
+        "farm": "Taylor Made Stallions",
+        "score": 30,
+        "fee_usd": 12500,
+        "value_score": 78.4,
+        "value_grade": "A",
+        "reasons": [
+          "Share damsire Tiznow"
+        ]
+      },
+      {
+        "name": "Instagrand",
+        "farm": "Taylor Made Stallions",
+        "score": 30,
+        "fee_usd": 8000,
+        "value_score": 61.6,
+        "value_grade": "B",
+        "reasons": [
+          "Share damsire Tiznow"
+        ]
+      }
+    ],
     "Forte": [
       {
         "name": "Volatile",
         "farm": "Three Chimneys Farm",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 52.3,
+        "value_score": 51.9,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Violence"
@@ -1059,7 +1048,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 80,
         "fee_usd": 75000,
-        "value_score": 46.9,
+        "value_score": 46.8,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Into Mischief",
@@ -1078,22 +1067,22 @@
         ]
       },
       {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
+        "name": "Newgate",
+        "farm": "Three Chimneys Farm",
         "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
+        "fee_usd": 17500,
+        "value_score": 73.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
         ]
       },
       {
-        "name": "Newgate",
-        "farm": "Three Chimneys Farm",
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
         "score": 50,
-        "fee_usd": 17500,
-        "value_score": 73.6,
+        "fee_usd": 7500,
+        "value_score": 73.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -1117,7 +1106,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 64.7,
+        "value_score": 64.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -1139,7 +1128,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -1174,7 +1163,7 @@
         "farm": "Airdrie Stud",
         "score": 50,
         "fee_usd": 20000,
-        "value_score": 50.9,
+        "value_score": 50.5,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Maclean's Music"
@@ -1220,7 +1209,7 @@
         "farm": "Spendthrift Farm",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 75.6,
+        "value_score": 75.2,
         "value_grade": "A",
         "reasons": [
           "His damsire Candy Ride (Arg) is their sire"
@@ -1231,7 +1220,7 @@
         "farm": "Three Chimneys Farm",
         "score": 20,
         "fee_usd": 250000,
-        "value_score": 61.8,
+        "value_score": 61.6,
         "value_grade": "B",
         "reasons": [
           "His damsire Candy Ride (Arg) is their sire"
@@ -1251,17 +1240,6 @@
         ]
       },
       {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
         "name": "Newgate",
         "farm": "Three Chimneys Farm",
         "score": 50,
@@ -1273,11 +1251,22 @@
         ]
       },
       {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
         "name": "Audible",
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 71.2,
+        "value_score": 70.8,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -1288,7 +1277,7 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -1308,17 +1297,6 @@
         ]
       },
       {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
         "name": "Newgate",
         "farm": "Three Chimneys Farm",
         "score": 50,
@@ -1330,11 +1308,22 @@
         ]
       },
       {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
         "name": "Audible",
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 71.2,
+        "value_score": 70.8,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -1345,45 +1334,10 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
-        ]
-      }
-    ],
-    "City Of Light": [
-      {
-        "name": "Corniche",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 50,
-        "fee_usd": 15000,
-        "value_score": 85.5,
-        "value_grade": "A+",
-        "reasons": [
-          "Half-brothers — share sire Quality Road"
-        ]
-      },
-      {
-        "name": "National Treasure",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 35000,
-        "value_score": 79.2,
-        "value_grade": "A",
-        "reasons": [
-          "Half-brothers — share sire Quality Road"
-        ]
-      },
-      {
-        "name": "Take Charge Indy",
-        "farm": "WinStar Farm",
-        "score": 30,
-        "fee_usd": 7500,
-        "value_score": 38.4,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Dehere"
         ]
       }
     ],
@@ -1404,18 +1358,7 @@
         "farm": "Claiborne Farm",
         "score": 30,
         "fee_usd": 7500,
-        "value_score": 54.9,
-        "value_grade": "C",
-        "reasons": [
-          "Share damsire A.P. Indy"
-        ]
-      },
-      {
-        "name": "Game Winner",
-        "farm": "Lane's End",
-        "score": 30,
-        "fee_usd": 20000,
-        "value_score": 51.7,
+        "value_score": 54.4,
         "value_grade": "C",
         "reasons": [
           "Share damsire A.P. Indy"
@@ -1426,7 +1369,7 @@
         "farm": "Spendthrift Farm",
         "score": 30,
         "fee_usd": 25000,
-        "value_score": 49.4,
+        "value_score": 48.3,
         "value_grade": "C",
         "reasons": [
           "Share damsire A.P. Indy"
@@ -1441,6 +1384,17 @@
         "value_grade": "C",
         "reasons": [
           "His sire Ghostzapper is their damsire"
+        ]
+      },
+      {
+        "name": "Take Charge Indy",
+        "farm": "WinStar Farm",
+        "score": 20,
+        "fee_usd": 7500,
+        "value_score": 38.2,
+        "value_grade": "D",
+        "reasons": [
+          "His damsire A.P. Indy is their sire"
         ]
       }
     ],
@@ -1461,7 +1415,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -1483,7 +1437,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -1507,19 +1461,8 @@
         "farm": "Gainesway Farm",
         "score": 50,
         "fee_usd": 20000,
-        "value_score": 78.8,
+        "value_score": 78.5,
         "value_grade": "A",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      },
-      {
-        "name": "Charlatan",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 54.7,
-        "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
         ]
@@ -1529,7 +1472,18 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 45000,
-        "value_score": 54.7,
+        "value_score": 54.5,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      },
+      {
+        "name": "Charlatan",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 54.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -1551,7 +1505,7 @@
         "farm": "Calumet Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 44.4,
+        "value_score": 44.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -1575,7 +1529,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 62.2,
+        "value_score": 62.1,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -1586,7 +1540,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 57.7,
+        "value_score": 57.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -1597,7 +1551,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 48.0,
+        "value_score": 47.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -1621,7 +1575,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -1643,7 +1597,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 50.7,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -1665,7 +1619,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 42.2,
+        "value_score": 41.7,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -1711,7 +1665,7 @@
         "farm": "Spendthrift Farm",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "His damsire Tapit is their sire"
@@ -1722,7 +1676,7 @@
         "farm": "Lane's End",
         "score": 20,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "His damsire Tapit is their sire"
@@ -1746,7 +1700,7 @@
         "farm": "Airdrie Stud",
         "score": 50,
         "fee_usd": 20000,
-        "value_score": 50.9,
+        "value_score": 50.5,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Maclean's Music"
@@ -1757,10 +1711,45 @@
         "farm": "Spendthrift Farm",
         "score": 30,
         "fee_usd": 15000,
-        "value_score": 61.9,
+        "value_score": 61.4,
         "value_grade": "B",
         "reasons": [
           "Share damsire Mr. Greeley"
+        ]
+      }
+    ],
+    "City Of Light": [
+      {
+        "name": "Corniche",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 15000,
+        "value_score": 85.5,
+        "value_grade": "A+",
+        "reasons": [
+          "Half-brothers — share sire Quality Road"
+        ]
+      },
+      {
+        "name": "National Treasure",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 35000,
+        "value_score": 79.2,
+        "value_grade": "A",
+        "reasons": [
+          "Half-brothers — share sire Quality Road"
+        ]
+      },
+      {
+        "name": "Take Charge Indy",
+        "farm": "WinStar Farm",
+        "score": 30,
+        "fee_usd": 7500,
+        "value_score": 38.2,
+        "value_grade": "D",
+        "reasons": [
+          "Share damsire Dehere"
         ]
       }
     ],
@@ -1781,7 +1770,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.8,
+        "value_score": 63.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -1792,7 +1781,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 57.7,
+        "value_score": 57.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -1803,7 +1792,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 48.0,
+        "value_score": 47.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -1821,6 +1810,63 @@
         ]
       }
     ],
+    "Gun Runner": [
+      {
+        "name": "Rock Your World",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 75.2,
+        "value_grade": "A",
+        "reasons": [
+          "Half-brothers — share sire Candy Ride (Arg)"
+        ]
+      },
+      {
+        "name": "Twirling Candy",
+        "farm": "Lane's End",
+        "score": 50,
+        "fee_usd": 75000,
+        "value_score": 52.4,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Candy Ride (Arg)"
+        ]
+      },
+      {
+        "name": "Vekoma",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 100000,
+        "value_score": 30.6,
+        "value_grade": "D",
+        "reasons": [
+          "Half-brothers — share sire Candy Ride (Arg)"
+        ]
+      },
+      {
+        "name": "Johannes",
+        "farm": "Claiborne Farm",
+        "score": 30,
+        "fee_usd": 10000,
+        "value_score": 33.2,
+        "value_grade": "D",
+        "reasons": [
+          "Share damsire Giant's Causeway"
+        ]
+      },
+      {
+        "name": "Epicenter",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 20,
+        "fee_usd": 25000,
+        "value_score": 67.5,
+        "value_grade": "B",
+        "reasons": [
+          "His sire Candy Ride (Arg) is their damsire"
+        ]
+      }
+    ],
     "Instagrand": [
       {
         "name": "Citizen Bull",
@@ -1828,17 +1874,6 @@
         "score": 50,
         "fee_usd": 45000,
         "value_score": 74.5,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -1856,11 +1891,22 @@
         ]
       },
       {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
         "name": "Audible",
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 71.2,
+        "value_score": 70.8,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -1871,7 +1917,7 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -1891,17 +1937,6 @@
         ]
       },
       {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
         "name": "Newgate",
         "farm": "Three Chimneys Farm",
         "score": 50,
@@ -1913,11 +1948,22 @@
         ]
       },
       {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
         "name": "Audible",
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 71.2,
+        "value_score": 70.8,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -1928,125 +1974,10 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
-        ]
-      }
-    ],
-    "Gun Runner": [
-      {
-        "name": "Rock Your World",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 75.6,
-        "value_grade": "A",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Twirling Candy",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 75000,
-        "value_score": 52.5,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Game Winner",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 20000,
-        "value_score": 51.7,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Vekoma",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 100000,
-        "value_score": 30.8,
-        "value_grade": "D",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Johannes",
-        "farm": "Claiborne Farm",
-        "score": 30,
-        "fee_usd": 10000,
-        "value_score": 33.2,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Giant's Causeway"
-        ]
-      }
-    ],
-    "Flightline": [
-      {
-        "name": "Charge It",
-        "farm": "Gainesway Farm",
-        "score": 80,
-        "fee_usd": 12500,
-        "value_score": 52.9,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit",
-          "Share damsire Indian Charlie"
-        ]
-      },
-      {
-        "name": "Greatest Honour",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 63.6,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Essential Quality",
-        "farm": "Darley America (Godolphin)",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 50.7,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Arthur's Ride",
-        "farm": "Taylor Made Stallions",
-        "score": 50,
-        "fee_usd": 12500,
-        "value_score": 42.9,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Tacitus",
-        "farm": "Taylor Made Stallions",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 42.2,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
         ]
       }
     ],
@@ -2056,7 +1987,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 67.8,
+        "value_score": 67.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Not This Time"
@@ -2091,7 +2022,7 @@
         "farm": "WinStar Farm",
         "score": 80,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief",
@@ -2103,7 +2034,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 80,
         "fee_usd": 75000,
-        "value_score": 46.9,
+        "value_score": 46.8,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Into Mischief",
@@ -2122,17 +2053,6 @@
         ]
       },
       {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
         "name": "Newgate",
         "farm": "Three Chimneys Farm",
         "score": 50,
@@ -2141,6 +2061,75 @@
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      }
+    ],
+    "Flightline": [
+      {
+        "name": "Charge It",
+        "farm": "Gainesway Farm",
+        "score": 80,
+        "fee_usd": 12500,
+        "value_score": 52.9,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Tapit",
+          "Share damsire Indian Charlie"
+        ]
+      },
+      {
+        "name": "Greatest Honour",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 63.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
+        ]
+      },
+      {
+        "name": "Essential Quality",
+        "farm": "Darley America (Godolphin)",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 50.1,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
+        ]
+      },
+      {
+        "name": "Arthur's Ride",
+        "farm": "Taylor Made Stallions",
+        "score": 50,
+        "fee_usd": 12500,
+        "value_score": 42.9,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
+        ]
+      },
+      {
+        "name": "Tacitus",
+        "farm": "Taylor Made Stallions",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 41.7,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
         ]
       }
     ],
@@ -2161,7 +2150,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 78.5,
+        "value_score": 78.4,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -2172,7 +2161,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 15000,
-        "value_score": 72.9,
+        "value_score": 72.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -2207,7 +2196,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 50000,
-        "value_score": 41.0,
+        "value_score": 40.8,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Street Sense"
@@ -2218,7 +2207,7 @@
         "farm": "Gainesway Farm",
         "score": 50,
         "fee_usd": 75000,
-        "value_score": 35.1,
+        "value_score": 34.9,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire Street Sense"
@@ -2238,17 +2227,6 @@
         ]
       },
       {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
         "name": "Newgate",
         "farm": "Three Chimneys Farm",
         "score": 50,
@@ -2260,11 +2238,22 @@
         ]
       },
       {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
         "name": "Audible",
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 71.2,
+        "value_score": 70.8,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -2275,7 +2264,7 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief"
@@ -2299,7 +2288,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.8,
+        "value_score": 63.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -2310,7 +2299,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 62.2,
+        "value_score": 62.1,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -2321,7 +2310,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 48.0,
+        "value_score": 47.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -2345,7 +2334,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 40000,
-        "value_score": 74.3,
+        "value_score": 70.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Constitution"
@@ -2411,48 +2400,13 @@
         ]
       }
     ],
-    "Girvin": [
-      {
-        "name": "Sierra Leone",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 30,
-        "fee_usd": 75000,
-        "value_score": 83.0,
-        "value_grade": "A",
-        "reasons": [
-          "Share damsire Malibu Moon"
-        ]
-      },
-      {
-        "name": "Ransom the Moon",
-        "farm": "Calumet Farm",
-        "score": 20,
-        "fee_usd": 7500,
-        "value_score": 37.4,
-        "value_grade": "D",
-        "reasons": [
-          "His damsire Malibu Moon is their sire"
-        ]
-      },
-      {
-        "name": "Johannes",
-        "farm": "Claiborne Farm",
-        "score": 20,
-        "fee_usd": 10000,
-        "value_score": 33.2,
-        "value_grade": "D",
-        "reasons": [
-          "His damsire Malibu Moon is their sire"
-        ]
-      }
-    ],
     "Two Phil's": [
       {
         "name": "Silver State",
         "farm": "Claiborne Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 54.9,
+        "value_score": 54.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Hard Spun"
@@ -2463,67 +2417,10 @@
         "farm": "Hill 'n' Dale Farms at Xalapa",
         "score": 20,
         "fee_usd": 125000,
-        "value_score": 38.3,
+        "value_score": 38.1,
         "value_grade": "D",
         "reasons": [
           "His sire Hard Spun is their damsire"
-        ]
-      }
-    ],
-    "Maximus Mischief": [
-      {
-        "name": "Citizen Bull",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 50,
-        "fee_usd": 45000,
-        "value_score": 74.5,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Newgate",
-        "farm": "Three Chimneys Farm",
-        "score": 50,
-        "fee_usd": 17500,
-        "value_score": 73.6,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Audible",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 71.2,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Life Is Good",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 60000,
-        "value_score": 69.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
         ]
       }
     ],
@@ -2544,7 +2441,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 78.5,
+        "value_score": 78.4,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -2555,7 +2452,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 15000,
-        "value_score": 72.9,
+        "value_score": 72.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -2620,6 +2517,63 @@
         ]
       }
     ],
+    "Maximus Mischief": [
+      {
+        "name": "Citizen Bull",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 45000,
+        "value_score": 74.5,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Newgate",
+        "farm": "Three Chimneys Farm",
+        "score": 50,
+        "fee_usd": 17500,
+        "value_score": 73.6,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Audible",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 70.8,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Life Is Good",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 60000,
+        "value_score": 69.3,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      }
+    ],
     "Taiba": [
       {
         "name": "Sierra Leone",
@@ -2637,7 +2591,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 78.5,
+        "value_score": 78.4,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -2648,7 +2602,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 15000,
-        "value_score": 72.9,
+        "value_score": 72.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Gun Runner"
@@ -2683,7 +2637,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 67.8,
+        "value_score": 67.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Not This Time"
@@ -2716,7 +2670,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 30,
         "fee_usd": 200000,
-        "value_score": 34.3,
+        "value_score": 34.0,
         "value_grade": "D",
         "reasons": [
           "Share damsire Ghostzapper"
@@ -2727,10 +2681,102 @@
         "farm": "Darley America (Godolphin)",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 65.5,
+        "value_score": 65.3,
         "value_grade": "B",
         "reasons": [
           "His damsire Ghostzapper is their sire"
+        ]
+      }
+    ],
+    "Munnings": [
+      {
+        "name": "Olympiad",
+        "farm": "Gainesway Farm",
+        "score": 50,
+        "fee_usd": 20000,
+        "value_score": 78.5,
+        "value_grade": "A",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      },
+      {
+        "name": "Nashville",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 12500,
+        "value_score": 64.1,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      },
+      {
+        "name": "Charlatan",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 54.3,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      },
+      {
+        "name": "Prince of Monaco",
+        "farm": "Claiborne Farm",
+        "score": 50,
+        "fee_usd": 30000,
+        "value_score": 53.2,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      },
+      {
+        "name": "Lexitonian",
+        "farm": "Calumet Farm",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 44.3,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      }
+    ],
+    "Girvin": [
+      {
+        "name": "Sierra Leone",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 30,
+        "fee_usd": 75000,
+        "value_score": 83.0,
+        "value_grade": "A",
+        "reasons": [
+          "Share damsire Malibu Moon"
+        ]
+      },
+      {
+        "name": "Ransom the Moon",
+        "farm": "Calumet Farm",
+        "score": 20,
+        "fee_usd": 7500,
+        "value_score": 37.7,
+        "value_grade": "D",
+        "reasons": [
+          "His damsire Malibu Moon is their sire"
+        ]
+      },
+      {
+        "name": "Johannes",
+        "farm": "Claiborne Farm",
+        "score": 20,
+        "fee_usd": 10000,
+        "value_score": 33.2,
+        "value_grade": "D",
+        "reasons": [
+          "His damsire Malibu Moon is their sire"
         ]
       }
     ],
@@ -2751,19 +2797,8 @@
         "farm": "Darley America (Godolphin)",
         "score": 30,
         "fee_usd": 7500,
-        "value_score": 65.5,
+        "value_score": 65.3,
         "value_grade": "B",
-        "reasons": [
-          "Share damsire A.P. Indy"
-        ]
-      },
-      {
-        "name": "Game Winner",
-        "farm": "Lane's End",
-        "score": 30,
-        "fee_usd": 20000,
-        "value_score": 51.7,
-        "value_grade": "C",
         "reasons": [
           "Share damsire A.P. Indy"
         ]
@@ -2773,7 +2808,7 @@
         "farm": "Spendthrift Farm",
         "score": 30,
         "fee_usd": 25000,
-        "value_score": 49.4,
+        "value_score": 48.3,
         "value_grade": "C",
         "reasons": [
           "Share damsire A.P. Indy"
@@ -2784,10 +2819,21 @@
         "farm": "WinStar Farm",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 38.4,
+        "value_score": 38.2,
         "value_grade": "D",
         "reasons": [
           "His damsire A.P. Indy is their sire"
+        ]
+      },
+      {
+        "name": "Good Magic",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 20,
+        "fee_usd": 125000,
+        "value_score": 38.1,
+        "value_grade": "D",
+        "reasons": [
+          "His sire Hard Spun is their damsire"
         ]
       }
     ],
@@ -2797,7 +2843,7 @@
         "farm": "Gainesway Farm",
         "score": 50,
         "fee_usd": 20000,
-        "value_score": 78.8,
+        "value_score": 78.5,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -2808,7 +2854,7 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 64.3,
+        "value_score": 64.1,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -2819,7 +2865,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 45000,
-        "value_score": 54.7,
+        "value_score": 54.5,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -2841,64 +2887,7 @@
         "farm": "Calumet Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 44.4,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      }
-    ],
-    "Munnings": [
-      {
-        "name": "Olympiad",
-        "farm": "Gainesway Farm",
-        "score": 50,
-        "fee_usd": 20000,
-        "value_score": 78.8,
-        "value_grade": "A",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      },
-      {
-        "name": "Nashville",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 12500,
-        "value_score": 64.3,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      },
-      {
-        "name": "Charlatan",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 54.7,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      },
-      {
-        "name": "Prince of Monaco",
-        "farm": "Claiborne Farm",
-        "score": 50,
-        "fee_usd": 30000,
-        "value_score": 53.2,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      },
-      {
-        "name": "Lexitonian",
-        "farm": "Calumet Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 44.4,
+        "value_score": 44.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -2955,7 +2944,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 63.8,
+        "value_score": 63.6,
         "value_grade": "B",
         "reasons": [
           "His damsire Uncle Mo is their sire"
@@ -2968,7 +2957,7 @@
         "farm": "Gainesway Farm",
         "score": 50,
         "fee_usd": 20000,
-        "value_score": 78.8,
+        "value_score": 78.5,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -2979,19 +2968,8 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 64.3,
+        "value_score": 64.1,
         "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      },
-      {
-        "name": "Charlatan",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 54.7,
-        "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
         ]
@@ -3001,7 +2979,18 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 45000,
-        "value_score": 54.7,
+        "value_score": 54.5,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      },
+      {
+        "name": "Charlatan",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 54.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -3012,7 +3001,7 @@
         "farm": "Calumet Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 44.4,
+        "value_score": 44.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -3025,7 +3014,7 @@
         "farm": "Lane's End",
         "score": 80,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit",
@@ -3037,7 +3026,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -3048,7 +3037,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 50.7,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -3070,7 +3059,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 42.2,
+        "value_score": 41.7,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -3083,7 +3072,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 75.6,
+        "value_score": 75.2,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
@@ -3094,19 +3083,8 @@
         "farm": "Three Chimneys Farm",
         "score": 50,
         "fee_usd": 250000,
-        "value_score": 61.8,
+        "value_score": 61.6,
         "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Game Winner",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 20000,
-        "value_score": 51.7,
-        "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
         ]
@@ -3116,7 +3094,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 100000,
-        "value_score": 30.8,
+        "value_score": 30.6,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
@@ -3127,10 +3105,69 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 20,
         "fee_usd": 25000,
-        "value_score": 67.8,
+        "value_score": 67.5,
         "value_grade": "B",
         "reasons": [
           "His sire Candy Ride (Arg) is their damsire"
+        ]
+      }
+    ],
+    "Instilled Regard": [
+      {
+        "name": "Blame",
+        "farm": "Claiborne Farm",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 25.4,
+        "value_grade": "D",
+        "reasons": [
+          "Half-brothers — share sire Arch"
+        ]
+      },
+      {
+        "name": "Nyquist",
+        "farm": "Darley America (Godolphin)",
+        "score": 30,
+        "fee_usd": 175000,
+        "value_score": 32.5,
+        "value_grade": "D",
+        "reasons": [
+          "Share damsire Forestry"
+        ]
+      },
+      {
+        "name": "Country Grammer",
+        "farm": "WinStar Farm",
+        "score": 30,
+        "fee_usd": 5000,
+        "value_score": 25.0,
+        "value_grade": "D",
+        "reasons": [
+          "Share damsire Forestry"
+        ]
+      }
+    ],
+    "Mindframe": [
+      {
+        "name": "Tiz The Law",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 40000,
+        "value_score": 70.5,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Constitution"
+        ]
+      },
+      {
+        "name": "Independence Hall",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 57.1,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Constitution"
         ]
       }
     ],
@@ -3191,122 +3228,6 @@
         ]
       }
     ],
-    "Instilled Regard": [
-      {
-        "name": "Blame",
-        "farm": "Claiborne Farm",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 26.1,
-        "value_grade": "D",
-        "reasons": [
-          "Half-brothers — share sire Arch"
-        ]
-      },
-      {
-        "name": "Nyquist",
-        "farm": "Darley America (Godolphin)",
-        "score": 30,
-        "fee_usd": 175000,
-        "value_score": 32.7,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Forestry"
-        ]
-      },
-      {
-        "name": "Country Grammer",
-        "farm": "WinStar Farm",
-        "score": 30,
-        "fee_usd": 5000,
-        "value_score": 25.0,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Forestry"
-        ]
-      }
-    ],
-    "Mindframe": [
-      {
-        "name": "Tiz The Law",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 50,
-        "fee_usd": 40000,
-        "value_score": 74.3,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Constitution"
-        ]
-      },
-      {
-        "name": "Independence Hall",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 57.5,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Constitution"
-        ]
-      }
-    ],
-    "Game Winner": [
-      {
-        "name": "Rock Your World",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 75.6,
-        "value_grade": "A",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Gun Runner",
-        "farm": "Three Chimneys Farm",
-        "score": 50,
-        "fee_usd": 250000,
-        "value_score": 61.8,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Twirling Candy",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 75000,
-        "value_score": 52.5,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Vekoma",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 100000,
-        "value_score": 30.8,
-        "value_grade": "D",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Mystic Guide",
-        "farm": "Darley America (Godolphin)",
-        "score": 30,
-        "fee_usd": 7500,
-        "value_score": 65.5,
-        "value_grade": "B",
-        "reasons": [
-          "Share damsire A.P. Indy"
-        ]
-      }
-    ],
     "By My Standards": [
       {
         "name": "Mystik Dan",
@@ -3322,23 +3243,23 @@
     ],
     "Cairo Prince": [
       {
-        "name": "Thousand Words",
-        "farm": "Spendthrift Farm",
+        "name": "American Pharoah",
+        "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
-        "fee_usd": 7500,
-        "value_score": 44.6,
+        "fee_usd": 45000,
+        "value_score": 46.7,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Pioneerof the Nile"
         ]
       },
       {
-        "name": "American Pharoah",
-        "farm": "Ashford Stud (Coolmore America)",
+        "name": "Thousand Words",
+        "farm": "Spendthrift Farm",
         "score": 50,
-        "fee_usd": 45000,
-        "value_score": 34.6,
-        "value_grade": "D",
+        "fee_usd": 7500,
+        "value_score": 44.0,
+        "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Pioneerof the Nile"
         ]
@@ -3348,7 +3269,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 30,
         "fee_usd": 45000,
-        "value_score": 54.7,
+        "value_score": 54.5,
         "value_grade": "C",
         "reasons": [
           "Share damsire Holy Bull"
@@ -3359,91 +3280,10 @@
         "farm": "Lane's End",
         "score": 30,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Share damsire Holy Bull"
-        ]
-      }
-    ],
-    "Complexity": [
-      {
-        "name": "Jackie’s Warrior",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 68.0,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Maclean's Music"
-        ]
-      },
-      {
-        "name": "Drain The Clock",
-        "farm": "Gainesway Farm",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 62.5,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Maclean's Music"
-        ]
-      }
-    ],
-    "Essential Quality": [
-      {
-        "name": "Greatest Honour",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 63.6,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Flightline",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 125000,
-        "value_score": 60.8,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Charge It",
-        "farm": "Gainesway Farm",
-        "score": 50,
-        "fee_usd": 12500,
-        "value_score": 52.9,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Arthur's Ride",
-        "farm": "Taylor Made Stallions",
-        "score": 50,
-        "fee_usd": 12500,
-        "value_score": 42.9,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Tacitus",
-        "farm": "Taylor Made Stallions",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 42.2,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
         ]
       }
     ],
@@ -3477,7 +3317,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3488,7 +3328,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 64.7,
+        "value_score": 64.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3499,7 +3339,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3534,7 +3374,7 @@
         "farm": "Three Chimneys Farm",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 52.3,
+        "value_score": 51.9,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Violence"
@@ -3574,6 +3414,30 @@
         ]
       }
     ],
+    "Complexity": [
+      {
+        "name": "Jackie’s Warrior",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 68.0,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Maclean's Music"
+        ]
+      },
+      {
+        "name": "Drain The Clock",
+        "farm": "Gainesway Farm",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 62.5,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Maclean's Music"
+        ]
+      }
+    ],
     "Connect": [
       {
         "name": "Cody's Wish",
@@ -3591,7 +3455,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3602,7 +3466,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 64.7,
+        "value_score": 64.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3628,6 +3492,63 @@
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
+        ]
+      }
+    ],
+    "Essential Quality": [
+      {
+        "name": "Greatest Honour",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 63.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
+        ]
+      },
+      {
+        "name": "Flightline",
+        "farm": "Lane's End",
+        "score": 50,
+        "fee_usd": 125000,
+        "value_score": 60.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
+        ]
+      },
+      {
+        "name": "Charge It",
+        "farm": "Gainesway Farm",
+        "score": 50,
+        "fee_usd": 12500,
+        "value_score": 52.9,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
+        ]
+      },
+      {
+        "name": "Arthur's Ride",
+        "farm": "Taylor Made Stallions",
+        "score": 50,
+        "fee_usd": 12500,
+        "value_score": 42.9,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
+        ]
+      },
+      {
+        "name": "Tacitus",
+        "farm": "Taylor Made Stallions",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 41.7,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Tapit"
         ]
       }
     ],
@@ -3661,7 +3582,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 51.5,
+        "value_score": 51.2,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Goldencents"
@@ -3685,7 +3606,7 @@
         "farm": "Three Chimneys Farm",
         "score": 20,
         "fee_usd": 10000,
-        "value_score": 52.3,
+        "value_score": 51.9,
         "value_grade": "C",
         "reasons": [
           "His damsire Violence is their sire"
@@ -3731,7 +3652,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3742,7 +3663,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 64.7,
+        "value_score": 64.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3764,56 +3685,34 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
         ]
       }
     ],
-    "Bolt D’oro": [
+    "Violence": [
       {
-        "name": "Violence",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "name": "Bolt D’oro",
+        "farm": "Spendthrift Farm",
         "score": 50,
-        "fee_usd": 30000,
-        "value_score": 48.9,
+        "fee_usd": 25000,
+        "value_score": 48.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Medaglia d'Oro"
         ]
       },
       {
-        "name": "Mystic Guide",
-        "farm": "Darley America (Godolphin)",
-        "score": 30,
-        "fee_usd": 7500,
-        "value_score": 65.5,
-        "value_grade": "B",
-        "reasons": [
-          "Share damsire A.P. Indy"
-        ]
-      },
-      {
-        "name": "Silver State",
-        "farm": "Claiborne Farm",
-        "score": 30,
-        "fee_usd": 7500,
-        "value_score": 54.9,
-        "value_grade": "C",
-        "reasons": [
-          "Share damsire A.P. Indy"
-        ]
-      },
-      {
-        "name": "Game Winner",
+        "name": "Union Rags",
         "farm": "Lane's End",
         "score": 30,
-        "fee_usd": 20000,
-        "value_score": 51.7,
-        "value_grade": "C",
+        "fee_usd": 10000,
+        "value_score": 20.2,
+        "value_grade": "F",
         "reasons": [
-          "Share damsire A.P. Indy"
+          "Share damsire Gone West"
         ]
       },
       {
@@ -3822,6 +3721,17 @@
         "score": 20,
         "fee_usd": 35000,
         "value_score": 79.2,
+        "value_grade": "A",
+        "reasons": [
+          "His sire Medaglia d'Oro is their damsire"
+        ]
+      },
+      {
+        "name": "Olympiad",
+        "farm": "Gainesway Farm",
+        "score": 20,
+        "fee_usd": 20000,
+        "value_score": 78.5,
         "value_grade": "A",
         "reasons": [
           "His sire Medaglia d'Oro is their damsire"
@@ -3845,7 +3755,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3856,7 +3766,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 64.7,
+        "value_score": 64.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -3878,34 +3788,69 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
         ]
       }
     ],
-    "Violence": [
+    "Midshipman": [
       {
-        "name": "Bolt D’oro",
-        "farm": "Spendthrift Farm",
+        "name": "Liam's Map",
+        "farm": "Lane's End",
         "score": 50,
-        "fee_usd": 25000,
-        "value_score": 49.4,
+        "fee_usd": 50000,
+        "value_score": 31.4,
+        "value_grade": "D",
+        "reasons": [
+          "Half-brothers — share sire Unbridled's Song"
+        ]
+      },
+      {
+        "name": "Volatile",
+        "farm": "Three Chimneys Farm",
+        "score": 20,
+        "fee_usd": 10000,
+        "value_score": 51.9,
+        "value_grade": "C",
+        "reasons": [
+          "His sire Unbridled's Song is their damsire"
+        ]
+      }
+    ],
+    "Bolt D’oro": [
+      {
+        "name": "Violence",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 30000,
+        "value_score": 49.0,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Medaglia d'Oro"
         ]
       },
       {
-        "name": "Union Rags",
-        "farm": "Lane's End",
+        "name": "Mystic Guide",
+        "farm": "Darley America (Godolphin)",
         "score": 30,
-        "fee_usd": 10000,
-        "value_score": 20.1,
-        "value_grade": "F",
+        "fee_usd": 7500,
+        "value_score": 65.3,
+        "value_grade": "B",
         "reasons": [
-          "Share damsire Gone West"
+          "Share damsire A.P. Indy"
+        ]
+      },
+      {
+        "name": "Silver State",
+        "farm": "Claiborne Farm",
+        "score": 30,
+        "fee_usd": 7500,
+        "value_score": 54.4,
+        "value_grade": "C",
+        "reasons": [
+          "Share damsire A.P. Indy"
         ]
       },
       {
@@ -3924,58 +3869,10 @@
         "farm": "Gainesway Farm",
         "score": 20,
         "fee_usd": 20000,
-        "value_score": 78.8,
+        "value_score": 78.5,
         "value_grade": "A",
         "reasons": [
           "His sire Medaglia d'Oro is their damsire"
-        ]
-      }
-    ],
-    "Basin": [
-      {
-        "name": "Beau Liam",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 76.8,
-        "value_grade": "A",
-        "reasons": [
-          "Half-brothers — share sire Liam's Map"
-        ]
-      },
-      {
-        "name": "Straight No Chaser",
-        "farm": "WinStar Farm",
-        "score": 30,
-        "fee_usd": 10000,
-        "value_score": 33.2,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Johannesburg"
-        ]
-      }
-    ],
-    "Midshipman": [
-      {
-        "name": "Liam's Map",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 50000,
-        "value_score": 31.5,
-        "value_grade": "D",
-        "reasons": [
-          "Half-brothers — share sire Unbridled's Song"
-        ]
-      },
-      {
-        "name": "Volatile",
-        "farm": "Three Chimneys Farm",
-        "score": 20,
-        "fee_usd": 10000,
-        "value_score": 52.3,
-        "value_grade": "C",
-        "reasons": [
-          "His sire Unbridled's Song is their damsire"
         ]
       }
     ],
@@ -3985,7 +3882,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 30,
         "fee_usd": 7500,
-        "value_score": 63.8,
+        "value_score": 63.6,
         "value_grade": "B",
         "reasons": [
           "Share damsire Bernardini"
@@ -3996,7 +3893,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 30,
         "fee_usd": 50000,
-        "value_score": 41.0,
+        "value_score": 40.8,
         "value_grade": "C",
         "reasons": [
           "Share damsire Bernardini"
@@ -4009,7 +3906,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 67.8,
+        "value_score": 67.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Not This Time"
@@ -4038,60 +3935,27 @@
         ]
       }
     ],
-    "Yaupon": [
+    "Basin": [
       {
-        "name": "Kingsbarns",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 17500,
-        "value_score": 73.6,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Uncle Mo"
-        ]
-      },
-      {
-        "name": "Mo Town",
-        "farm": "Ashford Stud (Coolmore America)",
+        "name": "Beau Liam",
+        "farm": "Airdrie Stud",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.8,
-        "value_grade": "B",
+        "value_score": 76.8,
+        "value_grade": "A",
         "reasons": [
-          "Half-brothers — share sire Uncle Mo"
+          "Half-brothers — share sire Liam's Map"
         ]
       },
       {
-        "name": "Mo Donegal",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 5000,
-        "value_score": 62.2,
-        "value_grade": "B",
+        "name": "Straight No Chaser",
+        "farm": "WinStar Farm",
+        "score": 30,
+        "fee_usd": 10000,
+        "value_score": 33.2,
+        "value_grade": "D",
         "reasons": [
-          "Half-brothers — share sire Uncle Mo"
-        ]
-      },
-      {
-        "name": "Golden Pal",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 57.7,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Uncle Mo"
-        ]
-      },
-      {
-        "name": "Arabian Knight",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
-        "score": 50,
-        "fee_usd": 30000,
-        "value_score": 43.2,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Uncle Mo"
+          "Share damsire Johannesburg"
         ]
       }
     ],
@@ -4101,7 +3965,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 65.5,
+        "value_score": 65.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Ghostzapper"
@@ -4134,10 +3998,67 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 20,
         "fee_usd": 200000,
-        "value_score": 34.3,
+        "value_score": 34.0,
         "value_grade": "D",
         "reasons": [
           "His sire Ghostzapper is their damsire"
+        ]
+      }
+    ],
+    "Yaupon": [
+      {
+        "name": "Kingsbarns",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 17500,
+        "value_score": 73.6,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Uncle Mo"
+        ]
+      },
+      {
+        "name": "Mo Town",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 63.6,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Uncle Mo"
+        ]
+      },
+      {
+        "name": "Mo Donegal",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 5000,
+        "value_score": 62.1,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Uncle Mo"
+        ]
+      },
+      {
+        "name": "Golden Pal",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 57.4,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Uncle Mo"
+        ]
+      },
+      {
+        "name": "Arabian Knight",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 30000,
+        "value_score": 43.2,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Uncle Mo"
         ]
       }
     ],
@@ -4147,7 +4068,7 @@
         "farm": "WinStar Farm",
         "score": 80,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Into Mischief",
@@ -4178,17 +4099,6 @@
         ]
       },
       {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
         "name": "Newgate",
         "farm": "Three Chimneys Farm",
         "score": 50,
@@ -4198,6 +4108,41 @@
         "reasons": [
           "Half-brothers — share sire Into Mischief"
         ]
+      },
+      {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      }
+    ],
+    "American Pharoah": [
+      {
+        "name": "Cairo Prince",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 51.0,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Pioneerof the Nile"
+        ]
+      },
+      {
+        "name": "Thousand Words",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 44.0,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Pioneerof the Nile"
+        ]
       }
     ],
     "Mitole": [
@@ -4206,7 +4151,7 @@
         "farm": "Lane's End",
         "score": 30,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Share damsire Indian Charlie"
@@ -4224,37 +4169,13 @@
         ]
       }
     ],
-    "Thousand Words": [
-      {
-        "name": "Cairo Prince",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 51.2,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Pioneerof the Nile"
-        ]
-      },
-      {
-        "name": "American Pharoah",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 50,
-        "fee_usd": 45000,
-        "value_score": 34.6,
-        "value_grade": "D",
-        "reasons": [
-          "Half-brothers — share sire Pioneerof the Nile"
-        ]
-      }
-    ],
     "Lexitonian": [
       {
         "name": "Olympiad",
         "farm": "Gainesway Farm",
         "score": 50,
         "fee_usd": 20000,
-        "value_score": 78.8,
+        "value_score": 78.5,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -4265,19 +4186,8 @@
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 12500,
-        "value_score": 64.3,
+        "value_score": 64.1,
         "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Speightstown"
-        ]
-      },
-      {
-        "name": "Charlatan",
-        "farm": "Hill 'n' Dale Farms at Xalapa",
-        "score": 50,
-        "fee_usd": 25000,
-        "value_score": 54.7,
-        "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
         ]
@@ -4287,7 +4197,18 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 45000,
-        "value_score": 54.7,
+        "value_score": 54.5,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Speightstown"
+        ]
+      },
+      {
+        "name": "Charlatan",
+        "farm": "Hill 'n' Dale Farms at Xalapa",
+        "score": 50,
+        "fee_usd": 25000,
+        "value_score": 54.3,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Speightstown"
@@ -4305,16 +4226,27 @@
         ]
       }
     ],
-    "Upstart": [
+    "Thousand Words": [
       {
-        "name": "Taiba",
-        "farm": "Spendthrift Farm",
-        "score": 20,
-        "fee_usd": 25000,
-        "value_score": 55.0,
+        "name": "Cairo Prince",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 51.0,
         "value_grade": "C",
         "reasons": [
-          "His sire Flatter is their damsire"
+          "Half-brothers — share sire Pioneerof the Nile"
+        ]
+      },
+      {
+        "name": "American Pharoah",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 45000,
+        "value_score": 46.7,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Pioneerof the Nile"
         ]
       }
     ],
@@ -4335,7 +4267,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -4346,7 +4278,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 64.7,
+        "value_score": 64.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -4368,7 +4300,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -4392,7 +4324,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.8,
+        "value_score": 63.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -4403,7 +4335,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 62.2,
+        "value_score": 62.1,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -4414,7 +4346,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 57.7,
+        "value_score": 57.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -4425,7 +4357,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 48.0,
+        "value_score": 47.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -4518,7 +4450,7 @@
         "farm": "Spendthrift Farm",
         "score": 20,
         "fee_usd": 250000,
-        "value_score": 40.9,
+        "value_score": 40.6,
         "value_grade": "C",
         "reasons": [
           "His damsire Harlan's Holiday is their sire"
@@ -4531,7 +4463,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -4542,7 +4474,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -4564,7 +4496,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 50.7,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -4575,10 +4507,23 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 42.2,
+        "value_score": 41.7,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
+        ]
+      }
+    ],
+    "Upstart": [
+      {
+        "name": "Taiba",
+        "farm": "Spendthrift Farm",
+        "score": 20,
+        "fee_usd": 25000,
+        "value_score": 55.0,
+        "value_grade": "C",
+        "reasons": [
+          "His sire Flatter is their damsire"
         ]
       }
     ],
@@ -4588,7 +4533,7 @@
         "farm": "Spendthrift Farm",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "His sire Street Cry (Ire) is their damsire"
@@ -4599,7 +4544,7 @@
         "farm": "Spendthrift Farm",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "His sire Street Cry (Ire) is their damsire"
@@ -4623,7 +4568,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -4634,7 +4579,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -4656,7 +4601,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 50.7,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -4674,70 +4619,13 @@
         ]
       }
     ],
-    "Goldencents": [
-      {
-        "name": "Citizen Bull",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 50,
-        "fee_usd": 45000,
-        "value_score": 74.5,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Highly Motivated",
-        "farm": "Airdrie Stud",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 73.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Newgate",
-        "farm": "Three Chimneys Farm",
-        "score": 50,
-        "fee_usd": 17500,
-        "value_score": 73.6,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Audible",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 71.2,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      },
-      {
-        "name": "Life Is Good",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 60000,
-        "value_score": 69.7,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Into Mischief"
-        ]
-      }
-    ],
     "Maxfield": [
       {
         "name": "Speaker's Corner",
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 59.9,
+        "value_score": 59.7,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Street Sense"
@@ -4748,7 +4636,7 @@
         "farm": "Gainesway Farm",
         "score": 50,
         "fee_usd": 75000,
-        "value_score": 35.1,
+        "value_score": 34.9,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire Street Sense"
@@ -4759,7 +4647,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 30,
         "fee_usd": 7500,
-        "value_score": 63.8,
+        "value_score": 63.6,
         "value_grade": "B",
         "reasons": [
           "Share damsire Bernardini"
@@ -4812,6 +4700,63 @@
         ]
       }
     ],
+    "Goldencents": [
+      {
+        "name": "Citizen Bull",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 50,
+        "fee_usd": 45000,
+        "value_score": 74.5,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Newgate",
+        "farm": "Three Chimneys Farm",
+        "score": 50,
+        "fee_usd": 17500,
+        "value_score": 73.6,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Highly Motivated",
+        "farm": "Airdrie Stud",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 73.4,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Audible",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 7500,
+        "value_score": 70.8,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      },
+      {
+        "name": "Life Is Good",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 60000,
+        "value_score": 69.3,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Into Mischief"
+        ]
+      }
+    ],
     "Hard Spun": [
       {
         "name": "War Front",
@@ -4842,7 +4787,7 @@
         "farm": "Hill 'n' Dale Farms at Xalapa",
         "score": 50,
         "fee_usd": 30000,
-        "value_score": 37.6,
+        "value_score": 37.0,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire Distorted Humor"
@@ -4875,7 +4820,7 @@
         "farm": "WinStar Farm",
         "score": 20,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "His sire Distorted Humor is their damsire"
@@ -4910,7 +4855,7 @@
         "farm": "Lane's End",
         "score": 30,
         "fee_usd": 35000,
-        "value_score": 65.6,
+        "value_score": 62.4,
         "value_grade": "B",
         "reasons": [
           "Share damsire Dehere"
@@ -4921,7 +4866,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 65.5,
+        "value_score": 65.3,
         "value_grade": "B",
         "reasons": [
           "His sire A.P. Indy is their damsire"
@@ -4932,18 +4877,18 @@
         "farm": "Claiborne Farm",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 54.9,
+        "value_score": 54.4,
         "value_grade": "C",
         "reasons": [
           "His sire A.P. Indy is their damsire"
         ]
       },
       {
-        "name": "Game Winner",
-        "farm": "Lane's End",
+        "name": "Bolt D’oro",
+        "farm": "Spendthrift Farm",
         "score": 20,
-        "fee_usd": 20000,
-        "value_score": 51.7,
+        "fee_usd": 25000,
+        "value_score": 48.3,
         "value_grade": "C",
         "reasons": [
           "His sire A.P. Indy is their damsire"
@@ -4967,7 +4912,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 68.9,
+        "value_score": 68.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -4978,7 +4923,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 64.7,
+        "value_score": 64.5,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Curlin"
@@ -5000,10 +4945,91 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 50.4,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Curlin"
+        ]
+      }
+    ],
+    "Ransom the Moon": [
+      {
+        "name": "Johannes",
+        "farm": "Claiborne Farm",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 33.2,
+        "value_grade": "D",
+        "reasons": [
+          "Half-brothers — share sire Malibu Moon"
+        ]
+      },
+      {
+        "name": "Sierra Leone",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 20,
+        "fee_usd": 75000,
+        "value_score": 83.0,
+        "value_grade": "A",
+        "reasons": [
+          "His sire Malibu Moon is their damsire"
+        ]
+      },
+      {
+        "name": "Girvin",
+        "farm": "Airdrie Stud",
+        "score": 20,
+        "fee_usd": 30000,
+        "value_score": 54.4,
+        "value_grade": "C",
+        "reasons": [
+          "His sire Malibu Moon is their damsire"
+        ]
+      }
+    ],
+    "Dr. Schivel": [
+      {
+        "name": "Forte",
+        "farm": "Spendthrift Farm",
+        "score": 50,
+        "fee_usd": 35000,
+        "value_score": 70.0,
+        "value_grade": "B",
+        "reasons": [
+          "Half-brothers — share sire Violence"
+        ]
+      },
+      {
+        "name": "Volatile",
+        "farm": "Three Chimneys Farm",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 51.9,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Violence"
+        ]
+      },
+      {
+        "name": "Mullikin",
+        "farm": "WinStar Farm",
+        "score": 50,
+        "fee_usd": 10000,
+        "value_score": 50.7,
+        "value_grade": "C",
+        "reasons": [
+          "Half-brothers — share sire Violence"
+        ]
+      },
+      {
+        "name": "Raging Torrent",
+        "farm": "Lane's End",
+        "score": 20,
+        "fee_usd": 15000,
+        "value_score": 49.9,
+        "value_grade": "C",
+        "reasons": [
+          "His sire Violence is their damsire"
         ]
       }
     ],
@@ -5057,91 +5083,10 @@
         "farm": "WinStar Farm",
         "score": 20,
         "fee_usd": 60000,
-        "value_score": 69.7,
+        "value_score": 69.3,
         "value_grade": "B",
         "reasons": [
           "His sire Distorted Humor is their damsire"
-        ]
-      }
-    ],
-    "Dr. Schivel": [
-      {
-        "name": "Forte",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 35000,
-        "value_score": 70.0,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Violence"
-        ]
-      },
-      {
-        "name": "Volatile",
-        "farm": "Three Chimneys Farm",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 52.3,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Violence"
-        ]
-      },
-      {
-        "name": "Mullikin",
-        "farm": "WinStar Farm",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 50.7,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Violence"
-        ]
-      },
-      {
-        "name": "Raging Torrent",
-        "farm": "Lane's End",
-        "score": 20,
-        "fee_usd": 15000,
-        "value_score": 49.9,
-        "value_grade": "C",
-        "reasons": [
-          "His sire Violence is their damsire"
-        ]
-      }
-    ],
-    "Ransom the Moon": [
-      {
-        "name": "Johannes",
-        "farm": "Claiborne Farm",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 33.2,
-        "value_grade": "D",
-        "reasons": [
-          "Half-brothers — share sire Malibu Moon"
-        ]
-      },
-      {
-        "name": "Sierra Leone",
-        "farm": "Ashford Stud (Coolmore America)",
-        "score": 20,
-        "fee_usd": 75000,
-        "value_score": 83.0,
-        "value_grade": "A",
-        "reasons": [
-          "His sire Malibu Moon is their damsire"
-        ]
-      },
-      {
-        "name": "Girvin",
-        "farm": "Airdrie Stud",
-        "score": 20,
-        "fee_usd": 30000,
-        "value_score": 56.5,
-        "value_grade": "C",
-        "reasons": [
-          "His sire Malibu Moon is their damsire"
         ]
       }
     ],
@@ -5200,7 +5145,7 @@
         "farm": "Spendthrift Farm",
         "score": 30,
         "fee_usd": 5000,
-        "value_score": 62.2,
+        "value_score": 62.1,
         "value_grade": "B",
         "reasons": [
           "Share damsire Pulpit"
@@ -5224,7 +5169,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5235,7 +5180,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5257,7 +5202,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 50.7,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5272,41 +5217,6 @@
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
-        ]
-      }
-    ],
-    "Not This Time": [
-      {
-        "name": "Liam's Map",
-        "farm": "Lane's End",
-        "score": 30,
-        "fee_usd": 50000,
-        "value_score": 31.5,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Trippi"
-        ]
-      },
-      {
-        "name": "Gun Runner",
-        "farm": "Three Chimneys Farm",
-        "score": 20,
-        "fee_usd": 250000,
-        "value_score": 61.8,
-        "value_grade": "B",
-        "reasons": [
-          "His sire Giant's Causeway is their damsire"
-        ]
-      },
-      {
-        "name": "Johannes",
-        "farm": "Claiborne Farm",
-        "score": 20,
-        "fee_usd": 10000,
-        "value_score": 33.2,
-        "value_grade": "D",
-        "reasons": [
-          "His sire Giant's Causeway is their damsire"
         ]
       }
     ],
@@ -5327,7 +5237,7 @@
         "farm": "Hill 'n' Dale Farms at Xalapa",
         "score": 30,
         "fee_usd": 25000,
-        "value_score": 54.7,
+        "value_score": 54.3,
         "value_grade": "C",
         "reasons": [
           "Share damsire Quiet American"
@@ -5345,27 +5255,38 @@
         ]
       }
     ],
-    "Mckinzie": [
+    "Not This Time": [
       {
-        "name": "Speaker's Corner",
-        "farm": "Darley America (Godolphin)",
-        "score": 50,
-        "fee_usd": 10000,
-        "value_score": 59.9,
-        "value_grade": "C",
+        "name": "Liam's Map",
+        "farm": "Lane's End",
+        "score": 30,
+        "fee_usd": 50000,
+        "value_score": 31.4,
+        "value_grade": "D",
         "reasons": [
-          "Half-brothers — share sire Street Sense"
+          "Share damsire Trippi"
         ]
       },
       {
-        "name": "Maxfield",
-        "farm": "Darley America (Godolphin)",
-        "score": 50,
-        "fee_usd": 50000,
-        "value_score": 41.0,
-        "value_grade": "C",
+        "name": "Gun Runner",
+        "farm": "Three Chimneys Farm",
+        "score": 20,
+        "fee_usd": 250000,
+        "value_score": 61.6,
+        "value_grade": "B",
         "reasons": [
-          "Half-brothers — share sire Street Sense"
+          "His sire Giant's Causeway is their damsire"
+        ]
+      },
+      {
+        "name": "Johannes",
+        "farm": "Claiborne Farm",
+        "score": 20,
+        "fee_usd": 10000,
+        "value_score": 33.2,
+        "value_grade": "D",
+        "reasons": [
+          "His sire Giant's Causeway is their damsire"
         ]
       }
     ],
@@ -5375,7 +5296,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5386,7 +5307,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5408,7 +5329,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 50.7,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5426,27 +5347,27 @@
         ]
       }
     ],
-    "American Pharoah": [
+    "Mckinzie": [
       {
-        "name": "Cairo Prince",
-        "farm": "Airdrie Stud",
+        "name": "Speaker's Corner",
+        "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 10000,
-        "value_score": 51.2,
+        "value_score": 59.7,
         "value_grade": "C",
         "reasons": [
-          "Half-brothers — share sire Pioneerof the Nile"
+          "Half-brothers — share sire Street Sense"
         ]
       },
       {
-        "name": "Thousand Words",
-        "farm": "Spendthrift Farm",
+        "name": "Maxfield",
+        "farm": "Darley America (Godolphin)",
         "score": 50,
-        "fee_usd": 7500,
-        "value_score": 44.6,
+        "fee_usd": 50000,
+        "value_score": 40.8,
         "value_grade": "C",
         "reasons": [
-          "Half-brothers — share sire Pioneerof the Nile"
+          "Half-brothers — share sire Street Sense"
         ]
       }
     ],
@@ -5480,7 +5401,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 65.5,
+        "value_score": 65.3,
         "value_grade": "B",
         "reasons": [
           "His damsire Ghostzapper is their sire"
@@ -5504,7 +5425,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5515,7 +5436,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5537,7 +5458,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 50.7,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5555,26 +5476,13 @@
         ]
       }
     ],
-    "Quality Road": [
-      {
-        "name": "Essential Quality",
-        "farm": "Darley America (Godolphin)",
-        "score": 20,
-        "fee_usd": 25000,
-        "value_score": 50.7,
-        "value_grade": "C",
-        "reasons": [
-          "His sire Elusive Quality is their damsire"
-        ]
-      }
-    ],
     "Mineshaft": [
       {
         "name": "Take Charge Indy",
         "farm": "WinStar Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 38.4,
+        "value_score": 38.2,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire A.P. Indy"
@@ -5596,7 +5504,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 65.5,
+        "value_score": 65.3,
         "value_grade": "B",
         "reasons": [
           "His sire A.P. Indy is their damsire"
@@ -5607,18 +5515,18 @@
         "farm": "Claiborne Farm",
         "score": 20,
         "fee_usd": 7500,
-        "value_score": 54.9,
+        "value_score": 54.4,
         "value_grade": "C",
         "reasons": [
           "His sire A.P. Indy is their damsire"
         ]
       },
       {
-        "name": "Game Winner",
-        "farm": "Lane's End",
+        "name": "Bolt D’oro",
+        "farm": "Spendthrift Farm",
         "score": 20,
-        "fee_usd": 20000,
-        "value_score": 51.7,
+        "fee_usd": 25000,
+        "value_score": 48.3,
         "value_grade": "C",
         "reasons": [
           "His sire A.P. Indy is their damsire"
@@ -5673,13 +5581,26 @@
         ]
       }
     ],
+    "Quality Road": [
+      {
+        "name": "Essential Quality",
+        "farm": "Darley America (Godolphin)",
+        "score": 20,
+        "fee_usd": 25000,
+        "value_score": 50.1,
+        "value_grade": "C",
+        "reasons": [
+          "His sire Elusive Quality is their damsire"
+        ]
+      }
+    ],
     "Johannes": [
       {
         "name": "Ransom the Moon",
         "farm": "Calumet Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 37.4,
+        "value_score": 37.7,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire Malibu Moon"
@@ -5690,7 +5611,7 @@
         "farm": "Three Chimneys Farm",
         "score": 30,
         "fee_usd": 250000,
-        "value_score": 61.8,
+        "value_score": 61.6,
         "value_grade": "B",
         "reasons": [
           "Share damsire Giant's Causeway"
@@ -5712,7 +5633,7 @@
         "farm": "Airdrie Stud",
         "score": 20,
         "fee_usd": 30000,
-        "value_score": 56.5,
+        "value_score": 54.4,
         "value_grade": "C",
         "reasons": [
           "His sire Malibu Moon is their damsire"
@@ -5723,7 +5644,7 @@
         "farm": "Taylor Made Stallions",
         "score": 20,
         "fee_usd": 250000,
-        "value_score": 36.3,
+        "value_score": 36.1,
         "value_grade": "D",
         "reasons": [
           "His damsire Giant's Causeway is their sire"
@@ -5736,7 +5657,7 @@
         "farm": "Spendthrift Farm",
         "score": 30,
         "fee_usd": 5000,
-        "value_score": 48.5,
+        "value_score": 48.1,
         "value_grade": "C",
         "reasons": [
           "Share damsire Johannesburg"
@@ -5749,7 +5670,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.6,
+        "value_score": 63.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5760,7 +5681,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 125000,
-        "value_score": 60.8,
+        "value_score": 60.4,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5782,7 +5703,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 50.7,
+        "value_score": 50.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Tapit"
@@ -5817,7 +5738,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 63.8,
+        "value_score": 63.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -5828,7 +5749,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 62.2,
+        "value_score": 62.1,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -5839,7 +5760,7 @@
         "farm": "Ashford Stud (Coolmore America)",
         "score": 50,
         "fee_usd": 25000,
-        "value_score": 57.7,
+        "value_score": 57.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -5850,7 +5771,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 60000,
-        "value_score": 48.0,
+        "value_score": 47.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
@@ -5887,7 +5808,7 @@
         "farm": "Taylor Made Stallions",
         "score": 30,
         "fee_usd": 250000,
-        "value_score": 36.3,
+        "value_score": 36.1,
         "value_grade": "D",
         "reasons": [
           "Share damsire Trippi"
@@ -5898,7 +5819,7 @@
         "farm": "Three Chimneys Farm",
         "score": 20,
         "fee_usd": 10000,
-        "value_score": 52.3,
+        "value_score": 51.9,
         "value_grade": "C",
         "reasons": [
           "His sire Unbridled's Song is their damsire"
@@ -5931,17 +5852,6 @@
       }
     ],
     "Curlin": [
-      {
-        "name": "Frosted",
-        "farm": "Darley America (Godolphin)",
-        "score": 30,
-        "fee_usd": 12500,
-        "value_score": 29.6,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Deputy Minister"
-        ]
-      },
       {
         "name": "Gun Pilot",
         "farm": "Three Chimneys Farm",
@@ -5993,7 +5903,7 @@
         "farm": "Hill 'n' Dale Farms at Xalapa",
         "score": 20,
         "fee_usd": 225000,
-        "value_score": 30.9,
+        "value_score": 30.8,
         "value_grade": "D",
         "reasons": [
           "His damsire Smart Strike is their sire"
@@ -6006,7 +5916,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 7500,
-        "value_score": 75.6,
+        "value_score": 75.2,
         "value_grade": "A",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
@@ -6017,7 +5927,7 @@
         "farm": "Three Chimneys Farm",
         "score": 50,
         "fee_usd": 250000,
-        "value_score": 61.8,
+        "value_score": 61.6,
         "value_grade": "B",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
@@ -6028,18 +5938,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 75000,
-        "value_score": 52.5,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Candy Ride (Arg)"
-        ]
-      },
-      {
-        "name": "Game Winner",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 20000,
-        "value_score": 51.7,
+        "value_score": 52.4,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Candy Ride (Arg)"
@@ -6050,67 +5949,21 @@
         "farm": "Gainesway Farm",
         "score": 20,
         "fee_usd": 20000,
-        "value_score": 78.8,
+        "value_score": 78.5,
         "value_grade": "A",
         "reasons": [
           "His damsire Speightstown is their sire"
         ]
-      }
-    ],
-    "Frosted": [
-      {
-        "name": "Greatest Honour",
-        "farm": "Spendthrift Farm",
-        "score": 50,
-        "fee_usd": 7500,
-        "value_score": 63.6,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
       },
       {
-        "name": "Flightline",
-        "farm": "Lane's End",
-        "score": 50,
-        "fee_usd": 125000,
-        "value_score": 60.8,
-        "value_grade": "B",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Charge It",
-        "farm": "Gainesway Farm",
-        "score": 50,
-        "fee_usd": 12500,
-        "value_score": 52.9,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Essential Quality",
-        "farm": "Darley America (Godolphin)",
-        "score": 50,
+        "name": "Epicenter",
+        "farm": "Ashford Stud (Coolmore America)",
+        "score": 20,
         "fee_usd": 25000,
-        "value_score": 50.7,
-        "value_grade": "C",
+        "value_score": 67.5,
+        "value_grade": "B",
         "reasons": [
-          "Half-brothers — share sire Tapit"
-        ]
-      },
-      {
-        "name": "Arthur's Ride",
-        "farm": "Taylor Made Stallions",
-        "score": 50,
-        "fee_usd": 12500,
-        "value_score": 42.9,
-        "value_grade": "C",
-        "reasons": [
-          "Half-brothers — share sire Tapit"
+          "His sire Candy Ride (Arg) is their damsire"
         ]
       }
     ],
@@ -6120,7 +5973,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 28.1,
+        "value_score": 27.6,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire War Front"
@@ -6142,7 +5995,7 @@
         "farm": "Claiborne Farm",
         "score": 30,
         "fee_usd": 25000,
-        "value_score": 26.1,
+        "value_score": 25.4,
         "value_grade": "D",
         "reasons": [
           "Share damsire Seeking the Gold"
@@ -6177,7 +6030,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 75000,
-        "value_score": 28.5,
+        "value_score": 28.3,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire War Front"
@@ -6234,7 +6087,7 @@
         "farm": "WinStar Farm",
         "score": 30,
         "fee_usd": 7500,
-        "value_score": 71.2,
+        "value_score": 70.8,
         "value_grade": "B",
         "reasons": [
           "Share damsire Gilded Time"
@@ -6247,7 +6100,7 @@
         "farm": "Hill 'n' Dale Farms at Xalapa",
         "score": 30,
         "fee_usd": 30000,
-        "value_score": 37.6,
+        "value_score": 37.0,
         "value_grade": "D",
         "reasons": [
           "Share damsire Unbridled"
@@ -6258,7 +6111,7 @@
         "farm": "Spendthrift Farm",
         "score": 20,
         "fee_usd": 5000,
-        "value_score": 62.2,
+        "value_score": 62.1,
         "value_grade": "B",
         "reasons": [
           "His sire Pulpit is their damsire"
@@ -6282,7 +6135,7 @@
         "farm": "Taylor Made Stallions",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 52.2,
+        "value_score": 52.1,
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Arch"
@@ -6293,7 +6146,7 @@
         "farm": "Spendthrift Farm",
         "score": 30,
         "fee_usd": 75000,
-        "value_score": 28.5,
+        "value_score": 28.3,
         "value_grade": "D",
         "reasons": [
           "Share damsire Seeking the Gold"
@@ -6306,7 +6159,7 @@
         "farm": "Taylor Made Stallions",
         "score": 30,
         "fee_usd": 5000,
-        "value_score": 52.2,
+        "value_score": 52.1,
         "value_grade": "C",
         "reasons": [
           "Share damsire Forestry"
@@ -6317,7 +6170,7 @@
         "farm": "Darley America (Godolphin)",
         "score": 30,
         "fee_usd": 175000,
-        "value_score": 32.7,
+        "value_score": 32.5,
         "value_grade": "D",
         "reasons": [
           "Share damsire Forestry"
@@ -6330,7 +6183,7 @@
         "farm": "Spendthrift Farm",
         "score": 50,
         "fee_usd": 75000,
-        "value_score": 28.5,
+        "value_score": 28.3,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire War Front"
@@ -6341,7 +6194,7 @@
         "farm": "Lane's End",
         "score": 50,
         "fee_usd": 5000,
-        "value_score": 28.1,
+        "value_score": 27.6,
         "value_grade": "D",
         "reasons": [
           "Half-brothers — share sire War Front"
@@ -6376,7 +6229,7 @@
         "farm": "Hill 'n' Dale Farms at Xalapa",
         "score": 30,
         "fee_usd": 30000,
-        "value_score": 48.9,
+        "value_score": 49.0,
         "value_grade": "C",
         "reasons": [
           "Share damsire Gone West"

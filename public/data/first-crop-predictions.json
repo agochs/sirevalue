@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T17:05:58Z",
+  "generated_at": "2026-04-27T17:46:57Z",
   "method": "weighted-comparator-from-similar-stallions-with-pinhook-data",
   "thresholds": {
     "min_pairs_per_comparator": 5,
@@ -8,8 +8,8 @@
     "medium_conf_total_pairs": 20
   },
   "summary": {
-    "stallions_total": 58,
-    "predicted": 44,
+    "stallions_total": 59,
+    "predicted": 45,
     "no_comparators": 14
   },
   "stallions": [
@@ -440,6 +440,56 @@
         "median_twoyo_price": 81890,
         "comparators_n": 2,
         "comparator_pairs_total": 41,
+        "confidence": "medium"
+      }
+    },
+    {
+      "name": "American Pharoah",
+      "farm": "Ashford Stud (Coolmore America)",
+      "sire": "Pioneerof the Nile",
+      "damsire": "Yankee Gentleman",
+      "pedigree": "Pioneerof the Nile – Littleprincessemma, by Yankee Gentleman",
+      "fee_usd": 45000,
+      "entered_stud_year": 2016,
+      "year_of_birth": 2012,
+      "value_score": 46.7,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Cairo Prince",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Pioneerof the Nile"
+          ],
+          "matched_pairs": 24,
+          "median_return_pct": 147.2,
+          "mean_return_pct": 354.8,
+          "positive_return_pct": 87.5,
+          "median_yearling_price": 25000,
+          "median_twoyo_price": 71000
+        },
+        {
+          "name": "Thousand Words",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Pioneerof the Nile"
+          ],
+          "matched_pairs": 33,
+          "median_return_pct": 100.0,
+          "mean_return_pct": 202.0,
+          "positive_return_pct": 84.8,
+          "median_yearling_price": 15000,
+          "median_twoyo_price": 42000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 119.9,
+        "mean_return_pct": 266.3,
+        "positive_pct": 85.9,
+        "median_yearling_price": 19210,
+        "median_twoyo_price": 54210,
+        "comparators_n": 2,
+        "comparator_pairs_total": 57,
         "confidence": "medium"
       }
     },
