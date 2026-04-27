@@ -529,12 +529,15 @@ body {
     }
 
     function parseQuery(q) {
-      // Returns a {filters, pills} object. Filters is a list of predicates;
-      // pills is a list of human-readable summaries for display.
-      const text = (q || '').toLowerCase().trim();
+      // Returns a {filters, pills, sortOverride} object. Filters is a list of
+      // predicates; pills is a list of human-readable summaries for display.
+      // `text` is mutable — once a phrase is parsed (e.g. "sort by fee asc"),
+      // we strip it so later parsers (the "by <sire>" matcher in particular)
+      // don't re-match the same words.
+      let text = (q || '').toLowerCase().trim();
       const filters = [];
       const pills = [];
-      if (!text) return {filters, pills};
+      if (!text) return {filters, pills, sortOverride: null};
 
       // Money: "$20k", "20000", "20k", "$1.5m"
       const moneyRe = /\$?(\d+(?:\.\d+)?)\s*([km])?/g;
@@ -583,10 +586,13 @@ body {
       }
 
       // Sort override: "sort by fee desc", "sorted by score asc", "by grade"
-      // (only when paired with the word 'sort'/'sorted' to avoid colliding
-      //  with the existing "by <sire>" parser).
+      // (only when paired with the word 'sort'/'sorted'/'order' to avoid
+      //  colliding with the existing "by <sire>" parser). After matching,
+      //  strip the matched substring from `text` so the later "by <sire>"
+      //  regex doesn't re-grab "by fee".
       let sortOverride = null;
-      const sortM = /(?:sort|sorted|order)\s+by\s+(rank|name|farm|fee|tier|score|grade)(?:\s+(asc|ascending|desc|descending|high|low))?/.exec(text);
+      const sortRe = /(?:sort|sorted|order)\s+by\s+(rank|name|farm|fee|tier|score|grade)(?:\s+(asc|ascending|desc|descending|high|low))?/;
+      const sortM = sortRe.exec(text);
       if (sortM) {
         const col = sortM[1];
         let dir = 'desc';
@@ -598,6 +604,8 @@ body {
         }
         sortOverride = { col: col, dir: dir };
         pills.push('sorted by ' + col + ' ' + dir);
+        // Strip the matched phrase so it can't be re-parsed by other rules.
+        text = (text.slice(0, sortM.index) + ' ' + text.slice(sortM.index + sortM[0].length)).replace(/\s+/g, ' ').trim();
       }
 
       // Maturity stage
