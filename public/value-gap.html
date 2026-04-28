@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Value Gap</title>
+<meta property="og:title" content="SireValue — Value Gap"/>
+<meta property="og:description" content="Stallions whose Value Score sits well above or below their fee-band peers. Surfaces underpriced gems and overpriced veterans."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.home-link {
+  display: inline-block; margin-bottom: 16px; font-size: 13px;
+  color: var(--ink-soft); text-decoration: none;
+}
+.home-link:hover { color: var(--ink); }
+
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 22px 26px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 24px; margin: 0 0 8px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 78ch; }
+
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 26px 0 12px; font-weight: 600;
+}
+
+.split {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+}
+.col {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 22px;
+}
+.col h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 18px; margin: 0 0 4px; font-weight: 700;
+}
+.col h2.up   { color: var(--good); }
+.col h2.down { color: var(--weak); }
+.col .sub { font-size: 12px; color: var(--ink-soft); margin-bottom: 12px; }
+.row {
+  display: grid; grid-template-columns: auto 1fr auto auto; gap: 12px;
+  align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--rule);
+  font-size: 13px;
+}
+.row:last-child { border-bottom: none; }
+.row .rk { font-family: "Iowan Old Style", Georgia, serif; color: var(--ink-soft); width: 22px; }
+.row a.name { color: var(--ink); text-decoration: none; font-weight: 600; }
+.row a.name:hover { text-decoration: underline; }
+.row .meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.row .score-now {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 14px;
+  color: var(--ink); white-space: nowrap;
+}
+.row .gap { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 16px; white-space: nowrap; }
+.row .gap.up   { color: var(--good); }
+.row .gap.down { color: var(--weak); }
+
+.bands {
+  margin-top: 26px;
+}
+.bands table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+.bands th, .bands td { padding: 10px 14px; text-align: left; font-size: 13px; border-bottom: 1px solid var(--rule); }
+.bands th { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); background: #f8f4e8; }
+.bands tr:last-child td { border-bottom: none; }
+.bands td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: "Iowan Old Style", Georgia, serif; }
+
+@media (max-width: 720px) {
+  .split { grid-template-columns: 1fr; }
+}
+.footer { margin-top: 30px; font-size: 11px; color: var(--ink-soft); text-align: center; }
+.footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Value Gap</div>
+  </div>
+
+  <a href="/" class="home-link">← Home</a>
+
+  <div class="hero">
+    <h1>Value Gap · price-to-score outliers</h1>
+    <p><b>How this works.</b> For every stallion with a published fee, we compute the median Value Score of all stallions in the same fee band. Value Gap = stallion's score − band median. Positive = scoring better than peers at the same price (likely undervalued). Negative = scoring worse (likely overvalued).</p>
+    <p style="margin-top:6px;">This is the lens for the question "is this fee fair?". The further a stallion sits from their band median, the louder the signal in either direction.</p>
+  </div>
+
+  <div class="split">
+    <div class="col">
+      <h2 class="up">Most undervalued</h2>
+      <div class="sub">Score is well above their fee-band peers</div>
+      <div id="undervalued-list"><div style="padding:20px;color:var(--ink-soft);text-align:center;">Loading…</div></div>
+    </div>
+    <div class="col">
+      <h2 class="down">Most overvalued</h2>
+      <div class="sub">Score is well below their fee-band peers</div>
+      <div id="overvalued-list"><div style="padding:20px;color:var(--ink-soft);text-align:center;">Loading…</div></div>
+    </div>
+  </div>
+
+  <div class="section-title" style="margin-top:30px;">Fee-band medians (the comparison anchors)</div>
+  <div class="bands">
+    <table>
+      <thead><tr><th>Fee band</th><th class="num">Stallions</th><th class="num">Median score</th><th class="num">Range (min–max)</th></tr></thead>
+      <tbody id="bands-body"><tr><td colspan="4" style="padding:20px;color:var(--ink-soft);text-align:center;">Loading…</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <span>Methodology: <a href="/methodology.html">overview</a> · Source: <code>scores.json</code></span>
+  </div>
+
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function bandLabel(b) {
+    return ({
+      'u10k':     'under $10K',
+      '10_25k':   '$10K–$25K',
+      '25_50k':   '$25K–$50K',
+      '50_100k':  '$50K–$100K',
+      '100kplus': '$100K+',
+    })[b] || b;
+  }
+  function bandSortKey(b) {
+    return ({ 'u10k': 0, '10_25k': 1, '25_50k': 2, '50_100k': 3, '100kplus': 4 })[b] != null
+      ? ({ 'u10k': 0, '10_25k': 1, '25_50k': 2, '50_100k': 3, '100kplus': 4 })[b]
+      : 99;
+  }
+
+  let data;
+  try {
+    const resp = await fetch('/data/scores.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('undervalued-list').innerHTML =
+      '<div style="padding:20px;color:#9b2c2c;">Failed to load: ' + escapeHtml(e.message) + '</div>';
+    return;
+  }
+
+  // Compute band medians + min/max
+  const groups = {};
+  data.stallions.forEach(s => {
+    const band = (s.score.peer_group || {}).fee_band;
+    if (!band || !s.fee_usd) return;
+    (groups[band] = groups[band] || []).push(s.score.value);
+  });
+  const medians = {};
+  const stats = {};
+  Object.keys(groups).forEach(b => {
+    const arr = groups[b].slice().sort((a, b) => a - b);
+    medians[b] = arr[Math.floor(arr.length / 2)];
+    stats[b] = { n: arr.length, min: arr[0], max: arr[arr.length - 1], median: medians[b] };
+  });
+
+  // Attach _value_gap
+  data.stallions.forEach(s => {
+    const band = (s.score.peer_group || {}).fee_band;
+    if (!band || !s.fee_usd || medians[band] == null) { s._value_gap = null; return; }
+    s._value_gap = s.score.value - medians[band];
+    s._fee_band = band;
+  });
+
+  // Sort by value gap; take top tail and bottom tail
+  const withGap = data.stallions.filter(s => s._value_gap != null);
+  const sortedDesc = withGap.slice().sort((a, b) => b._value_gap - a._value_gap);
+  const sortedAsc  = withGap.slice().sort((a, b) => a._value_gap - b._value_gap);
+
+  const TOP = 20;
+
+  function renderRow(s, i, dirCls) {
+    const url = '/stallion-card.html?s=' + encodeURIComponent(s.name);
+    const fee = s.fee_usd ? '$' + s.fee_usd.toLocaleString() : (s.fee_qualifier || '—');
+    const sign = s._value_gap > 0 ? '+' : '';
+    return '<div class="row">'
+      + '<div class="rk">' + (i+1) + '.</div>'
+      + '<div>'
+      +   '<a class="name" href="' + url + '">' + escapeHtml(s.name) + '</a>'
+      +   '<div class="meta">' + escapeHtml(s.farm) + ' · ' + fee + ' · ' + bandLabel(s._fee_band) + ' band (median ' + medians[s._fee_band].toFixed(1) + ')</div>'
+      + '</div>'
+      + '<div class="score-now">' + s.score.value.toFixed(1) + '</div>'
+      + '<div class="gap ' + dirCls + '">' + sign + s._value_gap.toFixed(1) + '</div>'
+      + '</div>';
+  }
+
+  document.getElementById('undervalued-list').innerHTML =
+    sortedDesc.slice(0, TOP).map((s, i) => renderRow(s, i, 'up')).join('')
+    || '<div style="padding:20px;color:var(--ink-soft);">No data yet.</div>';
+  document.getElementById('overvalued-list').innerHTML =
+    sortedAsc.slice(0, TOP).map((s, i) => renderRow(s, i, 'down')).join('')
+    || '<div style="padding:20px;color:var(--ink-soft);">No data yet.</div>';
+
+  // Band median table
+  const bands = Object.keys(stats).sort((a, b) => bandSortKey(a) - bandSortKey(b));
+  document.getElementById('bands-body').innerHTML = bands.map(b => {
+    const st = stats[b];
+    return '<tr>'
+      + '<td>' + bandLabel(b) + '</td>'
+      + '<td class="num">' + st.n + '</td>'
+      + '<td class="num">' + st.median.toFixed(1) + '</td>'
+      + '<td class="num">' + st.min.toFixed(1) + ' – ' + st.max.toFixed(1) + '</td>'
+      + '</tr>';
+  }).join('');
+})();
+</script>
+</body>
+</html>

@@ -653,6 +653,32 @@ async function bootSireValue() {
   var stallions = data.stallions;
   document.getElementById('model-version').textContent = 'Model ' + data.model_version;
 
+  // ---------- Value Gap (mirror of home-page logic) ----------
+  // Compute median score per fee_band, then attach _value_gap = score - median
+  // to each stallion. Surfaces in the headline callout below.
+  (function computeValueGaps() {
+    var groups = {};
+    stallions.forEach(function(s) {
+      var band = (s.score.peer_group || {}).fee_band;
+      if (!band || !s.fee_usd) return;
+      (groups[band] = groups[band] || []).push(s.score.value);
+    });
+    var medians = {};
+    Object.keys(groups).forEach(function(b) {
+      var arr = groups[b].slice().sort(function(a, b) { return a - b; });
+      medians[b] = arr[Math.floor(arr.length / 2)];
+    });
+    stallions.forEach(function(s) {
+      var band = (s.score.peer_group || {}).fee_band;
+      if (!band || !s.fee_usd || medians[band] == null) {
+        s._value_gap = null; return;
+      }
+      s._value_gap = +(s.score.value - medians[band]).toFixed(1);
+      s._fee_band_median = +medians[band].toFixed(1);
+      s._fee_band_n = groups[band].length;
+    });
+  })();
+
   // Progeny data (leading sires + BMS) — loaded best-effort. Used by renderProgeny().
   // Keyed by normalized name so lookups survive minor casing/suffix differences.
   var sireIndex = {}, bmsIndex = {};
@@ -1448,6 +1474,28 @@ async function bootSireValue() {
       }
     }
 
+    // Value gap line — shown when we have a meaningful gap (≥3 pts in
+    // either direction) and a fee in a populated band.
+    var gapHtml = '';
+    if (s._value_gap != null && Math.abs(s._value_gap) >= 3 && s._fee_band_median != null) {
+      var gapCls   = s._value_gap > 0 ? 'up' : 'down';
+      var gapVerb  = s._value_gap > 0 ? 'undervalued' : 'overvalued';
+      var gapSign  = s._value_gap > 0 ? '+' : '';
+      var feeBandLabel = ((s.score.peer_group || {}).fee_band || '')
+        .replace('u10k', 'under $10K')
+        .replace('10_25k', '$10K–$25K')
+        .replace('25_50k', '$25K–$50K')
+        .replace('50_100k', '$50K–$100K')
+        .replace('100kplus', '$100K+');
+      gapHtml = '<div class="notable-signal">'
+        + '<strong>Value gap:</strong> '
+        + '<span class="' + gapCls + '">' + gapSign + s._value_gap.toFixed(1) + ' pts</span> '
+        + 'vs. ' + feeBandLabel + ' band median (' + s._fee_band_median.toFixed(1)
+        + ' across ' + s._fee_band_n + ' stallions). Likely '
+        + '<strong>' + gapVerb + '</strong> at this fee.'
+        + '</div>';
+    }
+
     return ''
       + '<div class="headline">'
       +   '<div class="headline-row">'
@@ -1456,6 +1504,7 @@ async function bootSireValue() {
       +   '</div>'
       +   (tierGloss   ? '<div class="tier-blurb">' + escapeHtml(tierGloss) + '</div>' : '')
       +   (notableHtml ? '<div class="notable-signal">' + notableHtml + '</div>'      : '')
+      +   gapHtml
       + '</div>';
   }
 

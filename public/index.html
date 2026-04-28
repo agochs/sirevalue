@@ -486,15 +486,16 @@ body {
           <th data-sort="fee"><span class="lbl">Fee</span><span class="arrow">▼</span></th>
           <th data-sort="tier"><span class="lbl">Tier</span><span class="arrow">▼</span></th>
           <th data-sort="score"><span class="lbl">Score</span><span class="arrow">▼</span></th>
+          <th data-sort="value_gap" title="Score minus the median score of all stallions in the same fee band. Positive = better than peers at the same price (undervalued)."><span class="lbl">Value Gap</span><span class="arrow">▼</span></th>
           <th data-sort="grade"><span class="lbl">Grade</span><span class="arrow">▼</span></th>
         </tr>
       </thead>
-      <tbody id="leaderboard-body"><tr><td colspan="7" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
+      <tbody id="leaderboard-body"><tr><td colspan="8" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
     </table>
   </div>
 
   <div class="footer">
-    <span>Data: Keeneland, Fasig-Tipton, OBS, BloodHorse. Methodology in repo. · <a href="/methodology.html">methodology</a> · <a href="/audit-pinhooks.html">pinhook audit</a></span>
+    <span>Data: Keeneland, Fasig-Tipton, OBS, BloodHorse. Methodology in repo. · <a href="/methodology.html">methodology</a> · <a href="/audit-pinhooks.html">pinhook audit</a> · <a href="/value-gap.html">value gap</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>
@@ -508,6 +509,40 @@ body {
     // Stamp each stallion with its score-rank so the Rank column stays
     // meaningful regardless of how the table is sorted later.
     data.stallions.forEach((s, i) => { s._rank = i + 1; });
+
+    // ---------- Value Gap ----------
+    // For each stallion with a fee, compare their score to the median score
+    // of all stallions in the SAME fee band. Positive gap = scoring better
+    // than peers at the same price point (likely undervalued); negative =
+    // worse than peers at the same price (likely overvalued).
+    //
+    // We use fee_band only (not fee_band × maturity_stage) because the
+    // narrower bucket has small samples for many cells. The broader signal
+    // — "is this stallion good for its price" — is what users care about.
+    (function computeValueGaps() {
+      const groups = {};
+      data.stallions.forEach(s => {
+        const band = (s.score.peer_group || {}).fee_band;
+        if (!band || !s.fee_usd) return;
+        (groups[band] = groups[band] || []).push(s.score.value);
+      });
+      const medians = {};
+      Object.keys(groups).forEach(b => {
+        const arr = groups[b].slice().sort((a, b) => a - b);
+        medians[b] = arr[Math.floor(arr.length / 2)];
+      });
+      data.stallions.forEach(s => {
+        const band = (s.score.peer_group || {}).fee_band;
+        if (!band || !s.fee_usd || medians[band] == null) {
+          s._value_gap = null;
+          s._fee_band_median = null;
+          return;
+        }
+        s._value_gap = +(s.score.value - medians[band]).toFixed(1);
+        s._fee_band_median = +medians[band].toFixed(1);
+        s._fee_band_n = groups[band].length;
+      });
+    })();
 
     // ---------- Watchlist (localStorage-backed) ----------
     // Schema: { v:1, stallions: { name: { added_at, last_seen_score, last_seen_grade } } }
@@ -689,6 +724,13 @@ body {
 
     function rowHtml(s, i) {
       const fee = s.fee_usd ? ('$' + s.fee_usd.toLocaleString()) : (s.fee_qualifier || '—');
+      let gapHtml = '<span style="color:var(--ink-soft)">—</span>';
+      if (s._value_gap != null) {
+        const cls  = s._value_gap > 0.5  ? 'good' : (s._value_gap < -0.5 ? 'weak' : 'soft');
+        const sign = s._value_gap > 0    ? '+'    : '';
+        const colorMap = { good: 'var(--good)', weak: 'var(--weak)', soft: 'var(--ink-soft)' };
+        gapHtml = '<span style="color:' + colorMap[cls] + ';font-weight:600">' + sign + s._value_gap.toFixed(1) + '</span>';
+      }
       return '<tr onclick="location.href=\'/stallion-card.html?s=' + encodeURIComponent(s.name) + '\'">'
         + '<td>' + (s._rank || (i+1)) + '</td>'
         + '<td>' + starHtml(s) + '<strong>' + s.name + '</strong></td>'
@@ -696,6 +738,7 @@ body {
         + '<td>' + fee + '</td>'
         + '<td>' + s.score.tier.replace(/_/g,' ').replace('tier1 full','Tier 1 (full)').replace('tier1 obs only','Tier 1 (OBS)').replace('commercial appeal','Tier 0') + '</td>'
         + '<td>' + s.score.value.toFixed(1) + '</td>'
+        + '<td>' + gapHtml + '</td>'
         + '<td><span class="grade ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span></td>'
         + '</tr>';
     }
@@ -887,14 +930,15 @@ body {
 
     function sortKey(s, col, originalIdx) {
       switch (col) {
-        case 'rank':  return originalIdx;                       // preserve incoming order
-        case 'name':  return (s.name || '').toLowerCase();
-        case 'farm':  return (s.farm || '').toLowerCase();
-        case 'fee':   return s.fee_usd != null ? s.fee_usd : -1; // unknown fees sort lowest
-        case 'tier':  return TIER_RANK[s.score.tier] != null ? TIER_RANK[s.score.tier] : 99;
-        case 'score': return s.score.value != null ? s.score.value : -1;
-        case 'grade': return GRADE_RANK[s.score.grade] != null ? GRADE_RANK[s.score.grade] : 99;
-        default:      return 0;
+        case 'rank':      return originalIdx;                       // preserve incoming order
+        case 'name':      return (s.name || '').toLowerCase();
+        case 'farm':      return (s.farm || '').toLowerCase();
+        case 'fee':       return s.fee_usd != null ? s.fee_usd : -1; // unknown fees sort lowest
+        case 'tier':      return TIER_RANK[s.score.tier] != null ? TIER_RANK[s.score.tier] : 99;
+        case 'score':     return s.score.value != null ? s.score.value : -1;
+        case 'value_gap': return s._value_gap != null ? s._value_gap : -999; // unknowns last
+        case 'grade':     return GRADE_RANK[s.score.grade] != null ? GRADE_RANK[s.score.grade] : 99;
+        default:          return 0;
       }
     }
 
@@ -939,7 +983,7 @@ body {
       const sorted = sortStallions(slice);
       const rows = sorted.map(rowHtml).join('');
       document.getElementById('leaderboard-body').innerHTML = rows ||
-        '<tr><td colspan="7" style="padding:30px;text-align:center;color:var(--ink-soft)">No matches. Try a different query.</td></tr>';
+        '<tr><td colspan="8" style="padding:30px;text-align:center;color:var(--ink-soft)">No matches. Try a different query.</td></tr>';
       document.getElementById('smart-pills').innerHTML =
         pills.map(p => '<span class="pill">' + p + '</span>').join('');
       updateSortIndicators();
@@ -954,7 +998,10 @@ body {
           sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
         } else {
           sortState.col = col;
+          // Numeric/score-like columns default desc; text/rank default asc.
           sortState.dir = (col === 'rank' || col === 'name' || col === 'farm') ? 'asc' : 'desc';
+          // 'value_gap' is special — most users want to find UNDERVALUED first,
+          // which is the high positive end of the distribution. Desc is right.
         }
         render(document.getElementById('smart-q').value || '');
       });
