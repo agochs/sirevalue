@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T18:38:54Z",
+  "updated_at": "2026-04-28T17:31:44Z",
   "source": "https://www.bloodhorse.com/stallion-register/",
   "resolved": {
     "Angel of Empire": {
@@ -1532,12 +1532,197 @@
       "bh_url_id": 168986,
       "bh_slug": "american-pharoah",
       "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/168986/american-pharoah"
+    },
+    "Aloha West": {
+      "year_of_birth": 2017,
+      "color": "dkb/br",
+      "height_hands": "16",
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2017, dkb/br, 16 hands, entered stud 2023",
+      "bh_url_id": 172380,
+      "bh_slug": "aloha-west",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172380/aloha-west"
+    },
+    "Alternation": {
+      "year_of_birth": 2008,
+      "color": "dkb/br",
+      "height_hands": "16.2 1/2",
+      "entered_stud_year": 2014,
+      "_raw_data_line": "2008, dkb/br, 16.2 1/2 hands, entered stud 2014",
+      "bh_url_id": 166900,
+      "bh_slug": "alternation",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/166900/alternation"
+    },
+    "Bee Jersey": {
+      "year_of_birth": 2014,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2014, ch, entered stud 2019",
+      "bh_url_id": 170612,
+      "bh_slug": "bee-jersey",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170612/bee-jersey"
+    },
+    "Blazing Sevens": {
+      "year_of_birth": 2020,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2020, dkb/br, entered stud 2025",
+      "bh_url_id": 172945,
+      "bh_slug": "blazing-sevens",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172945/blazing-sevens"
+    },
+    "Casa Creed": {
+      "year_of_birth": 2016,
+      "color": "b",
+      "height_hands": "16.2",
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2016, b, 16.2 hands, entered stud 2025",
+      "bh_url_id": 172900,
+      "bh_slug": "casa-creed",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172900/casa-creed"
+    },
+    "Country House": {
+      "year_of_birth": 2016,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2016, ch, entered stud 2021",
+      "bh_url_id": 171595,
+      "bh_slug": "country-house",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171595/country-house"
+    },
+    "Dialed In": {
+      "year_of_birth": 2008,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2013,
+      "_raw_data_line": "2008, dkb/br, entered stud 2013",
+      "bh_url_id": 165748,
+      "bh_slug": "dialed-in",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/165748/dialed-in"
+    },
+    "Flameaway": {
+      "year_of_birth": 2015,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2015, ch, entered stud 2020",
+      "bh_url_id": 170990,
+      "bh_slug": "flameaway",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170990/flameaway"
+    },
+    "Gufo": {
+      "year_of_birth": 2017,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2024,
+      "_raw_data_line": "2017, ch, entered stud 2024",
+      "bh_url_id": 172610,
+      "bh_slug": "gufo",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172610/gufo"
+    },
+    "Heart To Heart": {
+      "year_of_birth": 2011,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2020,
+      "_raw_data_line": "2011, b, entered stud 2020.",
+      "bh_url_id": 171013,
+      "bh_slug": "heart-to-heart",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171013/heart-to-heart"
+    },
+    "Il Miracolo": {
+      "year_of_birth": 2020,
+      "color": "ch",
+      "height_hands": null,
+      "entered_stud_year": 2026,
+      "_raw_data_line": "2020, ch, entered stud 2026",
+      "bh_url_id": 173315,
+      "bh_slug": "il-miracolo",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173315/il-miracolo"
+    },
+    "Modernist": {
+      "year_of_birth": 2017,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2022,
+      "_raw_data_line": "2017, dkb/br, entered stud 2022",
+      "bh_url_id": 172057,
+      "bh_slug": "modernist",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172057/modernist"
+    },
+    "Oscar Performance": {
+      "year_of_birth": 2014,
+      "color": "b",
+      "height_hands": "16.2",
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2014, b, 16.2 hands, entered stud 2019",
+      "bh_url_id": 170569,
+      "bh_slug": "oscar-performance",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170569/oscar-performance"
+    },
+    "Shirl's Speight": {
+      "year_of_birth": 2017,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2025,
+      "_raw_data_line": "2017, b, entered stud 2025",
+      "bh_url_id": 172995,
+      "bh_slug": "shirls-speight",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172995/shirls-speight"
+    },
+    "Sir Winston": {
+      "year_of_birth": 2016,
+      "color": "ch",
+      "height_hands": "16.2",
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2016, ch, 16.2 hands, entered stud 2023",
+      "bh_url_id": 172351,
+      "bh_slug": "sir-winston",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172351/sir-winston"
+    },
+    "Tale Of Ekati": {
+      "year_of_birth": 2005,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2011,
+      "_raw_data_line": "2005, b, entered stud 2011",
+      "bh_url_id": 136014,
+      "bh_slug": "tale-of-ekati",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/136014/tale-of-ekati"
+    },
+    "Tale Of Silence": {
+      "year_of_birth": 2014,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2014, dkb/br, entered stud 2023",
+      "bh_url_id": 172393,
+      "bh_slug": "tale-of-silence",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172393/tale-of-silence"
+    },
+    "Title Ready": {
+      "year_of_birth": 2015,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2015, dkb/br, entered stud 2023",
+      "bh_url_id": 172419,
+      "bh_slug": "title-ready",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172419/title-ready"
     }
   },
-  "unresolved": [],
+  "unresolved": [
+    {
+      "name": "Broken Vow",
+      "reason": "no exact-name match (ambiguous or no results)"
+    }
+  ],
   "summary": {
-    "total": 1,
-    "resolved": 153,
-    "unresolved": 0
+    "total": 171,
+    "resolved": 171,
+    "unresolved": 1
   }
 }

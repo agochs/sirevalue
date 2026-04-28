@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T17:16:29Z",
+  "generated_at": "2026-04-28T17:33:18Z",
   "method": "weighted-comparator-from-similar-stallions-with-pinhook-data",
   "thresholds": {
     "min_pairs_per_comparator": 5,
@@ -22,7 +22,7 @@
       "fee_usd": 17500,
       "entered_stud_year": 2025,
       "year_of_birth": 2020,
-      "value_score": 73.6,
+      "value_score": 73.7,
       "value_grade": "B",
       "comparators": [
         {
@@ -96,9 +96,9 @@
       "damsire": "Empire Maker",
       "pedigree": "Uncle Mo – Symbolic Gesture, by Empire Maker",
       "fee_usd": 5000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 48.9,
+      "entered_stud_year": 2022,
+      "year_of_birth": 2017,
+      "value_score": 47.1,
       "value_grade": "C",
       "comparators": [
         {
@@ -261,9 +261,9 @@
       "damsire": "Speightstown",
       "pedigree": "Hard Spun – Island Bound, by Speightstown",
       "fee_usd": 6500,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 74.1,
+      "entered_stud_year": 2023,
+      "year_of_birth": 2017,
+      "value_score": 69.2,
       "value_grade": "B",
       "comparators": [
         {
@@ -331,16 +331,168 @@
       }
     },
     {
+      "name": "Cody's Wish",
+      "farm": "Darley America (Godolphin)",
+      "sire": "Curlin",
+      "damsire": "Tapit",
+      "pedigree": "Curlin – Dance Card, by Tapit",
+      "fee_usd": 60000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2018,
+      "value_score": 71.0,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Vino Rosso",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 69,
+          "median_return_pct": 80.0,
+          "mean_return_pct": 212.3,
+          "positive_return_pct": 69.6,
+          "median_yearling_price": 42000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Idol",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 5,
+          "median_return_pct": 108.0,
+          "mean_return_pct": 267.2,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 25000,
+          "median_twoyo_price": 45000
+        },
+        {
+          "name": "Known Agenda",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 13,
+          "median_return_pct": 85.2,
+          "mean_return_pct": 141.3,
+          "positive_return_pct": 61.5,
+          "median_yearling_price": 16000,
+          "median_twoyo_price": 30000
+        },
+        {
+          "name": "Connect",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 37,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 136.4,
+          "positive_return_pct": 64.9,
+          "median_yearling_price": 32000,
+          "median_twoyo_price": 45000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 80.2,
+        "mean_return_pct": 184.4,
+        "positive_pct": 68.6,
+        "median_yearling_price": 35604,
+        "median_twoyo_price": 46209,
+        "comparators_n": 4,
+        "comparator_pairs_total": 124,
+        "confidence": "high"
+      }
+    },
+    {
+      "name": "Highland Falls",
+      "farm": "Darley America (Godolphin)",
+      "sire": "Curlin",
+      "damsire": "Forty Niner",
+      "pedigree": "Curlin – Forty Greeneyes, by Forty Niner",
+      "fee_usd": 10000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 51.2,
+      "value_grade": "C",
+      "comparators": [
+        {
+          "name": "Vino Rosso",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 69,
+          "median_return_pct": 80.0,
+          "mean_return_pct": 212.3,
+          "positive_return_pct": 69.6,
+          "median_yearling_price": 42000,
+          "median_twoyo_price": 50000
+        },
+        {
+          "name": "Idol",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 5,
+          "median_return_pct": 108.0,
+          "mean_return_pct": 267.2,
+          "positive_return_pct": 100.0,
+          "median_yearling_price": 25000,
+          "median_twoyo_price": 45000
+        },
+        {
+          "name": "Known Agenda",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 13,
+          "median_return_pct": 85.2,
+          "mean_return_pct": 141.3,
+          "positive_return_pct": 61.5,
+          "median_yearling_price": 16000,
+          "median_twoyo_price": 30000
+        },
+        {
+          "name": "Connect",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Curlin"
+          ],
+          "matched_pairs": 37,
+          "median_return_pct": 75.0,
+          "mean_return_pct": 136.4,
+          "positive_return_pct": 64.9,
+          "median_yearling_price": 32000,
+          "median_twoyo_price": 45000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 80.2,
+        "mean_return_pct": 184.4,
+        "positive_pct": 68.6,
+        "median_yearling_price": 35604,
+        "median_twoyo_price": 46209,
+        "comparators_n": 4,
+        "comparator_pairs_total": 124,
+        "confidence": "high"
+      }
+    },
+    {
       "name": "Shirl's Speight",
       "farm": "Darby Dan Farm",
       "sire": "Speightstown",
       "damsire": null,
       "pedigree": null,
       "fee_usd": 5000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 43.6,
-      "value_grade": "C",
+      "entered_stud_year": 2025,
+      "year_of_birth": 2017,
+      "value_score": 32.0,
+      "value_grade": "D",
       "comparators": [
         {
           "name": "Olympiad",
@@ -615,9 +767,9 @@
       "damsire": "Bernardini",
       "pedigree": "Jimmy Creed – Achalaya, by Bernardini",
       "fee_usd": 8500,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 70.0,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2016,
+      "value_score": 64.5,
       "value_grade": "B",
       "comparators": [
         {
@@ -759,56 +911,6 @@
       }
     },
     {
-      "name": "Il Miracolo",
-      "farm": "Crestwood Farm",
-      "sire": "Gun Runner",
-      "damsire": "Tapit",
-      "pedigree": "Gun Runner – Tapit's World, by Tapit",
-      "fee_usd": 7500,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 83.3,
-      "value_grade": "A",
-      "comparators": [
-        {
-          "name": "Early Voting",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Gun Runner"
-          ],
-          "matched_pairs": 9,
-          "median_return_pct": 179.4,
-          "mean_return_pct": 358.9,
-          "positive_return_pct": 88.9,
-          "median_yearling_price": 110000,
-          "median_twoyo_price": 430000
-        },
-        {
-          "name": "Cyberknife",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Gun Runner"
-          ],
-          "matched_pairs": 15,
-          "median_return_pct": 81.8,
-          "mean_return_pct": 171.8,
-          "positive_return_pct": 86.7,
-          "median_yearling_price": 50000,
-          "median_twoyo_price": 85000
-        }
-      ],
-      "predicted": {
-        "median_return_pct": 118.4,
-        "mean_return_pct": 242.0,
-        "positive_pct": 87.5,
-        "median_yearling_price": 72500,
-        "median_twoyo_price": 214375,
-        "comparators_n": 2,
-        "comparator_pairs_total": 24,
-        "confidence": "medium"
-      }
-    },
-    {
       "name": "Sierra Leone",
       "farm": "Ashford Stud (Coolmore America)",
       "sire": "Gun Runner",
@@ -909,6 +1011,56 @@
       }
     },
     {
+      "name": "Il Miracolo",
+      "farm": "Crestwood Farm",
+      "sire": "Gun Runner",
+      "damsire": "Tapit",
+      "pedigree": "Gun Runner – Tapit's World, by Tapit",
+      "fee_usd": 7500,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 70.5,
+      "value_grade": "B",
+      "comparators": [
+        {
+          "name": "Early Voting",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 9,
+          "median_return_pct": 179.4,
+          "mean_return_pct": 358.9,
+          "positive_return_pct": 88.9,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 430000
+        },
+        {
+          "name": "Cyberknife",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Gun Runner"
+          ],
+          "matched_pairs": 15,
+          "median_return_pct": 81.8,
+          "mean_return_pct": 171.8,
+          "positive_return_pct": 86.7,
+          "median_yearling_price": 50000,
+          "median_twoyo_price": 85000
+        }
+      ],
+      "predicted": {
+        "median_return_pct": 118.4,
+        "mean_return_pct": 242.0,
+        "positive_pct": 87.5,
+        "median_yearling_price": 72500,
+        "median_twoyo_price": 214375,
+        "comparators_n": 2,
+        "comparator_pairs_total": 24,
+        "confidence": "medium"
+      }
+    },
+    {
       "name": "Gun Pilot",
       "farm": "Three Chimneys Farm",
       "sire": "Gun Runner",
@@ -917,7 +1069,7 @@
       "fee_usd": 12500,
       "entered_stud_year": 2025,
       "year_of_birth": 2020,
-      "value_score": 60.4,
+      "value_score": 61.2,
       "value_grade": "B",
       "comparators": [
         {
@@ -1117,7 +1269,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2025,
       "year_of_birth": 2020,
-      "value_score": 33.2,
+      "value_score": 33.7,
       "value_grade": "D",
       "comparators": [
         {
@@ -1167,7 +1319,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2024,
       "year_of_birth": 2017,
-      "value_score": 25.0,
+      "value_score": 26.5,
       "value_grade": "D",
       "comparators": [
         {
@@ -1330,9 +1482,9 @@
       "damsire": "War Front",
       "pedigree": "Lookin At Lucky – Quake Lake, by War Front",
       "fee_usd": 5000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 43.6,
+      "entered_stud_year": 2021,
+      "year_of_birth": 2016,
+      "value_score": 44.6,
       "value_grade": "C",
       "comparators": [
         {
@@ -1424,132 +1576,6 @@
       }
     },
     {
-      "name": "Cody's Wish",
-      "farm": "Darley America (Godolphin)",
-      "sire": "Curlin",
-      "damsire": "Tapit",
-      "pedigree": "Curlin – Dance Card, by Tapit",
-      "fee_usd": 60000,
-      "entered_stud_year": 2024,
-      "year_of_birth": 2018,
-      "value_score": 71.0,
-      "value_grade": "B",
-      "comparators": [
-        {
-          "name": "Vino Rosso",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Curlin"
-          ],
-          "matched_pairs": 69,
-          "median_return_pct": 80.0,
-          "mean_return_pct": 212.3,
-          "positive_return_pct": 69.6,
-          "median_yearling_price": 42000,
-          "median_twoyo_price": 50000
-        },
-        {
-          "name": "Idol",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Curlin"
-          ],
-          "matched_pairs": 5,
-          "median_return_pct": 108.0,
-          "mean_return_pct": 267.2,
-          "positive_return_pct": 100.0,
-          "median_yearling_price": 25000,
-          "median_twoyo_price": 45000
-        },
-        {
-          "name": "Connect",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Curlin"
-          ],
-          "matched_pairs": 37,
-          "median_return_pct": 75.0,
-          "mean_return_pct": 136.4,
-          "positive_return_pct": 64.9,
-          "median_yearling_price": 32000,
-          "median_twoyo_price": 45000
-        }
-      ],
-      "predicted": {
-        "median_return_pct": 79.6,
-        "mean_return_pct": 189.5,
-        "positive_pct": 69.4,
-        "median_yearling_price": 37900,
-        "median_twoyo_price": 48108,
-        "comparators_n": 3,
-        "comparator_pairs_total": 111,
-        "confidence": "medium"
-      }
-    },
-    {
-      "name": "Highland Falls",
-      "farm": "Darley America (Godolphin)",
-      "sire": "Curlin",
-      "damsire": "Forty Niner",
-      "pedigree": "Curlin – Forty Greeneyes, by Forty Niner",
-      "fee_usd": 10000,
-      "entered_stud_year": 2026,
-      "year_of_birth": 2020,
-      "value_score": 50.7,
-      "value_grade": "C",
-      "comparators": [
-        {
-          "name": "Vino Rosso",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Curlin"
-          ],
-          "matched_pairs": 69,
-          "median_return_pct": 80.0,
-          "mean_return_pct": 212.3,
-          "positive_return_pct": 69.6,
-          "median_yearling_price": 42000,
-          "median_twoyo_price": 50000
-        },
-        {
-          "name": "Idol",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Curlin"
-          ],
-          "matched_pairs": 5,
-          "median_return_pct": 108.0,
-          "mean_return_pct": 267.2,
-          "positive_return_pct": 100.0,
-          "median_yearling_price": 25000,
-          "median_twoyo_price": 45000
-        },
-        {
-          "name": "Connect",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Curlin"
-          ],
-          "matched_pairs": 37,
-          "median_return_pct": 75.0,
-          "mean_return_pct": 136.4,
-          "positive_return_pct": 64.9,
-          "median_yearling_price": 32000,
-          "median_twoyo_price": 45000
-        }
-      ],
-      "predicted": {
-        "median_return_pct": 79.6,
-        "mean_return_pct": 189.5,
-        "positive_pct": 69.4,
-        "median_yearling_price": 37900,
-        "median_twoyo_price": 48108,
-        "comparators_n": 3,
-        "comparator_pairs_total": 111,
-        "confidence": "medium"
-      }
-    },
-    {
       "name": "Bright Future",
       "farm": "Claiborne Farm",
       "sire": "Curlin",
@@ -1588,27 +1614,27 @@
           "median_twoyo_price": 45000
         },
         {
-          "name": "Connect",
+          "name": "Known Agenda",
           "similarity_score": 50,
           "similarity_reasons": [
             "Half-brothers — share sire Curlin"
           ],
-          "matched_pairs": 37,
-          "median_return_pct": 75.0,
-          "mean_return_pct": 136.4,
-          "positive_return_pct": 64.9,
-          "median_yearling_price": 32000,
-          "median_twoyo_price": 45000
+          "matched_pairs": 13,
+          "median_return_pct": 85.2,
+          "mean_return_pct": 141.3,
+          "positive_return_pct": 61.5,
+          "median_yearling_price": 16000,
+          "median_twoyo_price": 30000
         }
       ],
       "predicted": {
-        "median_return_pct": 79.6,
-        "mean_return_pct": 189.5,
-        "positive_pct": 69.4,
-        "median_yearling_price": 37900,
-        "median_twoyo_price": 48108,
+        "median_return_pct": 82.4,
+        "mean_return_pct": 204.8,
+        "positive_pct": 70.1,
+        "median_yearling_price": 37137,
+        "median_twoyo_price": 46724,
         "comparators_n": 3,
-        "comparator_pairs_total": 111,
+        "comparator_pairs_total": 87,
         "confidence": "medium"
       }
     },
@@ -1621,7 +1647,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2025,
       "year_of_birth": 2020,
-      "value_score": 43.2,
+      "value_score": 43.7,
       "value_grade": "C",
       "comparators": [
         {
@@ -1669,9 +1695,9 @@
       "damsire": "Seattle Slew",
       "pedigree": "Distorted Humor – Alternate, by Seattle Slew",
       "fee_usd": null,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 32.5,
+      "entered_stud_year": 2014,
+      "year_of_birth": 2008,
+      "value_score": 33.5,
       "value_grade": "D",
       "comparators": [
         {
@@ -1795,9 +1821,9 @@
       "damsire": "Vindication",
       "pedigree": "Scat Daddy – Vulcan Rose, by Vindication",
       "fee_usd": 10000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 36.8,
+      "entered_stud_year": 2020,
+      "year_of_birth": 2015,
+      "value_score": 34.3,
       "value_grade": "D",
       "comparators": [
         {
@@ -1847,7 +1873,7 @@
       "fee_usd": 7500,
       "entered_stud_year": 2024,
       "year_of_birth": 2020,
-      "value_score": 56.2,
+      "value_score": 57.0,
       "value_grade": "C",
       "comparators": [
         {
@@ -1960,7 +1986,7 @@
       "fee_usd": 12500,
       "entered_stud_year": 2025,
       "year_of_birth": 2019,
-      "value_score": 52.9,
+      "value_score": 53.7,
       "value_grade": "C",
       "comparators": [
         {
@@ -2023,7 +2049,7 @@
       "fee_usd": 12500,
       "entered_stud_year": 2026,
       "year_of_birth": 2020,
-      "value_score": 42.9,
+      "value_score": 43.7,
       "value_grade": "C",
       "comparators": [
         {
@@ -2086,7 +2112,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2026,
       "year_of_birth": 2020,
-      "value_score": 33.2,
+      "value_score": 33.7,
       "value_grade": "D",
       "comparators": [
         {
@@ -2199,7 +2225,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2024,
       "year_of_birth": 2020,
-      "value_score": 47.5,
+      "value_score": 49.0,
       "value_grade": "C",
       "comparators": [
         {
@@ -2312,7 +2338,7 @@
       "fee_usd": 17500,
       "entered_stud_year": 2025,
       "year_of_birth": 2020,
-      "value_score": 73.6,
+      "value_score": 73.7,
       "value_grade": "B",
       "comparators": [
         {
@@ -2375,7 +2401,7 @@
       "fee_usd": 15000,
       "entered_stud_year": 2026,
       "year_of_birth": 2022,
-      "value_score": 67.4,
+      "value_score": 67.8,
       "value_grade": "B",
       "comparators": [
         {
@@ -2438,7 +2464,7 @@
       "fee_usd": 15000,
       "entered_stud_year": 2025,
       "year_of_birth": 2021,
-      "value_score": 67.4,
+      "value_score": 67.8,
       "value_grade": "B",
       "comparators": [
         {
@@ -2501,7 +2527,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2026,
       "year_of_birth": 2020,
-      "value_score": 59.2,
+      "value_score": 59.7,
       "value_grade": "C",
       "comparators": [
         {
@@ -2564,7 +2590,7 @@
       "fee_usd": 15000,
       "entered_stud_year": 2026,
       "year_of_birth": 2021,
-      "value_score": 49.9,
+      "value_score": 50.3,
       "value_grade": "C",
       "comparators": [
         {
@@ -2636,9 +2662,9 @@
       "damsire": "Bernardini",
       "pedigree": "Awesome Again – La Gran Bailadora, by Bernardini",
       "fee_usd": 5000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 45.0,
+      "entered_stud_year": 2023,
+      "year_of_birth": 2016,
+      "value_score": 43.2,
       "value_grade": "C",
       "comparators": [
         {
@@ -2823,7 +2849,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2026,
       "year_of_birth": 2020,
-      "value_score": 50.7,
+      "value_score": 51.2,
       "value_grade": "C",
       "comparators": [
         {
@@ -2860,7 +2886,7 @@
       "fee_usd": 15000,
       "entered_stud_year": 2026,
       "year_of_birth": 2021,
-      "value_score": 49.9,
+      "value_score": 50.3,
       "value_grade": "C",
       "comparators": [
         {
@@ -2897,7 +2923,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2024,
       "year_of_birth": 2018,
-      "value_score": 37.5,
+      "value_score": 39.0,
       "value_grade": "D",
       "comparators": [
         {
@@ -2934,7 +2960,7 @@
       "fee_usd": 15000,
       "entered_stud_year": 2026,
       "year_of_birth": 2020,
-      "value_score": 49.9,
+      "value_score": 50.3,
       "value_grade": "C",
       "comparators": [
         {
@@ -2969,9 +2995,9 @@
       "damsire": null,
       "pedigree": null,
       "fee_usd": 2500,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 47.2,
+      "entered_stud_year": 2023,
+      "year_of_birth": 2015,
+      "value_score": 48.8,
       "value_grade": "C",
       "comparators": [
         {
@@ -2998,20 +3024,6 @@
         "comparator_pairs_total": 6,
         "confidence": "low"
       }
-    },
-    {
-      "name": "Jonathan's Way",
-      "farm": "Airdrie Stud",
-      "sire": "Good Magic",
-      "damsire": "Air Force Blue",
-      "pedigree": "Good Magic – Nicanor Missile, by Air Force Blue",
-      "fee_usd": 8500,
-      "entered_stud_year": 2026,
-      "year_of_birth": 2022,
-      "value_score": 57.0,
-      "value_grade": "C",
-      "comparators": [],
-      "predicted": null
     },
     {
       "name": "Domestic Product",
@@ -3042,6 +3054,20 @@
       "predicted": null
     },
     {
+      "name": "Jonathan's Way",
+      "farm": "Airdrie Stud",
+      "sire": "Good Magic",
+      "damsire": "Air Force Blue",
+      "pedigree": "Good Magic – Nicanor Missile, by Air Force Blue",
+      "fee_usd": 8500,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 54.5,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
       "name": "Muth",
       "farm": "Gainesway Farm",
       "sire": "Good Magic",
@@ -3064,7 +3090,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2025,
       "year_of_birth": 2021,
-      "value_score": 50.7,
+      "value_score": 51.2,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3076,23 +3102,9 @@
       "damsire": null,
       "pedigree": null,
       "fee_usd": 5000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 46.5,
-      "value_grade": "C",
-      "comparators": [],
-      "predicted": null
-    },
-    {
-      "name": "Blazing Sevens",
-      "farm": "Darby Dan Farm",
-      "sire": "Good Magic",
-      "damsire": null,
-      "pedigree": null,
-      "fee_usd": 10000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 45.0,
+      "entered_stud_year": 2019,
+      "year_of_birth": 2014,
+      "value_score": 46.4,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3106,21 +3118,21 @@
       "fee_usd": 7500,
       "entered_stud_year": 2024,
       "year_of_birth": 2019,
-      "value_score": 43.8,
+      "value_score": 44.5,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
     },
     {
-      "name": "Dialed In",
-      "farm": "Darby Dan Farm",
-      "sire": "Mineshaft",
-      "damsire": "Storm Cat",
-      "pedigree": "Mineshaft – Miss Doolittle, by Storm Cat",
-      "fee_usd": 10000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 43.7,
+      "name": "Channel Cat",
+      "farm": "Calumet Farm",
+      "sire": "English Channel",
+      "damsire": "Charismatic",
+      "pedigree": "English Channel – In Return, by Charismatic",
+      "fee_usd": 7500,
+      "entered_stud_year": 2023,
+      "year_of_birth": 2015,
+      "value_score": 44.4,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3140,15 +3152,15 @@
       "predicted": null
     },
     {
-      "name": "Channel Cat",
-      "farm": "Calumet Farm",
-      "sire": "English Channel",
-      "damsire": "Charismatic",
-      "pedigree": "English Channel – In Return, by Charismatic",
-      "fee_usd": 7500,
-      "entered_stud_year": 2023,
-      "year_of_birth": 2015,
-      "value_score": 41.9,
+      "name": "Dialed In",
+      "farm": "Darby Dan Farm",
+      "sire": "Mineshaft",
+      "damsire": "Storm Cat",
+      "pedigree": "Mineshaft – Miss Doolittle, by Storm Cat",
+      "fee_usd": 10000,
+      "entered_stud_year": 2013,
+      "year_of_birth": 2008,
+      "value_score": 40.9,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3160,23 +3172,9 @@
       "damsire": null,
       "pedigree": null,
       "fee_usd": 2500,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 37.9,
-      "value_grade": "D",
-      "comparators": [],
-      "predicted": null
-    },
-    {
-      "name": "Tale Of Ekati",
-      "farm": "Darby Dan Farm",
-      "sire": "Tale Of The Cat",
-      "damsire": null,
-      "pedigree": null,
-      "fee_usd": 5000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 37.0,
+      "entered_stud_year": 2023,
+      "year_of_birth": 2014,
+      "value_score": 39.5,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -3190,7 +3188,21 @@
       "fee_usd": 7500,
       "entered_stud_year": 2014,
       "year_of_birth": 2010,
-      "value_score": 36.5,
+      "value_score": 38.5,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Heart To Heart",
+      "farm": "Crestwood Farm",
+      "sire": "English Channel",
+      "damsire": "Silver Deputy",
+      "pedigree": "English Channel – Ask The Question, by Silver Deputy",
+      "fee_usd": null,
+      "entered_stud_year": 2020,
+      "year_of_birth": 2011,
+      "value_score": 37.5,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -3210,15 +3222,15 @@
       "predicted": null
     },
     {
-      "name": "Senor Buscador",
-      "farm": "Lane's End",
-      "sire": "Mineshaft",
-      "damsire": "Desert God",
-      "pedigree": "Mineshaft – Rose's Desert, by Desert God",
-      "fee_usd": 7500,
+      "name": "Blazing Sevens",
+      "farm": "Darby Dan Farm",
+      "sire": "Good Magic",
+      "damsire": null,
+      "pedigree": null,
+      "fee_usd": 10000,
       "entered_stud_year": 2025,
-      "year_of_birth": 2018,
-      "value_score": 34.5,
+      "year_of_birth": 2020,
+      "value_score": 33.7,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -3232,21 +3244,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2026,
       "year_of_birth": 2019,
-      "value_score": 33.2,
-      "value_grade": "D",
-      "comparators": [],
-      "predicted": null
-    },
-    {
-      "name": "Heart To Heart",
-      "farm": "Crestwood Farm",
-      "sire": "English Channel",
-      "damsire": "Silver Deputy",
-      "pedigree": "English Channel – Ask The Question, by Silver Deputy",
-      "fee_usd": null,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 32.5,
+      "value_score": 33.7,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -3260,7 +3258,35 @@
       "fee_usd": 5000,
       "entered_stud_year": 2021,
       "year_of_birth": 2015,
-      "value_score": 31.2,
+      "value_score": 32.1,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Senor Buscador",
+      "farm": "Lane's End",
+      "sire": "Mineshaft",
+      "damsire": "Desert God",
+      "pedigree": "Mineshaft – Rose's Desert, by Desert God",
+      "fee_usd": 7500,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2018,
+      "value_score": 32.0,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Tale Of Ekati",
+      "farm": "Darby Dan Farm",
+      "sire": "Tale Of The Cat",
+      "damsire": null,
+      "pedigree": null,
+      "fee_usd": 5000,
+      "entered_stud_year": 2011,
+      "year_of_birth": 2005,
+      "value_score": 30.1,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -3272,9 +3298,9 @@
       "damsire": null,
       "pedigree": null,
       "fee_usd": 5000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 31.1,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2017,
+      "value_score": 26.5,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -3286,10 +3312,10 @@
       "damsire": "Theatrical (Ire)",
       "pedigree": "Kitten's Joy – Devine Actress, by Theatrical (Ire)",
       "fee_usd": 60000,
-      "entered_stud_year": null,
-      "year_of_birth": null,
-      "value_score": 25.8,
-      "value_grade": "D",
+      "entered_stud_year": 2019,
+      "year_of_birth": 2014,
+      "value_score": 23.3,
+      "value_grade": "F",
       "comparators": [],
       "predicted": null
     },
