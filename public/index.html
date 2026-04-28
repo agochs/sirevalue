@@ -208,6 +208,51 @@ body {
 .movement-item .src a { color: var(--ink-soft); }
 .movement-item .src a:hover { color: var(--ink); }
 .movement-item .tracked { font-size: 10px; color: var(--good); white-space: nowrap; margin-top: 3px; }
+/* ---------- Watchlist ---------- */
+.star-btn {
+  display: inline-block; cursor: pointer; user-select: none;
+  font-size: 13px; color: #cbb888; padding: 0 4px;
+  transition: color 0.15s ease, transform 0.1s ease;
+  font-family: -apple-system, sans-serif;   /* avoid serif star glyph */
+}
+.star-btn:hover  { color: var(--gold); }
+.star-btn.active { color: var(--gold); }
+.star-btn:active { transform: scale(0.85); }
+.watchlist {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 22px;
+}
+.watchlist-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
+}
+.watchlist-head h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; margin: 0; font-weight: 700;
+}
+.watchlist-head .sub {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft);
+}
+.watch-row {
+  display: grid; grid-template-columns: auto 1fr auto auto auto; gap: 14px;
+  align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--rule);
+  font-size: 13px;
+}
+.watch-row:last-child { border-bottom: none; }
+.watch-row a.name { color: var(--ink); text-decoration: none; font-weight: 600; }
+.watch-row a.name:hover { text-decoration: underline; }
+.watch-row .farm-tag { font-size: 11px; color: var(--ink-soft); }
+.watch-row .score-now {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 15px;
+}
+.watch-row .delta { font-size: 12px; font-weight: 700; min-width: 56px; text-align: right; }
+.watch-row .delta.up   { color: var(--good); }
+.watch-row .delta.down { color: var(--weak); }
+.watch-row .delta.flat { color: var(--ink-soft); font-weight: 400; }
+.watch-row .grade-cell {
+  display: inline-block; padding: 2px 7px; border-radius: 3px; font-weight: 700;
+  font-size: 11px; min-width: 24px; text-align: center;
+}
 /* ---------- Sortable leaderboard headers ---------- */
 .leaderboard th[data-sort] { cursor: pointer; user-select: none; position: relative; }
 .leaderboard th[data-sort]:hover { color: var(--ink); }
@@ -383,6 +428,17 @@ body {
     </div>
   </div>
 
+  <div id="watchlist" class="watchlist" hidden>
+    <div class="watchlist-head">
+      <h2>My Watchlist</h2>
+      <div class="sub" id="watchlist-sub">—</div>
+    </div>
+    <div id="watchlist-list"></div>
+    <div style="margin-top:10px;font-size:11px;color:var(--ink-soft);">
+      Δ shows score change since you last opened that stallion's card. Click a stallion to re-anchor the delta to today's score.
+    </div>
+  </div>
+
   <div id="pinhook-watch" class="pinhook-watch" hidden>
     <div class="pinhook-watch-head">
       <h2>Pinhook Watch</h2>
@@ -453,6 +509,122 @@ body {
     // meaningful regardless of how the table is sorted later.
     data.stallions.forEach((s, i) => { s._rank = i + 1; });
 
+    // ---------- Watchlist (localStorage-backed) ----------
+    // Schema: { v:1, stallions: { name: { added_at, last_seen_score, last_seen_grade } } }
+    // The "delta" shown on the watchlist panel is score_now - last_seen_score.
+    // last_seen is updated only when the user opens a stallion's card (we set
+    // a flag in localStorage from stallion-card.html on render). That gives
+    // the user "what's changed about my stallions since I last looked."
+    const Watchlist = {
+      KEY: 'sirevalue.watchlist',
+      _load() {
+        try {
+          const raw = localStorage.getItem(this.KEY);
+          if (!raw) return { v: 1, stallions: {} };
+          const d = JSON.parse(raw);
+          return (d && d.v === 1 && d.stallions) ? d : { v: 1, stallions: {} };
+        } catch (_e) { return { v: 1, stallions: {} }; }
+      },
+      _save(d) { try { localStorage.setItem(this.KEY, JSON.stringify(d)); } catch (_e) {} },
+      has(name) { return !!this._load().stallions[name]; },
+      add(name, score, grade) {
+        const d = this._load();
+        d.stallions[name] = {
+          added_at: new Date().toISOString(),
+          last_seen_score: score,
+          last_seen_grade: grade,
+        };
+        this._save(d);
+      },
+      remove(name) { const d = this._load(); delete d.stallions[name]; this._save(d); },
+      toggle(name, score, grade) {
+        if (this.has(name)) { this.remove(name); return false; }
+        this.add(name, score, grade); return true;
+      },
+      all() { return this._load().stallions; },
+    };
+
+    // Global handler invoked from inline onclick on each star.
+    window.toggleWatchStar = function(el) {
+      const name  = decodeURIComponent(el.dataset.name);
+      const score = parseFloat(el.dataset.score);
+      const grade = el.dataset.grade;
+      const nowOn = Watchlist.toggle(name, score, grade);
+      el.classList.toggle('active', nowOn);
+      el.textContent = nowOn ? '★' : '☆';
+      el.title = nowOn ? 'Remove from watchlist' : 'Add to watchlist';
+      renderWatchlistPanel();   // re-render the home panel after toggle
+    };
+
+    function starHtml(s) {
+      const starred = Watchlist.has(s.name);
+      return '<span class="star-btn ' + (starred ? 'active' : '') + '" '
+        + 'data-name="' + encodeURIComponent(s.name) + '" '
+        + 'data-score="' + s.score.value + '" '
+        + 'data-grade="' + s.score.grade + '" '
+        + 'onclick="event.stopPropagation();toggleWatchStar(this);" '
+        + 'title="' + (starred ? 'Remove from watchlist' : 'Add to watchlist') + '">'
+        + (starred ? '★' : '☆')
+        + '</span>';
+    }
+
+    function renderWatchlistPanel() {
+      const stalls = Watchlist.all();
+      const names = Object.keys(stalls);
+      const panel = document.getElementById('watchlist');
+      if (!names.length) { panel.hidden = true; return; }
+      panel.hidden = false;
+      const byName = {};
+      data.stallions.forEach(s => { byName[s.name] = s; });
+      const rows = names
+        .map(name => {
+          const s   = byName[name];
+          const w   = stalls[name];
+          if (!s) {
+            // Watchlisted stallion no longer in scores.json (e.g. removed
+            // from roster). Surface that explicitly so the user knows why
+            // they shouldn't expect a score update.
+            return { name, gone: true, last: w.last_seen_score };
+          }
+          const delta = s.score.value - (w.last_seen_score != null ? w.last_seen_score : s.score.value);
+          return { name, s, delta, last: w.last_seen_score };
+        })
+        .sort((a, b) => Math.abs((b.delta || 0)) - Math.abs((a.delta || 0)));
+      const html = rows.map(r => {
+        if (r.gone) {
+          return '<div class="watch-row">'
+            + '<span style="opacity:0.5">☆</span>'
+            + '<span><span class="name" style="color:var(--ink-soft);font-style:italic;">' + escapeHtml(r.name) + '</span><div class="farm-tag">no longer in roster (last score ' + (r.last != null ? r.last.toFixed(1) : '—') + ')</div></span>'
+            + '<span></span><span class="delta flat">—</span><span></span>'
+            + '</div>';
+        }
+        const s = r.s;
+        const fee = s.fee_usd ? '$' + s.fee_usd.toLocaleString() : (s.fee_qualifier || '—');
+        let dCls = 'flat', dStr = '—';
+        if (Math.abs(r.delta) >= 0.1) {
+          dCls = r.delta > 0 ? 'up' : 'down';
+          dStr = (r.delta > 0 ? '+' : '') + r.delta.toFixed(1);
+        }
+        const url = '/stallion-card.html?s=' + encodeURIComponent(s.name);
+        return '<div class="watch-row">'
+          + starHtml(s)
+          + '<span><a class="name" href="' + url + '">' + escapeHtml(s.name) + '</a><div class="farm-tag">' + escapeHtml(s.farm) + ' · ' + fee + '</div></span>'
+          + '<span class="score-now">' + s.score.value.toFixed(1) + '</span>'
+          + '<span class="delta ' + dCls + '">' + dStr + '</span>'
+          + '<span class="grade-cell ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span>'
+          + '</div>';
+      }).join('');
+      document.getElementById('watchlist-list').innerHTML = html;
+      document.getElementById('watchlist-sub').textContent =
+        names.length + ' stallion' + (names.length === 1 ? '' : 's') + ' · click name to re-anchor delta';
+    }
+
+    function escapeHtml(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
     document.getElementById('model-version').textContent = data.model_version;
     document.getElementById('stallion-count').textContent = data.stallion_count;
     document.getElementById('farm-count').textContent = data.farms.length;
@@ -519,7 +691,7 @@ body {
       const fee = s.fee_usd ? ('$' + s.fee_usd.toLocaleString()) : (s.fee_qualifier || '—');
       return '<tr onclick="location.href=\'/stallion-card.html?s=' + encodeURIComponent(s.name) + '\'">'
         + '<td>' + (s._rank || (i+1)) + '</td>'
-        + '<td><strong>' + s.name + '</strong></td>'
+        + '<td>' + starHtml(s) + '<strong>' + s.name + '</strong></td>'
         + '<td>' + s.farm.replace(' Farm','').replace(' Farms','').replace(' Stud','').replace(' (Coolmore America)','') + '</td>'
         + '<td>' + fee + '</td>'
         + '<td>' + s.score.tier.replace(/_/g,' ').replace('tier1 full','Tier 1 (full)').replace('tier1 obs only','Tier 1 (OBS)').replace('commercial appeal','Tier 0') + '</td>'
@@ -789,6 +961,7 @@ body {
     });
 
     render('');
+    renderWatchlistPanel();
 
     // Wire up search interactions
     const qInput = document.getElementById('smart-q');

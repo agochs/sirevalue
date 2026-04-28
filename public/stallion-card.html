@@ -97,6 +97,17 @@ body {
 .grade-badge.weak { background: linear-gradient(135deg, #a85050, #c76a6a); box-shadow: 0 4px 14px rgba(155, 44, 44, 0.28); }
 .grade-badge.ok { background: linear-gradient(135deg, #8a6a1e, #a68336); box-shadow: 0 4px 14px rgba(165, 124, 31, 0.28); }
 .grade-letter { font-size: 38px; font-weight: 800; line-height: 1; }
+/* ---------- Watchlist star (mirror of home page) ---------- */
+.star-btn {
+  display: inline-block; cursor: pointer; user-select: none;
+  font-size: 22px; color: #cbb888; vertical-align: middle;
+  margin-right: 8px; line-height: 1;
+  transition: color 0.15s ease, transform 0.1s ease;
+  font-family: -apple-system, sans-serif;
+}
+.star-btn:hover  { color: var(--gold); }
+.star-btn.active { color: var(--gold); }
+.star-btn:active { transform: scale(0.85); }
 /* ---------- Headline callout ---------- */
 .headline {
   margin: 18px 0 6px;
@@ -1448,6 +1459,55 @@ async function bootSireValue() {
       + '</div>';
   }
 
+  // ---------- Watchlist (localStorage-backed; mirror of home page) ----------
+  // We re-anchor last_seen_score to the current value on every card render
+  // — the user is now looking at this stallion, so the next time they
+  // visit home the delta resets relative to "what I last saw."
+  var Watchlist = {
+    KEY: 'sirevalue.watchlist',
+    _load: function() {
+      try {
+        var raw = localStorage.getItem(this.KEY);
+        if (!raw) return { v: 1, stallions: {} };
+        var d = JSON.parse(raw);
+        return (d && d.v === 1 && d.stallions) ? d : { v: 1, stallions: {} };
+      } catch (_e) { return { v: 1, stallions: {} }; }
+    },
+    _save: function(d) { try { localStorage.setItem(this.KEY, JSON.stringify(d)); } catch (_e) {} },
+    has: function(name) { return !!this._load().stallions[name]; },
+    add: function(name, score, grade) {
+      var d = this._load();
+      d.stallions[name] = {
+        added_at: new Date().toISOString(),
+        last_seen_score: score,
+        last_seen_grade: grade,
+      };
+      this._save(d);
+    },
+    remove: function(name) { var d = this._load(); delete d.stallions[name]; this._save(d); },
+    toggle: function(name, score, grade) {
+      if (this.has(name)) { this.remove(name); return false; }
+      this.add(name, score, grade); return true;
+    },
+    markSeen: function(name, score, grade) {
+      var d = this._load();
+      if (d.stallions[name]) {
+        d.stallions[name].last_seen_score = score;
+        d.stallions[name].last_seen_grade = grade;
+        this._save(d);
+      }
+    },
+  };
+  window.toggleWatchStar = function(el) {
+    var name  = decodeURIComponent(el.dataset.name);
+    var score = parseFloat(el.dataset.score);
+    var grade = el.dataset.grade;
+    var nowOn = Watchlist.toggle(name, score, grade);
+    el.classList.toggle('active', nowOn);
+    el.textContent = nowOn ? '★' : '☆';
+    el.title = nowOn ? 'Remove from watchlist' : 'Add to watchlist';
+  };
+
   function renderCard(s) {
     var sc = s.score;
     var c = sc.components;
@@ -1515,11 +1575,21 @@ async function bootSireValue() {
            + '</div>';
     }).join('');
 
+    var starred = Watchlist.has(s.name);
+    var starHtmlSC = '<span class="star-btn ' + (starred ? 'active' : '') + '" '
+      + 'data-name="' + encodeURIComponent(s.name) + '" '
+      + 'data-score="' + sc.value + '" '
+      + 'data-grade="' + escapeHtml(sc.grade) + '" '
+      + 'onclick="toggleWatchStar(this)" '
+      + 'title="' + (starred ? 'Remove from watchlist' : 'Add to watchlist') + '">'
+      + (starred ? '★' : '☆')
+      + '</span>';
+
     document.getElementById('card').innerHTML = ''
       + '<div class="card-head">'
       +   '<div style="flex:1;">'
       +     '<div class="farm-badge">' + escapeHtml(s.farm) + '</div>'
-      +     '<h1 class="stallion-name">' + escapeHtml(s.name) + '</h1>'
+      +     '<h1 class="stallion-name">' + starHtmlSC + escapeHtml(s.name) + '</h1>'
       +     '<div class="pedigree">' + (s.pedigree ? escapeHtml(s.pedigree) : '&nbsp;') + '</div>'
       +   '</div>'
       +   '<div class="grade-badge ' + gradeClass(sc.grade) + '">'
@@ -1563,6 +1633,10 @@ async function bootSireValue() {
 
     // Wire interactive controls inside the freshly rendered card
     wireSalesPanels();
+
+    // Re-anchor watchlist delta to current score — the user is now looking
+    // at this stallion, so "what changed since last time" should reset.
+    Watchlist.markSeen(s.name, sc.value, sc.grade);
   }
 
   // ---------- Navigation / search ----------
