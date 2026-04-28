@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — First-Crop Forecast Validation</title>
+<meta property="og:title" content="SireValue — First-Crop Forecast Validation"/>
+<meta property="og:description" content="Predicted pinhook lift vs realized for every first-crop sire whose foals have started reaching 2YO sales. Receipts for the platform's forecasts."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.home-link { display: inline-block; margin-bottom: 16px; font-size: 13px; color: var(--ink-soft); text-decoration: none; }
+.home-link:hover { color: var(--ink); }
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 22px 26px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 24px; margin: 0 0 8px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 78ch; }
+
+.stat-bar {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px; margin-bottom: 22px;
+}
+.stat {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 14px; text-align: center;
+}
+.stat .num { font-family: "Iowan Old Style", Georgia, serif; font-size: 24px; font-weight: 700; line-height: 1.1; }
+.stat .num.up   { color: var(--good); }
+.stat .num.down { color: var(--weak); }
+.stat .label { font-size: 11px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 26px 0 12px; font-weight: 600;
+}
+table {
+  width: 100%; border-collapse: collapse; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 10px; overflow: hidden;
+  margin-bottom: 22px;
+}
+thead th {
+  text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--ink-soft); font-weight: 700; padding: 10px 12px;
+  background: #f8f4e8; border-bottom: 1px solid var(--rule);
+  cursor: pointer; user-select: none;
+}
+thead th.num { text-align: right; }
+thead th.active .arrow { opacity: 1; color: var(--ink); }
+thead th .arrow { margin-left: 4px; font-size: 10px; color: var(--ink-soft); opacity: 0.4; }
+tbody td { padding: 10px 12px; border-bottom: 1px solid var(--rule); font-size: 13px; vertical-align: top; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: #fbf8ed; }
+tbody td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: "Iowan Old Style", Georgia, serif; }
+
+a.stallion-link { color: var(--ink); text-decoration: none; font-weight: 600; }
+a.stallion-link:hover { text-decoration: underline; }
+.meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+
+.gap-cell { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.gap-cell.up   { color: var(--good); }
+.gap-cell.down { color: var(--weak); }
+.gap-cell.flat { color: var(--ok); }
+
+.conf {
+  display: inline-block; padding: 2px 7px; border-radius: 3px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px; font-weight: 700;
+}
+.conf.high   { background: #d6ecdb; color: #275731; }
+.conf.medium { background: #fff7ed; color: #c2410c; }
+.conf.low    { background: #f3f4f6; color: #4b5563; }
+
+.empty { padding: 24px; color: var(--ink-soft); font-style: italic; text-align: center; }
+.footer { margin-top: 30px; font-size: 11px; color: var(--ink-soft); text-align: center; }
+.footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">First-Crop Forecast Validation</div>
+  </div>
+  <a href="/" class="home-link">← Home</a>
+
+  <div class="hero">
+    <h1>First-Crop Validation · receipts for every forecast</h1>
+    <p>For every first-crop sire we forecast a pinhook lift on, this page compares the prediction to whatever realized data has accumulated as their first crops have moved from yearling to 2YO sales. <strong>Proven</strong> rows have at least 3 realized pinhook pairs; <strong>Pending</strong> rows are forecasts still waiting for their first 2YOs to hit the ring.</p>
+    <p style="margin-top:6px;">Predictions are made ~12 months before realized data is possible (foals must be born, sold as yearlings, then sold again as 2YOs). The longer this page stays up, the more rows graduate from Pending to Proven — and the more the platform's forecast track record stops being a claim and starts being a record.</p>
+  </div>
+
+  <div class="stat-bar">
+    <div class="stat"><div class="num" id="stat-total">—</div><div class="label">Forecasts</div></div>
+    <div class="stat"><div class="num" id="stat-proven">—</div><div class="label">Proven (n≥3)</div></div>
+    <div class="stat"><div class="num" id="stat-pending">—</div><div class="label">Pending</div></div>
+    <div class="stat"><div class="num" id="stat-avg-gap">—</div><div class="label">Avg gap (proven)</div></div>
+  </div>
+
+  <div class="section-title">Proven · forecasts with realized pinhook data</div>
+  <table id="proven-table">
+    <thead>
+      <tr>
+        <th data-section="proven" data-sort="name"><span>Stallion</span><span class="arrow">▼</span></th>
+        <th data-section="proven" data-sort="predicted" class="num"><span>Predicted</span><span class="arrow">▼</span></th>
+        <th data-section="proven" data-sort="realized" class="num"><span>Realized</span><span class="arrow">▼</span></th>
+        <th data-section="proven" data-sort="gap" class="num active"><span>Gap</span><span class="arrow">▲</span></th>
+        <th data-section="proven" data-sort="n" class="num"><span>n (2YO)</span><span class="arrow">▼</span></th>
+        <th data-section="proven" data-sort="conf"><span>Confidence</span><span class="arrow">▼</span></th>
+      </tr>
+    </thead>
+    <tbody id="proven-body"><tr><td colspan="6" class="empty">Loading…</td></tr></tbody>
+  </table>
+
+  <div class="section-title">Pending · forecasts still waiting on their first 2YOs</div>
+  <table id="pending-table">
+    <thead>
+      <tr>
+        <th data-section="pending" data-sort="name"><span>Stallion</span><span class="arrow">▼</span></th>
+        <th data-section="pending" data-sort="predicted" class="num active"><span>Predicted</span><span class="arrow">▼</span></th>
+        <th data-section="pending" data-sort="comp_n" class="num"><span>Comparators</span><span class="arrow">▼</span></th>
+        <th data-section="pending" data-sort="entered" class="num"><span>Entered stud</span><span class="arrow">▼</span></th>
+        <th data-section="pending" data-sort="conf"><span>Confidence</span><span class="arrow">▼</span></th>
+      </tr>
+    </thead>
+    <tbody id="pending-body"><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
+  </table>
+
+  <div class="footer">
+    <span>Methodology: <a href="/methodology.html#first-crop">first-crop forecasting</a> · Source: <code>first-crop-predictions.json</code> + <code>scores.json</code></span>
+  </div>
+
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function fmtPct(p) {
+    if (p == null || isNaN(p)) return '—';
+    return (p > 0 ? '+' : '') + p.toFixed(1) + '%';
+  }
+  function pctCls(p) {
+    if (p == null) return '';
+    if (p >  3) return 'up';
+    if (p < -3) return 'down';
+    return 'flat';
+  }
+
+  let fcp, sc;
+  try {
+    [fcp, sc] = await Promise.all([
+      fetch('/data/first-crop-predictions.json').then(r => r.json()),
+      fetch('/data/scores.json').then(r => r.json()),
+    ]);
+  } catch (e) {
+    document.getElementById('proven-body').innerHTML =
+      '<tr><td colspan="6" class="empty" style="color:#9b2c2c">Failed to load: ' + escapeHtml(e.message) + '</td></tr>';
+    return;
+  }
+  const pinhookByName = {};
+  sc.stallions.forEach(s => { pinhookByName[s.name] = s.pinhook; });
+
+  // Pair every prediction to its realized data (when available)
+  const all = (fcp.stallions || []).filter(e => e.predicted && e.predicted.median_return_pct != null).map(e => {
+    const realizedRaw = pinhookByName[e.name];
+    let realizedPct = null, realizedN = 0;
+    if (realizedRaw && realizedRaw.lift_ratio != null && realizedRaw.twoyo_n != null) {
+      realizedPct = (realizedRaw.lift_ratio - 1) * 100;
+      realizedN   = realizedRaw.twoyo_n;
+    }
+    return {
+      name:           e.name,
+      farm:           e.farm,
+      sire:           e.sire,
+      fee_usd:        e.fee_usd,
+      entered:        e.entered_stud_year,
+      predicted_pct:  e.predicted.median_return_pct,
+      conf:           e.predicted.confidence || 'low',
+      comp_n:         e.predicted.comparators_n || 0,
+      comp_pairs:     e.predicted.comparator_pairs_total || 0,
+      realized_pct:   realizedPct,
+      realized_n:     realizedN,
+      gap:            (realizedPct != null) ? (realizedPct - e.predicted.median_return_pct) : null,
+    };
+  });
+  // "Proven" requires at least 3 realized 2YO transactions
+  const proven  = all.filter(r => r.realized_pct != null && r.realized_n >= 3);
+  const pending = all.filter(r => r.realized_pct == null || r.realized_n < 3);
+
+  // Stat bar
+  document.getElementById('stat-total').textContent  = all.length.toLocaleString();
+  document.getElementById('stat-proven').textContent = proven.length.toLocaleString();
+  document.getElementById('stat-pending').textContent = pending.length.toLocaleString();
+  if (proven.length) {
+    const avgGap = proven.reduce((a, r) => a + r.gap, 0) / proven.length;
+    const el = document.getElementById('stat-avg-gap');
+    el.textContent = fmtPct(avgGap);
+    el.classList.add(avgGap > 3 ? 'up' : avgGap < -3 ? 'down' : '');
+  } else {
+    document.getElementById('stat-avg-gap').textContent = '—';
+  }
+
+  // ---------- table sorting (each section independent) ----------
+  const sortStates = {
+    proven:  { col: 'gap',       dir: 'asc' },   // most-undershoot at top
+    pending: { col: 'predicted', dir: 'desc' },  // boldest forecasts first
+  };
+  const CONF_RANK = { low: 0, medium: 1, high: 2 };
+
+  function provenKey(r, col) {
+    switch (col) {
+      case 'name':       return (r.name || '').toLowerCase();
+      case 'predicted':  return r.predicted_pct;
+      case 'realized':   return r.realized_pct;
+      case 'gap':        return r.gap;
+      case 'n':          return r.realized_n;
+      case 'conf':       return CONF_RANK[r.conf] != null ? CONF_RANK[r.conf] : 99;
+    }
+  }
+  function pendingKey(r, col) {
+    switch (col) {
+      case 'name':       return (r.name || '').toLowerCase();
+      case 'predicted':  return r.predicted_pct;
+      case 'comp_n':     return r.comp_n;
+      case 'entered':    return r.entered || 0;
+      case 'conf':       return CONF_RANK[r.conf] != null ? CONF_RANK[r.conf] : 99;
+    }
+  }
+
+  function sortAndRender(section) {
+    const state = sortStates[section];
+    const data  = section === 'proven' ? proven : pending;
+    const keyFn = section === 'proven' ? provenKey : pendingKey;
+    const sorted = data.slice().sort((a, b) => {
+      const ka = keyFn(a, state.col), kb = keyFn(b, state.col);
+      let cmp;
+      if (typeof ka === 'number' && typeof kb === 'number') cmp = (ka || 0) - (kb || 0);
+      else cmp = String(ka).localeCompare(String(kb));
+      return state.dir === 'asc' ? cmp : -cmp;
+    });
+    const body = document.getElementById(section + '-body');
+    if (!sorted.length) {
+      body.innerHTML = '<tr><td colspan="' + (section === 'proven' ? 6 : 5) + '" class="empty">No ' + section + ' rows yet.</td></tr>';
+    } else {
+      body.innerHTML = sorted.map(r => section === 'proven' ? provenRow(r) : pendingRow(r)).join('');
+    }
+    // Update arrows
+    document.querySelectorAll('thead th[data-section="' + section + '"]').forEach(th => {
+      const isActive = th.dataset.sort === state.col;
+      th.classList.toggle('active', isActive);
+      const arrow = th.querySelector('.arrow');
+      if (arrow) arrow.textContent = isActive ? (state.dir === 'asc' ? '▲' : '▼') : '▼';
+    });
+  }
+
+  function nameCell(r) {
+    const url = '/stallion-card.html?s=' + encodeURIComponent(r.name);
+    const fee = r.fee_usd ? '$' + r.fee_usd.toLocaleString() : '—';
+    return '<td>'
+      + '<a class="stallion-link" href="' + url + '">' + escapeHtml(r.name) + '</a>'
+      + '<div class="meta">' + escapeHtml(r.farm || '') + ' · by ' + escapeHtml(r.sire || '') + ' · ' + fee + '</div>'
+      + '</td>';
+  }
+  function provenRow(r) {
+    const gapCls = pctCls(r.gap);
+    return '<tr>'
+      + nameCell(r)
+      + '<td class="num">' + fmtPct(r.predicted_pct) + '</td>'
+      + '<td class="num">' + fmtPct(r.realized_pct) + '</td>'
+      + '<td class="num gap-cell ' + gapCls + '">' + fmtPct(r.gap) + '</td>'
+      + '<td class="num">' + r.realized_n + '</td>'
+      + '<td><span class="conf ' + r.conf + '">' + r.conf + '</span></td>'
+      + '</tr>';
+  }
+  function pendingRow(r) {
+    return '<tr>'
+      + nameCell(r)
+      + '<td class="num">' + fmtPct(r.predicted_pct) + '</td>'
+      + '<td class="num">' + r.comp_n + ' sires · ' + r.comp_pairs + ' pairs</td>'
+      + '<td class="num">' + (r.entered || '—') + '</td>'
+      + '<td><span class="conf ' + r.conf + '">' + r.conf + '</span></td>'
+      + '</tr>';
+  }
+
+  document.querySelectorAll('thead th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const section = th.dataset.section;
+      const col     = th.dataset.sort;
+      const state   = sortStates[section];
+      if (state.col === col) {
+        state.dir = state.dir === 'asc' ? 'desc' : 'asc';
+      } else {
+        state.col = col;
+        state.dir = (col === 'name' || col === 'conf') ? 'asc' : 'desc';
+        // 'gap' alone defaults asc — most-undershoot first is the interesting tail
+        if (col === 'gap') state.dir = 'asc';
+      }
+      sortAndRender(section);
+    });
+  });
+
+  sortAndRender('proven');
+  sortAndRender('pending');
+})();
+</script>
+</body>
+</html>

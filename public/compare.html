@@ -189,14 +189,61 @@ body {
 
 <script>
 (async function() {
-  const resp = await fetch('/data/scores.json');
-  if (!resp.ok) {
+  const [scoresResp, fcpResp] = await Promise.all([
+    fetch('/data/scores.json'),
+    fetch('/data/first-crop-predictions.json').catch(() => null),
+  ]);
+  if (!scoresResp.ok) {
     document.getElementById('compare-out').innerHTML = '<div class="empty">Failed to load data.</div>';
     return;
   }
-  const data = await resp.json();
+  const data = await scoresResp.json();
   const stallions = data.stallions;
   document.getElementById('model-version').textContent = 'Model ' + data.model_version;
+
+  // First-crop predictions — for the freshman-side rows. Indexed by name.
+  let firstCropByName = {};
+  try {
+    if (fcpResp && fcpResp.ok) {
+      const fcp = await fcpResp.json();
+      (fcp.stallions || []).forEach(e => { firstCropByName[e.name] = e; });
+    }
+  } catch (_e) { /* optional; degrade silently */ }
+
+  // ---------- Pre-compute Value Gap (same logic as home / stallion-card) ----------
+  (function() {
+    const groups = {};
+    stallions.forEach(s => {
+      const band = (s.score.peer_group || {}).fee_band;
+      if (!band || !s.fee_usd) return;
+      (groups[band] = groups[band] || []).push(s.score.value);
+    });
+    const medians = {};
+    Object.keys(groups).forEach(b => {
+      const arr = groups[b].slice().sort((a, b) => a - b);
+      medians[b] = arr[Math.floor(arr.length / 2)];
+    });
+    stallions.forEach(s => {
+      const band = (s.score.peer_group || {}).fee_band;
+      if (!band || !s.fee_usd || medians[band] == null) {
+        s._value_gap = null; return;
+      }
+      s._value_gap     = +(s.score.value - medians[band]).toFixed(1);
+      s._fee_band_median = +medians[band].toFixed(1);
+      s._fee_band_n      = groups[band].length;
+    });
+  })();
+
+  // ---------- Pre-compute Sire-line rank ----------
+  (function() {
+    function normSire(name) { return (name || '').toLowerCase().replace(/\s*\([^)]+\)\s*$/, '').trim(); }
+    const bySire = {};
+    stallions.forEach(s => { const k = normSire(s.sire); if (k) (bySire[k] = bySire[k] || []).push(s); });
+    Object.keys(bySire).forEach(k => {
+      const group = bySire[k].slice().sort((a, b) => (b.score.value || 0) - (a.score.value || 0));
+      group.forEach((s, i) => { s._sire_line_rank = i + 1; s._sire_line_n = group.length; });
+    });
+  })();
 
   function populate(sel, defaultName) {
     sel.innerHTML = '<option value="">— pick a stallion —</option>'
@@ -236,8 +283,31 @@ body {
     {label: 'Color',          get: s => [s.color || '—', null]},
     {label: 'Value Score',    get: s => [s.score.value.toFixed(1), s.score.value], highlight: 'high'},
     {label: 'Grade',          get: s => ['<span class="grade ' + gradeCls(s.score.grade) + '">' + s.score.grade + '</span>', null]},
+    {label: 'Value Gap',      get: s => {
+        if (s._value_gap == null) return ['—', null];
+        const sign = s._value_gap > 0 ? '+' : '';
+        return [sign + s._value_gap.toFixed(1) + ' <span class="small">vs band median ' + s._fee_band_median + '</span>', s._value_gap];
+      }, highlight: 'high'},
+    {label: 'Sire-line rank', get: s => {
+        if (!s._sire_line_n || s._sire_line_n < 2) return ['only son tracked', null];
+        return [s._sire_line_rank + ' of ' + s._sire_line_n + ' <span class="small">sons of ' + (s.sire || '—') + '</span>', s._sire_line_rank];
+      }, highlight: 'low'},
     {label: 'Tier',           get: s => [s.score.tier.replace(/_/g,' '), null]},
     {label: 'Confidence',     get: s => [s.score.confidence || '—', null]},
+    {label: 'Realized pinhook',  get: s => {
+        const p = s.pinhook;
+        if (!p || p.lift_ratio == null) return ['—', null];
+        const liftPct = (p.lift_ratio - 1) * 100;
+        const sign = liftPct > 0 ? '+' : '';
+        return [sign + liftPct.toFixed(0) + '% <span class="small">(n=' + (p.twoyo_n || 0) + ' 2YO sales)</span>', liftPct];
+      }, highlight: 'high'},
+    {label: 'Predicted lift',    get: s => {
+        const fc = firstCropByName[s.name];
+        if (!fc || !fc.predicted || fc.predicted.median_return_pct == null) return ['—', null];
+        const v = fc.predicted.median_return_pct;
+        const sign = v > 0 ? '+' : '';
+        return [sign + v.toFixed(0) + '% <span class="small">' + (fc.predicted.confidence || '—') + ' conf, ' + (fc.predicted.comparators_n || 0) + ' comps</span>', v];
+      }, highlight: 'high'},
     {label: 'Yearling ROI',   get: s => {
         const me = (s.score.components.market_efficiency || {}).inputs || {};
         return me.ratio ? [me.ratio.toFixed(1) + '× <span class="small">(' + (me.yearlings_sold_n||0) + ' sold)</span>', me.ratio] : ['—', null];
