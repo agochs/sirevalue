@@ -6,20 +6,6 @@
   },
   "races": [
     {
-      "race": "Toyota Blue Grass Stakes",
-      "race_grade": "G1",
-      "track": "Keeneland",
-      "date": "2026-04-05",
-      "purse_usd": 1250000,
-      "winner": "Further Ado",
-      "winner_age": 3,
-      "winner_sire": "Gun Runner",
-      "winner_dam": null,
-      "winner_damsire": null,
-      "source_url": "https://spectrumnews1.com/ky/louisville/news/2026/04/05/santa-anita-blue-grass-stakes-wood-memorial",
-      "note": "Won by Irad Ortiz Jr. for Brad Cox in 1:49.58. 100 Derby qualifying points."
-    },
-    {
       "race": "Santa Anita Derby",
       "race_grade": "G1",
       "track": "Santa Anita Park",
@@ -28,10 +14,24 @@
       "winner": "So Happy",
       "winner_age": 3,
       "winner_sire": "Runhappy",
-      "winner_dam": null,
+      "winner_dam": "So Cunning",
       "winner_damsire": null,
-      "source_url": "https://www.americasbestracing.net/the-sport/2026-2026-kentucky-derby-prospect-profiles-santa-anita-derby-winner-so-happy",
+      "source_url": "https://www.bloodhorse.com/horse-racing/race/usa/sa/2026/4/4/10/santa-anita-derby-g1",
       "note": "Stunned favorite Potente. Sire Runhappy was sold to Korea; this colt was conceived in his US tenure. 100 Derby qualifying points."
+    },
+    {
+      "race": "Toyota Blue Grass S.",
+      "race_grade": "G1",
+      "track": "KEE",
+      "date": "2026-04-04",
+      "purse_usd": 1250000,
+      "winner": "Further Ado",
+      "winner_age": 3,
+      "winner_sire": "Gun Runner",
+      "winner_dam": "Sky Dreamer",
+      "winner_damsire": null,
+      "source_url": "https://www.bloodhorse.com/horse-racing/race/usa/kee/2026/4/4/11/toyota-blue-grass-s-g1",
+      "note": "Won by Irad Ortiz Jr. for Brad Cox in 1:49.58. 100 Derby qualifying points."
     },
     {
       "race": "Florida Derby",
@@ -49,22 +49,6 @@
     }
   ],
   "by_sire": {
-    "Gun Runner": [
-      {
-        "race": "Toyota Blue Grass Stakes",
-        "race_grade": "G1",
-        "track": "Keeneland",
-        "date": "2026-04-05",
-        "purse_usd": 1250000,
-        "winner": "Further Ado",
-        "winner_age": 3,
-        "winner_sire": "Gun Runner",
-        "winner_dam": null,
-        "winner_damsire": null,
-        "source_url": "https://spectrumnews1.com/ky/louisville/news/2026/04/05/santa-anita-blue-grass-stakes-wood-memorial",
-        "note": "Won by Irad Ortiz Jr. for Brad Cox in 1:49.58. 100 Derby qualifying points."
-      }
-    ],
     "Runhappy": [
       {
         "race": "Santa Anita Derby",
@@ -75,10 +59,26 @@
         "winner": "So Happy",
         "winner_age": 3,
         "winner_sire": "Runhappy",
-        "winner_dam": null,
+        "winner_dam": "So Cunning",
         "winner_damsire": null,
-        "source_url": "https://www.americasbestracing.net/the-sport/2026-2026-kentucky-derby-prospect-profiles-santa-anita-derby-winner-so-happy",
+        "source_url": "https://www.bloodhorse.com/horse-racing/race/usa/sa/2026/4/4/10/santa-anita-derby-g1",
         "note": "Stunned favorite Potente. Sire Runhappy was sold to Korea; this colt was conceived in his US tenure. 100 Derby qualifying points."
+      }
+    ],
+    "Gun Runner": [
+      {
+        "race": "Toyota Blue Grass S.",
+        "race_grade": "G1",
+        "track": "KEE",
+        "date": "2026-04-04",
+        "purse_usd": 1250000,
+        "winner": "Further Ado",
+        "winner_age": 3,
+        "winner_sire": "Gun Runner",
+        "winner_dam": "Sky Dreamer",
+        "winner_damsire": null,
+        "source_url": "https://www.bloodhorse.com/horse-racing/race/usa/kee/2026/4/4/11/toyota-blue-grass-s-g1",
+        "note": "Won by Irad Ortiz Jr. for Brad Cox in 1:49.58. 100 Derby qualifying points."
       }
     ],
     "Into Mischief": [
