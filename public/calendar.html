@@ -327,11 +327,22 @@ body {
         const sigCounts = s.signal_counts || {};
         const sigTotal = Object.values(sigCounts).reduce(function(a,b){ return a + (b||0); }, 0);
         let sigBar = '';
+        let sigLabel = '';
         if (sigTotal > 0) {
           ['strong','positive','neutral','weak','none'].forEach(function(k) {
             const v = sigCounts[k] || 0;
             if (v) sigBar += '<span class="' + k + '" style="width:' + Math.max(2, Math.round(100*v/sigTotal)) + '%;" title="' + k + ': ' + v + '"></span>';
           });
+          // Raw numeric labels — proportions alone hide whether a sale has 12
+          // hips or 1,200. (Tooltips already had this; surface inline too.)
+          const parts = [];
+          ['strong','positive','neutral','weak'].forEach(function(k) {
+            const v = sigCounts[k] || 0;
+            if (v) parts.push(v.toLocaleString() + ' ' + k);
+          });
+          sigLabel = parts.length
+            ? '<div style="font-size:10px;color:var(--ink-soft);text-align:right;margin-top:3px;letter-spacing:0.3px;">' + parts.join(' · ') + '</div>'
+            : '';
         }
         const titleHtml = s.slug
           ? '<a href="/catalogs.html#sale=' + encodeURIComponent(s.slug) + '">' + escapeHtml(s.sale_name) + '</a>'
@@ -357,7 +368,7 @@ body {
           + '</div>'
           + '<div class="sale-stats">'
           + (s.gross_usd ? '<div class="gross">' + fmtMoney(s.gross_usd) + ' gross</div>' : '')
-          + (sigBar ? '<div class="signal-bar">' + sigBar + '</div>' : '')
+          + (sigBar ? '<div class="signal-bar">' + sigBar + '</div>' + sigLabel : '')
           + '</div>'
           + '</div>';
       });

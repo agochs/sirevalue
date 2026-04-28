@@ -208,6 +208,44 @@ body {
 .movement-item .src a { color: var(--ink-soft); }
 .movement-item .src a:hover { color: var(--ink); }
 .movement-item .tracked { font-size: 10px; color: var(--good); white-space: nowrap; margin-top: 3px; }
+/* ---------- Hip Spotlight ---------- */
+.hip-spotlight {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 22px;
+}
+.hip-spotlight-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
+}
+.hip-spotlight-head h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; margin: 0; font-weight: 700;
+}
+.hip-spotlight-head .sub { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); }
+.hip-row {
+  display: grid; grid-template-columns: auto 1fr auto auto; gap: 14px;
+  align-items: center; padding: 9px 0; border-bottom: 1px dashed var(--rule);
+  font-size: 13px;
+}
+.hip-row:last-child { border-bottom: none; }
+.hip-row .hip-num {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700;
+  font-size: 14px; color: var(--ink-soft); min-width: 42px;
+}
+.hip-row .hip-info .hip-horse { font-weight: 600; }
+.hip-row .hip-info .hip-meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.hip-row .hip-info .hip-meta a { color: var(--ink-soft); }
+.hip-row .hip-info .hip-meta a:hover { color: var(--ink); }
+.hip-row .hip-price {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 14px;
+  white-space: nowrap; color: var(--ink);
+}
+.hip-row .hip-signal {
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px; font-weight: 700;
+}
+.hip-row .hip-signal.strong   { background: #d6ecdb; color: #275731; }
+.hip-row .hip-signal.positive { background: #fef9c3; color: #854d0e; }
 /* ---------- Watchlist ---------- */
 .star-btn {
   display: inline-block; cursor: pointer; user-select: none;
@@ -417,6 +455,17 @@ body {
     </div>
   </div>
 
+  <div id="hip-spotlight" class="hip-spotlight" hidden>
+    <div class="hip-spotlight-head">
+      <h2>Hip Spotlight</h2>
+      <div class="sub" id="hip-spotlight-sub">—</div>
+    </div>
+    <div id="hip-spotlight-list"></div>
+    <div style="margin-top:8px;font-size:11px;color:var(--ink-soft);">
+      Top hips by sire pinhook track record from the most recently-scored catalog. <a href="/catalogs.html" style="color:var(--ink-soft);">All catalogs →</a>
+    </div>
+  </div>
+
   <div id="movements" class="movements" hidden>
     <div class="movements-head">
       <h2>Recent stallion movements</h2>
@@ -495,7 +544,7 @@ body {
   </div>
 
   <div class="footer">
-    <span>Data: Keeneland, Fasig-Tipton, OBS, BloodHorse. Methodology in repo. · <a href="/methodology.html">methodology</a> · <a href="/audit-pinhooks.html">pinhook audit</a> · <a href="/value-gap.html">value gap</a></span>
+    <span>Data: Keeneland, Fasig-Tipton, OBS, BloodHorse. Methodology in repo. · <a href="/methodology.html">methodology</a> · <a href="/audit-pinhooks.html">pinhook audit</a> · <a href="/value-gap.html">value gap</a> · <a href="/sire-lines.html">sire lines</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>
@@ -1157,6 +1206,62 @@ body {
         }
       }
     } catch (_e) { /* movements panel is optional; don't block page */ }
+
+    // ---------- Hip Spotlight panel ----------
+    // Pull the latest catalog (by year in slug + index ordering), find the
+    // top hips with strong sire pinhook signal at reasonable prices, surface 3.
+    try {
+      const idxResp = await fetch('/data/catalog-scoring-index.json?v=' + Date.now());
+      if (idxResp.ok) {
+        const idx = await idxResp.json();
+        const sales = (idx.sales || []).filter(s => s.kind === 'results' && s.signal_counts && (s.signal_counts.strong || 0) > 0);
+        // Pick the latest by year-in-slug (and within same year, prefer the
+        // first entry — index appears to be reverse-chronological already).
+        sales.sort(function(a, b) {
+          const ya = parseInt((a.slug.match(/-(20\d{2})$/) || [])[1], 10) || 0;
+          const yb = parseInt((b.slug.match(/-(20\d{2})$/) || [])[1], 10) || 0;
+          return yb - ya;
+        });
+        const latest = sales[0];
+        if (latest) {
+          const catResp = await fetch('/data/catalogs/catalog-scoring-sale-' + latest.slug + '.json?v=' + Date.now());
+          if (catResp.ok) {
+            const cat = await catResp.json();
+            // Keep only sold hips with strong signal; sort by sire_value_score desc
+            const top = (cat.hips || [])
+              .filter(h => h.sire_pinhook_signal === 'strong'
+                        && h.sold_price_usd
+                        && h.sire_value_score != null)
+              .sort((a, b) => (b.sire_value_score || 0) - (a.sire_value_score || 0))
+              .slice(0, 3);
+            if (top.length) {
+              const panel = document.getElementById('hip-spotlight');
+              panel.hidden = false;
+              document.getElementById('hip-spotlight-sub').textContent = latest.sale_name;
+              document.getElementById('hip-spotlight-list').innerHTML = top.map(function(h) {
+                const fee = h.sire_fee_usd ? ' · sire fee $' + h.sire_fee_usd.toLocaleString() : '';
+                const sireUrl = '/stallion-card.html?s=' + encodeURIComponent(h.sire);
+                return '<div class="hip-row">'
+                  +   '<div class="hip-num">Hip ' + h.hip + '</div>'
+                  +   '<div class="hip-info">'
+                  +     '<div class="hip-horse">' + escapeHtml(h.horse_name || '(unnamed)') + '</div>'
+                  +     '<div class="hip-meta">'
+                  +       'by <a href="' + sireUrl + '">' + escapeHtml(h.sire) + '</a>'
+                  +       (h.dam ? ' out of ' + escapeHtml(h.dam) : '')
+                  +       fee
+                  +       ' · ' + (h.sire_pinhook_pairs || 0) + ' realized pairs · '
+                  +       (h.sire_pinhook_median_pct >= 0 ? '+' : '') + (h.sire_pinhook_median_pct || 0).toFixed(0) + '% median lift'
+                  +     '</div>'
+                  +   '</div>'
+                  +   '<div class="hip-price">$' + (h.sold_price_usd || 0).toLocaleString() + '</div>'
+                  +   '<div><span class="hip-signal ' + h.sire_pinhook_signal + '">' + h.sire_pinhook_signal + '</span></div>'
+                  + '</div>';
+              }).join('');
+            }
+          }
+        }
+      }
+    } catch (_e) { /* spotlight is optional; don't block page */ }
   } catch (e) {
     document.getElementById('leaderboard-body').innerHTML =
       '<tr><td colspan="7" style="padding:20px;text-align:center;color:#9b2c2c">Failed to load: ' + e.message + '</td></tr>';

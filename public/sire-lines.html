@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Sire Lines</title>
+<meta property="og:title" content="SireValue — Sire Lines"/>
+<meta property="og:description" content="Every sire-line in our database with 2+ sons at stud, ranked by their best son's Value Score. Click a sire to drill into the full line."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.home-link {
+  display: inline-block; margin-bottom: 16px; font-size: 13px;
+  color: var(--ink-soft); text-decoration: none;
+}
+.home-link:hover { color: var(--ink); }
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 22px 26px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 24px; margin: 0 0 8px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 78ch; }
+
+.controls {
+  display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+  margin-bottom: 14px; padding: 10px 16px;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+}
+.controls label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--ink-soft); font-weight: 600;
+}
+.controls input { font-family: inherit; font-size: 13px; padding: 6px 10px; border: 1px solid var(--rule); border-radius: 5px; background: var(--cream); color: var(--ink); flex: 1; min-width: 140px; }
+.controls .count { margin-left: auto; font-size: 12px; color: var(--ink-soft); }
+
+.sire-card {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 16px 20px; margin-bottom: 14px;
+}
+.sire-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
+}
+.sire-head h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 18px; margin: 0; font-weight: 700;
+}
+.sire-head .sons-count {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft);
+}
+.son-row {
+  display: grid; grid-template-columns: auto 1fr auto auto auto; gap: 12px;
+  align-items: center; padding: 6px 0; border-bottom: 1px dashed var(--rule);
+  font-size: 13px;
+}
+.son-row:last-child { border-bottom: none; }
+.son-row .rk { font-family: "Iowan Old Style", Georgia, serif; color: var(--ink-soft); width: 22px; text-align: right; }
+.son-row a.name { color: var(--ink); text-decoration: none; font-weight: 600; }
+.son-row a.name:hover { text-decoration: underline; }
+.son-row .farm-tag { font-size: 11px; color: var(--ink-soft); }
+.son-row .fee { font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
+.son-row .score-now { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 15px; }
+.son-row .grade-cell {
+  display: inline-block; padding: 2px 7px; border-radius: 3px; font-weight: 700;
+  font-size: 11px; min-width: 24px; text-align: center;
+}
+.grade-a { background: linear-gradient(135deg, #b8860b, #d4a147); color: #fff; }
+.grade-b { background: #c4a356; color: #fff; }
+.grade-c { background: #a68b3d; color: #fff; }
+.grade-d { background: #8a6a1e; color: #fff; }
+.grade-f { background: #a85050; color: #fff; }
+.empty { padding: 18px; color: var(--ink-soft); font-style: italic; text-align: center; }
+.footer { margin-top: 30px; font-size: 11px; color: var(--ink-soft); text-align: center; }
+.footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Sire Lines</div>
+  </div>
+
+  <a href="/" class="home-link">← Home</a>
+
+  <div class="hero">
+    <h1>Sire Lines · sons of the same sire, side by side</h1>
+    <p>Every sire with 2+ sons at stud in our database, ranked by the top son's Value Score. Useful when you're choosing between brothers in the same line — e.g., which Tapit son is the right pick at $25K? Country-suffix variants like "Candy Ride (Arg)" collapse onto the same parent line.</p>
+  </div>
+
+  <div class="controls">
+    <label for="search">Search</label>
+    <input id="search" type="search" placeholder="sire name…" autocomplete="off"/>
+    <span class="count" id="result-count">—</span>
+  </div>
+
+  <div id="lines-container">
+    <div class="empty">Loading…</div>
+  </div>
+
+  <div class="footer">
+    <span>Methodology: <a href="/methodology.html">overview</a> · Source: <code>scores.json</code></span>
+  </div>
+
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function gradeClass(g) {
+    if (g === 'A+' || g === 'A') return 'grade-a';
+    if (g === 'B') return 'grade-b';
+    if (g === 'C') return 'grade-c';
+    if (g === 'D') return 'grade-d';
+    return 'grade-f';
+  }
+  function normSire(name) {
+    return (name || '').toLowerCase().replace(/\s*\([^)]+\)\s*$/, '').trim();
+  }
+
+  let stallions;
+  try {
+    const resp = await fetch('/data/scores.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    const data = await resp.json();
+    stallions = data.stallions;
+  } catch (e) {
+    document.getElementById('lines-container').innerHTML =
+      '<div class="empty">Failed to load: ' + escapeHtml(e.message) + '</div>';
+    return;
+  }
+
+  // Build sire → [sons] index
+  const bySire = {};
+  stallions.forEach(function(s) {
+    const key = normSire(s.sire);
+    if (!key) return;
+    (bySire[key] = bySire[key] || []).push(s);
+  });
+
+  // Keep only sires with 2+ sons; sort each son list by score desc
+  const lines = Object.keys(bySire)
+    .filter(k => bySire[k].length >= 2)
+    .map(k => {
+      const sons = bySire[k].slice().sort(function(a, b) {
+        return (b.score.value || 0) - (a.score.value || 0);
+      });
+      // Use the original spelling of the most-popular son's `sire` field
+      // for display (preserves "Tapit" capitalization, etc.). Fall back to k.
+      const displaySire = sons[0].sire || k;
+      return {
+        sire_norm:   k,
+        display:     displaySire,
+        sons:        sons,
+        top_score:   sons[0].score.value || 0,
+      };
+    });
+
+  // Sort by top son's score desc — most prestigious sire-lines first
+  lines.sort(function(a, b) { return b.top_score - a.top_score; });
+
+  let searchFilter = '';
+
+  function rowHtml(s, i) {
+    const fee = s.fee_usd ? '$' + s.fee_usd.toLocaleString() : (s.fee_qualifier || '—');
+    const url = '/stallion-card.html?s=' + encodeURIComponent(s.name);
+    return '<div class="son-row">'
+      + '<div class="rk">' + (i + 1) + '.</div>'
+      + '<span><a class="name" href="' + url + '">' + escapeHtml(s.name) + '</a><div class="farm-tag">' + escapeHtml(s.farm) + '</div></span>'
+      + '<span class="fee">' + fee + '</span>'
+      + '<span class="score-now">' + s.score.value.toFixed(1) + '</span>'
+      + '<span class="grade-cell ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span>'
+      + '</div>';
+  }
+
+  function lineHtml(line) {
+    return '<div class="sire-card">'
+      + '<div class="sire-head">'
+      +   '<h2>' + escapeHtml(line.display) + '</h2>'
+      +   '<span class="sons-count">' + line.sons.length + ' sons at stud · top score ' + line.top_score.toFixed(1) + '</span>'
+      + '</div>'
+      + line.sons.map(rowHtml).join('')
+      + '</div>';
+  }
+
+  function applyFilter() {
+    const q = (searchFilter || '').toLowerCase().trim();
+    if (!q) return lines;
+    return lines.filter(line =>
+      line.display.toLowerCase().includes(q)
+      || line.sons.some(s => (s.name || '').toLowerCase().includes(q))
+    );
+  }
+
+  function render() {
+    const filtered = applyFilter();
+    document.getElementById('result-count').textContent =
+      filtered.length + ' sire-line' + (filtered.length === 1 ? '' : 's')
+      + ' (' + filtered.reduce((acc, l) => acc + l.sons.length, 0) + ' sons total)';
+    if (!filtered.length) {
+      document.getElementById('lines-container').innerHTML = '<div class="empty">No matches for "' + escapeHtml(searchFilter) + '".</div>';
+      return;
+    }
+    document.getElementById('lines-container').innerHTML = filtered.map(lineHtml).join('');
+  }
+
+  document.getElementById('search').addEventListener('input', function(e) {
+    searchFilter = e.target.value;
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>
