@@ -679,6 +679,36 @@ async function bootSireValue() {
     });
   })();
 
+  // ---------- Sire-line ranking ----------
+  // Group stallions by their sire. Within each group, rank by score desc.
+  // Attach _sire_line_rank, _sire_line_n, _sire_line_top so the stallion-card
+  // headline can render: "Of 8 sons of Tapit at stud, ranked 7th. Top: <name>."
+  // Sire normalization strips country suffixes so "Candy Ride (Arg)" and
+  // "Candy Ride" collapse onto the same group.
+  (function computeSireLineRankings() {
+    function normSire(name) {
+      return (name || '').toLowerCase().replace(/\s*\([^)]+\)\s*$/, '').trim();
+    }
+    var bySire = {};
+    stallions.forEach(function(s) {
+      var key = normSire(s.sire);
+      if (!key) return;
+      (bySire[key] = bySire[key] || []).push(s);
+    });
+    Object.keys(bySire).forEach(function(key) {
+      var group = bySire[key].slice().sort(function(a, b) {
+        return (b.score.value || 0) - (a.score.value || 0);
+      });
+      group.forEach(function(s, i) {
+        s._sire_line_rank = i + 1;
+        s._sire_line_n    = group.length;
+        // Top son for the headline link — but if this stallion IS the top,
+        // show the runner-up instead (avoids "ranked 1st of 8. Top: yourself").
+        s._sire_line_top  = (i === 0 && group.length > 1) ? group[1] : group[0];
+      });
+    });
+  })();
+
   // Progeny data (leading sires + BMS) — loaded best-effort. Used by renderProgeny().
   // Keyed by normalized name so lookups survive minor casing/suffix differences.
   var sireIndex = {}, bmsIndex = {};
@@ -1496,6 +1526,30 @@ async function bootSireValue() {
         + '</div>';
     }
 
+    // Sire-line ranking — only show if there are at least 2 sons of this sire
+    // tracked. Below 2 the comparison is empty.
+    var sireLineHtml = '';
+    if (s._sire_line_n && s._sire_line_n >= 2 && s.sire) {
+      var rank = s._sire_line_rank;
+      var n    = s._sire_line_n;
+      var top  = s._sire_line_top;
+      var rankSuffix = (rank % 10 === 1 && rank !== 11) ? 'st'
+                     : (rank % 10 === 2 && rank !== 12) ? 'nd'
+                     : (rank % 10 === 3 && rank !== 13) ? 'rd' : 'th';
+      var topUrl = top ? ('/stallion-card.html?s=' + encodeURIComponent(top.name)) : '';
+      var topLabel = (rank === 1)
+        ? 'Top of his sire-line in our database. Runner-up: '
+          + '<a href="' + topUrl + '" style="color:var(--ink);">' + escapeHtml(top.name) + '</a> ('
+          + (top.score.value).toFixed(1) + ').'
+        : 'Top: <a href="' + topUrl + '" style="color:var(--ink);">' + escapeHtml(top.name) + '</a> ('
+          + (top.score.value).toFixed(1) + ').';
+      sireLineHtml = '<div class="notable-signal">'
+        + '<strong>Sire-line:</strong> '
+        + '<strong>' + rank + rankSuffix + '</strong> of ' + n + ' sons of '
+        + escapeHtml(s.sire) + ' at stud. ' + topLabel
+        + '</div>';
+    }
+
     return ''
       + '<div class="headline">'
       +   '<div class="headline-row">'
@@ -1505,6 +1559,7 @@ async function bootSireValue() {
       +   (tierGloss   ? '<div class="tier-blurb">' + escapeHtml(tierGloss) + '</div>' : '')
       +   (notableHtml ? '<div class="notable-signal">' + notableHtml + '</div>'      : '')
       +   gapHtml
+      +   sireLineHtml
       + '</div>';
   }
 
