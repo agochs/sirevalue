@@ -101,11 +101,13 @@ tbody tr:hover { background: #fbf8ed; }
   font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px;
   font-weight: 700; margin: 2px 4px 2px 0;
 }
-.flag.extreme_loss             { background: #fde7e3; color: #7a1d1d; }
-.flag.extreme_gain             { background: #d6ecdb; color: #275731; }
-.flag.micro_yearling_big_2yo   { background: #fff7ed; color: #c2410c; }
-.flag.multi_yearling_multi_2yo { background: #fff1d6; color: #854d0e; }
-.flag.sub_1k_price             { background: #f3f4f6; color: #4b5563; }
+.flag.extreme_loss               { background: #fde7e3; color: #7a1d1d; }
+.flag.extreme_gain               { background: #d6ecdb; color: #275731; }
+.flag.micro_yearling_big_2yo     { background: #fff7ed; color: #c2410c; }
+.flag.multi_yearling_multi_2yo   { background: #fff1d6; color: #854d0e; }
+.flag.single_yearling_multi_2yo  { background: #fff8e0; color: #92670e; }
+.flag.multi_yearling_single_2yo  { background: #fff8e0; color: #92670e; }
+.flag.sub_1k_price               { background: #f3f4f6; color: #4b5563; }
 
 .prices { font-family: "Iowan Old Style", Georgia, serif; white-space: nowrap; }
 .ret    { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; white-space: nowrap; }
@@ -140,7 +142,9 @@ tbody tr:hover { background: #fbf8ed; }
       <span class="flag extreme_loss">extreme loss</span> ≤ -75% return ·
       <span class="flag extreme_gain">extreme gain</span> ≥ 1500% return ·
       <span class="flag micro_yearling_big_2yo">micro yearling big 2yo</span> $&lt;5K → $≥100K ·
-      <span class="flag multi_yearling_multi_2yo">multi yearling multi 2yo</span> dam-collision risk ·
+      <span class="flag multi_yearling_multi_2yo">multi yearling multi 2yo</span> strong dam-collision risk ·
+      <span class="flag single_yearling_multi_2yo">single yearling multi 2yo</span> weak dam-collision risk (or 2YO re-offer) ·
+      <span class="flag multi_yearling_single_2yo">multi yearling single 2yo</span> weak dam-collision risk (or yearling re-offer) ·
       <span class="flag sub_1k_price">sub 1k price</span> transcription noise.
     </p>
   </div>
@@ -153,6 +157,8 @@ tbody tr:hover { background: #fbf8ed; }
       <option value="extreme_gain">extreme gain</option>
       <option value="micro_yearling_big_2yo">micro yearling big 2yo</option>
       <option value="multi_yearling_multi_2yo">multi yearling multi 2yo</option>
+      <option value="single_yearling_multi_2yo">single yearling multi 2yo</option>
+      <option value="multi_yearling_single_2yo">multi yearling single 2yo</option>
       <option value="sub_1k_price">sub 1k price</option>
     </select>
     <label for="search-filter">Search</label>

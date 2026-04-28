@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T02:14:09Z",
+  "generated_at": "2026-04-28T14:30:43Z",
   "method": "cohort-fingerprint-by-sire-dam-foalyear",
   "summary": {
     "stallions_with_pairs": 95,
@@ -1232,7 +1232,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10262/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025/",
           "return_pct": 16.1,
           "gross_return_usd": 25000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "Ima Big Bad Wolf C 2023",
@@ -1450,7 +1452,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 109.4,
           "positive_return_pct": 81.8,
-          "median_yearling_price": 45000
+          "median_yearling_price": 45000,
+          "top_match": {
+            "horse_name": "Flower Mound F 2021",
+            "return_pct": 431.9,
+            "yearling_price": 47000,
+            "twoyo_price": 250000
+          }
         },
         {
           "foal_year": 2022,
@@ -1458,7 +1466,13 @@
           "median_return_pct": 89.7,
           "mean_return_pct": 181.5,
           "positive_return_pct": 95.2,
-          "median_yearling_price": 110000
+          "median_yearling_price": 110000,
+          "top_match": {
+            "horse_name": "Madam Opus F 2022",
+            "return_pct": 900.0,
+            "yearling_price": 70000,
+            "twoyo_price": 700000
+          }
         },
         {
           "foal_year": 2023,
@@ -1466,7 +1480,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 128.3,
           "positive_return_pct": 89.5,
-          "median_yearling_price": 95000
+          "median_yearling_price": 95000,
+          "top_match": {
+            "horse_name": "Determined Ace F 2023",
+            "return_pct": 438.5,
+            "yearling_price": 65000,
+            "twoyo_price": 350000
+          }
         },
         {
           "foal_year": 2024,
@@ -1474,7 +1494,13 @@
           "median_return_pct": 138.5,
           "mean_return_pct": 200.7,
           "positive_return_pct": 94.1,
-          "median_yearling_price": 52000
+          "median_yearling_price": 52000,
+          "top_match": {
+            "horse_name": "Deal C 2024",
+            "return_pct": 650.0,
+            "yearling_price": 16000,
+            "twoyo_price": 120000
+          }
         }
       ]
     },
@@ -1572,7 +1598,13 @@
           "median_return_pct": 30.0,
           "mean_return_pct": 30.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 50000
+          "median_yearling_price": 50000,
+          "top_match": {
+            "horse_name": "Saudi Front C 2021",
+            "return_pct": 30.0,
+            "yearling_price": 50000,
+            "twoyo_price": 65000
+          }
         },
         {
           "foal_year": 2022,
@@ -1580,7 +1612,13 @@
           "median_return_pct": -90.0,
           "mean_return_pct": -90.0,
           "positive_return_pct": 0.0,
-          "median_yearling_price": 70000
+          "median_yearling_price": 70000,
+          "top_match": {
+            "horse_name": "War Fire C 2022",
+            "return_pct": -90.0,
+            "yearling_price": 70000,
+            "twoyo_price": 7000
+          }
         },
         {
           "foal_year": 2023,
@@ -1588,7 +1626,13 @@
           "median_return_pct": 11.1,
           "mean_return_pct": 11.1,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 180000
+          "median_yearling_price": 180000,
+          "top_match": {
+            "horse_name": "Bayfront C 2023",
+            "return_pct": 11.1,
+            "yearling_price": 180000,
+            "twoyo_price": 200000
+          }
         },
         {
           "foal_year": 2024,
@@ -1596,7 +1640,13 @@
           "median_return_pct": 210.0,
           "mean_return_pct": 210.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 100000
+          "median_yearling_price": 100000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 210.0,
+            "yearling_price": 100000,
+            "twoyo_price": 310000
+          }
         }
       ]
     },
@@ -2428,7 +2478,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10073/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024/",
           "return_pct": 52.9,
           "gross_return_usd": 9000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Hawaiian Moon F 2023",
@@ -2850,7 +2902,13 @@
           "median_return_pct": 118.8,
           "mean_return_pct": 89.1,
           "positive_return_pct": 60.9,
-          "median_yearling_price": 110000
+          "median_yearling_price": 110000,
+          "top_match": {
+            "horse_name": "Talentuoso C 2021",
+            "return_pct": 470.0,
+            "yearling_price": 50000,
+            "twoyo_price": 285000
+          }
         },
         {
           "foal_year": 2022,
@@ -2858,7 +2916,13 @@
           "median_return_pct": 87.5,
           "mean_return_pct": 166.1,
           "positive_return_pct": 73.7,
-          "median_yearling_price": 80000
+          "median_yearling_price": 80000,
+          "top_match": {
+            "horse_name": "Presha F 2022",
+            "return_pct": 875.0,
+            "yearling_price": 40000,
+            "twoyo_price": 390000
+          }
         },
         {
           "foal_year": 2023,
@@ -2866,7 +2930,13 @@
           "median_return_pct": 132.2,
           "mean_return_pct": 185.4,
           "positive_return_pct": 83.3,
-          "median_yearling_price": 43500
+          "median_yearling_price": 43500,
+          "top_match": {
+            "horse_name": "Meilani F 2023",
+            "return_pct": 872.2,
+            "yearling_price": 18000,
+            "twoyo_price": 175000
+          }
         },
         {
           "foal_year": 2024,
@@ -2874,7 +2944,13 @@
           "median_return_pct": 112.5,
           "mean_return_pct": 221.4,
           "positive_return_pct": 87.5,
-          "median_yearling_price": 105000
+          "median_yearling_price": 105000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 534.6,
+            "yearling_price": 130000,
+            "twoyo_price": 825000
+          }
         }
       ]
     },
@@ -3204,7 +3280,13 @@
           "median_return_pct": -47.7,
           "mean_return_pct": -12.8,
           "positive_return_pct": 25.0,
-          "median_yearling_price": 65000
+          "median_yearling_price": 65000,
+          "top_match": {
+            "horse_name": "Warheaded C 2021",
+            "return_pct": 115.4,
+            "yearling_price": 65000,
+            "twoyo_price": 140000
+          }
         },
         {
           "foal_year": 2022,
@@ -3212,7 +3294,13 @@
           "median_return_pct": 32.6,
           "mean_return_pct": 37.6,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 67500
+          "median_yearling_price": 67500,
+          "top_match": {
+            "horse_name": "Smooth N Silky C 2022",
+            "return_pct": 150.0,
+            "yearling_price": 50000,
+            "twoyo_price": 125000
+          }
         },
         {
           "foal_year": 2023,
@@ -3220,7 +3308,13 @@
           "median_return_pct": 107.7,
           "mean_return_pct": 243.7,
           "positive_return_pct": 85.7,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Anyway C 2023",
+            "return_pct": 740.0,
+            "yearling_price": 25000,
+            "twoyo_price": 210000
+          }
         },
         {
           "foal_year": 2024,
@@ -3228,7 +3322,13 @@
           "median_return_pct": 255.9,
           "mean_return_pct": 255.9,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 63500
+          "median_yearling_price": 63500,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 311.8,
+            "yearling_price": 17000,
+            "twoyo_price": 70000
+          }
         }
       ]
     },
@@ -3378,7 +3478,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10083/fasig-tipton-midlantic-2yos-in-training-sale-2024/",
           "return_pct": 250.0,
           "gross_return_usd": 25000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "UNNAMED C 2024",
@@ -3850,7 +3952,13 @@
           "median_return_pct": 58.5,
           "mean_return_pct": 87.1,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 52500
+          "median_yearling_price": 52500,
+          "top_match": {
+            "horse_name": "Bosun C 2021",
+            "return_pct": 294.7,
+            "yearling_price": 57000,
+            "twoyo_price": 225000
+          }
         },
         {
           "foal_year": 2022,
@@ -3858,7 +3966,13 @@
           "median_return_pct": 41.7,
           "mean_return_pct": 95.6,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 24000
+          "median_yearling_price": 24000,
+          "top_match": {
+            "horse_name": "Olympic Star F 2022",
+            "return_pct": 344.4,
+            "yearling_price": 18000,
+            "twoyo_price": 80000
+          }
         },
         {
           "foal_year": 2023,
@@ -3866,7 +3980,13 @@
           "median_return_pct": 133.3,
           "mean_return_pct": 340.3,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 16000
+          "median_yearling_price": 16000,
+          "top_match": {
+            "horse_name": "Let's Go Barbie F 2023",
+            "return_pct": 1757.1,
+            "yearling_price": 7000,
+            "twoyo_price": 130000
+          }
         },
         {
           "foal_year": 2024,
@@ -3874,7 +3994,13 @@
           "median_return_pct": 8.8,
           "mean_return_pct": 42.1,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 38500
+          "median_yearling_price": 38500,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 237.5,
+            "yearling_price": 80000,
+            "twoyo_price": 270000
+          }
         }
       ]
     },
@@ -4514,7 +4640,13 @@
           "median_return_pct": 29.1,
           "mean_return_pct": 63.1,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 66000
+          "median_yearling_price": 66000,
+          "top_match": {
+            "horse_name": "Mongolian Spun C 2021",
+            "return_pct": 300.0,
+            "yearling_price": 10000,
+            "twoyo_price": 40000
+          }
         },
         {
           "foal_year": 2022,
@@ -4522,7 +4654,13 @@
           "median_return_pct": 55.0,
           "mean_return_pct": 72.0,
           "positive_return_pct": 63.6,
-          "median_yearling_price": 32000
+          "median_yearling_price": 32000,
+          "top_match": {
+            "horse_name": "Belvedere Club F 2022",
+            "return_pct": 218.2,
+            "yearling_price": 22000,
+            "twoyo_price": 70000
+          }
         },
         {
           "foal_year": 2023,
@@ -4530,7 +4668,13 @@
           "median_return_pct": -33.3,
           "mean_return_pct": -44.4,
           "positive_return_pct": 0.0,
-          "median_yearling_price": 60000
+          "median_yearling_price": 60000,
+          "top_match": {
+            "horse_name": "Miss Jenna F 2023",
+            "return_pct": -20.0,
+            "yearling_price": 15000,
+            "twoyo_price": 12000
+          }
         },
         {
           "foal_year": 2024,
@@ -4538,7 +4682,13 @@
           "median_return_pct": 76.7,
           "mean_return_pct": 132.1,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 31000
+          "median_yearling_price": 31000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 447.6,
+            "yearling_price": 105000,
+            "twoyo_price": 575000
+          }
         }
       ]
     },
@@ -5200,7 +5350,13 @@
           "median_return_pct": -4.2,
           "mean_return_pct": 46.1,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 130000
+          "median_yearling_price": 130000,
+          "top_match": {
+            "horse_name": "Mongolian Max C 2021",
+            "return_pct": 400.0,
+            "yearling_price": 20000,
+            "twoyo_price": 100000
+          }
         },
         {
           "foal_year": 2022,
@@ -5208,7 +5364,13 @@
           "median_return_pct": 73.3,
           "mean_return_pct": 188.3,
           "positive_return_pct": 76.9,
-          "median_yearling_price": 60000
+          "median_yearling_price": 60000,
+          "top_match": {
+            "horse_name": "Baela F 2022",
+            "return_pct": 1053.8,
+            "yearling_price": 13000,
+            "twoyo_price": 150000
+          }
         },
         {
           "foal_year": 2023,
@@ -5216,7 +5378,13 @@
           "median_return_pct": 61.2,
           "mean_return_pct": 39.3,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 155000
+          "median_yearling_price": 155000,
+          "top_match": {
+            "horse_name": "Supercollide F 2023",
+            "return_pct": 150.0,
+            "yearling_price": 200000,
+            "twoyo_price": 500000
+          }
         },
         {
           "foal_year": 2024,
@@ -5224,7 +5392,13 @@
           "median_return_pct": 130.2,
           "mean_return_pct": 158.4,
           "positive_return_pct": 83.3,
-          "median_yearling_price": 71000
+          "median_yearling_price": 71000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 375.0,
+            "yearling_price": 40000,
+            "twoyo_price": 190000
+          }
         }
       ]
     },
@@ -6272,7 +6446,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9865/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2023/",
           "return_pct": -26.5,
           "gross_return_usd": -45000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Great Maximus C 2021",
@@ -6418,7 +6594,13 @@
           "median_return_pct": 40.2,
           "mean_return_pct": 65.1,
           "positive_return_pct": 61.1,
-          "median_yearling_price": 38500
+          "median_yearling_price": 38500,
+          "top_match": {
+            "horse_name": "Ur in Trouble F 2021",
+            "return_pct": 383.3,
+            "yearling_price": 18000,
+            "twoyo_price": 87000
+          }
         },
         {
           "foal_year": 2022,
@@ -6426,7 +6608,13 @@
           "median_return_pct": 5.5,
           "mean_return_pct": 132.2,
           "positive_return_pct": 60.0,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "I'mwishingonastar F 2022",
+            "return_pct": 900.0,
+            "yearling_price": 15000,
+            "twoyo_price": 150000
+          }
         },
         {
           "foal_year": 2023,
@@ -6434,7 +6622,13 @@
           "median_return_pct": 275.0,
           "mean_return_pct": 334.3,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 15000
+          "median_yearling_price": 15000,
+          "top_match": {
+            "horse_name": "Intrepido C 2023",
+            "return_pct": 1183.3,
+            "yearling_price": 30000,
+            "twoyo_price": 385000
+          }
         },
         {
           "foal_year": 2024,
@@ -6442,7 +6636,13 @@
           "median_return_pct": 354.6,
           "mean_return_pct": 337.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 16500
+          "median_yearling_price": 16500,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 566.7,
+            "yearling_price": 4500,
+            "twoyo_price": 30000
+          }
         }
       ]
     },
@@ -7688,7 +7888,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10262/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025/",
           "return_pct": -35.3,
           "gross_return_usd": -12000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Somethingwonderful F 2021",
@@ -7892,7 +8094,13 @@
           "median_return_pct": 20.0,
           "mean_return_pct": 53.9,
           "positive_return_pct": 64.9,
-          "median_yearling_price": 52000
+          "median_yearling_price": 52000,
+          "top_match": {
+            "horse_name": "Coffee Kisses F 2021",
+            "return_pct": 400.0,
+            "yearling_price": 80000,
+            "twoyo_price": 400000
+          }
         },
         {
           "foal_year": 2022,
@@ -7900,7 +8108,13 @@
           "median_return_pct": 96.6,
           "mean_return_pct": 156.6,
           "positive_return_pct": 72.2,
-          "median_yearling_price": 36000
+          "median_yearling_price": 36000,
+          "top_match": {
+            "horse_name": "Accelerating F 2022",
+            "return_pct": 1200.0,
+            "yearling_price": 25000,
+            "twoyo_price": 325000
+          }
         },
         {
           "foal_year": 2023,
@@ -7908,7 +8122,13 @@
           "median_return_pct": 88.2,
           "mean_return_pct": 153.5,
           "positive_return_pct": 77.8,
-          "median_yearling_price": 34500
+          "median_yearling_price": 34500,
+          "top_match": {
+            "horse_name": "Sweet Ember F 2023",
+            "return_pct": 955.6,
+            "yearling_price": 36000,
+            "twoyo_price": 380000
+          }
         },
         {
           "foal_year": 2024,
@@ -7916,7 +8136,13 @@
           "median_return_pct": 250.0,
           "mean_return_pct": 241.5,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Washton F 2024",
+            "return_pct": 400.0,
+            "yearling_price": 27000,
+            "twoyo_price": 135000
+          }
         }
       ]
     },
@@ -8595,7 +8821,13 @@
           "median_return_pct": 4.2,
           "mean_return_pct": 34.5,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 77500
+          "median_yearling_price": 77500,
+          "top_match": {
+            "horse_name": "Sir Flash C 2021",
+            "return_pct": 400.0,
+            "yearling_price": 50000,
+            "twoyo_price": 250000
+          }
         },
         {
           "foal_year": 2022,
@@ -8603,7 +8835,13 @@
           "median_return_pct": 10.1,
           "mean_return_pct": 15.7,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 150000
+          "median_yearling_price": 150000,
+          "top_match": {
+            "horse_name": "Clapping C 2022",
+            "return_pct": 150.0,
+            "yearling_price": 220000,
+            "twoyo_price": 550000
+          }
         },
         {
           "foal_year": 2023,
@@ -8611,7 +8849,13 @@
           "median_return_pct": 52.7,
           "mean_return_pct": 44.1,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 125000
+          "median_yearling_price": 125000,
+          "top_match": {
+            "horse_name": "Minute by Minute F 2023",
+            "return_pct": 160.9,
+            "yearling_price": 115000,
+            "twoyo_price": 300000
+          }
         },
         {
           "foal_year": 2024,
@@ -8619,7 +8863,13 @@
           "median_return_pct": 336.9,
           "mean_return_pct": 2970.4,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 85000
+          "median_yearling_price": 85000,
+          "top_match": {
+            "horse_name": "Harbaugh C 2024",
+            "return_pct": 11150.0,
+            "yearling_price": 4000,
+            "twoyo_price": 450000
+          }
         }
       ]
     },
@@ -9093,7 +9343,13 @@
           "median_return_pct": 165.0,
           "mean_return_pct": 181.8,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 20000
+          "median_yearling_price": 20000,
+          "top_match": {
+            "horse_name": "Steel Link C 2021",
+            "return_pct": 466.7,
+            "yearling_price": 15000,
+            "twoyo_price": 85000
+          }
         },
         {
           "foal_year": 2022,
@@ -9101,7 +9357,13 @@
           "median_return_pct": 71.4,
           "mean_return_pct": 70.1,
           "positive_return_pct": 85.7,
-          "median_yearling_price": 18000
+          "median_yearling_price": 18000,
+          "top_match": {
+            "horse_name": "Perfectworks C 2022",
+            "return_pct": 200.0,
+            "yearling_price": 5000,
+            "twoyo_price": 15000
+          }
         },
         {
           "foal_year": 2023,
@@ -9109,7 +9371,13 @@
           "median_return_pct": 120.0,
           "mean_return_pct": 113.4,
           "positive_return_pct": 57.1,
-          "median_yearling_price": 20000
+          "median_yearling_price": 20000,
+          "top_match": {
+            "horse_name": "Three Mile Gold C 2023",
+            "return_pct": 320.0,
+            "yearling_price": 50000,
+            "twoyo_price": 210000
+          }
         },
         {
           "foal_year": 2024,
@@ -9117,7 +9385,13 @@
           "median_return_pct": 146.7,
           "mean_return_pct": 146.7,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 15000
+          "median_yearling_price": 15000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 146.7,
+            "yearling_price": 15000,
+            "twoyo_price": 37000
+          }
         }
       ]
     },
@@ -9769,7 +10043,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9865/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2023/",
           "return_pct": 80.6,
           "gross_return_usd": 29000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Parker's Candy C 2023",
@@ -10285,7 +10561,13 @@
           "median_return_pct": 80.6,
           "mean_return_pct": 120.3,
           "positive_return_pct": 65.2,
-          "median_yearling_price": 80000
+          "median_yearling_price": 80000,
+          "top_match": {
+            "horse_name": "Sixty Degrees C 2021",
+            "return_pct": 850.0,
+            "yearling_price": 50000,
+            "twoyo_price": 475000
+          }
         },
         {
           "foal_year": 2022,
@@ -10293,7 +10575,13 @@
           "median_return_pct": 118.8,
           "mean_return_pct": 165.4,
           "positive_return_pct": 87.5,
-          "median_yearling_price": 87500
+          "median_yearling_price": 87500,
+          "top_match": {
+            "horse_name": "Swirling Eights C 2022",
+            "return_pct": 566.7,
+            "yearling_price": 15000,
+            "twoyo_price": 100000
+          }
         },
         {
           "foal_year": 2023,
@@ -10301,7 +10589,13 @@
           "median_return_pct": 168.0,
           "mean_return_pct": 207.0,
           "positive_return_pct": 84.2,
-          "median_yearling_price": 90000
+          "median_yearling_price": 90000,
+          "top_match": {
+            "horse_name": "Clutch Candy C 2023",
+            "return_pct": 1150.0,
+            "yearling_price": 4000,
+            "twoyo_price": 50000
+          }
         },
         {
           "foal_year": 2024,
@@ -10309,7 +10603,13 @@
           "median_return_pct": 92.3,
           "mean_return_pct": 160.5,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 100000
+          "median_yearling_price": 100000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 375.0,
+            "yearling_price": 60000,
+            "twoyo_price": 285000
+          }
         }
       ]
     },
@@ -11034,7 +11334,8 @@
           "return_pct": -84.1,
           "gross_return_usd": -69000,
           "quality_flags": [
-            "extreme_loss"
+            "extreme_loss",
+            "multi_yearling_single_2yo"
           ]
         },
         {
@@ -11075,7 +11376,13 @@
           "median_return_pct": 124.2,
           "mean_return_pct": 149.7,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 93500
+          "median_yearling_price": 93500,
+          "top_match": {
+            "horse_name": "Muth C 2021",
+            "return_pct": 952.6,
+            "yearling_price": 190000,
+            "twoyo_price": 2000000
+          }
         },
         {
           "foal_year": 2022,
@@ -11083,7 +11390,13 @@
           "median_return_pct": 72.5,
           "mean_return_pct": 79.2,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 125000
+          "median_yearling_price": 125000,
+          "top_match": {
+            "horse_name": "Skate Away C 2022",
+            "return_pct": 300.0,
+            "yearling_price": 100000,
+            "twoyo_price": 400000
+          }
         },
         {
           "foal_year": 2023,
@@ -11091,7 +11404,13 @@
           "median_return_pct": -12.5,
           "mean_return_pct": 34.0,
           "positive_return_pct": 42.9,
-          "median_yearling_price": 110000
+          "median_yearling_price": 110000,
+          "top_match": {
+            "horse_name": "Magic Bijou F 2023",
+            "return_pct": 300.0,
+            "yearling_price": 275000,
+            "twoyo_price": 1100000
+          }
         },
         {
           "foal_year": 2024,
@@ -11099,7 +11418,13 @@
           "median_return_pct": 29.4,
           "mean_return_pct": 34.6,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 92500
+          "median_yearling_price": 92500,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 127.3,
+            "yearling_price": 22000,
+            "twoyo_price": 50000
+          }
         }
       ]
     },
@@ -11645,7 +11970,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10270/fasig-tipton-midlantic-2yos-in-training-sale-2025/",
           "return_pct": 42.9,
           "gross_return_usd": 15000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Escovedo F 2022",
@@ -12157,7 +12484,13 @@
           "median_return_pct": 125.6,
           "mean_return_pct": 127.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 125000
+          "median_yearling_price": 125000,
+          "top_match": {
+            "horse_name": "El Capi C 2021",
+            "return_pct": 193.3,
+            "yearling_price": 75000,
+            "twoyo_price": 220000
+          }
         },
         {
           "foal_year": 2022,
@@ -12165,7 +12498,13 @@
           "median_return_pct": 20.0,
           "mean_return_pct": 48.2,
           "positive_return_pct": 65.2,
-          "median_yearling_price": 100000
+          "median_yearling_price": 100000,
+          "top_match": {
+            "horse_name": "Ragtime Prankster C 2022",
+            "return_pct": 580.0,
+            "yearling_price": 25000,
+            "twoyo_price": 170000
+          }
         },
         {
           "foal_year": 2023,
@@ -12173,7 +12512,13 @@
           "median_return_pct": 66.7,
           "mean_return_pct": 141.8,
           "positive_return_pct": 73.9,
-          "median_yearling_price": 60000
+          "median_yearling_price": 60000,
+          "top_match": {
+            "horse_name": "Music in Motion C 2023",
+            "return_pct": 1566.7,
+            "yearling_price": 15000,
+            "twoyo_price": 250000
+          }
         },
         {
           "foal_year": 2024,
@@ -12181,7 +12526,13 @@
           "median_return_pct": 160.0,
           "mean_return_pct": 161.3,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 50000
+          "median_yearling_price": 50000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 366.7,
+            "yearling_price": 15000,
+            "twoyo_price": 70000
+          }
         }
       ]
     },
@@ -13459,7 +13810,13 @@
           "median_return_pct": 63.6,
           "mean_return_pct": 233.3,
           "positive_return_pct": 65.7,
-          "median_yearling_price": 55000
+          "median_yearling_price": 55000,
+          "top_match": {
+            "horse_name": "Vine Grove F 2021",
+            "return_pct": 2841.2,
+            "yearling_price": 1700,
+            "twoyo_price": 50000
+          }
         },
         {
           "foal_year": 2022,
@@ -13467,7 +13824,13 @@
           "median_return_pct": 16.0,
           "mean_return_pct": 102.8,
           "positive_return_pct": 68.4,
-          "median_yearling_price": 45000
+          "median_yearling_price": 45000,
+          "top_match": {
+            "horse_name": "Mustajab C 2022",
+            "return_pct": 500.0,
+            "yearling_price": 45000,
+            "twoyo_price": 270000
+          }
         },
         {
           "foal_year": 2023,
@@ -13475,7 +13838,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 133.6,
           "positive_return_pct": 70.0,
-          "median_yearling_price": 16500
+          "median_yearling_price": 16500,
+          "top_match": {
+            "horse_name": "Pearl of Pearl F 2023",
+            "return_pct": 525.0,
+            "yearling_price": 16000,
+            "twoyo_price": 100000
+          }
         },
         {
           "foal_year": 2024,
@@ -13483,7 +13852,13 @@
           "median_return_pct": 250.0,
           "mean_return_pct": 639.2,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 10000
+          "median_yearling_price": 10000,
+          "top_match": {
+            "horse_name": "Salsarossa F 2024",
+            "return_pct": 1900.0,
+            "yearling_price": 2000,
+            "twoyo_price": 40000
+          }
         }
       ]
     },
@@ -13723,7 +14098,13 @@
           "median_return_pct": 80.0,
           "mean_return_pct": 130.5,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 50000
+          "median_yearling_price": 50000,
+          "top_match": {
+            "horse_name": "Consider Her Lucky F 2021",
+            "return_pct": 435.7,
+            "yearling_price": 70000,
+            "twoyo_price": 375000
+          }
         },
         {
           "foal_year": 2022,
@@ -13731,7 +14112,13 @@
           "median_return_pct": 20.0,
           "mean_return_pct": 66.6,
           "positive_return_pct": 60.0,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Manhattan Beauty F 2022",
+            "return_pct": 246.2,
+            "yearling_price": 52000,
+            "twoyo_price": 180000
+          }
         },
         {
           "foal_year": 2023,
@@ -13739,7 +14126,13 @@
           "median_return_pct": 338.3,
           "mean_return_pct": 338.3,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 25500
+          "median_yearling_price": 25500,
+          "top_match": {
+            "horse_name": "Pink Pony Gal F 2023",
+            "return_pct": 508.7,
+            "yearling_price": 23000,
+            "twoyo_price": 140000
+          }
         }
       ]
     },
@@ -14395,7 +14788,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 116.3,
           "positive_return_pct": 73.7,
-          "median_yearling_price": 90000
+          "median_yearling_price": 90000,
+          "top_match": {
+            "horse_name": "Rapid Grey C 2021",
+            "return_pct": 400.0,
+            "yearling_price": 32000,
+            "twoyo_price": 160000
+          }
         },
         {
           "foal_year": 2022,
@@ -14403,7 +14802,13 @@
           "median_return_pct": 50.0,
           "mean_return_pct": 51.5,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 32000
+          "median_yearling_price": 32000,
+          "top_match": {
+            "horse_name": "Freedom of Speech C 2022",
+            "return_pct": 100.0,
+            "yearling_price": 20000,
+            "twoyo_price": 40000
+          }
         },
         {
           "foal_year": 2023,
@@ -14411,7 +14816,13 @@
           "median_return_pct": 180.0,
           "mean_return_pct": 209.4,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 120000
+          "median_yearling_price": 120000,
+          "top_match": {
+            "horse_name": "Out of the Woods C 2023",
+            "return_pct": 550.0,
+            "yearling_price": 50000,
+            "twoyo_price": 325000
+          }
         },
         {
           "foal_year": 2024,
@@ -14419,7 +14830,13 @@
           "median_return_pct": 164.0,
           "mean_return_pct": 164.0,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 142500
+          "median_yearling_price": 142500,
+          "top_match": {
+            "horse_name": "Judy's Rockette F 2024",
+            "return_pct": 400.0,
+            "yearling_price": 160000,
+            "twoyo_price": 800000
+          }
         }
       ]
     },
@@ -15461,7 +15878,13 @@
           "median_return_pct": -11.6,
           "mean_return_pct": 17.1,
           "positive_return_pct": 38.2,
-          "median_yearling_price": 100000
+          "median_yearling_price": 100000,
+          "top_match": {
+            "horse_name": "Nikitis F 2021",
+            "return_pct": 435.0,
+            "yearling_price": 100000,
+            "twoyo_price": 535000
+          }
         },
         {
           "foal_year": 2022,
@@ -15469,7 +15892,13 @@
           "median_return_pct": 111.1,
           "mean_return_pct": 305.6,
           "positive_return_pct": 76.9,
-          "median_yearling_price": 18000
+          "median_yearling_price": 18000,
+          "top_match": {
+            "horse_name": "Giant's Audible F 2022",
+            "return_pct": 1900.0,
+            "yearling_price": 3500,
+            "twoyo_price": 70000
+          }
         },
         {
           "foal_year": 2023,
@@ -15477,7 +15906,13 @@
           "median_return_pct": -12.3,
           "mean_return_pct": 105.4,
           "positive_return_pct": 28.6,
-          "median_yearling_price": 20000
+          "median_yearling_price": 20000,
+          "top_match": {
+            "horse_name": "Jesse Dancing F 2023",
+            "return_pct": 816.7,
+            "yearling_price": 1200,
+            "twoyo_price": 11000
+          }
         },
         {
           "foal_year": 2024,
@@ -15485,7 +15920,13 @@
           "median_return_pct": 161.1,
           "mean_return_pct": 161.1,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 46500
+          "median_yearling_price": 46500,
+          "top_match": {
+            "horse_name": "Solemnly Sworn F 2024",
+            "return_pct": 284.6,
+            "yearling_price": 13000,
+            "twoyo_price": 50000
+          }
         }
       ]
     },
@@ -15633,7 +16074,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9892/fasig-tipton-midlantic-2yos-in-training-sale-2023/",
           "return_pct": 66.7,
           "gross_return_usd": 100000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Angel Glow F 2023",
@@ -15741,7 +16184,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10073/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024/",
           "return_pct": -45.7,
           "gross_return_usd": -48000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "UNNAMED F 2024",
@@ -15797,7 +16242,13 @@
           "median_return_pct": 66.7,
           "mean_return_pct": 55.7,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 170000
+          "median_yearling_price": 170000,
+          "top_match": {
+            "horse_name": "Tapitoro C 2021",
+            "return_pct": 76.5,
+            "yearling_price": 170000,
+            "twoyo_price": 300000
+          }
         },
         {
           "foal_year": 2022,
@@ -15805,7 +16256,13 @@
           "median_return_pct": 81.8,
           "mean_return_pct": 110.5,
           "positive_return_pct": 71.4,
-          "median_yearling_price": 90000
+          "median_yearling_price": 90000,
+          "top_match": {
+            "horse_name": "May Day Ready F 2022",
+            "return_pct": 441.7,
+            "yearling_price": 60000,
+            "twoyo_price": 325000
+          }
         },
         {
           "foal_year": 2023,
@@ -15813,7 +16270,13 @@
           "median_return_pct": 129.2,
           "mean_return_pct": 185.1,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 130000
+          "median_yearling_price": 130000,
+          "top_match": {
+            "horse_name": "Monomoy Mist F 2023",
+            "return_pct": 475.0,
+            "yearling_price": 100000,
+            "twoyo_price": 575000
+          }
         },
         {
           "foal_year": 2024,
@@ -15821,7 +16284,13 @@
           "median_return_pct": -60.3,
           "mean_return_pct": -60.3,
           "positive_return_pct": 0.0,
-          "median_yearling_price": 162500
+          "median_yearling_price": 162500,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": -52.9,
+            "yearling_price": 170000,
+            "twoyo_price": 80000
+          }
         }
       ]
     },
@@ -16281,7 +16750,13 @@
           "median_return_pct": 140.0,
           "mean_return_pct": 316.8,
           "positive_return_pct": 88.9,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Unmatched Wisdom C 2021",
+            "return_pct": 1700.0,
+            "yearling_price": 25000,
+            "twoyo_price": 450000
+          }
         },
         {
           "foal_year": 2022,
@@ -16289,7 +16764,13 @@
           "median_return_pct": 89.8,
           "mean_return_pct": 163.8,
           "positive_return_pct": 83.3,
-          "median_yearling_price": 41000
+          "median_yearling_price": 41000,
+          "top_match": {
+            "horse_name": "Sherbini F 2022",
+            "return_pct": 700.0,
+            "yearling_price": 5000,
+            "twoyo_price": 40000
+          }
         },
         {
           "foal_year": 2023,
@@ -16297,7 +16778,13 @@
           "median_return_pct": 650.0,
           "mean_return_pct": 806.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 8000
+          "median_yearling_price": 8000,
+          "top_match": {
+            "horse_name": "Princess Andi F 2023",
+            "return_pct": 1900.0,
+            "yearling_price": 4000,
+            "twoyo_price": 80000
+          }
         },
         {
           "foal_year": 2024,
@@ -16305,7 +16792,13 @@
           "median_return_pct": 77.7,
           "mean_return_pct": 162.6,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 32000
+          "median_yearling_price": 32000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 525.0,
+            "yearling_price": 40000,
+            "twoyo_price": 250000
+          }
         }
       ]
     },
@@ -16489,7 +16982,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10083/fasig-tipton-midlantic-2yos-in-training-sale-2024/",
           "return_pct": -33.3,
           "gross_return_usd": -70000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Doppio Espresso F 2023",
@@ -16545,7 +17040,13 @@
           "median_return_pct": 157.2,
           "mean_return_pct": 157.2,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 152500
+          "median_yearling_price": 152500,
+          "top_match": {
+            "horse_name": "Chantilly Road F 2021",
+            "return_pct": 290.0,
+            "yearling_price": 100000,
+            "twoyo_price": 390000
+          }
         },
         {
           "foal_year": 2022,
@@ -16553,7 +17054,13 @@
           "median_return_pct": -29.1,
           "mean_return_pct": -29.1,
           "positive_return_pct": 0.0,
-          "median_yearling_price": 165000
+          "median_yearling_price": 165000,
+          "top_match": {
+            "horse_name": "Anthony the Great C 2022",
+            "return_pct": -25.0,
+            "yearling_price": 120000,
+            "twoyo_price": 90000
+          }
         },
         {
           "foal_year": 2023,
@@ -16561,7 +17068,13 @@
           "median_return_pct": 120.2,
           "mean_return_pct": 265.1,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 95000
+          "median_yearling_price": 95000,
+          "top_match": {
+            "horse_name": "Kokomotion F 2023",
+            "return_pct": 1445.5,
+            "yearling_price": 22000,
+            "twoyo_price": 340000
+          }
         }
       ]
     },
@@ -16801,7 +17314,13 @@
           "median_return_pct": 113.7,
           "mean_return_pct": 137.5,
           "positive_return_pct": 60.0,
-          "median_yearling_price": 23500
+          "median_yearling_price": 23500,
+          "top_match": {
+            "horse_name": "Sakura Sky F 2021",
+            "return_pct": 438.5,
+            "yearling_price": 13000,
+            "twoyo_price": 70000
+          }
         },
         {
           "foal_year": 2022,
@@ -16809,7 +17328,13 @@
           "median_return_pct": 261.6,
           "mean_return_pct": 261.6,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 3350
+          "median_yearling_price": 3350,
+          "top_match": {
+            "horse_name": "Rice Paddy F 2022",
+            "return_pct": 445.5,
+            "yearling_price": 2200,
+            "twoyo_price": 12000
+          }
         }
       ]
     },
@@ -17479,7 +18004,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10272/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025/",
           "return_pct": 0.0,
           "gross_return_usd": 0,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Artisma F 2022",
@@ -17533,7 +18060,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10051/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2024/",
           "return_pct": -12.5,
           "gross_return_usd": -20000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Old Marsh C 2022",
@@ -17731,7 +18260,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9903/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2023/",
           "return_pct": -55.6,
           "gross_return_usd": -75000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Peggy F 2021",
@@ -17749,7 +18280,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2023/9903/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2023/",
           "return_pct": -56.7,
           "gross_return_usd": -68000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "UNNAMED C 2024",
@@ -17979,7 +18512,13 @@
           "median_return_pct": 33.3,
           "mean_return_pct": 38.2,
           "positive_return_pct": 63.2,
-          "median_yearling_price": 125000
+          "median_yearling_price": 125000,
+          "top_match": {
+            "horse_name": "Balta C 2021",
+            "return_pct": 315.2,
+            "yearling_price": 165000,
+            "twoyo_price": 685000
+          }
         },
         {
           "foal_year": 2022,
@@ -17987,7 +18526,13 @@
           "median_return_pct": -7.7,
           "mean_return_pct": 55.4,
           "positive_return_pct": 40.0,
-          "median_yearling_price": 100000
+          "median_yearling_price": 100000,
+          "top_match": {
+            "horse_name": "Breath F 2022",
+            "return_pct": 636.8,
+            "yearling_price": 95000,
+            "twoyo_price": 700000
+          }
         },
         {
           "foal_year": 2023,
@@ -17995,7 +18540,13 @@
           "median_return_pct": 17.9,
           "mean_return_pct": 29.1,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 117500
+          "median_yearling_price": 117500,
+          "top_match": {
+            "horse_name": "Image C 2023",
+            "return_pct": 150.0,
+            "yearling_price": 20000,
+            "twoyo_price": 50000
+          }
         },
         {
           "foal_year": 2024,
@@ -18003,7 +18554,13 @@
           "median_return_pct": 42.9,
           "mean_return_pct": 59.8,
           "positive_return_pct": 71.4,
-          "median_yearling_price": 75000
+          "median_yearling_price": 75000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 233.3,
+            "yearling_price": 30000,
+            "twoyo_price": 100000
+          }
         }
       ]
     },
@@ -19077,7 +19634,13 @@
           "median_return_pct": 35.0,
           "mean_return_pct": 205.1,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 110000
+          "median_yearling_price": 110000,
+          "top_match": {
+            "horse_name": "Hockey F 2021",
+            "return_pct": 1962.5,
+            "yearling_price": 8000,
+            "twoyo_price": 165000
+          }
         },
         {
           "foal_year": 2022,
@@ -19085,7 +19648,13 @@
           "median_return_pct": 167.5,
           "mean_return_pct": 254.0,
           "positive_return_pct": 93.8,
-          "median_yearling_price": 97500
+          "median_yearling_price": 97500,
+          "top_match": {
+            "horse_name": "Yaqin C 2022",
+            "return_pct": 1540.6,
+            "yearling_price": 32000,
+            "twoyo_price": 525000
+          }
         },
         {
           "foal_year": 2023,
@@ -19093,7 +19662,13 @@
           "median_return_pct": 110.5,
           "mean_return_pct": 253.3,
           "positive_return_pct": 88.2,
-          "median_yearling_price": 140000
+          "median_yearling_price": 140000,
+          "top_match": {
+            "horse_name": "Nyfive F 2023",
+            "return_pct": 1000.0,
+            "yearling_price": 5000,
+            "twoyo_price": 55000
+          }
         },
         {
           "foal_year": 2024,
@@ -19101,7 +19676,13 @@
           "median_return_pct": 316.7,
           "mean_return_pct": 311.9,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 235000
+          "median_yearling_price": 235000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 605.9,
+            "yearling_price": 170000,
+            "twoyo_price": 1200000
+          }
         }
       ]
     },
@@ -19647,7 +20228,13 @@
           "median_return_pct": 60.8,
           "mean_return_pct": 152.0,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 155000
+          "median_yearling_price": 155000,
+          "top_match": {
+            "horse_name": "Just a Fast Cat C 2021",
+            "return_pct": 700.0,
+            "yearling_price": 50000,
+            "twoyo_price": 400000
+          }
         },
         {
           "foal_year": 2022,
@@ -19655,7 +20242,13 @@
           "median_return_pct": 62.6,
           "mean_return_pct": 155.5,
           "positive_return_pct": 70.0,
-          "median_yearling_price": 175000
+          "median_yearling_price": 175000,
+          "top_match": {
+            "horse_name": "Kraken C 2022",
+            "return_pct": 622.2,
+            "yearling_price": 45000,
+            "twoyo_price": 325000
+          }
         },
         {
           "foal_year": 2023,
@@ -19663,7 +20256,13 @@
           "median_return_pct": 51.2,
           "mean_return_pct": 41.2,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 180000
+          "median_yearling_price": 180000,
+          "top_match": {
+            "horse_name": "Oui Chef C 2023",
+            "return_pct": 127.3,
+            "yearling_price": 110000,
+            "twoyo_price": 250000
+          }
         },
         {
           "foal_year": 2024,
@@ -19671,7 +20270,13 @@
           "median_return_pct": 33.3,
           "mean_return_pct": 19.9,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 150000
+          "median_yearling_price": 150000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 66.7,
+            "yearling_price": 150000,
+            "twoyo_price": 250000
+          }
         }
       ]
     },
@@ -20167,7 +20772,13 @@
           "median_return_pct": 40.0,
           "mean_return_pct": 95.8,
           "positive_return_pct": 57.1,
-          "median_yearling_price": 200000
+          "median_yearling_price": 200000,
+          "top_match": {
+            "horse_name": "Collmus C 2021",
+            "return_pct": 411.6,
+            "yearling_price": 430000,
+            "twoyo_price": 2200000
+          }
         },
         {
           "foal_year": 2022,
@@ -20175,7 +20786,13 @@
           "median_return_pct": 5.5,
           "mean_return_pct": 40.2,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 125000
+          "median_yearling_price": 125000,
+          "top_match": {
+            "horse_name": "My Boy Rocket C 2022",
+            "return_pct": 353.1,
+            "yearling_price": 160000,
+            "twoyo_price": 725000
+          }
         },
         {
           "foal_year": 2023,
@@ -20183,7 +20800,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 331.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 200000
+          "median_yearling_price": 200000,
+          "top_match": {
+            "horse_name": "Brant C 2023",
+            "return_pct": 1400.0,
+            "yearling_price": 200000,
+            "twoyo_price": 3000000
+          }
         },
         {
           "foal_year": 2024,
@@ -20191,7 +20814,13 @@
           "median_return_pct": 48.9,
           "mean_return_pct": 48.9,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 302500
+          "median_yearling_price": 302500,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 154.9,
+            "yearling_price": 255000,
+            "twoyo_price": 650000
+          }
         }
       ]
     },
@@ -20557,7 +21186,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10094/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2024/",
           "return_pct": 140.0,
           "gross_return_usd": 35000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Jujubee C 2022",
@@ -21247,7 +21878,13 @@
           "median_return_pct": 62.5,
           "mean_return_pct": 124.2,
           "positive_return_pct": 83.3,
-          "median_yearling_price": 95000
+          "median_yearling_price": 95000,
+          "top_match": {
+            "horse_name": "Cookn Wit Catman C 2021",
+            "return_pct": 650.0,
+            "yearling_price": 10000,
+            "twoyo_price": 75000
+          }
         },
         {
           "foal_year": 2022,
@@ -21255,7 +21892,13 @@
           "median_return_pct": 69.2,
           "mean_return_pct": 105.9,
           "positive_return_pct": 71.4,
-          "median_yearling_price": 80000
+          "median_yearling_price": 80000,
+          "top_match": {
+            "horse_name": "Caldera C 2022",
+            "return_pct": 566.7,
+            "yearling_price": 75000,
+            "twoyo_price": 500000
+          }
         },
         {
           "foal_year": 2023,
@@ -21263,7 +21906,13 @@
           "median_return_pct": 108.8,
           "mean_return_pct": 308.7,
           "positive_return_pct": 81.2,
-          "median_yearling_price": 90000
+          "median_yearling_price": 90000,
+          "top_match": {
+            "horse_name": "Builder's Remedy C 2023",
+            "return_pct": 2750.0,
+            "yearling_price": 10000,
+            "twoyo_price": 285000
+          }
         },
         {
           "foal_year": 2024,
@@ -21271,7 +21920,13 @@
           "median_return_pct": 147.2,
           "mean_return_pct": 231.0,
           "positive_return_pct": 87.5,
-          "median_yearling_price": 105000
+          "median_yearling_price": 105000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 670.8,
+            "yearling_price": 120000,
+            "twoyo_price": 925000
+          }
         }
       ]
     },
@@ -21967,7 +22622,13 @@
           "median_return_pct": 25.0,
           "mean_return_pct": 70.0,
           "positive_return_pct": 53.3,
-          "median_yearling_price": 47000
+          "median_yearling_price": 47000,
+          "top_match": {
+            "horse_name": "Methods F 2021",
+            "return_pct": 450.0,
+            "yearling_price": 60000,
+            "twoyo_price": 330000
+          }
         },
         {
           "foal_year": 2022,
@@ -21975,7 +22636,13 @@
           "median_return_pct": 75.0,
           "mean_return_pct": 61.9,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 15000
+          "median_yearling_price": 15000,
+          "top_match": {
+            "horse_name": "Connect With Humor C 2022",
+            "return_pct": 133.3,
+            "yearling_price": 15000,
+            "twoyo_price": 35000
+          }
         },
         {
           "foal_year": 2023,
@@ -21983,7 +22650,13 @@
           "median_return_pct": 107.2,
           "mean_return_pct": 225.9,
           "positive_return_pct": 68.8,
-          "median_yearling_price": 22000
+          "median_yearling_price": 22000,
+          "top_match": {
+            "horse_name": "Ez Connect F 2023",
+            "return_pct": 1650.0,
+            "yearling_price": 20000,
+            "twoyo_price": 350000
+          }
         },
         {
           "foal_year": 2024,
@@ -21991,7 +22664,13 @@
           "median_return_pct": 75.0,
           "mean_return_pct": 75.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 40000
+          "median_yearling_price": 40000,
+          "top_match": {
+            "horse_name": "Affilia F 2024",
+            "return_pct": 75.0,
+            "yearling_price": 40000,
+            "twoyo_price": 70000
+          }
         }
       ]
     },
@@ -22489,7 +23168,13 @@
           "median_return_pct": 131.0,
           "mean_return_pct": 181.2,
           "positive_return_pct": 76.9,
-          "median_yearling_price": 70000
+          "median_yearling_price": 70000,
+          "top_match": {
+            "horse_name": "I'lltaketheblame C 2021",
+            "return_pct": 900.0,
+            "yearling_price": 70000,
+            "twoyo_price": 700000
+          }
         },
         {
           "foal_year": 2022,
@@ -22497,7 +23182,13 @@
           "median_return_pct": 72.4,
           "mean_return_pct": 116.8,
           "positive_return_pct": 60.0,
-          "median_yearling_price": 58000
+          "median_yearling_price": 58000,
+          "top_match": {
+            "horse_name": "Shogun C 2022",
+            "return_pct": 340.0,
+            "yearling_price": 25000,
+            "twoyo_price": 110000
+          }
         },
         {
           "foal_year": 2023,
@@ -22505,7 +23196,13 @@
           "median_return_pct": 107.8,
           "mean_return_pct": 404.3,
           "positive_return_pct": 83.3,
-          "median_yearling_price": 31000
+          "median_yearling_price": 31000,
+          "top_match": {
+            "horse_name": "Explora F 2023",
+            "return_pct": 1490.9,
+            "yearling_price": 22000,
+            "twoyo_price": 350000
+          }
         },
         {
           "foal_year": 2024,
@@ -22513,7 +23210,13 @@
           "median_return_pct": 1084.6,
           "mean_return_pct": 1084.6,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 19000
+          "median_yearling_price": 19000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 1500.0,
+            "yearling_price": 25000,
+            "twoyo_price": 400000
+          }
         }
       ]
     },
@@ -22989,7 +23692,13 @@
           "median_return_pct": 17.3,
           "mean_return_pct": 49.2,
           "positive_return_pct": 60.0,
-          "median_yearling_price": 245000
+          "median_yearling_price": 245000,
+          "top_match": {
+            "horse_name": "Urban Legend C 2021",
+            "return_pct": 333.3,
+            "yearling_price": 300000,
+            "twoyo_price": 1300000
+          }
         },
         {
           "foal_year": 2022,
@@ -22997,7 +23706,13 @@
           "median_return_pct": 164.3,
           "mean_return_pct": 145.3,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 180000
+          "median_yearling_price": 180000,
+          "top_match": {
+            "horse_name": "Mischief River C 2022",
+            "return_pct": 212.5,
+            "yearling_price": 160000,
+            "twoyo_price": 500000
+          }
         },
         {
           "foal_year": 2023,
@@ -23005,7 +23720,13 @@
           "median_return_pct": 53.2,
           "mean_return_pct": 59.5,
           "positive_return_pct": 83.3,
-          "median_yearling_price": 225000
+          "median_yearling_price": 225000,
+          "top_match": {
+            "horse_name": "Ms Sophistication F 2023",
+            "return_pct": 176.3,
+            "yearling_price": 190000,
+            "twoyo_price": 525000
+          }
         },
         {
           "foal_year": 2024,
@@ -23013,7 +23734,13 @@
           "median_return_pct": 160.8,
           "mean_return_pct": 677.1,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 165000
+          "median_yearling_price": 165000,
+          "top_match": {
+            "horse_name": "Rocket Star C 2024",
+            "return_pct": 2366.7,
+            "yearling_price": 75000,
+            "twoyo_price": 1850000
+          }
         }
       ]
     },
@@ -23619,7 +24346,13 @@
           "median_return_pct": 119.3,
           "mean_return_pct": 122.1,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 45000
+          "median_yearling_price": 45000,
+          "top_match": {
+            "horse_name": "Lodge Hill F 2021",
+            "return_pct": 433.3,
+            "yearling_price": 15000,
+            "twoyo_price": 80000
+          }
         },
         {
           "foal_year": 2022,
@@ -23627,7 +24360,13 @@
           "median_return_pct": 62.3,
           "mean_return_pct": 62.7,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 77000
+          "median_yearling_price": 77000,
+          "top_match": {
+            "horse_name": "Yezdaan C 2022",
+            "return_pct": 233.3,
+            "yearling_price": 45000,
+            "twoyo_price": 150000
+          }
         },
         {
           "foal_year": 2023,
@@ -23635,7 +24374,13 @@
           "median_return_pct": 21.9,
           "mean_return_pct": 73.8,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 57500
+          "median_yearling_price": 57500,
+          "top_match": {
+            "horse_name": "Jalapena Lena F 2023",
+            "return_pct": 450.0,
+            "yearling_price": 10000,
+            "twoyo_price": 55000
+          }
         },
         {
           "foal_year": 2024,
@@ -23643,7 +24388,13 @@
           "median_return_pct": 133.3,
           "mean_return_pct": 173.9,
           "positive_return_pct": 77.8,
-          "median_yearling_price": 45000
+          "median_yearling_price": 45000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 587.5,
+            "yearling_price": 40000,
+            "twoyo_price": 275000
+          }
         }
       ]
     },
@@ -24267,7 +25018,13 @@
           "median_return_pct": -47.4,
           "mean_return_pct": 18.4,
           "positive_return_pct": 33.3,
-          "median_yearling_price": 60000
+          "median_yearling_price": 60000,
+          "top_match": {
+            "horse_name": "Laila Bella Girl F 2021",
+            "return_pct": 400.0,
+            "yearling_price": 100000,
+            "twoyo_price": 500000
+          }
         },
         {
           "foal_year": 2022,
@@ -24275,7 +25032,13 @@
           "median_return_pct": 29.0,
           "mean_return_pct": 109.7,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 32000
+          "median_yearling_price": 32000,
+          "top_match": {
+            "horse_name": "Snipsnippitysnip F 2022",
+            "return_pct": 384.4,
+            "yearling_price": 32000,
+            "twoyo_price": 155000
+          }
         },
         {
           "foal_year": 2023,
@@ -24283,7 +25046,13 @@
           "median_return_pct": 160.0,
           "mean_return_pct": 280.5,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 50000
+          "median_yearling_price": 50000,
+          "top_match": {
+            "horse_name": "Sr. Decoo C 2023",
+            "return_pct": 733.3,
+            "yearling_price": 1200,
+            "twoyo_price": 10000
+          }
         },
         {
           "foal_year": 2024,
@@ -24291,7 +25060,13 @@
           "median_return_pct": 145.0,
           "mean_return_pct": 348.1,
           "positive_return_pct": 85.7,
-          "median_yearling_price": 32500
+          "median_yearling_price": 32500,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 1879.2,
+            "yearling_price": 24000,
+            "twoyo_price": 475000
+          }
         }
       ]
     },
@@ -24823,7 +25598,13 @@
           "median_return_pct": 80.0,
           "mean_return_pct": 110.3,
           "positive_return_pct": 71.4,
-          "median_yearling_price": 57500
+          "median_yearling_price": 57500,
+          "top_match": {
+            "horse_name": "Leslie's Humor F 2021",
+            "return_pct": 300.0,
+            "yearling_price": 125000,
+            "twoyo_price": 500000
+          }
         },
         {
           "foal_year": 2022,
@@ -24831,7 +25612,13 @@
           "median_return_pct": -9.4,
           "mean_return_pct": -1.6,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 47500
+          "median_yearling_price": 47500,
+          "top_match": {
+            "horse_name": "Lethal Speed C 2022",
+            "return_pct": 87.5,
+            "yearling_price": 32000,
+            "twoyo_price": 60000
+          }
         },
         {
           "foal_year": 2023,
@@ -24839,7 +25626,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 214.0,
           "positive_return_pct": 88.9,
-          "median_yearling_price": 18000
+          "median_yearling_price": 18000,
+          "top_match": {
+            "horse_name": "Engraved C 2023",
+            "return_pct": 1011.1,
+            "yearling_price": 18000,
+            "twoyo_price": 200000
+          }
         },
         {
           "foal_year": 2024,
@@ -24847,7 +25640,13 @@
           "median_return_pct": -23.5,
           "mean_return_pct": -23.5,
           "positive_return_pct": 0.0,
-          "median_yearling_price": 85000
+          "median_yearling_price": 85000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": -23.5,
+            "yearling_price": 85000,
+            "twoyo_price": 65000
+          }
         }
       ]
     },
@@ -25141,7 +25940,13 @@
           "median_return_pct": 80.6,
           "mean_return_pct": 100.9,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 180000
+          "median_yearling_price": 180000,
+          "top_match": {
+            "horse_name": "Tracker C 2021",
+            "return_pct": 260.0,
+            "yearling_price": 250000,
+            "twoyo_price": 900000
+          }
         },
         {
           "foal_year": 2022,
@@ -25149,7 +25954,13 @@
           "median_return_pct": 33.3,
           "mean_return_pct": 19.8,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 375000
+          "median_yearling_price": 375000,
+          "top_match": {
+            "horse_name": "Mujazif C 2022",
+            "return_pct": 42.9,
+            "yearling_price": 35000,
+            "twoyo_price": 50000
+          }
         },
         {
           "foal_year": 2023,
@@ -25157,7 +25968,13 @@
           "median_return_pct": 165.1,
           "mean_return_pct": 214.9,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 135000
+          "median_yearling_price": 135000,
+          "top_match": {
+            "horse_name": "Feisty Red Head F 2023",
+            "return_pct": 490.9,
+            "yearling_price": 110000,
+            "twoyo_price": 650000
+          }
         },
         {
           "foal_year": 2024,
@@ -25165,7 +25982,13 @@
           "median_return_pct": 325.0,
           "mean_return_pct": 325.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 200000
+          "median_yearling_price": 200000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 325.0,
+            "yearling_price": 200000,
+            "twoyo_price": 850000
+          }
         }
       ]
     },
@@ -26323,7 +27146,13 @@
           "median_return_pct": 106.2,
           "mean_return_pct": 133.0,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 80000
+          "median_yearling_price": 80000,
+          "top_match": {
+            "horse_name": "Big Bolt F 2021",
+            "return_pct": 757.1,
+            "yearling_price": 3500,
+            "twoyo_price": 30000
+          }
         },
         {
           "foal_year": 2022,
@@ -26331,7 +27160,13 @@
           "median_return_pct": 144.4,
           "mean_return_pct": 225.1,
           "positive_return_pct": 78.3,
-          "median_yearling_price": 60000
+          "median_yearling_price": 60000,
+          "top_match": {
+            "horse_name": "Toga d'Oro C 2022",
+            "return_pct": 1233.3,
+            "yearling_price": 12000,
+            "twoyo_price": 160000
+          }
         },
         {
           "foal_year": 2023,
@@ -26339,7 +27174,13 @@
           "median_return_pct": 95.3,
           "mean_return_pct": 196.7,
           "positive_return_pct": 88.9,
-          "median_yearling_price": 55000
+          "median_yearling_price": 55000,
+          "top_match": {
+            "horse_name": "Dirtpoor Bigdreams F 2023",
+            "return_pct": 766.7,
+            "yearling_price": 15000,
+            "twoyo_price": 130000
+          }
         },
         {
           "foal_year": 2024,
@@ -26347,7 +27188,13 @@
           "median_return_pct": 419.2,
           "mean_return_pct": 399.8,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 46000
+          "median_yearling_price": 46000,
+          "top_match": {
+            "horse_name": "Bellissimo d'Oro C 2024",
+            "return_pct": 775.0,
+            "yearling_price": 40000,
+            "twoyo_price": 350000
+          }
         }
       ]
     },
@@ -26757,7 +27604,13 @@
           "median_return_pct": 71.7,
           "mean_return_pct": 69.0,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 112500
+          "median_yearling_price": 112500,
+          "top_match": {
+            "horse_name": "Park Avenue Betty F 2021",
+            "return_pct": 240.4,
+            "yearling_price": 47000,
+            "twoyo_price": 160000
+          }
         },
         {
           "foal_year": 2022,
@@ -26765,7 +27618,13 @@
           "median_return_pct": 14.3,
           "mean_return_pct": 63.3,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 50000
+          "median_yearling_price": 50000,
+          "top_match": {
+            "horse_name": "Starship Athena F 2022",
+            "return_pct": 220.0,
+            "yearling_price": 50000,
+            "twoyo_price": 160000
+          }
         },
         {
           "foal_year": 2023,
@@ -26773,7 +27632,13 @@
           "median_return_pct": 6.2,
           "mean_return_pct": 32.7,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 80000
+          "median_yearling_price": 80000,
+          "top_match": {
+            "horse_name": "Deference F 2023",
+            "return_pct": 193.8,
+            "yearling_price": 80000,
+            "twoyo_price": 235000
+          }
         },
         {
           "foal_year": 2024,
@@ -26781,7 +27646,13 @@
           "median_return_pct": 94.5,
           "mean_return_pct": 94.5,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 120000
+          "median_yearling_price": 120000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 171.4,
+            "yearling_price": 70000,
+            "twoyo_price": 190000
+          }
         }
       ]
     },
@@ -27111,7 +27982,13 @@
           "median_return_pct": 33.3,
           "mean_return_pct": 80.0,
           "positive_return_pct": 72.7,
-          "median_yearling_price": 27000
+          "median_yearling_price": 27000,
+          "top_match": {
+            "horse_name": "Arteta C 2021",
+            "return_pct": 431.2,
+            "yearling_price": 32000,
+            "twoyo_price": 170000
+          }
         },
         {
           "foal_year": 2022,
@@ -27119,7 +27996,13 @@
           "median_return_pct": -29.8,
           "mean_return_pct": 284.2,
           "positive_return_pct": 33.3,
-          "median_yearling_price": 57000
+          "median_yearling_price": 57000,
+          "top_match": {
+            "horse_name": "Chianina F 2022",
+            "return_pct": 933.3,
+            "yearling_price": 30000,
+            "twoyo_price": 310000
+          }
         },
         {
           "foal_year": 2023,
@@ -27127,7 +28010,13 @@
           "median_return_pct": 7.2,
           "mean_return_pct": 7.2,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 10250
+          "median_yearling_price": 10250,
+          "top_match": {
+            "horse_name": "Cucasmonas F 2023",
+            "return_pct": 14.3,
+            "yearling_price": 10500,
+            "twoyo_price": 12000
+          }
         },
         {
           "foal_year": 2024,
@@ -27135,7 +28024,13 @@
           "median_return_pct": -69.1,
           "mean_return_pct": -69.1,
           "positive_return_pct": 0.0,
-          "median_yearling_price": 55000
+          "median_yearling_price": 55000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": -69.1,
+            "yearling_price": 55000,
+            "twoyo_price": 17000
+          }
         }
       ]
     },
@@ -27195,7 +28090,13 @@
           "median_return_pct": 92.6,
           "mean_return_pct": 92.6,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 27000
+          "median_yearling_price": 27000,
+          "top_match": {
+            "horse_name": "Ultimate Strike C 2021",
+            "return_pct": 92.6,
+            "yearling_price": 27000,
+            "twoyo_price": 52000
+          }
         },
         {
           "foal_year": 2022,
@@ -27203,7 +28104,13 @@
           "median_return_pct": 212.5,
           "mean_return_pct": 212.5,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 32000
+          "median_yearling_price": 32000,
+          "top_match": {
+            "horse_name": "Nod to Tran C 2022",
+            "return_pct": 212.5,
+            "yearling_price": 32000,
+            "twoyo_price": 100000
+          }
         }
       ]
     },
@@ -27499,7 +28406,13 @@
           "median_return_pct": 50.0,
           "mean_return_pct": 109.7,
           "positive_return_pct": 63.6,
-          "median_yearling_price": 17000
+          "median_yearling_price": 17000,
+          "top_match": {
+            "horse_name": "Factorbella F 2021",
+            "return_pct": 445.5,
+            "yearling_price": 11000,
+            "twoyo_price": 60000
+          }
         },
         {
           "foal_year": 2022,
@@ -27507,7 +28420,13 @@
           "median_return_pct": 400.0,
           "mean_return_pct": 400.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 3750
+          "median_yearling_price": 3750,
+          "top_match": {
+            "horse_name": "Esther's Salad F 2022",
+            "return_pct": 500.0,
+            "yearling_price": 2500,
+            "twoyo_price": 15000
+          }
         },
         {
           "foal_year": 2023,
@@ -27515,7 +28434,13 @@
           "median_return_pct": 34.2,
           "mean_return_pct": 34.2,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 21500
+          "median_yearling_price": 21500,
+          "top_match": {
+            "horse_name": "Funny Factor C 2023",
+            "return_pct": 150.0,
+            "yearling_price": 16000,
+            "twoyo_price": 40000
+          }
         }
       ]
     },
@@ -28115,7 +29040,13 @@
           "median_return_pct": 38.9,
           "mean_return_pct": 34.3,
           "positive_return_pct": 52.9,
-          "median_yearling_price": 60000
+          "median_yearling_price": 60000,
+          "top_match": {
+            "horse_name": "Uplift C 2021",
+            "return_pct": 247.2,
+            "yearling_price": 72000,
+            "twoyo_price": 250000
+          }
         },
         {
           "foal_year": 2022,
@@ -28123,7 +29054,13 @@
           "median_return_pct": 283.4,
           "mean_return_pct": 283.4,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 22500
+          "median_yearling_price": 22500,
+          "top_match": {
+            "horse_name": "Stella Blue F 2022",
+            "return_pct": 600.0,
+            "yearling_price": 30000,
+            "twoyo_price": 210000
+          }
         },
         {
           "foal_year": 2023,
@@ -28131,7 +29068,13 @@
           "median_return_pct": 147.0,
           "mean_return_pct": 292.7,
           "positive_return_pct": 87.5,
-          "median_yearling_price": 32500
+          "median_yearling_price": 32500,
+          "top_match": {
+            "horse_name": "Tammy Needs Shoes F 2023",
+            "return_pct": 900.0,
+            "yearling_price": 3000,
+            "twoyo_price": 30000
+          }
         },
         {
           "foal_year": 2024,
@@ -28139,7 +29082,13 @@
           "median_return_pct": 134.4,
           "mean_return_pct": 155.7,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 32000
+          "median_yearling_price": 32000,
+          "top_match": {
+            "horse_name": "Round Up C 2024",
+            "return_pct": 300.0,
+            "yearling_price": 25000,
+            "twoyo_price": 100000
+          }
         }
       ]
     },
@@ -28253,7 +29202,13 @@
           "median_return_pct": 56.8,
           "mean_return_pct": 56.8,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 20500
+          "median_yearling_price": 20500,
+          "top_match": {
+            "horse_name": "We Got Barnyard C 2021",
+            "return_pct": 63.6,
+            "yearling_price": 11000,
+            "twoyo_price": 18000
+          }
         },
         {
           "foal_year": 2022,
@@ -28261,7 +29216,13 @@
           "median_return_pct": 245.7,
           "mean_return_pct": 245.7,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 6750
+          "median_yearling_price": 6750,
+          "top_match": {
+            "horse_name": "Marlaix F 2022",
+            "return_pct": 471.4,
+            "yearling_price": 3500,
+            "twoyo_price": 20000
+          }
         },
         {
           "foal_year": 2024,
@@ -28269,7 +29230,13 @@
           "median_return_pct": 240.9,
           "mean_return_pct": 240.9,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 22000
+          "median_yearling_price": 22000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 240.9,
+            "yearling_price": 22000,
+            "twoyo_price": 75000
+          }
         }
       ]
     },
@@ -28745,7 +29712,13 @@
           "median_return_pct": 156.6,
           "mean_return_pct": 156.4,
           "positive_return_pct": 78.6,
-          "median_yearling_price": 41000
+          "median_yearling_price": 41000,
+          "top_match": {
+            "horse_name": "De Angelo C 2021",
+            "return_pct": 561.3,
+            "yearling_price": 62000,
+            "twoyo_price": 410000
+          }
         },
         {
           "foal_year": 2022,
@@ -28753,7 +29726,13 @@
           "median_return_pct": 1076.3,
           "mean_return_pct": 1076.3,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 9750
+          "median_yearling_price": 9750,
+          "top_match": {
+            "horse_name": "Politicallycorrect C 2022",
+            "return_pct": 1952.6,
+            "yearling_price": 9500,
+            "twoyo_price": 195000
+          }
         },
         {
           "foal_year": 2023,
@@ -28761,7 +29740,13 @@
           "median_return_pct": 105.0,
           "mean_return_pct": 174.2,
           "positive_return_pct": 87.5,
-          "median_yearling_price": 50000
+          "median_yearling_price": 50000,
+          "top_match": {
+            "horse_name": "Diamond Knife C 2023",
+            "return_pct": 592.3,
+            "yearling_price": 26000,
+            "twoyo_price": 180000
+          }
         },
         {
           "foal_year": 2024,
@@ -28769,7 +29754,13 @@
           "median_return_pct": 47.1,
           "mean_return_pct": 47.1,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 170000
+          "median_yearling_price": 170000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 47.1,
+            "yearling_price": 170000,
+            "twoyo_price": 250000
+          }
         }
       ]
     },
@@ -29212,7 +30203,13 @@
           "median_return_pct": 125.0,
           "mean_return_pct": 521.9,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Mystic Lake F 2021",
+            "return_pct": 3614.3,
+            "yearling_price": 3500,
+            "twoyo_price": 130000
+          }
         },
         {
           "foal_year": 2022,
@@ -29220,7 +30217,13 @@
           "median_return_pct": 51.8,
           "mean_return_pct": 75.1,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 17000
+          "median_yearling_price": 17000,
+          "top_match": {
+            "horse_name": "Lightning Rick C 2022",
+            "return_pct": 185.7,
+            "yearling_price": 7000,
+            "twoyo_price": 20000
+          }
         },
         {
           "foal_year": 2023,
@@ -29228,7 +30231,13 @@
           "median_return_pct": 450.0,
           "mean_return_pct": 403.1,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 15000
+          "median_yearling_price": 15000,
+          "top_match": {
+            "horse_name": "Gordy C 2023",
+            "return_pct": 900.0,
+            "yearling_price": 15000,
+            "twoyo_price": 150000
+          }
         },
         {
           "foal_year": 2024,
@@ -29236,7 +30245,13 @@
           "median_return_pct": 1000.0,
           "mean_return_pct": 2151.4,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 6000
+          "median_yearling_price": 6000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 5316.7,
+            "yearling_price": 6000,
+            "twoyo_price": 325000
+          }
         }
       ]
     },
@@ -29314,7 +30329,13 @@
           "median_return_pct": 354.5,
           "mean_return_pct": 354.5,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 11000
+          "median_yearling_price": 11000,
+          "top_match": {
+            "horse_name": "Vote No C 2021",
+            "return_pct": 354.5,
+            "yearling_price": 11000,
+            "twoyo_price": 50000
+          }
         },
         {
           "foal_year": 2022,
@@ -29322,7 +30343,13 @@
           "median_return_pct": 61.2,
           "mean_return_pct": 61.2,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 13500
+          "median_yearling_price": 13500,
+          "top_match": {
+            "horse_name": "Corta Fuego C 2022",
+            "return_pct": 66.7,
+            "yearling_price": 18000,
+            "twoyo_price": 30000
+          }
         }
       ]
     },
@@ -29400,7 +30427,13 @@
           "median_return_pct": 220.0,
           "mean_return_pct": 186.8,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Lonchura F 2021",
+            "return_pct": 405.3,
+            "yearling_price": 9500,
+            "twoyo_price": 48000
+          }
         }
       ]
     },
@@ -29422,7 +30455,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10272/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025/",
           "return_pct": 1025.0,
           "gross_return_usd": 41000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "Chestnut Creed C 2021",
@@ -29696,7 +30731,13 @@
           "median_return_pct": 273.8,
           "mean_return_pct": 364.9,
           "positive_return_pct": 83.3,
-          "median_yearling_price": 12500
+          "median_yearling_price": 12500,
+          "top_match": {
+            "horse_name": "Chestnut Creed C 2021",
+            "return_pct": 900.0,
+            "yearling_price": 10000,
+            "twoyo_price": 100000
+          }
         },
         {
           "foal_year": 2022,
@@ -29704,7 +30745,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 124.3,
           "positive_return_pct": 85.7,
-          "median_yearling_price": 35000
+          "median_yearling_price": 35000,
+          "top_match": {
+            "horse_name": "Amazing Khan C 2022",
+            "return_pct": 344.4,
+            "yearling_price": 9000,
+            "twoyo_price": 40000
+          }
         },
         {
           "foal_year": 2023,
@@ -29712,7 +30759,13 @@
           "median_return_pct": 1025.0,
           "mean_return_pct": 1025.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 4000
+          "median_yearling_price": 4000,
+          "top_match": {
+            "horse_name": "Fiamma F 2023",
+            "return_pct": 1025.0,
+            "yearling_price": 4000,
+            "twoyo_price": 45000
+          }
         },
         {
           "foal_year": 2024,
@@ -29720,7 +30773,13 @@
           "median_return_pct": 445.5,
           "mean_return_pct": 445.5,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 5500
+          "median_yearling_price": 5500,
+          "top_match": {
+            "horse_name": "Mr. Shelby C 2024",
+            "return_pct": 445.5,
+            "yearling_price": 5500,
+            "twoyo_price": 30000
+          }
         }
       ]
     },
@@ -29908,7 +30967,13 @@
           "median_return_pct": 288.9,
           "mean_return_pct": 174.9,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 11000
+          "median_yearling_price": 11000,
+          "top_match": {
+            "horse_name": "Phoenix Flying C 2021",
+            "return_pct": 327.3,
+            "yearling_price": 11000,
+            "twoyo_price": 47000
+          }
         },
         {
           "foal_year": 2022,
@@ -29916,7 +30981,13 @@
           "median_return_pct": 150.0,
           "mean_return_pct": 97.6,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 12000
+          "median_yearling_price": 12000,
+          "top_match": {
+            "horse_name": "Snow Is Flying F 2022",
+            "return_pct": 194.1,
+            "yearling_price": 8500,
+            "twoyo_price": 25000
+          }
         },
         {
           "foal_year": 2023,
@@ -29924,7 +30995,13 @@
           "median_return_pct": 233.3,
           "mean_return_pct": 233.3,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 3000
+          "median_yearling_price": 3000,
+          "top_match": {
+            "horse_name": "Consider Elle Nore F 2023",
+            "return_pct": 233.3,
+            "yearling_price": 3000,
+            "twoyo_price": 10000
+          }
         },
         {
           "foal_year": 2024,
@@ -29932,7 +31009,13 @@
           "median_return_pct": 237.2,
           "mean_return_pct": 237.2,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 41000
+          "median_yearling_price": 41000,
+          "top_match": {
+            "horse_name": "Off in the Corner C 2024",
+            "return_pct": 266.7,
+            "yearling_price": 30000,
+            "twoyo_price": 110000
+          }
         }
       ]
     },
@@ -30064,7 +31147,13 @@
           "median_return_pct": 6.7,
           "mean_return_pct": 82.6,
           "positive_return_pct": 60.0,
-          "median_yearling_price": 15000
+          "median_yearling_price": 15000,
+          "top_match": {
+            "horse_name": "Raetastic F 2021",
+            "return_pct": 220.0,
+            "yearling_price": 5000,
+            "twoyo_price": 16000
+          }
         },
         {
           "foal_year": 2024,
@@ -30072,7 +31161,13 @@
           "median_return_pct": 12.0,
           "mean_return_pct": 12.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Midnight Laugh F 2024",
+            "return_pct": 12.0,
+            "yearling_price": 25000,
+            "twoyo_price": 28000
+          }
         }
       ]
     },
@@ -30132,7 +31227,13 @@
           "median_return_pct": 640.0,
           "mean_return_pct": 640.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 5000
+          "median_yearling_price": 5000,
+          "top_match": {
+            "horse_name": "Artempus C 2021",
+            "return_pct": 640.0,
+            "yearling_price": 5000,
+            "twoyo_price": 37000
+          }
         },
         {
           "foal_year": 2022,
@@ -30140,7 +31241,13 @@
           "median_return_pct": 60.0,
           "mean_return_pct": 60.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 10000
+          "median_yearling_price": 10000,
+          "top_match": {
+            "horse_name": "Lady Embrace F 2022",
+            "return_pct": 60.0,
+            "yearling_price": 10000,
+            "twoyo_price": 16000
+          }
         }
       ]
     },
@@ -30926,7 +32033,13 @@
           "median_return_pct": 66.7,
           "mean_return_pct": 111.2,
           "positive_return_pct": 73.1,
-          "median_yearling_price": 53500
+          "median_yearling_price": 53500,
+          "top_match": {
+            "horse_name": "Ghost Army C 2022",
+            "return_pct": 825.9,
+            "yearling_price": 27000,
+            "twoyo_price": 250000
+          }
         },
         {
           "foal_year": 2023,
@@ -30934,7 +32047,13 @@
           "median_return_pct": 45.2,
           "mean_return_pct": 123.9,
           "positive_return_pct": 61.5,
-          "median_yearling_price": 31000
+          "median_yearling_price": 31000,
+          "top_match": {
+            "horse_name": "Arden Mist C 2023",
+            "return_pct": 438.5,
+            "yearling_price": 65000,
+            "twoyo_price": 350000
+          }
         },
         {
           "foal_year": 2024,
@@ -30942,7 +32061,13 @@
           "median_return_pct": 240.0,
           "mean_return_pct": 276.8,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 431.2,
+            "yearling_price": 16000,
+            "twoyo_price": 85000
+          }
         }
       ]
     },
@@ -32100,7 +33225,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2024/10073/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2024/",
           "return_pct": -62.4,
           "gross_return_usd": -78000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "Adage C 2022",
@@ -32254,7 +33381,13 @@
           "median_return_pct": 57.9,
           "mean_return_pct": 158.6,
           "positive_return_pct": 63.2,
-          "median_yearling_price": 62500
+          "median_yearling_price": 62500,
+          "top_match": {
+            "horse_name": "Modahim C 2022",
+            "return_pct": 2252.9,
+            "yearling_price": 17000,
+            "twoyo_price": 400000
+          }
         },
         {
           "foal_year": 2023,
@@ -32262,7 +33395,13 @@
           "median_return_pct": 120.2,
           "mean_return_pct": 128.0,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 71000
+          "median_yearling_price": 71000,
+          "top_match": {
+            "horse_name": "Azario C 2023",
+            "return_pct": 433.3,
+            "yearling_price": 30000,
+            "twoyo_price": 160000
+          }
         },
         {
           "foal_year": 2024,
@@ -32270,7 +33409,13 @@
           "median_return_pct": 15.4,
           "mean_return_pct": 56.6,
           "positive_return_pct": 53.8,
-          "median_yearling_price": 100000
+          "median_yearling_price": 100000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 275.0,
+            "yearling_price": 100000,
+            "twoyo_price": 375000
+          }
         }
       ]
     },
@@ -32454,7 +33599,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10262/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025/",
           "return_pct": 160.0,
           "gross_return_usd": 200000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "Intricity F 2023",
@@ -32946,7 +34093,13 @@
           "median_return_pct": 31.9,
           "mean_return_pct": 69.0,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 61000
+          "median_yearling_price": 61000,
+          "top_match": {
+            "horse_name": "Kenny Be C 2022",
+            "return_pct": 475.0,
+            "yearling_price": 20000,
+            "twoyo_price": 115000
+          }
         },
         {
           "foal_year": 2023,
@@ -32954,7 +34107,13 @@
           "median_return_pct": 156.1,
           "mean_return_pct": 226.8,
           "positive_return_pct": 60.0,
-          "median_yearling_price": 47500
+          "median_yearling_price": 47500,
+          "top_match": {
+            "horse_name": "Lovely Summer F 2023",
+            "return_pct": 1400.0,
+            "yearling_price": 3000,
+            "twoyo_price": 45000
+          }
         },
         {
           "foal_year": 2024,
@@ -32962,7 +34121,13 @@
           "median_return_pct": 266.6,
           "mean_return_pct": 266.6,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 22500
+          "median_yearling_price": 22500,
+          "top_match": {
+            "horse_name": "Complicada F 2024",
+            "return_pct": 300.0,
+            "yearling_price": 30000,
+            "twoyo_price": 120000
+          }
         }
       ]
     },
@@ -33840,7 +35005,13 @@
           "median_return_pct": 31.4,
           "mean_return_pct": 84.5,
           "positive_return_pct": 57.7,
-          "median_yearling_price": 90000
+          "median_yearling_price": 90000,
+          "top_match": {
+            "horse_name": "Nuk Soo Kow C 2022",
+            "return_pct": 993.8,
+            "yearling_price": 32000,
+            "twoyo_price": 350000
+          }
         },
         {
           "foal_year": 2023,
@@ -33848,7 +35019,13 @@
           "median_return_pct": 4.8,
           "mean_return_pct": 23.2,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 92500
+          "median_yearling_price": 92500,
+          "top_match": {
+            "horse_name": "Kintrigue F 2023",
+            "return_pct": 200.0,
+            "yearling_price": 45000,
+            "twoyo_price": 135000
+          }
         },
         {
           "foal_year": 2024,
@@ -33856,7 +35033,13 @@
           "median_return_pct": 226.9,
           "mean_return_pct": 205.2,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 155000
+          "median_yearling_price": 155000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 480.6,
+            "yearling_price": 155000,
+            "twoyo_price": 900000
+          }
         }
       ]
     },
@@ -34715,7 +35898,13 @@
           "median_return_pct": 294.3,
           "mean_return_pct": 493.7,
           "positive_return_pct": 93.8,
-          "median_yearling_price": 36000
+          "median_yearling_price": 36000,
+          "top_match": {
+            "horse_name": "Usha F 2022",
+            "return_pct": 1900.0,
+            "yearling_price": 30000,
+            "twoyo_price": 600000
+          }
         },
         {
           "foal_year": 2023,
@@ -34723,7 +35912,13 @@
           "median_return_pct": 275.0,
           "mean_return_pct": 555.6,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 70000
+          "median_yearling_price": 70000,
+          "top_match": {
+            "horse_name": "Cowboy C 2023",
+            "return_pct": 3900.0,
+            "yearling_price": 4000,
+            "twoyo_price": 160000
+          }
         },
         {
           "foal_year": 2024,
@@ -34731,7 +35926,13 @@
           "median_return_pct": 133.3,
           "mean_return_pct": 234.3,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 45000
+          "median_yearling_price": 45000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 733.3,
+            "yearling_price": 30000,
+            "twoyo_price": 250000
+          }
         }
       ]
     },
@@ -35257,7 +36458,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10272/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025/",
           "return_pct": -10.0,
           "gross_return_usd": -2000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "Tap Tier C 2022",
@@ -35425,7 +36628,13 @@
           "median_return_pct": 43.5,
           "mean_return_pct": 98.1,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 31500
+          "median_yearling_price": 31500,
+          "top_match": {
+            "horse_name": "Grand Empress F 2022",
+            "return_pct": 435.7,
+            "yearling_price": 14000,
+            "twoyo_price": 75000
+          }
         },
         {
           "foal_year": 2023,
@@ -35433,7 +36642,13 @@
           "median_return_pct": 337.5,
           "mean_return_pct": 312.8,
           "positive_return_pct": 72.7,
-          "median_yearling_price": 13000
+          "median_yearling_price": 13000,
+          "top_match": {
+            "horse_name": "Mr. Prime C 2023",
+            "return_pct": 764.9,
+            "yearling_price": 3700,
+            "twoyo_price": 32000
+          }
         },
         {
           "foal_year": 2024,
@@ -35441,7 +36656,13 @@
           "median_return_pct": 261.9,
           "mean_return_pct": 261.9,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 566.7,
+            "yearling_price": 15000,
+            "twoyo_price": 100000
+          }
         }
       ]
     },
@@ -35845,7 +37066,13 @@
           "median_return_pct": 46.5,
           "mean_return_pct": 91.1,
           "positive_return_pct": 68.8,
-          "median_yearling_price": 42500
+          "median_yearling_price": 42500,
+          "top_match": {
+            "horse_name": "Chase a Dream C 2022",
+            "return_pct": 337.5,
+            "yearling_price": 8000,
+            "twoyo_price": 35000
+          }
         },
         {
           "foal_year": 2023,
@@ -35853,7 +37080,13 @@
           "median_return_pct": 435.7,
           "mean_return_pct": 579.7,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 26000
+          "median_yearling_price": 26000,
+          "top_match": {
+            "horse_name": "Counting Stars F 2023",
+            "return_pct": 1053.8,
+            "yearling_price": 13000,
+            "twoyo_price": 150000
+          }
         }
       ]
     },
@@ -36611,7 +37844,13 @@
           "median_return_pct": 10.0,
           "mean_return_pct": 16.0,
           "positive_return_pct": 55.6,
-          "median_yearling_price": 130000
+          "median_yearling_price": 130000,
+          "top_match": {
+            "horse_name": "Verifire C 2022",
+            "return_pct": 284.6,
+            "yearling_price": 260000,
+            "twoyo_price": 1000000
+          }
         },
         {
           "foal_year": 2023,
@@ -36619,7 +37858,13 @@
           "median_return_pct": 205.6,
           "mean_return_pct": 202.4,
           "positive_return_pct": 72.7,
-          "median_yearling_price": 20000
+          "median_yearling_price": 20000,
+          "top_match": {
+            "horse_name": "Iron Orchard F 2023",
+            "return_pct": 541.0,
+            "yearling_price": 78000,
+            "twoyo_price": 500000
+          }
         },
         {
           "foal_year": 2024,
@@ -36627,7 +37872,13 @@
           "median_return_pct": 250.0,
           "mean_return_pct": 357.5,
           "positive_return_pct": 81.8,
-          "median_yearling_price": 28000
+          "median_yearling_price": 28000,
+          "top_match": {
+            "horse_name": "English Woman F 2024",
+            "return_pct": 1600.0,
+            "yearling_price": 25000,
+            "twoyo_price": 425000
+          }
         }
       ]
     },
@@ -37245,7 +38496,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 202.4,
           "positive_return_pct": 86.2,
-          "median_yearling_price": 15000
+          "median_yearling_price": 15000,
+          "top_match": {
+            "horse_name": "Nat Gas C 2022",
+            "return_pct": 1100.0,
+            "yearling_price": 5000,
+            "twoyo_price": 60000
+          }
         },
         {
           "foal_year": 2023,
@@ -37253,7 +38510,13 @@
           "median_return_pct": 225.0,
           "mean_return_pct": 199.1,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 22500
+          "median_yearling_price": 22500,
+          "top_match": {
+            "horse_name": "Ribadeo F 2023",
+            "return_pct": 400.0,
+            "yearling_price": 30000,
+            "twoyo_price": 150000
+          }
         }
       ]
     },
@@ -37385,7 +38648,13 @@
           "median_return_pct": 48.7,
           "mean_return_pct": 50.5,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 48500
+          "median_yearling_price": 48500,
+          "top_match": {
+            "horse_name": "Absolutely Hot C 2022",
+            "return_pct": 109.1,
+            "yearling_price": 110000,
+            "twoyo_price": 230000
+          }
         }
       ]
     },
@@ -37535,7 +38804,13 @@
           "median_return_pct": 50.0,
           "mean_return_pct": 271.4,
           "positive_return_pct": 57.1,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Geudaemanui Blue C 2022",
+            "return_pct": 1400.0,
+            "yearling_price": 2000,
+            "twoyo_price": 30000
+          }
         }
       ]
     },
@@ -37577,7 +38852,13 @@
           "median_return_pct": 50.0,
           "mean_return_pct": 50.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 20000
+          "median_yearling_price": 20000,
+          "top_match": {
+            "horse_name": "Rasta Girl F 2022",
+            "return_pct": 50.0,
+            "yearling_price": 20000,
+            "twoyo_price": 30000
+          }
         }
       ]
     },
@@ -37945,7 +39226,13 @@
           "median_return_pct": 0.0,
           "mean_return_pct": 43.3,
           "positive_return_pct": 47.4,
-          "median_yearling_price": 30000
+          "median_yearling_price": 30000,
+          "top_match": {
+            "horse_name": "El Consistente C 2023",
+            "return_pct": 400.0,
+            "yearling_price": 5000,
+            "twoyo_price": 25000
+          }
         }
       ]
     },
@@ -38149,7 +39436,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10272/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025/",
           "return_pct": -40.0,
           "gross_return_usd": -10000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Idiom F 2023",
@@ -38187,7 +39476,13 @@
           "median_return_pct": 46.8,
           "mean_return_pct": 216.2,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 26000
+          "median_yearling_price": 26000,
+          "top_match": {
+            "horse_name": "J J's Luna F 2023",
+            "return_pct": 1800.0,
+            "yearling_price": 1000,
+            "twoyo_price": 19000
+          }
         }
       ]
     },
@@ -38537,7 +39832,13 @@
           "median_return_pct": 56.6,
           "mean_return_pct": 142.2,
           "positive_return_pct": 78.6,
-          "median_yearling_price": 75000
+          "median_yearling_price": 75000,
+          "top_match": {
+            "horse_name": "Magna Victor C 2023",
+            "return_pct": 1233.3,
+            "yearling_price": 75000,
+            "twoyo_price": 1000000
+          }
         },
         {
           "foal_year": 2024,
@@ -38545,7 +39846,13 @@
           "median_return_pct": 101.5,
           "mean_return_pct": 97.0,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 85000
+          "median_yearling_price": 85000,
+          "top_match": {
+            "horse_name": "UNNAMED R 2024",
+            "return_pct": 166.7,
+            "yearling_price": 225000,
+            "twoyo_price": 600000
+          }
         }
       ]
     },
@@ -38803,7 +40110,13 @@
           "median_return_pct": 85.2,
           "mean_return_pct": 141.3,
           "positive_return_pct": 61.5,
-          "median_yearling_price": 16000
+          "median_yearling_price": 16000,
+          "top_match": {
+            "horse_name": "Spotted F 2023",
+            "return_pct": 685.7,
+            "yearling_price": 7000,
+            "twoyo_price": 55000
+          }
         }
       ]
     },
@@ -39209,7 +40522,13 @@
           "median_return_pct": -3.6,
           "mean_return_pct": 83.8,
           "positive_return_pct": 35.3,
-          "median_yearling_price": 42000
+          "median_yearling_price": 42000,
+          "top_match": {
+            "horse_name": "Silent Tactic C 2023",
+            "return_pct": 733.3,
+            "yearling_price": 60000,
+            "twoyo_price": 500000
+          }
         },
         {
           "foal_year": 2024,
@@ -39217,7 +40536,13 @@
           "median_return_pct": 26.2,
           "mean_return_pct": 65.6,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 45000
+          "median_yearling_price": 45000,
+          "top_match": {
+            "horse_name": "Zack the Grey C 2024",
+            "return_pct": 250.0,
+            "yearling_price": 20000,
+            "twoyo_price": 70000
+          }
         }
       ]
     },
@@ -39743,7 +41068,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10399/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2026/",
           "return_pct": 100.0,
           "gross_return_usd": 100000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "UNNAMED C 2024",
@@ -40399,7 +41726,13 @@
           "median_return_pct": 73.9,
           "mean_return_pct": 106.7,
           "positive_return_pct": 72.1,
-          "median_yearling_price": 115000
+          "median_yearling_price": 115000,
+          "top_match": {
+            "horse_name": "Goodall F 2023",
+            "return_pct": 746.8,
+            "yearling_price": 62000,
+            "twoyo_price": 525000
+          }
         },
         {
           "foal_year": 2024,
@@ -40407,7 +41740,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 122.3,
           "positive_return_pct": 85.7,
-          "median_yearling_price": 105000
+          "median_yearling_price": 105000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 366.7,
+            "yearling_price": 45000,
+            "twoyo_price": 210000
+          }
         }
       ]
     },
@@ -40845,7 +42184,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10272/ocala-breeders-sales-co-june-2yos-horses-of-racing-age-sale-2025/",
           "return_pct": 3.6,
           "gross_return_usd": 5000,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "horse_name": "Beau Cheval C 2023",
@@ -40955,7 +42296,13 @@
           "median_return_pct": 92.3,
           "mean_return_pct": 216.6,
           "positive_return_pct": 82.8,
-          "median_yearling_price": 35000
+          "median_yearling_price": 35000,
+          "top_match": {
+            "horse_name": "Crude Velocity C 2023",
+            "return_pct": 1983.3,
+            "yearling_price": 12000,
+            "twoyo_price": 250000
+          }
         }
       ]
     },
@@ -41539,7 +42886,13 @@
           "median_return_pct": 72.2,
           "mean_return_pct": 185.5,
           "positive_return_pct": 68.2,
-          "median_yearling_price": 51000
+          "median_yearling_price": 51000,
+          "top_match": {
+            "horse_name": "Independence Rise C 2023",
+            "return_pct": 1071.4,
+            "yearling_price": 7000,
+            "twoyo_price": 82000
+          }
         },
         {
           "foal_year": 2024,
@@ -41547,7 +42900,13 @@
           "median_return_pct": 62.5,
           "mean_return_pct": 78.2,
           "positive_return_pct": 77.8,
-          "median_yearling_price": 30000
+          "median_yearling_price": 30000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 366.7,
+            "yearling_price": 30000,
+            "twoyo_price": 140000
+          }
         }
       ]
     },
@@ -41661,7 +43020,13 @@
           "median_return_pct": 440.0,
           "mean_return_pct": 444.0,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 15000
+          "median_yearling_price": 15000,
+          "top_match": {
+            "horse_name": "Prototype C 2023",
+            "return_pct": 1033.3,
+            "yearling_price": 15000,
+            "twoyo_price": 170000
+          }
         }
       ]
     },
@@ -41885,7 +43250,13 @@
           "median_return_pct": 15.4,
           "mean_return_pct": 94.4,
           "positive_return_pct": 63.6,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Matadora F 2023",
+            "return_pct": 733.3,
+            "yearling_price": 6000,
+            "twoyo_price": 50000
+          }
         }
       ]
     },
@@ -42343,7 +43714,13 @@
           "median_return_pct": 118.2,
           "mean_return_pct": 274.2,
           "positive_return_pct": 76.2,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "Al Husaam C 2023",
+            "return_pct": 958.8,
+            "yearling_price": 17000,
+            "twoyo_price": 180000
+          }
         },
         {
           "foal_year": 2024,
@@ -42351,7 +43728,13 @@
           "median_return_pct": -50.0,
           "mean_return_pct": -16.7,
           "positive_return_pct": 33.3,
-          "median_yearling_price": 42000
+          "median_yearling_price": 42000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 71.4,
+            "yearling_price": 35000,
+            "twoyo_price": 60000
+          }
         }
       ]
     },
@@ -42447,7 +43830,13 @@
           "median_return_pct": 154.2,
           "mean_return_pct": 153.6,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 10500
+          "median_yearling_price": 10500,
+          "top_match": {
+            "horse_name": "Alnaifh F 2023",
+            "return_pct": 361.5,
+            "yearling_price": 6500,
+            "twoyo_price": 30000
+          }
         }
       ]
     },
@@ -42541,7 +43930,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2025/10262/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2025/",
           "return_pct": 116.7,
           "gross_return_usd": 70000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "Villa Rose F 2023",
@@ -42759,7 +44150,13 @@
           "median_return_pct": 75.0,
           "mean_return_pct": 76.4,
           "positive_return_pct": 75.0,
-          "median_yearling_price": 90000
+          "median_yearling_price": 90000,
+          "top_match": {
+            "horse_name": "Essential Girl F 2023",
+            "return_pct": 275.0,
+            "yearling_price": 8000,
+            "twoyo_price": 30000
+          }
         },
         {
           "foal_year": 2024,
@@ -42767,7 +44164,13 @@
           "median_return_pct": 422.8,
           "mean_return_pct": 569.2,
           "positive_return_pct": 50.0,
-          "median_yearling_price": 32500
+          "median_yearling_price": 32500,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 1471.4,
+            "yearling_price": 35000,
+            "twoyo_price": 550000
+          }
         }
       ]
     },
@@ -43493,7 +44896,13 @@
           "median_return_pct": 66.7,
           "mean_return_pct": 105.9,
           "positive_return_pct": 76.0,
-          "median_yearling_price": 150000
+          "median_yearling_price": 150000,
+          "top_match": {
+            "horse_name": "Holly Ln F 2023",
+            "return_pct": 622.2,
+            "yearling_price": 18000,
+            "twoyo_price": 130000
+          }
         },
         {
           "foal_year": 2024,
@@ -43501,7 +44910,13 @@
           "median_return_pct": 124.8,
           "mean_return_pct": 111.4,
           "positive_return_pct": 85.7,
-          "median_yearling_price": 40000
+          "median_yearling_price": 40000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 300.0,
+            "yearling_price": 25000,
+            "twoyo_price": 100000
+          }
         }
       ]
     },
@@ -43543,7 +44958,13 @@
           "median_return_pct": 627.3,
           "mean_return_pct": 627.3,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 5500
+          "median_yearling_price": 5500,
+          "top_match": {
+            "horse_name": "Alastar C 2023",
+            "return_pct": 627.3,
+            "yearling_price": 5500,
+            "twoyo_price": 40000
+          }
         }
       ]
     },
@@ -43585,7 +45006,13 @@
           "median_return_pct": 478.9,
           "mean_return_pct": 478.9,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 9500
+          "median_yearling_price": 9500,
+          "top_match": {
+            "horse_name": "Foster Lane F 2023",
+            "return_pct": 478.9,
+            "yearling_price": 9500,
+            "twoyo_price": 55000
+          }
         }
       ]
     },
@@ -44113,7 +45540,13 @@
           "median_return_pct": 135.0,
           "mean_return_pct": 299.5,
           "positive_return_pct": 78.6,
-          "median_yearling_price": 43500
+          "median_yearling_price": 43500,
+          "top_match": {
+            "horse_name": "Country Girl F 2024",
+            "return_pct": 1122.2,
+            "yearling_price": 45000,
+            "twoyo_price": 550000
+          }
         }
       ]
     },
@@ -44407,7 +45840,13 @@
           "median_return_pct": 81.8,
           "mean_return_pct": 171.8,
           "positive_return_pct": 86.7,
-          "median_yearling_price": 50000
+          "median_yearling_price": 50000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 536.4,
+            "yearling_price": 55000,
+            "twoyo_price": 350000
+          }
         }
       ]
     },
@@ -44685,7 +46124,13 @@
           "median_return_pct": 145.8,
           "mean_return_pct": 315.9,
           "positive_return_pct": 92.9,
-          "median_yearling_price": 55000
+          "median_yearling_price": 55000,
+          "top_match": {
+            "horse_name": "Lightning Whelk C 2024",
+            "return_pct": 2400.0,
+            "yearling_price": 10000,
+            "twoyo_price": 250000
+          }
         }
       ]
     },
@@ -44923,7 +46368,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10399/ocala-breeders-sales-co-spring-sale-of-2yos-in-training-2026/",
           "return_pct": 0.0,
           "gross_return_usd": 0,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "UNNAMED C 2024",
@@ -44979,7 +46426,13 @@
           "median_return_pct": 140.0,
           "mean_return_pct": 167.9,
           "positive_return_pct": 80.0,
-          "median_yearling_price": 70000
+          "median_yearling_price": 70000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 609.1,
+            "yearling_price": 275000,
+            "twoyo_price": 1950000
+          }
         }
       ]
     },
@@ -45145,7 +46598,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10392/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026/",
           "return_pct": 140.0,
           "gross_return_usd": 35000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "UNNAMED F 2024",
@@ -45525,7 +46980,13 @@
           "median_return_pct": 100.0,
           "mean_return_pct": 91.2,
           "positive_return_pct": 62.1,
-          "median_yearling_price": 50000
+          "median_yearling_price": 50000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 525.0,
+            "yearling_price": 4000,
+            "twoyo_price": 25000
+          }
         }
       ]
     },
@@ -45711,7 +47172,13 @@
           "median_return_pct": 116.7,
           "mean_return_pct": 221.3,
           "positive_return_pct": 88.9,
-          "median_yearling_price": 60000
+          "median_yearling_price": 60000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 700.0,
+            "yearling_price": 20000,
+            "twoyo_price": 160000
+          }
         }
       ]
     },
@@ -46041,7 +47508,13 @@
           "median_return_pct": 250.0,
           "mean_return_pct": 322.2,
           "positive_return_pct": 76.5,
-          "median_yearling_price": 30000
+          "median_yearling_price": 30000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 1150.0,
+            "yearling_price": 20000,
+            "twoyo_price": 250000
+          }
         }
       ]
     },
@@ -46303,7 +47776,13 @@
           "median_return_pct": 150.0,
           "mean_return_pct": 311.1,
           "positive_return_pct": 61.5,
-          "median_yearling_price": 40000
+          "median_yearling_price": 40000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 2627.3,
+            "yearling_price": 11000,
+            "twoyo_price": 300000
+          }
         }
       ]
     },
@@ -46581,7 +48060,13 @@
           "median_return_pct": 84.0,
           "mean_return_pct": 193.3,
           "positive_return_pct": 78.6,
-          "median_yearling_price": 135000
+          "median_yearling_price": 135000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 1542.9,
+            "yearling_price": 140000,
+            "twoyo_price": 2300000
+          }
         }
       ]
     },
@@ -46785,7 +48270,13 @@
           "median_return_pct": 85.1,
           "mean_return_pct": 138.1,
           "positive_return_pct": 90.0,
-          "median_yearling_price": 47500
+          "median_yearling_price": 47500,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 650.0,
+            "yearling_price": 18000,
+            "twoyo_price": 135000
+          }
         }
       ]
     },
@@ -46973,7 +48464,13 @@
           "median_return_pct": 179.4,
           "mean_return_pct": 358.9,
           "positive_return_pct": 88.9,
-          "median_yearling_price": 110000
+          "median_yearling_price": 110000,
+          "top_match": {
+            "horse_name": "UNNAMED F 2024",
+            "return_pct": 1788.9,
+            "yearling_price": 45000,
+            "twoyo_price": 850000
+          }
         }
       ]
     },
@@ -47251,7 +48748,13 @@
           "median_return_pct": 134.3,
           "mean_return_pct": 140.1,
           "positive_return_pct": 85.7,
-          "median_yearling_price": 82500
+          "median_yearling_price": 82500,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 390.9,
+            "yearling_price": 275000,
+            "twoyo_price": 1350000
+          }
         }
       ]
     },
@@ -47419,7 +48922,13 @@
           "median_return_pct": 190.0,
           "mean_return_pct": 201.0,
           "positive_return_pct": 87.5,
-          "median_yearling_price": 30000
+          "median_yearling_price": 30000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 516.7,
+            "yearling_price": 30000,
+            "twoyo_price": 185000
+          }
         }
       ]
     },
@@ -47441,7 +48950,9 @@
           "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10392/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026/",
           "return_pct": 1300.0,
           "gross_return_usd": 325000,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         },
         {
           "horse_name": "UNNAMED C 2024",
@@ -48021,7 +49532,13 @@
           "median_return_pct": 130.0,
           "mean_return_pct": 211.4,
           "positive_return_pct": 87.5,
-          "median_yearling_price": 70000
+          "median_yearling_price": 70000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 1300.0,
+            "yearling_price": 25000,
+            "twoyo_price": 350000
+          }
         }
       ]
     },
@@ -48135,7 +49652,13 @@
           "median_return_pct": 108.0,
           "mean_return_pct": 267.2,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 25000
+          "median_yearling_price": 25000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 700.0,
+            "yearling_price": 2500,
+            "twoyo_price": 20000
+          }
         }
       ]
     },
@@ -48305,7 +49828,13 @@
           "median_return_pct": 64.9,
           "mean_return_pct": 59.8,
           "positive_return_pct": 62.5,
-          "median_yearling_price": 22500
+          "median_yearling_price": 22500,
+          "top_match": {
+            "horse_name": "Olivia Jaecks F 2024",
+            "return_pct": 212.5,
+            "yearling_price": 8000,
+            "twoyo_price": 25000
+          }
         }
       ]
     },
@@ -48383,7 +49912,13 @@
           "median_return_pct": 33.3,
           "mean_return_pct": 70.4,
           "positive_return_pct": 66.7,
-          "median_yearling_price": 110000
+          "median_yearling_price": 110000,
+          "top_match": {
+            "horse_name": "UNNAMED C 2024",
+            "return_pct": 218.2,
+            "yearling_price": 110000,
+            "twoyo_price": 350000
+          }
         }
       ]
     },
@@ -48533,7 +50068,13 @@
           "median_return_pct": 114.3,
           "mean_return_pct": 111.7,
           "positive_return_pct": 100.0,
-          "median_yearling_price": 210000
+          "median_yearling_price": 210000,
+          "top_match": {
+            "horse_name": "Tocca Ferro C 2024",
+            "return_pct": 220.0,
+            "yearling_price": 125000,
+            "twoyo_price": 400000
+          }
         }
       ]
     }
@@ -48820,7 +50361,9 @@
       "twoyo_sale_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-sales/results/2026/10392/ocala-breeders-sales-co-march-sale-of-2yos-in-training-2026/",
       "return_pct": 1300.0,
       "gross_return_usd": 325000,
-      "quality_flags": [],
+      "quality_flags": [
+        "multi_yearling_single_2yo"
+      ],
       "stallion": "Drain The Clock"
     },
     {

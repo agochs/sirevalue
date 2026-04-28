@@ -342,6 +342,28 @@ details[open] summary { margin-bottom: 8px; }
 .trend-tag.rising  { background: #d6ecdb; color: #275731; }
 .trend-tag.stable  { background: #efe7d3; color: #6b5915; }
 .trend-tag.falling { background: #f8d7d4; color: #7a1d1d; }
+.cohort-table {
+  width: 100%; border-collapse: collapse; margin: 6px 0 14px;
+  font-size: 12px;
+}
+.cohort-table th {
+  text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px;
+  color: var(--ink-soft); font-weight: 600; padding: 6px 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.cohort-table th.num { text-align: right; }
+.cohort-table td { padding: 6px 10px; border-bottom: 1px dashed var(--rule); vertical-align: middle; }
+.cohort-table tr:last-child td { border-bottom: none; }
+.cohort-table td.fy   { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.cohort-table td.num  { text-align: right; font-variant-numeric: tabular-nums; }
+.cohort-table td.med  { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+.cohort-table td.med.up   { color: var(--good); }
+.cohort-table td.med.down { color: var(--weak); }
+.cohort-table tr.dim td { opacity: 0.55; }   /* small-sample cohorts */
+.cohort-table .top-name { font-weight: 600; }
+.cohort-table .top-prices { font-size: 11px; color: var(--ink-soft); white-space: nowrap; }
+.cohort-table .top-pct.up   { color: var(--good); font-weight: 700; }
+.cohort-table .top-pct.down { color: var(--weak); font-weight: 700; }
 .qflag {
   display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 8px;
   font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
@@ -1033,16 +1055,30 @@ async function bootSireValue() {
     var cohortHtml = '';
     var cohorts = blob.cohort_breakdown || [];
     if (cohorts.length >= 2) {
-      var chips = cohorts.map(function(c) {
-        var cls = pctCls(c.median_return_pct);
-        var dim = c.matched_pairs < 3 ? ' dim' : '';
-        return '<div class="cohort-chip ' + cls + dim + '" '
-          + 'title="' + c.matched_pairs + ' pinhook pair' + (c.matched_pairs === 1 ? '' : 's')
-          + '; profitable ' + (c.positive_return_pct || 0).toFixed(0) + '%">'
-          +   '<span class="cy">' + c.foal_year + '</span>'
-          +   '<span class="cv">' + fmtPct(c.median_return_pct) + '</span>'
-          +   '<span class="cn">n=' + c.matched_pairs + '</span>'
-          + '</div>';
+      // Per-foal-year table: n, median return, profitable %, top hip.
+      // Small-sample rows (n < 3) are dimmed since their median is volatile.
+      var rows = cohorts.map(function(c) {
+        var dimCls   = c.matched_pairs < 3 ? ' dim' : '';
+        var medCls   = pctCls(c.median_return_pct);
+        var topPctCls = c.top_match ? pctCls(c.top_match.return_pct) : '';
+        var topHtml = '';
+        if (c.top_match) {
+          var t = c.top_match;
+          var tName  = escapeHtml(t.horse_name || '(unnamed)');
+          var tPrices = '$' + (t.yearling_price || 0).toLocaleString()
+                       + ' → $' + (t.twoyo_price || 0).toLocaleString();
+          topHtml = ''
+            + '<span class="top-name">' + tName + '</span>'
+            + ' <span class="top-pct ' + topPctCls + '">' + fmtPct(t.return_pct) + '</span>'
+            + ' <span class="top-prices">' + tPrices + '</span>';
+        }
+        return '<tr class="' + dimCls.trim() + '">'
+          +   '<td class="fy">' + c.foal_year + '</td>'
+          +   '<td class="num">' + c.matched_pairs + '</td>'
+          +   '<td class="med ' + medCls + '">' + fmtPct(c.median_return_pct) + '</td>'
+          +   '<td class="num">' + (c.positive_return_pct || 0).toFixed(0) + '%</td>'
+          +   '<td>' + topHtml + '</td>'
+          + '</tr>';
       }).join('');
       var trendHtml = '';
       if (summary.trend) {
@@ -1050,13 +1086,20 @@ async function bootSireValue() {
         var deltaTxt = summary.trend_delta_pct != null
           ? ' (' + (summary.trend_delta_pct >= 0 ? '+' : '') + summary.trend_delta_pct.toFixed(1) + ' pts)'
           : '';
-        trendHtml = '<span class="trend-tag ' + summary.trend + '">' + arrow + ' ' + summary.trend + deltaTxt + '</span>';
+        trendHtml = '<span class="trend-tag ' + summary.trend + '" style="margin-left:0;">'
+                  + arrow + ' ' + summary.trend + deltaTxt + '</span>';
       }
-      cohortHtml = '<div class="cohort-row">'
-        + '<span class="cohort-label">By foal year</span>'
-        + chips
-        + trendHtml
-        + '</div>';
+      cohortHtml = ''
+        + '<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:10px 0 4px;">'
+        +   '<span class="cohort-label" style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);font-weight:600;">By foal year</span>'
+        +   trendHtml
+        + '</div>'
+        + '<table class="cohort-table">'
+        +   '<thead><tr>'
+        +     '<th>Foal year</th><th class="num">n</th><th class="num">Median</th><th class="num">Profitable</th><th>Top hip</th>'
+        +   '</tr></thead>'
+        +   '<tbody>' + rows + '</tbody>'
+        + '</table>';
     }
 
     // Render every match — but mark the rows beyond TOP_N as `collapsed` so
@@ -1064,11 +1107,13 @@ async function bootSireValue() {
     // see the headline pairs first, while keeping the full list one click
     // away (no extra fetch — the data is already in `matches`).
     var FLAG_LABELS = {
-      extreme_gain:           'Return ≥ 1,500% — verify match',
-      extreme_loss:           'Return ≤ -75% — verify match',
-      micro_yearling_big_2yo: 'Yearling under $5K but 2YO over $100K — possible dam-name collision',
-      multi_yearling_multi_2yo: 'Multiple yearling and 2YO entries for the same cohort key — possible dam collision',
-      sub_1k_price:           'Price under $1K — likely transcription noise',
+      extreme_gain:              'Return ≥ 1,500% — verify match',
+      extreme_loss:              'Return ≤ -75% — verify match',
+      micro_yearling_big_2yo:    'Yearling under $5K but 2YO over $100K — possible dam-name collision',
+      multi_yearling_multi_2yo:  'Multiple yearling AND 2YO entries for the same cohort key — strong dam-collision risk',
+      single_yearling_multi_2yo: 'One yearling, multiple 2YO entries for the same cohort key — weak dam-collision risk (or 2YO re-offer)',
+      multi_yearling_single_2yo: 'Multiple yearling entries, one 2YO for the same cohort key — weak dam-collision risk (or yearling re-offer)',
+      sub_1k_price:              'Price under $1K — likely transcription noise',
     };
     function flagBadges(flags) {
       if (!flags || !flags.length) return '';

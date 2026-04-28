@@ -197,9 +197,19 @@ def main():
         if yrl["price"] < 5_000 and two["price"] >= 100_000:
             flags.append("micro_yearling_big_2yo")
         # Multiple yearling/2YO entries for the same cohort key — biologically
-        # impossible. If both sides have >1 entry that's a strong dam-collision signal.
+        # impossible (except twins, which are rare and usually aborted in TBs).
+        # If both sides have >1 entry that's a strong dam-collision signal.
         if len(yrls) > 1 and len(twos) > 1:
             flags.append("multi_yearling_multi_2yo")
+        # Single-many cases: one side has multiple entries but the other has
+        # just one. Weaker signal than both-multiple — could be a legitimate
+        # re-offer (same horse listed at multiple sales) — but worth surfacing
+        # for review. Re-offers tend to have similar prices; dam-collisions
+        # tend to have wildly different ones.
+        elif len(yrls) > 1 and len(twos) == 1:
+            flags.append("multi_yearling_single_2yo")
+        elif len(yrls) == 1 and len(twos) > 1:
+            flags.append("single_yearling_multi_2yo")
         # Sanity bounds
         if yrl["price"] < 1_000 or two["price"] < 1_000:
             flags.append("sub_1k_price")
@@ -256,6 +266,9 @@ def main():
             crets = [x["return_pct"] for x in cm]
             cyrls = [x["yearling_price"] for x in cm]
             cpos  = [r for r in crets if r > 0]
+            # The single biggest pinhook of this foal year — surfaces the
+            # cohort's headline win on the stallion-card breakdown table.
+            top = max(cm, key=lambda x: x["return_pct"])
             cohort_breakdown.append({
                 "foal_year":             fy,
                 "matched_pairs":         len(cm),
@@ -263,6 +276,12 @@ def main():
                 "mean_return_pct":       round(mean(crets), 1),
                 "positive_return_pct":   round(100 * len(cpos) / len(cm), 1),
                 "median_yearling_price": int(median(cyrls)),
+                "top_match": {
+                    "horse_name":     top.get("horse_name"),
+                    "return_pct":     top["return_pct"],
+                    "yearling_price": top["yearling_price"],
+                    "twoyo_price":    top["twoyo_price"],
+                },
             })
 
         # Trend label: compare oldest cohort vs newest cohort with n>=3.
