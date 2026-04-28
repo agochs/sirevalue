@@ -132,6 +132,36 @@ body {
 .headline .notable-signal { margin-top: 4px; }
 .headline .notable-signal .up   { color: #275731; font-weight: 700; }
 .headline .notable-signal .down { color: #7a1d1d; font-weight: 700; }
+/* ---------- Progeny stakes wins ---------- */
+.stakes-block {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin: 10px 0;
+}
+.stakes-block .head {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--ink-soft); font-weight: 700; margin-bottom: 8px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.stakes-block .head .count { font-weight: 400; }
+.stakes-block .stakes-row {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 10px;
+  padding: 6px 0; border-bottom: 1px dashed var(--rule); font-size: 13px;
+}
+.stakes-block .stakes-row:last-child { border-bottom: none; }
+.stakes-block .stakes-row .grade-tag {
+  display: inline-block; padding: 2px 6px; border-radius: 3px; font-weight: 700;
+  font-size: 10px; letter-spacing: 0.6px; min-width: 26px; text-align: center;
+  font-family: -apple-system, sans-serif;
+}
+.stakes-block .stakes-row .grade-tag.G1 { background: var(--gold); color: #fff; }
+.stakes-block .stakes-row .grade-tag.G2 { background: #a68336; color: #fff; }
+.stakes-block .stakes-row .grade-tag.G3 { background: #c4a356; color: #fff; }
+.stakes-block .stakes-row .grade-tag.Listed,
+.stakes-block .stakes-row .grade-tag.Black { background: var(--ink-soft); color: #fff; font-size: 9px; }
+.stakes-block .stakes-row .winner { font-weight: 600; }
+.stakes-block .stakes-row .race-context { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.stakes-block .stakes-row .race-context a { color: var(--ink-soft); }
+.stakes-block .stakes-row .date { font-family: "Iowan Old Style", Georgia, serif; font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
 .grade-score { font-size: 15px; margin-top: 4px; opacity: 0.9; }
 .key-stats {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -717,9 +747,10 @@ async function bootSireValue() {
   var scoreHistory = {};
   var hipPinhooks = {};
   var firstCropPredictions = {};
+  var stakesBySire = {};
   function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
   try {
-    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp, hpResp, fcResp] = await Promise.all([
+    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp, hpResp, fcResp, stResp] = await Promise.all([
       fetch('/data/progeny-sires-2025.json'),
       fetch('/data/progeny-bms-2026.json'),
       fetch('/data/upcoming-sales.json'),
@@ -729,6 +760,7 @@ async function bootSireValue() {
       fetch('/data/recent-sale-results-index.json'),
       fetch('/data/hip-pinhooks.json'),
       fetch('/data/first-crop-predictions.json'),
+      fetch('/data/stakes-results.json').catch(function() { return null; }),
     ]);
     if (sResp.ok) {
       var sJson = await sResp.json();
@@ -787,6 +819,10 @@ async function bootSireValue() {
       var fcJson = await fcResp.json();
       (fcJson.stallions || []).forEach(function(r) { firstCropPredictions[r.name] = r; });
     }
+    if (stResp && stResp.ok) {
+      var stJson = await stResp.json();
+      stakesBySire = stJson.by_sire || {};
+    }
   } catch (_e) { /* all of these are optional enrichments */ }
 
   function money(n) { return n == null ? null : '$' + n.toLocaleString(); }
@@ -806,6 +842,49 @@ async function bootSireValue() {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
+  }
+
+  function renderStakes(s) {
+    // Surface this stallion's recent progeny stakes wins from stakes-results.json.
+    // Index is by sire-name string; we match against s.name.
+    var races = stakesBySire[s.name] || [];
+    if (!races.length) return '';
+    function sourceHost(url) {
+      try { return new URL(url).hostname.replace(/^www\./, ''); } catch (_e) { return 'source'; }
+    }
+    function fmtDate(d) {
+      if (!d) return '';
+      var parts = String(d).split('-');
+      var monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      var mIdx = parseInt(parts[1], 10) - 1;
+      return (monthNames[mIdx] || '') + ' ' + parseInt(parts[2], 10) + ", " + parts[0];
+    }
+    var rows = races.slice(0, 5).map(function(r) {
+      var grade = r.race_grade || 'Listed';
+      var damPart = r.winner_dam
+        ? ', out of ' + escapeHtml(r.winner_dam) + (r.winner_damsire ? ' (' + escapeHtml(r.winner_damsire) + ')' : '')
+        : '';
+      var srcHtml = r.source_url
+        ? ' · <a href="' + escapeHtml(r.source_url) + '" target="_blank" rel="noopener">' + sourceHost(r.source_url) + ' ↗</a>'
+        : '';
+      return '<div class="stakes-row">'
+        +   '<div><span class="grade-tag ' + grade + '">' + grade + '</span></div>'
+        +   '<div>'
+        +     '<div class="winner">' + escapeHtml(r.winner) + '</div>'
+        +     '<div class="race-context">' + escapeHtml(r.race) + ' &middot; ' + escapeHtml(r.track || '')
+        +       damPart + srcHtml + '</div>'
+        +   '</div>'
+        +   '<div class="date">' + fmtDate(r.date) + '</div>'
+        + '</div>';
+    }).join('');
+    return ''
+      + '<div class="stakes-block">'
+      +   '<div class="head">'
+      +     '<span>Progeny stakes wins</span>'
+      +     '<span class="count">' + races.length + ' tracked</span>'
+      +   '</div>'
+      +   rows
+      + '</div>';
   }
 
   function renderRoi(s) {
@@ -1703,6 +1782,7 @@ async function bootSireValue() {
       + '</div>'
       + '<div class="key-stats">' + statsHtml + '</div>'
       + renderHeadline(s)
+      + renderStakes(s)
       + renderRoi(s)
       + renderPinhook(s)
       + renderRealizedPinhooks(s)

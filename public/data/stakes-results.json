@@ -1,0 +1,101 @@
+{
+  "updated_at": "2026-04-28",
+  "summary": {
+    "total_races": 3,
+    "sires_covered": 3
+  },
+  "races": [
+    {
+      "race": "Toyota Blue Grass Stakes",
+      "race_grade": "G1",
+      "track": "Keeneland",
+      "date": "2026-04-05",
+      "purse_usd": 1250000,
+      "winner": "Further Ado",
+      "winner_age": 3,
+      "winner_sire": "Gun Runner",
+      "winner_dam": null,
+      "winner_damsire": null,
+      "source_url": "https://spectrumnews1.com/ky/louisville/news/2026/04/05/santa-anita-blue-grass-stakes-wood-memorial",
+      "note": "Won by Irad Ortiz Jr. for Brad Cox in 1:49.58. 100 Derby qualifying points."
+    },
+    {
+      "race": "Santa Anita Derby",
+      "race_grade": "G1",
+      "track": "Santa Anita Park",
+      "date": "2026-04-04",
+      "purse_usd": 1000000,
+      "winner": "So Happy",
+      "winner_age": 3,
+      "winner_sire": "Runhappy",
+      "winner_dam": null,
+      "winner_damsire": null,
+      "source_url": "https://www.americasbestracing.net/the-sport/2026-2026-kentucky-derby-prospect-profiles-santa-anita-derby-winner-so-happy",
+      "note": "Stunned favorite Potente. Sire Runhappy was sold to Korea; this colt was conceived in his US tenure. 100 Derby qualifying points."
+    },
+    {
+      "race": "Florida Derby",
+      "race_grade": "G1",
+      "track": "Gulfstream Park",
+      "date": "2026-03-28",
+      "purse_usd": 1000000,
+      "winner": "Commandment",
+      "winner_age": 3,
+      "winner_sire": "Into Mischief",
+      "winner_dam": "Sippican Harbor",
+      "winner_damsire": "Orb",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/290881/commandment-takes-florida-derby-thriller-over-the-puma",
+      "note": "Won by a photo finish over The Puma. 100 Derby qualifying points."
+    }
+  ],
+  "by_sire": {
+    "Gun Runner": [
+      {
+        "race": "Toyota Blue Grass Stakes",
+        "race_grade": "G1",
+        "track": "Keeneland",
+        "date": "2026-04-05",
+        "purse_usd": 1250000,
+        "winner": "Further Ado",
+        "winner_age": 3,
+        "winner_sire": "Gun Runner",
+        "winner_dam": null,
+        "winner_damsire": null,
+        "source_url": "https://spectrumnews1.com/ky/louisville/news/2026/04/05/santa-anita-blue-grass-stakes-wood-memorial",
+        "note": "Won by Irad Ortiz Jr. for Brad Cox in 1:49.58. 100 Derby qualifying points."
+      }
+    ],
+    "Runhappy": [
+      {
+        "race": "Santa Anita Derby",
+        "race_grade": "G1",
+        "track": "Santa Anita Park",
+        "date": "2026-04-04",
+        "purse_usd": 1000000,
+        "winner": "So Happy",
+        "winner_age": 3,
+        "winner_sire": "Runhappy",
+        "winner_dam": null,
+        "winner_damsire": null,
+        "source_url": "https://www.americasbestracing.net/the-sport/2026-2026-kentucky-derby-prospect-profiles-santa-anita-derby-winner-so-happy",
+        "note": "Stunned favorite Potente. Sire Runhappy was sold to Korea; this colt was conceived in his US tenure. 100 Derby qualifying points."
+      }
+    ],
+    "Into Mischief": [
+      {
+        "race": "Florida Derby",
+        "race_grade": "G1",
+        "track": "Gulfstream Park",
+        "date": "2026-03-28",
+        "purse_usd": 1000000,
+        "winner": "Commandment",
+        "winner_age": 3,
+        "winner_sire": "Into Mischief",
+        "winner_dam": "Sippican Harbor",
+        "winner_damsire": "Orb",
+        "source_url": "https://www.bloodhorse.com/horse-racing/articles/290881/commandment-takes-florida-derby-thriller-over-the-puma",
+        "note": "Won by a photo finish over The Puma. 100 Derby qualifying points."
+      }
+    ]
+  }
+}

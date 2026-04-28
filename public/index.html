@@ -246,6 +246,45 @@ body {
 }
 .hip-row .hip-signal.strong   { background: #d6ecdb; color: #275731; }
 .hip-row .hip-signal.positive { background: #fef9c3; color: #854d0e; }
+/* ---------- Stakes Activity ---------- */
+.stakes-activity {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 22px;
+}
+.stakes-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
+}
+.stakes-head h2 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 19px; margin: 0; font-weight: 700;
+}
+.stakes-head .sub { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); }
+.stakes-row {
+  display: grid; grid-template-columns: auto 1fr auto auto; gap: 14px;
+  align-items: start; padding: 10px 0; border-bottom: 1px dashed var(--rule);
+  font-size: 13px;
+}
+.stakes-row:last-child { border-bottom: none; }
+.stakes-row .grade-tag {
+  display: inline-block; padding: 2px 7px; border-radius: 3px; font-weight: 700;
+  font-size: 10px; letter-spacing: 0.6px; min-width: 28px; text-align: center;
+  font-family: -apple-system, sans-serif;
+}
+.stakes-row .grade-tag.G1 { background: var(--gold); color: #fff; }
+.stakes-row .grade-tag.G2 { background: #a68336; color: #fff; }
+.stakes-row .grade-tag.G3 { background: #c4a356; color: #fff; }
+.stakes-row .grade-tag.Listed,
+.stakes-row .grade-tag.Black { background: var(--ink-soft); color: #fff; font-size: 9px; }
+.stakes-row .winner-block .winner-name { font-weight: 600; }
+.stakes-row .winner-block .race-meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; line-height: 1.45; }
+.stakes-row .winner-block .race-meta a { color: var(--ink-soft); }
+.stakes-row .winner-block .race-meta a:hover { color: var(--ink); }
+.stakes-row .race-name {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 13px;
+  text-align: right; white-space: nowrap;
+}
+.stakes-row .race-date { font-size: 11px; color: var(--ink-soft); white-space: nowrap; text-align: right; margin-top: 2px; }
 /* ---------- Watchlist ---------- */
 .star-btn {
   display: inline-block; cursor: pointer; user-select: none;
@@ -452,6 +491,17 @@ body {
         <h3>Entered / Left Roster</h3>
         <div id="movers-roster"></div>
       </div>
+    </div>
+  </div>
+
+  <div id="stakes-activity" class="stakes-activity" hidden>
+    <div class="stakes-head">
+      <h2>Recent Stakes Activity</h2>
+      <div class="sub" id="stakes-sub">—</div>
+    </div>
+    <div id="stakes-list"></div>
+    <div style="margin-top:8px;font-size:11px;color:var(--ink-soft);">
+      Click a sire's name to drill into their stallion-card. Each entry cites a primary source.
     </div>
   </div>
 
@@ -1262,6 +1312,58 @@ body {
         }
       }
     } catch (_e) { /* spotlight is optional; don't block page */ }
+
+    // ---------- Stakes Activity panel ----------
+    // Recent progeny stakes wins, sourced from worker/stakes-results.json.
+    // Each row links to the sire's stallion-card (when sire is in our roster).
+    try {
+      const stakesResp = await fetch('/data/stakes-results.json?v=' + Date.now());
+      if (stakesResp.ok) {
+        const stakesDoc = await stakesResp.json();
+        const races = (stakesDoc.races || []).slice(0, 8);
+        if (races.length) {
+          const panel = document.getElementById('stakes-activity');
+          panel.hidden = false;
+          const sireSet = new Set(data.stallions.map(s => s.name));
+          const formatDate = d => {
+            if (!d) return '';
+            const parts = d.split('-');
+            const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const mIdx = parseInt(parts[1], 10) - 1;
+            return (monthNames[mIdx] || '') + ' ' + parseInt(parts[2], 10);
+          };
+          const sourceHost = url => {
+            try { return new URL(url).hostname.replace(/^www\./, ''); } catch (_e) { return 'source'; }
+          };
+          document.getElementById('stakes-list').innerHTML = races.map(r => {
+            const sireLink = sireSet.has(r.winner_sire)
+              ? '<a href="/stallion-card.html?s=' + encodeURIComponent(r.winner_sire) + '">' + r.winner_sire + '</a>'
+              : r.winner_sire;
+            const damPart = r.winner_dam
+              ? ' out of ' + r.winner_dam + (r.winner_damsire ? ' (' + r.winner_damsire + ')' : '')
+              : '';
+            const noteHtml = r.note ? ' · ' + r.note : '';
+            const srcHtml = r.source_url
+              ? ' · <a href="' + r.source_url + '" target="_blank" rel="noopener">' + sourceHost(r.source_url) + ' →</a>'
+              : '';
+            return '<div class="stakes-row">'
+              +   '<div><span class="grade-tag ' + (r.race_grade || 'Listed') + '">' + (r.race_grade || 'Listed') + '</span></div>'
+              +   '<div class="winner-block">'
+              +     '<div class="winner-name">' + r.winner + '</div>'
+              +     '<div class="race-meta">by ' + sireLink + damPart + noteHtml + srcHtml + '</div>'
+              +   '</div>'
+              +   '<div>'
+              +     '<div class="race-name">' + r.race + '</div>'
+              +     '<div class="race-date">' + formatDate(r.date) + ' · ' + (r.track || '') + '</div>'
+              +   '</div>'
+              +   '<div></div>'
+              + '</div>';
+          }).join('');
+          document.getElementById('stakes-sub').textContent =
+            races.length + ' recent · ' + (stakesDoc.summary && stakesDoc.summary.sires_covered || 0) + ' sires';
+        }
+      }
+    } catch (_e) { /* stakes panel is optional; don't block page */ }
   } catch (e) {
     document.getElementById('leaderboard-body').innerHTML =
       '<tr><td colspan="7" style="padding:20px;text-align:center;color:#9b2c2c">Failed to load: ' + e.message + '</td></tr>';
