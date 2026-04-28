@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Pinhook Audit</title>
+<meta property="og:title" content="SireValue — Pinhook Audit"/>
+<meta property="og:description" content="Every flagged pinhook pair across all stallions, with one-click verify links to BloodHorse."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.home-link {
+  display: inline-block; margin-bottom: 16px; font-size: 13px;
+  color: var(--ink-soft); text-decoration: none;
+}
+.home-link:hover { color: var(--ink); }
+
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 22px 26px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 24px; margin: 0 0 8px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 78ch; }
+
+.controls {
+  display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+  margin-bottom: 14px; padding: 12px 16px;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+}
+.controls label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--ink-soft); font-weight: 600; margin-right: 6px;
+}
+.controls select, .controls input {
+  font-family: inherit; font-size: 13px;
+  padding: 6px 10px; border: 1px solid var(--rule); border-radius: 5px;
+  background: var(--cream); color: var(--ink);
+}
+.controls .count {
+  margin-left: auto; font-size: 12px; color: var(--ink-soft);
+}
+
+table {
+  width: 100%; border-collapse: collapse; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 10px; overflow: hidden;
+}
+thead th {
+  text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--ink-soft); font-weight: 700; padding: 10px 12px;
+  background: #f8f4e8; border-bottom: 1px solid var(--rule);
+  cursor: pointer; user-select: none; position: relative;
+}
+thead th:hover { color: var(--ink); }
+thead th .arrow {
+  display: inline-block; margin-left: 4px; font-size: 10px;
+  color: var(--ink-soft); opacity: 0.4;
+}
+thead th.active .arrow { opacity: 1; color: var(--ink); }
+tbody td { padding: 10px 12px; border-bottom: 1px solid var(--rule); font-size: 13px; vertical-align: top; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: #fbf8ed; }
+
+.stallion-link { color: var(--ink); text-decoration: none; font-weight: 600; }
+.stallion-link:hover { text-decoration: underline; }
+.horse-name { font-weight: 600; }
+.meta { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.meta .verify {
+  color: var(--ink-soft); text-decoration: none; margin-left: 2px;
+}
+.meta .verify:hover { color: var(--ink); }
+
+.flag {
+  display: inline-block; padding: 2px 7px; border-radius: 3px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px;
+  font-weight: 700; margin: 2px 4px 2px 0;
+}
+.flag.extreme_loss             { background: #fde7e3; color: #7a1d1d; }
+.flag.extreme_gain             { background: #d6ecdb; color: #275731; }
+.flag.micro_yearling_big_2yo   { background: #fff7ed; color: #c2410c; }
+.flag.multi_yearling_multi_2yo { background: #fff1d6; color: #854d0e; }
+.flag.sub_1k_price             { background: #f3f4f6; color: #4b5563; }
+
+.prices { font-family: "Iowan Old Style", Georgia, serif; white-space: nowrap; }
+.ret    { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; white-space: nowrap; }
+.ret.up   { color: var(--good); }
+.ret.down { color: var(--weak); }
+.ret.flat { color: var(--ok); }
+
+.empty {
+  text-align: center; padding: 40px; color: var(--ink-soft); font-style: italic;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+}
+
+.footer { margin-top: 30px; font-size: 11px; color: var(--ink-soft); text-align: center; }
+.footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Pinhook Audit</div>
+  </div>
+
+  <a href="/" class="home-link">← Home</a>
+
+  <div class="hero">
+    <h1>Pinhook Audit · every flagged pair, one place</h1>
+    <p>Each row is a realized pinhook pair that tripped at least one quality heuristic during data ingestion. Use the verify <span style="font-size:11px;">↗</span> links to confirm against BloodHorse's own sale page.</p>
+    <p style="margin-top:8px;">
+      <strong>Flags:</strong>
+      <span class="flag extreme_loss">extreme loss</span> ≤ -75% return ·
+      <span class="flag extreme_gain">extreme gain</span> ≥ 1500% return ·
+      <span class="flag micro_yearling_big_2yo">micro yearling big 2yo</span> $&lt;5K → $≥100K ·
+      <span class="flag multi_yearling_multi_2yo">multi yearling multi 2yo</span> dam-collision risk ·
+      <span class="flag sub_1k_price">sub 1k price</span> transcription noise.
+    </p>
+  </div>
+
+  <div class="controls">
+    <label for="flag-filter">Flag</label>
+    <select id="flag-filter">
+      <option value="">All flags</option>
+      <option value="extreme_loss">extreme loss</option>
+      <option value="extreme_gain">extreme gain</option>
+      <option value="micro_yearling_big_2yo">micro yearling big 2yo</option>
+      <option value="multi_yearling_multi_2yo">multi yearling multi 2yo</option>
+      <option value="sub_1k_price">sub 1k price</option>
+    </select>
+    <label for="search-filter">Search</label>
+    <input id="search-filter" type="search" placeholder="stallion or horse name…" autocomplete="off"/>
+    <span class="count" id="result-count">—</span>
+  </div>
+
+  <table id="audit-table">
+    <thead>
+      <tr>
+        <th data-sort="stallion"><span>Stallion</span><span class="arrow">▼</span></th>
+        <th data-sort="horse"><span>Horse</span><span class="arrow">▼</span></th>
+        <th data-sort="flags"><span>Flags</span><span class="arrow">▼</span></th>
+        <th data-sort="prices"><span>Yearling → 2YO</span><span class="arrow">▼</span></th>
+        <th data-sort="return" class="active"><span>Return %</span><span class="arrow">▲</span></th>
+      </tr>
+    </thead>
+    <tbody id="audit-body">
+      <tr><td colspan="5" style="padding:30px;text-align:center;color:var(--ink-soft)">Loading…</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span>Source: <code>hip-pinhooks.json</code> · Heuristics: <a href="/methodology.html#realized">methodology → realized pinhook pairs</a></span>
+  </div>
+
+</div>
+
+<script>
+(async function(){
+  // ---- helpers ----
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function shortSale(name) { return (name || '').trim(); }
+  function fmtPct(p) {
+    if (p == null || isNaN(p)) return '—';
+    var sign = p > 0 ? '+' : '';
+    return sign + p.toFixed(1) + '%';
+  }
+  function pctCls(p) {
+    if (p == null) return '';
+    if (p >  0.5) return 'up';
+    if (p < -0.5) return 'down';
+    return 'flat';
+  }
+
+  // ---- load ----
+  let allPairs = [];
+  try {
+    const resp = await fetch('/data/hip-pinhooks.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    const data = await resp.json();
+    Object.keys(data.by_stallion || {}).forEach(function(stallion) {
+      const matches = (data.by_stallion[stallion].matches || []);
+      matches.forEach(function(m) {
+        if (m.quality_flags && m.quality_flags.length) {
+          allPairs.push(Object.assign({}, m, { stallion: stallion }));
+        }
+      });
+    });
+  } catch (e) {
+    document.getElementById('audit-body').innerHTML =
+      '<tr><td colspan="5" style="padding:30px;text-align:center;color:#9b2c2c">Failed to load: ' + escapeHtml(e.message) + '</td></tr>';
+    return;
+  }
+
+  // ---- sort + filter state ----
+  let sortState = { col: 'return', dir: 'asc' };  // most-extreme losses first
+  let flagFilter = '';
+  let searchFilter = '';
+
+  function sortKey(p, col) {
+    switch (col) {
+      case 'stallion': return (p.stallion || '').toLowerCase();
+      case 'horse':    return (p.horse_name || '').toLowerCase();
+      case 'flags':    return (p.quality_flags || []).join(',');
+      case 'prices':   return p.yearling_price != null ? p.yearling_price : -1;
+      case 'return':   return p.return_pct != null ? p.return_pct : 0;
+      default:         return 0;
+    }
+  }
+
+  function applySort(arr) {
+    return arr.slice().sort(function(a, b) {
+      var ka = sortKey(a, sortState.col), kb = sortKey(b, sortState.col);
+      var cmp = (typeof ka === 'number' && typeof kb === 'number')
+        ? ka - kb
+        : String(ka).localeCompare(String(kb));
+      return sortState.dir === 'asc' ? cmp : -cmp;
+    });
+  }
+
+  function applyFilter(arr) {
+    var q = (searchFilter || '').toLowerCase().trim();
+    return arr.filter(function(p) {
+      if (flagFilter && (p.quality_flags || []).indexOf(flagFilter) < 0) return false;
+      if (q) {
+        var hay = ((p.stallion || '') + ' ' + (p.horse_name || '') + ' ' + (p.dam || '')).toLowerCase();
+        if (hay.indexOf(q) < 0) return false;
+      }
+      return true;
+    });
+  }
+
+  function rowHtml(p) {
+    var verifyLink = function(url) { return url
+      ? ' <a class="verify" href="' + escapeHtml(url) + '" target="_blank" rel="noopener" title="Verify on BloodHorse">↗</a>'
+      : ''; };
+    var stallionUrl = '/stallion-card.html?s=' + encodeURIComponent(p.stallion);
+    var prices = '$' + p.yearling_price.toLocaleString() + ' → $' + p.twoyo_price.toLocaleString();
+    var rcls = pctCls(p.return_pct);
+    var flagsHtml = (p.quality_flags || []).map(function(f) {
+      return '<span class="flag ' + f + '">' + f.replace(/_/g, ' ') + '</span>';
+    }).join('');
+    var meta = ''
+      + '<div class="meta">'
+      +   'out of ' + escapeHtml(p.dam || '—') + ' · ' + escapeHtml(p.cohort || '') + '<br/>'
+      +   escapeHtml(shortSale(p.yearling_sale))
+      +   (p.yearling_hip ? ' Hip ' + escapeHtml(String(p.yearling_hip)) : '')
+      +   verifyLink(p.yearling_sale_url)
+      +   ' → '
+      +   escapeHtml(shortSale(p.twoyo_sale))
+      +   (p.twoyo_hip ? ' Hip ' + escapeHtml(String(p.twoyo_hip)) : '')
+      +   verifyLink(p.twoyo_sale_url)
+      + '</div>';
+    return ''
+      + '<tr>'
+      +   '<td><a class="stallion-link" href="' + stallionUrl + '">' + escapeHtml(p.stallion) + '</a></td>'
+      +   '<td>'
+      +     '<div class="horse-name">' + escapeHtml(p.horse_name || '(unnamed)') + '</div>'
+      +     meta
+      +   '</td>'
+      +   '<td>' + flagsHtml + '</td>'
+      +   '<td class="prices">' + prices + '</td>'
+      +   '<td class="ret ' + rcls + '">' + fmtPct(p.return_pct) + '</td>'
+      + '</tr>';
+  }
+
+  function updateSortIndicators() {
+    document.querySelectorAll('thead th[data-sort]').forEach(function(th) {
+      var col = th.dataset.sort;
+      var isActive = col === sortState.col;
+      th.classList.toggle('active', isActive);
+      var arrow = th.querySelector('.arrow');
+      if (arrow) arrow.textContent = isActive ? (sortState.dir === 'asc' ? '▲' : '▼') : '▼';
+    });
+  }
+
+  function render() {
+    var filtered = applyFilter(allPairs);
+    var sorted = applySort(filtered);
+    var body = document.getElementById('audit-body');
+    if (!sorted.length) {
+      body.innerHTML = '<tr><td colspan="5" style="padding:30px;text-align:center;color:var(--ink-soft)">No flagged pairs match the current filter.</td></tr>';
+    } else {
+      body.innerHTML = sorted.map(rowHtml).join('');
+    }
+    document.getElementById('result-count').textContent =
+      sorted.length + ' of ' + allPairs.length + ' flagged pair' + (allPairs.length === 1 ? '' : 's');
+    updateSortIndicators();
+  }
+
+  // ---- wire up controls ----
+  document.querySelectorAll('thead th[data-sort]').forEach(function(th) {
+    th.addEventListener('click', function() {
+      var col = th.dataset.sort;
+      if (sortState.col === col) {
+        sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortState.col = col;
+        sortState.dir = (col === 'stallion' || col === 'horse' || col === 'flags') ? 'asc' : 'desc';
+      }
+      render();
+    });
+  });
+  document.getElementById('flag-filter').addEventListener('change', function(e) {
+    flagFilter = e.target.value;
+    render();
+  });
+  document.getElementById('search-filter').addEventListener('input', function(e) {
+    searchFilter = e.target.value;
+    render();
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

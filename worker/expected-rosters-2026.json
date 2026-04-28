@@ -361,7 +361,8 @@
         "https://www.calumetfarm.com/stallions/"
       ],
       "known_changes_2026": [
-        "No specific 2026 fee announcement found via web search (BH/TDN/Paulick coverage of Calumet 2026 appears not to have been syndicated). Farm's own stallions page (calumetfarm.com/stallions) was egress-blocked from this workspace. Expected_names left empty pending a verified primary source. Audit will skip this farm cleanly."
+        "No specific 2026 fee announcement found via web search (BH/TDN/Paulick coverage of Calumet 2026 appears not to have been syndicated). Farm's own stallions page (calumetfarm.com/stallions) was egress-blocked from this workspace. Expected_names left empty pending a verified primary source. Audit will skip this farm cleanly.",
+        "Producer (Gb): REMOVED — not a US stud (UK-pedigreed; was missing from BH US stallion register, which is the smoking gun)."
       ],
       "expected_names": []
     }

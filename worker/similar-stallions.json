@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T18:57:48Z",
+  "generated_at": "2026-04-28T03:09:27Z",
   "method": "deterministic-shared-ancestors",
   "weights": {
     "same_sire": 50,
@@ -9,8 +9,8 @@
   },
   "top_k_per_stallion": 5,
   "summary": {
-    "stallions_with_matches": 141,
-    "stallions_total": 153
+    "stallions_with_matches": 140,
+    "stallions_total": 152
   },
   "by_stallion": {
     "Corniche": [
@@ -5489,17 +5489,6 @@
         ]
       },
       {
-        "name": "Producer (Gb)",
-        "farm": "Calumet Farm",
-        "score": 30,
-        "fee_usd": 7500,
-        "value_score": 32.5,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Mr. Prospector"
-        ]
-      },
-      {
         "name": "Mystic Guide",
         "farm": "Darley America (Godolphin)",
         "score": 20,
@@ -5775,19 +5764,6 @@
         "value_grade": "C",
         "reasons": [
           "Half-brothers — share sire Uncle Mo"
-        ]
-      }
-    ],
-    "Producer (Gb)": [
-      {
-        "name": "Mineshaft",
-        "farm": "Lane's End",
-        "score": 30,
-        "fee_usd": null,
-        "value_score": 33.5,
-        "value_grade": "D",
-        "reasons": [
-          "Share damsire Mr. Prospector"
         ]
       }
     ],
