@@ -18980,7 +18980,9 @@
           "twoyo_sale": "Fasig Tipton Midlantic 2yos In Training Sale 2024",
           "yearling_hip": 245,
           "twoyo_hip": 575,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         }
       ]
     },
@@ -32521,7 +32523,9 @@
           "twoyo_sale": "Fasig Tipton Midlantic 2yos In Training Sale 2024",
           "yearling_hip": 4078,
           "twoyo_hip": 151,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         }
       ]
     },

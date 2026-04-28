@@ -10110,7 +10110,9 @@
           "twoyo_sale": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2025",
           "yearling_hip": 191,
           "twoyo_hip": 1134,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         }
       ]
     },

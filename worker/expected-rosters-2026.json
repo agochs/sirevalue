@@ -354,6 +354,91 @@
         "Upstart"
       ]
     },
+    "millridge": {
+      "name": "Mill Ridge Farm",
+      "csv": "millridge-roster.csv",
+      "announcement_urls": [
+        "https://www.bloodhorse.com/horse-racing/articles/287977/oscar-performance-leads-mill-ridge-roster-at-60-000",
+        "https://www.thoroughbreddailynews.com/oscar-performance-fee-raised-to-60k-for-26-mill-ridge-also-releases-fees-for-gisws-casa-creed-aloha-west/",
+        "https://www.millridge.com/stallions"
+      ],
+      "known_changes_2026": [
+        "Oscar Performance: $60K, top of roster (raised from $45K in 2025) — limited book of 170 mares",
+        "Casa Creed: $8.5K (down from $10K in 2025) — 4 G1 wins as racehorse",
+        "Aloha West: $6.5K (down from $8.5K in 2025) — first runners in 2026"
+      ],
+      "expected_names": [
+        "Oscar Performance",
+        "Casa Creed",
+        "Aloha West"
+      ]
+    },
+    "pinoak": {
+      "name": "Pin Oak Stud",
+      "csv": "pinoak-roster.csv",
+      "announcement_urls": [
+        "https://pinoakstud.com/",
+        "https://www.bloodhorse.com/stallion-register/stallions/126293/broken-vow"
+      ],
+      "known_changes_2026": [
+        "Broken Vow: private fee for 2026 — veteran stallion (foaled 1997, by Unbridled)",
+        "Alternation: private fee for 2026 — by Distorted Humor"
+      ],
+      "expected_names": [
+        "Broken Vow",
+        "Alternation"
+      ]
+    },
+    "crestwood": {
+      "name": "Crestwood Farm",
+      "csv": "crestwood-roster.csv",
+      "announcement_urls": [
+        "https://www.crestwoodfarm.com/stallions/",
+        "https://www.bloodhorse.com/horse-racing/articles/288074/il-miracolo-to-stand-at-crestwood-farm-in-2026",
+        "https://www.thoroughbreddailynews.com/gun-runners-il-miracolo-to-stand-at-crestwood-in-2026/"
+      ],
+      "known_changes_2026": [
+        "Il Miracolo: NEW 2026 freshman ($7.5K) — by Gun Runner out of Tapit's World, $1.1M earnings",
+        "Sir Winston: $5K — first 2YO crop runs in 2026, by Awesome Again",
+        "Heart To Heart: returning at fee TBD",
+        "Note: BH register lists 7 stallions for Crestwood — partial coverage; expand expected_names as additional 2026 verifications come in"
+      ],
+      "expected_names": [
+        "Sir Winston",
+        "Il Miracolo",
+        "Heart To Heart"
+      ]
+    },
+    "darbydan": {
+      "name": "Darby Dan Farm",
+      "csv": "darbydan-roster.csv",
+      "announcement_urls": [
+        "https://www.darbydan.com/darby-dan-farm-announces-2026-stallion-roster-and-fees/",
+        "https://www.bloodhorse.com/horse-racing/articles/288141/darby-dan-farm-sets-fees-for-roster-of-11-stallions",
+        "https://paulickreport.com/news/bloodstock/darby-dan-farm-announces-2026-stallion-roster-and-fees",
+        "https://www.thoroughbreddailynews.com/darby-dan-trio-to-stand-for-10k-in-2026/"
+      ],
+      "known_changes_2026": [
+        "Blazing Sevens: NEW 2026 freshman ($10K) — first crop foals arrive 2026, by Good Magic",
+        "Flameaway: $10K — leading cumulative third-crop sire by Scat Daddy",
+        "Dialed In: $10K — established sire (76 black-type horses, $57M progeny earnings)",
+        "Tale of Verve: removed (was $2K in 2023; not on 2026 roster)",
+        "Roster of 11 stallions led by Blazing Sevens, Flameaway, Dialed In all at $10K"
+      ],
+      "expected_names": [
+        "Bee Jersey",
+        "Blazing Sevens",
+        "Country House",
+        "Dialed In",
+        "Flameaway",
+        "Gufo",
+        "Modernist",
+        "Shirl's Speight",
+        "Tale Of Ekati",
+        "Tale Of Silence",
+        "Title Ready"
+      ]
+    },
     "calumet": {
       "name": "Calumet Farm",
       "csv": "calumet-dryrun.csv",

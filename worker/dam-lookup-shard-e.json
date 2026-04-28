@@ -4000,7 +4000,9 @@
           "twoyo_sale": "Fasig Tipton Midlantic 2yos In Training Sale 2023",
           "yearling_hip": 234,
           "twoyo_hip": 156,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         },
         {
           "stallion": "Tapit",
@@ -10866,7 +10868,9 @@
           "twoyo_sale": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2025",
           "yearling_hip": 2832,
           "twoyo_hip": 290,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         }
       ]
     },
@@ -12692,7 +12696,9 @@
           "twoyo_sale": "Fasig Tipton Midlantic 2yos In Training Sale 2025",
           "yearling_hip": 1992,
           "twoyo_hip": 95,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         }
       ]
     },
@@ -15478,7 +15484,9 @@
           "twoyo_sale": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
           "yearling_hip": 234,
           "twoyo_hip": 748,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         }
       ]
     },

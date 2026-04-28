@@ -5,22 +5,29 @@
       "csv":          "millridge-roster.csv",
       "name":         "Mill Ridge Farm",
       "url_template": "https://www.millridge.com/stallions/{slug}/",
-      "enabled":      false,
-      "_notes":       "Lexington, KY. Roster includes Oxbow, Mineshaft (pensioned)."
+      "enabled":      true,
+      "_notes":       "Lexington, KY. 2026 roster: Oscar Performance ($60K), Casa Creed ($8.5K), Aloha West ($6.5K)."
     },
     {
       "csv":          "pinoak-roster.csv",
       "name":         "Pin Oak Stud",
       "url_template": "https://www.pinoakstud.com/stallions/{slug}",
-      "enabled":      false,
-      "_notes":       "Versailles, KY. Notable: Alternation, Broken Vow."
+      "enabled":      true,
+      "_notes":       "Versailles, KY. 2026 stallions Alternation, Broken Vow (private fees)."
     },
     {
       "csv":          "crestwood-roster.csv",
       "name":         "Crestwood Farm",
-      "url_template": "https://www.crestwoodfarm.com/stallions/{slug}/",
-      "enabled":      false,
-      "_notes":       "Lexington, KY. Notable: Bourbon Courage, Tu Brutus."
+      "url_template": "https://www.crestwoodfarm.com/stallion/{slug}/",
+      "enabled":      true,
+      "_notes":       "Lexington, KY. 2026 includes Sir Winston ($5K), Il Miracolo (NEW $7.5K, son of Gun Runner), Heart To Heart."
+    },
+    {
+      "csv":          "darbydan-roster.csv",
+      "name":         "Darby Dan Farm",
+      "url_template": "https://www.darbydan.com/horse/{slug}/",
+      "enabled":      true,
+      "_notes":       "Lexington, KY. Full 2026 roster of 11 stallions led by Blazing Sevens (NEW), Flameaway, Dialed In all at $10K."
     },
     {
       "csv":          "sequel-roster.csv",

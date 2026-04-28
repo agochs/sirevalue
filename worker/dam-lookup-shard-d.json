@@ -7277,7 +7277,9 @@
           "twoyo_sale": "Ocala Breeders Sales Co June 2yos Horses Of Racing Age Sale 2023",
           "yearling_hip": 801,
           "twoyo_hip": 842,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         }
       ]
     },
@@ -17008,7 +17010,9 @@
           "twoyo_sale": "Ocala Breeders Sales Co March Sale Of 2yos In Training 2026",
           "yearling_hip": 258,
           "twoyo_hip": 708,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         }
       ]
     },

@@ -1,4 +1,6 @@
 farm,name,year_of_birth,color,height_hands,sire,dam,damsire,fee_usd,fee_terms,fee_qualifier,entered_stud_year,nominations,source_url,bloodhorse_url
+Mill Ridge Farm,Aloha West,,,,Hard Spun,Island Bound,Speightstown,6500,LFSN,,,,https://www.millridge.com/stallions/aloha-west/,
+Pin Oak Stud,Alternation,,,,Distorted Humor,Alternate,Seattle Slew,,,Private,,,https://www.pinoakstud.com/stallions/alternation,
 Ashford Stud (Coolmore America),American Pharoah,2012,Bay,,Pioneerof the Nile,Littleprincessemma,Yankee Gentleman,45000,,Shuttle - 2026 in Japan; US foals only,2016,,https://coolmore.com/en/america/stallion/american-pharoah/,https://www.bloodhorse.com/stallion-register/stallions/168986/american-pharoah
 Taylor Made Stallions,Angel of Empire,2020,Bay,,Classic Empire,Armony's Angel,To Honor and Serve,5000,S&N,,2025,,https://taylormadestallions.com/horse/angel-of-empire/,https://www.bloodhorse.com/stallion-register/stallions/172967/angel-of-empire
 Claiborne Farm,Annapolis,2019,Bay,,War Front,Noble Maz,Lost Soldier,12500,LFSN,,2024,,https://claibornefarm.com/stallions/annapolis/,https://www.bloodhorse.com/stallion-register/stallions/172786/annapolis
@@ -12,14 +14,18 @@ Spendthrift Farm,Authentic,2017,Bay,16.2h,Into Mischief,Flawless,Mr. Greeley,150
 Hill 'n' Dale Farms at Xalapa,Barnes,2022,Bay,,Into Mischief,All American Dream,American Pharoah,15000,LFSN,,2026,,https://www.hillndalefarms.com/barnes,https://www.bloodhorse.com/stallion-register/stallions/173400/barnes
 Spendthrift Farm,Basin,2017,Bay,16 h,Liam's Map,Appenzell,Johannesburg,5000,S&N,,2022,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/basin/,https://www.bloodhorse.com/stallion-register/stallions/171996/basin
 Airdrie Stud,Beau Liam,2018,Bay,16.1 1/2,Liam's Map,Beauty Bright,Harlan's Holiday,7500,,,2022,,https://www.airdriestud.com/horse/beau-liam/,https://www.bloodhorse.com/stallion-register/stallions/172151/beau-liam
+Darby Dan Farm,Bee Jersey,,,,Jersey Town,,,5000,S&N,,,,https://www.darbydan.com/horse/bee-jersey/,
 Claiborne Farm,Blame,2006,Bay,,Arch,Liable,Seeking the Gold,25000,LFSN,,2011,,https://claibornefarm.com/stallions/blame/,https://www.bloodhorse.com/stallion-register/stallions/125939/blame
+Darby Dan Farm,Blazing Sevens,,,,Good Magic,,,10000,S&N,,,,https://www.darbydan.com/horse/blazing-sevens/,
 Spendthrift Farm,Bolt D’oro,2015,Bay,16.2h,Medaglia d'Oro,Globe Trot,A.P. Indy,25000,S&N,,2019,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/bolt-doro/,https://www.bloodhorse.com/stallion-register/stallions/170565/bolt-doro
 Calumet Farm,Bravazo,2015,Dark Bay/Brown,,Awesome Again,Tiz O'Gold,Cee's Tizzy,5000,,,2021,,https://calumetfarm.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/171687/bravazo
 Claiborne Farm,Bright Future,2019,Chestnut,,Curlin,First Cat,Storm Cat,5000,LFSN,,2025,,https://claibornefarm.com/stallions/bright-future/,https://www.bloodhorse.com/stallion-register/stallions/172956/bright-future
+Pin Oak Stud,Broken Vow,,,,Unbridled,Wedding Vow,Nijinsky II,,,Private,,,https://www.pinoakstud.com/stallions/broken-vow,
 Spendthrift Farm,By My Standards,2016,Bay,16.1 1/2h,Goldencents,A Jealous Woman,Muqtarib,5000,S&N,,2022,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/by-my-standards/,https://www.bloodhorse.com/stallion-register/stallions/171658/by-my-standards
 Airdrie Stud,Cairo Prince,2011,Gray/Roan,16.1 1/2,Pioneerof the Nile,Holy Bubbette,Holy Bull,10000,,,2015,,https://www.airdriestud.com/horse/cairo-prince/,https://www.bloodhorse.com/stallion-register/stallions/167653/cairo-prince
 Lane's End,Candy Ride (Arg),1999,Bay,,Ride The Rails,Candy Girl (Arg),Candy Stripes,60000,LFSN,,2005,,https://lanesend.com/candyride,https://www.bloodhorse.com/stallion-register/stallions/119326/candy-ride-arg
 Lane's End,Carl Spackler (Ire),2020,Chestnut,,Lope De Vega (Ire),Zindaya,More Than Ready,15000,LFSN,,2026,,https://lanesend.com/carlspackler,https://www.bloodhorse.com/stallion-register/stallions/173344/carl-spackler-ire
+Mill Ridge Farm,Casa Creed,,,,Jimmy Creed,Achalaya,Bernardini,8500,LFSN,,,,https://www.millridge.com/stallions/casa-creed/,
 Spendthrift Farm,Chancer Mcpatrick,2022,Bay,,McKinzie,Bernadreamy,Bernardini,25000,S&N,,2026,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/chancer-mcpatrick/,https://www.bloodhorse.com/stallion-register/stallions/173276/chancer-mcpatrick
 Calumet Farm,Channel Cat,2015,Chestnut,,English Channel,In Return,Charismatic,7500,,,2023,,https://calumetfarm.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/172105/channel-cat
 Gainesway Farm,Charge It,2019,Gray/Roan,,Tapit,I'll Take Charge,Indian Charlie,12500,LFSN,,2025,,https://gainesway.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/172938/charge-it
@@ -33,8 +39,10 @@ Lane's End,Connect,2013,Dark Bay/Brown,,Curlin,Bullville Belle,Holy Bull,10000,L
 WinStar Farm,Constitution,2011,Bay,,Tapit,Baffled,Distorted Humor,110000,S&N,,2016,,https://www.winstarfarm.com/horse/constitution/,https://www.bloodhorse.com/stallion-register/stallions/169027/constitution
 Ashford Stud (Coolmore America),Corniche,2019,Bay,,Quality Road,Wasted Tears,Najran,15000,,,2023,,https://coolmore.com/en/america/stallion/corniche/,https://www.bloodhorse.com/stallion-register/stallions/172295/corniche
 WinStar Farm,Country Grammer,2017,Bay,,Tonalist,Arabian Song,Forestry,5000,S&N,,2024,,https://www.winstarfarm.com/horse/country-grammer/,https://www.bloodhorse.com/stallion-register/stallions/172527/country-grammer
+Darby Dan Farm,Country House,,,,Lookin At Lucky,Quake Lake,War Front,5000,S&N,,,,https://www.darbydan.com/horse/country-house/,
 Hill 'n' Dale Farms at Xalapa,Curlin,2004,Chestnut,,Smart Strike,Sherriff's Deputy,Deputy Minister,225000,LFSN,,2009,,https://www.hillndalefarms.com/curlin,https://www.bloodhorse.com/stallion-register/stallions/127542/curlin
 Spendthrift Farm,Cyberknife,2019,Chestnut,16.1 1/2h,Gun Runner,Awesome Flower,Flower Alley,15000,S&N,,2023,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/cyberknife/,https://www.bloodhorse.com/stallion-register/stallions/172285/cyberknife
+Darby Dan Farm,Dialed In,,,,Mineshaft,Miss Doolittle,Storm Cat,10000,S&N,,,,https://www.darbydan.com/horse/dialed-in/,
 Airdrie Stud,Divisidero,2012,Bay,15.3 1/2,Kitten's Joy,Madame Du Lac,Gilded Time,3500,,,2020,,https://www.airdriestud.com/horse/divisidero/,https://www.bloodhorse.com/stallion-register/stallions/170998/divisidero
 Ashford Stud (Coolmore America),Domestic Product,2021,Dark Bay/Brown,,Practical Joke,Resistance Free,Congrats,25000,,,2025,,https://coolmore.com/en/america/stallion/domestic-product/,https://www.bloodhorse.com/stallion-register/stallions/172959/domestic-product
 Spendthrift Farm,Dornoch,2021,Bay,16.3h,Good Magic,Puca,Big Brown,30000,S&N,,2025,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/dornoch/,https://www.bloodhorse.com/stallion-register/stallions/172930/dornoch
@@ -45,6 +53,7 @@ Ashford Stud (Coolmore America),Epicenter,2019,Bay,,Not This Time,Silent Candy,C
 Darley America (Godolphin),Essential Quality,2018,Gray/Roan,,Tapit,Delightful Quality,Elusive Quality,25000,,,2022,,https://www.darleyamerica.com/stallions/our-stallions/essential-quality,https://www.bloodhorse.com/stallion-register/stallions/172053/essential-quality
 Ashford Stud (Coolmore America),Fierceness,2021,Bay,,City of Light,Nonna Bella,Stay Thirsty,50000,,,2026,,https://coolmore.com/en/america/stallion/fierceness/,https://www.bloodhorse.com/stallion-register/stallions/173317/fierceness
 Darley America (Godolphin),First Mission,2020,Dark Bay/Brown,,Into Mischief,Tulira Castle,Street Cry (Ire),10000,,,2026,,https://www.darleyamerica.com/stallions/our-stallions/first-mission,https://www.bloodhorse.com/stallion-register/stallions/173307/first-mission
+Darby Dan Farm,Flameaway,,,,Scat Daddy,Vulcan Rose,Vindication,10000,S&N,,,,https://www.darbydan.com/horse/flameaway/,
 Lane's End,Flightline,2018,Bay,,Tapit,Feathered,Indian Charlie,125000,LFSN,,2023,,https://lanesend.com/flightline,https://www.bloodhorse.com/stallion-register/stallions/172371/flightline
 Spendthrift Farm,Forte,2020,Dark Bay/Brown,16.1 1/2h,Violence,Queen Caroline,Blame,35000,S&N,,2024,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/forte/,https://www.bloodhorse.com/stallion-register/stallions/172561/forte
 Three Chimneys Farm,Funtastic,2014,Gray/Roan,16.1,More Than Ready,Quiet Dance,Quiet American,2500,,,2019,,https://www.threechimneys.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/170600/funtastic
@@ -54,17 +63,20 @@ Ashford Stud (Coolmore America),Golden Pal,2018,Bay,,Uncle Mo,Lady Shipman,Midsh
 Spendthrift Farm,Goldencents,2010,Bay,16½h,Into Mischief,Golden Works,Banker's Gold,10000,S&N,,2015,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/goldencents/,https://www.bloodhorse.com/stallion-register/stallions/168423/goldencents
 Hill 'n' Dale Farms at Xalapa,Good Magic,2015,Chestnut,,Curlin,Glinda the Good,Hard Spun,125000,LFSN,,2019,,https://www.hillndalefarms.com/good-magic,https://www.bloodhorse.com/stallion-register/stallions/170552/good-magic
 Spendthrift Farm,Greatest Honour,2018,Bay,16.3h,Tapit,Tiffany's Honour,Street Cry (Ire),7500,S&N,,2023,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/greatest-honour/,https://www.bloodhorse.com/stallion-register/stallions/172334/greatest-honour
+Darby Dan Farm,Gufo,,,,Declaration Of War,,,5000,S&N,,,,https://www.darbydan.com/horse/gufo/,
 Three Chimneys Farm,Gun Pilot,2020,Bay,16.2,Gun Runner,Bush Pilot,Smart Strike,12500,,,2025,,https://www.threechimneys.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/172969/gun-pilot
 Three Chimneys Farm,Gun Runner,2013,Chestnut,,Candy Ride (Arg),Quiet Giant,Giant's Causeway,250000,,,2018,,https://www.threechimneys.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/170088/gun-runner
 Ashford Stud (Coolmore America),Gunite,2019,Dark Bay/Brown,,Gun Runner,Simple Surprise,Harlan's Holiday,25000,,,2024,,https://coolmore.com/en/america/stallion/gunite/,https://www.bloodhorse.com/stallion-register/stallions/172583/gunite
 Airdrie Stud,Happy Saver,2017,Chestnut,,Super Saver,Happy Week,Distorted Humor,7500,,,2023,,https://www.airdriestud.com/horse/happy-saver/,https://www.bloodhorse.com/stallion-register/stallions/172354/happy-saver
 Darley America (Godolphin),Hard Spun,2004,Bay,,Danzig,Turkish Tryst,Turkoman,20000,,,2008,,https://www.darleyamerica.com/stallions/our-stallions/hard-spun,https://www.bloodhorse.com/stallion-register/stallions/130025/hard-spun
+Crestwood Farm,Heart To Heart,,,,English Channel,Ask The Question,Silver Deputy,,,,,,https://www.crestwoodfarm.com/stallion/heart-to-heart/,
 WinStar Farm,Heartland,2021,Chestnut,,Justify,Sambuca Classica,Cat Thief,10000,S&N,,2025,,https://www.winstarfarm.com/horse/heartland/,https://www.bloodhorse.com/stallion-register/stallions/172929/heartland
 Darley America (Godolphin),Highland Falls,2020,Chestnut,,Curlin,Forty Greeneyes,Forty Niner,10000,,,2026,,https://www.darleyamerica.com/stallions/our-stallions/highland-falls,https://www.bloodhorse.com/stallion-register/stallions/173304/highland-falls
 Airdrie Stud,Highly Motivated,2018,Bay,16.2,Into Mischief,Strong Incentive,Warrior's Reward,7500,,,2023,,https://www.airdriestud.com/horse/highly-motivated/,https://www.bloodhorse.com/stallion-register/stallions/172387/highly-motivated
 Calumet Farm,Hightail,2010,Dark Bay/Brown,16.0,Mineshaft,La Paz,Hold That Tiger,7500,,,2013,,https://calumetfarm.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/166893/hightail
 Lane's End,Honor A. P.,2017,Dark Bay/Brown,,Honor Code,Hollywood Story,Wild Rush,7500,LFSN,,2021,,https://lanesend.com/honorap,https://www.bloodhorse.com/stallion-register/stallions/171589/honor-a-p
 Taylor Made Stallions,Idol,2017,Bay,,Curlin,Igloo,Mshawish,5000,S&N,,2023,,https://taylormadestallions.com/horse/idol/,https://www.bloodhorse.com/stallion-register/stallions/172343/idol
+Crestwood Farm,Il Miracolo,,,,Gun Runner,Tapit's World,Tapit,7500,LFSN,,,,https://www.crestwoodfarm.com/stallion/il-miracolo/,
 WinStar Farm,Independence Hall,2017,Dark Bay/Brown,,Constitution,Kalahari Cat,Cape Town,10000,S&N,,2022,,https://www.winstarfarm.com/horse/independence-hall/,https://www.bloodhorse.com/stallion-register/stallions/172067/independence-hall
 Taylor Made Stallions,Instagrand,2016,Bay,,Into Mischief,Tiz So Fast,Tiznow,8000,S&N,,2021,,https://taylormadestallions.com/horse/instagrand/,https://www.bloodhorse.com/stallion-register/stallions/171604/instagrand
 Taylor Made Stallions,Instilled Regard,2015,Dark Bay/Brown,,Arch,Enhancing,Forestry,5000,S&N,,2021,,https://taylormadestallions.com/horse/instilled-regard/,https://www.bloodhorse.com/stallion-register/stallions/171787/instilled-regard
@@ -96,6 +108,7 @@ Lane's End,Mineshaft,1999,Dark Bay/Brown,,A.P. Indy,Prospectors Delite,Mr. Prosp
 Spendthrift Farm,Mitole,2015,Bay,16½h,Eskendereya,Indian Miss,Indian Charlie,10000,S&N,,2020,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/mitole/,https://www.bloodhorse.com/stallion-register/stallions/170944/mitole
 Spendthrift Farm,Mo Donegal,2019,Bay,16.2h,Uncle Mo,Callingmissbrown,Pulpit,5000,S&N,,2023,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/mo-donegal/,https://www.bloodhorse.com/stallion-register/stallions/172301/mo-donegal
 Ashford Stud (Coolmore America),Mo Town,2014,Bay,,Uncle Mo,Grazie Mille,Bernardini,7500,,,2019,,https://coolmore.com/en/america/stallion/mo-town/,https://www.bloodhorse.com/stallion-register/stallions/170547/mo-town
+Darby Dan Farm,Modernist,,,,Uncle Mo,Symbolic Gesture,Empire Maker,5000,S&N,,,,https://www.darbydan.com/horse/modernist/,
 Lane's End,More Than Looks,2020,Dark Bay/Brown,,More Than Ready,Ladies' Privilege,Harlan's Holiday,10000,LFSN,,2025,,https://lanesend.com/morethanlooks,https://www.bloodhorse.com/stallion-register/stallions/173039/more-than-looks
 WinStar Farm,Mullikin,2020,Dark Bay/Brown,,Violence,Tulira's Star,Congrats,10000,S&N,,2026,,https://www.winstarfarm.com/horse/mullikin/,https://www.bloodhorse.com/stallion-register/stallions/173313/mullikin
 Ashford Stud (Coolmore America),Munnings,2006,Chestnut,,Speightstown,La Comete,Holy Bull,45000,,,2011,,https://coolmore.com/en/america/stallion/munnings/,https://www.bloodhorse.com/stallion-register/stallions/132513/munnings
@@ -109,11 +122,11 @@ Taylor Made Stallions,Not This Time,2014,Dark Bay/Brown,,Giant's Causeway,Miss M
 Darley America (Godolphin),Nyquist,2013,Bay,,Uncle Mo,Seeking Gabrielle,Forestry,175000,,,2017,,https://www.darleyamerica.com/stallions/our-stallions/nyquist,https://www.bloodhorse.com/stallion-register/stallions/169543/nyquist
 Gainesway Farm,Olympiad,2018,Bay,,Speightstown,Tokyo Time,Medaglia d'Oro,20000,LFSN,,2023,,https://gainesway.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/172362/olympiad
 Spendthrift Farm,Omaha Beach,2016,Dark Bay/Brown,16.1¾h,War Front,Charming,Seeking the Gold,75000,S&N,,2020,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/omaha-beach/,https://www.bloodhorse.com/stallion-register/stallions/170946/omaha-beach
+Mill Ridge Farm,Oscar Performance,,,,Kitten's Joy,Devine Actress,Theatrical (Ire),60000,LFSN,,,,https://www.millridge.com/stallions/oscar-performance/,
 Calumet Farm,Oxbow,2010,Bay,,Awesome Again,Tizamazing,Cee's Tizzy,7500,,,2014,,https://calumetfarm.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/166890/oxbow
 WinStar Farm,Patch Adams,2022,Bay,,Into Mischief,Well Humored,Distorted Humor,30000,S&N,,2026,,https://www.winstarfarm.com/horse/patch-adams/,https://www.bloodhorse.com/stallion-register/stallions/173284/patch-adams
 Ashford Stud (Coolmore America),Practical Joke,2014,Bay,,Into Mischief,Halo Humor,Distorted Humor,75000,,,2018,,https://coolmore.com/en/america/stallion/practical-joke/,https://www.bloodhorse.com/stallion-register/stallions/169990/practical-joke
 Claiborne Farm,Prince of Monaco,2021,Dark Bay/Brown,,Speightstown,Surefire,War Front,30000,LFSN,,2025,,https://claibornefarm.com/stallions/prince-of-monaco/,https://www.bloodhorse.com/stallion-register/stallions/172971/prince-of-monaco
-Calumet Farm,Producer (Gb),,,,Sadler's Wells,Prospectors Delite,Mr. Prospector,7500,,,,,https://calumetfarm.com/stallions/,
 WinStar Farm,Promises Fulfilled,2015,Chestnut,,Shackleford,Marquee Delivery,Marquetry,2500,S&N,,2021,,https://www.winstarfarm.com/horse/promises-fulfilled/,https://www.bloodhorse.com/stallion-register/stallions/171627/promises-fulfilled
 Darley America (Godolphin),Proxy,2018,Bay,,Tapit,Panty Raid,Include,12500,,,2024,,https://www.darleyamerica.com/stallions/our-stallions/proxy,https://www.bloodhorse.com/stallion-register/stallions/172553/proxy
 Lane's End,Quality Road,2006,Bay,,Elusive Quality,Kobla,Strawberry Road (Aus),100000,LFSN,,2011,,https://lanesend.com/qualityroad,https://www.bloodhorse.com/stallion-register/stallions/133834/quality-road
@@ -124,20 +137,25 @@ Calumet Farm,Real Solution,2009,Bay,16,Kitten's Joy,Reachfortheheavens,Pulpit,75
 Spendthrift Farm,Rock Your World,2018,Dark Bay/Brown,16.2h,Candy Ride (Arg),Charm The Maker,Empire Maker,7500,S&N,,2022,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/rock-your-world/,https://www.bloodhorse.com/stallion-register/stallions/172119/rock-your-world
 Gainesway Farm,Seize The Grey,2021,Gray/Roan,,Arrogate,Smart Shopping,Smart Strike,25000,LFSN,,2025,,https://gainesway.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/173000/seize-the-grey
 Lane's End,Senor Buscador,2018,Bay,,Mineshaft,Rose's Desert,Desert God,7500,LFSN,,2025,,https://lanesend.com/senorbuscador,https://www.bloodhorse.com/stallion-register/stallions/173088/senor-buscador
+Darby Dan Farm,Shirl's Speight,,,,Speightstown,,,5000,S&N,,,,https://www.darbydan.com/horse/shirls-speight/,
 Ashford Stud (Coolmore America),Sierra Leone,2021,Dark Bay/Brown,,Gun Runner,Heavenly Love,Malibu Moon,75000,,,2026,,https://coolmore.com/en/america/stallion/sierra-leone/,https://www.bloodhorse.com/stallion-register/stallions/173300/sierra-leone
 Claiborne Farm,Silver State,2017,Bay,,Hard Spun,Supreme,A.P. Indy,7500,LFSN,,2022,,https://claibornefarm.com/stallions/silver-state/,https://www.bloodhorse.com/stallion-register/stallions/172005/silver-state
+Crestwood Farm,Sir Winston,,,,Awesome Again,La Gran Bailadora,Bernardini,5000,LFSN,,,,https://www.crestwoodfarm.com/stallion/sir-winston/,
 Darley America (Godolphin),Speaker's Corner,2018,Bay,,Street Sense,Al Andalyya,Kingmambo,10000,,,2023,,https://www.darleyamerica.com/stallions/our-stallions/speakers-corner,https://www.bloodhorse.com/stallion-register/stallions/172338/speakers-corner
 WinStar Farm,Straight No Chaser,2019,Dark Bay/Brown,,Speightster,Margarita Friday,Johannesburg,10000,S&N,,2026,,https://www.winstarfarm.com/horse/straight-no-chaser/,https://www.bloodhorse.com/stallion-register/stallions/173282/straight-no-chaser
 Darley America (Godolphin),Street Sense,2004,Dark Bay/Brown,,Street Cry (Ire),Bedazzle,Dixieland Band,40000,,,2008,,https://www.darleyamerica.com/stallions/our-stallions/street-sense,https://www.bloodhorse.com/stallion-register/stallions/135716/street-sense
 Taylor Made Stallions,Tacitus,2016,Gray/Roan,,Tapit,Close Hatches,First Defence,10000,S&N,,2022,,https://taylormadestallions.com/horse/tacitus/,https://www.bloodhorse.com/stallion-register/stallions/172066/tacitus
 Spendthrift Farm,Taiba,2019,Chestnut,16.1,Gun Runner,Needmore Flattery,Flatter,25000,S&N,,2024,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/taiba/,https://www.bloodhorse.com/stallion-register/stallions/172537/taiba
 WinStar Farm,Take Charge Indy,2009,Dark Bay/Brown,,A.P. Indy,Take Charge Lady,Dehere,7500,S&N,,2014,,https://www.winstarfarm.com/horse/take-charge-indy/,https://www.bloodhorse.com/stallion-register/stallions/165698/take-charge-indy
+Darby Dan Farm,Tale Of Ekati,,,,Tale Of The Cat,,,5000,S&N,,,,https://www.darbydan.com/horse/tale-of-ekati/,
+Darby Dan Farm,Tale Of Silence,,,,Tale Of The Cat,,,2500,S&N,,,,https://www.darbydan.com/horse/tale-of-silence/,
 Gainesway Farm,Tapit,2001,Gray/Roan,,Pulpit,Tap Your Heels,Unbridled,185000,LFSN,,2005,,https://gainesway.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/127186/tapit
 Gainesway Farm,Tapit Trice,2020,Gray/Roan,,Tapit,Danzatrice,Dunkirk,10000,LFSN,,2025,,https://gainesway.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/173003/tapit-trice
 Spendthrift Farm,Temple City,2005,Dark Bay/Brown,16.3h,Dynaformer,Curriculum,Danzig,,,Private,2011,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/temple-city/,https://www.bloodhorse.com/stallion-register/stallions/136098/temple-city
 Lane's End,The Factor,2008,Gray/Roan,,War Front,Greyciousness,Miswaki,5000,LFSN,,2013,,https://lanesend.com/thefactor,https://www.bloodhorse.com/stallion-register/stallions/165725/the-factor
 Spendthrift Farm,Thousand Words,2017,Bay,16.1½h,Pioneerof the Nile,Pomeroys Pistol,Pomeroy,7500,S&N,,2021,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/thousand-words/,https://www.bloodhorse.com/stallion-register/stallions/171806/thousand-words
 WinStar Farm,Timberlake,2021,Bay,,Into Mischief,Pin Up (IRE),Lookin At Lucky,15000,S&N,,2025,,https://www.winstarfarm.com/horse/timberlake/,https://www.bloodhorse.com/stallion-register/stallions/172948/timberlake
+Darby Dan Farm,Title Ready,,,,More Than Ready,,,2500,S&N,,,,https://www.darbydan.com/horse/title-ready/,
 Ashford Stud (Coolmore America),Tiz The Law,2017,Bay,,Constitution,Tizfiz,Tiznow,40000,,,2021,,https://coolmore.com/en/america/stallion/tiz-the-law/,https://www.bloodhorse.com/stallion-register/stallions/171660/tiz-the-law
 Lane's End,Tonalist,2011,Bay,,Tapit,Settling Mist,Pleasant Colony,10000,LFSN,,2016,,https://lanesend.com/tonalist,https://www.bloodhorse.com/stallion-register/stallions/169215/tonalist
 Lane's End,Twirling Candy,2007,Dark Bay/Brown,,Candy Ride (Arg),House Of Danzing,Chester House,75000,LFSN,,2012,,https://lanesend.com/twirlingcandy,https://www.bloodhorse.com/stallion-register/stallions/119328/twirling-candy
@@ -151,5 +169,4 @@ Hill 'n' Dale Farms at Xalapa,Violence,2010,Dark Bay/Brown,,Medaglia d'Oro,Viole
 Three Chimneys Farm,Volatile,2016,Gray/Roan,16.2,Violence,Melody Lady,Unbridled's Song,10000,,,2021,,https://www.threechimneys.com/stallions/,https://www.bloodhorse.com/stallion-register/stallions/171592/volatile
 Claiborne Farm,War Front,2002,Bay,,Danzig,Starry Dreamer,Rubiano,,,Private,2007,,https://claibornefarm.com/stallions/war-front/,https://www.bloodhorse.com/stallion-register/stallions/136975/war-front
 Spendthrift Farm,Yaupon,2017,Dark Bay/Brown,16.2h,Uncle Mo,Modification,Vindication,60000,S&N,,2022,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/yaupon/,https://www.bloodhorse.com/stallion-register/stallions/171995/yaupon
-WinStar Farm,Yoshida,2014,Bay,,Heart's Cry (JPN),Hilda's Passion,Canadian Frontier,,,,2020,,https://www.winstarfarm.com/horse/yoshida/,https://www.bloodhorse.com/stallion-register/stallions/170987/yoshida-jpn
 Spendthrift Farm,Zandon,2019,Dark Bay/Brown,16.3h,Upstart,Memories Prevail,Creative Cause,7500,S&N,,2024,"Breeders' Cup, KTDF",https://www.spendthriftfarm.com/stallions/zandon/,https://www.bloodhorse.com/stallion-register/stallions/172533/zandon

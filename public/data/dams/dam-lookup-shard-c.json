@@ -20541,7 +20541,9 @@
           "twoyo_sale": "Ocala Breeders Sales Co Spring Sale Of 2yos In Training 2024",
           "yearling_hip": 2454,
           "twoyo_hip": 1084,
-          "quality_flags": []
+          "quality_flags": [
+            "single_yearling_multi_2yo"
+          ]
         }
       ]
     },
@@ -39381,7 +39383,9 @@
           "twoyo_sale": "OBS Spring Sale of 2YOs in Training 2026",
           "yearling_hip": 549,
           "twoyo_hip": 615,
-          "quality_flags": []
+          "quality_flags": [
+            "multi_yearling_single_2yo"
+          ]
         }
       ]
     },
