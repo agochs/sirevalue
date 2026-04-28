@@ -1092,9 +1092,19 @@ async function bootSireValue() {
         + '<div class="horse-meta">'
         +   escapeHtml(shortSale(m.yearling_sale))
         +   (m.yearling_hip ? ' Hip ' + escapeHtml(String(m.yearling_hip)) : '')
+        +   (m.yearling_sale_url
+              ? ' <a href="' + escapeHtml(m.yearling_sale_url) + '" target="_blank" rel="noopener" '
+                + 'title="Verify against BloodHorse sale page" '
+                + 'style="color:var(--ink-soft);text-decoration:none;font-size:11px;">↗</a>'
+              : '')
         +   ' → '
         +   escapeHtml(shortSale(m.twoyo_sale))
         +   (m.twoyo_hip ? ' Hip ' + escapeHtml(String(m.twoyo_hip)) : '')
+        +   (m.twoyo_sale_url
+              ? ' <a href="' + escapeHtml(m.twoyo_sale_url) + '" target="_blank" rel="noopener" '
+                + 'title="Verify against BloodHorse sale page" '
+                + 'style="color:var(--ink-soft);text-decoration:none;font-size:11px;">↗</a>'
+              : '')
         + '</div>';
       var pricesHtml = '<div class="prices">'
         +   '$' + m.yearling_price.toLocaleString()

@@ -407,13 +407,18 @@ body {
   topList.innerHTML = topOverall.slice(0, 10).map(function(m, i) {
     const cls = pctCls(m.return_pct);
     const stallionLink = '<a href="/stallion-card.html?s=' + encodeURIComponent(m.stallion) + '">' + escapeHtml(m.stallion) + '</a>';
+    const verifyLink = url => url
+      ? ' <a href="' + escapeHtml(url) + '" target="_blank" rel="noopener" title="Verify against BloodHorse sale page" style="color:var(--ink-soft);text-decoration:none;font-size:11px;">↗</a>'
+      : '';
     return '<div class="pair-row">'
       + '<div class="rank">' + (i+1) + '.</div>'
       + '<div class="horse-block">'
       +   '<div class="horse">' + escapeHtml(m.horse_name || '(unnamed)') + ' <span style="font-weight:400;color:var(--ink-soft);font-size:12px;">— by ' + stallionLink + '</span></div>'
       +   '<div class="meta">out of ' + escapeHtml(m.dam || '—') + ' · ' + escapeHtml(m.cohort || '') + ' · '
       +     escapeHtml(shortSale(m.yearling_sale)) + (m.yearling_hip ? ' Hip ' + escapeHtml(String(m.yearling_hip)) : '')
+      +     verifyLink(m.yearling_sale_url)
       +     ' → ' + escapeHtml(shortSale(m.twoyo_sale)) + (m.twoyo_hip ? ' Hip ' + escapeHtml(String(m.twoyo_hip)) : '')
+      +     verifyLink(m.twoyo_sale_url)
       +   '</div>'
       + '</div>'
       + '<div class="prices">$' + m.yearling_price.toLocaleString() + ' → $' + m.twoyo_price.toLocaleString() + '</div>'

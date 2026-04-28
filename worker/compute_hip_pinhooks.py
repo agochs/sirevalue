@@ -152,6 +152,10 @@ def main():
                     "hip":           h.get("hip"),
                     "price":         h["sold_price_usd"],
                     "consignor":     h.get("consignor"),
+                    # Source URL — propagated so the UI can render a
+                    # "verify ↗" link on every pinhook pair, letting users
+                    # confirm against BloodHorse's own sale page.
+                    "sale_url":      h.get("sale_url"),
                 }
                 if kind == "yearling":
                     yearlings_by_key.setdefault(key, []).append(rec)
@@ -208,10 +212,12 @@ def main():
             "yearling_hip":   yrl["hip"],
             "yearling_price": yrl["price"],
             "yearling_consignor": yrl.get("consignor"),
+            "yearling_sale_url": yrl.get("sale_url"),   # for UI verify-link
             "twoyo_sale":     two["sale_name"],
             "twoyo_hip":      two["hip"],
             "twoyo_price":    two["price"],
             "twoyo_consignor": two.get("consignor"),
+            "twoyo_sale_url": two.get("sale_url"),      # for UI verify-link
             "return_pct":     round(return_pct, 1),
             "gross_return_usd": gross,
             "quality_flags":  flags,
