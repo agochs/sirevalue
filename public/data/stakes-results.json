@@ -1,10 +1,24 @@
 {
-  "updated_at": "2026-04-28",
+  "updated_at": "2026-04-29",
   "summary": {
-    "total_races": 3,
-    "sires_covered": 3
+    "total_races": 9,
+    "sires_covered": 8
   },
   "races": [
+    {
+      "race": "Wood Memorial S.",
+      "race_grade": "G2",
+      "track": "Aqueduct",
+      "date": "2026-04-04",
+      "purse_usd": 750000,
+      "winner": "Albus",
+      "winner_age": 3,
+      "winner_sire": "Yaupon",
+      "winner_dam": "Adream",
+      "winner_damsire": "Bernardini",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/291039/albus-takes-final-wood-memorial-at-aqueduct",
+      "note": "First crop runner from Spendthrift sire Yaupon \u2014 won the 66th and final running at Aqueduct in 1:51.71. Riley Mott / Pin Oak Stud. 100 Derby qualifying points."
+    },
     {
       "race": "Santa Anita Derby",
       "race_grade": "G1",
@@ -46,9 +60,95 @@
       "winner_damsire": "Orb",
       "source_url": "https://www.bloodhorse.com/horse-racing/articles/290881/commandment-takes-florida-derby-thriller-over-the-puma",
       "note": "Won by a photo finish over The Puma. 100 Derby qualifying points."
+    },
+    {
+      "race": "Arkansas Derby",
+      "race_grade": "G1",
+      "track": "Oaklawn Park",
+      "date": "2026-03-28",
+      "purse_usd": 1500000,
+      "winner": "Renegade",
+      "winner_age": 3,
+      "winner_sire": "Into Mischief",
+      "winner_dam": "Spice Is Nice",
+      "winner_damsire": "Curlin",
+      "source_url": "https://www.bloodhorse.com/horse-racing/race/usa/op/2026/3/28/13/arkansas-derby-g1",
+      "note": "First foal of Spice Is Nice. Renegade became 2026 Kentucky Derby co-favorite (with The Puma)."
+    },
+    {
+      "race": "TwinSpires.com Louisiana Derby",
+      "race_grade": "G2",
+      "track": "Fair Grounds",
+      "date": "2026-03-21",
+      "purse_usd": 1000000,
+      "winner": "Emerging Market",
+      "winner_age": 3,
+      "winner_sire": "Candy Ride (Arg)",
+      "winner_dam": "Wild Empress",
+      "winner_damsire": "Empire Maker",
+      "source_url": "https://www.bloodhorse.com/horse-racing/articles/290719/emerging-market-edges-pavlovian-in-louisiana-derby",
+      "note": "Edged Pavlovian by a head in 1:55.18 for 1 3/16 miles. Flavien Prat aboard."
+    },
+    {
+      "race": "Pegasus World Cup Invitational",
+      "race_grade": "G1",
+      "track": "Gulfstream Park",
+      "date": "2026-01-24",
+      "purse_usd": 3000000,
+      "winner": "Skippylongstocking",
+      "winner_age": 7,
+      "winner_sire": "Exaggerator",
+      "winner_dam": "Twinkling",
+      "winner_damsire": "War Chant",
+      "source_url": "https://www.foxsports.com/articles/motor/skippylongstocking-rallies-in-stretch-wins-3-million-pegasus-world-cup-at-gulfstream",
+      "note": "Veteran 7yo rallies in stretch to win the $3M Pegasus."
+    },
+    {
+      "race": "Pegasus World Cup Turf Invitational",
+      "race_grade": "G1",
+      "track": "Gulfstream Park",
+      "date": "2026-01-24",
+      "purse_usd": 1000000,
+      "winner": "Test Score",
+      "winner_age": 4,
+      "winner_sire": "Lookin At Lucky",
+      "winner_dam": null,
+      "winner_damsire": null,
+      "source_url": "https://www.americasbestracing.net/the-sport/2026-2026-pegasus-world-cup-cheat-sheet",
+      "note": "4yo colt by Lookin At Lucky."
+    },
+    {
+      "race": "Pegasus World Cup Filly and Mare Turf Invitational",
+      "race_grade": "G2",
+      "track": "Gulfstream Park",
+      "date": "2026-01-24",
+      "purse_usd": 500000,
+      "winner": "Destino d'Oro",
+      "winner_age": 4,
+      "winner_sire": "Bolt d'Oro",
+      "winner_dam": "Heart of Destiny",
+      "winner_damsire": "Lion Heart",
+      "source_url": "https://www.thoroughbreddailynews.com/destino-doro-runs-down-rivals-to-win-pegasus-world-cup-filly-and-mare-turf/",
+      "note": "Bolt d'Oro filly rallies late to win the F&M Turf Invitational."
     }
   ],
   "by_sire": {
+    "Yaupon": [
+      {
+        "race": "Wood Memorial S.",
+        "race_grade": "G2",
+        "track": "Aqueduct",
+        "date": "2026-04-04",
+        "purse_usd": 750000,
+        "winner": "Albus",
+        "winner_age": 3,
+        "winner_sire": "Yaupon",
+        "winner_dam": "Adream",
+        "winner_damsire": "Bernardini",
+        "source_url": "https://www.bloodhorse.com/horse-racing/articles/291039/albus-takes-final-wood-memorial-at-aqueduct",
+        "note": "First crop runner from Spendthrift sire Yaupon \u2014 won the 66th and final running at Aqueduct in 1:51.71. Riley Mott / Pin Oak Stud. 100 Derby qualifying points."
+      }
+    ],
     "Runhappy": [
       {
         "race": "Santa Anita Derby",
@@ -95,6 +195,84 @@
         "winner_damsire": "Orb",
         "source_url": "https://www.bloodhorse.com/horse-racing/articles/290881/commandment-takes-florida-derby-thriller-over-the-puma",
         "note": "Won by a photo finish over The Puma. 100 Derby qualifying points."
+      },
+      {
+        "race": "Arkansas Derby",
+        "race_grade": "G1",
+        "track": "Oaklawn Park",
+        "date": "2026-03-28",
+        "purse_usd": 1500000,
+        "winner": "Renegade",
+        "winner_age": 3,
+        "winner_sire": "Into Mischief",
+        "winner_dam": "Spice Is Nice",
+        "winner_damsire": "Curlin",
+        "source_url": "https://www.bloodhorse.com/horse-racing/race/usa/op/2026/3/28/13/arkansas-derby-g1",
+        "note": "First foal of Spice Is Nice. Renegade became 2026 Kentucky Derby co-favorite (with The Puma)."
+      }
+    ],
+    "Candy Ride (Arg)": [
+      {
+        "race": "TwinSpires.com Louisiana Derby",
+        "race_grade": "G2",
+        "track": "Fair Grounds",
+        "date": "2026-03-21",
+        "purse_usd": 1000000,
+        "winner": "Emerging Market",
+        "winner_age": 3,
+        "winner_sire": "Candy Ride (Arg)",
+        "winner_dam": "Wild Empress",
+        "winner_damsire": "Empire Maker",
+        "source_url": "https://www.bloodhorse.com/horse-racing/articles/290719/emerging-market-edges-pavlovian-in-louisiana-derby",
+        "note": "Edged Pavlovian by a head in 1:55.18 for 1 3/16 miles. Flavien Prat aboard."
+      }
+    ],
+    "Exaggerator": [
+      {
+        "race": "Pegasus World Cup Invitational",
+        "race_grade": "G1",
+        "track": "Gulfstream Park",
+        "date": "2026-01-24",
+        "purse_usd": 3000000,
+        "winner": "Skippylongstocking",
+        "winner_age": 7,
+        "winner_sire": "Exaggerator",
+        "winner_dam": "Twinkling",
+        "winner_damsire": "War Chant",
+        "source_url": "https://www.foxsports.com/articles/motor/skippylongstocking-rallies-in-stretch-wins-3-million-pegasus-world-cup-at-gulfstream",
+        "note": "Veteran 7yo rallies in stretch to win the $3M Pegasus."
+      }
+    ],
+    "Lookin At Lucky": [
+      {
+        "race": "Pegasus World Cup Turf Invitational",
+        "race_grade": "G1",
+        "track": "Gulfstream Park",
+        "date": "2026-01-24",
+        "purse_usd": 1000000,
+        "winner": "Test Score",
+        "winner_age": 4,
+        "winner_sire": "Lookin At Lucky",
+        "winner_dam": null,
+        "winner_damsire": null,
+        "source_url": "https://www.americasbestracing.net/the-sport/2026-2026-pegasus-world-cup-cheat-sheet",
+        "note": "4yo colt by Lookin At Lucky."
+      }
+    ],
+    "Bolt d'Oro": [
+      {
+        "race": "Pegasus World Cup Filly and Mare Turf Invitational",
+        "race_grade": "G2",
+        "track": "Gulfstream Park",
+        "date": "2026-01-24",
+        "purse_usd": 500000,
+        "winner": "Destino d'Oro",
+        "winner_age": 4,
+        "winner_sire": "Bolt d'Oro",
+        "winner_dam": "Heart of Destiny",
+        "winner_damsire": "Lion Heart",
+        "source_url": "https://www.thoroughbreddailynews.com/destino-doro-runs-down-rivals-to-win-pegasus-world-cup-filly-and-mare-turf/",
+        "note": "Bolt d'Oro filly rallies late to win the F&M Turf Invitational."
       }
     ]
   }
