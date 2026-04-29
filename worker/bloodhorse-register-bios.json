@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29T14:49:48Z",
+  "updated_at": "2026-04-29T14:57:21Z",
   "source": "https://www.bloodhorse.com/stallion-register/",
   "resolved": {
     "Angel of Empire": {
@@ -1862,6 +1862,96 @@
       "bh_url_id": 173009,
       "bh_slug": "the-street-fighter",
       "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/173009/the-street-fighter"
+    },
+    "Adios Charlie": {
+      "year_of_birth": 2008,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2012,
+      "_raw_data_line": "2008, b, entered stud 2012",
+      "bh_url_id": 165398,
+      "bh_slug": "adios-charlie",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/165398/adios-charlie"
+    },
+    "Awesome Slew": {
+      "year_of_birth": 2013,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2013, b, entered stud 2019",
+      "bh_url_id": 170648,
+      "bh_slug": "awesome-slew",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170648/awesome-slew"
+    },
+    "Colonel Liam": {
+      "year_of_birth": 2017,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2017, gr/ro, entered stud 2023",
+      "bh_url_id": 172430,
+      "bh_slug": "colonel-liam",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172430/colonel-liam"
+    },
+    "Gretzky The Great": {
+      "year_of_birth": 2018,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2018, b, entered stud 2023",
+      "bh_url_id": 172357,
+      "bh_slug": "gretzky-the-great",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172357/gretzky-the-great"
+    },
+    "Khozan": {
+      "year_of_birth": 2012,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2016,
+      "_raw_data_line": "2012, dkb/br, entered stud 2016",
+      "bh_url_id": 169128,
+      "bh_slug": "khozan",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/169128/khozan"
+    },
+    "Roadster": {
+      "year_of_birth": 2016,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2023,
+      "_raw_data_line": "2016, gr/ro, entered stud 2023",
+      "bh_url_id": 172332,
+      "bh_slug": "roadster",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/172332/roadster"
+    },
+    "Tunwoo": {
+      "year_of_birth": 2015,
+      "color": "b",
+      "height_hands": null,
+      "entered_stud_year": 2019,
+      "_raw_data_line": "2015, b, entered stud 2019.",
+      "bh_url_id": 170841,
+      "bh_slug": "tunwoo",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170841/tunwoo"
+    },
+    "Valiant Minister": {
+      "year_of_birth": 2013,
+      "color": "gr/ro",
+      "height_hands": null,
+      "entered_stud_year": 2018,
+      "_raw_data_line": "2013, gr/ro, entered stud 2018",
+      "bh_url_id": 170246,
+      "bh_slug": "valiant-minister",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/170246/valiant-minister"
+    },
+    "Win Win Win": {
+      "year_of_birth": 2016,
+      "color": "dkb/br",
+      "height_hands": null,
+      "entered_stud_year": 2021,
+      "_raw_data_line": "2016, dkb/br, entered stud 2021",
+      "bh_url_id": 171650,
+      "bh_slug": "win-win-win",
+      "bh_url": "https://www.bloodhorse.com/stallion-register/stallions/171650/win-win-win"
     }
   },
   "unresolved": [
@@ -1875,8 +1965,8 @@
     }
   ],
   "summary": {
-    "total": 187,
-    "resolved": 186,
+    "total": 196,
+    "resolved": 195,
     "unresolved": 2
   }
 }
