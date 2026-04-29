@@ -23,3 +23,6 @@ Thumbs.db
 .vercel
 worker/catalog-scoring.json
 worker/score-history.json
+worker/bh-scrape.log
+worker/html-dumps/
+worker/recent-stakes.txt
