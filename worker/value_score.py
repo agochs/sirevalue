@@ -472,6 +472,75 @@ def component_2yo_market_efficiency(
     }
 
 
+def component_pinhook_efficiency(
+    s: StallionSnapshot,
+    roster: Sequence[StallionSnapshot],
+) -> tuple[Optional[float], dict]:
+    """Pinhook lift signal: yearling-to-2YO appreciation, percentile vs peers
+    who also have both sale-side data points.
+
+    Lift = twoyo_avg / yearling_avg. Both averages are pulled from the same
+    in-process Keeneland (yearling) and OBS (2YO) lookups that the market_*
+    components use, so this component shares their data dependency.
+
+    Returns (None, dict) when either side is missing or sample is below the
+    minimum (smaller of yearling_n, twoyo_n must be ≥3) — the scorer then
+    skips this component for the stallion.
+
+    This is the platform's value-creation thesis as a scoring signal: a
+    stallion whose foals appreciate between sales is materially different
+    from one whose don't, even at the same fee level.
+    """
+    # Pull yearling and 2YO averages from the per-sire lookups
+    kee = KEENELAND_BY_SIRE.get(s.name) or KEENELAND_BY_SIRE.get(_normalize_lookup_key(s.name))
+    obs = OBS_BY_SIRE.get(s.name) or OBS_BY_SIRE.get(_normalize_lookup_key(s.name))
+    if not kee or not obs:
+        return None, {"reason": "missing_yearling_or_2yo_data"}
+    yearling_avg = kee.get("yearling_avg_usd") or 0
+    yearling_n   = kee.get("n") or 0
+    twoyo_avg    = obs.get("price_avg_usd") or 0
+    twoyo_n      = obs.get("n") or 0
+    if yearling_avg <= 0 or twoyo_avg <= 0:
+        return None, {"reason": "zero_average_price"}
+    if min(yearling_n, twoyo_n) < 3:
+        return None, {"reason": f"sample_too_small (yrl_n={yearling_n}, 2yo_n={twoyo_n})"}
+
+    lift_ratio = twoyo_avg / yearling_avg
+    lift_pct = (lift_ratio - 1) * 100
+
+    # Peer lift_ratios — for stallions that ALSO have both sale-side data
+    peer_lifts = []
+    for p in roster:
+        if p.name == s.name:
+            continue
+        pk = KEENELAND_BY_SIRE.get(p.name) or KEENELAND_BY_SIRE.get(_normalize_lookup_key(p.name))
+        po = OBS_BY_SIRE.get(p.name) or OBS_BY_SIRE.get(_normalize_lookup_key(p.name))
+        if not pk or not po:
+            continue
+        py = pk.get("yearling_avg_usd") or 0
+        pt = po.get("price_avg_usd") or 0
+        py_n = pk.get("n") or 0
+        pt_n = po.get("n") or 0
+        if py <= 0 or pt <= 0 or min(py_n, pt_n) < 3:
+            continue
+        peer_lifts.append(pt / py)
+
+    pct = percentile(lift_ratio, peer_lifts) if peer_lifts else 50.0
+
+    return pct, {
+        "yearling_avg_usd": yearling_avg,
+        "twoyo_avg_usd":    twoyo_avg,
+        "yearling_n":       yearling_n,
+        "twoyo_n":          twoyo_n,
+        "lift_ratio":       round(lift_ratio, 2),
+        "lift_pct":         round(lift_pct, 1),
+        "peer_n_with_pinhook": len(peer_lifts),
+        "peer_median_lift": round(
+            sorted(peer_lifts)[len(peer_lifts) // 2] if peer_lifts else 0, 2
+        ),
+    }
+
+
 def component_maturity_context(s: StallionSnapshot) -> tuple[float, dict]:
     """Simple maturity-stage mapping. Proven > early_proven > senior > first.
 
@@ -512,12 +581,16 @@ PARTIAL_TIER_1_WEIGHTS = {
 }
 
 # Full Tier 1 — both Keeneland (yearling) AND OBS (2YO) data available.
-# Market signals combine to 45%; pedigree and fee context hold 45%; maturity 10%.
+# Market signals + pinhook lift combine to 50%; pedigree+fee 40%; maturity 10%.
+# Pinhook efficiency is the platform's value-creation thesis encoded directly
+# into scoring: a stallion whose foals appreciate yearling→2YO is rewarded
+# beyond what the absolute-price market signals alone would credit.
 FULL_TIER_1_WEIGHTS = {
-    "market_efficiency":       25,   # yearling-market, Keeneland
-    "twoyo_market_efficiency": 20,   # 2YO-in-training market, OBS
-    "pedigree_prestige":       25,
-    "fee_band_position":       20,
+    "market_efficiency":       20,   # yearling-market $-level (Keeneland)
+    "twoyo_market_efficiency": 15,   # 2YO-market $-level (OBS)
+    "pinhook_efficiency":      15,   # yearling→2YO appreciation
+    "pedigree_prestige":       22,
+    "fee_band_position":       18,
     "maturity_context":        10,
 }
 
@@ -574,9 +647,11 @@ def score_commercial_appeal(s: StallionSnapshot,
     maturity_pct, maturity_ex = component_maturity_context(s)
     market_pct, market_ex = component_market_efficiency(s, roster)       # Keeneland
     twoyo_pct, twoyo_ex = component_2yo_market_efficiency(s, roster)     # OBS
+    pinhook_pct, pinhook_ex = component_pinhook_efficiency(s, roster)    # lift = 2yo/yrl
 
     have_kee = market_pct is not None
     have_obs = twoyo_pct is not None
+    have_pinhook = pinhook_pct is not None
 
     # Pick weights based on which market signals are available.
     if have_kee and have_obs:
@@ -603,6 +678,28 @@ def score_commercial_appeal(s: StallionSnapshot,
             "points": round(W["twoyo_market_efficiency"] * twoyo_pct / 100, 2),
             "inputs": twoyo_ex,
         }
+    if "pinhook_efficiency" in W and have_pinhook:
+        components["pinhook_efficiency"] = {
+            "percentile": pinhook_pct,
+            "weight": W["pinhook_efficiency"],
+            "points": round(W["pinhook_efficiency"] * pinhook_pct / 100, 2),
+            "inputs": pinhook_ex,
+        }
+    # Renormalization: if pinhook_efficiency was in W but the data wasn't
+    # present (sample too small), redistribute its weight proportionally
+    # across the remaining components so the score still spans 0..100.
+    if "pinhook_efficiency" in W and not have_pinhook:
+        dropped_weight = W["pinhook_efficiency"]
+        remaining_total = sum(c["weight"] for c in components.values())
+        if remaining_total > 0:
+            scale = (remaining_total + dropped_weight) / remaining_total
+            for k, c in components.items():
+                c["weight"] = round(c["weight"] * scale, 1)
+                c["points"] = round(c["weight"] * c["percentile"] / 100, 2)
+        notes.append(
+            f"pinhook_efficiency unavailable (small sample); "
+            f"its {dropped_weight}% weight redistributed across remaining components"
+        )
     components["pedigree_prestige"] = {
         "percentile": prestige_pct,
         "weight": W["pedigree_prestige"],
