@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T15:40:53Z",
+  "generated_at": "2026-04-29T15:58:20Z",
   "method": "weighted-comparator-from-similar-stallions-with-pinhook-data",
   "thresholds": {
     "min_pairs_per_comparator": 5,
@@ -174,7 +174,7 @@
       "fee_usd": 7500,
       "entered_stud_year": 2015,
       "year_of_birth": 2010,
-      "value_score": 60.6,
+      "value_score": 60.4,
       "value_grade": "B",
       "comparators": [
         {
@@ -326,7 +326,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2025,
       "year_of_birth": 2017,
-      "value_score": 34.5,
+      "value_score": 32.0,
       "value_grade": "D",
       "comparators": [
         {
@@ -402,7 +402,7 @@
       "fee_usd": 3500,
       "entered_stud_year": 2018,
       "year_of_birth": 2013,
-      "value_score": 53.2,
+      "value_score": 55.0,
       "value_grade": "C",
       "comparators": [
         {
@@ -491,7 +491,7 @@
       "fee_usd": 6500,
       "entered_stud_year": 2023,
       "year_of_birth": 2017,
-      "value_score": 71.2,
+      "value_score": 69.8,
       "value_grade": "B",
       "comparators": [
         {
@@ -643,7 +643,7 @@
       "fee_usd": 7500,
       "entered_stud_year": 2020,
       "year_of_birth": 2015,
-      "value_score": 56.3,
+      "value_score": 56.9,
       "value_grade": "C",
       "comparators": [
         {
@@ -719,7 +719,7 @@
       "fee_usd": 6000,
       "entered_stud_year": 2016,
       "year_of_birth": 2012,
-      "value_score": 42.6,
+      "value_score": 48.3,
       "value_grade": "C",
       "comparators": [
         {
@@ -850,15 +850,15 @@
       }
     },
     {
-      "name": "Showcase",
-      "farm": "McMahon of Saratoga Thoroughbreds",
+      "name": "Mo Forza",
+      "farm": "Rancho San Miguel",
       "sire": "Uncle Mo",
       "damsire": null,
       "pedigree": null,
       "fee_usd": 5000,
-      "entered_stud_year": 2026,
-      "year_of_birth": 2022,
-      "value_score": 34.5,
+      "entered_stud_year": 2022,
+      "year_of_birth": 2016,
+      "value_score": 36.0,
       "value_grade": "D",
       "comparators": [
         {
@@ -913,15 +913,15 @@
       }
     },
     {
-      "name": "Mo Forza",
-      "farm": "Rancho San Miguel",
+      "name": "Showcase",
+      "farm": "McMahon of Saratoga Thoroughbreds",
       "sire": "Uncle Mo",
       "damsire": null,
       "pedigree": null,
       "fee_usd": 5000,
-      "entered_stud_year": 2022,
-      "year_of_birth": 2016,
-      "value_score": 26.5,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 34.5,
       "value_grade": "D",
       "comparators": [
         {
@@ -1034,7 +1034,7 @@
       "fee_usd": 3000,
       "entered_stud_year": 2023,
       "year_of_birth": 2018,
-      "value_score": 65.8,
+      "value_score": 64.6,
       "value_grade": "B",
       "comparators": [
         {
@@ -1084,7 +1084,7 @@
       "fee_usd": 2000,
       "entered_stud_year": 2019,
       "year_of_birth": 2015,
-      "value_score": 49.6,
+      "value_score": 49.7,
       "value_grade": "C",
       "comparators": [
         {
@@ -1147,7 +1147,7 @@
       "fee_usd": 8500,
       "entered_stud_year": 2025,
       "year_of_birth": 2016,
-      "value_score": 65.1,
+      "value_score": 64.5,
       "value_grade": "B",
       "comparators": [
         {
@@ -1247,7 +1247,7 @@
       "fee_usd": 45000,
       "entered_stud_year": 2016,
       "year_of_birth": 2012,
-      "value_score": 47.5,
+      "value_score": 48.5,
       "value_grade": "C",
       "comparators": [
         {
@@ -1339,15 +1339,15 @@
       }
     },
     {
-      "name": "Il Miracolo",
-      "farm": "Crestwood Farm",
+      "name": "Locked",
+      "farm": "Gainesway Farm",
       "sire": "Gun Runner",
-      "damsire": "Tapit",
-      "pedigree": "Gun Runner – Tapit's World, by Tapit",
-      "fee_usd": 7500,
+      "damsire": "War Front",
+      "pedigree": "Gun Runner – Luna Rosa, by War Front",
+      "fee_usd": 35000,
       "entered_stud_year": 2026,
-      "year_of_birth": 2020,
-      "value_score": 73.6,
+      "year_of_birth": 2021,
+      "value_score": 70.8,
       "value_grade": "B",
       "comparators": [
         {
@@ -1389,15 +1389,15 @@
       }
     },
     {
-      "name": "Locked",
-      "farm": "Gainesway Farm",
+      "name": "Il Miracolo",
+      "farm": "Crestwood Farm",
       "sire": "Gun Runner",
-      "damsire": "War Front",
-      "pedigree": "Gun Runner – Luna Rosa, by War Front",
-      "fee_usd": 35000,
+      "damsire": "Tapit",
+      "pedigree": "Gun Runner – Tapit's World, by Tapit",
+      "fee_usd": 7500,
       "entered_stud_year": 2026,
-      "year_of_birth": 2021,
-      "value_score": 70.8,
+      "year_of_birth": 2020,
+      "value_score": 70.5,
       "value_grade": "B",
       "comparators": [
         {
@@ -1597,7 +1597,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2024,
       "year_of_birth": 2017,
-      "value_score": 27.5,
+      "value_score": 26.5,
       "value_grade": "D",
       "comparators": [
         {
@@ -1825,7 +1825,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2021,
       "year_of_birth": 2016,
-      "value_score": 46.9,
+      "value_score": 44.6,
       "value_grade": "C",
       "comparators": [
         {
@@ -1975,7 +1975,7 @@
       "fee_usd": 7500,
       "entered_stud_year": 2023,
       "year_of_birth": 2016,
-      "value_score": 72.2,
+      "value_score": 72.7,
       "value_grade": "B",
       "comparators": [
         {
@@ -2017,15 +2017,15 @@
       }
     },
     {
-      "name": "Bright Future",
-      "farm": "Claiborne Farm",
+      "name": "Highland Falls",
+      "farm": "Darley America (Godolphin)",
       "sire": "Curlin",
-      "damsire": "Storm Cat",
-      "pedigree": "Curlin – First Cat, by Storm Cat",
-      "fee_usd": 5000,
-      "entered_stud_year": 2025,
-      "year_of_birth": 2019,
-      "value_score": 52.0,
+      "damsire": "Forty Niner",
+      "pedigree": "Curlin – Forty Greeneyes, by Forty Niner",
+      "fee_usd": 10000,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2020,
+      "value_score": 51.2,
       "value_grade": "C",
       "comparators": [
         {
@@ -2080,15 +2080,15 @@
       }
     },
     {
-      "name": "Highland Falls",
-      "farm": "Darley America (Godolphin)",
+      "name": "Bright Future",
+      "farm": "Claiborne Farm",
       "sire": "Curlin",
-      "damsire": "Forty Niner",
-      "pedigree": "Curlin – Forty Greeneyes, by Forty Niner",
-      "fee_usd": 10000,
-      "entered_stud_year": 2026,
-      "year_of_birth": 2020,
-      "value_score": 51.2,
+      "damsire": "Storm Cat",
+      "pedigree": "Curlin – First Cat, by Storm Cat",
+      "fee_usd": 5000,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2019,
+      "value_score": 49.5,
       "value_grade": "C",
       "comparators": [
         {
@@ -2364,7 +2364,7 @@
       "fee_usd": 7500,
       "entered_stud_year": 2024,
       "year_of_birth": 2020,
-      "value_score": 57.5,
+      "value_score": 57.0,
       "value_grade": "C",
       "comparators": [
         {
@@ -2414,7 +2414,7 @@
       "fee_usd": 125000,
       "entered_stud_year": 2023,
       "year_of_birth": 2018,
-      "value_score": 60.8,
+      "value_score": 63.3,
       "value_grade": "B",
       "comparators": [
         {
@@ -2729,7 +2729,7 @@
       "fee_usd": 3000,
       "entered_stud_year": 2012,
       "year_of_birth": 2008,
-      "value_score": 47.0,
+      "value_score": 46.9,
       "value_grade": "C",
       "comparators": [
         {
@@ -2892,7 +2892,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2024,
       "year_of_birth": 2020,
-      "value_score": 50.0,
+      "value_score": 49.0,
       "value_grade": "C",
       "comparators": [
         {
@@ -3066,7 +3066,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2023,
       "year_of_birth": 2016,
-      "value_score": 43.2,
+      "value_score": 44.4,
       "value_grade": "C",
       "comparators": [
         {
@@ -3214,7 +3214,7 @@
       "fee_usd": 6500,
       "entered_stud_year": 2023,
       "year_of_birth": 2017,
-      "value_score": 56.7,
+      "value_score": 56.6,
       "value_grade": "C",
       "comparators": [
         {
@@ -3251,7 +3251,7 @@
       "fee_usd": 7500,
       "entered_stud_year": 2021,
       "year_of_birth": 2016,
-      "value_score": 79.7,
+      "value_score": 79.6,
       "value_grade": "A",
       "comparators": [
         {
@@ -3621,8 +3621,8 @@
       "fee_usd": 5000,
       "entered_stud_year": 2024,
       "year_of_birth": 2018,
-      "value_score": 40.0,
-      "value_grade": "C",
+      "value_score": 39.0,
+      "value_grade": "D",
       "comparators": [
         {
           "name": "Volatile",
@@ -3732,7 +3732,7 @@
       "fee_usd": 2500,
       "entered_stud_year": 2023,
       "year_of_birth": 2015,
-      "value_score": 49.1,
+      "value_score": 48.9,
       "value_grade": "C",
       "comparators": [
         {
@@ -3761,6 +3761,20 @@
       }
     },
     {
+      "name": "Win Win Win",
+      "farm": "Ocala Stud",
+      "sire": "Hat Trick (Jpn)",
+      "damsire": "Smarty Jones",
+      "pedigree": "Hat Trick (Jpn) – Miss Smarty Pants, by Smarty Jones",
+      "fee_usd": 8500,
+      "entered_stud_year": 2021,
+      "year_of_birth": 2016,
+      "value_score": 57.8,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
       "name": "Domestic Product",
       "farm": "Ashford Stud (Coolmore America)",
       "sire": "Practical Joke",
@@ -3770,34 +3784,6 @@
       "entered_stud_year": 2025,
       "year_of_birth": 2021,
       "value_score": 56.8,
-      "value_grade": "C",
-      "comparators": [],
-      "predicted": null
-    },
-    {
-      "name": "Win Win Win",
-      "farm": "Ocala Stud",
-      "sire": "Hat Trick (Jpn)",
-      "damsire": "Smarty Jones",
-      "pedigree": "Hat Trick (Jpn) – Miss Smarty Pants, by Smarty Jones",
-      "fee_usd": 8500,
-      "entered_stud_year": 2021,
-      "year_of_birth": 2016,
-      "value_score": 56.7,
-      "value_grade": "C",
-      "comparators": [],
-      "predicted": null
-    },
-    {
-      "name": "Jonathan's Way",
-      "farm": "Airdrie Stud",
-      "sire": "Good Magic",
-      "damsire": "Air Force Blue",
-      "pedigree": "Good Magic – Nicanor Missile, by Air Force Blue",
-      "fee_usd": 8500,
-      "entered_stud_year": 2026,
-      "year_of_birth": 2022,
-      "value_score": 55.1,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3817,6 +3803,20 @@
       "predicted": null
     },
     {
+      "name": "Jonathan's Way",
+      "farm": "Airdrie Stud",
+      "sire": "Good Magic",
+      "damsire": "Air Force Blue",
+      "pedigree": "Good Magic – Nicanor Missile, by Air Force Blue",
+      "fee_usd": 8500,
+      "entered_stud_year": 2026,
+      "year_of_birth": 2022,
+      "value_score": 54.5,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
       "name": "Collected",
       "farm": "Rancho San Miguel",
       "sire": "City Zip",
@@ -3826,6 +3826,20 @@
       "entered_stud_year": 2019,
       "year_of_birth": 2013,
       "value_score": 53.6,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Awesome Slew",
+      "farm": "Ocala Stud",
+      "sire": "Awesome Again",
+      "damsire": "Seattle Slew",
+      "pedigree": "Awesome Again – New Orleans Slew, by Seattle Slew",
+      "fee_usd": 4000,
+      "entered_stud_year": 2019,
+      "year_of_birth": 2013,
+      "value_score": 53.2,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3859,34 +3873,6 @@
       "predicted": null
     },
     {
-      "name": "Awesome Slew",
-      "farm": "Ocala Stud",
-      "sire": "Awesome Again",
-      "damsire": "Seattle Slew",
-      "pedigree": "Awesome Again – New Orleans Slew, by Seattle Slew",
-      "fee_usd": 4000,
-      "entered_stud_year": 2019,
-      "year_of_birth": 2013,
-      "value_score": 49.6,
-      "value_grade": "C",
-      "comparators": [],
-      "predicted": null
-    },
-    {
-      "name": "Bee Jersey",
-      "farm": "Darby Dan Farm",
-      "sire": "Jersey Town",
-      "damsire": null,
-      "pedigree": null,
-      "fee_usd": 5000,
-      "entered_stud_year": 2019,
-      "year_of_birth": 2014,
-      "value_score": 47.7,
-      "value_grade": "C",
-      "comparators": [],
-      "predicted": null
-    },
-    {
       "name": "Tale Of Silence",
       "farm": "Darby Dan Farm",
       "sire": "Tale Of The Cat",
@@ -3901,15 +3887,15 @@
       "predicted": null
     },
     {
-      "name": "Channel Cat",
-      "farm": "Calumet Farm",
-      "sire": "English Channel",
-      "damsire": "Charismatic",
-      "pedigree": "English Channel – In Return, by Charismatic",
-      "fee_usd": 7500,
-      "entered_stud_year": 2023,
-      "year_of_birth": 2015,
-      "value_score": 45.5,
+      "name": "Bee Jersey",
+      "farm": "Darby Dan Farm",
+      "sire": "Jersey Town",
+      "damsire": null,
+      "pedigree": null,
+      "fee_usd": 5000,
+      "entered_stud_year": 2019,
+      "year_of_birth": 2014,
+      "value_score": 45.9,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3923,7 +3909,21 @@
       "fee_usd": 7500,
       "entered_stud_year": 2024,
       "year_of_birth": 2019,
-      "value_score": 45.0,
+      "value_score": 44.5,
+      "value_grade": "C",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Channel Cat",
+      "farm": "Calumet Farm",
+      "sire": "English Channel",
+      "damsire": "Charismatic",
+      "pedigree": "English Channel – In Return, by Charismatic",
+      "fee_usd": 7500,
+      "entered_stud_year": 2023,
+      "year_of_birth": 2015,
+      "value_score": 44.4,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3943,20 +3943,6 @@
       "predicted": null
     },
     {
-      "name": "Oxbow",
-      "farm": "Calumet Farm",
-      "sire": "Awesome Again",
-      "damsire": "Cee's Tizzy",
-      "pedigree": "Awesome Again – Tizamazing, by Cee's Tizzy",
-      "fee_usd": 7500,
-      "entered_stud_year": 2014,
-      "year_of_birth": 2010,
-      "value_score": 41.0,
-      "value_grade": "C",
-      "comparators": [],
-      "predicted": null
-    },
-    {
       "name": "Dialed In",
       "farm": "Darby Dan Farm",
       "sire": "Mineshaft",
@@ -3965,7 +3951,21 @@
       "fee_usd": 10000,
       "entered_stud_year": 2013,
       "year_of_birth": 2008,
-      "value_score": 39.5,
+      "value_score": 39.6,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Oxbow",
+      "farm": "Calumet Farm",
+      "sire": "Awesome Again",
+      "damsire": "Cee's Tizzy",
+      "pedigree": "Awesome Again – Tizamazing, by Cee's Tizzy",
+      "fee_usd": 7500,
+      "entered_stud_year": 2014,
+      "year_of_birth": 2010,
+      "value_score": 38.5,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -3985,20 +3985,6 @@
       "predicted": null
     },
     {
-      "name": "Senor Buscador",
-      "farm": "Lane's End",
-      "sire": "Mineshaft",
-      "damsire": "Desert God",
-      "pedigree": "Mineshaft – Rose's Desert, by Desert God",
-      "fee_usd": 7500,
-      "entered_stud_year": 2025,
-      "year_of_birth": 2018,
-      "value_score": 35.1,
-      "value_grade": "D",
-      "comparators": [],
-      "predicted": null
-    },
-    {
       "name": "Fierceness",
       "farm": "Ashford Stud (Coolmore America)",
       "sire": "City of Light",
@@ -4008,20 +3994,6 @@
       "entered_stud_year": 2026,
       "year_of_birth": 2021,
       "value_score": 34.5,
-      "value_grade": "D",
-      "comparators": [],
-      "predicted": null
-    },
-    {
-      "name": "Bravazo",
-      "farm": "Calumet Farm",
-      "sire": "Awesome Again",
-      "damsire": "Cee's Tizzy",
-      "pedigree": "Awesome Again – Tiz O'Gold, by Cee's Tizzy",
-      "fee_usd": 5000,
-      "entered_stud_year": 2021,
-      "year_of_birth": 2015,
-      "value_score": 34.4,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -4055,6 +4027,20 @@
       "predicted": null
     },
     {
+      "name": "Tale Of Ekati",
+      "farm": "Darby Dan Farm",
+      "sire": "Tale Of The Cat",
+      "damsire": null,
+      "pedigree": null,
+      "fee_usd": 5000,
+      "entered_stud_year": 2011,
+      "year_of_birth": 2005,
+      "value_score": 32.6,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
       "name": "Uptown Rythem",
       "farm": "Rancho San Miguel",
       "sire": null,
@@ -4069,15 +4055,29 @@
       "predicted": null
     },
     {
-      "name": "Tale Of Ekati",
-      "farm": "Darby Dan Farm",
-      "sire": "Tale Of The Cat",
-      "damsire": null,
-      "pedigree": null,
+      "name": "Bravazo",
+      "farm": "Calumet Farm",
+      "sire": "Awesome Again",
+      "damsire": "Cee's Tizzy",
+      "pedigree": "Awesome Again – Tiz O'Gold, by Cee's Tizzy",
       "fee_usd": 5000,
-      "entered_stud_year": 2011,
-      "year_of_birth": 2005,
+      "entered_stud_year": 2021,
+      "year_of_birth": 2015,
       "value_score": 32.1,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Senor Buscador",
+      "farm": "Lane's End",
+      "sire": "Mineshaft",
+      "damsire": "Desert God",
+      "pedigree": "Mineshaft – Rose's Desert, by Desert God",
+      "fee_usd": 7500,
+      "entered_stud_year": 2025,
+      "year_of_birth": 2018,
+      "value_score": 32.0,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -4119,21 +4119,7 @@
       "fee_usd": 60000,
       "entered_stud_year": 2019,
       "year_of_birth": 2014,
-      "value_score": 27.6,
-      "value_grade": "D",
-      "comparators": [],
-      "predicted": null
-    },
-    {
-      "name": "Gufo",
-      "farm": "Darby Dan Farm",
-      "sire": "Declaration Of War",
-      "damsire": null,
-      "pedigree": null,
-      "fee_usd": 5000,
-      "entered_stud_year": 2024,
-      "year_of_birth": 2017,
-      "value_score": 27.5,
+      "value_score": 28.8,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -4148,6 +4134,20 @@
       "entered_stud_year": 2024,
       "year_of_birth": 2020,
       "value_score": 27.5,
+      "value_grade": "D",
+      "comparators": [],
+      "predicted": null
+    },
+    {
+      "name": "Gufo",
+      "farm": "Darby Dan Farm",
+      "sire": "Declaration Of War",
+      "damsire": null,
+      "pedigree": null,
+      "fee_usd": 5000,
+      "entered_stud_year": 2024,
+      "year_of_birth": 2017,
+      "value_score": 26.5,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -4189,7 +4189,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2025,
       "year_of_birth": 2020,
-      "value_score": 22.0,
+      "value_score": 19.5,
       "value_grade": "F",
       "comparators": [],
       "predicted": null

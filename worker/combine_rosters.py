@@ -359,6 +359,7 @@ def to_snapshot(row: dict) -> StallionSnapshot:
         sire_name=row["sire"] or None,
         damsire_name=row["damsire"] or None,
         entered_stud_year=int(row["entered_stud_year"]) if row["entered_stud_year"] else None,
+        farm=row.get("farm"),   # for regional peer-set splitting (#6)
     )
 
 

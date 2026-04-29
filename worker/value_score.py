@@ -177,6 +177,19 @@ def _load_obs_lookup() -> dict:
 
 OBS_BY_SIRE: dict[str, dict] = _load_obs_lookup()
 
+# Book Quality (#5) intentionally not implemented as a scoring component.
+# A defensible book-quality measure requires actual mare-by-mare records
+# (career earnings, black-type produced, n stakes-winning offspring) for
+# each mare in each stallion's annual book. We don't have that data
+# ingested today. A proxy — "damsires of his progeny that made it to sale"
+# — has obvious survival bias and is not real book quality.
+#
+# Real data sources (each requires its own scraper + ingest pipeline):
+#   - The Jockey Club's annual "Report of Mares Bred" — published per stallion
+#   - BloodHorse Stallion Register's per-stallion mares-bred tab
+#   - Equineline mare reports (paywall)
+# Until one of those is wired in, book_quality stays out of the formula.
+
 
 # ---------------------------------------------------------------------------
 # Time-weighted + cohort-adjusted aggregates  (model improvements #7 + #8)
@@ -285,6 +298,7 @@ class StallionSnapshot:
     sire_name: Optional[str] = None
     damsire_name: Optional[str] = None
     entered_stud_year: Optional[int] = None
+    farm: Optional[str] = None   # used for regional peer-set splitting (#6)
 
     # Tier 1 fields (None if not yet ingested)
     yearling_avg_usd: Optional[float] = None
@@ -335,12 +349,45 @@ def maturity_stage(entered_stud_year: Optional[int]) -> str:
     return "senior"
 
 
-def in_peer_set(target: StallionSnapshot, candidate: StallionSnapshot) -> bool:
-    return (
-        fee_band(candidate.stud_fee_usd) == fee_band(target.stud_fee_usd)
-        and maturity_stage(candidate.entered_stud_year) == maturity_stage(target.entered_stud_year)
-        and candidate.name != target.name
-    )
+# Region inference from farm name. Used by the peer-set splitter so a $7.5K
+# NY-bred-market stallion is compared to other NY/regional stallions, not
+# to KY commercial $7.5K stallions whose foals enter different premium
+# programs and have a different buyer base.
+def farm_to_region(farm: Optional[str]) -> str:
+    if not farm:
+        return "unknown"
+    f = farm.lower()
+    # NY: Sequel, McMahon, anything with "new york" or "saratoga"
+    if "sequel" in f or "mcmahon" in f or "new york" in f or "saratoga" in f:
+        return "NY"
+    # CA: Rancho San Miguel, Harris Farms, anything with "california" or "san miguel"
+    if "rancho san miguel" in f or "harris farms" in f or "california" in f:
+        return "CA"
+    # FL: Ocala, Bridlewood, Journeyman, Adena Springs South
+    if "ocala" in f or "bridlewood" in f or "journeyman" in f or "adena springs south" in f:
+        return "FL"
+    # MD/PA mid-Atlantic regional: Northview
+    if "northview" in f or "country life" in f:
+        return "MD"
+    # Default: treat as KY commercial market (the bulk of our roster)
+    return "KY"
+
+
+def in_peer_set(target: StallionSnapshot, candidate: StallionSnapshot,
+                same_region: bool = False) -> bool:
+    """Default peer set: same fee_band × same maturity_stage. With same_region
+    True, additionally restrict to same region — used for a tighter "regional
+    peer" signal when the region's bucket is dense enough."""
+    if (fee_band(candidate.stud_fee_usd) != fee_band(target.stud_fee_usd)
+        or maturity_stage(candidate.entered_stud_year) != maturity_stage(target.entered_stud_year)
+        or candidate.name == target.name):
+        return False
+    if same_region:
+        target_region    = farm_to_region(getattr(target, "farm", None))
+        candidate_region = farm_to_region(getattr(candidate, "farm", None))
+        if target_region != candidate_region:
+            return False
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -452,7 +499,28 @@ def component_market_efficiency(
             p_adj = peer_keene.get("adjusted_avg_usd") or peer_keene["yearling_avg_usd"]
             peer_ratios.append(p_adj / p.stud_fee_usd)
 
-    pct = percentile(ratio, peer_ratios) if peer_ratios else 50.0
+    # ---- Empirical-Bayes shrinkage (#9, partial) ----
+    # Without shrinkage a stallion with n=2 sales at a 30× ratio dominates the
+    # percentile ranking — that's not a robust signal. We pull the observed
+    # ratio toward the peer mean by a factor that depends on n: small n →
+    # heavy shrinkage; large n → trust observed. Same James-Stein form used
+    # everywhere; B = within_var / (within_var + n × between_var).
+    # NOTE: this is empirical Bayes at one level. A FULL hierarchical Bayesian
+    # model would also pool across years and across peer-groups (regions, fee
+    # bands) with formal credible intervals — that's a deeper refactor.
+    shrink_factor = 0.0
+    shrunk_ratio = ratio
+    if len(peer_ratios) >= 4:
+        peer_mean = statistics.mean(peer_ratios)
+        peer_var  = statistics.pvariance(peer_ratios)
+        # Within-stallion variance proxy: scale of the peer distribution. We
+        # don't have per-sire intra-cohort variance with current data, so use
+        # peer variance as a conservative within-var estimate.
+        within_var_proxy = peer_var
+        shrunk_ratio, shrink_factor = shrink(ratio, peer_mean, peer_var, n, within_var_proxy)
+
+    # Percentile on the SHRUNK ratio (so n=2 outliers don't dominate)
+    pct = percentile(shrunk_ratio, peer_ratios) if peer_ratios else 50.0
 
     sale_history = keene.get("sale_history", [])
     source_summary = (
@@ -467,6 +535,8 @@ def component_market_efficiency(
         "yearlings_sold_n": n,
         "stud_fee_usd": s.stud_fee_usd,
         "ratio": round(ratio, 2),
+        "shrunk_ratio": round(shrunk_ratio, 2),
+        "shrinkage_factor": round(shrink_factor, 3),   # 0=trust observed, 1=fully shrunk to peer mean
         "peer_n": len(peer_ratios),
         "peer_median_ratio": round(
             sorted(peer_ratios)[len(peer_ratios) // 2] if peer_ratios else 0, 2
@@ -505,7 +575,17 @@ def component_2yo_market_efficiency(
             p_adj = peer_obs.get("adjusted_avg_usd") or peer_obs["price_avg_usd"]
             peer_ratios.append(p_adj / p.stud_fee_usd)
 
-    pct = percentile(ratio, peer_ratios) if peer_ratios else 50.0
+    # Empirical-Bayes shrinkage — same logic as Keeneland component above.
+    # Small-sample 2YO ratios get pulled toward peer mean.
+    shrink_factor = 0.0
+    shrunk_ratio = ratio
+    if len(peer_ratios) >= 4:
+        peer_mean = statistics.mean(peer_ratios)
+        peer_var  = statistics.pvariance(peer_ratios)
+        within_var_proxy = peer_var
+        shrunk_ratio, shrink_factor = shrink(ratio, peer_mean, peer_var, n, within_var_proxy)
+
+    pct = percentile(shrunk_ratio, peer_ratios) if peer_ratios else 50.0
 
     sale_history = obs.get("sale_history", [])
     source_summary = (
@@ -559,6 +639,8 @@ def component_2yo_market_efficiency(
         "twoyos_sold_n": n,
         "stud_fee_usd": s.stud_fee_usd,
         "ratio": round(ratio, 2),
+        "shrunk_ratio": round(shrunk_ratio, 2),
+        "shrinkage_factor": round(shrink_factor, 3),
         "peer_n": len(peer_ratios),
         "peer_median_ratio": round(
             sorted(peer_ratios)[len(peer_ratios) // 2] if peer_ratios else 0, 2
@@ -758,8 +840,23 @@ def score_commercial_appeal(s: StallionSnapshot,
     is available, the Market Efficiency component is used and the scorer
     reports tier='partial_tier1'. Otherwise the pure Tier 0 formula runs.
     """
-    peers = [p for p in roster if in_peer_set(s, p)]
     notes: list[str] = []
+    # Try same-region peers first (tighter, more honest comparison). Fall back
+    # to cross-region peers when the regional bucket is too thin to be
+    # statistically meaningful (< 4 peers).
+    region_label = farm_to_region(s.farm)
+    region_peers = [p for p in roster if in_peer_set(s, p, same_region=True)]
+    if len(region_peers) >= 4:
+        peers = region_peers
+        peer_scope = "region"
+    else:
+        peers = [p for p in roster if in_peer_set(s, p, same_region=False)]
+        peer_scope = "cross-region"
+        if region_peers:
+            notes.append(
+                f"region_peers_too_thin ({len(region_peers)} {region_label} peers; "
+                f"falling back to {len(peers)} cross-region peers in same fee/stage)"
+            )
     if len(peers) < 4:
         notes.append(
             f"insufficient_peer_data (only {len(peers)} peers; "
@@ -876,6 +973,9 @@ def score_commercial_appeal(s: StallionSnapshot,
         peer_group={
             "fee_band": fee_band(s.stud_fee_usd),
             "maturity_stage": maturity_stage(s.entered_stud_year),
+            "region": region_label,
+            "peer_scope": peer_scope,                       # 'region' or 'cross-region'
+            "region_peers_n": len(region_peers),
             "peer_n": len(peers),
         },
         components=components,
