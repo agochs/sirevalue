@@ -62,14 +62,21 @@
       "name":         "Journeyman Stud",
       "url_template": "https://www.journeymanstud.com/stallions/{slug}/",
       "enabled":      false,
-      "_notes":       "Ocala, FL. Notable: Khozan, Brethren."
+      "_notes":       "Ocala, FL. Khozan moved to Ocala Stud for 2026; Uncle Chuck deceased Dec 2023; Chance It relocated to Virginia. Roster effectively dormant — disabled."
+    },
+    {
+      "csv":          "ocalastud-roster.csv",
+      "name":         "Ocala Stud",
+      "url_template": "https://www.ocalastud.com/stallions/{slug}/",
+      "enabled":      true,
+      "_notes":       "Ocala, FL. Florida's dominant stallion farm. 2026 roster of 7 stallions led by Win Win Win ($8.5K) and including Khozan (NEW from Journeyman, Florida's leading sire 2020-2025), Roadster, Colonel Liam, Gretzky the Great (Nyquist son)."
     },
     {
       "csv":          "bridlewood-roster.csv",
       "name":         "Bridlewood Farm",
-      "url_template": "https://bridlewoodfarm.com/stallions/{slug}/",
-      "enabled":      false,
-      "_notes":       "Ocala, FL. Notable: First Samurai, J Boys Echo."
+      "url_template": "https://www.bridlewoodfarm.com/stallions/{slug}/",
+      "enabled":      true,
+      "_notes":       "Ocala, FL. 2026 roster trimmed to 2: Valiant Minister (Candy Ride son, $3.5K) and Tunwoo (Medaglia d'Oro son, $2K). First Samurai retired."
     },
     {
       "csv":          "northview-roster.csv",

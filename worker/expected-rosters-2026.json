@@ -505,6 +505,48 @@
         "Uptown Rythem"
       ]
     },
+    "ocalastud": {
+      "name": "Ocala Stud",
+      "csv": "ocalastud-roster.csv",
+      "announcement_urls": [
+        "https://www.ftboa.com/ocala-stud-announces-2026-stallion-roster-and-fees",
+        "https://www.bloodhorse.com/horse-racing/articles/288614/win-win-win-tops-ocala-stud-roster-all-fees-unchanged",
+        "https://paulickreport.com/news/bloodstock/win-win-win-leads-ocala-studs-2026-roster",
+        "http://www.ocalastud.com/articles/ocala-stud-announces-2026-stallion-roster-and-fees.html"
+      ],
+      "known_changes_2026": [
+        "Florida's dominant stallion farm post-Adena/Harris consolidation; all 2025 fees unchanged for 2026",
+        "Win Win Win: $8.5K, top of roster",
+        "Khozan: NEW arrival from Journeyman ($6K) — Florida's leading general sire every year since 2020 (>$5.6M progeny earnings 2025)",
+        "Gretzky the Great: $3K — Nyquist son, won 2020 Summer Stakes (G1) at Woodbine"
+      ],
+      "expected_names": [
+        "Win Win Win",
+        "Roadster",
+        "Colonel Liam",
+        "Khozan",
+        "Awesome Slew",
+        "Adios Charlie",
+        "Gretzky The Great"
+      ]
+    },
+    "bridlewood": {
+      "name": "Bridlewood Farm",
+      "csv": "bridlewood-roster.csv",
+      "announcement_urls": [
+        "https://www.bridlewoodfarm.com/stallions/"
+      ],
+      "known_changes_2026": [
+        "Trimmed roster: 2 stallions for 2026",
+        "Valiant Minister: $3.5K S&N — Candy Ride son out of Spooky Minister",
+        "Tunwoo: $2K S&N — Medaglia d'Oro son",
+        "First Samurai: retired (was at Claiborne previously, not currently in roster)"
+      ],
+      "expected_names": [
+        "Valiant Minister",
+        "Tunwoo"
+      ]
+    },
     "calumet": {
       "name": "Calumet Farm",
       "csv": "calumet-dryrun.csv",
