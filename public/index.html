@@ -602,9 +602,42 @@ body {
 <script>
 (async function() {
   try {
-    const resp = await fetch('/data/scores.json');
+    const [resp, hResp] = await Promise.all([
+      fetch('/data/scores.json'),
+      fetch('/data/score-history.json').catch(() => null),
+    ]);
     if (!resp.ok) throw new Error(resp.status);
     const data = await resp.json();
+
+    // ---------- Score history → score_change attribute ----------
+    // Compute the longest-window score delta we can find for each stallion
+    // (target: ~12 months for true YoY; fall back to whatever's there).
+    // Surfaces as a small "Δ +X over N mo" badge alongside the score column.
+    let scoreHistory = {};
+    try {
+      if (hResp && hResp.ok) {
+        const hJson = await hResp.json();
+        scoreHistory = hJson.by_stallion || {};
+      }
+    } catch (_e) { /* optional */ }
+    const TODAY = new Date();
+    data.stallions.forEach(s => {
+      const pts = scoreHistory[s.name];
+      if (!pts || pts.length < 2) { s._score_change = null; return; }
+      // Sort by date ascending; pick the OLDEST point as the baseline
+      const sorted = pts.slice().sort((a, b) => (a.date || '').localeCompare(b.date || ''));
+      const first = sorted[0];
+      const last  = sorted[sorted.length - 1];
+      const fdate = new Date(first.date || '');
+      const ldate = new Date(last.date || '');
+      const months = Math.max(0, Math.round((ldate - fdate) / (30 * 86400 * 1000)));
+      s._score_change = {
+        delta:  +(s.score.value - first.score).toFixed(1),
+        months: months,
+        from:   first.score,
+      };
+    });
+
     // Stamp each stallion with its score-rank so the Rank column stays
     // meaningful regardless of how the table is sorted later.
     data.stallions.forEach((s, i) => { s._rank = i + 1; });
@@ -836,7 +869,14 @@ body {
         + '<td>' + s.farm.replace(' Farm','').replace(' Farms','').replace(' Stud','').replace(' (Coolmore America)','') + '</td>'
         + '<td>' + fee + '</td>'
         + '<td>' + s.score.tier.replace(/_/g,' ').replace('tier1 full','Tier 1 (full)').replace('tier1 obs only','Tier 1 (OBS)').replace('commercial appeal','Tier 0') + '</td>'
-        + '<td>' + s.score.value.toFixed(1) + '</td>'
+        + '<td>' + s.score.value.toFixed(1)
+        +   (s.score.uncertainty ? ' <span style="font-size:10px;color:var(--ink-soft);">±' + s.score.uncertainty.toFixed(1) + '</span>' : '')
+        +   ((s._score_change && Math.abs(s._score_change.delta) >= 0.5)
+              ? ' <span style="font-size:10px;color:' + (s._score_change.delta > 0 ? 'var(--good)' : 'var(--weak)') + ';" title="Score change since first snapshot ' + s._score_change.months + ' month(s) ago (target: 12mo YoY when data accumulates)">'
+                + (s._score_change.delta > 0 ? '+' : '') + s._score_change.delta.toFixed(1)
+                + ' /' + (s._score_change.months || '<1') + 'mo</span>'
+              : '')
+        + '</td>'
         + '<td>' + gapHtml + '</td>'
         + '<td><span class="grade ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span></td>'
         + '</tr>';

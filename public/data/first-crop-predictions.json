@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T15:33:42Z",
+  "generated_at": "2026-04-29T15:40:53Z",
   "method": "weighted-comparator-from-similar-stallions-with-pinhook-data",
   "thresholds": {
     "min_pairs_per_comparator": 5,
@@ -174,7 +174,7 @@
       "fee_usd": 7500,
       "entered_stud_year": 2015,
       "year_of_birth": 2010,
-      "value_score": 61.0,
+      "value_score": 60.6,
       "value_grade": "B",
       "comparators": [
         {
@@ -204,19 +204,6 @@
           "median_twoyo_price": 92500
         },
         {
-          "name": "Charlatan",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Speightstown"
-          ],
-          "matched_pairs": 39,
-          "median_return_pct": 66.7,
-          "mean_return_pct": 107.9,
-          "positive_return_pct": 79.5,
-          "median_yearling_price": 110000,
-          "median_twoyo_price": 160000
-        },
-        {
           "name": "Lexitonian",
           "similarity_score": 50,
           "similarity_reasons": [
@@ -228,6 +215,19 @@
           "positive_return_pct": 66.7,
           "median_yearling_price": 26000,
           "median_twoyo_price": 30000
+        },
+        {
+          "name": "Charlatan",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 39,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 107.9,
+          "positive_return_pct": 79.5,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 160000
         }
       ],
       "predicted": {
@@ -280,19 +280,6 @@
           "median_twoyo_price": 92500
         },
         {
-          "name": "Charlatan",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Speightstown"
-          ],
-          "matched_pairs": 39,
-          "median_return_pct": 66.7,
-          "mean_return_pct": 107.9,
-          "positive_return_pct": 79.5,
-          "median_yearling_price": 110000,
-          "median_twoyo_price": 160000
-        },
-        {
           "name": "Lexitonian",
           "similarity_score": 50,
           "similarity_reasons": [
@@ -304,6 +291,19 @@
           "positive_return_pct": 66.7,
           "median_yearling_price": 26000,
           "median_twoyo_price": 30000
+        },
+        {
+          "name": "Charlatan",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 39,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 107.9,
+          "positive_return_pct": 79.5,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 160000
         }
       ],
       "predicted": {
@@ -356,19 +356,6 @@
           "median_twoyo_price": 92500
         },
         {
-          "name": "Charlatan",
-          "similarity_score": 50,
-          "similarity_reasons": [
-            "Half-brothers — share sire Speightstown"
-          ],
-          "matched_pairs": 39,
-          "median_return_pct": 66.7,
-          "mean_return_pct": 107.9,
-          "positive_return_pct": 79.5,
-          "median_yearling_price": 110000,
-          "median_twoyo_price": 160000
-        },
-        {
           "name": "Lexitonian",
           "similarity_score": 50,
           "similarity_reasons": [
@@ -380,6 +367,19 @@
           "positive_return_pct": 66.7,
           "median_yearling_price": 26000,
           "median_twoyo_price": 30000
+        },
+        {
+          "name": "Charlatan",
+          "similarity_score": 50,
+          "similarity_reasons": [
+            "Half-brothers — share sire Speightstown"
+          ],
+          "matched_pairs": 39,
+          "median_return_pct": 66.7,
+          "mean_return_pct": 107.9,
+          "positive_return_pct": 79.5,
+          "median_yearling_price": 110000,
+          "median_twoyo_price": 160000
         }
       ],
       "predicted": {
@@ -643,7 +643,7 @@
       "fee_usd": 7500,
       "entered_stud_year": 2020,
       "year_of_birth": 2015,
-      "value_score": 56.2,
+      "value_score": 56.3,
       "value_grade": "C",
       "comparators": [
         {
@@ -1084,7 +1084,7 @@
       "fee_usd": 2000,
       "entered_stud_year": 2019,
       "year_of_birth": 2015,
-      "value_score": 49.8,
+      "value_score": 49.6,
       "value_grade": "C",
       "comparators": [
         {
@@ -2264,7 +2264,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2020,
       "year_of_birth": 2015,
-      "value_score": 43.1,
+      "value_score": 43.4,
       "value_grade": "C",
       "comparators": [
         {
@@ -3214,7 +3214,7 @@
       "fee_usd": 6500,
       "entered_stud_year": 2023,
       "year_of_birth": 2017,
-      "value_score": 56.6,
+      "value_score": 56.7,
       "value_grade": "C",
       "comparators": [
         {
@@ -3867,7 +3867,7 @@
       "fee_usd": 4000,
       "entered_stud_year": 2019,
       "year_of_birth": 2013,
-      "value_score": 49.5,
+      "value_score": 49.6,
       "value_grade": "C",
       "comparators": [],
       "predicted": null
@@ -3965,7 +3965,7 @@
       "fee_usd": 10000,
       "entered_stud_year": 2013,
       "year_of_birth": 2008,
-      "value_score": 39.6,
+      "value_score": 39.5,
       "value_grade": "D",
       "comparators": [],
       "predicted": null
@@ -4077,7 +4077,7 @@
       "fee_usd": 5000,
       "entered_stud_year": 2011,
       "year_of_birth": 2005,
-      "value_score": 31.8,
+      "value_score": 32.1,
       "value_grade": "D",
       "comparators": [],
       "predicted": null

@@ -517,6 +517,7 @@ def main():
                 "grade": result.grade,
                 "tier": result.tier,
                 "confidence": result.confidence,
+                "uncertainty": result.score_uncertainty,
                 "model_version": result.model_version,
                 "peer_group": result.peer_group,
                 "components": result.components,

@@ -179,6 +179,96 @@ OBS_BY_SIRE: dict[str, dict] = _load_obs_lookup()
 
 
 # ---------------------------------------------------------------------------
+# Time-weighted + cohort-adjusted aggregates  (model improvements #7 + #8)
+# ---------------------------------------------------------------------------
+# The flat `yearling_avg_usd` / `price_avg_usd` per sire weights every sale
+# equally. That hides two things:
+#   1. RECENCY — a 2022 yearling avg is less informative for 2026 scoring than
+#      a 2025 average. We apply exponential decay weight = DECAY^(year_lag).
+#   2. COHORT YEAR EFFECT — a strong 2025 sale season inflates everyone's
+#      average; that's a market-wide move, not a stallion-quality signal. We
+#      subtract the per-year cross-sire MEDIAN before aggregating, so each
+#      sale's contribution is "premium over the year's median."
+#
+# Output attached per-sire: `adjusted_avg_usd` — a recency-weighted, cohort-
+# adjusted estimate, expressed back in dollar units (year-median + premium).
+# Components below use this in place of the flat average for percentile
+# comparison; the flat average is preserved on each record for display.
+
+import re as _re
+RECENCY_DECAY = 0.85  # weight = DECAY ** years_since_sale; tunable
+
+def _extract_year(sale_label: str) -> Optional[int]:
+    if not sale_label:
+        return None
+    m = _re.search(r"\b(20\d{2})\b", sale_label)
+    return int(m.group(1)) if m else None
+
+
+def _add_adjusted_avg(by_sire: dict, price_field: str) -> None:
+    """Compute year_medians, then attach adjusted_avg_usd to every sire
+    record in by_sire (mutates in place). `price_field` is either
+    'yearling_avg_usd' (Keeneland lookup) or 'price_avg_usd' (OBS)."""
+    # Year medians: across all sires, all sales tagged with that year
+    year_to_prices: dict[int, list[float]] = {}
+    for record in {id(r): r for r in by_sire.values()}.values():   # dedup the dual-key alias
+        for h in record.get("sale_history") or []:
+            y = _extract_year(h.get("sale", ""))
+            if y is None:
+                continue
+            price = h.get(price_field) or 0
+            n = h.get("n") or 0
+            # Repeat per-hip so the median reflects per-hip distribution
+            year_to_prices.setdefault(y, []).extend([price] * n)
+    year_median = {}
+    for y, prices in year_to_prices.items():
+        if prices:
+            prices_sorted = sorted(prices)
+            year_median[y] = prices_sorted[len(prices_sorted) // 2]
+
+    # Per-sire: compute year-adjusted, recency-weighted avg
+    seen_records = set()
+    for record in by_sire.values():
+        rid = id(record)
+        if rid in seen_records:
+            continue
+        seen_records.add(rid)
+        history = record.get("sale_history") or []
+        if not history:
+            record["adjusted_avg_usd"] = record.get(price_field)
+            record["year_medians_used"] = {}
+            continue
+        weighted_premium = 0.0   # year-adjusted price premium, weighted
+        weighted_baseline = 0.0  # the year-median baseline, weighted
+        weight_sum = 0.0
+        years_used = {}
+        for h in history:
+            sale = h.get("sale", "")
+            y = _extract_year(sale)
+            n = h.get("n") or 0
+            avg = h.get(price_field) or 0
+            if y is None or n <= 0 or avg <= 0:
+                continue
+            baseline = year_median.get(y, avg)
+            decay_w = RECENCY_DECAY ** max(0, CURRENT_YEAR - y)
+            w = n * decay_w
+            weighted_premium  += (avg - baseline) * w
+            weighted_baseline += baseline * w
+            weight_sum        += w
+            years_used[y] = round(baseline, 2)
+        if weight_sum > 0:
+            record["adjusted_avg_usd"] = round((weighted_premium + weighted_baseline) / weight_sum, 2)
+        else:
+            record["adjusted_avg_usd"] = record.get(price_field)
+        record["year_medians_used"] = years_used
+
+
+# Run the adjustment on both lookups at import time
+_add_adjusted_avg(KEENELAND_BY_SIRE, "yearling_avg_usd")
+_add_adjusted_avg(OBS_BY_SIRE,       "price_avg_usd")
+
+
+# ---------------------------------------------------------------------------
 # Stallion snapshot — the minimum inputs needed to score
 # ---------------------------------------------------------------------------
 
@@ -345,20 +435,22 @@ def component_market_efficiency(
     if not keene:
         return None, {"reason": "no_keeneland_data_for_stallion"}
 
-    yearling_avg = keene["yearling_avg_usd"]
+    yearling_avg     = keene["yearling_avg_usd"]                      # flat-weighted (display)
+    adjusted_avg     = keene.get("adjusted_avg_usd", yearling_avg)    # recency + cohort-adjusted (scoring)
     n = keene["n"]
-    ratio = yearling_avg / s.stud_fee_usd
+    ratio = adjusted_avg / s.stud_fee_usd
 
     # Peer cohort: every stallion in the roster that also has Keeneland data
-    # AND a fee. This is the ONLY peer-ranking that matters for this signal —
-    # fee-band and maturity-stage don't apply here.
+    # AND a fee. We percentile on the SAME adjusted ratio so all comparisons
+    # are apples-to-apples post-recency-decay and post-year-effect.
     peer_ratios = []
     for p in roster:
         if p.stud_fee_usd is None or p.name == s.name:
             continue
         peer_keene = KEENELAND_BY_SIRE.get(p.name) or KEENELAND_BY_SIRE.get(_normalize_lookup_key(p.name))
         if peer_keene:
-            peer_ratios.append(peer_keene["yearling_avg_usd"] / p.stud_fee_usd)
+            p_adj = peer_keene.get("adjusted_avg_usd") or peer_keene["yearling_avg_usd"]
+            peer_ratios.append(p_adj / p.stud_fee_usd)
 
     pct = percentile(ratio, peer_ratios) if peer_ratios else 50.0
 
@@ -371,6 +463,7 @@ def component_market_efficiency(
 
     return pct, {
         "yearling_avg_usd": yearling_avg,
+        "yearling_adjusted_avg_usd": round(adjusted_avg, 2),
         "yearlings_sold_n": n,
         "stud_fee_usd": s.stud_fee_usd,
         "ratio": round(ratio, 2),
@@ -379,6 +472,7 @@ def component_market_efficiency(
             sorted(peer_ratios)[len(peer_ratios) // 2] if peer_ratios else 0, 2
         ),
         "sales_covered": len(sale_history),
+        "year_medians": keene.get("year_medians_used", {}),
         "source": source_summary,
     }
 
@@ -397,9 +491,10 @@ def component_2yo_market_efficiency(
     if not obs:
         return None, {"reason": "no_obs_data_for_stallion"}
 
-    twoyo_avg = obs["price_avg_usd"]
+    twoyo_avg     = obs["price_avg_usd"]                        # flat-weighted (display)
+    adjusted_avg  = obs.get("adjusted_avg_usd", twoyo_avg)      # recency + cohort-adjusted (scoring)
     n = obs["n"]
-    ratio = twoyo_avg / s.stud_fee_usd
+    ratio = adjusted_avg / s.stud_fee_usd
 
     peer_ratios = []
     for p in roster:
@@ -407,7 +502,8 @@ def component_2yo_market_efficiency(
             continue
         peer_obs = OBS_BY_SIRE.get(p.name) or OBS_BY_SIRE.get(_normalize_lookup_key(p.name))
         if peer_obs:
-            peer_ratios.append(peer_obs["price_avg_usd"] / p.stud_fee_usd)
+            p_adj = peer_obs.get("adjusted_avg_usd") or peer_obs["price_avg_usd"]
+            peer_ratios.append(p_adj / p.stud_fee_usd)
 
     pct = percentile(ratio, peer_ratios) if peer_ratios else 50.0
 
@@ -459,6 +555,7 @@ def component_2yo_market_efficiency(
 
     return pct, {
         "twoyo_avg_usd": twoyo_avg,
+        "twoyo_adjusted_avg_usd": round(adjusted_avg, 2),
         "twoyos_sold_n": n,
         "stud_fee_usd": s.stud_fee_usd,
         "ratio": round(ratio, 2),
@@ -467,6 +564,7 @@ def component_2yo_market_efficiency(
             sorted(peer_ratios)[len(peer_ratios) // 2] if peer_ratios else 0, 2
         ),
         "sales_covered": len(sale_history),
+        "year_medians": obs.get("year_medians_used", {}),
         "temporal_shift": temporal_shift,
         "source": source_summary,
     }
@@ -496,9 +594,12 @@ def component_pinhook_efficiency(
     obs = OBS_BY_SIRE.get(s.name) or OBS_BY_SIRE.get(_normalize_lookup_key(s.name))
     if not kee or not obs:
         return None, {"reason": "missing_yearling_or_2yo_data"}
-    yearling_avg = kee.get("yearling_avg_usd") or 0
+    # Use ADJUSTED averages (recency-weighted, year-effect-cancelled) so
+    # the lift ratio reflects stallion quality across cycles, not just the
+    # mix of sale years their progeny happened to be in.
+    yearling_avg = kee.get("adjusted_avg_usd") or kee.get("yearling_avg_usd") or 0
     yearling_n   = kee.get("n") or 0
-    twoyo_avg    = obs.get("price_avg_usd") or 0
+    twoyo_avg    = obs.get("adjusted_avg_usd") or obs.get("price_avg_usd") or 0
     twoyo_n      = obs.get("n") or 0
     if yearling_avg <= 0 or twoyo_avg <= 0:
         return None, {"reason": "zero_average_price"}
@@ -508,7 +609,7 @@ def component_pinhook_efficiency(
     lift_ratio = twoyo_avg / yearling_avg
     lift_pct = (lift_ratio - 1) * 100
 
-    # Peer lift_ratios — for stallions that ALSO have both sale-side data
+    # Peer lift_ratios — same adjusted-vs-adjusted comparison
     peer_lifts = []
     for p in roster:
         if p.name == s.name:
@@ -517,8 +618,8 @@ def component_pinhook_efficiency(
         po = OBS_BY_SIRE.get(p.name) or OBS_BY_SIRE.get(_normalize_lookup_key(p.name))
         if not pk or not po:
             continue
-        py = pk.get("yearling_avg_usd") or 0
-        pt = po.get("price_avg_usd") or 0
+        py = pk.get("adjusted_avg_usd") or pk.get("yearling_avg_usd") or 0
+        pt = po.get("adjusted_avg_usd") or po.get("price_avg_usd") or 0
         py_n = pk.get("n") or 0
         pt_n = po.get("n") or 0
         if py <= 0 or pt <= 0 or min(py_n, pt_n) < 3:
@@ -613,6 +714,28 @@ def letter_grade(score: float) -> str:
     return "F"
 
 
+def score_uncertainty(peers_n: int, kee_n: int, obs_n: int, tier_label: str) -> float:
+    """Estimated 1-sigma uncertainty around the score in points (0..100 scale).
+
+    Heuristic:
+      base 1.5 pts for any score
+      + 4 pts if peer_n < 4 (peer percentile is volatile)
+      + 3 pts if neither market signal is present (Tier 0 — no fact-grounding)
+      + 3 pts if either market signal has n < 5 (small market sample)
+    Capped at 12 pts so the band stays interpretable.
+
+    Surfaces as ±N alongside the score on the UI; lets users see "this is an
+    A but with a 6-point CI vs another A with a 2-point CI." Different grade
+    of conviction in the same letter grade.
+    """
+    u = 1.5
+    if peers_n < 4: u += 4.0
+    if tier_label == "commercial_appeal": u += 3.0
+    if (kee_n and kee_n < 5) or (obs_n and obs_n < 5): u += 3.0
+    if not kee_n and not obs_n: u += 1.5  # no market data at all
+    return round(min(u, 12.0), 1)
+
+
 @dataclass
 class ScoreResult:
     name: str
@@ -623,6 +746,7 @@ class ScoreResult:
     peer_group: dict
     components: dict
     confidence: str
+    score_uncertainty: float = 0.0   # ±N point band around the score
     notes: list[str] = field(default_factory=list)
 
 
@@ -740,12 +864,15 @@ def score_commercial_appeal(s: StallionSnapshot,
     if have_obs and obs_n < 5:
         notes.append(f"obs_small_sample (n={obs_n} 2YOs)")
 
+    uncertainty = score_uncertainty(len(peers), kee_n, obs_n, tier_label)
+
     return ScoreResult(
         name=s.name,
         score=round(score, 1),
         grade=letter_grade(score),
         model_version=MODEL_VERSION,
         tier=tier_label,
+        score_uncertainty=uncertainty,
         peer_group={
             "fee_band": fee_band(s.stud_fee_usd),
             "maturity_stage": maturity_stage(s.entered_stud_year),

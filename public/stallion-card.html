@@ -97,6 +97,7 @@ body {
 .grade-badge.weak { background: linear-gradient(135deg, #a85050, #c76a6a); box-shadow: 0 4px 14px rgba(155, 44, 44, 0.28); }
 .grade-badge.ok { background: linear-gradient(135deg, #8a6a1e, #a68336); box-shadow: 0 4px 14px rgba(165, 124, 31, 0.28); }
 .grade-letter { font-size: 38px; font-weight: 800; line-height: 1; }
+.grade-uncertainty { font-size: 10px; opacity: 0.85; margin-top: 2px; letter-spacing: 0.4px; }
 /* ---------- Watchlist star (mirror of home page) ---------- */
 .star-btn {
   display: inline-block; cursor: pointer; user-select: none;
@@ -1629,6 +1630,56 @@ async function bootSireValue() {
         + '</div>';
     }
 
+    // ---------- Auto-generated prose summary ----------
+    // 2-3 sentence plain-English explanation: what's the strongest signal,
+    // what's the weakest, what should the reader take away. Built from the
+    // same component data the table below shows but interpretable at a glance.
+    var proseHtml = '';
+    var compEntries = Object.keys(c).map(function(k) {
+      return { key: k, pct: (c[k] && c[k].percentile) || 0, weight: (c[k] && c[k].weight) || 0,
+               points: (c[k] && c[k].points) || 0, inputs: c[k] && c[k].inputs };
+    });
+    if (compEntries.length) {
+      compEntries.sort(function(a, b) { return b.points - a.points; });
+      var top = compEntries[0];
+      var bottom = compEntries[compEntries.length - 1];
+      var sentences = [];
+      // Sentence 1: strongest signal
+      var topPctRound = Math.round(top.pct);
+      sentences.push(
+        'Strongest signal: <strong>' + escapeHtml(humanize(top.key)) + '</strong>'
+        + ' at <strong>' + topPctRound + '<sup>th</sup></strong> percentile, contributing '
+        + top.points.toFixed(1) + ' of the ' + sc.value.toFixed(1) + '-point score.'
+      );
+      // Sentence 2: weakest (only if it's actually weak vs strongest)
+      if (compEntries.length >= 2 && (top.pct - bottom.pct) >= 25) {
+        sentences.push(
+          'Weakest: <strong>' + escapeHtml(humanize(bottom.key)) + '</strong>'
+          + ' at the ' + Math.round(bottom.pct) + '<sup>th</sup> percentile.'
+        );
+      }
+      // Sentence 3: tier / data context
+      var hasMarket = !!c.market_efficiency || !!c.twoyo_market_efficiency;
+      var sample = (c.market_efficiency && c.market_efficiency.inputs && c.market_efficiency.inputs.yearlings_sold_n) || 0;
+      var twoyo  = (c.twoyo_market_efficiency && c.twoyo_market_efficiency.inputs && c.twoyo_market_efficiency.inputs.twoyos_sold_n) || 0;
+      if (sc.tier === 'commercial_appeal') {
+        sentences.push(
+          'Score is <strong>fee + pedigree only</strong>; revisit when progeny sales data accumulates.'
+        );
+      } else if (sample < 5 && twoyo < 5) {
+        sentences.push(
+          'Sample sizes are still small (' + sample + ' yearlings, ' + twoyo + ' 2YOs sold); score will firm up as more sales run.'
+        );
+      } else if (sc.uncertainty <= 2) {
+        sentences.push(
+          'Tight uncertainty band (±' + sc.uncertainty.toFixed(1) + ') — high-conviction grade.'
+        );
+      }
+      proseHtml = '<div class="notable-signal" style="font-style:italic;">'
+        + sentences.join(' ')
+        + '</div>';
+    }
+
     return ''
       + '<div class="headline">'
       +   '<div class="headline-row">'
@@ -1639,6 +1690,7 @@ async function bootSireValue() {
       +   (notableHtml ? '<div class="notable-signal">' + notableHtml + '</div>'      : '')
       +   gapHtml
       +   sireLineHtml
+      +   proseHtml
       + '</div>';
   }
 
@@ -1778,6 +1830,7 @@ async function bootSireValue() {
       +   '<div class="grade-badge ' + gradeClass(sc.grade) + '">'
       +     '<div class="grade-letter">' + escapeHtml(sc.grade) + '</div>'
       +     '<div class="grade-score">' + sc.value.toFixed(1) + ' / 100</div>'
+      +     (sc.uncertainty ? '<div class="grade-uncertainty">±' + sc.uncertainty.toFixed(1) + '</div>' : '')
       +   '</div>'
       + '</div>'
       + '<div class="key-stats">' + statsHtml + '</div>'
