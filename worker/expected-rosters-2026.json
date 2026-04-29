@@ -439,6 +439,72 @@
         "Title Ready"
       ]
     },
+    "sequel": {
+      "name": "Sequel Stallions New York",
+      "csv": "sequel-roster.csv",
+      "announcement_urls": [
+        "https://www.sequelnewyork.com/",
+        "https://www.nytbreeders.org/news/2026/01/21/sequel-new-york-stallion-show-and-open-house-set-for-saturday/"
+      ],
+      "known_changes_2026": [
+        "Honest Mischief: $7.5K LFSN — by Into Mischief, NY's commercial entry",
+        "Mullion: $5K LFSN",
+        "Newgrange: $5K LFSN — by Violence, won 2022 San Vicente Stakes (G3)"
+      ],
+      "expected_names": [
+        "Honest Mischief",
+        "Mullion",
+        "Newgrange"
+      ]
+    },
+    "mcmahon": {
+      "name": "McMahon of Saratoga Thoroughbreds",
+      "csv": "mcmahon-roster.csv",
+      "announcement_urls": [
+        "https://www.mcmahonthoroughbreds.com/post/mcmahon-of-saratoga-thoroughbreds-introduces-showcase-to-the-2026-stallion-roster",
+        "https://www.thoroughbreddailynews.com/mcmahon-of-saratoga-adds-showcase-to-2026-stallion-roster/",
+        "https://www.bloodhorse.com/horse-racing/articles/288626/showcase-to-enter-stud-at-mcmahon-of-saratoga"
+      ],
+      "known_changes_2026": [
+        "Central Banker: multiple-time NY leading sire, returns at ~$7.5K",
+        "Solomini: nationally ranked third-crop sire, returns at ~$7.5K",
+        "Provocateur: G1-placed",
+        "Showcase: NEW 2026 freshman ($5K) — by Uncle Mo, G2 stakes winner"
+      ],
+      "expected_names": [
+        "Central Banker",
+        "Solomini",
+        "Provocateur",
+        "Showcase"
+      ]
+    },
+    "rancho": {
+      "name": "Rancho San Miguel",
+      "csv": "rancho-roster.csv",
+      "announcement_urls": [
+        "https://ranchosanmiguel.net/three-rancho-san-miguel-stallions-among-californias-early-2026-leaders/",
+        "https://ranchosanmiguel.net/collected-and-eight-rings-to-stand-at-rancho-san-miguel-in-2026/",
+        "https://www.bloodhorse.com/horse-racing/articles/288508/collected-relocates-to-california-at-rancho-san-miguel"
+      ],
+      "known_changes_2026": [
+        "Largest CA-based stallion farm following Harris Farms' November 2025 closure",
+        "Collected: NEW arrival from Airdrie KY ($7.5K LFSN) — #1 California sire by 2025 progeny earnings",
+        "Eight Rings: NEW arrival from Harris Farms ($6K LFSN) — G1 winner",
+        "Uptown Rythem: NEW arrival from Harris Farms ($1.5K LFSN)",
+        "Mo Forza, Sir Prancealot (Ire) returning"
+      ],
+      "expected_names": [
+        "Collected",
+        "Editorial",
+        "Eight Rings",
+        "Mo Forza",
+        "Niagara Falls",
+        "Northern Causeway",
+        "Sir Prancealot (Ire)",
+        "The Street Fighter",
+        "Uptown Rythem"
+      ]
+    },
     "calumet": {
       "name": "Calumet Farm",
       "csv": "calumet-dryrun.csv",
