@@ -1,0 +1,48 @@
+{
+  "generated_at": null,
+  "model_version": "vs-1.3-nybred-nightly",
+  "method": "OLS regression of realized pinhook lift on component percentiles, weights \u22650 + renormalized to 100",
+  "sample": {
+    "n": 92
+  },
+  "components": [
+    "market_efficiency",
+    "twoyo_market_efficiency",
+    "pinhook_efficiency",
+    "pedigree_prestige",
+    "fee_band_position",
+    "maturity_context"
+  ],
+  "current_weights": [
+    20,
+    15,
+    15,
+    22,
+    18,
+    10
+  ],
+  "tuned_weights": [
+    0.0,
+    98.7,
+    0.0,
+    1.3,
+    0.0,
+    0.0
+  ],
+  "comparison": {
+    "in_sample_r2_current": 0.108,
+    "in_sample_r2_tuned": 0.436,
+    "uplift": 0.328
+  },
+  "raw_regression": {
+    "intercept": 2.505,
+    "raw_betas": [
+      -0.042,
+      0.058,
+      -0.003,
+      0.001,
+      -0.004,
+      -0.015
+    ]
+  }
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SireValue — Grade Calibration</title>
+<meta property="og:title" content="SireValue — Grade Calibration"/>
+<meta property="og:description" content="Do higher-graded stallions actually outperform? Per-grade realized pinhook lift, yearling ratio, and 2YO ratio."/>
+<style>
+:root {
+  --ink: #0d1b2a; --ink-soft: #415a77;
+  --cream: #fdfbf4; --card: #ffffff;
+  --gold: #b8860b; --gold-soft: #d4a147;
+  --rule: #e0d9c6; --good: #2f855a; --ok: #a57c1f; --weak: #9b2c2c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream); color: var(--ink);
+  line-height: 1.45; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+.masthead {
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.masthead .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 26px; font-weight: 700; letter-spacing: 0.5px;
+}
+.masthead .brand a { color: var(--ink); text-decoration: none; }
+.masthead .tagline {
+  font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.5px;
+}
+.home-link { display: inline-block; margin-bottom: 16px; font-size: 13px; color: var(--ink-soft); text-decoration: none; }
+.home-link:hover { color: var(--ink); }
+.hero {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 22px 26px; margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 24px; margin: 0 0 8px; font-weight: 700;
+}
+.hero p { margin: 0 0 6px; font-size: 14px; color: var(--ink-soft); max-width: 78ch; }
+
+.section-title {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--ink-soft); margin: 26px 0 12px; font-weight: 600;
+}
+.callout {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 16px 20px; margin-bottom: 22px; font-size: 14px;
+}
+.callout.good { border-left: 4px solid var(--good); }
+.callout.warn { border-left: 4px solid var(--weak); }
+.callout strong { font-weight: 700; }
+
+table {
+  width: 100%; border-collapse: collapse; background: var(--card);
+  border: 1px solid var(--rule); border-radius: 10px; overflow: hidden;
+  margin-bottom: 22px;
+}
+thead th {
+  text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--ink-soft); font-weight: 700; padding: 10px 12px;
+  background: #f8f4e8; border-bottom: 1px solid var(--rule);
+}
+thead th.num { text-align: right; }
+tbody td { padding: 10px 12px; border-bottom: 1px solid var(--rule); font-size: 13px; }
+tbody td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr.empty td { color: var(--ink-soft); font-style: italic; }
+.grade-cell {
+  display: inline-block; padding: 2px 7px; border-radius: 3px; font-weight: 700;
+  font-size: 11px; min-width: 24px; text-align: center; color: #fff;
+}
+.grade-cell.A_p { background: linear-gradient(135deg, var(--gold), var(--gold-soft)); }
+.grade-cell.A   { background: linear-gradient(135deg, var(--gold), var(--gold-soft)); }
+.grade-cell.B   { background: #c4a356; }
+.grade-cell.C   { background: #a68b3d; }
+.grade-cell.D   { background: #8a6a1e; }
+.grade-cell.F   { background: #a85050; }
+
+.bar-chart {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 18px 22px; margin-bottom: 18px;
+}
+.bar-chart h3 {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 16px; margin: 0 0 4px; font-weight: 700;
+}
+.bar-chart .sub { font-size: 12px; color: var(--ink-soft); margin-bottom: 12px; }
+.bar-row {
+  display: grid; grid-template-columns: 36px 1fr auto; gap: 12px;
+  align-items: center; padding: 5px 0;
+}
+.bar-row .grade-tag {
+  display: inline-block; padding: 2px 6px; border-radius: 3px; font-weight: 700;
+  font-size: 11px; text-align: center; color: #fff;
+}
+.bar-row .bar {
+  background: #f7f3e6; border-radius: 4px; overflow: hidden; height: 22px; position: relative;
+}
+.bar-row .bar-fill {
+  background: linear-gradient(90deg, var(--gold-soft), var(--gold));
+  height: 100%; transition: width 0.3s;
+}
+.bar-row .bar-row-val {
+  font-family: "Iowan Old Style", Georgia, serif; font-weight: 700;
+  font-size: 14px; min-width: 60px; text-align: right;
+}
+.bar-row.empty .bar { opacity: 0.3; }
+
+.footer { margin-top: 30px; font-size: 11px; color: var(--ink-soft); text-align: center; }
+.footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="masthead">
+    <div class="brand"><a href="/">SireValue</a></div>
+    <div class="tagline">Grade Calibration</div>
+  </div>
+  <a href="/" class="home-link">← Home</a>
+
+  <div class="hero">
+    <h1>Calibration · do A-grade stallions actually outperform?</h1>
+    <p>For each letter grade, this page aggregates the realized performance signals across the stallions in that bucket. If the model is well-calibrated, each lower grade should show meaningfully <em>lower</em> realized pinhook lift, yearling ratio, and 2YO ratio than the next higher grade. If two adjacent grades converge, the cutoffs are conflating real differences.</p>
+    <p style="margin-top:8px;"><strong>This page is the model's accountability layer.</strong> It shows whether the score is doing the work it claims.</p>
+  </div>
+
+  <div id="callout-area"></div>
+
+  <div class="section-title">Per-grade aggregates</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Grade</th>
+        <th class="num">n</th>
+        <th class="num">Score range</th>
+        <th class="num">Pinhook lift (realized)</th>
+        <th class="num">Yearling ratio</th>
+        <th class="num">2YO ratio</th>
+      </tr>
+    </thead>
+    <tbody id="grade-rows"><tr class="empty"><td colspan="6">Loading…</td></tr></tbody>
+  </table>
+
+  <div class="section-title">Bar charts</div>
+  <div class="bar-chart">
+    <h3>Realized pinhook lift (mean)</h3>
+    <div class="sub">Yearling-to-2YO appreciation ratio. Only stallions with ≥3 realized 2YO sales contribute. Higher = stallion's foals appreciate more.</div>
+    <div id="bars-lift"></div>
+  </div>
+  <div class="bar-chart">
+    <h3>Yearling ratio (mean)</h3>
+    <div class="sub">Yearling avg ÷ stud fee. Higher = market pays more per fee dollar.</div>
+    <div id="bars-yrl"></div>
+  </div>
+  <div class="bar-chart">
+    <h3>2YO ratio (mean)</h3>
+    <div class="sub">2YO avg ÷ stud fee. Higher = strongest mid-cycle returns.</div>
+    <div id="bars-twoyo"></div>
+  </div>
+
+  <div class="section-title">Out-of-sample predictive accuracy</div>
+  <div id="backtest-area">Loading…</div>
+
+  <div class="section-title">Weight tuning (research)</div>
+  <div id="tuning-area">Loading…</div>
+
+  <div class="footer">
+    <span>Source: <code>scores.json</code> + <code>calibration.json</code> + <code>backtest.json</code> · Methodology: <a href="/methodology.html">overview</a></span>
+  </div>
+
+</div>
+
+<script>
+(async function() {
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function gradeCellCls(g) {
+    return g === 'A+' ? 'A_p' : g;
+  }
+  function fmt(v, decimals) {
+    if (v == null || isNaN(v)) return '—';
+    return v.toFixed(decimals != null ? decimals : 2);
+  }
+
+  let data;
+  try {
+    const resp = await fetch('/data/calibration.json');
+    if (!resp.ok) throw new Error('status ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    document.getElementById('grade-rows').innerHTML =
+      '<tr class="empty"><td colspan="6">Failed to load: ' + escapeHtml(e.message) + '</td></tr>';
+    return;
+  }
+
+  // Callout: monotonic violations
+  const violations = (data.summary && data.summary.monotonic_violations) || [];
+  const ca = document.getElementById('callout-area');
+  if (violations.length === 0) {
+    ca.innerHTML = '<div class="callout good">'
+      + '✓ <strong>Model is well-calibrated</strong> on realized pinhook lift — each lower grade shows lower mean lift than the previous. The score is doing the work it claims to.'
+      + '</div>';
+  } else {
+    let body = '<div class="callout warn">'
+      + '⚠ <strong>' + violations.length + ' calibration violation' + (violations.length === 1 ? '' : 's') + '</strong> on pinhook lift means:'
+      + '<ul style="margin:8px 0 0;padding-left:20px;font-size:13px;">';
+    violations.forEach(v => {
+      body += '<li>' + escapeHtml(v.violation) + '</li>';
+    });
+    body += '</ul></div>';
+    ca.innerHTML = body;
+  }
+
+  // Per-grade table
+  const rows = data.grades.map(g => {
+    if (!g.n) {
+      return '<tr class="empty"><td><span class="grade-cell ' + gradeCellCls(g.grade) + '">' + g.grade + '</span></td>'
+        + '<td class="num">0</td><td colspan="4">no stallions</td></tr>';
+    }
+    const range = g.score_min != null && g.score_max != null
+      ? g.score_min.toFixed(1) + '–' + g.score_max.toFixed(1)
+      : '—';
+    return '<tr>'
+      + '<td><span class="grade-cell ' + gradeCellCls(g.grade) + '">' + g.grade + '</span></td>'
+      + '<td class="num">' + g.n + '</td>'
+      + '<td class="num">' + range + '</td>'
+      + '<td class="num">' + fmt(g.lift_mean) + '<span style="font-size:10px;color:var(--ink-soft);font-family:inherit;font-weight:400;">  (n=' + (g.n_with_pinhook || 0) + ')</span></td>'
+      + '<td class="num">' + fmt(g.yrl_ratio_mean) + '</td>'
+      + '<td class="num">' + fmt(g.twoyo_ratio_mean) + '</td>'
+      + '</tr>';
+  }).join('');
+  document.getElementById('grade-rows').innerHTML = rows;
+
+  // Bar charts
+  function bars(key, scale) {
+    return data.grades.map(g => {
+      const v = g[key];
+      const empty = (v == null || !g.n);
+      const w = empty ? 0 : Math.max(2, Math.min(100, (v / scale) * 100));
+      return '<div class="bar-row' + (empty ? ' empty' : '') + '">'
+        + '<span class="grade-tag grade-cell ' + gradeCellCls(g.grade) + '">' + g.grade + '</span>'
+        + '<div class="bar"><div class="bar-fill" style="width:' + w + '%;"></div></div>'
+        + '<div class="bar-row-val">' + (empty ? '—' : v.toFixed(2)) + '</div>'
+        + '</div>';
+    }).join('');
+  }
+
+  // Pick scales as max in each metric for a clean visual
+  const liftMax = Math.max(...data.grades.map(g => g.lift_mean || 0)) || 1;
+  const yrlMax  = Math.max(...data.grades.map(g => g.yrl_ratio_mean || 0)) || 1;
+  const twoMax  = Math.max(...data.grades.map(g => g.twoyo_ratio_mean || 0)) || 1;
+
+  document.getElementById('bars-lift').innerHTML  = bars('lift_mean', liftMax * 1.1);
+  document.getElementById('bars-yrl').innerHTML   = bars('yrl_ratio_mean', yrlMax * 1.1);
+  document.getElementById('bars-twoyo').innerHTML = bars('twoyo_ratio_mean', twoMax * 1.1);
+
+  // ---------- Backtest (out-of-sample prediction) ----------
+  try {
+    const btResp = await fetch('/data/backtest.json');
+    if (!btResp.ok) throw new Error('status ' + btResp.status);
+    const bt = await btResp.json();
+    const sm = bt.summary || {};
+    let cls = 'good';
+    let verdict = '';
+    if (sm.score_beats_fee && sm.score_beats_mean) {
+      cls = 'good';
+      verdict = '✓ <strong>Score outperforms BOTH baselines</strong> on leave-one-out out-of-sample prediction. The multi-component model adds genuine predictive power above simple fee or mean heuristics.';
+    } else if (sm.score_beats_mean) {
+      cls = 'warn';
+      verdict = '⚠ <strong>Score beats predict-the-mean but loses to predict-by-fee alone.</strong> The model is doing some work (R² vs mean = ' + (sm.r2_vs_mean_score || 0).toFixed(3) + '), but a single-variable regression on log(fee) achieves R² = ' + (sm.r2_vs_mean_fee || 0).toFixed(3) + '. Improvement path: backtest-tune the component weights (currently heuristic) to maximize predictive lift over fee.';
+    } else {
+      cls = 'warn';
+      verdict = '✗ <strong>Score does NOT beat baselines</strong> on out-of-sample prediction. Model needs retuning.';
+    }
+    document.getElementById('backtest-area').innerHTML =
+      '<div class="callout ' + cls + '">' + verdict
+      + '<table style="margin-top:14px;">'
+      + '<thead><tr><th>Predictor</th><th class="num">RMSE (lower is better)</th><th class="num">R² vs mean (higher is better)</th></tr></thead>'
+      + '<tbody>'
+      + '<tr><td>Predict the global mean</td><td class="num">' + (sm.rmse_predict_mean || 0).toFixed(3) + '</td><td class="num">0.000 (baseline)</td></tr>'
+      + '<tr><td>Predict by log(fee) alone</td><td class="num">' + (sm.rmse_predict_fee || 0).toFixed(3) + '</td><td class="num">' + (sm.r2_vs_mean_fee || 0).toFixed(3) + '</td></tr>'
+      + '<tr><td><strong>Predict by score (the model)</strong></td><td class="num"><strong>' + (sm.rmse_predict_score || 0).toFixed(3) + '</strong></td><td class="num"><strong>' + (sm.r2_vs_mean_score || 0).toFixed(3) + '</strong></td></tr>'
+      + '</tbody></table>'
+      + '<div style="margin-top:8px;font-size:11px;color:var(--ink-soft);">'
+      + 'Method: leave-one-out cross-validation on n=' + (sm.n || 0) + ' stallions with realized pinhook lift (twoyo_n ≥ 3). MAE of model: ' + (sm.mae_predict_score || 0).toFixed(3) + '.'
+      + '</div>'
+      + '</div>';
+  } catch (e) {
+    document.getElementById('backtest-area').innerHTML =
+      '<div class="callout warn">Backtest data unavailable: ' + escapeHtml(e.message) + '</div>';
+  }
+
+  // ---------- Weight tuning ----------
+  try {
+    const wtResp = await fetch('/data/weight-tuning.json');
+    if (!wtResp.ok) throw new Error('status ' + wtResp.status);
+    const wt = await wtResp.json();
+    const comp = wt.comparison || {};
+    let body = '<div class="callout">'
+      + '<strong>Research result:</strong> a regression that picks the optimal weights for predicting realized pinhook lift collapses to ~99% on <code>twoyo_market_efficiency</code> alone. In-sample R² jumps from '
+      + (comp.in_sample_r2_current || 0).toFixed(3) + ' to ' + (comp.in_sample_r2_tuned || 0).toFixed(3) + '.'
+      + '<p style="margin-top:8px;font-size:13px;">'
+      + 'Why we don\'t adopt these tuned weights: pinhook lift is partially tautological with the 2YO ratio (lift = twoyo_avg/yearling_avg). Tuning to pinhook lift just discovers that. The current heuristic weights are kept because they balance multiple value dimensions; tuning to a single outcome would erase that balance.'
+      + '</p>'
+      + '<table style="margin-top:14px;">'
+      + '<thead><tr><th>Component</th><th class="num">Current weight</th><th class="num">Tuned (research only)</th><th class="num">Δ</th></tr></thead>'
+      + '<tbody>';
+    for (let i = 0; i < (wt.components || []).length; i++) {
+      const cur = wt.current_weights[i];
+      const tun = wt.tuned_weights[i];
+      const delta = tun - cur;
+      const cls = delta > 0 ? 'good' : (delta < 0 ? 'weak' : 'soft');
+      body += '<tr><td>' + escapeHtml(wt.components[i]) + '</td>'
+        + '<td class="num">' + cur.toFixed(1) + '%</td>'
+        + '<td class="num">' + tun.toFixed(1) + '%</td>'
+        + '<td class="num" style="color:var(--' + cls + ');">' + (delta >= 0 ? '+' : '') + delta.toFixed(1) + '</td>'
+        + '</tr>';
+    }
+    body += '</tbody></table>'
+      + '<div style="margin-top:8px;font-size:11px;color:var(--ink-soft);">'
+      + 'Path forward: multi-target tuning (separate weight sets for pinhook prediction vs holistic value vs race-win prediction). Requires race-result data to expand the target variables. Sample n=' + (wt.sample && wt.sample.n || 0) + '.'
+      + '</div>'
+      + '</div>';
+    document.getElementById('tuning-area').innerHTML = body;
+  } catch (e) {
+    document.getElementById('tuning-area').innerHTML =
+      '<div class="callout warn">Weight-tuning data unavailable: ' + escapeHtml(e.message) + '</div>';
+  }
+})();
+</script>
+</body>
+</html>
