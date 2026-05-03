@@ -586,10 +586,11 @@ body {
           <th data-sort="tier"><span class="lbl">Tier</span><span class="arrow">▼</span></th>
           <th data-sort="score"><span class="lbl">Score</span><span class="arrow">▼</span></th>
           <th data-sort="value_gap" title="Score minus the median score of all stallions in the same fee band. Positive = better than peers at the same price (undervalued)."><span class="lbl">Value Gap</span><span class="arrow">▼</span></th>
+          <th data-sort="pred_lift" title="Score v2: regression-predicted yearling→2YO pinhook lift %. LOO R²≈0.71 vs realized lift. Negative coefficient on market_efficiency surfaces 'expensive yearling, doesn't appreciate' pattern."><span class="lbl">Pred Lift</span><span class="arrow">▼</span></th>
           <th data-sort="grade"><span class="lbl">Grade</span><span class="arrow">▼</span></th>
         </tr>
       </thead>
-      <tbody id="leaderboard-body"><tr><td colspan="8" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
+      <tbody id="leaderboard-body"><tr><td colspan="9" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
     </table>
   </div>
 
@@ -602,12 +603,27 @@ body {
 <script>
 (async function() {
   try {
-    const [resp, hResp] = await Promise.all([
+    const [resp, hResp, v2Resp] = await Promise.all([
       fetch('/data/scores.json'),
       fetch('/data/score-history.json').catch(() => null),
+      fetch('/data/score-v2.json').catch(() => null),
     ]);
     if (!resp.ok) throw new Error(resp.status);
     const data = await resp.json();
+
+    // ---------- Score v2: regression-fit predicted pinhook lift ----------
+    // Loads per-stallion predictions; surfaces as a sortable column.
+    let v2ByName = {};
+    try {
+      if (v2Resp && v2Resp.ok) {
+        const v2 = await v2Resp.json();
+        (v2.predictions || []).forEach(r => { v2ByName[r.name] = r; });
+      }
+    } catch (_e) { /* optional */ }
+    data.stallions.forEach(s => {
+      const pred = v2ByName[s.name];
+      s._v2 = (pred && pred.predicted_lift_pct != null) ? pred : null;
+    });
 
     // ---------- Score history → score_change attribute ----------
     // Compute the longest-window score delta we can find for each stallion
@@ -878,6 +894,18 @@ body {
               : '')
         + '</td>'
         + '<td>' + gapHtml + '</td>'
+        + '<td>' + (s._v2
+              ? (() => {
+                  const v = s._v2.predicted_lift_pct;
+                  const cls  = v > 50 ? 'good' : (v < 0 ? 'weak' : 'soft');
+                  const sign = v > 0 ? '+' : '';
+                  const colorMap = { good: 'var(--good)', weak: 'var(--weak)', soft: 'var(--ink)' };
+                  const flagged = (s._v2.imputed_components && s._v2.imputed_components.length)
+                    ? ' <span style="font-size:10px;color:var(--ink-soft);" title="Some components imputed at 50th pct (' + s._v2.imputed_components.join(', ') + ') — prediction less reliable">~</span>'
+                    : '';
+                  return '<span style="color:' + colorMap[cls] + ';font-weight:600">' + sign + v.toFixed(0) + '%</span>' + flagged;
+                })()
+              : '<span style="color:var(--ink-soft)">—</span>') + '</td>'
         + '<td><span class="grade ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span></td>'
         + '</tr>';
     }
@@ -1076,6 +1104,7 @@ body {
         case 'tier':      return TIER_RANK[s.score.tier] != null ? TIER_RANK[s.score.tier] : 99;
         case 'score':     return s.score.value != null ? s.score.value : -1;
         case 'value_gap': return s._value_gap != null ? s._value_gap : -999; // unknowns last
+        case 'pred_lift': return s._v2 ? s._v2.predicted_lift_pct : -999;
         case 'grade':     return GRADE_RANK[s.score.grade] != null ? GRADE_RANK[s.score.grade] : 99;
         default:          return 0;
       }
@@ -1122,7 +1151,7 @@ body {
       const sorted = sortStallions(slice);
       const rows = sorted.map(rowHtml).join('');
       document.getElementById('leaderboard-body').innerHTML = rows ||
-        '<tr><td colspan="8" style="padding:30px;text-align:center;color:var(--ink-soft)">No matches. Try a different query.</td></tr>';
+        '<tr><td colspan="9" style="padding:30px;text-align:center;color:var(--ink-soft)">No matches. Try a different query.</td></tr>';
       document.getElementById('smart-pills').innerHTML =
         pills.map(p => '<span class="pill">' + p + '</span>').join('');
       updateSortIndicators();

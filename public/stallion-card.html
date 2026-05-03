@@ -133,6 +133,24 @@ body {
 .headline .notable-signal { margin-top: 4px; }
 .headline .notable-signal .up   { color: #275731; font-weight: 700; }
 .headline .notable-signal .down { color: #7a1d1d; font-weight: 700; }
+/* ---------- Score v2 (regression-fit predicted lift) ---------- */
+.v2-block {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 14px 18px; margin: 10px 0;
+}
+.v2-block .head {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--ink-soft); font-weight: 700; margin-bottom: 8px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;
+}
+.v2-block .head .meta { font-weight: 400; font-size: 10px; }
+.v2-block .head-row {
+  display: flex; align-items: baseline; gap: 8px; padding: 4px 0;
+  font-size: 13px;
+}
+.v2-block .head-row .label { color: var(--ink-soft); font-size: 12px; min-width: 75px; }
+.v2-block .head-row .value { font-family: "Iowan Old Style", Georgia, serif; font-weight: 700; font-size: 17px; }
+.v2-block .head-row .meta  { font-size: 11px; color: var(--ink-soft); }
 /* ---------- Progeny stakes wins ---------- */
 .stakes-block {
   background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
@@ -749,9 +767,10 @@ async function bootSireValue() {
   var hipPinhooks = {};
   var firstCropPredictions = {};
   var stakesBySire = {};
+  var v2Predictions = {};
   function normName(n) { return (n || '').toLowerCase().replace(/\s+\([^)]+\)\s*$/, '').trim(); }
   try {
-    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp, hpResp, fcResp, stResp] = await Promise.all([
+    var [sResp, bResp, uResp, rResp, simResp, histResp, idxResp, hpResp, fcResp, stResp, v2Resp] = await Promise.all([
       fetch('/data/progeny-sires-2025.json'),
       fetch('/data/progeny-bms-2026.json'),
       fetch('/data/upcoming-sales.json'),
@@ -762,6 +781,7 @@ async function bootSireValue() {
       fetch('/data/hip-pinhooks.json'),
       fetch('/data/first-crop-predictions.json'),
       fetch('/data/stakes-results.json').catch(function() { return null; }),
+      fetch('/data/score-v2.json').catch(function() { return null; }),
     ]);
     if (sResp.ok) {
       var sJson = await sResp.json();
@@ -824,6 +844,10 @@ async function bootSireValue() {
       var stJson = await stResp.json();
       stakesBySire = stJson.by_sire || {};
     }
+    if (v2Resp && v2Resp.ok) {
+      var v2Json = await v2Resp.json();
+      (v2Json.predictions || []).forEach(function(r) { v2Predictions[r.name] = r; });
+    }
   } catch (_e) { /* all of these are optional enrichments */ }
 
   function money(n) { return n == null ? null : '$' + n.toLocaleString(); }
@@ -843,6 +867,57 @@ async function bootSireValue() {
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
+  }
+
+  function renderScoreV2(s) {
+    // Score v2 is a regression-fit prediction layer that's separate from the
+    // main additive score. It directly predicts realized pinhook lift from
+    // log(fee) + 7 component percentiles. LOO R²≈0.71 vs additive's R²≈0.07.
+    var pred = v2Predictions[s.name];
+    if (!pred || pred.predicted_lift_pct == null) return '';
+    var pct = pred.predicted_lift_pct;
+    var sign = pct > 0 ? '+' : '';
+    var cls = pct > 50 ? 'up' : (pct < 0 ? 'down' : 'flat');
+    var clsToColor = { up: 'var(--good)', down: 'var(--weak)', flat: 'var(--ink-soft)' };
+    var imputed = pred.imputed_components || [];
+    var imputedHtml = imputed.length
+      ? '<div style="font-size:11px;color:var(--ink-soft);margin-top:4px;">Components imputed at 50th pct: '
+        + imputed.map(escapeHtml).join(', ')
+        + ' — prediction less reliable for this stallion.</div>'
+      : '';
+    var extrapHtml = pred.extrapolation_flag
+      ? '<div style="font-size:11px;color:var(--weak);margin-top:4px;">Extrapolation: model predicted '
+        + (pred.raw_unclamped_lift != null ? ((pred.raw_unclamped_lift - 1) * 100).toFixed(1) + '%' : '—')
+        + ' (out-of-distribution). Clamped to '
+        + pred.predicted_lift_pct.toFixed(1) + '%. Stallion is far from training-set norms — interpret with caution.</div>'
+      : '';
+    var realizedHtml = '';
+    if (pred.realized_lift != null) {
+      var r = (pred.realized_lift - 1) * 100;
+      var d = pred.delta_realized_minus_predicted != null ? (pred.delta_realized_minus_predicted * 100) : null;
+      var dCls = d == null ? '' : (d > 50 ? 'up' : (d < -50 ? 'down' : 'flat'));
+      realizedHtml = ''
+        + '<div class="head-row">'
+        + '  <span class="label">Realized:</span>'
+        + '  <span class="value">' + (r > 0 ? '+' : '') + r.toFixed(1) + '%</span>'
+        + (d != null ? '  <span class="meta" style="color:' + clsToColor[dCls] + ';">(realized − predicted = ' + (d > 0 ? '+' : '') + d.toFixed(1) + ' pts)</span>' : '')
+        + '</div>';
+    } else {
+      realizedHtml = '<div class="head-row"><span class="meta">Forecast — no realized data yet (typically first-crop or pre-2YO sire)</span></div>';
+    }
+    return ''
+      + '<div class="v2-block">'
+      +   '<div class="head"><span>Score v2 · regression-predicted pinhook lift</span>'
+      +       '<span class="meta">model: log(fee) + 7 components, LOO R²=0.71</span></div>'
+      +   '<div class="head-row">'
+      +     '<span class="label">Predicted:</span>'
+      +     '<span class="value" style="color:' + clsToColor[cls] + ';">' + sign + pct.toFixed(1) + '%</span>'
+      +     '<span class="meta">yearling → 2YO appreciation</span>'
+      +   '</div>'
+      +   realizedHtml
+      +   imputedHtml
+      +   extrapHtml
+      + '</div>';
   }
 
   function renderStakes(s) {
@@ -1835,6 +1910,7 @@ async function bootSireValue() {
       + '</div>'
       + '<div class="key-stats">' + statsHtml + '</div>'
       + renderHeadline(s)
+      + renderScoreV2(s)
       + renderStakes(s)
       + renderRoi(s)
       + renderPinhook(s)

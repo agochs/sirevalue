@@ -1,0 +1,2813 @@
+{
+  "generated_at": null,
+  "model_version": "vs-1.3-nybred-nightly",
+  "method": "OLS regression of realized pinhook lift on log(fee) + 7 component percentiles",
+  "n_training": 92,
+  "n_predicted": 189,
+  "features": [
+    "log_fee",
+    "market_efficiency",
+    "twoyo_market_efficiency",
+    "pinhook_efficiency",
+    "pedigree_prestige",
+    "fee_band_position",
+    "maturity_context",
+    "book_demand"
+  ],
+  "coefficients": [
+    {
+      "feature": "intercept",
+      "beta": 1.9072
+    },
+    {
+      "feature": "log_fee",
+      "beta": 0.0506
+    },
+    {
+      "feature": "market_efficiency",
+      "beta": -0.0429
+    },
+    {
+      "feature": "twoyo_market_efficiency",
+      "beta": 0.0629
+    },
+    {
+      "feature": "pinhook_efficiency",
+      "beta": -0.0038
+    },
+    {
+      "feature": "pedigree_prestige",
+      "beta": 0.0009
+    },
+    {
+      "feature": "fee_band_position",
+      "beta": -0.0027
+    },
+    {
+      "feature": "maturity_context",
+      "beta": -0.0103
+    },
+    {
+      "feature": "book_demand",
+      "beta": -0.0082
+    }
+  ],
+  "fit_quality": {
+    "in_sample_r2": 0.774,
+    "leave_one_out_r2": 0.708,
+    "rmse_loo": 0.982
+  },
+  "predictions": [
+    {
+      "name": "Corniche",
+      "predicted_lift": 2.75,
+      "predicted_lift_pct": 175.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.16,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.41
+    },
+    {
+      "name": "Sierra Leone",
+      "predicted_lift": 2.327,
+      "predicted_lift_pct": 132.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "National Treasure",
+      "predicted_lift": 2.323,
+      "predicted_lift_pct": 132.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Honest Mischief",
+      "predicted_lift": 2.94,
+      "predicted_lift_pct": 194.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.01,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.07
+    },
+    {
+      "name": "Citizen Bull",
+      "predicted_lift": 2.285,
+      "predicted_lift_pct": 128.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Kingsbarns",
+      "predicted_lift": 2.245,
+      "predicted_lift_pct": 124.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Newgate",
+      "predicted_lift": 2.245,
+      "predicted_lift_pct": 124.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Olympiad",
+      "predicted_lift": 1.689,
+      "predicted_lift_pct": 68.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.58,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.109
+    },
+    {
+      "name": "Arabian Lion",
+      "predicted_lift": 2.12,
+      "predicted_lift_pct": 112.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Tiz The Law",
+      "predicted_lift": 2.465,
+      "predicted_lift_pct": 146.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.26,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.205
+    },
+    {
+      "name": "Cody's Wish",
+      "predicted_lift": 2.297,
+      "predicted_lift_pct": 129.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Highly Motivated",
+      "predicted_lift": 2.559,
+      "predicted_lift_pct": 155.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.08,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.479
+    },
+    {
+      "name": "Happy Saver",
+      "predicted_lift": 3.508,
+      "predicted_lift_pct": 250.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Locked",
+      "predicted_lift": 2.307,
+      "predicted_lift_pct": 130.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Il Miracolo",
+      "predicted_lift": 2.324,
+      "predicted_lift_pct": 132.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Early Voting",
+      "predicted_lift": 2.425,
+      "predicted_lift_pct": 142.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.35,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -1.075
+    },
+    {
+      "name": "Forte",
+      "predicted_lift": 2.103,
+      "predicted_lift_pct": 110.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Roadster",
+      "predicted_lift": 5.177,
+      "predicted_lift_pct": 417.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 5.48,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.303
+    },
+    {
+      "name": "Jack Christopher",
+      "predicted_lift": 1.014,
+      "predicted_lift_pct": 1.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.02,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.006
+    },
+    {
+      "name": "Mo Town",
+      "predicted_lift": 5.719,
+      "predicted_lift_pct": 471.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 7.62,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 1.901
+    },
+    {
+      "name": "Rock Your World",
+      "predicted_lift": 1.243,
+      "predicted_lift_pct": 24.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.25,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.007
+    },
+    {
+      "name": "Barnes",
+      "predicted_lift": 2.29,
+      "predicted_lift_pct": 129.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Timberlake",
+      "predicted_lift": 2.29,
+      "predicted_lift_pct": 129.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Drain The Clock",
+      "predicted_lift": 2.949,
+      "predicted_lift_pct": 194.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.7,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.751
+    },
+    {
+      "name": "Aloha West",
+      "predicted_lift": 3.45,
+      "predicted_lift_pct": 245.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.11,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.34
+    },
+    {
+      "name": "Greatest Honour",
+      "predicted_lift": 4.494,
+      "predicted_lift_pct": 349.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.96,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.534
+    },
+    {
+      "name": "Cyberknife",
+      "predicted_lift": 0.053,
+      "predicted_lift_pct": -94.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.94,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.887
+    },
+    {
+      "name": "Nashville",
+      "predicted_lift": 3.001,
+      "predicted_lift_pct": 200.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.83,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.171
+    },
+    {
+      "name": "Vino Rosso",
+      "predicted_lift": 3.042,
+      "predicted_lift_pct": 204.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.22,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.822
+    },
+    {
+      "name": "Beau Liam",
+      "predicted_lift": 1.586,
+      "predicted_lift_pct": 58.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.44,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -1.146
+    },
+    {
+      "name": "Casa Creed",
+      "predicted_lift": 2.209,
+      "predicted_lift_pct": 120.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Jackie\u2019s Warrior",
+      "predicted_lift": 1.823,
+      "predicted_lift_pct": 82.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.29,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.533
+    },
+    {
+      "name": "Honor A. P.",
+      "predicted_lift": 2.039,
+      "predicted_lift_pct": 103.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.83,
+      "has_realized": true,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -1.209
+    },
+    {
+      "name": "Flightline",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": 0.049,
+      "extrapolation_flag": true,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Life Is Good",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.202,
+      "extrapolation_flag": true,
+      "realized_lift": 0.81,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.76
+    },
+    {
+      "name": "Epicenter",
+      "predicted_lift": 1.177,
+      "predicted_lift_pct": 17.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.21,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.033
+    },
+    {
+      "name": "Mo Donegal",
+      "predicted_lift": 2.888,
+      "predicted_lift_pct": 188.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.06,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.828
+    },
+    {
+      "name": "Arcangelo",
+      "predicted_lift": 2.163,
+      "predicted_lift_pct": 116.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Independence Hall",
+      "predicted_lift": 3.768,
+      "predicted_lift_pct": 276.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.34,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.428
+    },
+    {
+      "name": "Gun Pilot",
+      "predicted_lift": 2.341,
+      "predicted_lift_pct": 134.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Gretzky The Great",
+      "predicted_lift": 2.245,
+      "predicted_lift_pct": 124.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Goal Oriented",
+      "predicted_lift": 2.389,
+      "predicted_lift_pct": 138.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Patch Adams",
+      "predicted_lift": 2.389,
+      "predicted_lift_pct": 138.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Idol",
+      "predicted_lift": 1.638,
+      "predicted_lift_pct": 63.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.32,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.318
+    },
+    {
+      "name": "Speaker's Corner",
+      "predicted_lift": 2.095,
+      "predicted_lift_pct": 109.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.82,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.275
+    },
+    {
+      "name": "Authentic",
+      "predicted_lift": 2.068,
+      "predicted_lift_pct": 106.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.7,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.368
+    },
+    {
+      "name": "Maximus Mischief",
+      "predicted_lift": 2.751,
+      "predicted_lift_pct": 175.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.32,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.569
+    },
+    {
+      "name": "Central Banker",
+      "predicted_lift": 1.626,
+      "predicted_lift_pct": 62.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.55,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.076
+    },
+    {
+      "name": "First Mission",
+      "predicted_lift": 2.437,
+      "predicted_lift_pct": 143.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Audible",
+      "predicted_lift": 0.069,
+      "predicted_lift_pct": -93.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.74,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.671
+    },
+    {
+      "name": "Mystic Guide",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": 0.027,
+      "extrapolation_flag": true,
+      "realized_lift": 0.63,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.58
+    },
+    {
+      "name": "Win Win Win",
+      "predicted_lift": 4.262,
+      "predicted_lift_pct": 326.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 4.07,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.192
+    },
+    {
+      "name": "City Of Light",
+      "predicted_lift": 0.309,
+      "predicted_lift_pct": -69.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.98,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.671
+    },
+    {
+      "name": "Instagrand",
+      "predicted_lift": 2.867,
+      "predicted_lift_pct": 186.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.0,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.867
+    },
+    {
+      "name": "Volatile",
+      "predicted_lift": 3.378,
+      "predicted_lift_pct": 237.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.6,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.778
+    },
+    {
+      "name": "Two Phil's",
+      "predicted_lift": 2.033,
+      "predicted_lift_pct": 103.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "By My Standards",
+      "predicted_lift": 4.497,
+      "predicted_lift_pct": 349.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 4.46,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.037
+    },
+    {
+      "name": "Domestic Product",
+      "predicted_lift": 2.51,
+      "predicted_lift_pct": 151.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Charlatan",
+      "predicted_lift": 2.132,
+      "predicted_lift_pct": 113.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.82,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.312
+    },
+    {
+      "name": "Golden Pal",
+      "predicted_lift": 0.469,
+      "predicted_lift_pct": -53.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.04,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.571
+    },
+    {
+      "name": "Gun Runner",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.732,
+      "extrapolation_flag": true,
+      "realized_lift": 0.48,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.43
+    },
+    {
+      "name": "Silver State",
+      "predicted_lift": 4.037,
+      "predicted_lift_pct": 303.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.02,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -1.017
+    },
+    {
+      "name": "Solomini",
+      "predicted_lift": 2.906,
+      "predicted_lift_pct": 190.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.15,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.756
+    },
+    {
+      "name": "Basin",
+      "predicted_lift": 4.598,
+      "predicted_lift_pct": 359.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 4.08,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.518
+    },
+    {
+      "name": "Colonel Liam",
+      "predicted_lift": 2.306,
+      "predicted_lift_pct": 130.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.93,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.376
+    },
+    {
+      "name": "Connect",
+      "predicted_lift": 4.672,
+      "predicted_lift_pct": 367.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 3.78,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.892
+    },
+    {
+      "name": "Gunite",
+      "predicted_lift": 2.304,
+      "predicted_lift_pct": 130.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Mage",
+      "predicted_lift": 2.087,
+      "predicted_lift_pct": 108.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Taiba",
+      "predicted_lift": 2.304,
+      "predicted_lift_pct": 130.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Up To The Mark",
+      "predicted_lift": 2.304,
+      "predicted_lift_pct": 130.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Jonathan's Way",
+      "predicted_lift": 2.19,
+      "predicted_lift_pct": 119.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Complexity",
+      "predicted_lift": 3.315,
+      "predicted_lift_pct": 231.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.54,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.775
+    },
+    {
+      "name": "Cairo Prince",
+      "predicted_lift": 3.138,
+      "predicted_lift_pct": 213.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.79,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.348
+    },
+    {
+      "name": "Modernist",
+      "predicted_lift": 5.841,
+      "predicted_lift_pct": 484.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 10.88,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 5.039
+    },
+    {
+      "name": "Charge It",
+      "predicted_lift": 2.327,
+      "predicted_lift_pct": 132.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Muth",
+      "predicted_lift": 2.375,
+      "predicted_lift_pct": 137.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Prince of Monaco",
+      "predicted_lift": 2.375,
+      "predicted_lift_pct": 137.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Collected",
+      "predicted_lift": 1.325,
+      "predicted_lift_pct": 32.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.37,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.045
+    },
+    {
+      "name": "Mindframe",
+      "predicted_lift": 2.495,
+      "predicted_lift_pct": 149.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Instilled Regard",
+      "predicted_lift": 0.477,
+      "predicted_lift_pct": -52.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Heartland",
+      "predicted_lift": 2.421,
+      "predicted_lift_pct": 142.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Highland Falls",
+      "predicted_lift": 2.421,
+      "predicted_lift_pct": 142.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Mullikin",
+      "predicted_lift": 2.421,
+      "predicted_lift_pct": 142.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Valiant Minister",
+      "predicted_lift": 2.533,
+      "predicted_lift_pct": 153.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Known Agenda",
+      "predicted_lift": 3.027,
+      "predicted_lift_pct": 202.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.01,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -1.017
+    },
+    {
+      "name": "Awesome Slew",
+      "predicted_lift": 3.022,
+      "predicted_lift_pct": 202.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.35,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.672
+    },
+    {
+      "name": "Bolt D\u2019oro",
+      "predicted_lift": 2.248,
+      "predicted_lift_pct": 124.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.74,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.508
+    },
+    {
+      "name": "Lexitonian",
+      "predicted_lift": 4.554,
+      "predicted_lift_pct": 355.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 4.96,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.406
+    },
+    {
+      "name": "Twirling Candy",
+      "predicted_lift": 1.016,
+      "predicted_lift_pct": 1.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.86,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.156
+    },
+    {
+      "name": "Carl Spackler (Ire)",
+      "predicted_lift": 2.257,
+      "predicted_lift_pct": 125.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Mystik Dan",
+      "predicted_lift": 2.257,
+      "predicted_lift_pct": 125.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Raging Torrent",
+      "predicted_lift": 2.257,
+      "predicted_lift_pct": 125.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Practical Joke",
+      "predicted_lift": 1.443,
+      "predicted_lift_pct": 44.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.19,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.253
+    },
+    {
+      "name": "Yaupon",
+      "predicted_lift": 1.38,
+      "predicted_lift_pct": 38.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.44,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.06
+    },
+    {
+      "name": "Mitole",
+      "predicted_lift": 3.791,
+      "predicted_lift_pct": 279.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.68,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -1.111
+    },
+    {
+      "name": "Essential Quality",
+      "predicted_lift": 1.399,
+      "predicted_lift_pct": 39.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.38,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.019
+    },
+    {
+      "name": "American Pharoah",
+      "predicted_lift": 1.719,
+      "predicted_lift_pct": 71.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.56,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.159
+    },
+    {
+      "name": "Bright Future",
+      "predicted_lift": 2.401,
+      "predicted_lift_pct": 140.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Loggins",
+      "predicted_lift": 2.195,
+      "predicted_lift_pct": 119.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Munnings",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.018,
+      "extrapolation_flag": true,
+      "realized_lift": 0.69,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.64
+    },
+    {
+      "name": "Title Ready",
+      "predicted_lift": 1.007,
+      "predicted_lift_pct": 0.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Girvin",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.331,
+      "extrapolation_flag": true,
+      "realized_lift": 0.7,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.65
+    },
+    {
+      "name": "Khozan",
+      "predicted_lift": 1.99,
+      "predicted_lift_pct": 99.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Chancer Mcpatrick",
+      "predicted_lift": 2.494,
+      "predicted_lift_pct": 149.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Cogburn",
+      "predicted_lift": 2.494,
+      "predicted_lift_pct": 149.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Tunwoo",
+      "predicted_lift": 4.955,
+      "predicted_lift_pct": 395.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 6.88,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 1.925
+    },
+    {
+      "name": "Adios Charlie",
+      "predicted_lift": 3.113,
+      "predicted_lift_pct": 211.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.54,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.573
+    },
+    {
+      "name": "Keen Ice",
+      "predicted_lift": 3.801,
+      "predicted_lift_pct": 280.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Bee Jersey",
+      "predicted_lift": 1.091,
+      "predicted_lift_pct": 9.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Tacitus",
+      "predicted_lift": 2.747,
+      "predicted_lift_pct": 174.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.04,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.707
+    },
+    {
+      "name": "Goldencents",
+      "predicted_lift": 2.558,
+      "predicted_lift_pct": 155.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.65,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.908
+    },
+    {
+      "name": "Kantharos",
+      "predicted_lift": 2.863,
+      "predicted_lift_pct": 186.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 2.05,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.813
+    },
+    {
+      "name": "Tale Of Silence",
+      "predicted_lift": 5.617,
+      "predicted_lift_pct": 461.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 7.44,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 1.823
+    },
+    {
+      "name": "Upstart",
+      "predicted_lift": 1.113,
+      "predicted_lift_pct": 11.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.24,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.127
+    },
+    {
+      "name": "Thousand Words",
+      "predicted_lift": 1.418,
+      "predicted_lift_pct": 41.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.41,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.008
+    },
+    {
+      "name": "Country House",
+      "predicted_lift": 1.912,
+      "predicted_lift_pct": 91.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Zandon",
+      "predicted_lift": 2.01,
+      "predicted_lift_pct": 101.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Channel Cat",
+      "predicted_lift": 1.84,
+      "predicted_lift_pct": 84.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Flameaway",
+      "predicted_lift": 5.627,
+      "predicted_lift_pct": 462.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 6.78,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 1.153
+    },
+    {
+      "name": "Sir Winston",
+      "predicted_lift": 2.632,
+      "predicted_lift_pct": 163.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Army Mule",
+      "predicted_lift": 2.258,
+      "predicted_lift_pct": 125.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.71,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.548
+    },
+    {
+      "name": "Midshipman",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.098,
+      "extrapolation_flag": true,
+      "realized_lift": 0.76,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.71
+    },
+    {
+      "name": "Arthur's Ride",
+      "predicted_lift": 2.308,
+      "predicted_lift_pct": 130.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "More Than Looks",
+      "predicted_lift": 2.407,
+      "predicted_lift_pct": 140.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Take Charge Indy",
+      "predicted_lift": 0.176,
+      "predicted_lift_pct": -82.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Violence",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.456,
+      "extrapolation_flag": true,
+      "realized_lift": 0.56,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.51
+    },
+    {
+      "name": "Arabian Knight",
+      "predicted_lift": 2.356,
+      "predicted_lift_pct": 135.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Dornoch",
+      "predicted_lift": 2.356,
+      "predicted_lift_pct": 135.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Karakontie",
+      "predicted_lift": 1.844,
+      "predicted_lift_pct": 84.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Ransom the Moon",
+      "predicted_lift": 1.112,
+      "predicted_lift_pct": 11.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Dialed In",
+      "predicted_lift": 1.405,
+      "predicted_lift_pct": 40.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.29,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.115
+    },
+    {
+      "name": "Into Mischief",
+      "predicted_lift": 0.544,
+      "predicted_lift_pct": -45.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.64,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.096
+    },
+    {
+      "name": "Maxfield",
+      "predicted_lift": 0.711,
+      "predicted_lift_pct": -28.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.77,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.059
+    },
+    {
+      "name": "Hard Spun",
+      "predicted_lift": 1.476,
+      "predicted_lift_pct": 47.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.07,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.406
+    },
+    {
+      "name": "Dr. Schivel",
+      "predicted_lift": 2.176,
+      "predicted_lift_pct": 117.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Constitution",
+      "predicted_lift": 1.105,
+      "predicted_lift_pct": 10.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.82,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.285
+    },
+    {
+      "name": "Hightail",
+      "predicted_lift": 2.021,
+      "predicted_lift_pct": 102.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Oxbow",
+      "predicted_lift": 2.021,
+      "predicted_lift_pct": 102.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Real Solution",
+      "predicted_lift": 2.021,
+      "predicted_lift_pct": 102.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Maclean's Music",
+      "predicted_lift": 1.347,
+      "predicted_lift_pct": 34.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.28,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.067
+    },
+    {
+      "name": "Justify",
+      "predicted_lift": 1.208,
+      "predicted_lift_pct": 20.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.85,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.358
+    },
+    {
+      "name": "Street Sense",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.604,
+      "extrapolation_flag": true,
+      "realized_lift": 0.45,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.4
+    },
+    {
+      "name": "Jimmy Creed",
+      "predicted_lift": 5.816,
+      "predicted_lift_pct": 481.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Heart To Heart",
+      "predicted_lift": null,
+      "has_realized": false
+    },
+    {
+      "name": "Good Magic",
+      "predicted_lift": 0.702,
+      "predicted_lift_pct": -29.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.48,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.222
+    },
+    {
+      "name": "Nyquist",
+      "predicted_lift": 1.394,
+      "predicted_lift_pct": 39.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.0,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.394
+    },
+    {
+      "name": "Vekoma",
+      "predicted_lift": 1.484,
+      "predicted_lift_pct": 48.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.18,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.304
+    },
+    {
+      "name": "Funtastic",
+      "predicted_lift": 1.954,
+      "predicted_lift_pct": 95.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Mo Forza",
+      "predicted_lift": 0.56,
+      "predicted_lift_pct": -44.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Eight Rings",
+      "predicted_lift": 1.906,
+      "predicted_lift_pct": 90.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Mckinzie",
+      "predicted_lift": 0.362,
+      "predicted_lift_pct": -63.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.43,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.068
+    },
+    {
+      "name": "Curlin",
+      "predicted_lift": 2.263,
+      "predicted_lift_pct": 126.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Not This Time",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.29,
+      "extrapolation_flag": true,
+      "realized_lift": 0.21,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.16
+    },
+    {
+      "name": "Proxy",
+      "predicted_lift": 2.259,
+      "predicted_lift_pct": 125.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Fierceness",
+      "predicted_lift": 2.462,
+      "predicted_lift_pct": 146.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Newgrange",
+      "predicted_lift": 2.345,
+      "predicted_lift_pct": 134.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Showcase",
+      "predicted_lift": 2.345,
+      "predicted_lift_pct": 134.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Blazing Sevens",
+      "predicted_lift": 2.388,
+      "predicted_lift_pct": 138.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Johannes",
+      "predicted_lift": 2.388,
+      "predicted_lift_pct": 138.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Straight No Chaser",
+      "predicted_lift": 2.388,
+      "predicted_lift_pct": 138.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Tapit Trice",
+      "predicted_lift": 2.388,
+      "predicted_lift_pct": 138.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Alternation",
+      "predicted_lift": null,
+      "has_realized": false
+    },
+    {
+      "name": "Mineshaft",
+      "predicted_lift": null,
+      "has_realized": false
+    },
+    {
+      "name": "Raging Bull (Fr)",
+      "predicted_lift": 1.232,
+      "predicted_lift_pct": 23.2,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.82,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.412
+    },
+    {
+      "name": "Temple City",
+      "predicted_lift": null,
+      "has_realized": false
+    },
+    {
+      "name": "War Front",
+      "predicted_lift": null,
+      "has_realized": false
+    },
+    {
+      "name": "Omaha Beach",
+      "predicted_lift": 0.822,
+      "predicted_lift_pct": -17.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.89,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.068
+    },
+    {
+      "name": "Quality Road",
+      "predicted_lift": 0.82,
+      "predicted_lift_pct": -18.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.92,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.1
+    },
+    {
+      "name": "Liam's Map",
+      "predicted_lift": 0.403,
+      "predicted_lift_pct": -59.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.92,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.517
+    },
+    {
+      "name": "Tale Of Ekati",
+      "predicted_lift": 2.31,
+      "predicted_lift_pct": 131.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Broken Vow",
+      "predicted_lift": null,
+      "has_realized": false
+    },
+    {
+      "name": "Uptown Rythem",
+      "predicted_lift": 2.037,
+      "predicted_lift_pct": 103.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Oscar Performance",
+      "predicted_lift": 2.058,
+      "predicted_lift_pct": 105.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.43,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.628
+    },
+    {
+      "name": "Bravazo",
+      "predicted_lift": 1.888,
+      "predicted_lift_pct": 88.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Senor Buscador",
+      "predicted_lift": 2.251,
+      "predicted_lift_pct": 125.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Shirl's Speight",
+      "predicted_lift": 2.368,
+      "predicted_lift_pct": 136.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Seize The Grey",
+      "predicted_lift": 2.461,
+      "predicted_lift_pct": 146.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Tonalist",
+      "predicted_lift": 0.682,
+      "predicted_lift_pct": -31.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 0.27,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.412
+    },
+    {
+      "name": "Sir Prancealot (Ire)",
+      "predicted_lift": 2.083,
+      "predicted_lift_pct": 108.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Tapit",
+      "predicted_lift": 2.196,
+      "predicted_lift_pct": 119.6,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.14,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -1.056
+    },
+    {
+      "name": "The Factor",
+      "predicted_lift": 1.83,
+      "predicted_lift_pct": 83.0,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Provocateur",
+      "predicted_lift": null,
+      "has_realized": false
+    },
+    {
+      "name": "Blame",
+      "predicted_lift": 1.761,
+      "predicted_lift_pct": 76.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.16,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.601
+    },
+    {
+      "name": "Editorial",
+      "predicted_lift": 1.904,
+      "predicted_lift_pct": 90.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Mullion",
+      "predicted_lift": 2.143,
+      "predicted_lift_pct": 114.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Divisidero",
+      "predicted_lift": 1.919,
+      "predicted_lift_pct": 91.9,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Country Grammer",
+      "predicted_lift": 2.153,
+      "predicted_lift_pct": 115.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Gufo",
+      "predicted_lift": 2.153,
+      "predicted_lift_pct": 115.3,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Candy Ride (Arg)",
+      "predicted_lift": 0.05,
+      "predicted_lift_pct": -95.0,
+      "raw_unclamped_lift": -0.586,
+      "extrapolation_flag": true,
+      "realized_lift": 0.37,
+      "has_realized": true,
+      "imputed_components": [],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": 0.32
+    },
+    {
+      "name": "Union Rags",
+      "predicted_lift": 2.235,
+      "predicted_lift_pct": 123.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": 1.44,
+      "has_realized": true,
+      "imputed_components": [
+        "pinhook_efficiency"
+      ],
+      "is_forecast": false,
+      "delta_realized_minus_predicted": -0.795
+    },
+    {
+      "name": "Niagara Falls",
+      "predicted_lift": 1.918,
+      "predicted_lift_pct": 91.8,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Promises Fulfilled",
+      "predicted_lift": 1.931,
+      "predicted_lift_pct": 93.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "The Street Fighter",
+      "predicted_lift": 1.981,
+      "predicted_lift_pct": 98.1,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Annapolis",
+      "predicted_lift": 2.235,
+      "predicted_lift_pct": 123.5,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Angel of Empire",
+      "predicted_lift": 2.344,
+      "predicted_lift_pct": 134.4,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    },
+    {
+      "name": "Northern Causeway",
+      "predicted_lift": 2.147,
+      "predicted_lift_pct": 114.7,
+      "raw_unclamped_lift": null,
+      "extrapolation_flag": false,
+      "realized_lift": null,
+      "has_realized": false,
+      "imputed_components": [
+        "market_efficiency",
+        "twoyo_market_efficiency",
+        "pinhook_efficiency",
+        "book_demand"
+      ],
+      "is_forecast": true,
+      "delta_realized_minus_predicted": null
+    }
+  ]
+}
