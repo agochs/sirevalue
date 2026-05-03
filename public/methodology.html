@@ -190,6 +190,7 @@ article .formula {
       <li><a href="#dams">Dam-line lookup</a></li>
       <li><a href="#calendar">Sales calendar</a></li>
       <li><a href="#limitations">Known limitations</a></li>
+      <li><a href="#model-upgrades"><strong>May 2026 model upgrades</strong></a> — pinhook efficiency, book demand, recency decay, regional peer split, empirical Bayes shrinkage, score v2 (regression), score v3 (composite), validation infrastructure, stakes integration</li>
     </ol>
   </div>
 
@@ -378,8 +379,69 @@ article .formula {
     <p>If you spot a number that looks wrong, the source-of-truth path is: stallion card → component breakdown → click through to the BloodHorse sale link. Every piece of data is one or two clicks from a public auction record.</p>
   </article>
 
+  <article id="model-upgrades">
+    <h2>16. May 2026 model upgrades</h2>
+    <p>Substantial scoring-model work was shipped in early May 2026. The headlines:</p>
+
+    <h3 style="margin-top:18px;">Pinhook efficiency component</h3>
+    <p>A new scoring component (15% weight in <code>tier1_full</code>) that measures yearling-to-2YO appreciation. Computed as <code>(2yo_avg / yearling_avg)</code> per stallion, percentile-ranked vs roster peers who also have data on both sides. Fires only when the smaller of <code>yearling_n</code> and <code>2yo_n</code> is ≥3. Encodes the platform's value-creation thesis directly: stallions whose foals appreciate between sales score above stallions whose foals are bought expensive but don't gain.</p>
+
+    <h3 style="margin-top:18px;">Book demand component</h3>
+    <p>New 7% weight component using the <a href="https://jockeyclub.com/default.asp?section=Resources&amp;area=16">Jockey Club's annual Report of Mares Bred</a> (republished by BloodHorse). Measures <em>book size</em> — number of mares bred to each stallion in the most recent year on record — as a real demand signal. Note: this is book SIZE, not book QUALITY. True book quality requires per-mare records (career earnings, black-type produce); that data is not yet ingested.</p>
+
+    <h3 style="margin-top:18px;">Recency decay + cohort year effect</h3>
+    <p>Both market-efficiency components now use a recency-weighted, cohort-adjusted average instead of a flat-weighted one. Per-sale prices are first <em>adjusted</em> for the per-year cross-sire median (so a strong-2025 market doesn't inflate every stallion equally), then weighted by <code>0.85^year_lag</code> so recent sales count more than older ones. The flat average is preserved for display; the adjusted value drives the percentile.</p>
+
+    <h3 style="margin-top:18px;">Empirical Bayes shrinkage</h3>
+    <p>Activated for the market-efficiency components. A stallion with n=2 yearling sales at a 30× ratio used to dominate the percentile ranking; now the ratio is shrunk toward the peer mean by a James-Stein factor that depends on n vs peer-variance. Large-sample stallions (Corniche n=67) barely move; small-sample stallions (Honor A.P. n=2) get pulled meaningfully toward the population. This is one-level empirical Bayes, not a full hierarchical Bayesian model with MCMC — that would pool across years and peer groups too.</p>
+
+    <h3 style="margin-top:18px;">Regional peer-set splitter</h3>
+    <p>Peer comparison (fee_band × maturity_stage) now also splits by region (KY / NY / CA / FL / MD / Other). When a regional bucket is too thin (&lt;4 peers), the score falls back to cross-region peers with a note. Honest Mischief (NY freshman u10k) only has 1 NY peer in his bucket, so he's compared cross-region; Corniche (KY early_proven 10–25k) has 9 KY peers and stays region-local.</p>
+
+    <h3 style="margin-top:18px;">Confidence-aware uncertainty band</h3>
+    <p>Every score now ships with a ±N point uncertainty band based on peer count, market-sample sizes, and tier. A high-conviction A (Corniche ±1.5) is visibly different from a low-conviction A (Newgate ±6.0 — could be A or B). Surfaced on the home leaderboard score column and on every stallion-card grade badge.</p>
+
+    <h3 style="margin-top:18px;">Score-change badge</h3>
+    <p>When score-history accumulates over time (target: 12-month YoY), the home leaderboard surfaces a small "Δ +X over N mo" badge alongside the score. Currently shows whatever window of history exists (so it's "since last cycle" until 12 months pass).</p>
+
+    <h3 style="margin-top:18px;">Auto-generated prose explanation</h3>
+    <p>Every stallion-card now shows a 2-3 sentence italic summary auto-generated from the components: strongest signal, weakest signal, sample-size context. Example: "Strongest signal: pinhook_efficiency at 84th percentile, contributing 12.5 of the 84.5-point score. Weakest: maturity_context at 50th percentile. Tight uncertainty band (±1.5) — high-conviction grade."</p>
+
+    <h3 style="margin-top:18px;">Score v2 — regression-fit predicted lift</h3>
+    <p>An alternative scoring layer that's regression-fit rather than additive. Predicts realized pinhook lift directly from <code>log(fee) + 7 component percentiles</code>. Leave-one-out R²=0.71 vs the additive score's R²=0.07 on the same target — substantially more predictive on this specific outcome. Surfaced as a sortable "Pred Lift" column on the home leaderboard and a dedicated panel on every stallion-card.</p>
+    <p>Notable empirical finding: the regression assigns a NEGATIVE coefficient to <code>market_efficiency</code>, meaning expensive yearlings tend to have LOWER appreciation. The "expensive yearling, doesn't appreciate" pattern (Into Mischief, Tapit) is now quantified directly. Predictions below 0% lift are clamped at -95% (the physical floor; lift can't go below 0× without negative price) and flagged as out-of-distribution extrapolations.</p>
+
+    <h3 style="margin-top:18px;">Score v3 — composite</h3>
+    <p>Hybrid of v1 (multi-objective additive) and v2 (single-objective regression): <code>v3 = 0.6 × v1 + 0.4 × v2_rank_normalized</code>. One number that blends "good overall stallion" with "good pinhook bet." When both signals agree, composite is high or low; when they diverge, it lands in the middle, surfacing stallions strong on one dimension but not the other. Shown as the "v3" column on home.</p>
+
+    <h3 style="margin-top:18px;">Validation infrastructure</h3>
+    <p>Three new pages and worker scripts that hold the model accountable:</p>
+    <ul>
+      <li><a href="/calibration.html">/calibration.html</a> — per-grade aggregates of realized performance (lift, yearling ratio, 2YO ratio). Surfaces calibration violations explicitly (e.g. "B mean lift &lt; C mean lift" — middle grades conflate on lift). Plus the leave-one-out backtest comparing model to predict-by-mean and predict-by-fee baselines, plus the weight-tuning regression result with explanation of why we don't blindly adopt the tuned weights.</li>
+      <li><a href="/first-crop-validation.html">/first-crop-validation.html</a> — predicted vs realized pinhook lift for every first-crop sire, partitioned into "Proven" (≥3 realized 2YOs) and "Pending" (waiting). Receipts for every forecast.</li>
+      <li><a href="/value-gap.html">/value-gap.html</a> — per-fee-band median comparison surfacing most undervalued / most overvalued stallions.</li>
+    </ul>
+
+    <h3 style="margin-top:18px;">Stakes results integration</h3>
+    <p>Hand-curated <code>stakes-results.json</code> + scrapers (<code>scrape_stakes.py</code>, <code>parse_stakes_articles.py</code>) feed two surfaces: the "Recent Stakes Activity" panel on the home page and a "Progeny Stakes Wins" section on every stallion-card. Each entry cites a primary source URL; ZERO FABRICATION enforced.</p>
+
+    <h3 style="margin-top:18px;">Watchlist + stakes-win badge</h3>
+    <p>Star any stallion to track them. Watchlist persists in <code>localStorage</code>. Each watchlisted row shows score + delta-since-last-visit + a "★ G2 win Apr 4" badge if any progeny has won a recent stakes. Click the stallion to re-anchor the delta.</p>
+
+    <h3 style="margin-top:18px;">Sire-line ranking</h3>
+    <p>Each stallion-card surfaces "Nth of M sons of {sire} at stud, top: {top_son_name}". Companion <a href="/sire-lines.html">/sire-lines.html</a> page shows every sire with 2+ sons, ranked by their best son's score. Useful when choosing among brothers in the same line.</p>
+
+    <h3 style="margin-top:18px;">What's NOT yet in the model (honest gaps)</h3>
+    <ul>
+      <li><b>Per-mare book quality</b> — number of mares is in (#17), but the careers/black-type-produce of each mare bred is not. Requires per-stallion mare-list ingestion (Jockey Club per-stallion reports). On the roadmap as #5.</li>
+      <li><b>Progeny race performance</b> — stakes wins per stallion are tracked for display (stakes-results.json) but not yet a scoring component. Equibase or BH per-sire progeny aggregates would feed this.</li>
+      <li><b>Full hierarchical Bayesian model</b> — current shrinkage is one-level empirical Bayes. A multi-level model with formal credible intervals would require MCMC infrastructure (PyMC or similar).</li>
+      <li><b>Multi-target tuning</b> — v2 is fit to one target (pinhook lift). A multi-target regression that lets users pick "optimize for pinhook lift" vs "optimize for race wins" is a v4 thread.</li>
+    </ul>
+  </article>
+
   <div class="footer">
-    <span>Last updated: April 2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/catalogs.html">catalogs</a> · <a href="https://github.com/agochs/sirevalue" target="_blank" rel="noopener">source</a></span>
+    <span>Last updated: May 2026 · <a href="/">home</a> · <a href="/pinhooks.html">stallion leaderboard</a> · <a href="/catalogs.html">catalogs</a> · <a href="/calibration.html">calibration</a> · <a href="https://github.com/agochs/sirevalue" target="_blank" rel="noopener">source</a></span>
     <span>© 2026 SireValue</span>
   </div>
 </div>

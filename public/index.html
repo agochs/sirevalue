@@ -330,6 +330,11 @@ body {
   display: inline-block; padding: 2px 7px; border-radius: 3px; font-weight: 700;
   font-size: 11px; min-width: 24px; text-align: center;
 }
+.watch-row .stakes-badge {
+  display: inline-block; margin-top: 4px; padding: 2px 7px; border-radius: 3px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.4px;
+}
 /* ---------- Sortable leaderboard headers ---------- */
 .leaderboard th[data-sort] { cursor: pointer; user-select: none; position: relative; }
 .leaderboard th[data-sort]:hover { color: var(--ink); }
@@ -587,10 +592,11 @@ body {
           <th data-sort="score"><span class="lbl">Score</span><span class="arrow">▼</span></th>
           <th data-sort="value_gap" title="Score minus the median score of all stallions in the same fee band. Positive = better than peers at the same price (undervalued)."><span class="lbl">Value Gap</span><span class="arrow">▼</span></th>
           <th data-sort="pred_lift" title="Score v2: regression-predicted yearling→2YO pinhook lift %. LOO R²≈0.71 vs realized lift. Negative coefficient on market_efficiency surfaces 'expensive yearling, doesn't appreciate' pattern."><span class="lbl">Pred Lift</span><span class="arrow">▼</span></th>
+          <th data-sort="composite" title="Score v3: 60% v1 (multi-objective additive) + 40% v2 (regression-predicted lift, rank-normalized). Single number that blends 'good overall' with 'good pinhook bet'."><span class="lbl">v3</span><span class="arrow">▼</span></th>
           <th data-sort="grade"><span class="lbl">Grade</span><span class="arrow">▼</span></th>
         </tr>
       </thead>
-      <tbody id="leaderboard-body"><tr><td colspan="9" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
+      <tbody id="leaderboard-body"><tr><td colspan="10" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
     </table>
   </div>
 
@@ -603,10 +609,11 @@ body {
 <script>
 (async function() {
   try {
-    const [resp, hResp, v2Resp] = await Promise.all([
+    const [resp, hResp, v2Resp, stakesEarlyResp] = await Promise.all([
       fetch('/data/scores.json'),
       fetch('/data/score-history.json').catch(() => null),
       fetch('/data/score-v2.json').catch(() => null),
+      fetch('/data/stakes-results.json').catch(() => null),
     ]);
     if (!resp.ok) throw new Error(resp.status);
     const data = await resp.json();
@@ -620,9 +627,46 @@ body {
         (v2.predictions || []).forEach(r => { v2ByName[r.name] = r; });
       }
     } catch (_e) { /* optional */ }
+
+    // ---------- Stakes-by-sire (for watchlist badges + later panel) ----------
+    let stakesBySire = {};
+    let stakesDoc = null;
+    try {
+      if (stakesEarlyResp && stakesEarlyResp.ok) {
+        stakesDoc = await stakesEarlyResp.json();
+        stakesBySire = stakesDoc.by_sire || {};
+      }
+    } catch (_e) { /* optional */ }
     data.stallions.forEach(s => {
       const pred = v2ByName[s.name];
       s._v2 = (pred && pred.predicted_lift_pct != null) ? pred : null;
+    });
+
+    // ---------- Score v3: composite of v1 (additive) + v2 (regression) ----------
+    // 60% additive score (multi-objective peer-relative, v1.value already 0-100)
+    // 40% v2 prediction normalized to a 0-100 rank-percentile across all v2-eligible stallions.
+    // When both signals agree, composite is high (or low). When they diverge,
+    // it lands in the middle — visible as "stallion that's strong on one
+    // dimension but not the other."
+    const v2_eligible = data.stallions.filter(s => s._v2).map(s => s._v2.predicted_lift_pct);
+    v2_eligible.sort((a, b) => a - b);
+    function v2RankPct(val) {
+      if (!v2_eligible.length) return 50;
+      // average-rank percentile
+      let below = 0, equal = 0;
+      for (const v of v2_eligible) {
+        if (v < val) below++;
+        else if (v === val) equal++;
+      }
+      return 100 * (below + 0.5 * equal) / v2_eligible.length;
+    }
+    data.stallions.forEach(s => {
+      if (s._v2) {
+        const v2_norm = v2RankPct(s._v2.predicted_lift_pct);
+        s._v3 = +(0.6 * s.score.value + 0.4 * v2_norm).toFixed(1);
+      } else {
+        s._v3 = null;   // no v2 prediction → no composite
+      }
     });
 
     // ---------- Score history → score_change attribute ----------
@@ -789,9 +833,27 @@ body {
           dStr = (r.delta > 0 ? '+' : '') + r.delta.toFixed(1);
         }
         const url = '/stallion-card.html?s=' + encodeURIComponent(s.name);
+        // Stakes-win badge: if any progeny has won a stakes in stakes-results
+        const races = stakesBySire[s.name] || [];
+        let stakesBadge = '';
+        if (races.length) {
+          // Sort by date desc and surface the most recent
+          const sorted = races.slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+          const latest = sorted[0];
+          const grade = latest.race_grade || 'Listed';
+          const dParts = (latest.date || '').split('-');
+          const dStr2 = dParts.length >= 3
+            ? ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(dParts[1],10)-1] + ' ' + parseInt(dParts[2],10)
+            : (latest.date || '');
+          stakesBadge = '<div class="stakes-badge" title="' + escapeHtml(latest.race + ' (' + dStr2 + ')')
+            + ': ' + escapeHtml(latest.winner) + (races.length > 1 ? '. +' + (races.length - 1) + ' more progeny stakes wins.' : '') + '">'
+            + '★ ' + grade + ' win ' + dStr2
+            + (races.length > 1 ? ' <span style="opacity:0.7;font-weight:400">+' + (races.length - 1) + '</span>' : '')
+            + '</div>';
+        }
         return '<div class="watch-row">'
           + starHtml(s)
-          + '<span><a class="name" href="' + url + '">' + escapeHtml(s.name) + '</a><div class="farm-tag">' + escapeHtml(s.farm) + ' · ' + fee + '</div></span>'
+          + '<span><a class="name" href="' + url + '">' + escapeHtml(s.name) + '</a><div class="farm-tag">' + escapeHtml(s.farm) + ' · ' + fee + '</div>' + stakesBadge + '</span>'
           + '<span class="score-now">' + s.score.value.toFixed(1) + '</span>'
           + '<span class="delta ' + dCls + '">' + dStr + '</span>'
           + '<span class="grade-cell ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span>'
@@ -905,6 +967,9 @@ body {
                     : '';
                   return '<span style="color:' + colorMap[cls] + ';font-weight:600">' + sign + v.toFixed(0) + '%</span>' + flagged;
                 })()
+              : '<span style="color:var(--ink-soft)">—</span>') + '</td>'
+        + '<td>' + (s._v3 != null
+              ? '<strong>' + s._v3.toFixed(1) + '</strong>'
               : '<span style="color:var(--ink-soft)">—</span>') + '</td>'
         + '<td><span class="grade ' + gradeClass(s.score.grade) + '">' + s.score.grade + '</span></td>'
         + '</tr>';
@@ -1105,6 +1170,7 @@ body {
         case 'score':     return s.score.value != null ? s.score.value : -1;
         case 'value_gap': return s._value_gap != null ? s._value_gap : -999; // unknowns last
         case 'pred_lift': return s._v2 ? s._v2.predicted_lift_pct : -999;
+        case 'composite': return s._v3 != null ? s._v3 : -999;
         case 'grade':     return GRADE_RANK[s.score.grade] != null ? GRADE_RANK[s.score.grade] : 99;
         default:          return 0;
       }
@@ -1151,7 +1217,7 @@ body {
       const sorted = sortStallions(slice);
       const rows = sorted.map(rowHtml).join('');
       document.getElementById('leaderboard-body').innerHTML = rows ||
-        '<tr><td colspan="9" style="padding:30px;text-align:center;color:var(--ink-soft)">No matches. Try a different query.</td></tr>';
+        '<tr><td colspan="10" style="padding:30px;text-align:center;color:var(--ink-soft)">No matches. Try a different query.</td></tr>';
       document.getElementById('smart-pills').innerHTML =
         pills.map(p => '<span class="pill">' + p + '</span>').join('');
       updateSortIndicators();
@@ -1385,10 +1451,9 @@ body {
     // ---------- Stakes Activity panel ----------
     // Recent progeny stakes wins, sourced from worker/stakes-results.json.
     // Each row links to the sire's stallion-card (when sire is in our roster).
+    // (Reuses stakesDoc loaded earlier — no extra network fetch needed.)
     try {
-      const stakesResp = await fetch('/data/stakes-results.json?v=' + Date.now());
-      if (stakesResp.ok) {
-        const stakesDoc = await stakesResp.json();
+      if (stakesDoc) {
         const races = (stakesDoc.races || []).slice(0, 8);
         if (races.length) {
           const panel = document.getElementById('stakes-activity');
