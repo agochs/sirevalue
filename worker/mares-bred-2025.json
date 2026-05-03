@@ -1,0 +1,4856 @@
+{
+  "generated_at": "2026-05-03T16:23:47Z",
+  "source_url": "https://www.bloodhorse.com/horse-racing/thoroughbred-breeding/mares-bred/2025",
+  "year": 2025,
+  "n_stallions": 740,
+  "by_sire": {
+    "Tiz the Law": {
+      "sire": "Tiz the Law",
+      "year": 2025,
+      "n_mares": 274,
+      "state": "KY"
+    },
+    "Tiz The Law": {
+      "sire": "Tiz the Law",
+      "year": 2025,
+      "n_mares": 274,
+      "state": "KY"
+    },
+    "Arabian Knight": {
+      "sire": "Arabian Knight",
+      "year": 2025,
+      "n_mares": 273,
+      "state": "KY"
+    },
+    "Practical Joke": {
+      "sire": "Practical Joke",
+      "year": 2025,
+      "n_mares": 263,
+      "state": "KY"
+    },
+    "Justify": {
+      "sire": "Justify",
+      "year": 2025,
+      "n_mares": 244,
+      "state": "KY"
+    },
+    "Charge It": {
+      "sire": "Charge It",
+      "year": 2025,
+      "n_mares": 235,
+      "state": "KY"
+    },
+    "Domestic Product": {
+      "sire": "Domestic Product",
+      "year": 2025,
+      "n_mares": 224,
+      "state": "KY"
+    },
+    "Gun Runner": {
+      "sire": "Gun Runner",
+      "year": 2025,
+      "n_mares": 218,
+      "state": "KY"
+    },
+    "Not This Time": {
+      "sire": "Not This Time",
+      "year": 2025,
+      "n_mares": 214,
+      "state": "KY"
+    },
+    "Vekoma": {
+      "sire": "Vekoma",
+      "year": 2025,
+      "n_mares": 211,
+      "state": "KY"
+    },
+    "National Treasure": {
+      "sire": "National Treasure",
+      "year": 2025,
+      "n_mares": 202,
+      "state": "KY"
+    },
+    "Golden Pal": {
+      "sire": "Golden Pal",
+      "year": 2025,
+      "n_mares": 198,
+      "state": "KY"
+    },
+    "Yaupon": {
+      "sire": "Yaupon",
+      "year": 2025,
+      "n_mares": 198,
+      "state": "KY"
+    },
+    "Kingsbarns": {
+      "sire": "Kingsbarns",
+      "year": 2025,
+      "n_mares": 196,
+      "state": "KY"
+    },
+    "Seize the Grey": {
+      "sire": "Seize the Grey",
+      "year": 2025,
+      "n_mares": 196,
+      "state": "KY"
+    },
+    "Seize The Grey": {
+      "sire": "Seize the Grey",
+      "year": 2025,
+      "n_mares": 196,
+      "state": "KY"
+    },
+    "Cogburn": {
+      "sire": "Cogburn",
+      "year": 2025,
+      "n_mares": 194,
+      "state": "KY"
+    },
+    "Bucchero": {
+      "sire": "Bucchero",
+      "year": 2025,
+      "n_mares": 192,
+      "state": "NY"
+    },
+    "Charlatan": {
+      "sire": "Charlatan",
+      "year": 2025,
+      "n_mares": 191,
+      "state": "KY"
+    },
+    "Constitution": {
+      "sire": "Constitution",
+      "year": 2025,
+      "n_mares": 188,
+      "state": "KY"
+    },
+    "Life Is Good": {
+      "sire": "Life Is Good",
+      "year": 2025,
+      "n_mares": 188,
+      "state": "KY"
+    },
+    "Muth": {
+      "sire": "Muth",
+      "year": 2025,
+      "n_mares": 185,
+      "state": "KY"
+    },
+    "Omaha Beach": {
+      "sire": "Omaha Beach",
+      "year": 2025,
+      "n_mares": 184,
+      "state": "KY"
+    },
+    "Twirling Candy": {
+      "sire": "Twirling Candy",
+      "year": 2025,
+      "n_mares": 182,
+      "state": "KY"
+    },
+    "Newgate": {
+      "sire": "Newgate",
+      "year": 2025,
+      "n_mares": 180,
+      "state": "KY"
+    },
+    "Oscar Performance": {
+      "sire": "Oscar Performance",
+      "year": 2025,
+      "n_mares": 180,
+      "state": "KY"
+    },
+    "Into Mischief": {
+      "sire": "Into Mischief",
+      "year": 2025,
+      "n_mares": 176,
+      "state": "KY"
+    },
+    "Prince of Monaco": {
+      "sire": "Prince of Monaco",
+      "year": 2025,
+      "n_mares": 176,
+      "state": "KY"
+    },
+    "Prince Of Monaco": {
+      "sire": "Prince of Monaco",
+      "year": 2025,
+      "n_mares": 176,
+      "state": "KY"
+    },
+    "McKinzie": {
+      "sire": "McKinzie",
+      "year": 2025,
+      "n_mares": 175,
+      "state": "KY"
+    },
+    "Mckinzie": {
+      "sire": "McKinzie",
+      "year": 2025,
+      "n_mares": 175,
+      "state": "KY"
+    },
+    "Nyquist": {
+      "sire": "Nyquist",
+      "year": 2025,
+      "n_mares": 175,
+      "state": "KY"
+    },
+    "Taiba": {
+      "sire": "Taiba",
+      "year": 2025,
+      "n_mares": 169,
+      "state": "KY"
+    },
+    "American Pharoah": {
+      "sire": "American Pharoah",
+      "year": 2025,
+      "n_mares": 168,
+      "state": "KY"
+    },
+    "Jackie's Warrior": {
+      "sire": "Jackie's Warrior",
+      "year": 2025,
+      "n_mares": 166,
+      "state": "KY"
+    },
+    "Gunite": {
+      "sire": "Gunite",
+      "year": 2025,
+      "n_mares": 163,
+      "state": "KY"
+    },
+    "Elite Power": {
+      "sire": "Elite Power",
+      "year": 2025,
+      "n_mares": 161,
+      "state": "KY"
+    },
+    "Gun Pilot": {
+      "sire": "Gun Pilot",
+      "year": 2025,
+      "n_mares": 161,
+      "state": "KY"
+    },
+    "Maximus Mischief": {
+      "sire": "Maximus Mischief",
+      "year": 2025,
+      "n_mares": 161,
+      "state": "KY"
+    },
+    "Timberlake": {
+      "sire": "Timberlake",
+      "year": 2025,
+      "n_mares": 161,
+      "state": "KY"
+    },
+    "Cody's Wish": {
+      "sire": "Cody's Wish",
+      "year": 2025,
+      "n_mares": 160,
+      "state": "KY"
+    },
+    "Cyberknife": {
+      "sire": "Cyberknife",
+      "year": 2025,
+      "n_mares": 159,
+      "state": "KY"
+    },
+    "Liam's Map": {
+      "sire": "Liam's Map",
+      "year": 2025,
+      "n_mares": 157,
+      "state": "KY"
+    },
+    "Independence Hall": {
+      "sire": "Independence Hall",
+      "year": 2025,
+      "n_mares": 155,
+      "state": "KY"
+    },
+    "Volatile": {
+      "sire": "Volatile",
+      "year": 2025,
+      "n_mares": 155,
+      "state": "KY"
+    },
+    "Forte": {
+      "sire": "Forte",
+      "year": 2025,
+      "n_mares": 154,
+      "state": "KY"
+    },
+    "Dornoch": {
+      "sire": "Dornoch",
+      "year": 2025,
+      "n_mares": 149,
+      "state": "KY"
+    },
+    "Munnings": {
+      "sire": "Munnings",
+      "year": 2025,
+      "n_mares": 149,
+      "state": "KY"
+    },
+    "City of Light": {
+      "sire": "City of Light",
+      "year": 2025,
+      "n_mares": 148,
+      "state": "KY"
+    },
+    "City Of Light": {
+      "sire": "City of Light",
+      "year": 2025,
+      "n_mares": 148,
+      "state": "KY"
+    },
+    "Maxfield": {
+      "sire": "Maxfield",
+      "year": 2025,
+      "n_mares": 147,
+      "state": "KY"
+    },
+    "Mystic Guide": {
+      "sire": "Mystic Guide",
+      "year": 2025,
+      "n_mares": 147,
+      "state": "KY"
+    },
+    "Upstart": {
+      "sire": "Upstart",
+      "year": 2025,
+      "n_mares": 147,
+      "state": "KY"
+    },
+    "Bolt d'Oro": {
+      "sire": "Bolt d'Oro",
+      "year": 2025,
+      "n_mares": 145,
+      "state": "KY"
+    },
+    "Bolt D'oro": {
+      "sire": "Bolt d'Oro",
+      "year": 2025,
+      "n_mares": 145,
+      "state": "KY"
+    },
+    "Flightline": {
+      "sire": "Flightline",
+      "year": 2025,
+      "n_mares": 145,
+      "state": "KY"
+    },
+    "Speaker's Corner": {
+      "sire": "Speaker's Corner",
+      "year": 2025,
+      "n_mares": 143,
+      "state": "KY"
+    },
+    "Arcangelo": {
+      "sire": "Arcangelo",
+      "year": 2025,
+      "n_mares": 141,
+      "state": "KY"
+    },
+    "Army Mule": {
+      "sire": "Army Mule",
+      "year": 2025,
+      "n_mares": 140,
+      "state": "KY"
+    },
+    "Blazing Sevens": {
+      "sire": "Blazing Sevens",
+      "year": 2025,
+      "n_mares": 139,
+      "state": "KY"
+    },
+    "Drain the Clock": {
+      "sire": "Drain the Clock",
+      "year": 2025,
+      "n_mares": 139,
+      "state": "KY"
+    },
+    "Drain The Clock": {
+      "sire": "Drain the Clock",
+      "year": 2025,
+      "n_mares": 139,
+      "state": "KY"
+    },
+    "Win Win Win": {
+      "sire": "Win Win Win",
+      "year": 2025,
+      "n_mares": 137,
+      "state": "FL"
+    },
+    "Up to the Mark": {
+      "sire": "Up to the Mark",
+      "year": 2025,
+      "n_mares": 133,
+      "state": "KY"
+    },
+    "Up To The Mark": {
+      "sire": "Up to the Mark",
+      "year": 2025,
+      "n_mares": 133,
+      "state": "KY"
+    },
+    "Good Magic": {
+      "sire": "Good Magic",
+      "year": 2025,
+      "n_mares": 132,
+      "state": "KY"
+    },
+    "Maclean's Music": {
+      "sire": "Maclean's Music",
+      "year": 2025,
+      "n_mares": 130,
+      "state": "KY"
+    },
+    "Epicenter": {
+      "sire": "Epicenter",
+      "year": 2025,
+      "n_mares": 129,
+      "state": "KY"
+    },
+    "Goldencents": {
+      "sire": "Goldencents",
+      "year": 2025,
+      "n_mares": 129,
+      "state": "KY"
+    },
+    "Essential Quality": {
+      "sire": "Essential Quality",
+      "year": 2025,
+      "n_mares": 127,
+      "state": "KY"
+    },
+    "Girvin": {
+      "sire": "Girvin",
+      "year": 2025,
+      "n_mares": 127,
+      "state": "KY"
+    },
+    "Nashville": {
+      "sire": "Nashville",
+      "year": 2025,
+      "n_mares": 126,
+      "state": "KY"
+    },
+    "Authentic": {
+      "sire": "Authentic",
+      "year": 2025,
+      "n_mares": 123,
+      "state": "KY"
+    },
+    "Heartland": {
+      "sire": "Heartland",
+      "year": 2025,
+      "n_mares": 123,
+      "state": "KY"
+    },
+    "Hard Spun": {
+      "sire": "Hard Spun",
+      "year": 2025,
+      "n_mares": 122,
+      "state": "KY"
+    },
+    "Caracaro": {
+      "sire": "Caracaro",
+      "year": 2025,
+      "n_mares": 119,
+      "state": "KY"
+    },
+    "Complexity": {
+      "sire": "Complexity",
+      "year": 2025,
+      "n_mares": 119,
+      "state": "KY"
+    },
+    "Aurelius Maximus": {
+      "sire": "Aurelius Maximus",
+      "year": 2025,
+      "n_mares": 117,
+      "state": "LA"
+    },
+    "Annapolis": {
+      "sire": "Annapolis",
+      "year": 2025,
+      "n_mares": 115,
+      "state": "KY"
+    },
+    "Frosted": {
+      "sire": "Frosted",
+      "year": 2025,
+      "n_mares": 114,
+      "state": "KY"
+    },
+    "Americanrevolution": {
+      "sire": "Americanrevolution",
+      "year": 2025,
+      "n_mares": 113,
+      "state": "NY"
+    },
+    "Olympiad": {
+      "sire": "Olympiad",
+      "year": 2025,
+      "n_mares": 113,
+      "state": "KY"
+    },
+    "Leinster": {
+      "sire": "Leinster",
+      "year": 2025,
+      "n_mares": 111,
+      "state": "FL"
+    },
+    "Pappacap": {
+      "sire": "Pappacap",
+      "year": 2025,
+      "n_mares": 111,
+      "state": "KY"
+    },
+    "Tacitus": {
+      "sire": "Tacitus",
+      "year": 2025,
+      "n_mares": 110,
+      "state": "KY"
+    },
+    "Corniche": {
+      "sire": "Corniche",
+      "year": 2025,
+      "n_mares": 106,
+      "state": "KY"
+    },
+    "Curlin": {
+      "sire": "Curlin",
+      "year": 2025,
+      "n_mares": 105,
+      "state": "KY"
+    },
+    "Jack Christopher": {
+      "sire": "Jack Christopher",
+      "year": 2025,
+      "n_mares": 103,
+      "state": "KY"
+    },
+    "Coal Front": {
+      "sire": "Coal Front",
+      "year": 2025,
+      "n_mares": 101,
+      "state": "LA"
+    },
+    "Honest Mischief": {
+      "sire": "Honest Mischief",
+      "year": 2025,
+      "n_mares": 101,
+      "state": "NY"
+    },
+    "Two Phil's": {
+      "sire": "Two Phil's",
+      "year": 2025,
+      "n_mares": 101,
+      "state": "KY"
+    },
+    "Mo Town": {
+      "sire": "Mo Town",
+      "year": 2025,
+      "n_mares": 99,
+      "state": "KY"
+    },
+    "Blofeld": {
+      "sire": "Blofeld",
+      "year": 2025,
+      "n_mares": 96,
+      "state": "MD"
+    },
+    "Proxy": {
+      "sire": "Proxy",
+      "year": 2025,
+      "n_mares": 95,
+      "state": "KY"
+    },
+    "Beau Liam": {
+      "sire": "Beau Liam",
+      "year": 2025,
+      "n_mares": 94,
+      "state": "KY"
+    },
+    "Central Banker": {
+      "sire": "Central Banker",
+      "year": 2025,
+      "n_mares": 94,
+      "state": "NY"
+    },
+    "Midshipman": {
+      "sire": "Midshipman",
+      "year": 2025,
+      "n_mares": 94,
+      "state": "KY"
+    },
+    "Zandon": {
+      "sire": "Zandon",
+      "year": 2025,
+      "n_mares": 93,
+      "state": "KY"
+    },
+    "Solomini": {
+      "sire": "Solomini",
+      "year": 2025,
+      "n_mares": 92,
+      "state": "NY"
+    },
+    "Simplification": {
+      "sire": "Simplification",
+      "year": 2025,
+      "n_mares": 90,
+      "state": "FL"
+    },
+    "Street Sense": {
+      "sire": "Street Sense",
+      "year": 2025,
+      "n_mares": 90,
+      "state": "KY"
+    },
+    "Verifying": {
+      "sire": "Verifying",
+      "year": 2025,
+      "n_mares": 89,
+      "state": "FL"
+    },
+    "Flameaway": {
+      "sire": "Flameaway",
+      "year": 2025,
+      "n_mares": 86,
+      "state": "KY"
+    },
+    "Thousand Words": {
+      "sire": "Thousand Words",
+      "year": 2025,
+      "n_mares": 86,
+      "state": "KY"
+    },
+    "Star Guitar": {
+      "sire": "Star Guitar",
+      "year": 2025,
+      "n_mares": 85,
+      "state": "LA"
+    },
+    "Dialed In": {
+      "sire": "Dialed In",
+      "year": 2025,
+      "n_mares": 82,
+      "state": "KY"
+    },
+    "Midnight Storm": {
+      "sire": "Midnight Storm",
+      "year": 2025,
+      "n_mares": 82,
+      "state": "CA"
+    },
+    "Tapit": {
+      "sire": "Tapit",
+      "year": 2025,
+      "n_mares": 82,
+      "state": "KY"
+    },
+    "Arabian Lion": {
+      "sire": "Arabian Lion",
+      "year": 2025,
+      "n_mares": 79,
+      "state": "KY"
+    },
+    "Mage": {
+      "sire": "Mage",
+      "year": 2025,
+      "n_mares": 78,
+      "state": "KY"
+    },
+    "Tapit Trice": {
+      "sire": "Tapit Trice",
+      "year": 2025,
+      "n_mares": 77,
+      "state": "KY"
+    },
+    "Rock Your World": {
+      "sire": "Rock Your World",
+      "year": 2025,
+      "n_mares": 76,
+      "state": "KY"
+    },
+    "Cairo Prince": {
+      "sire": "Cairo Prince",
+      "year": 2025,
+      "n_mares": 75,
+      "state": "KY"
+    },
+    "Harlocap": {
+      "sire": "Harlocap",
+      "year": 2025,
+      "n_mares": 75,
+      "state": "ON"
+    },
+    "Marking": {
+      "sire": "Marking",
+      "year": 2025,
+      "n_mares": 75,
+      "state": "NM"
+    },
+    "Greatest Honour": {
+      "sire": "Greatest Honour",
+      "year": 2025,
+      "n_mares": 74,
+      "state": "KY"
+    },
+    "Quality Road": {
+      "sire": "Quality Road",
+      "year": 2025,
+      "n_mares": 74,
+      "state": "KY"
+    },
+    "Blame": {
+      "sire": "Blame",
+      "year": 2025,
+      "n_mares": 73,
+      "state": "KY"
+    },
+    "Candy Ride (ARG)": {
+      "sire": "Candy Ride (ARG)",
+      "year": 2025,
+      "n_mares": 73,
+      "state": "KY"
+    },
+    "Candy Ride (Arg)": {
+      "sire": "Candy Ride (ARG)",
+      "year": 2025,
+      "n_mares": 73,
+      "state": "KY"
+    },
+    "Mandaloun": {
+      "sire": "Mandaloun",
+      "year": 2025,
+      "n_mares": 73,
+      "state": "KY"
+    },
+    "Wit": {
+      "sire": "Wit",
+      "year": 2025,
+      "n_mares": 73,
+      "state": "LA"
+    },
+    "Violence": {
+      "sire": "Violence",
+      "year": 2025,
+      "n_mares": 71,
+      "state": "KY"
+    },
+    "Shaaz": {
+      "sire": "Shaaz",
+      "year": 2025,
+      "n_mares": 69,
+      "state": "CA"
+    },
+    "Tapiture": {
+      "sire": "Tapiture",
+      "year": 2025,
+      "n_mares": 69,
+      "state": "AB"
+    },
+    "War Front": {
+      "sire": "War Front",
+      "year": 2025,
+      "n_mares": 68,
+      "state": "KY"
+    },
+    "Karakontie (JPN)": {
+      "sire": "Karakontie (JPN)",
+      "year": 2025,
+      "n_mares": 67,
+      "state": "KY"
+    },
+    "Karakontie (Jpn)": {
+      "sire": "Karakontie (JPN)",
+      "year": 2025,
+      "n_mares": 67,
+      "state": "KY"
+    },
+    "Mitole": {
+      "sire": "Mitole",
+      "year": 2025,
+      "n_mares": 67,
+      "state": "KY"
+    },
+    "Reload": {
+      "sire": "Reload",
+      "year": 2025,
+      "n_mares": 67,
+      "state": "ON"
+    },
+    "Early Voting": {
+      "sire": "Early Voting",
+      "year": 2025,
+      "n_mares": 64,
+      "state": "KY"
+    },
+    "Dr. Schivel": {
+      "sire": "Dr. Schivel",
+      "year": 2025,
+      "n_mares": 63,
+      "state": "KY"
+    },
+    "El Deal": {
+      "sire": "El Deal",
+      "year": 2025,
+      "n_mares": 63,
+      "state": "LA"
+    },
+    "Loggins": {
+      "sire": "Loggins",
+      "year": 2025,
+      "n_mares": 61,
+      "state": "KY"
+    },
+    "Angel of Empire": {
+      "sire": "Angel of Empire",
+      "year": 2025,
+      "n_mares": 60,
+      "state": "KY"
+    },
+    "Angel Of Empire": {
+      "sire": "Angel of Empire",
+      "year": 2025,
+      "n_mares": 60,
+      "state": "KY"
+    },
+    "Doppelganger": {
+      "sire": "Doppelganger",
+      "year": 2025,
+      "n_mares": 60,
+      "state": "FL"
+    },
+    "Mind Control": {
+      "sire": "Mind Control",
+      "year": 2025,
+      "n_mares": 59,
+      "state": "NY"
+    },
+    "Casa Creed": {
+      "sire": "Casa Creed",
+      "year": 2025,
+      "n_mares": 58,
+      "state": "KY"
+    },
+    "More Than Looks": {
+      "sire": "More Than Looks",
+      "year": 2025,
+      "n_mares": 57,
+      "state": "KY"
+    },
+    "Medaglia d'Oro": {
+      "sire": "Medaglia d'Oro",
+      "year": 2025,
+      "n_mares": 56,
+      "state": "KY"
+    },
+    "Medaglia D'oro": {
+      "sire": "Medaglia d'Oro",
+      "year": 2025,
+      "n_mares": 56,
+      "state": "KY"
+    },
+    "Sir Prancealot (IRE)": {
+      "sire": "Sir Prancealot (IRE)",
+      "year": 2025,
+      "n_mares": 56,
+      "state": "CA"
+    },
+    "Sir Prancealot (Ire)": {
+      "sire": "Sir Prancealot (IRE)",
+      "year": 2025,
+      "n_mares": 56,
+      "state": "CA"
+    },
+    "Jimmy Creed": {
+      "sire": "Jimmy Creed",
+      "year": 2025,
+      "n_mares": 54,
+      "state": "KY"
+    },
+    "My Prankster": {
+      "sire": "My Prankster",
+      "year": 2025,
+      "n_mares": 53,
+      "state": "WV"
+    },
+    "Collected": {
+      "sire": "Collected",
+      "year": 2025,
+      "n_mares": 52,
+      "state": "KY"
+    },
+    "Cupid": {
+      "sire": "Cupid",
+      "year": 2025,
+      "n_mares": 52,
+      "state": "MD"
+    },
+    "Bee Jersey": {
+      "sire": "Bee Jersey",
+      "year": 2025,
+      "n_mares": 51,
+      "state": "KY"
+    },
+    "Messier": {
+      "sire": "Messier",
+      "year": 2025,
+      "n_mares": 51,
+      "state": "NY"
+    },
+    "Take Charge Indy": {
+      "sire": "Take Charge Indy",
+      "year": 2025,
+      "n_mares": 51,
+      "state": "KY"
+    },
+    "Fulsome": {
+      "sire": "Fulsome",
+      "year": 2025,
+      "n_mares": 50,
+      "state": "KY"
+    },
+    "Neolithic": {
+      "sire": "Neolithic",
+      "year": 2025,
+      "n_mares": 50,
+      "state": "FL"
+    },
+    "Adios Charlie": {
+      "sire": "Adios Charlie",
+      "year": 2025,
+      "n_mares": 49,
+      "state": "FL"
+    },
+    "Highly Motivated": {
+      "sire": "Highly Motivated",
+      "year": 2025,
+      "n_mares": 49,
+      "state": "KY"
+    },
+    "Mendelssohn": {
+      "sire": "Mendelssohn",
+      "year": 2025,
+      "n_mares": 49,
+      "state": "KY"
+    },
+    "Stage Raider": {
+      "sire": "Stage Raider",
+      "year": 2025,
+      "n_mares": 49,
+      "state": "KY"
+    },
+    "Colonel Liam": {
+      "sire": "Colonel Liam",
+      "year": 2025,
+      "n_mares": 48,
+      "state": "FL"
+    },
+    "Engage": {
+      "sire": "Engage",
+      "year": 2025,
+      "n_mares": 48,
+      "state": "MD"
+    },
+    "Mullion": {
+      "sire": "Mullion",
+      "year": 2025,
+      "n_mares": 48,
+      "state": "NY"
+    },
+    "Juba": {
+      "sire": "Juba",
+      "year": 2025,
+      "n_mares": 47,
+      "state": "WV"
+    },
+    "Khozan": {
+      "sire": "Khozan",
+      "year": 2025,
+      "n_mares": 47,
+      "state": "FL"
+    },
+    "Unified": {
+      "sire": "Unified",
+      "year": 2025,
+      "n_mares": 47,
+      "state": "LA"
+    },
+    "Hopkins": {
+      "sire": "Hopkins",
+      "year": 2025,
+      "n_mares": 46,
+      "state": "CA"
+    },
+    "Mo Donegal": {
+      "sire": "Mo Donegal",
+      "year": 2025,
+      "n_mares": 46,
+      "state": "KY"
+    },
+    "The Big Beast": {
+      "sire": "The Big Beast",
+      "year": 2025,
+      "n_mares": 46,
+      "state": "AR"
+    },
+    "Bobby's Wicked One": {
+      "sire": "Bobby's Wicked One",
+      "year": 2025,
+      "n_mares": 45,
+      "state": "LA"
+    },
+    "Mr Fisk": {
+      "sire": "Mr Fisk",
+      "year": 2025,
+      "n_mares": 45,
+      "state": "FL"
+    },
+    "Brickyard Ride": {
+      "sire": "Brickyard Ride",
+      "year": 2025,
+      "n_mares": 44,
+      "state": "CA"
+    },
+    "Bright Future": {
+      "sire": "Bright Future",
+      "year": 2025,
+      "n_mares": 44,
+      "state": "KY"
+    },
+    "Provocateur": {
+      "sire": "Provocateur",
+      "year": 2025,
+      "n_mares": 44,
+      "state": "NY"
+    },
+    "Mor Spirit": {
+      "sire": "Mor Spirit",
+      "year": 2025,
+      "n_mares": 43,
+      "state": "IN"
+    },
+    "Shirl's Speight": {
+      "sire": "Shirl's Speight",
+      "year": 2025,
+      "n_mares": 42,
+      "state": "KY"
+    },
+    "By My Standards": {
+      "sire": "By My Standards",
+      "year": 2025,
+      "n_mares": 41,
+      "state": "KY"
+    },
+    "Gormley": {
+      "sire": "Gormley",
+      "year": 2025,
+      "n_mares": 41,
+      "state": "LA"
+    },
+    "Idol": {
+      "sire": "Idol",
+      "year": 2025,
+      "n_mares": 41,
+      "state": "KY"
+    },
+    "Knicks Go": {
+      "sire": "Knicks Go",
+      "year": 2025,
+      "n_mares": 41,
+      "state": "KY"
+    },
+    "Endorsed": {
+      "sire": "Endorsed",
+      "year": 2025,
+      "n_mares": 40,
+      "state": "MD"
+    },
+    "Flat Out": {
+      "sire": "Flat Out",
+      "year": 2025,
+      "n_mares": 40,
+      "state": "OK"
+    },
+    "Roadster": {
+      "sire": "Roadster",
+      "year": 2025,
+      "n_mares": 40,
+      "state": "FL"
+    },
+    "Stay Thirsty": {
+      "sire": "Stay Thirsty",
+      "year": 2025,
+      "n_mares": 40,
+      "state": "CA"
+    },
+    "Street Strategy": {
+      "sire": "Street Strategy",
+      "year": 2025,
+      "n_mares": 40,
+      "state": "AR"
+    },
+    "Forbidden Kingdom": {
+      "sire": "Forbidden Kingdom",
+      "year": 2025,
+      "n_mares": 39,
+      "state": "CA"
+    },
+    "Silent Name (JPN)": {
+      "sire": "Silent Name (JPN)",
+      "year": 2025,
+      "n_mares": 39,
+      "state": "ON"
+    },
+    "Silent Name (Jpn)": {
+      "sire": "Silent Name (JPN)",
+      "year": 2025,
+      "n_mares": 39,
+      "state": "ON"
+    },
+    "Tizamagician": {
+      "sire": "Tizamagician",
+      "year": 2025,
+      "n_mares": 39,
+      "state": "CA"
+    },
+    "Basin": {
+      "sire": "Basin",
+      "year": 2025,
+      "n_mares": 38,
+      "state": "KY"
+    },
+    "Great Notion": {
+      "sire": "Great Notion",
+      "year": 2025,
+      "n_mares": 38,
+      "state": "MD"
+    },
+    "Halladay": {
+      "sire": "Halladay",
+      "year": 2025,
+      "n_mares": 38,
+      "state": "CA"
+    },
+    "Warrant": {
+      "sire": "Warrant",
+      "year": 2025,
+      "n_mares": 38,
+      "state": "MD"
+    },
+    "Zozos": {
+      "sire": "Zozos",
+      "year": 2025,
+      "n_mares": 38,
+      "state": "PA"
+    },
+    "Champions Dream": {
+      "sire": "Champions Dream",
+      "year": 2025,
+      "n_mares": 37,
+      "state": "FL"
+    },
+    "Corporal": {
+      "sire": "Corporal",
+      "year": 2025,
+      "n_mares": 37,
+      "state": "CA"
+    },
+    "Creative Cause": {
+      "sire": "Creative Cause",
+      "year": 2025,
+      "n_mares": 37,
+      "state": "TX"
+    },
+    "Lotsa Mischief": {
+      "sire": "Lotsa Mischief",
+      "year": 2025,
+      "n_mares": 37,
+      "state": "AZ"
+    },
+    "Mo Forza": {
+      "sire": "Mo Forza",
+      "year": 2025,
+      "n_mares": 37,
+      "state": "CA"
+    },
+    "Vino Rosso": {
+      "sire": "Vino Rosso",
+      "year": 2025,
+      "n_mares": 37,
+      "state": "KY"
+    },
+    "American Anthem": {
+      "sire": "American Anthem",
+      "year": 2025,
+      "n_mares": 36,
+      "state": "NM"
+    },
+    "Carpe Diem": {
+      "sire": "Carpe Diem",
+      "year": 2025,
+      "n_mares": 36,
+      "state": "LA"
+    },
+    "Clubhouse Ride": {
+      "sire": "Clubhouse Ride",
+      "year": 2025,
+      "n_mares": 36,
+      "state": "CA"
+    },
+    "Kantharos": {
+      "sire": "Kantharos",
+      "year": 2025,
+      "n_mares": 36,
+      "state": "KY"
+    },
+    "Mr. Money": {
+      "sire": "Mr. Money",
+      "year": 2025,
+      "n_mares": 36,
+      "state": "LA"
+    },
+    "Acclamation": {
+      "sire": "Acclamation",
+      "year": 2025,
+      "n_mares": 35,
+      "state": "CA"
+    },
+    "Connect": {
+      "sire": "Connect",
+      "year": 2025,
+      "n_mares": 35,
+      "state": "KY"
+    },
+    "Caddo River": {
+      "sire": "Caddo River",
+      "year": 2025,
+      "n_mares": 34,
+      "state": "AR"
+    },
+    "Frac Daddy": {
+      "sire": "Frac Daddy",
+      "year": 2025,
+      "n_mares": 34,
+      "state": "ON"
+    },
+    "Grazen": {
+      "sire": "Grazen",
+      "year": 2025,
+      "n_mares": 34,
+      "state": "CA"
+    },
+    "Petulante": {
+      "sire": "Petulante",
+      "year": 2025,
+      "n_mares": 34,
+      "state": "NY"
+    },
+    "Weyburn": {
+      "sire": "Weyburn",
+      "year": 2025,
+      "n_mares": 34,
+      "state": "ON"
+    },
+    "You're to Blame": {
+      "sire": "You're to Blame",
+      "year": 2025,
+      "n_mares": 34,
+      "state": "PR"
+    },
+    "You're To Blame": {
+      "sire": "You're to Blame",
+      "year": 2025,
+      "n_mares": 34,
+      "state": "PR"
+    },
+    "Bolden": {
+      "sire": "Bolden",
+      "year": 2025,
+      "n_mares": 33,
+      "state": "CA"
+    },
+    "Catholic Boy": {
+      "sire": "Catholic Boy",
+      "year": 2025,
+      "n_mares": 33,
+      "state": "CA"
+    },
+    "Cloud Computing": {
+      "sire": "Cloud Computing",
+      "year": 2025,
+      "n_mares": 33,
+      "state": "PA"
+    },
+    "Cross Traffic": {
+      "sire": "Cross Traffic",
+      "year": 2025,
+      "n_mares": 33,
+      "state": "KY"
+    },
+    "Mo Tom": {
+      "sire": "Mo Tom",
+      "year": 2025,
+      "n_mares": 33,
+      "state": "LA"
+    },
+    "Modernist": {
+      "sire": "Modernist",
+      "year": 2025,
+      "n_mares": 33,
+      "state": "KY"
+    },
+    "Exaggerator": {
+      "sire": "Exaggerator",
+      "year": 2025,
+      "n_mares": 32,
+      "state": "LA"
+    },
+    "Harry's Holiday": {
+      "sire": "Harry's Holiday",
+      "year": 2025,
+      "n_mares": 32,
+      "state": "IN"
+    },
+    "Pinehurst": {
+      "sire": "Pinehurst",
+      "year": 2025,
+      "n_mares": 32,
+      "state": "KY"
+    },
+    "Slumber (GB)": {
+      "sire": "Slumber (GB)",
+      "year": 2025,
+      "n_mares": 32,
+      "state": "NY"
+    },
+    "Slumber (Gb)": {
+      "sire": "Slumber (GB)",
+      "year": 2025,
+      "n_mares": 32,
+      "state": "NY"
+    },
+    "Mucho Macho Man": {
+      "sire": "Mucho Macho Man",
+      "year": 2025,
+      "n_mares": 31,
+      "state": "ON"
+    },
+    "National Flag": {
+      "sire": "National Flag",
+      "year": 2025,
+      "n_mares": 31,
+      "state": "OH"
+    },
+    "Senor Buscador": {
+      "sire": "Senor Buscador",
+      "year": 2025,
+      "n_mares": 31,
+      "state": "KY"
+    },
+    "The Factor": {
+      "sire": "The Factor",
+      "year": 2025,
+      "n_mares": 31,
+      "state": "KY"
+    },
+    "Waiting": {
+      "sire": "Waiting",
+      "year": 2025,
+      "n_mares": 31,
+      "state": "NY"
+    },
+    "Chewing Gum": {
+      "sire": "Chewing Gum",
+      "year": 2025,
+      "n_mares": 30,
+      "state": "NY"
+    },
+    "Known Agenda": {
+      "sire": "Known Agenda",
+      "year": 2025,
+      "n_mares": 30,
+      "state": "KY"
+    },
+    "Raging Bull (FR)": {
+      "sire": "Raging Bull (FR)",
+      "year": 2025,
+      "n_mares": 30,
+      "state": "KY"
+    },
+    "Raging Bull (Fr)": {
+      "sire": "Raging Bull (FR)",
+      "year": 2025,
+      "n_mares": 30,
+      "state": "KY"
+    },
+    "War Dancer": {
+      "sire": "War Dancer",
+      "year": 2025,
+      "n_mares": 29,
+      "state": "NY"
+    },
+    "Counterforce": {
+      "sire": "Counterforce",
+      "year": 2025,
+      "n_mares": 28,
+      "state": "AB"
+    },
+    "Golden Lad": {
+      "sire": "Golden Lad",
+      "year": 2025,
+      "n_mares": 28,
+      "state": "MD"
+    },
+    "Om": {
+      "sire": "Om",
+      "year": 2025,
+      "n_mares": 28,
+      "state": "CA"
+    },
+    "Pavel": {
+      "sire": "Pavel",
+      "year": 2025,
+      "n_mares": 28,
+      "state": "CA"
+    },
+    "Cajun Breeze": {
+      "sire": "Cajun Breeze",
+      "year": 2025,
+      "n_mares": 27,
+      "state": "FL"
+    },
+    "Uncle Lino": {
+      "sire": "Uncle Lino",
+      "year": 2025,
+      "n_mares": 27,
+      "state": "MD"
+    },
+    "Country Grammer": {
+      "sire": "Country Grammer",
+      "year": 2025,
+      "n_mares": 26,
+      "state": "KY"
+    },
+    "Jagr": {
+      "sire": "Jagr",
+      "year": 2025,
+      "n_mares": 26,
+      "state": "FL"
+    },
+    "Magic On Tap": {
+      "sire": "Magic On Tap",
+      "year": 2025,
+      "n_mares": 26,
+      "state": "FL"
+    },
+    "Title Ready": {
+      "sire": "Title Ready",
+      "year": 2025,
+      "n_mares": 26,
+      "state": "KY"
+    },
+    "Alternation": {
+      "sire": "Alternation",
+      "year": 2025,
+      "n_mares": 25,
+      "state": "WA"
+    },
+    "Don Paco": {
+      "sire": "Don Paco",
+      "year": 2025,
+      "n_mares": 25,
+      "state": "PR"
+    },
+    "King for a Day": {
+      "sire": "King for a Day",
+      "year": 2025,
+      "n_mares": 25,
+      "state": "NY"
+    },
+    "King For A Day": {
+      "sire": "King for a Day",
+      "year": 2025,
+      "n_mares": 25,
+      "state": "NY"
+    },
+    "Pat On the Back": {
+      "sire": "Pat On the Back",
+      "year": 2025,
+      "n_mares": 25,
+      "state": "PA"
+    },
+    "Pat On The Back": {
+      "sire": "Pat On the Back",
+      "year": 2025,
+      "n_mares": 25,
+      "state": "PA"
+    },
+    "Rushie": {
+      "sire": "Rushie",
+      "year": 2025,
+      "n_mares": 25,
+      "state": "LA"
+    },
+    "Tap Back": {
+      "sire": "Tap Back",
+      "year": 2025,
+      "n_mares": 25,
+      "state": "CA"
+    },
+    "Believe in Royalty": {
+      "sire": "Believe in Royalty",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "PR"
+    },
+    "Believe In Royalty": {
+      "sire": "Believe in Royalty",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "PR"
+    },
+    "Copper Bullet": {
+      "sire": "Copper Bullet",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "TX"
+    },
+    "Custom for Carlos": {
+      "sire": "Custom for Carlos",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "LA"
+    },
+    "Custom For Carlos": {
+      "sire": "Custom for Carlos",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "LA"
+    },
+    "Eight Rings": {
+      "sire": "Eight Rings",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "CA"
+    },
+    "Instilled Regard": {
+      "sire": "Instilled Regard",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "KY"
+    },
+    "Laurie's Rocket": {
+      "sire": "Laurie's Rocket",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "AR"
+    },
+    "Peace and Justice": {
+      "sire": "Peace and Justice",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "NY"
+    },
+    "Peace And Justice": {
+      "sire": "Peace and Justice",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "NY"
+    },
+    "War of Will": {
+      "sire": "War of Will",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "KY"
+    },
+    "War Of Will": {
+      "sire": "War of Will",
+      "year": 2025,
+      "n_mares": 24,
+      "state": "KY"
+    },
+    "Aloha West": {
+      "sire": "Aloha West",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "KY"
+    },
+    "Bakken": {
+      "sire": "Bakken",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "BC"
+    },
+    "Finneus": {
+      "sire": "Finneus",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "CA"
+    },
+    "Game Winner": {
+      "sire": "Game Winner",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "KY"
+    },
+    "Kentucky Wildcat": {
+      "sire": "Kentucky Wildcat",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "NM"
+    },
+    "Necker Island": {
+      "sire": "Necker Island",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "IN"
+    },
+    "Petrov": {
+      "sire": "Petrov",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "AR"
+    },
+    "Point of Entry": {
+      "sire": "Point of Entry",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "ON"
+    },
+    "Point Of Entry": {
+      "sire": "Point of Entry",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "ON"
+    },
+    "Signature Red": {
+      "sire": "Signature Red",
+      "year": 2025,
+      "n_mares": 23,
+      "state": "ON"
+    },
+    "Bye Bye Bobby": {
+      "sire": "Bye Bye Bobby",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "NM"
+    },
+    "Candygram": {
+      "sire": "Candygram",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "WV"
+    },
+    "Dads Caps": {
+      "sire": "Dads Caps",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "CA"
+    },
+    "Echo Town": {
+      "sire": "Echo Town",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "KY"
+    },
+    "Galawi (IRE)": {
+      "sire": "Galawi (IRE)",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "MD"
+    },
+    "Galawi (Ire)": {
+      "sire": "Galawi (IRE)",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "MD"
+    },
+    "Ghaaleb": {
+      "sire": "Ghaaleb",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "IL"
+    },
+    "Gufo": {
+      "sire": "Gufo",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "KY"
+    },
+    "Jesus' Team": {
+      "sire": "Jesus' Team",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "PR"
+    },
+    "Last Samurai": {
+      "sire": "Last Samurai",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "AR"
+    },
+    "Sea Wizard": {
+      "sire": "Sea Wizard",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "NJ"
+    },
+    "Temple City": {
+      "sire": "Temple City",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "KY"
+    },
+    "Tenfold": {
+      "sire": "Tenfold",
+      "year": 2025,
+      "n_mares": 22,
+      "state": "PR"
+    },
+    "Boptrot": {
+      "sire": "Boptrot",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "IN"
+    },
+    "Cat Burglar": {
+      "sire": "Cat Burglar",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "CA"
+    },
+    "Dominus": {
+      "sire": "Dominus",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "OH"
+    },
+    "Following Sea": {
+      "sire": "Following Sea",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "MB"
+    },
+    "Golden Years": {
+      "sire": "Golden Years",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "WV"
+    },
+    "Kentucky Summer": {
+      "sire": "Kentucky Summer",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "NM"
+    },
+    "Name Changer": {
+      "sire": "Name Changer",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "NY"
+    },
+    "Passion for Gold": {
+      "sire": "Passion for Gold",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "CA"
+    },
+    "Passion For Gold": {
+      "sire": "Passion for Gold",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "CA"
+    },
+    "Rogueish": {
+      "sire": "Rogueish",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "FL"
+    },
+    "Tough Sunday": {
+      "sire": "Tough Sunday",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "CA"
+    },
+    "Union Rags": {
+      "sire": "Union Rags",
+      "year": 2025,
+      "n_mares": 21,
+      "state": "KY"
+    },
+    "Audible": {
+      "sire": "Audible",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "KY"
+    },
+    "Barbados": {
+      "sire": "Barbados",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "WV"
+    },
+    "Caleb's Posse": {
+      "sire": "Caleb's Posse",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "OK"
+    },
+    "Collusion Illusion": {
+      "sire": "Collusion Illusion",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "ON"
+    },
+    "Demarchelier (GB)": {
+      "sire": "Demarchelier (GB)",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "KY"
+    },
+    "Demarchelier (Gb)": {
+      "sire": "Demarchelier (GB)",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "KY"
+    },
+    "Den's Legacy": {
+      "sire": "Den's Legacy",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "OK"
+    },
+    "Editorial": {
+      "sire": "Editorial",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "CA"
+    },
+    "Flavius": {
+      "sire": "Flavius",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "CA"
+    },
+    "Gretzky the Great": {
+      "sire": "Gretzky the Great",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "FL"
+    },
+    "Gretzky The Great": {
+      "sire": "Gretzky the Great",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "FL"
+    },
+    "Sir Winston": {
+      "sire": "Sir Winston",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "KY"
+    },
+    "Spun Intended": {
+      "sire": "Spun Intended",
+      "year": 2025,
+      "n_mares": 20,
+      "state": "CA"
+    },
+    "Arizona Moon": {
+      "sire": "Arizona Moon",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "AZ"
+    },
+    "Avie's Flatter": {
+      "sire": "Avie's Flatter",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "ON"
+    },
+    "Console": {
+      "sire": "Console",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "PR"
+    },
+    "Henry Adams (IRE)": {
+      "sire": "Henry Adams (IRE)",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "CA"
+    },
+    "Henry Adams (Ire)": {
+      "sire": "Henry Adams (IRE)",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "CA"
+    },
+    "Honor A. P.": {
+      "sire": "Honor A. P.",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "KY"
+    },
+    "Mr. Jagermeister": {
+      "sire": "Mr. Jagermeister",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "KY"
+    },
+    "Tamarkuz": {
+      "sire": "Tamarkuz",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "ON"
+    },
+    "Unbridled Express": {
+      "sire": "Unbridled Express",
+      "year": 2025,
+      "n_mares": 19,
+      "state": "IN"
+    },
+    "American Freedom": {
+      "sire": "American Freedom",
+      "year": 2025,
+      "n_mares": 18,
+      "state": "AR"
+    },
+    "Blended Citizen": {
+      "sire": "Blended Citizen",
+      "year": 2025,
+      "n_mares": 18,
+      "state": "OK"
+    },
+    "Divisidero": {
+      "sire": "Divisidero",
+      "year": 2025,
+      "n_mares": 18,
+      "state": "KY"
+    },
+    "Imperial Hint": {
+      "sire": "Imperial Hint",
+      "year": 2025,
+      "n_mares": 18,
+      "state": "LA"
+    },
+    "Revved Up": {
+      "sire": "Revved Up",
+      "year": 2025,
+      "n_mares": 18,
+      "state": "OK"
+    },
+    "Warrior's Charge": {
+      "sire": "Warrior's Charge",
+      "year": 2025,
+      "n_mares": 18,
+      "state": "NY"
+    },
+    "Winchill": {
+      "sire": "Winchill",
+      "year": 2025,
+      "n_mares": 18,
+      "state": "PA"
+    },
+    "Colonelsdarktemper": {
+      "sire": "Colonelsdarktemper",
+      "year": 2025,
+      "n_mares": 17,
+      "state": "LA"
+    },
+    "Fire At Will": {
+      "sire": "Fire At Will",
+      "year": 2025,
+      "n_mares": 17,
+      "state": "NY"
+    },
+    "Higher Power": {
+      "sire": "Higher Power",
+      "year": 2025,
+      "n_mares": 17,
+      "state": "KY"
+    },
+    "King Zachary": {
+      "sire": "King Zachary",
+      "year": 2025,
+      "n_mares": 17,
+      "state": "TX"
+    },
+    "Mo the Beholder": {
+      "sire": "Mo the Beholder",
+      "year": 2025,
+      "n_mares": 17,
+      "state": "CA"
+    },
+    "Mo The Beholder": {
+      "sire": "Mo the Beholder",
+      "year": 2025,
+      "n_mares": 17,
+      "state": "CA"
+    },
+    "Shaman Ghost": {
+      "sire": "Shaman Ghost",
+      "year": 2025,
+      "n_mares": 17,
+      "state": "ON"
+    },
+    "Toews On Ice": {
+      "sire": "Toews On Ice",
+      "year": 2025,
+      "n_mares": 17,
+      "state": "NM"
+    },
+    "Beren": {
+      "sire": "Beren",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "PA"
+    },
+    "Favorable Outcome": {
+      "sire": "Favorable Outcome",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "NE"
+    },
+    "Fiber Sonde": {
+      "sire": "Fiber Sonde",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "WV"
+    },
+    "Gold Double": {
+      "sire": "Gold Double",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "TX"
+    },
+    "Keepmeinmind": {
+      "sire": "Keepmeinmind",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "NY"
+    },
+    "Lexitonian": {
+      "sire": "Lexitonian",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "KY"
+    },
+    "My Pal Charlie": {
+      "sire": "My Pal Charlie",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "LA"
+    },
+    "Super Stock": {
+      "sire": "Super Stock",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "AR"
+    },
+    "Tapwrit": {
+      "sire": "Tapwrit",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "IN"
+    },
+    "Uptowncharlybrown": {
+      "sire": "Uptowncharlybrown",
+      "year": 2025,
+      "n_mares": 16,
+      "state": "PA"
+    },
+    "Airoforce": {
+      "sire": "Airoforce",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "OK"
+    },
+    "Competitive Edge": {
+      "sire": "Competitive Edge",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "TX"
+    },
+    "Eastwood": {
+      "sire": "Eastwood",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "PA"
+    },
+    "Graydar": {
+      "sire": "Graydar",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "CA"
+    },
+    "Jack Milton": {
+      "sire": "Jack Milton",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "CA"
+    },
+    "No Parole": {
+      "sire": "No Parole",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "LA"
+    },
+    "Originaire (IRE)": {
+      "sire": "Originaire (IRE)",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "CA"
+    },
+    "Originaire (Ire)": {
+      "sire": "Originaire (IRE)",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "CA"
+    },
+    "Rombauer": {
+      "sire": "Rombauer",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "KY"
+    },
+    "Storm the Court": {
+      "sire": "Storm the Court",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "CA"
+    },
+    "Storm The Court": {
+      "sire": "Storm the Court",
+      "year": 2025,
+      "n_mares": 15,
+      "state": "CA"
+    },
+    "Anyportinastorm": {
+      "sire": "Anyportinastorm",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "NE"
+    },
+    "Bahjatty": {
+      "sire": "Bahjatty",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "IN"
+    },
+    "Big Screen": {
+      "sire": "Big Screen",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "ON"
+    },
+    "Boisterous": {
+      "sire": "Boisterous",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "AB"
+    },
+    "Buy Land and See": {
+      "sire": "Buy Land and See",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "PA"
+    },
+    "Buy Land And See": {
+      "sire": "Buy Land and See",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "PA"
+    },
+    "Capo Kane": {
+      "sire": "Capo Kane",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "PA"
+    },
+    "Charming Kitten": {
+      "sire": "Charming Kitten",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "IN"
+    },
+    "Curlin's Honor": {
+      "sire": "Curlin's Honor",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "FL"
+    },
+    "Ez Effort": {
+      "sire": "Ez Effort",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "AZ"
+    },
+    "Fight On": {
+      "sire": "Fight On",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "AB"
+    },
+    "Long On Value": {
+      "sire": "Long On Value",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "MA"
+    },
+    "Maraud": {
+      "sire": "Maraud",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "PR"
+    },
+    "One Bad Boy": {
+      "sire": "One Bad Boy",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "CA"
+    },
+    "Poseidon's Warrior": {
+      "sire": "Poseidon's Warrior",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "TX"
+    },
+    "Rise Up": {
+      "sire": "Rise Up",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "OR"
+    },
+    "Silver State": {
+      "sire": "Silver State",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "KY"
+    },
+    "Stanford": {
+      "sire": "Stanford",
+      "year": 2025,
+      "n_mares": 14,
+      "state": "CA"
+    },
+    "Awesome Slew": {
+      "sire": "Awesome Slew",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "FL"
+    },
+    "Brody's Cause": {
+      "sire": "Brody's Cause",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "PA"
+    },
+    "Chess Chief": {
+      "sire": "Chess Chief",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "FL"
+    },
+    "Forever d'Oro": {
+      "sire": "Forever d'Oro",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "IN"
+    },
+    "Forever D'oro": {
+      "sire": "Forever d'Oro",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "IN"
+    },
+    "Oxbow": {
+      "sire": "Oxbow",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "KY"
+    },
+    "Sleepy Eyes Todd": {
+      "sire": "Sleepy Eyes Todd",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "IN"
+    },
+    "Social Inclusion": {
+      "sire": "Social Inclusion",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "FL"
+    },
+    "Spun to Run": {
+      "sire": "Spun to Run",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "KY"
+    },
+    "Spun To Run": {
+      "sire": "Spun to Run",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "KY"
+    },
+    "Valiant Minister": {
+      "sire": "Valiant Minister",
+      "year": 2025,
+      "n_mares": 13,
+      "state": "FL"
+    },
+    "Classic Causeway": {
+      "sire": "Classic Causeway",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "KY"
+    },
+    "Clearly Now": {
+      "sire": "Clearly Now",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "LA"
+    },
+    "Coast Guard": {
+      "sire": "Coast Guard",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "WA"
+    },
+    "Comfort": {
+      "sire": "Comfort",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "NM"
+    },
+    "Finnegans Wake": {
+      "sire": "Finnegans Wake",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "WY"
+    },
+    "Giant Expectations": {
+      "sire": "Giant Expectations",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "NE"
+    },
+    "Happy Saver": {
+      "sire": "Happy Saver",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "KY"
+    },
+    "Instagrand": {
+      "sire": "Instagrand",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "KY"
+    },
+    "Maximum Security": {
+      "sire": "Maximum Security",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "KY"
+    },
+    "Nielson": {
+      "sire": "Nielson",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "MB"
+    },
+    "Northern Causeway": {
+      "sire": "Northern Causeway",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "CA"
+    },
+    "Perfect Speighty": {
+      "sire": "Perfect Speighty",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "ON"
+    },
+    "Sacred Life (FR)": {
+      "sire": "Sacred Life (FR)",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "KY"
+    },
+    "Sacred Life (Fr)": {
+      "sire": "Sacred Life (FR)",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "KY"
+    },
+    "Shoplifted": {
+      "sire": "Shoplifted",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "TX"
+    },
+    "Tonalist": {
+      "sire": "Tonalist",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "KY"
+    },
+    "Venezuelan Hug": {
+      "sire": "Venezuelan Hug",
+      "year": 2025,
+      "n_mares": 12,
+      "state": "NY"
+    },
+    "Barkley": {
+      "sire": "Barkley",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "WA"
+    },
+    "Danzing Candy": {
+      "sire": "Danzing Candy",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "CA"
+    },
+    "Fame": {
+      "sire": "Fame",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "CA"
+    },
+    "First Samurai": {
+      "sire": "First Samurai",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "KY"
+    },
+    "Galilean": {
+      "sire": "Galilean",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "NY"
+    },
+    "Hog Creek Hustle": {
+      "sire": "Hog Creek Hustle",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "KY"
+    },
+    "Liam's Mischief": {
+      "sire": "Liam's Mischief",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "PR"
+    },
+    "Listing": {
+      "sire": "Listing",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "CA"
+    },
+    "Maine": {
+      "sire": "Maine",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "MA"
+    },
+    "Mo Z": {
+      "sire": "Mo Z",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "OH"
+    },
+    "Mosler": {
+      "sire": "Mosler",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "MD"
+    },
+    "Mr Speaker": {
+      "sire": "Mr Speaker",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "TX"
+    },
+    "No More Guns": {
+      "sire": "No More Guns",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "AR"
+    },
+    "Ny Traffic": {
+      "sire": "Ny Traffic",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "PA"
+    },
+    "Rich Strike": {
+      "sire": "Rich Strike",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "NY"
+    },
+    "Runhappy": {
+      "sire": "Runhappy",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "KY"
+    },
+    "Scalding": {
+      "sire": "Scalding",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "KY"
+    },
+    "Shogood": {
+      "sire": "Shogood",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "IL"
+    },
+    "Sky Mesa": {
+      "sire": "Sky Mesa",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "KY"
+    },
+    "Take Charge Tapit": {
+      "sire": "Take Charge Tapit",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "IN"
+    },
+    "Tale of Ekati": {
+      "sire": "Tale of Ekati",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "KY"
+    },
+    "Tale Of Ekati": {
+      "sire": "Tale of Ekati",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "KY"
+    },
+    "Very Cool": {
+      "sire": "Very Cool",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "OK"
+    },
+    "Yorkton": {
+      "sire": "Yorkton",
+      "year": 2025,
+      "n_mares": 11,
+      "state": "KY"
+    },
+    "American Pastime": {
+      "sire": "American Pastime",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "OH"
+    },
+    "Bullsbay": {
+      "sire": "Bullsbay",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "WV"
+    },
+    "Catalina Red": {
+      "sire": "Catalina Red",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "LA"
+    },
+    "Colonel John": {
+      "sire": "Colonel John",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "OK"
+    },
+    "Country House": {
+      "sire": "Country House",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "KY"
+    },
+    "Five Star General": {
+      "sire": "Five Star General",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "VA"
+    },
+    "Hopeful Treasure": {
+      "sire": "Hopeful Treasure",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "PA"
+    },
+    "Irish War Cry": {
+      "sire": "Irish War Cry",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "AR"
+    },
+    "Iron Fist": {
+      "sire": "Iron Fist",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "LA"
+    },
+    "Keen Ice": {
+      "sire": "Keen Ice",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "KY"
+    },
+    "Lone Sailor": {
+      "sire": "Lone Sailor",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "LA"
+    },
+    "Mineshaft": {
+      "sire": "Mineshaft",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "KY"
+    },
+    "Precise Dancer": {
+      "sire": "Precise Dancer",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "PR"
+    },
+    "Sea Foam": {
+      "sire": "Sea Foam",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "AR"
+    },
+    "Smarty Jones": {
+      "sire": "Smarty Jones",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "PA"
+    },
+    "Smooth Like Strait": {
+      "sire": "Smooth Like Strait",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "KY"
+    },
+    "Sombeyay": {
+      "sire": "Sombeyay",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "IN"
+    },
+    "Speightsong": {
+      "sire": "Speightsong",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "IN"
+    },
+    "Tom's d'Etat": {
+      "sire": "Tom's d'Etat",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "KY"
+    },
+    "Tom's D'etat": {
+      "sire": "Tom's d'Etat",
+      "year": 2025,
+      "n_mares": 10,
+      "state": "KY"
+    },
+    "Abundant": {
+      "sire": "Abundant",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "NE"
+    },
+    "American Dubai": {
+      "sire": "American Dubai",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "TX"
+    },
+    "Ami's Flatter": {
+      "sire": "Ami's Flatter",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "ON"
+    },
+    "Babylon": {
+      "sire": "Babylon",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "NE"
+    },
+    "Channel Cat": {
+      "sire": "Channel Cat",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "KY"
+    },
+    "Core Beliefs": {
+      "sire": "Core Beliefs",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "KY"
+    },
+    "Divining Rod": {
+      "sire": "Divining Rod",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "MD"
+    },
+    "Dreams of Tomorrow": {
+      "sire": "Dreams of Tomorrow",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "PR"
+    },
+    "Dreams Of Tomorrow": {
+      "sire": "Dreams of Tomorrow",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "PR"
+    },
+    "Faversham": {
+      "sire": "Faversham",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "LA"
+    },
+    "Free Drop Billy": {
+      "sire": "Free Drop Billy",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "IA"
+    },
+    "Friesan Fire": {
+      "sire": "Friesan Fire",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "MD"
+    },
+    "Front Run the Fed": {
+      "sire": "Front Run the Fed",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "KY"
+    },
+    "Front Run The Fed": {
+      "sire": "Front Run the Fed",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "KY"
+    },
+    "Gamble's Exchange": {
+      "sire": "Gamble's Exchange",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "ON"
+    },
+    "Ghostzapper": {
+      "sire": "Ghostzapper",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "ON"
+    },
+    "Gift Box": {
+      "sire": "Gift Box",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "KY"
+    },
+    "In Due Time": {
+      "sire": "In Due Time",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "IN"
+    },
+    "Keepcalmncruiseon": {
+      "sire": "Keepcalmncruiseon",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "MB"
+    },
+    "Know It Now": {
+      "sire": "Know It Now",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "AB"
+    },
+    "Kunal": {
+      "sire": "Kunal",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "FL"
+    },
+    "Last Print": {
+      "sire": "Last Print",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "WV"
+    },
+    "Promises Fulfilled": {
+      "sire": "Promises Fulfilled",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "KY"
+    },
+    "Redirect": {
+      "sire": "Redirect",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "WV"
+    },
+    "Rumpus Cat": {
+      "sire": "Rumpus Cat",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "CA"
+    },
+    "Tale of Silence": {
+      "sire": "Tale of Silence",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "KY"
+    },
+    "Tale Of Silence": {
+      "sire": "Tale of Silence",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "KY"
+    },
+    "Tamarando": {
+      "sire": "Tamarando",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "CA"
+    },
+    "Timeline": {
+      "sire": "Timeline",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "IA"
+    },
+    "Uncle Vinny": {
+      "sire": "Uncle Vinny",
+      "year": 2025,
+      "n_mares": 9,
+      "state": "OK"
+    },
+    "Bourbon Courage": {
+      "sire": "Bourbon Courage",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "MD"
+    },
+    "Bravazo": {
+      "sire": "Bravazo",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "KY"
+    },
+    "Brethren": {
+      "sire": "Brethren",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "FL"
+    },
+    "Centrifuge": {
+      "sire": "Centrifuge",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "IL"
+    },
+    "Chance It": {
+      "sire": "Chance It",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "VA"
+    },
+    "Cowtown Cat": {
+      "sire": "Cowtown Cat",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "OK"
+    },
+    "Funtastic": {
+      "sire": "Funtastic",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "KY"
+    },
+    "Inspired Mischief": {
+      "sire": "Inspired Mischief",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "OH"
+    },
+    "Kobe's Back": {
+      "sire": "Kobe's Back",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "MD"
+    },
+    "Max Player": {
+      "sire": "Max Player",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "NJ"
+    },
+    "Moquest": {
+      "sire": "Moquest",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "CA"
+    },
+    "Right Rigger": {
+      "sire": "Right Rigger",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "NM"
+    },
+    "Sassicaia": {
+      "sire": "Sassicaia",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "LA"
+    },
+    "Speculating": {
+      "sire": "Speculating",
+      "year": 2025,
+      "n_mares": 8,
+      "state": "MB"
+    },
+    "Abstraction": {
+      "sire": "Abstraction",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "NM"
+    },
+    "Anaconda": {
+      "sire": "Anaconda",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "LA"
+    },
+    "Arghad": {
+      "sire": "Arghad",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "PR"
+    },
+    "Blueblood": {
+      "sire": "Blueblood",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "IA"
+    },
+    "Danish Dynaformer": {
+      "sire": "Danish Dynaformer",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "ON"
+    },
+    "Dark Kestrel": {
+      "sire": "Dark Kestrel",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "OH"
+    },
+    "Dowsing (JPN)": {
+      "sire": "Dowsing (JPN)",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "IN"
+    },
+    "Dowsing (Jpn)": {
+      "sire": "Dowsing (JPN)",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "IN"
+    },
+    "Forest Command": {
+      "sire": "Forest Command",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "WY"
+    },
+    "Gentlemen's Bet": {
+      "sire": "Gentlemen's Bet",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "AR"
+    },
+    "Gold Rush Dancer": {
+      "sire": "Gold Rush Dancer",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "WA"
+    },
+    "Hightail": {
+      "sire": "Hightail",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "KY"
+    },
+    "Hoppertunity": {
+      "sire": "Hoppertunity",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "LA"
+    },
+    "Idiot Proof": {
+      "sire": "Idiot Proof",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "CA"
+    },
+    "Joey Freshwater": {
+      "sire": "Joey Freshwater",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "CA"
+    },
+    "Mr Bolt": {
+      "sire": "Mr Bolt",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "FL"
+    },
+    "Mr. Monomoy": {
+      "sire": "Mr. Monomoy",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "WV"
+    },
+    "Pound for Pound": {
+      "sire": "Pound for Pound",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "LA"
+    },
+    "Pound For Pound": {
+      "sire": "Pound for Pound",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "LA"
+    },
+    "Prince of War": {
+      "sire": "Prince of War",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "IA"
+    },
+    "Prince Of War": {
+      "sire": "Prince of War",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "IA"
+    },
+    "Raising the Flag": {
+      "sire": "Raising the Flag",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "OK"
+    },
+    "Raising The Flag": {
+      "sire": "Raising the Flag",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "OK"
+    },
+    "Santiva": {
+      "sire": "Santiva",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "IN"
+    },
+    "Sky Promise": {
+      "sire": "Sky Promise",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "ND"
+    },
+    "Sporting Chance": {
+      "sire": "Sporting Chance",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "NM"
+    },
+    "The Street Fighter": {
+      "sire": "The Street Fighter",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "CA"
+    },
+    "Tradfest": {
+      "sire": "Tradfest",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "NM"
+    },
+    "Whelen Springs": {
+      "sire": "Whelen Springs",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "AR"
+    },
+    "Wilburn": {
+      "sire": "Wilburn",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "OK"
+    },
+    "Wildcat Red": {
+      "sire": "Wildcat Red",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "OH"
+    },
+    "Yockey's Warrior": {
+      "sire": "Yockey's Warrior",
+      "year": 2025,
+      "n_mares": 7,
+      "state": "LA"
+    },
+    "American Theorem": {
+      "sire": "American Theorem",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "CA"
+    },
+    "Bayerd": {
+      "sire": "Bayerd",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "OK"
+    },
+    "Brighton Lane": {
+      "sire": "Brighton Lane",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "PA"
+    },
+    "Burrow": {
+      "sire": "Burrow",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "TX"
+    },
+    "Calibrachoa": {
+      "sire": "Calibrachoa",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "LA"
+    },
+    "Cancun": {
+      "sire": "Cancun",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "WV"
+    },
+    "Firespike": {
+      "sire": "Firespike",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "AB"
+    },
+    "First Dude": {
+      "sire": "First Dude",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "FL"
+    },
+    "Fixer": {
+      "sire": "Fixer",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "PR"
+    },
+    "Flashpoint": {
+      "sire": "Flashpoint",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "LA"
+    },
+    "Gato Del Oro": {
+      "sire": "Gato Del Oro",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "CA"
+    },
+    "Gunnevera": {
+      "sire": "Gunnevera",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "FL"
+    },
+    "Jackson": {
+      "sire": "Jackson",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "FL"
+    },
+    "Looking Cool": {
+      "sire": "Looking Cool",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "IN"
+    },
+    "Pontiff": {
+      "sire": "Pontiff",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "CA"
+    },
+    "Raging Tiger": {
+      "sire": "Raging Tiger",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "OR"
+    },
+    "Rudder": {
+      "sire": "Rudder",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "PR"
+    },
+    "Sir Anthony": {
+      "sire": "Sir Anthony",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "OH"
+    },
+    "Somelikeithotbrown": {
+      "sire": "Somelikeithotbrown",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "PA"
+    },
+    "Sweetontheladies": {
+      "sire": "Sweetontheladies",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "WV"
+    },
+    "Texas Red": {
+      "sire": "Texas Red",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "OH"
+    },
+    "Tiz Mischief": {
+      "sire": "Tiz Mischief",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "TX"
+    },
+    "Tom's Tribute": {
+      "sire": "Tom's Tribute",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "CA"
+    },
+    "Uh Oh Bango": {
+      "sire": "Uh Oh Bango",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "AZ"
+    },
+    "Visitant": {
+      "sire": "Visitant",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "CA"
+    },
+    "Weigelia": {
+      "sire": "Weigelia",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "PA"
+    },
+    "Whistler Mtn Gold": {
+      "sire": "Whistler Mtn Gold",
+      "year": 2025,
+      "n_mares": 6,
+      "state": "VA"
+    },
+    "American Code": {
+      "sire": "American Code",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "TX"
+    },
+    "Amis Gizmo": {
+      "sire": "Amis Gizmo",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "ON"
+    },
+    "Annato": {
+      "sire": "Annato",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "PR"
+    },
+    "Awesome Bet": {
+      "sire": "Awesome Bet",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "LA"
+    },
+    "Bahamian Squall": {
+      "sire": "Bahamian Squall",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "FL"
+    },
+    "Baseball Card Kid": {
+      "sire": "Baseball Card Kid",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "ND"
+    },
+    "Bluegrass Season": {
+      "sire": "Bluegrass Season",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "FL"
+    },
+    "Calculated Risker": {
+      "sire": "Calculated Risker",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "ND"
+    },
+    "Capo Bastone": {
+      "sire": "Capo Bastone",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "WV"
+    },
+    "Champagne Juan": {
+      "sire": "Champagne Juan",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "KY"
+    },
+    "Cocked and Loaded": {
+      "sire": "Cocked and Loaded",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "OK"
+    },
+    "Cocked And Loaded": {
+      "sire": "Cocked and Loaded",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "OK"
+    },
+    "Country Day": {
+      "sire": "Country Day",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "LA"
+    },
+    "Dinar": {
+      "sire": "Dinar",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "LA"
+    },
+    "Eric Manuel": {
+      "sire": "Eric Manuel",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "PR"
+    },
+    "First Mondays": {
+      "sire": "First Mondays",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "MD"
+    },
+    "Harvey Wallbanger": {
+      "sire": "Harvey Wallbanger",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "TX"
+    },
+    "Heart to Heart": {
+      "sire": "Heart to Heart",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "KY"
+    },
+    "Heart To Heart": {
+      "sire": "Heart to Heart",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "KY"
+    },
+    "Holiday Promise": {
+      "sire": "Holiday Promise",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "IN"
+    },
+    "Itsthesameoldsong": {
+      "sire": "Itsthesameoldsong",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "OH"
+    },
+    "Lantana Mob": {
+      "sire": "Lantana Mob",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "IN"
+    },
+    "Lutes Gift": {
+      "sire": "Lutes Gift",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "WA"
+    },
+    "Maddy Bird": {
+      "sire": "Maddy Bird",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "MI"
+    },
+    "Most Mischief": {
+      "sire": "Most Mischief",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "NE"
+    },
+    "No Hesitation": {
+      "sire": "No Hesitation",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "AB"
+    },
+    "Nonios": {
+      "sire": "Nonios",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "MB"
+    },
+    "Not Bourbon": {
+      "sire": "Not Bourbon",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "BC"
+    },
+    "Pataky Kid": {
+      "sire": "Pataky Kid",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "IN"
+    },
+    "Phenomenalmoon": {
+      "sire": "Phenomenalmoon",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "ND"
+    },
+    "Rousing Sermon": {
+      "sire": "Rousing Sermon",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "CA"
+    },
+    "Saratoga Syndicate": {
+      "sire": "Saratoga Syndicate",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "WV"
+    },
+    "Serve the King (GB)": {
+      "sire": "Serve the King (GB)",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "ON"
+    },
+    "Serve The King (Gb)": {
+      "sire": "Serve the King (GB)",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "ON"
+    },
+    "Shotski": {
+      "sire": "Shotski",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "LA"
+    },
+    "Side Road": {
+      "sire": "Side Road",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "PR"
+    },
+    "Sky Fire": {
+      "sire": "Sky Fire",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "IN"
+    },
+    "Unbridled Energy": {
+      "sire": "Unbridled Energy",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "MI"
+    },
+    "West Road": {
+      "sire": "West Road",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "OK"
+    },
+    "Whence": {
+      "sire": "Whence",
+      "year": 2025,
+      "n_mares": 5,
+      "state": "LA"
+    },
+    "American Guru": {
+      "sire": "American Guru",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "ON"
+    },
+    "Ballagh Rocks": {
+      "sire": "Ballagh Rocks",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "NY"
+    },
+    "Big Runnuer": {
+      "sire": "Big Runnuer",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "CA"
+    },
+    "Bodexpress": {
+      "sire": "Bodexpress",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "FL"
+    },
+    "Calculator": {
+      "sire": "Calculator",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "IN"
+    },
+    "Clarke Lane": {
+      "sire": "Clarke Lane",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "OK"
+    },
+    "Closing Argument": {
+      "sire": "Closing Argument",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "LA"
+    },
+    "Count Alexander": {
+      "sire": "Count Alexander",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "LA"
+    },
+    "Cowboy Mischief": {
+      "sire": "Cowboy Mischief",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "OK"
+    },
+    "Dancing Divo": {
+      "sire": "Dancing Divo",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "ID"
+    },
+    "El Macho Suave": {
+      "sire": "El Macho Suave",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "NM"
+    },
+    "Excaper": {
+      "sire": "Excaper",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "OK"
+    },
+    "Exclusivo": {
+      "sire": "Exclusivo",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "PR"
+    },
+    "Global Campaign": {
+      "sire": "Global Campaign",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "KY"
+    },
+    "Go for Four": {
+      "sire": "Go for Four",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "NM"
+    },
+    "Go For Four": {
+      "sire": "Go for Four",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "NM"
+    },
+    "Grand Luwegee": {
+      "sire": "Grand Luwegee",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "LA"
+    },
+    "Harbored Memories": {
+      "sire": "Harbored Memories",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "OR"
+    },
+    "Hard Aces": {
+      "sire": "Hard Aces",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "LA"
+    },
+    "Kick On": {
+      "sire": "Kick On",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "OK"
+    },
+    "King of Jazz (ARG)": {
+      "sire": "King of Jazz (ARG)",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "CA"
+    },
+    "King Of Jazz (Arg)": {
+      "sire": "King of Jazz (ARG)",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "CA"
+    },
+    "Mageez": {
+      "sire": "Mageez",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "LA"
+    },
+    "Malibu Max": {
+      "sire": "Malibu Max",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "AB"
+    },
+    "Mohaymen": {
+      "sire": "Mohaymen",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "ON"
+    },
+    "Plainsman": {
+      "sire": "Plainsman",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "KY"
+    },
+    "Punctuate": {
+      "sire": "Punctuate",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "NM"
+    },
+    "Qurbaan": {
+      "sire": "Qurbaan",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "IN"
+    },
+    "Savu": {
+      "sire": "Savu",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "PR"
+    },
+    "Smokem": {
+      "sire": "Smokem",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "CA"
+    },
+    "Swift Cowboy": {
+      "sire": "Swift Cowboy",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "TX"
+    },
+    "Texas Chrome": {
+      "sire": "Texas Chrome",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "AR"
+    },
+    "Three Hour Nap": {
+      "sire": "Three Hour Nap",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "IL"
+    },
+    "Tour de Force": {
+      "sire": "Tour de Force",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "AB"
+    },
+    "Tour De Force": {
+      "sire": "Tour de Force",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "AB"
+    },
+    "Twice as Bad": {
+      "sire": "Twice as Bad",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "NE"
+    },
+    "Twice As Bad": {
+      "sire": "Twice as Bad",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "NE"
+    },
+    "Unfinished Affairs": {
+      "sire": "Unfinished Affairs",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "FL"
+    },
+    "War Power": {
+      "sire": "War Power",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "WA"
+    },
+    "Watershed": {
+      "sire": "Watershed",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "PR"
+    },
+    "Wendy Wend": {
+      "sire": "Wendy Wend",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "TN"
+    },
+    "Why Not Be Perfect": {
+      "sire": "Why Not Be Perfect",
+      "year": 2025,
+      "n_mares": 4,
+      "state": "OR"
+    },
+    "Albizu": {
+      "sire": "Albizu",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "PR"
+    },
+    "Aldrin": {
+      "sire": "Aldrin",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "WV"
+    },
+    "Apriority": {
+      "sire": "Apriority",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "LA"
+    },
+    "Bambinoreds Legacy": {
+      "sire": "Bambinoreds Legacy",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "VA"
+    },
+    "Bethel": {
+      "sire": "Bethel",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NY"
+    },
+    "Car Talk (IRE)": {
+      "sire": "Car Talk (IRE)",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "AB"
+    },
+    "Car Talk (Ire)": {
+      "sire": "Car Talk (IRE)",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "AB"
+    },
+    "City Wolf": {
+      "sire": "City Wolf",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NY"
+    },
+    "Command Post": {
+      "sire": "Command Post",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "PA"
+    },
+    "Corfu": {
+      "sire": "Corfu",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "OH"
+    },
+    "Court Vision": {
+      "sire": "Court Vision",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NE"
+    },
+    "Cutting Humor": {
+      "sire": "Cutting Humor",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "AR"
+    },
+    "Dark Canyon": {
+      "sire": "Dark Canyon",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "WV"
+    },
+    "Desert Code": {
+      "sire": "Desert Code",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "CA"
+    },
+    "Double Ours": {
+      "sire": "Double Ours",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "OK"
+    },
+    "Dynamic Impact": {
+      "sire": "Dynamic Impact",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "OR"
+    },
+    "Elnaawi": {
+      "sire": "Elnaawi",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "IN"
+    },
+    "Felix in Fabula": {
+      "sire": "Felix in Fabula",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "IL"
+    },
+    "Felix In Fabula": {
+      "sire": "Felix in Fabula",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "IL"
+    },
+    "Finale": {
+      "sire": "Finale",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "TX"
+    },
+    "Gagetown": {
+      "sire": "Gagetown",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NJ"
+    },
+    "Giacomo": {
+      "sire": "Giacomo",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "OR"
+    },
+    "Guest Star": {
+      "sire": "Guest Star",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "IL"
+    },
+    "Home Base": {
+      "sire": "Home Base",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "LA"
+    },
+    "Incorporated": {
+      "sire": "Incorporated",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "IL"
+    },
+    "Jersey Town": {
+      "sire": "Jersey Town",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "CA"
+    },
+    "Karate": {
+      "sire": "Karate",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "OK"
+    },
+    "Katz My Song": {
+      "sire": "Katz My Song",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "FL"
+    },
+    "Kentucky Bear": {
+      "sire": "Kentucky Bear",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "SK"
+    },
+    "Lookin At Lee": {
+      "sire": "Lookin At Lee",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NY"
+    },
+    "Mo and Go": {
+      "sire": "Mo and Go",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "CA"
+    },
+    "Mo And Go": {
+      "sire": "Mo and Go",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "CA"
+    },
+    "Mosquito": {
+      "sire": "Mosquito",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "AL"
+    },
+    "Mr Louise": {
+      "sire": "Mr Louise",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "FL"
+    },
+    "Notional": {
+      "sire": "Notional",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "OH"
+    },
+    "One Liner": {
+      "sire": "One Liner",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "LA"
+    },
+    "Oscar Nominated": {
+      "sire": "Oscar Nominated",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "CA"
+    },
+    "Paynter's Boy": {
+      "sire": "Paynter's Boy",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "CO"
+    },
+    "Quality Rags": {
+      "sire": "Quality Rags",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NM"
+    },
+    "Rampant Rhythm": {
+      "sire": "Rampant Rhythm",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "IL"
+    },
+    "Rascal Cat": {
+      "sire": "Rascal Cat",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "KS"
+    },
+    "Satans Irish Debut": {
+      "sire": "Satans Irish Debut",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "TX"
+    },
+    "Spirit of the Nile": {
+      "sire": "Spirit of the Nile",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NM"
+    },
+    "Spirit Of The Nile": {
+      "sire": "Spirit of the Nile",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NM"
+    },
+    "Straight Fire": {
+      "sire": "Straight Fire",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "CA"
+    },
+    "Tamborero": {
+      "sire": "Tamborero",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "PR"
+    },
+    "Tap Master": {
+      "sire": "Tap Master",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "AB"
+    },
+    "Tastemaker": {
+      "sire": "Tastemaker",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "NM"
+    },
+    "Top Draw": {
+      "sire": "Top Draw",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "IN"
+    },
+    "Uptown Rythem": {
+      "sire": "Uptown Rythem",
+      "year": 2025,
+      "n_mares": 3,
+      "state": "CA"
+    },
+    "Artful Run": {
+      "sire": "Artful Run",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "NM"
+    },
+    "Balandeen": {
+      "sire": "Balandeen",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "AR"
+    },
+    "Big Dreaming": {
+      "sire": "Big Dreaming",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "NC"
+    },
+    "Blizzard Warning": {
+      "sire": "Blizzard Warning",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "VA"
+    },
+    "Codes Diamond": {
+      "sire": "Codes Diamond",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "AR"
+    },
+    "Conquest Mo Money": {
+      "sire": "Conquest Mo Money",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "NM"
+    },
+    "Convocador": {
+      "sire": "Convocador",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "Cyclotron": {
+      "sire": "Cyclotron",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "CA"
+    },
+    "D' Funnybone": {
+      "sire": "D' Funnybone",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "MI"
+    },
+    "Divide and Conquer": {
+      "sire": "Divide and Conquer",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "AL"
+    },
+    "Divide And Conquer": {
+      "sire": "Divide and Conquer",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "AL"
+    },
+    "Do the Roar": {
+      "sire": "Do the Roar",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "FL"
+    },
+    "Do The Roar": {
+      "sire": "Do the Roar",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "FL"
+    },
+    "Dreams and Beers": {
+      "sire": "Dreams and Beers",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "Dreams And Beers": {
+      "sire": "Dreams and Beers",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "Feels All Right (IRE)": {
+      "sire": "Feels All Right (IRE)",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "FL"
+    },
+    "Feels All Right (Ire)": {
+      "sire": "Feels All Right (IRE)",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "FL"
+    },
+    "Gallant Son": {
+      "sire": "Gallant Son",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "CA"
+    },
+    "Grandpa's Dream": {
+      "sire": "Grandpa's Dream",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "Imma Wild Bling": {
+      "sire": "Imma Wild Bling",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "OK"
+    },
+    "Imparable": {
+      "sire": "Imparable",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "In the Impossible": {
+      "sire": "In the Impossible",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "WV"
+    },
+    "In The Impossible": {
+      "sire": "In the Impossible",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "WV"
+    },
+    "Industrialist": {
+      "sire": "Industrialist",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "CO"
+    },
+    "Interactif": {
+      "sire": "Interactif",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "LA"
+    },
+    "Island Tap": {
+      "sire": "Island Tap",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "FL"
+    },
+    "Jess Mo": {
+      "sire": "Jess Mo",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "OR"
+    },
+    "Lea": {
+      "sire": "Lea",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "KY"
+    },
+    "Matthewsburg": {
+      "sire": "Matthewsburg",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "TX"
+    },
+    "Minister's Minion": {
+      "sire": "Minister's Minion",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PA"
+    },
+    "My Friend Dr. Bo": {
+      "sire": "My Friend Dr. Bo",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "Need More Mo": {
+      "sire": "Need More Mo",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "OH"
+    },
+    "Oh So Regal": {
+      "sire": "Oh So Regal",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "NM"
+    },
+    "Papabryan": {
+      "sire": "Papabryan",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "Passinaflash": {
+      "sire": "Passinaflash",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "NM"
+    },
+    "Point Defiance": {
+      "sire": "Point Defiance",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "WY"
+    },
+    "Ray's Big Boy": {
+      "sire": "Ray's Big Boy",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "AR"
+    },
+    "Richard's Kid": {
+      "sire": "Richard's Kid",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "CA"
+    },
+    "Rome": {
+      "sire": "Rome",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "NE"
+    },
+    "Sadie's Soldier": {
+      "sire": "Sadie's Soldier",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "LA"
+    },
+    "Siente El Trueno": {
+      "sire": "Siente El Trueno",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "WV"
+    },
+    "Sky Mischief": {
+      "sire": "Sky Mischief",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "LA"
+    },
+    "Speedmeister": {
+      "sire": "Speedmeister",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "AB"
+    },
+    "Stanford (IRE)": {
+      "sire": "Stanford (IRE)",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "Stanford (Ire)": {
+      "sire": "Stanford (IRE)",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "PR"
+    },
+    "Town Extension": {
+      "sire": "Town Extension",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "NM"
+    },
+    "Tunwoo": {
+      "sire": "Tunwoo",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "FL"
+    },
+    "Tweet Kitten": {
+      "sire": "Tweet Kitten",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "ON"
+    },
+    "Victory Cup": {
+      "sire": "Victory Cup",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "UT"
+    },
+    "Vokazak": {
+      "sire": "Vokazak",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "AR"
+    },
+    "War General": {
+      "sire": "War General",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "LA"
+    },
+    "Win the Space": {
+      "sire": "Win the Space",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "CA"
+    },
+    "Win The Space": {
+      "sire": "Win the Space",
+      "year": 2025,
+      "n_mares": 2,
+      "state": "CA"
+    },
+    "A Tough Obsession": {
+      "sire": "A Tough Obsession",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Adams Circle": {
+      "sire": "Adams Circle",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "KY"
+    },
+    "Air Strike": {
+      "sire": "Air Strike",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "OH"
+    },
+    "Amira's Prince (IRE)": {
+      "sire": "Amira's Prince (IRE)",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "FL"
+    },
+    "Amira's Prince (Ire)": {
+      "sire": "Amira's Prince (IRE)",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "FL"
+    },
+    "Army Star": {
+      "sire": "Army Star",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "OH"
+    },
+    "Baby Forever": {
+      "sire": "Baby Forever",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "PR"
+    },
+    "Bank Heist": {
+      "sire": "Bank Heist",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "NY"
+    },
+    "Baryshnikov": {
+      "sire": "Baryshnikov",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "IN"
+    },
+    "Blake": {
+      "sire": "Blake",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "PR"
+    },
+    "Box Score": {
+      "sire": "Box Score",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Bright Idea": {
+      "sire": "Bright Idea",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "TX"
+    },
+    "Buy Me Candy": {
+      "sire": "Buy Me Candy",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "OK"
+    },
+    "Candy Medaglia": {
+      "sire": "Candy Medaglia",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "PR"
+    },
+    "Carpe Noctem": {
+      "sire": "Carpe Noctem",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "LA"
+    },
+    "City Man": {
+      "sire": "City Man",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "TX"
+    },
+    "Deckers Dream": {
+      "sire": "Deckers Dream",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "TX"
+    },
+    "Declined": {
+      "sire": "Declined",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "NM"
+    },
+    "Drill Sergeant": {
+      "sire": "Drill Sergeant",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "OH"
+    },
+    "Due Date": {
+      "sire": "Due Date",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "LA"
+    },
+    "Fully Loaded": {
+      "sire": "Fully Loaded",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "WA"
+    },
+    "Gary D": {
+      "sire": "Gary D",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "FL"
+    },
+    "Ghost Battalion": {
+      "sire": "Ghost Battalion",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "NM"
+    },
+    "Gran Duque": {
+      "sire": "Gran Duque",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "SC"
+    },
+    "Handsome Franco": {
+      "sire": "Handsome Franco",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "PR"
+    },
+    "High North": {
+      "sire": "High North",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "AR"
+    },
+    "Integrity": {
+      "sire": "Integrity",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "VI"
+    },
+    "Jay Gatsby": {
+      "sire": "Jay Gatsby",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "LA"
+    },
+    "Lad's Lil Prince": {
+      "sire": "Lad's Lil Prince",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "TX"
+    },
+    "Legal Authority": {
+      "sire": "Legal Authority",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Lent": {
+      "sire": "Lent",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "BC"
+    },
+    "Lookin for a Kiss": {
+      "sire": "Lookin for a Kiss",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "IL"
+    },
+    "Lookin For A Kiss": {
+      "sire": "Lookin for a Kiss",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "IL"
+    },
+    "Lupino (GB)": {
+      "sire": "Lupino (GB)",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "ID"
+    },
+    "Lupino (Gb)": {
+      "sire": "Lupino (GB)",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "ID"
+    },
+    "Many Rivers": {
+      "sire": "Many Rivers",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Merit Man": {
+      "sire": "Merit Man",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Mesa Thunder": {
+      "sire": "Mesa Thunder",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Midnight Split": {
+      "sire": "Midnight Split",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "NM"
+    },
+    "Miraculousmo": {
+      "sire": "Miraculousmo",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "TX"
+    },
+    "Mobil": {
+      "sire": "Mobil",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "OH"
+    },
+    "Mr. Prankster": {
+      "sire": "Mr. Prankster",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "WV"
+    },
+    "Musical Theatre": {
+      "sire": "Musical Theatre",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "WI"
+    },
+    "Oak Room": {
+      "sire": "Oak Room",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "OH"
+    },
+    "Orthodox": {
+      "sire": "Orthodox",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "LA"
+    },
+    "Pioneer Spirit": {
+      "sire": "Pioneer Spirit",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "WV"
+    },
+    "Point Encounter": {
+      "sire": "Point Encounter",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Pop Artist": {
+      "sire": "Pop Artist",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "BC"
+    },
+    "Proceed": {
+      "sire": "Proceed",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "NM"
+    },
+    "Rays Regal": {
+      "sire": "Rays Regal",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Rda Oro Blanco": {
+      "sire": "Rda Oro Blanco",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Regalo Del Oro": {
+      "sire": "Regalo Del Oro",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "AB"
+    },
+    "Remarquez": {
+      "sire": "Remarquez",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "VA"
+    },
+    "Remembering Rita": {
+      "sire": "Remembering Rita",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "NE"
+    },
+    "Ride the Times": {
+      "sire": "Ride the Times",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "TX"
+    },
+    "Ride The Times": {
+      "sire": "Ride the Times",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "TX"
+    },
+    "Right On Richie": {
+      "sire": "Right On Richie",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "MO"
+    },
+    "Royal Artillery": {
+      "sire": "Royal Artillery",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "IN"
+    },
+    "Shatak": {
+      "sire": "Shatak",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "NY"
+    },
+    "Show to Win": {
+      "sire": "Show to Win",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CO"
+    },
+    "Show To Win": {
+      "sire": "Show to Win",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CO"
+    },
+    "Starship": {
+      "sire": "Starship",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "OK"
+    },
+    "Stormdriver": {
+      "sire": "Stormdriver",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "AR"
+    },
+    "Surf Cat": {
+      "sire": "Surf Cat",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "CA"
+    },
+    "Texas Hedge": {
+      "sire": "Texas Hedge",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "ID"
+    },
+    "The Player": {
+      "sire": "The Player",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "KY"
+    },
+    "Tiz Shea D": {
+      "sire": "Tiz Shea D",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "PR"
+    },
+    "True to the Moon": {
+      "sire": "True to the Moon",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "PA"
+    },
+    "True To The Moon": {
+      "sire": "True to the Moon",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "PA"
+    },
+    "Vengeful Wildcat": {
+      "sire": "Vengeful Wildcat",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "MB"
+    },
+    "War Tide": {
+      "sire": "War Tide",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "KY"
+    },
+    "William's Kitten": {
+      "sire": "William's Kitten",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "OH"
+    },
+    "Wise Curlin": {
+      "sire": "Wise Curlin",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "WY"
+    },
+    "Yes We Can": {
+      "sire": "Yes We Can",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "FL"
+    },
+    "Z Lucky": {
+      "sire": "Z Lucky",
+      "year": 2025,
+      "n_mares": 1,
+      "state": "IN"
+    }
+  }
+}

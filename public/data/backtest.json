@@ -8,10 +8,10 @@
     "n": 94,
     "rmse_predict_mean": 1.822,
     "rmse_predict_fee": 1.56,
-    "rmse_predict_score": 1.74,
-    "mae_predict_score": 1.125,
+    "rmse_predict_score": 1.754,
+    "mae_predict_score": 1.133,
     "r2_vs_mean_fee": 0.267,
-    "r2_vs_mean_score": 0.088,
+    "r2_vs_mean_score": 0.073,
     "score_beats_fee": false,
     "score_beats_mean": true
   }

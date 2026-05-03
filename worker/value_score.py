@@ -177,7 +177,52 @@ def _load_obs_lookup() -> dict:
 
 OBS_BY_SIRE: dict[str, dict] = _load_obs_lookup()
 
-# Book Quality (#5) intentionally not implemented as a scoring component.
+# ---------------------------------------------------------------------------
+# Book Demand (Mares Bred per year, scraped from BH/Jockey Club RMB)
+# ---------------------------------------------------------------------------
+# Source: bloodhorse.com/horse-racing/thoroughbred-breeding/mares-bred/{year}
+# (republished from The Jockey Club's annual Report of Mares Bred — the
+# canonical North American breeding-statistics record).
+#
+# Per-stallion record: {sire, year, n_mares, state}. Used by component_book_demand.
+# Note: this measures book SIZE (demand), not book QUALITY (per-mare pedigree).
+# Book quality remains a separate gap (#5) requiring per-mare ingestion.
+
+_MARES_BRED_FILES = sorted(_Path(__file__).parent.glob("mares-bred-*.json"))
+
+def _load_mares_bred_lookup() -> dict:
+    """Merge every mares-bred-{year}.json into one lookup. Each sire's record
+    has {sire, n_mares (latest year), latest_year, history: [{year, n}, ...]}."""
+    combined: dict[str, dict] = {}
+    for path in _MARES_BRED_FILES:
+        try:
+            data = _json.loads(path.read_text())
+        except Exception:
+            continue
+        year = data.get("year")
+        for raw_key, rec in (data.get("by_sire") or {}).items():
+            sire_name = rec.get("sire") or raw_key
+            key = _normalize_lookup_key(sire_name)
+            if key not in combined:
+                combined[key] = {"sire": sire_name, "history": [], "state": rec.get("state")}
+            combined[key]["history"].append({"year": year, "n_mares": rec["n_mares"]})
+    out = {}
+    for key, record in combined.items():
+        record["history"].sort(key=lambda h: h["year"])
+        latest = record["history"][-1] if record["history"] else None
+        if latest:
+            record["n_mares"]     = latest["n_mares"]
+            record["latest_year"] = latest["year"]
+        out[key] = record
+        out[record["sire"]] = record
+    return out
+
+
+MARES_BRED_BY_SIRE: dict[str, dict] = _load_mares_bred_lookup()
+
+
+# Book Quality (#5) — separate from book demand above — intentionally not
+# implemented as a scoring component.
 # A defensible book-quality measure requires actual mare-by-mare records
 # (career earnings, black-type produced, n stakes-winning offspring) for
 # each mare in each stallion's annual book. We don't have that data
@@ -652,6 +697,46 @@ def component_2yo_market_efficiency(
     }
 
 
+def component_book_demand(
+    s: StallionSnapshot,
+    roster: Sequence[StallionSnapshot],
+) -> tuple[Optional[float], dict]:
+    """Number of mares bred to this stallion in the most recent year on
+    record (Jockey Club Report of Mares Bred via BloodHorse), percentile vs
+    roster peers who also have RMB data.
+
+    What this signal IS: a real demand measurement — how many mare owners
+    chose this stallion. Stallions in high demand fill bigger books.
+
+    What this signal is NOT: a measure of mare quality. A stallion with 200
+    mediocre mares bred is treated the same as one with 200 G1-pedigreed
+    mares. That's the gap #5 (book quality) addresses with per-mare data
+    ingestion later.
+    """
+    rec = MARES_BRED_BY_SIRE.get(s.name) or MARES_BRED_BY_SIRE.get(_normalize_lookup_key(s.name))
+    if not rec or not rec.get("n_mares"):
+        return None, {"reason": "no mares-bred data for stallion"}
+
+    n_mares = rec["n_mares"]
+    peer_counts = []
+    for p in roster:
+        if p.name == s.name:
+            continue
+        prec = MARES_BRED_BY_SIRE.get(p.name) or MARES_BRED_BY_SIRE.get(_normalize_lookup_key(p.name))
+        if prec and prec.get("n_mares"):
+            peer_counts.append(prec["n_mares"])
+    pct = percentile(n_mares, peer_counts) if peer_counts else 50.0
+
+    return pct, {
+        "n_mares":          n_mares,
+        "year":             rec.get("latest_year"),
+        "state":            rec.get("state"),
+        "history":          rec.get("history", []),
+        "peer_n":           len(peer_counts),
+        "peer_median":      sorted(peer_counts)[len(peer_counts) // 2] if peer_counts else 0,
+    }
+
+
 def component_pinhook_efficiency(
     s: StallionSnapshot,
     roster: Sequence[StallionSnapshot],
@@ -764,17 +849,18 @@ PARTIAL_TIER_1_WEIGHTS = {
 }
 
 # Full Tier 1 — both Keeneland (yearling) AND OBS (2YO) data available.
-# Market signals + pinhook lift combine to 50%; pedigree+fee 40%; maturity 10%.
-# Pinhook efficiency is the platform's value-creation thesis encoded directly
-# into scoring: a stallion whose foals appreciate yearling→2YO is rewarded
-# beyond what the absolute-price market signals alone would credit.
+# Market signals + pinhook lift = 50%; pedigree+fee 35%; book demand 7%;
+# maturity 8%. Book demand (mares bred per year) is a real complementary
+# signal: it captures market conviction at the BREEDING side, distinct from
+# the SELLING side that market_efficiency / twoyo_market_efficiency cover.
 FULL_TIER_1_WEIGHTS = {
     "market_efficiency":       20,   # yearling-market $-level (Keeneland)
     "twoyo_market_efficiency": 15,   # 2YO-market $-level (OBS)
     "pinhook_efficiency":      15,   # yearling→2YO appreciation
-    "pedigree_prestige":       22,
-    "fee_band_position":       18,
-    "maturity_context":        10,
+    "pedigree_prestige":       20,
+    "fee_band_position":       15,
+    "book_demand":              7,   # mares bred per year (Jockey Club RMB)
+    "maturity_context":         8,
 }
 
 # OBS-only Tier 1 — OBS data but no Keeneland data (common for mid-tier sires
@@ -869,10 +955,12 @@ def score_commercial_appeal(s: StallionSnapshot,
     market_pct, market_ex = component_market_efficiency(s, roster)       # Keeneland
     twoyo_pct, twoyo_ex = component_2yo_market_efficiency(s, roster)     # OBS
     pinhook_pct, pinhook_ex = component_pinhook_efficiency(s, roster)    # lift = 2yo/yrl
+    book_pct, book_ex = component_book_demand(s, roster)                  # mares bred (RMB)
 
     have_kee = market_pct is not None
     have_obs = twoyo_pct is not None
     have_pinhook = pinhook_pct is not None
+    have_book = book_pct is not None
 
     # Pick weights based on which market signals are available.
     if have_kee and have_obs:
@@ -906,20 +994,32 @@ def score_commercial_appeal(s: StallionSnapshot,
             "points": round(W["pinhook_efficiency"] * pinhook_pct / 100, 2),
             "inputs": pinhook_ex,
         }
-    # Renormalization: if pinhook_efficiency was in W but the data wasn't
-    # present (sample too small), redistribute its weight proportionally
-    # across the remaining components so the score still spans 0..100.
-    if "pinhook_efficiency" in W and not have_pinhook:
-        dropped_weight = W["pinhook_efficiency"]
+    if "book_demand" in W and have_book:
+        components["book_demand"] = {
+            "percentile": book_pct,
+            "weight": W["book_demand"],
+            "points": round(W["book_demand"] * book_pct / 100, 2),
+            "inputs": book_ex,
+        }
+    # Renormalization: if any optional component was in W but its data wasn't
+    # present, redistribute its weight proportionally across the remaining
+    # components so the score still spans 0..100.
+    optional_in_W = {
+        "pinhook_efficiency": have_pinhook,
+        "book_demand":        have_book,
+    }
+    dropped = sum(W[k] for k, present in optional_in_W.items() if k in W and not present)
+    if dropped > 0:
         remaining_total = sum(c["weight"] for c in components.values())
         if remaining_total > 0:
-            scale = (remaining_total + dropped_weight) / remaining_total
+            scale = (remaining_total + dropped) / remaining_total
             for k, c in components.items():
                 c["weight"] = round(c["weight"] * scale, 1)
                 c["points"] = round(c["weight"] * c["percentile"] / 100, 2)
+        missing = ", ".join(k for k, present in optional_in_W.items() if k in W and not present)
         notes.append(
-            f"pinhook_efficiency unavailable (small sample); "
-            f"its {dropped_weight}% weight redistributed across remaining components"
+            f"optional components unavailable: {missing}; "
+            f"{dropped}% weight redistributed across remaining components"
         )
     components["pedigree_prestige"] = {
         "percentile": prestige_pct,
