@@ -20,7 +20,103 @@ body {
   background: var(--cream); color: var(--ink);
   line-height: 1.45; -webkit-font-smoothing: antialiased;
 }
-.container { max-width: 920px; margin: 0 auto; padding: 32px 20px 80px; }
+.container { max-width: 1340px; margin: 0 auto; padding: 24px 20px 80px; }
+
+/* ---------- Top nav (replaces hero block) ---------- */
+.topnav {
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 2px solid var(--ink); padding: 8px 0; margin-bottom: 12px;
+  flex-wrap: wrap; gap: 12px;
+}
+.topnav-left { display: flex; align-items: baseline; gap: 10px; }
+.topnav .brand {
+  font-family: "Iowan Old Style", Georgia, serif;
+  font-size: 22px; font-weight: 700; letter-spacing: 0.4px; color: var(--ink);
+}
+.topnav .model-version-tag {
+  font-size: 9px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 1.2px;
+}
+.topnav-links {
+  display: flex; flex-wrap: wrap; gap: 4px 14px;
+  font-size: 13px;
+}
+.topnav-links a {
+  color: var(--ink); text-decoration: none; padding: 3px 4px;
+  transition: color 0.12s, border-color 0.12s;
+}
+.topnav-links a:hover {
+  color: var(--gold); border-bottom: 1px solid var(--gold); margin-bottom: -1px;
+}
+
+/* ---------- Stats line (one row, replaces 4-card stat bar) ---------- */
+.stats-line {
+  font-size: 12px; color: var(--ink-soft);
+  padding: 9px 14px; margin-bottom: 16px;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+  display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline;
+}
+.stats-line strong { color: var(--ink); font-size: 14px; font-weight: 700; }
+.stats-line .dot { color: var(--rule); }
+.stats-line .stat-extra { display: none; }
+
+/* ---------- Two-pane dashboard grid ---------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.main-col { min-width: 0; }
+.sidebar  { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+/* Sidebar panel ordering — keeps DOM order natural but visually puts most-personal first */
+#watchlist       { order: 1; }
+#stakes-activity { order: 2; }
+#movements       { order: 3; }
+#hip-spotlight   { order: 4; }
+#pinhook-watch   { order: 5; }
+#movers          { order: 6; }
+/* Sidebar panel compression */
+.sidebar > div   { padding: 12px 14px; }
+.sidebar h2      { font-size: 15px; }
+.sidebar .sub    { font-size: 10px; }
+/* Compress list rows in sidebar to fit narrower column */
+.sidebar .stakes-row,
+.sidebar .movement-item,
+.sidebar .hip-row,
+.sidebar .watch-row,
+.sidebar .pinhook-item,
+.sidebar .mover-item { font-size: 12px; padding: 6px 0; }
+.sidebar .stakes-row .grade-tag,
+.sidebar .movement-item .what .badge { font-size: 9px; padding: 1px 5px; }
+/* Pinhook watch in sidebar: stack the 2 cols vertically (no horizontal room) */
+.sidebar .pinhook-grid { grid-template-columns: 1fr; gap: 10px; }
+.sidebar .pinhook-watch-head h2 { font-size: 15px; }
+/* Stallions list inside hip spotlight: smaller hip number column */
+.sidebar .hip-row .hip-num { font-size: 12px; min-width: 36px; }
+.sidebar .stakes-row .race-name { font-size: 12px; }
+.sidebar .stakes-row .race-date { font-size: 10px; }
+/* Movements panel — narrower columns */
+.sidebar .movement-item { grid-template-columns: 1fr auto; }
+.sidebar .movement-item .when { font-size: 10px; }
+.sidebar .movement-item .src  { font-size: 9px; }
+/* Movers panel — stack the 3 cols vertically in sidebar */
+.sidebar .movers-grid { grid-template-columns: 1fr; gap: 10px; }
+.sidebar .movers-col h3 { font-size: 10px; }
+.sidebar .movers-head h2 { font-size: 15px; }
+/* Stakes activity row — narrower grid */
+.sidebar .stakes-row { grid-template-columns: auto 1fr auto; gap: 8px; }
+.sidebar .stakes-row .winner-block .race-meta { font-size: 10px; }
+/* Watchlist row — tighter */
+.sidebar .watch-row { grid-template-columns: auto 1fr auto auto; gap: 8px; }
+.sidebar .watch-row .farm-tag { font-size: 10px; }
+.sidebar .watch-row .stakes-badge { font-size: 9px; padding: 1px 5px; }
+.sidebar .watch-row .grade-cell { font-size: 10px; padding: 1px 5px; }
+
+/* Mobile: stack sidebar below main */
+@media (max-width: 1100px) {
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .container { max-width: 980px; }
+}
 .masthead {
   border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 24px;
   display: flex; justify-content: space-between; align-items: baseline;
@@ -449,36 +545,84 @@ body {
 </head>
 <body>
 <div class="container">
-  <div class="masthead">
-    <div class="brand">SireValue</div>
-    <div class="tagline">Stallion Value Score · <span id="model-version"></span></div>
-  </div>
-
-  <div class="hero">
-    <h1>Market-based valuations for commercial thoroughbred stallions.</h1>
-    <p>Transparent scoring. Every number backed by a sale event you can click through to. Covers <span id="stallion-count">—</span> stallions across <span id="farm-count">—</span> North American farms, using <span id="yearling-sires">—</span> sires of recent yearling-sale data and <span id="twoyo-sires">—</span> sires of 2YO-in-training data.</p>
-    <div class="cta-row">
-      <a class="btn" href="/stallion-card.html">Browse stallions</a>
-      <a class="btn secondary" href="/pinhooks.html">Pinhook leaderboard</a>
-      <a class="btn secondary" href="/first-crop.html">First-crop predictions</a>
-      <a class="btn secondary" href="/calendar.html">Sales calendar</a>
-      <a class="btn secondary" href="/dams.html">Dam lookup</a>
-      <a class="btn secondary" href="/catalogs.html">Score a catalog</a>
-      <a class="btn secondary" href="/validation.html">Signal validation</a>
-      <a class="btn secondary" href="/consignors.html">Consignors</a>
-      <a class="btn secondary" href="/mare-matcher.html">Match a mare</a>
-      <a class="btn secondary" href="/compare.html">Compare</a>
+  <div class="topnav">
+    <div class="topnav-left">
+      <span class="brand">SireValue</span>
+      <span class="model-version-tag" id="model-version">—</span>
     </div>
+    <nav class="topnav-links">
+      <a href="/stallion-card.html">Browse</a>
+      <a href="/pinhooks.html">Pinhooks</a>
+      <a href="/first-crop.html">First crop</a>
+      <a href="/calendar.html">Calendar</a>
+      <a href="/dams.html">Dams</a>
+      <a href="/catalogs.html">Catalogs</a>
+      <a href="/sire-lines.html">Sire lines</a>
+      <a href="/compare.html">Compare</a>
+      <a href="/mare-matcher.html">Mare match</a>
+      <a href="/calibration.html">Calibration</a>
+      <a href="/methodology.html">Methodology</a>
+    </nav>
   </div>
 
-  <div class="stats">
-    <div class="stat"><div class="num" id="stat-tier1full">—</div><div class="label">Full Tier 1</div></div>
-    <div class="stat"><div class="num" id="stat-tier1">—</div><div class="label">Any Tier 1</div></div>
-    <div class="stat"><div class="num" id="stat-total">—</div><div class="label">Stallions</div></div>
-    <div class="stat"><div class="num" id="stat-farms">—</div><div class="label">Farms</div></div>
+  <div class="stats-line">
+    <span><strong id="stat-total">—</strong> stallions</span>
+    <span class="dot">·</span>
+    <span><strong id="stat-farms">—</strong> farms</span>
+    <span class="dot">·</span>
+    <span><strong id="stat-tier1full">—</strong> Tier 1 (full)</span>
+    <span class="dot">·</span>
+    <span><strong id="stat-tier1">—</strong> any Tier 1</span>
+    <span class="dot">·</span>
+    <span><strong id="yearling-sires">—</strong> yearling sires</span>
+    <span class="dot">·</span>
+    <span><strong id="twoyo-sires">—</strong> 2YO sires</span>
+    <span class="dot stat-extra">·</span>
+    <span class="stat-extra"><strong id="stallion-count" hidden>—</strong></span>
+    <span class="stat-extra"><strong id="farm-count" hidden>—</strong></span>
   </div>
 
-  <div id="movers" class="movers" hidden>
+  <div class="dashboard-grid">
+    <div class="main-col">
+      <div id="smart-filter" class="smart-filter">
+        <input id="smart-q" type="search" autocomplete="off"
+          placeholder="Try: ‘first crop sires under $20k by tapit’"/>
+        <div class="examples">
+          Examples (click to try):
+          <b data-q="under $20k tier 1">under $20k tier 1</b> ·
+          <b data-q="between $20k and $50k">between $20k and $50k</b> ·
+          <b data-q="first crop sort by fee asc">first crop sort by fee asc</b> ·
+          <b data-q="sons of into mischief">sons of into mischief</b> ·
+          <b data-q="established A grade">established A grade</b> ·
+          <b data-q="spendthrift sort by score desc">spendthrift sort by score desc</b>
+        </div>
+        <div class="parsed-summary"><span id="smart-pills"></span><span class="clear-btn" id="smart-clear">clear</span></div>
+      </div>
+
+      <div class="section-title" id="leaderboard-title" style="margin-top:14px;">Value Score leaderboard · click headers to sort</div>
+      <div class="leaderboard">
+        <table>
+          <thead>
+            <tr>
+              <th data-sort="rank" class="active"><span class="lbl">Rank</span><span class="arrow">▲</span></th>
+              <th data-sort="name"><span class="lbl">Stallion</span><span class="arrow">▼</span></th>
+              <th data-sort="farm"><span class="lbl">Farm</span><span class="arrow">▼</span></th>
+              <th data-sort="fee"><span class="lbl">Fee</span><span class="arrow">▼</span></th>
+              <th data-sort="tier"><span class="lbl">Tier</span><span class="arrow">▼</span></th>
+              <th data-sort="score"><span class="lbl">Score</span><span class="arrow">▼</span></th>
+              <th data-sort="value_gap" title="Score minus the median score of all stallions in the same fee band. Positive = better than peers at the same price (undervalued)."><span class="lbl">Gap</span><span class="arrow">▼</span></th>
+              <th data-sort="pred_lift" title="Score v2: regression-predicted yearling→2YO pinhook lift %."><span class="lbl">Pred</span><span class="arrow">▼</span></th>
+              <th data-sort="composite" title="Score v3: composite of v1 + v2."><span class="lbl">v3</span><span class="arrow">▼</span></th>
+              <th data-sort="grade"><span class="lbl">Grade</span><span class="arrow">▼</span></th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body"><tr><td colspan="10" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <div id="movers" class="movers" hidden>
     <div class="movers-head">
       <h2>Movers since last refresh</h2>
       <div class="movers-as-of" id="movers-as-of">—</div>
@@ -562,42 +706,7 @@ body {
       Sample-size filter: yearling n ≥ 5 and 2YO n ≥ 3. <a href="/pinhooks.html" style="color:var(--ink-soft);">Realized pinhook leaderboard →</a>
     </div>
   </div>
-
-  <div class="section-title">Smart filter</div>
-  <div id="smart-filter" class="smart-filter">
-    <input id="smart-q" type="search" autocomplete="off"
-      placeholder="Try: ‘first crop sires under $20k by tapit’"/>
-    <div class="examples">
-      Examples (click to try):
-      <b data-q="under $20k tier 1">under $20k tier 1</b> ·
-      <b data-q="between $20k and $50k">between $20k and $50k</b> ·
-      <b data-q="first crop sort by fee asc">first crop sort by fee asc</b> ·
-      <b data-q="sons of into mischief">sons of into mischief</b> ·
-      <b data-q="established A grade">established A grade</b> ·
-      <b data-q="spendthrift sort by score desc">spendthrift sort by score desc</b>
-    </div>
-    <div class="parsed-summary"><span id="smart-pills"></span><span class="clear-btn" id="smart-clear">clear</span></div>
-  </div>
-
-  <div class="section-title" id="leaderboard-title">Top 20 — Value Score leaderboard</div>
-  <div class="leaderboard">
-    <table>
-      <thead>
-        <tr>
-          <th data-sort="rank" class="active"><span class="lbl">Rank</span><span class="arrow">▲</span></th>
-          <th data-sort="name"><span class="lbl">Stallion</span><span class="arrow">▼</span></th>
-          <th data-sort="farm"><span class="lbl">Farm</span><span class="arrow">▼</span></th>
-          <th data-sort="fee"><span class="lbl">Fee</span><span class="arrow">▼</span></th>
-          <th data-sort="tier"><span class="lbl">Tier</span><span class="arrow">▼</span></th>
-          <th data-sort="score"><span class="lbl">Score</span><span class="arrow">▼</span></th>
-          <th data-sort="value_gap" title="Score minus the median score of all stallions in the same fee band. Positive = better than peers at the same price (undervalued)."><span class="lbl">Value Gap</span><span class="arrow">▼</span></th>
-          <th data-sort="pred_lift" title="Score v2: regression-predicted yearling→2YO pinhook lift %. LOO R²≈0.71 vs realized lift. Negative coefficient on market_efficiency surfaces 'expensive yearling, doesn't appreciate' pattern."><span class="lbl">Pred Lift</span><span class="arrow">▼</span></th>
-          <th data-sort="composite" title="Score v3: 60% v1 (multi-objective additive) + 40% v2 (regression-predicted lift, rank-normalized). Single number that blends 'good overall' with 'good pinhook bet'."><span class="lbl">v3</span><span class="arrow">▼</span></th>
-          <th data-sort="grade"><span class="lbl">Grade</span><span class="arrow">▼</span></th>
-        </tr>
-      </thead>
-      <tbody id="leaderboard-body"><tr><td colspan="10" style="padding:20px;text-align:center;color:var(--ink-soft)">Loading…</td></tr></tbody>
-    </table>
+    </aside>
   </div>
 
   <div class="footer">
@@ -1211,7 +1320,7 @@ body {
       if (sf.classList.contains('active')) {
         title.textContent = 'Filtered — ' + results.length + ' stallion' + (results.length === 1 ? '' : 's');
       } else {
-        title.textContent = 'Top 20 — Value Score leaderboard';
+        title.textContent = 'Value Score leaderboard · ' + results.length + ' stallions · click headers to sort';
       }
       const slice = sf.classList.contains('active') ? results.slice(0, 60) : results;
       const sorted = sortStallions(slice);
@@ -1321,7 +1430,7 @@ body {
       const mvResp = await fetch('/data/stallion-movements.json?v=' + Date.now());
       if (mvResp.ok) {
         const mvDoc = await mvResp.json();
-        const movements = (mvDoc.movements || []).slice(0, 8);
+        const movements = (mvDoc.movements || []).slice(0, 5);
         if (movements.length) {
           document.getElementById('movements').hidden = false;
 
@@ -1412,13 +1521,20 @@ body {
           const catResp = await fetch('/data/catalogs/catalog-scoring-sale-' + latest.slug + '.json?v=' + Date.now());
           if (catResp.ok) {
             const cat = await catResp.json();
-            // Keep only sold hips with strong signal; sort by sire_value_score desc
+            // Keep only sold hips with strong signal; sort by sire_value_score desc;
+            // dedupe by sire so we don't see 3 hips of the same sire in a row.
+            const seenSires = new Set();
             const top = (cat.hips || [])
               .filter(h => h.sire_pinhook_signal === 'strong'
                         && h.sold_price_usd
                         && h.sire_value_score != null)
               .sort((a, b) => (b.sire_value_score || 0) - (a.sire_value_score || 0))
-              .slice(0, 3);
+              .filter(h => {
+                if (seenSires.has(h.sire)) return false;
+                seenSires.add(h.sire);
+                return true;
+              })
+              .slice(0, 5);
             if (top.length) {
               const panel = document.getElementById('hip-spotlight');
               panel.hidden = false;
@@ -1454,7 +1570,7 @@ body {
     // (Reuses stakesDoc loaded earlier — no extra network fetch needed.)
     try {
       if (stakesDoc) {
-        const races = (stakesDoc.races || []).slice(0, 8);
+        const races = (stakesDoc.races || []).slice(0, 5);
         if (races.length) {
           const panel = document.getElementById('stakes-activity');
           panel.hidden = false;
